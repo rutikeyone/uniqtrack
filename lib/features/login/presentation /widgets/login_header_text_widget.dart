@@ -7,8 +7,11 @@ class _LoginHeaderTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      S.of(context).logInToYourAccount,
+    return Center(
+      child: Text(
+        S.of(context).logInToYourAccount,
+        style: Theme.of(context).textTheme.displayMedium,
+      ),
     );
   }
 }

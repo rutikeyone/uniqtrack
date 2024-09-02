@@ -1,3 +1,5 @@
 {
-  "logInToYourAccount": "Войдите в вашу учетную запись"
+  "logInToYourAccount": "Войдите в вашу учетную запись",
+  "logIn": "Войти",
+  "createNewAccount": "Зарегистрироваться"
 }
