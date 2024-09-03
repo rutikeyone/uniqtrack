@@ -7,16 +7,20 @@ class _LoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
+    return Padding(
       padding: const EdgeInsets.only(top: AppDiments.dm24),
       child: SizedBox(
-        height: AppDiments.dm44,
-        child: ElevatedButton(
+        width: context.fullWidth,
+        height: AppDiments.dm48,
+        child: AppElevatedButton(
+          text: S.of(context).logIn,
+          textStyle: context.textTheme.labelLarge?.copyWith(
+            color: context.colorScheme.secondary,
+          ),
           onPressed: () {},
-          child: Text(S.of(context).logIn),
         ),
       ),
     );
   }
 }
+

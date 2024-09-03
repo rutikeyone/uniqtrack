@@ -23,6 +23,12 @@ dependencies:
   intl: ^0.19.0
   freezed_annotation: ^2.4.4
   json_annotation: ^4.9.0
+  firebase_core: ^3.4.0
+  firebase_auth: ^5.2.0
+  google_fonts: ^6.2.1
+  flutter_svg: ^2.0.10+1
+  gap: ^3.0.1
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:
@@ -38,22 +44,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/icons/
+    - assets/placeholders/
 
 flutter_intl:
   enabled: true
-
-  fonts:
-    - family: Montserrat
-      fonts:
-        - asset: fonts/montserrat/Montserrat-Regular.ttf
-        - asset: fonts/montserrat/Montserrat-Italic.ttf
-        - asset: fonts/montserrat/Montserrat-Black.ttf
-        - asset: fonts/montserrat/Montserrat-SemiBold.ttf
-        - asset: fonts/montserrat/Montserrat-ExtraBold.ttf
-    - family: SFProDisplay
-      fonts:
-        - asset: fonts/sf_pro_display/SF-Pro-Display-Regular.otf
-        - asset: fonts/sf_pro_display/SF-Pro-Display-RegularItalic.otf
-        - asset: fonts/sf_pro_display/SF-Pro-Display-Black.otf
-        - asset: fonts/sf_pro_display/SF-Pro-Display-Semibold.otf
-        - asset: fonts/sf_pro_display/SF-Pro-Display-Bold.otf

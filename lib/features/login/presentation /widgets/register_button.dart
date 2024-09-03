@@ -1,23 +1,21 @@
 part of '../pages/login_page.dart';
 
-class _RegisterButton extends StatelessWidget {
-  final VoidCallback navigateToRegisterPage;
-
+class _RegisterButton extends ConsumerWidget {
   const _RegisterButton({
-    required this.navigateToRegisterPage,
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Padding(
       padding: const EdgeInsets.only(top: AppDiments.dm12),
       child: SizedBox(
-        height: AppDiments.dm44,
-        child: ElevatedButton(
-          onPressed: navigateToRegisterPage,
-          child: Text(S.of(context).createNewAccount),
+        width: context.fullWidth,
+        height: AppDiments.dm48,
+        child: AppElevatedButton(
+          text: S.of(context).createNewAccount,
+          backgroundColor: context.colorScheme.secondary,
+          onPressed: ref.read(loginNavCallbackStoreProvider).navigateToRegister,
         ),
       ),
     );

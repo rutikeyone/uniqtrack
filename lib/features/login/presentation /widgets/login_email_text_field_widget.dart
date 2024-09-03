@@ -7,9 +7,24 @@ class _LoginEmailTextFieldWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: AppDiments.dm24),
-      child: TextField(),
+    return Padding(
+      padding: const EdgeInsets.only(top: AppDiments.dm24),
+      child: AppTextField(
+        hintText: S.of(context).enterYourEmail,
+        style: context.textTheme.bodyLarge,
+        suffixIcon: UnconstrainedBox(
+          child: SvgPicture.asset(
+            AppAssets.icons.mail,
+            width: AppDiments.dm24,
+            height: AppDiments.dm24,
+            fit: BoxFit.contain,
+            colorFilter: ColorFilter.mode(
+              context.colorScheme.onPrimary,
+              BlendMode.srcIn,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

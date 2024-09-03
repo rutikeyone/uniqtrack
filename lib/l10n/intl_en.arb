@@ -1,5 +1,17 @@
 {
   "logInToYourAccount": "Log in to your account",
   "logIn": "Log in",
-  "createNewAccount": "Create New Account"
+  "createNewAccount": "Create New Account",
+  "enterYourEmail": "Enter your email",
+  "enterYourPassword": "Enter your password",
+  "createAnAccount": "Create an account",
+  "back": "Back",
+  "enterYourFullName": "Enter your full name",
+  "male": "Male",
+  "female": "Female",
+  "signUp": "Sign up",
+  "image": "Image",
+  "chooseFromTheLibrary": "Choose from the library",
+  "takeAPhoto": "Take a photo",
+  "cancel": "Cancel"
 }

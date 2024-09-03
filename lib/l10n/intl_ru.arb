@@ -1,5 +1,17 @@
 {
   "logInToYourAccount": "Войдите в вашу учетную запись",
   "logIn": "Войти",
-  "createNewAccount": "Зарегистрироваться"
+  "createNewAccount": "Зарегистрироваться",
+  "enterYourEmail": "Введите вашу почту",
+  "enterYourPassword": "Введите ваш пароль",
+  "createAnAccount": "Регистрация",
+  "back": "Назад",
+  "enterYourFullName": "Введите ваше имя",
+  "male": "Мужской",
+  "female": "Женский",
+  "signUp": "Зарегистрироваться",
+  "image": "Изображение",
+  "chooseFromTheLibrary": "Выбрать из галереи",
+  "takeAPhoto": "Сделать фотографию",
+  "cancel": "Назад"
 }
