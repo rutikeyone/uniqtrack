@@ -16,5 +16,5 @@
   "cancel": "Назад",
   "invalid_email_address": "Введите корректный адрес электронной почты",
   "invalidPassword": "Некорректный пароль",
-  "invalidName": "Invalid name"
+  "invalidName": "Некорректное имя"
 }

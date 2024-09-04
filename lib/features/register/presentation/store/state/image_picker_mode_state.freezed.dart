@@ -18,20 +18,20 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$ImagePickerModeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(GenderState genderState) placeholder,
-    required TResult Function() photo,
+    required TResult Function() placeholder,
+    required TResult Function(File file) photo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(GenderState genderState)? placeholder,
-    TResult? Function()? photo,
+    TResult? Function()? placeholder,
+    TResult? Function(File file)? photo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(GenderState genderState)? placeholder,
-    TResult Function()? photo,
+    TResult Function()? placeholder,
+    TResult Function(File file)? photo,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -85,10 +85,6 @@ abstract class _$$ImagePickerPlaceholderModeStateImplCopyWith<$Res> {
           _$ImagePickerPlaceholderModeStateImpl value,
           $Res Function(_$ImagePickerPlaceholderModeStateImpl) then) =
       __$$ImagePickerPlaceholderModeStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({GenderState genderState});
-
-  $GenderStateCopyWith<$Res> get genderState;
 }
 
 /// @nodoc
@@ -103,95 +99,64 @@ class __$$ImagePickerPlaceholderModeStateImplCopyWithImpl<$Res>
 
   /// Create a copy of ImagePickerModeState
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? genderState = null,
-  }) {
-    return _then(_$ImagePickerPlaceholderModeStateImpl(
-      genderState: null == genderState
-          ? _value.genderState
-          : genderState // ignore: cast_nullable_to_non_nullable
-              as GenderState,
-    ));
-  }
-
-  /// Create a copy of ImagePickerModeState
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $GenderStateCopyWith<$Res> get genderState {
-    return $GenderStateCopyWith<$Res>(_value.genderState, (value) {
-      return _then(_value.copyWith(genderState: value));
-    });
-  }
 }
 
 /// @nodoc
 
 class _$ImagePickerPlaceholderModeStateImpl
+    with DiagnosticableTreeMixin
     implements _ImagePickerPlaceholderModeState {
-  const _$ImagePickerPlaceholderModeStateImpl(
-      {this.genderState = const GenderState.male()});
+  const _$ImagePickerPlaceholderModeStateImpl();
 
   @override
-  @JsonKey()
-  final GenderState genderState;
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ImagePickerModeState.placeholder()';
+  }
 
   @override
-  String toString() {
-    return 'ImagePickerModeState.placeholder(genderState: $genderState)';
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'ImagePickerModeState.placeholder'));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ImagePickerPlaceholderModeStateImpl &&
-            (identical(other.genderState, genderState) ||
-                other.genderState == genderState));
+            other is _$ImagePickerPlaceholderModeStateImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, genderState);
-
-  /// Create a copy of ImagePickerModeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ImagePickerPlaceholderModeStateImplCopyWith<
-          _$ImagePickerPlaceholderModeStateImpl>
-      get copyWith => __$$ImagePickerPlaceholderModeStateImplCopyWithImpl<
-          _$ImagePickerPlaceholderModeStateImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(GenderState genderState) placeholder,
-    required TResult Function() photo,
+    required TResult Function() placeholder,
+    required TResult Function(File file) photo,
   }) {
-    return placeholder(genderState);
+    return placeholder();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(GenderState genderState)? placeholder,
-    TResult? Function()? photo,
+    TResult? Function()? placeholder,
+    TResult? Function(File file)? photo,
   }) {
-    return placeholder?.call(genderState);
+    return placeholder?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(GenderState genderState)? placeholder,
-    TResult Function()? photo,
+    TResult Function()? placeholder,
+    TResult Function(File file)? photo,
     required TResult orElse(),
   }) {
     if (placeholder != null) {
-      return placeholder(genderState);
+      return placeholder();
     }
     return orElse();
   }
@@ -231,17 +196,8 @@ class _$ImagePickerPlaceholderModeStateImpl
 
 abstract class _ImagePickerPlaceholderModeState
     implements ImagePickerModeState {
-  const factory _ImagePickerPlaceholderModeState(
-      {final GenderState genderState}) = _$ImagePickerPlaceholderModeStateImpl;
-
-  GenderState get genderState;
-
-  /// Create a copy of ImagePickerModeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ImagePickerPlaceholderModeStateImplCopyWith<
-          _$ImagePickerPlaceholderModeStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  const factory _ImagePickerPlaceholderModeState() =
+      _$ImagePickerPlaceholderModeStateImpl;
 }
 
 /// @nodoc
@@ -250,6 +206,10 @@ abstract class _$$ImagePickerPhotoModeStateImplCopyWith<$Res> {
           _$ImagePickerPhotoModeStateImpl value,
           $Res Function(_$ImagePickerPhotoModeStateImpl) then) =
       __$$ImagePickerPhotoModeStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({File file});
+
+  $FileCopyWith<$Res> get file;
 }
 
 /// @nodoc
@@ -264,55 +224,100 @@ class __$$ImagePickerPhotoModeStateImplCopyWithImpl<$Res>
 
   /// Create a copy of ImagePickerModeState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? file = null,
+  }) {
+    return _then(_$ImagePickerPhotoModeStateImpl(
+      file: null == file
+          ? _value.file
+          : file // ignore: cast_nullable_to_non_nullable
+              as File,
+    ));
+  }
+
+  /// Create a copy of ImagePickerModeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $FileCopyWith<$Res> get file {
+    return $FileCopyWith<$Res>(_value.file, (value) {
+      return _then(_value.copyWith(file: value));
+    });
+  }
 }
 
 /// @nodoc
 
-class _$ImagePickerPhotoModeStateImpl implements _ImagePickerPhotoModeState {
-  const _$ImagePickerPhotoModeStateImpl();
+class _$ImagePickerPhotoModeStateImpl
+    with DiagnosticableTreeMixin
+    implements _ImagePickerPhotoModeState {
+  const _$ImagePickerPhotoModeStateImpl({required this.file});
 
   @override
-  String toString() {
-    return 'ImagePickerModeState.photo()';
+  final File file;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ImagePickerModeState.photo(file: $file)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ImagePickerModeState.photo'))
+      ..add(DiagnosticsProperty('file', file));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ImagePickerPhotoModeStateImpl);
+            other is _$ImagePickerPhotoModeStateImpl &&
+            (identical(other.file, file) || other.file == file));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, file);
+
+  /// Create a copy of ImagePickerModeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ImagePickerPhotoModeStateImplCopyWith<_$ImagePickerPhotoModeStateImpl>
+      get copyWith => __$$ImagePickerPhotoModeStateImplCopyWithImpl<
+          _$ImagePickerPhotoModeStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(GenderState genderState) placeholder,
-    required TResult Function() photo,
+    required TResult Function() placeholder,
+    required TResult Function(File file) photo,
   }) {
-    return photo();
+    return photo(file);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(GenderState genderState)? placeholder,
-    TResult? Function()? photo,
+    TResult? Function()? placeholder,
+    TResult? Function(File file)? photo,
   }) {
-    return photo?.call();
+    return photo?.call(file);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(GenderState genderState)? placeholder,
-    TResult Function()? photo,
+    TResult Function()? placeholder,
+    TResult Function(File file)? photo,
     required TResult orElse(),
   }) {
     if (photo != null) {
-      return photo();
+      return photo(file);
     }
     return orElse();
   }
@@ -351,5 +356,14 @@ class _$ImagePickerPhotoModeStateImpl implements _ImagePickerPhotoModeState {
 }
 
 abstract class _ImagePickerPhotoModeState implements ImagePickerModeState {
-  const factory _ImagePickerPhotoModeState() = _$ImagePickerPhotoModeStateImpl;
+  const factory _ImagePickerPhotoModeState({required final File file}) =
+      _$ImagePickerPhotoModeStateImpl;
+
+  File get file;
+
+  /// Create a copy of ImagePickerModeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ImagePickerPhotoModeStateImplCopyWith<_$ImagePickerPhotoModeStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

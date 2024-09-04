@@ -37,7 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Введите ваш пароль"),
         "female": MessageLookupByLibrary.simpleMessage("Женский"),
         "image": MessageLookupByLibrary.simpleMessage("Изображение"),
-        "invalidName": MessageLookupByLibrary.simpleMessage("Invalid name"),
+        "invalidName": MessageLookupByLibrary.simpleMessage("Некорректное имя"),
         "invalidPassword":
             MessageLookupByLibrary.simpleMessage("Некорректный пароль"),
         "invalid_email_address": MessageLookupByLibrary.simpleMessage(

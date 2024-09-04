@@ -10,12 +10,20 @@ class _SignUpButton extends StatelessWidget {
       child: SizedBox(
         width: context.fullWidth,
         height: AppDiments.dm48,
-        child: AppElevatedButton(
-          text: S.of(context).signUp,
-          onPressed: () {},
-          textStyle: context.textTheme.labelLarge?.copyWith(
-            color: context.colorScheme.secondary,
-          ),
+        child: Observer(
+          builder: (_) {
+            final store = provider.Provider.of<RegisterStore>(context);
+
+            final canRegister = store.canRegister;
+
+            return AppElevatedButton(
+              text: S.of(context).signUp,
+              onPressed: canRegister ? () {} : null,
+              textStyle: context.textTheme.labelLarge?.copyWith(
+                color: context.colorScheme.secondary,
+              ),
+            );
+          }
         ),
       ),
     );

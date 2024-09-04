@@ -10,9 +10,8 @@ class Name extends FormzInput<String, NameValidationError> {
 
   @override
   NameValidationError? validator(String? value) {
-    final isValidate = value != null &&
-        value.isNotEmpty &&
-        RegexpPattern.onlyLettersRegExp.hasMatch(value);
+    final isValidate =
+        value != null && value.isNotEmpty && RegexpPattern.name.hasMatch(value);
 
     if (isValidate) {
       return null;

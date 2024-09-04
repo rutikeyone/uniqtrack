@@ -25,7 +25,7 @@ class _RegisterEmailTextFieldWidget extends StatelessWidget {
               AppAssets.icons.mail,
               width: AppDiments.dm24,
               height: AppDiments.dm24,
-              fit: BoxFit.contain,
+              fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
                 context.colorScheme.onPrimary,
                 BlendMode.srcIn,

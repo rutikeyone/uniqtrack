@@ -17,9 +17,13 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$RegisterState {
   ImagePickerModeState get modeState => throw _privateConstructorUsedError;
+  GenderState get gender => throw _privateConstructorUsedError;
   Email get email => throw _privateConstructorUsedError;
   Password get password => throw _privateConstructorUsedError;
   Name get name => throw _privateConstructorUsedError;
+  bool get canRegister => throw _privateConstructorUsedError;
+  RegisterStatusState get registerStatusState =>
+      throw _privateConstructorUsedError;
 
   /// Create a copy of RegisterState
   /// with the given fields replaced by the non-null parameter values.
@@ -36,11 +40,16 @@ abstract class $RegisterStateCopyWith<$Res> {
   @useResult
   $Res call(
       {ImagePickerModeState modeState,
+      GenderState gender,
       Email email,
       Password password,
-      Name name});
+      Name name,
+      bool canRegister,
+      RegisterStatusState registerStatusState});
 
   $ImagePickerModeStateCopyWith<$Res> get modeState;
+  $GenderStateCopyWith<$Res> get gender;
+  $RegisterStatusStateCopyWith<$Res> get registerStatusState;
 }
 
 /// @nodoc
@@ -59,15 +68,22 @@ class _$RegisterStateCopyWithImpl<$Res, $Val extends RegisterState>
   @override
   $Res call({
     Object? modeState = null,
+    Object? gender = null,
     Object? email = null,
     Object? password = null,
     Object? name = null,
+    Object? canRegister = null,
+    Object? registerStatusState = null,
   }) {
     return _then(_value.copyWith(
       modeState: null == modeState
           ? _value.modeState
           : modeState // ignore: cast_nullable_to_non_nullable
               as ImagePickerModeState,
+      gender: null == gender
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as GenderState,
       email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -80,6 +96,14 @@ class _$RegisterStateCopyWithImpl<$Res, $Val extends RegisterState>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as Name,
+      canRegister: null == canRegister
+          ? _value.canRegister
+          : canRegister // ignore: cast_nullable_to_non_nullable
+              as bool,
+      registerStatusState: null == registerStatusState
+          ? _value.registerStatusState
+          : registerStatusState // ignore: cast_nullable_to_non_nullable
+              as RegisterStatusState,
     ) as $Val);
   }
 
@@ -90,6 +114,27 @@ class _$RegisterStateCopyWithImpl<$Res, $Val extends RegisterState>
   $ImagePickerModeStateCopyWith<$Res> get modeState {
     return $ImagePickerModeStateCopyWith<$Res>(_value.modeState, (value) {
       return _then(_value.copyWith(modeState: value) as $Val);
+    });
+  }
+
+  /// Create a copy of RegisterState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $GenderStateCopyWith<$Res> get gender {
+    return $GenderStateCopyWith<$Res>(_value.gender, (value) {
+      return _then(_value.copyWith(gender: value) as $Val);
+    });
+  }
+
+  /// Create a copy of RegisterState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RegisterStatusStateCopyWith<$Res> get registerStatusState {
+    return $RegisterStatusStateCopyWith<$Res>(_value.registerStatusState,
+        (value) {
+      return _then(_value.copyWith(registerStatusState: value) as $Val);
     });
   }
 }
@@ -104,12 +149,19 @@ abstract class _$$RegisterStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {ImagePickerModeState modeState,
+      GenderState gender,
       Email email,
       Password password,
-      Name name});
+      Name name,
+      bool canRegister,
+      RegisterStatusState registerStatusState});
 
   @override
   $ImagePickerModeStateCopyWith<$Res> get modeState;
+  @override
+  $GenderStateCopyWith<$Res> get gender;
+  @override
+  $RegisterStatusStateCopyWith<$Res> get registerStatusState;
 }
 
 /// @nodoc
@@ -126,15 +178,22 @@ class __$$RegisterStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? modeState = null,
+    Object? gender = null,
     Object? email = null,
     Object? password = null,
     Object? name = null,
+    Object? canRegister = null,
+    Object? registerStatusState = null,
   }) {
     return _then(_$RegisterStateImpl(
       modeState: null == modeState
           ? _value.modeState
           : modeState // ignore: cast_nullable_to_non_nullable
               as ImagePickerModeState,
+      gender: null == gender
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as GenderState,
       email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -147,6 +206,14 @@ class __$$RegisterStateImplCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as Name,
+      canRegister: null == canRegister
+          ? _value.canRegister
+          : canRegister // ignore: cast_nullable_to_non_nullable
+              as bool,
+      registerStatusState: null == registerStatusState
+          ? _value.registerStatusState
+          : registerStatusState // ignore: cast_nullable_to_non_nullable
+              as RegisterStatusState,
     ));
   }
 }
@@ -155,28 +222,33 @@ class __$$RegisterStateImplCopyWithImpl<$Res>
 
 class _$RegisterStateImpl extends _RegisterState {
   const _$RegisterStateImpl(
-      {this.modeState = const ImagePickerModeState.placeholder(),
-      this.email = const Email.pure(),
-      this.password = const Password.pure(),
-      this.name = const Name.pure()})
+      {required this.modeState,
+      required this.gender,
+      required this.email,
+      required this.password,
+      required this.name,
+      required this.canRegister,
+      required this.registerStatusState})
       : super._();
 
   @override
-  @JsonKey()
   final ImagePickerModeState modeState;
   @override
-  @JsonKey()
+  final GenderState gender;
+  @override
   final Email email;
   @override
-  @JsonKey()
   final Password password;
   @override
-  @JsonKey()
   final Name name;
+  @override
+  final bool canRegister;
+  @override
+  final RegisterStatusState registerStatusState;
 
   @override
   String toString() {
-    return 'RegisterState(modeState: $modeState, email: $email, password: $password, name: $name)';
+    return 'RegisterState(modeState: $modeState, gender: $gender, email: $email, password: $password, name: $name, canRegister: $canRegister, registerStatusState: $registerStatusState)';
   }
 
   @override
@@ -186,15 +258,20 @@ class _$RegisterStateImpl extends _RegisterState {
             other is _$RegisterStateImpl &&
             (identical(other.modeState, modeState) ||
                 other.modeState == modeState) &&
+            (identical(other.gender, gender) || other.gender == gender) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password) &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.canRegister, canRegister) ||
+                other.canRegister == canRegister) &&
+            (identical(other.registerStatusState, registerStatusState) ||
+                other.registerStatusState == registerStatusState));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, modeState, email, password, name);
+  int get hashCode => Object.hash(runtimeType, modeState, gender, email,
+      password, name, canRegister, registerStatusState);
 
   /// Create a copy of RegisterState
   /// with the given fields replaced by the non-null parameter values.
@@ -207,20 +284,30 @@ class _$RegisterStateImpl extends _RegisterState {
 
 abstract class _RegisterState extends RegisterState {
   const factory _RegisterState(
-      {final ImagePickerModeState modeState,
-      final Email email,
-      final Password password,
-      final Name name}) = _$RegisterStateImpl;
+          {required final ImagePickerModeState modeState,
+          required final GenderState gender,
+          required final Email email,
+          required final Password password,
+          required final Name name,
+          required final bool canRegister,
+          required final RegisterStatusState registerStatusState}) =
+      _$RegisterStateImpl;
   const _RegisterState._() : super._();
 
   @override
   ImagePickerModeState get modeState;
+  @override
+  GenderState get gender;
   @override
   Email get email;
   @override
   Password get password;
   @override
   Name get name;
+  @override
+  bool get canRegister;
+  @override
+  RegisterStatusState get registerStatusState;
 
   /// Create a copy of RegisterState
   /// with the given fields replaced by the non-null parameter values.

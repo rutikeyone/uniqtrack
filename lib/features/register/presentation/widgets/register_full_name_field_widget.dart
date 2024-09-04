@@ -23,7 +23,7 @@ class _RegisterFullNameFieldWidget extends StatelessWidget {
                 AppAssets.icons.person,
                 width: AppDiments.dm20,
                 height: AppDiments.dm20,
-                fit: BoxFit.contain,
+                fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
                   context.colorScheme.onPrimary,
                   BlendMode.srcIn,

@@ -1,9 +1,11 @@
 import 'package:image_picker/image_picker.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:uniqtrack/data/repositories/accounts/accounts_data_repository_impl.dart';
 import 'package:uniqtrack/data/repositories/accounts/data_sources/camera_data_source.dart';
 import 'package:uniqtrack/data/repositories/accounts/data_sources/gallery_data_source.dart';
 import 'package:uniqtrack/data/repositories/accounts/data_sources/image_data_source.dart';
 import 'package:uniqtrack/data/repositories/accounts/image_data_repository_impl.dart';
+import 'package:uniqtrack/data/repositories/accounts_data_repository.dart';
 import 'package:uniqtrack/data/repositories/image_data_repository.dart';
 
 part 'accounts_provider.g.dart';
@@ -31,4 +33,9 @@ ImageDataRepository imageDataRepository(
   required ImageDataSource imageSource,
 }) {
   return ImageDataRepositoryImpl(imageDataSource: imageSource);
+}
+
+@riverpod
+AccountsDataRepository accountsDataRepository(AccountsDataRepositoryRef ref) {
+  return AccountsDataRepositoryImpl();
 }

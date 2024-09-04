@@ -30,6 +30,13 @@ mixin _$RegisterStore on _RegisterStore, Store {
           Computed<bool>(() => super.isFemaleSelectedState,
               name: '_RegisterStore.isFemaleSelectedState'))
       .value;
+  Computed<bool>? _$canRegisterComputed;
+
+  @override
+  bool get canRegister =>
+      (_$canRegisterComputed ??= Computed<bool>(() => super.canRegister,
+              name: '_RegisterStore.canRegister'))
+          .value;
 
   late final _$pickerModeStateAtom =
       Atom(name: '_RegisterStore.pickerModeState', context: context);
@@ -44,6 +51,22 @@ mixin _$RegisterStore on _RegisterStore, Store {
   set pickerModeState(ImagePickerModeState value) {
     _$pickerModeStateAtom.reportWrite(value, super.pickerModeState, () {
       super.pickerModeState = value;
+    });
+  }
+
+  late final _$genderStateAtom =
+      Atom(name: '_RegisterStore.genderState', context: context);
+
+  @override
+  GenderState get genderState {
+    _$genderStateAtom.reportRead();
+    return super.genderState;
+  }
+
+  @override
+  set genderState(GenderState value) {
+    _$genderStateAtom.reportWrite(value, super.genderState, () {
+      super.genderState = value;
     });
   }
 
@@ -92,6 +115,22 @@ mixin _$RegisterStore on _RegisterStore, Store {
   set nameState(Name value) {
     _$nameStateAtom.reportWrite(value, super.nameState, () {
       super.nameState = value;
+    });
+  }
+
+  late final _$registerStatusStateAtom =
+      Atom(name: '_RegisterStore.registerStatusState', context: context);
+
+  @override
+  RegisterStatusState get registerStatusState {
+    _$registerStatusStateAtom.reportRead();
+    return super.registerStatusState;
+  }
+
+  @override
+  set registerStatusState(RegisterStatusState value) {
+    _$registerStatusStateAtom.reportWrite(value, super.registerStatusState, () {
+      super.registerStatusState = value;
     });
   }
 
@@ -188,16 +227,30 @@ mixin _$RegisterStore on _RegisterStore, Store {
   }
 
   @override
+  void register() {
+    final _$actionInfo = _$_RegisterStoreActionController.startAction(
+        name: '_RegisterStore.register');
+    try {
+      return super.register();
+    } finally {
+      _$_RegisterStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 pickerModeState: ${pickerModeState},
+genderState: ${genderState},
 emailState: ${emailState},
 passwordState: ${passwordState},
 nameState: ${nameState},
+registerStatusState: ${registerStatusState},
 actions: ${actions},
 state: ${state},
 isMaleSelectedState: ${isMaleSelectedState},
-isFemaleSelectedState: ${isFemaleSelectedState}
+isFemaleSelectedState: ${isFemaleSelectedState},
+canRegister: ${canRegister}
     ''';
   }
 }

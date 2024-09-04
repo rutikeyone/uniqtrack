@@ -5,6 +5,7 @@ import 'my_app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  //await _initializeFirebase();
 
   runApp(
     const ProviderScope(
@@ -13,4 +14,8 @@ Future<void> main() async {
   );
 }
 
+
+// Future<void> _initializeFirebase() {
+//   return Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+// }
 

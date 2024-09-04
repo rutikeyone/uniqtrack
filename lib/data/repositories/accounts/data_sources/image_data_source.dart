@@ -1,5 +1,5 @@
-import 'package:flutter/foundation.dart';
+import 'package:uniqtrack/data/repositories/accounts/models/file_model.dart';
 
 abstract interface class ImageDataSource {
-  Future<Uint8List?> chooseImage();
+  Future<FileModel?> chooseImage();
 }

@@ -6,5 +6,5 @@ class RegexpPattern {
 
   static final RegExp password = RegExp(r"^(?=.*[A-Za-z])[A-Za-z0-9]{8,}$");
 
-  static final RegExp onlyLettersRegExp = RegExp(r"^[\p{L} ,.'-]*$");
+  static final RegExp name = RegExp(r"^[А-Яа-яA-Za-z\s]{3,}$");
 }

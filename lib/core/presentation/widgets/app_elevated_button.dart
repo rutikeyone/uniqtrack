@@ -4,7 +4,7 @@ import 'package:uniqtrack/core/theme/app_diments.dart';
 
 class AppElevatedButton extends StatelessWidget {
   final String text;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
   final Color? backgroundColor;
 
@@ -20,15 +20,20 @@ class AppElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final backgroundButtonColor = backgroundColor ?? context.colorScheme.onSecondary;
+    final disabledBackgroundColor = backgroundButtonColor.withOpacity(.5);
+
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         textStyle: textStyle ?? context.textTheme.labelLarge,
+        disabledBackgroundColor: disabledBackgroundColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppDiments.dm12),
         ),
         elevation: 0,
         shadowColor: Colors.transparent,
-        backgroundColor: backgroundColor ?? context.colorScheme.onSecondary,
+        backgroundColor: backgroundButtonColor,
+
       ),
       onPressed: onPressed,
       child: Text(

@@ -1,6 +1,5 @@
-import 'dart:typed_data';
-
 import 'package:uniqtrack/data/repositories/accounts/data_sources/image_data_source.dart';
+import 'package:uniqtrack/data/repositories/accounts/models/file_model.dart';
 import 'package:uniqtrack/data/repositories/image_data_repository.dart';
 
 class ImageDataRepositoryImpl implements ImageDataRepository {
@@ -10,7 +9,7 @@ class ImageDataRepositoryImpl implements ImageDataRepository {
       : _imageDataSource = imageDataSource;
 
   @override
-  Future<Uint8List?> chooseImage() {
+  Future<FileModel?> chooseImage() {
     return _imageDataSource.chooseImage();
   }
 }

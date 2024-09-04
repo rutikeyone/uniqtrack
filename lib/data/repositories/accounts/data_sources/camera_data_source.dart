@@ -1,7 +1,6 @@
-import 'dart:typed_data';
-
 import 'package:image_picker/image_picker.dart';
 import 'package:uniqtrack/data/repositories/accounts/data_sources/image_data_source.dart';
+import 'package:uniqtrack/data/repositories/accounts/models/file_model.dart';
 
 class CameraDataSource implements ImageDataSource {
   final ImagePicker _imagePicker;
@@ -10,9 +9,16 @@ class CameraDataSource implements ImageDataSource {
       : _imagePicker = imagePicker;
 
   @override
-  Future<Uint8List?> chooseImage() async {
+  Future<FileModel?> chooseImage() async {
     final file = await _imagePicker.pickImage(source: ImageSource.camera);
-    final bytes = await file?.readAsBytes();
-    return bytes;
+    if (file == null) {
+      return null;
+    }
+
+    final bytes = await file.readAsBytes();
+    final name = file.name;
+
+    final result = FileModel(name: name, bytes: bytes);
+    return result;
   }
 }
