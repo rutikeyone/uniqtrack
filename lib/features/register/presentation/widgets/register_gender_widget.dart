@@ -7,11 +7,7 @@ class _RegisterGenderWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isMaleSelected = ref.watch(
-        registerStateNotifierProvider.select((state) => state.isMaleSelected));
-
-    final isFemaleSelected = ref.watch(registerStateNotifierProvider
-        .select((state) => state.isFemaleSelected));
+    final store = provider.Provider.of<RegisterStore>(context);
 
     return Padding(
       padding: const EdgeInsets.only(top: AppDiments.dm12),
@@ -20,23 +16,29 @@ class _RegisterGenderWidget extends ConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            child: GenderTile(
-              text: S.of(context).male,
-              onPressed: () => ref
-                  .read(registerStateNotifierProvider.notifier)
-                  .updateGender(const Gender.male()),
-              isSelected: isMaleSelected,
-            ),
+            child: Observer(builder: (_) {
+              return GenderTile(
+                text: S.of(context).male,
+                onPressed: () {
+                  const maleState = GenderState.male();
+                  store.updateGender(maleState);
+                },
+                isSelected: store.isMaleSelectedState,
+              );
+            }),
           ),
           const Gap(AppDiments.dm12),
           Expanded(
-            child: GenderTile(
-              text: S.of(context).female,
-              onPressed: () => ref
-                  .read(registerStateNotifierProvider.notifier)
-                  .updateGender(const Gender.female()),
-              isSelected: isFemaleSelected,
-            ),
+            child: Observer(builder: (_) {
+              return GenderTile(
+                text: S.of(context).female,
+                onPressed: () {
+                  const femaleState = GenderState.female();
+                  store.updateGender(femaleState);
+                },
+                isSelected: store.isFemaleSelectedState,
+              );
+            }),
           ),
         ],
       ),

@@ -6,7 +6,7 @@ import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_elevated_button.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_text_field.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
-import 'package:uniqtrack/navigation/providers/login_nav_callback_store_provider.dart';
+import 'package:uniqtrack/features/navigation/providers/login_nav_callback_store_provider.dart';
 import 'package:uniqtrack/generated/l10n.dart';
 
 part '../widgets/login_header_text_widget.dart';

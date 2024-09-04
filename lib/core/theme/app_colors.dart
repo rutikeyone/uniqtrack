@@ -18,4 +18,5 @@ class AppColors {
 
   static const Color greyOlive = Color(0xff858589);
 
+  static const red = Color(0xffE22D2D);
 }

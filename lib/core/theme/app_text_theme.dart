@@ -8,6 +8,7 @@ class AppTextThemes {
       displaySmall: AppTextStyles.h3,
       bodyLarge: AppTextStyles.bodyLg,
       bodyMedium: AppTextStyles.body,
+      bodySmall: AppTextStyles.bodySm,
       labelLarge: AppTextStyles.labelLg,
     );
   }

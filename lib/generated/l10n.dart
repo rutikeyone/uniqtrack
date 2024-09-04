@@ -199,6 +199,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Invalid email address`
+  String get invalid_email_address {
+    return Intl.message(
+      'Invalid email address',
+      name: 'invalid_email_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid password`
+  String get invalidPassword {
+    return Intl.message(
+      'Invalid password',
+      name: 'invalidPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid name`
+  String get invalidName {
+    return Intl.message(
+      'Invalid name',
+      name: 'invalidName',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

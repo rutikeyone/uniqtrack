@@ -92,14 +92,32 @@ class _AppTextFieldState extends State<AppTextField> {
         suffixIcon: widget.suffixIcon,
         prefixIcon: widget.prefixIcon,
         errorText: widget.errorText,
+        errorStyle: context.textTheme.bodySmall?.copyWith(
+          color: context.colorScheme.error,
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.all(
+            widget.borderRadius ?? const Radius.circular(AppDiments.dm12),
+          ),
+          borderSide: BorderSide(
+            width: AppDiments.dm1,
+            color: widget.errorText == null
+                ? Colors.transparent
+                : context.colorScheme.error,
+          ),
+        ),
         errorMaxLines: 2,
         errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              widget.borderRadius ?? const Radius.circular(AppDiments.dm12),
-            ),
-            borderSide: const BorderSide(
-              width: AppDiments.dm1,
-            )),
+          borderRadius: BorderRadius.all(
+            widget.borderRadius ?? const Radius.circular(AppDiments.dm12),
+          ),
+          borderSide: BorderSide(
+            width: AppDiments.dm1,
+            color: widget.errorText == null
+                ? Colors.transparent
+                : context.colorScheme.error,
+          ),
+        ),
         contentPadding: EdgeInsets.only(
           top: AppDiments.dm16,
           bottom: AppDiments.dm16,
@@ -110,35 +128,43 @@ class _AppTextFieldState extends State<AppTextField> {
           borderRadius: BorderRadius.all(
             widget.borderRadius ?? const Radius.circular(AppDiments.dm12),
           ),
-          borderSide:const BorderSide(
-            width: AppDiments.dm0,
-            color: Colors.transparent,
+          borderSide: BorderSide(
+            width: AppDiments.dm1,
+            color: widget.errorText == null
+                ? Colors.transparent
+                : context.colorScheme.error,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(
             widget.borderRadius ?? const Radius.circular(AppDiments.dm12),
           ),
-          borderSide: const BorderSide(
-            width: AppDiments.dm0,
-            color: Colors.transparent,
+          borderSide: BorderSide(
+            width: AppDiments.dm1,
+            color: widget.errorText == null
+                ? Colors.transparent
+                : context.colorScheme.error,
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(
               widget.borderRadius ?? const Radius.circular(AppDiments.dm12)),
-          borderSide: const BorderSide(
-            width: AppDiments.dm0,
-            color: Colors.transparent,
+          borderSide: BorderSide(
+            width: AppDiments.dm1,
+            color: widget.errorText == null
+                ? Colors.transparent
+                : context.colorScheme.error,
           ),
         ),
         disabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(
             widget.borderRadius ?? const Radius.circular(AppDiments.dm12),
           ),
-          borderSide: const BorderSide(
-            width: AppDiments.dm0,
-            color: Colors.transparent,
+          borderSide: BorderSide(
+            width: AppDiments.dm1,
+            color: widget.errorText == null
+                ? Colors.transparent
+                : context.colorScheme.error,
           ),
         ),
       ),

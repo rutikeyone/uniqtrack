@@ -33,10 +33,15 @@ class AppTextStyles {
     color: AppColors.black,
   );
 
+  static final bodySm = GoogleFonts.montserrat(
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: AppColors.black,
+  );
+
   static final TextStyle labelLg = GoogleFonts.montserrat(
     fontSize: 16,
     fontWeight: FontWeight.w600,
     color: AppColors.black,
   );
-
 }

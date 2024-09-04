@@ -363,6 +363,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_hooks:
+    dependency: "direct main"
+    description:
+      name: flutter_hooks
+      sha256: cde36b12f7188c85286fba9b38cc5a902e7279f36dd676967106c041dc9dde70
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.20.5"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -376,6 +384,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_mobx:
+    dependency: "direct main"
+    description:
+      name: flutter_mobx
+      sha256: "859fbf452fa9c2519d2700b125dd7fb14c508bbdd7fb65e26ca8ff6c92280e2e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.1+1"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -410,6 +426,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  formz:
+    dependency: "direct main"
+    description:
+      name: formz
+      sha256: a58eb48d84685b7ffafac1d143bf47d585bf54c7db89fe81c175dfd6e53201c7
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.0"
   freezed:
     dependency: "direct dev"
     description:
@@ -482,6 +506,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.2"
+  hooks_riverpod:
+    dependency: "direct main"
+    description:
+      name: hooks_riverpod
+      sha256: "97266a91c994951a06ef0ff3a1c7fb261e52ec7f74e87f0614ea0b7411b859b2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.5.2"
   hotreloader:
     dependency: transitive
     description:
@@ -698,6 +730,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  mobx:
+    dependency: "direct main"
+    description:
+      name: mobx
+      sha256: "63920b27b32ad1910adfe767ab1750e4c212e8923232a1f891597b362074ea5e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.3+2"
+  mobx_codegen:
+    dependency: "direct dev"
+    description:
+      name: mobx_codegen
+      sha256: "8e0d8653a0c720ad933cd8358f6f89f740ce89203657c13f25bea772ef1fff7c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.1"
+  nested:
+    dependency: transitive
+    description:
+      name: nested
+      sha256: "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   package_config:
     dependency: transitive
     description:
@@ -802,6 +858,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.5.1"
+  provider:
+    dependency: "direct main"
+    description:
+      name: provider
+      sha256: c8a055ee5ce3fd98d6fc872478b03823ffdb448699c6ebdbbc71d59b596fd48c
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.2"
   pub_semver:
     dependency: transitive
     description:

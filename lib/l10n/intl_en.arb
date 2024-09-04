@@ -13,5 +13,8 @@
   "image": "Image",
   "chooseFromTheLibrary": "Choose from the library",
   "takeAPhoto": "Take a photo",
-  "cancel": "Cancel"
+  "cancel": "Cancel",
+  "invalid_email_address": "Invalid email address",
+  "invalidPassword": "Invalid password",
+  "invalidName": "Invalid name"
 }

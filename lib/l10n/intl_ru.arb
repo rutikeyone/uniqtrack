@@ -13,5 +13,8 @@
   "image": "Изображение",
   "chooseFromTheLibrary": "Выбрать из галереи",
   "takeAPhoto": "Сделать фотографию",
-  "cancel": "Назад"
+  "cancel": "Назад",
+  "invalid_email_address": "Введите корректный адрес электронной почты",
+  "invalidPassword": "Некорректный пароль",
+  "invalidName": "Invalid name"
 }

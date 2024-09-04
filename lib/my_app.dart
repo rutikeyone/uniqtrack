@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uniqtrack/core/theme/app_theme.dart';
+import 'package:uniqtrack/features/navigation/router/router.dart';
 import 'package:uniqtrack/generated/l10n.dart';
-import 'package:uniqtrack/navigation/router/router.dart';
 
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
