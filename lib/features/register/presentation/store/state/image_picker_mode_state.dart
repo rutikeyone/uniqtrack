@@ -4,6 +4,7 @@ import 'package:uniqtrack/features/register/domain/entities/file.dart';
 
 part 'image_picker_mode_state.freezed.dart';
 
+@immutable
 @freezed
 class ImagePickerModeState with _$ImagePickerModeState {
   const factory ImagePickerModeState.placeholder() = _ImagePickerPlaceholderModeState;

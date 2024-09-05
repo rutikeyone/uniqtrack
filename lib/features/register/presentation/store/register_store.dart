@@ -1,15 +1,17 @@
 import 'package:formz/formz.dart';
 import 'package:mobx/mobx.dart';
+import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
+import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/presentation/validation/entities/email.dart';
 import 'package:uniqtrack/core/presentation/validation/entities/name.dart';
 import 'package:uniqtrack/core/presentation/validation/entities/password.dart';
 import 'package:uniqtrack/features/register/domain/entities/file.dart';
+import 'package:uniqtrack/features/register/domain/entities/gender.dart';
 import 'package:uniqtrack/features/register/domain/repositorories/register_repository.dart';
-import 'package:uniqtrack/features/register/presentation/store/state/gender_state.dart';
-import 'package:uniqtrack/features/register/presentation/store/state/image_picker_mode_state.dart';
 import 'package:uniqtrack/features/register/presentation/store/state/register_actions.dart';
 import 'package:uniqtrack/features/register/presentation/store/state/register_state.dart';
 import 'package:uniqtrack/features/register/presentation/store/state/register_status_state.dart';
+import 'package:uniqtrack/features/register/presentation/store/state/image_picker_mode_state.dart';
 
 part 'register_store.g.dart';
 
@@ -21,17 +23,20 @@ class RegisterStore = _RegisterStore with _$RegisterStore;
 
 abstract class _RegisterStore with Store {
   final RegisterRepository _imageRepository;
+  final CommonUIDelegate _commonUIDelegate;
 
   _RegisterStore({
     required RegisterRepository imageRepository,
-  }) : _imageRepository = imageRepository;
+    required CommonUIDelegate commonUIDelegate,
+  })  : _imageRepository = imageRepository,
+        _commonUIDelegate = commonUIDelegate;
 
   @observable
   ImagePickerModeState pickerModeState =
       const ImagePickerModeState.placeholder();
 
   @observable
-  GenderState genderState = const GenderState.male();
+  Gender genderState = const Gender.male();
 
   @observable
   Email emailState = const Email.pure();
@@ -79,19 +84,26 @@ abstract class _RegisterStore with Store {
 
   @action
   Future<void> _chooseImageFromGallery() async {
-    final bytes = await _imageRepository.chooseImageFromGallery();
-    _handleChooseImage(bytes);
+    final chooseImageResult = await _imageRepository.chooseImageFromGallery();
+
+    chooseImageResult.fold(
+      _handleFailureChooseImage,
+      _handleSuccessChooseImage,
+    );
   }
 
   @action
   Future<void> _chooseImageFromCamera() async {
-    final bytes = await _imageRepository.chooseImageFromCamera();
-    _handleChooseImage(bytes);
+    final chooseImageResult = await _imageRepository.chooseImageFromCamera();
+    chooseImageResult.fold(
+      _handleFailureChooseImage,
+      _handleSuccessChooseImage,
+    );
   }
 
   @action
-  void updateGender(GenderState newGenderState) {
-    genderState = newGenderState;
+  void updateGender(Gender newGender) {
+    genderState = newGender;
   }
 
   @action
@@ -127,19 +139,39 @@ abstract class _RegisterStore with Store {
   }
 
   @action
-  void register() {
+  Future<void> register() async {
     final canRegister = state.canRegister;
     if (!canRegister) return;
 
     final email = state.email.value;
     final name = state.name.value;
     final password = state.password.value;
+    final gender = state.gender;
+
+    final register = await _imageRepository.register(
+      email: email,
+      name: name,
+      password: password,
+      gender: gender,
+    );
   }
 
-  void _handleChooseImage(File? file) {
+  void _handleSuccessChooseImage(File? file) {
     if (file == null) return;
 
     final photoImagePickerModeState = ImagePickerModeState.photo(file: file);
     pickerModeState = photoImagePickerModeState;
+  }
+
+  void _handleFailureChooseImage(AppError l) {
+    if (l.isCancelError) return;
+
+    final header = l.header();
+    final body = l.body();
+
+    _commonUIDelegate.cupertinoDialog(
+      header: header,
+      body: body,
+    );
   }
 }

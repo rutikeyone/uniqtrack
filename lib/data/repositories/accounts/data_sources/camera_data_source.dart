@@ -10,15 +10,20 @@ class CameraDataSource implements ImageDataSource {
 
   @override
   Future<FileModel?> chooseImage() async {
-    final file = await _imagePicker.pickImage(source: ImageSource.camera);
-    if (file == null) {
-      return null;
-    }
 
-    final bytes = await file.readAsBytes();
-    final name = file.name;
+    await Future.delayed(const Duration(seconds: 2));
 
-    final result = FileModel(name: name, bytes: bytes);
-    return result;
+    throw Exception();
+
+    // final file = await _imagePicker.pickImage(source: ImageSource.camera);
+    // if (file == null) {
+    //   return null;
+    // }
+    //
+    // final bytes = await file.readAsBytes();
+    // final name = file.name;
+    //
+    // final result = FileModel(name: name, bytes: bytes);
+    // return result;
   }
 }

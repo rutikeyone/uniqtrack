@@ -16,5 +16,8 @@
   "cancel": "Cancel",
   "invalid_email_address": "Invalid email address",
   "invalidPassword": "Invalid password",
-  "invalidName": "Invalid name"
+  "invalidName": "Invalid name",
+  "error" : "Error!",
+  "okay": "Okay",
+  "anErrorHasOccurredInTheApplication": "An error has occurred in the application!"
 }

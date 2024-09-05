@@ -58,13 +58,13 @@ mixin _$RegisterStore on _RegisterStore, Store {
       Atom(name: '_RegisterStore.genderState', context: context);
 
   @override
-  GenderState get genderState {
+  Gender get genderState {
     _$genderStateAtom.reportRead();
     return super.genderState;
   }
 
   @override
-  set genderState(GenderState value) {
+  set genderState(Gender value) {
     _$genderStateAtom.reportWrite(value, super.genderState, () {
       super.genderState = value;
     });
@@ -168,15 +168,23 @@ mixin _$RegisterStore on _RegisterStore, Store {
         .run(() => super._chooseImageFromCamera());
   }
 
+  late final _$registerAsyncAction =
+      AsyncAction('_RegisterStore.register', context: context);
+
+  @override
+  Future<void> register() {
+    return _$registerAsyncAction.run(() => super.register());
+  }
+
   late final _$_RegisterStoreActionController =
       ActionController(name: '_RegisterStore', context: context);
 
   @override
-  void updateGender(GenderState newGenderState) {
+  void updateGender(Gender newGender) {
     final _$actionInfo = _$_RegisterStoreActionController.startAction(
         name: '_RegisterStore.updateGender');
     try {
-      return super.updateGender(newGenderState);
+      return super.updateGender(newGender);
     } finally {
       _$_RegisterStoreActionController.endAction(_$actionInfo);
     }
@@ -221,17 +229,6 @@ mixin _$RegisterStore on _RegisterStore, Store {
         name: '_RegisterStore.updateName');
     try {
       return super.updateName(value);
-    } finally {
-      _$_RegisterStoreActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
-  void register() {
-    final _$actionInfo = _$_RegisterStoreActionController.startAction(
-        name: '_RegisterStore.register');
-    try {
-      return super.register();
     } finally {
       _$_RegisterStoreActionController.endAction(_$actionInfo);
     }

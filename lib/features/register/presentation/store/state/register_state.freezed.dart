@@ -17,7 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$RegisterState {
   ImagePickerModeState get modeState => throw _privateConstructorUsedError;
-  GenderState get gender => throw _privateConstructorUsedError;
+  Gender get gender => throw _privateConstructorUsedError;
   Email get email => throw _privateConstructorUsedError;
   Password get password => throw _privateConstructorUsedError;
   Name get name => throw _privateConstructorUsedError;
@@ -40,7 +40,7 @@ abstract class $RegisterStateCopyWith<$Res> {
   @useResult
   $Res call(
       {ImagePickerModeState modeState,
-      GenderState gender,
+      Gender gender,
       Email email,
       Password password,
       Name name,
@@ -48,7 +48,7 @@ abstract class $RegisterStateCopyWith<$Res> {
       RegisterStatusState registerStatusState});
 
   $ImagePickerModeStateCopyWith<$Res> get modeState;
-  $GenderStateCopyWith<$Res> get gender;
+  $GenderCopyWith<$Res> get gender;
   $RegisterStatusStateCopyWith<$Res> get registerStatusState;
 }
 
@@ -83,7 +83,7 @@ class _$RegisterStateCopyWithImpl<$Res, $Val extends RegisterState>
       gender: null == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as GenderState,
+              as Gender,
       email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -121,8 +121,8 @@ class _$RegisterStateCopyWithImpl<$Res, $Val extends RegisterState>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $GenderStateCopyWith<$Res> get gender {
-    return $GenderStateCopyWith<$Res>(_value.gender, (value) {
+  $GenderCopyWith<$Res> get gender {
+    return $GenderCopyWith<$Res>(_value.gender, (value) {
       return _then(_value.copyWith(gender: value) as $Val);
     });
   }
@@ -149,7 +149,7 @@ abstract class _$$RegisterStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {ImagePickerModeState modeState,
-      GenderState gender,
+      Gender gender,
       Email email,
       Password password,
       Name name,
@@ -159,7 +159,7 @@ abstract class _$$RegisterStateImplCopyWith<$Res>
   @override
   $ImagePickerModeStateCopyWith<$Res> get modeState;
   @override
-  $GenderStateCopyWith<$Res> get gender;
+  $GenderCopyWith<$Res> get gender;
   @override
   $RegisterStatusStateCopyWith<$Res> get registerStatusState;
 }
@@ -193,7 +193,7 @@ class __$$RegisterStateImplCopyWithImpl<$Res>
       gender: null == gender
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as GenderState,
+              as Gender,
       email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -234,7 +234,7 @@ class _$RegisterStateImpl extends _RegisterState {
   @override
   final ImagePickerModeState modeState;
   @override
-  final GenderState gender;
+  final Gender gender;
   @override
   final Email email;
   @override
@@ -285,7 +285,7 @@ class _$RegisterStateImpl extends _RegisterState {
 abstract class _RegisterState extends RegisterState {
   const factory _RegisterState(
           {required final ImagePickerModeState modeState,
-          required final GenderState gender,
+          required final Gender gender,
           required final Email email,
           required final Password password,
           required final Name name,
@@ -297,7 +297,7 @@ abstract class _RegisterState extends RegisterState {
   @override
   ImagePickerModeState get modeState;
   @override
-  GenderState get gender;
+  Gender get gender;
   @override
   Email get email;
   @override

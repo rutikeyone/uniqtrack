@@ -229,6 +229,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Error!`
+  String get error {
+    return Intl.message(
+      'Error!',
+      name: 'error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Okay`
+  String get okay {
+    return Intl.message(
+      'Okay',
+      name: 'okay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error has occurred in the application!`
+  String get anErrorHasOccurredInTheApplication {
+    return Intl.message(
+      'An error has occurred in the application!',
+      name: 'anErrorHasOccurredInTheApplication',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

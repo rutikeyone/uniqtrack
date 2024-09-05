@@ -15,9 +15,14 @@ class _RegisterAvatarWidget extends ConsumerWidget {
         return imagePickerModeState.when(
           placeholder: () {
             final asset = gender.when(
+              unknown: () => null,
               male: () => AppAssets.placeholdes.male,
               female: () => AppAssets.placeholdes.female,
             );
+
+            if (asset == null) {
+              return const SizedBox.shrink();
+            }
 
             return Center(
               child: Padding(

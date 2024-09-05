@@ -1,9 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart' as provider;
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:uniqtrack/app/glue/register/providers/register_store_builder_provider.dart';
-import 'package:uniqtrack/features/forgot_password/presentation/forgot_password_page.dart';
+import 'package:uniqtrack/app/glue/register/providers/register_provider.dart';
 import 'package:uniqtrack/features/login/presentation%20/pages/login_page.dart';
 import 'package:uniqtrack/features/navigation/paths/app_paths.dart';
 import 'package:uniqtrack/features/navigation/providers/login_nav_callback_store_provider.dart';
@@ -11,12 +11,16 @@ import 'package:uniqtrack/features/navigation/providers/register_nav_callback_st
 import 'package:uniqtrack/features/navigation/providers/stores/login_nav_callback_store.dart';
 import 'package:uniqtrack/features/navigation/providers/stores/register_nav_callback_store.dart';
 import 'package:uniqtrack/features/register/presentation/pages/register_page.dart';
+import 'package:uniqtrack/features/forgot_password/presentation/forgot_password_page.dart';
 
 part 'router.g.dart';
+
+final navigatorKey = GlobalKey<NavigatorState>();
 
 @riverpod
 GoRouter router(RouterRef ref) {
   return GoRouter(
+    navigatorKey: navigatorKey,
     initialLocation: AppPaths.login.goRoute,
     routes: [
       GoRoute(

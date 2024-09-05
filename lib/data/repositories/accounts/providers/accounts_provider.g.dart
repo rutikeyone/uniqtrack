@@ -20,6 +20,21 @@ final imagePickerProvider = AutoDisposeProvider<ImagePicker>.internal(
 );
 
 typedef ImagePickerRef = AutoDisposeProviderRef<ImagePicker>;
+String _$appErrorHandlerHash() => r'cc0cc226e4b2ae9bbbf6f14fe86a8f90c1d06ffa';
+
+/// See also [appErrorHandler].
+@ProviderFor(appErrorHandler)
+final appErrorHandlerProvider = AutoDisposeProvider<AppErrorHandler>.internal(
+  appErrorHandler,
+  name: r'appErrorHandlerProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$appErrorHandlerHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef AppErrorHandlerRef = AutoDisposeProviderRef<AppErrorHandler>;
 String _$galleryDataSourceHash() => r'a6d9dd71036e371e8d518577ccc98031d6070526';
 
 /// See also [galleryDataSource].
@@ -51,7 +66,7 @@ final cameraDataSourceProvider = AutoDisposeProvider<ImageDataSource>.internal(
 
 typedef CameraDataSourceRef = AutoDisposeProviderRef<ImageDataSource>;
 String _$imageDataRepositoryHash() =>
-    r'c6ef592e6f7d9822e2d0220fc516c4c5760d0262';
+    r'd74b6cfb0544ee7ac45075d013aaa028825d24ad';
 
 /// Copied from Dart SDK
 class _SystemHash {

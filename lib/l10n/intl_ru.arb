@@ -16,5 +16,8 @@
   "cancel": "Назад",
   "invalid_email_address": "Введите корректный адрес электронной почты",
   "invalidPassword": "Некорректный пароль",
-  "invalidName": "Некорректное имя"
+  "invalidName": "Некорректное имя",
+  "error": "Ошибка!",
+  "okay": "Хорошо",
+  "anErrorHasOccurredInTheApplication": "Произошла ошибка в приложении!"
 }

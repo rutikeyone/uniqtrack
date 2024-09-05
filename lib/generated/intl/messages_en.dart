@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "anErrorHasOccurredInTheApplication":
+            MessageLookupByLibrary.simpleMessage(
+                "An error has occurred in the application!"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "chooseFromTheLibrary":
@@ -36,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your full name"),
         "enterYourPassword":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
+        "error": MessageLookupByLibrary.simpleMessage("Error!"),
         "female": MessageLookupByLibrary.simpleMessage("Female"),
         "image": MessageLookupByLibrary.simpleMessage("Image"),
         "invalidName": MessageLookupByLibrary.simpleMessage("Invalid name"),
@@ -47,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logInToYourAccount":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "okay": MessageLookupByLibrary.simpleMessage("Okay"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign up"),
         "takeAPhoto": MessageLookupByLibrary.simpleMessage("Take a photo")
       };

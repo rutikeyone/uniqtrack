@@ -1,15 +1,24 @@
+import 'package:dartz/dartz.dart';
+import 'package:uniqtrack/core/common/error_handler/app_error_handler.dart';
+import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/data/repositories/accounts/data_sources/image_data_source.dart';
 import 'package:uniqtrack/data/repositories/accounts/models/file_model.dart';
 import 'package:uniqtrack/data/repositories/image_data_repository.dart';
 
 class ImageDataRepositoryImpl implements ImageDataRepository {
   final ImageDataSource _imageDataSource;
+  final AppErrorHandler _appErrorHandler;
 
-  const ImageDataRepositoryImpl({required ImageDataSource imageDataSource})
-      : _imageDataSource = imageDataSource;
+  const ImageDataRepositoryImpl({
+    required ImageDataSource imageDataSource,
+    required AppErrorHandler appErrorHandler,
+  })  : _imageDataSource = imageDataSource,
+        _appErrorHandler = appErrorHandler;
 
   @override
-  Future<FileModel?> chooseImage() {
-    return _imageDataSource.chooseImage();
+  Future<Either<AppError, FileModel?>> chooseImage() async {
+    final result =
+        await _appErrorHandler.handle(_imageDataSource.chooseImage());
+    return result;
   }
 }

@@ -20,7 +20,7 @@ class _RegisterGenderWidget extends ConsumerWidget {
               return GenderTile(
                 text: S.of(context).male,
                 onPressed: () {
-                  const maleState = GenderState.male();
+                  const maleState = Gender.male();
                   store.updateGender(maleState);
                 },
                 isSelected: store.isMaleSelectedState,
@@ -33,7 +33,7 @@ class _RegisterGenderWidget extends ConsumerWidget {
               return GenderTile(
                 text: S.of(context).female,
                 onPressed: () {
-                  const femaleState = GenderState.female();
+                  const femaleState = Gender.female();
                   store.updateGender(femaleState);
                 },
                 isSelected: store.isFemaleSelectedState,

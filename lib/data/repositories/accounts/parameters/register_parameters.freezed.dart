@@ -19,6 +19,7 @@ mixin _$RegisterParameters {
   String get name => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
+  GenderModel get gender => throw _privateConstructorUsedError;
 
   /// Create a copy of RegisterParameters
   /// with the given fields replaced by the non-null parameter values.
@@ -33,7 +34,9 @@ abstract class $RegisterParametersCopyWith<$Res> {
           RegisterParameters value, $Res Function(RegisterParameters) then) =
       _$RegisterParametersCopyWithImpl<$Res, RegisterParameters>;
   @useResult
-  $Res call({String name, String email, String password});
+  $Res call({String name, String email, String password, GenderModel gender});
+
+  $GenderModelCopyWith<$Res> get gender;
 }
 
 /// @nodoc
@@ -54,6 +57,7 @@ class _$RegisterParametersCopyWithImpl<$Res, $Val extends RegisterParameters>
     Object? name = null,
     Object? email = null,
     Object? password = null,
+    Object? gender = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -68,7 +72,21 @@ class _$RegisterParametersCopyWithImpl<$Res, $Val extends RegisterParameters>
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
+      gender: null == gender
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as GenderModel,
     ) as $Val);
+  }
+
+  /// Create a copy of RegisterParameters
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $GenderModelCopyWith<$Res> get gender {
+    return $GenderModelCopyWith<$Res>(_value.gender, (value) {
+      return _then(_value.copyWith(gender: value) as $Val);
+    });
   }
 }
 
@@ -80,7 +98,10 @@ abstract class _$$RegisterParametersImplCopyWith<$Res>
       __$$RegisterParametersImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String email, String password});
+  $Res call({String name, String email, String password, GenderModel gender});
+
+  @override
+  $GenderModelCopyWith<$Res> get gender;
 }
 
 /// @nodoc
@@ -99,6 +120,7 @@ class __$$RegisterParametersImplCopyWithImpl<$Res>
     Object? name = null,
     Object? email = null,
     Object? password = null,
+    Object? gender = null,
   }) {
     return _then(_$RegisterParametersImpl(
       name: null == name
@@ -113,6 +135,10 @@ class __$$RegisterParametersImplCopyWithImpl<$Res>
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
+      gender: null == gender
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as GenderModel,
     ));
   }
 }
@@ -121,7 +147,10 @@ class __$$RegisterParametersImplCopyWithImpl<$Res>
 
 class _$RegisterParametersImpl implements _RegisterParameters {
   const _$RegisterParametersImpl(
-      {required this.name, required this.email, required this.password});
+      {required this.name,
+      required this.email,
+      required this.password,
+      required this.gender});
 
   @override
   final String name;
@@ -129,10 +158,12 @@ class _$RegisterParametersImpl implements _RegisterParameters {
   final String email;
   @override
   final String password;
+  @override
+  final GenderModel gender;
 
   @override
   String toString() {
-    return 'RegisterParameters(name: $name, email: $email, password: $password)';
+    return 'RegisterParameters(name: $name, email: $email, password: $password, gender: $gender)';
   }
 
   @override
@@ -143,11 +174,12 @@ class _$RegisterParametersImpl implements _RegisterParameters {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
-                other.password == password));
+                other.password == password) &&
+            (identical(other.gender, gender) || other.gender == gender));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name, email, password);
+  int get hashCode => Object.hash(runtimeType, name, email, password, gender);
 
   /// Create a copy of RegisterParameters
   /// with the given fields replaced by the non-null parameter values.
@@ -163,7 +195,8 @@ abstract class _RegisterParameters implements RegisterParameters {
   const factory _RegisterParameters(
       {required final String name,
       required final String email,
-      required final String password}) = _$RegisterParametersImpl;
+      required final String password,
+      required final GenderModel gender}) = _$RegisterParametersImpl;
 
   @override
   String get name;
@@ -171,6 +204,8 @@ abstract class _RegisterParameters implements RegisterParameters {
   String get email;
   @override
   String get password;
+  @override
+  GenderModel get gender;
 
   /// Create a copy of RegisterParameters
   /// with the given fields replaced by the non-null parameter values.

@@ -1,7 +1,4 @@
-import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:uniqtrack/app/glue/register/mappers/file_mapper.dart';
-
-part 'file_mapper_provider.g.dart';
+part of 'register_provider.dart';
 
 @riverpod
 FileMapper fileMapper(FileMapperRef ref) {

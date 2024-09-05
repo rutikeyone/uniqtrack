@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'register_actions.freezed.dart';
 
+@immutable
 @freezed
 class RegisterActions with _$RegisterActions {
   const RegisterActions._();

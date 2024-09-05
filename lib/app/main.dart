@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'my_app.dart';
+import 'package:uniqtrack/app/my_app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //await _initializeFirebase();
 
   runApp(
     const ProviderScope(
@@ -13,9 +11,4 @@ Future<void> main() async {
     ),
   );
 }
-
-
-// Future<void> _initializeFirebase() {
-//   return Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-// }
 
