@@ -1,11 +1,12 @@
 import 'dart:io';
-
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:uniqtrack/core/common/error_handler/app_error_handler.dart';
 import 'package:uniqtrack/core/common/error_handler/logger.dart';
 import 'package:uniqtrack/core/common/error_handler/result_state.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
+import 'package:uniqtrack/core/common/firebase_auth_constants.dart';
 
 class AppErrorHandlerImpl implements AppErrorHandler {
   final Logger? _logger;
@@ -41,6 +42,31 @@ class AppErrorHandlerImpl implements AppErrorHandler {
       _sentStateLog(networkError);
 
       return Left(networkError);
+    } on FirebaseAuthException catch (e) {
+      final code = e.code;
+      final category = switch (code) {
+        FirebaseAuthConstants.emailAlreadyInUse =>
+          const FirebaseErrorCategory.emailAlreadyInUse(),
+        FirebaseAuthConstants.invalidEmail =>
+          const FirebaseErrorCategory.invalidEmail(),
+        FirebaseAuthConstants.operationNotAllowed =>
+          const FirebaseErrorCategory.operationNotAllowed(),
+        FirebaseAuthConstants.weakPassword =>
+          const FirebaseErrorCategory.weakPassword(),
+        FirebaseAuthConstants.tooManyRequests =>
+          const FirebaseErrorCategory.tooManyRequests(),
+        FirebaseAuthConstants.userTokenExpired =>
+          const FirebaseErrorCategory.userTokenExpired(),
+        FirebaseAuthConstants.networkRequestFailed =>
+          const FirebaseErrorCategory.networkRequestFailed(),
+        _ => const FirebaseErrorCategory.base(),
+      };
+
+      final firebaseError = AppError.firebase(category: category);
+
+      _sentStateLog(firebaseError);
+
+      return Left(firebaseError);
     } on SocketException catch (_) {
       const notInternetConnectionErrorCategory =
           NetworkErrorCategory.notInternetConnection();

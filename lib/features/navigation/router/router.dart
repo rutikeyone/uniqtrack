@@ -15,12 +15,17 @@ import 'package:uniqtrack/features/forgot_password/presentation/forgot_password_
 
 part 'router.g.dart';
 
-final navigatorKey = GlobalKey<NavigatorState>();
+final rootNavigatorKeyProvider =
+    Provider.autoDispose<GlobalKey<NavigatorState>>(
+  (ref) => GlobalKey<NavigatorState>(),
+);
 
 @riverpod
 GoRouter router(RouterRef ref) {
+  final rootNavigatorKey = ref.watch(rootNavigatorKeyProvider);
+
   return GoRouter(
-    navigatorKey: navigatorKey,
+    navigatorKey: rootNavigatorKey,
     initialLocation: AppPaths.login.goRoute,
     routes: [
       GoRoute(

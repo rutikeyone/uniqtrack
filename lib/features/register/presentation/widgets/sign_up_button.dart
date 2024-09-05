@@ -18,7 +18,7 @@ class _SignUpButton extends StatelessWidget {
 
             return AppElevatedButton(
               text: S.of(context).signUp,
-              onPressed: canRegister ? () {} : null,
+              onPressed: canRegister ? store.register : null,
               textStyle: context.textTheme.labelLarge?.copyWith(
                 color: context.colorScheme.secondary,
               ),

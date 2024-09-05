@@ -22,17 +22,29 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "aBadCertificateErrorOccurred": MessageLookupByLibrary.simpleMessage(
+            "A bad certificate error occurred"),
+        "aBadResponseErrorOccurred": MessageLookupByLibrary.simpleMessage(
+            "A bad response error occurred"),
         "anErrorHasOccurredInTheApplication":
             MessageLookupByLibrary.simpleMessage(
                 "An error has occurred in the application!"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "checkYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Check your internet connection and try again"),
         "chooseFromTheLibrary":
             MessageLookupByLibrary.simpleMessage("Choose from the library"),
+        "connectionTimeoutFailureOccurred":
+            MessageLookupByLibrary.simpleMessage(
+                "Connection timeout failure occurred"),
         "createAnAccount":
             MessageLookupByLibrary.simpleMessage("Create an account"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
+        "emailAlreadyInUse":
+            MessageLookupByLibrary.simpleMessage("Email already in use"),
         "enterYourEmail":
             MessageLookupByLibrary.simpleMessage("Enter your email"),
         "enterYourFullName":
@@ -42,17 +54,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "error": MessageLookupByLibrary.simpleMessage("Error!"),
         "female": MessageLookupByLibrary.simpleMessage("Female"),
         "image": MessageLookupByLibrary.simpleMessage("Image"),
+        "invalidEmailAddress":
+            MessageLookupByLibrary.simpleMessage("Invalid email address"),
         "invalidName": MessageLookupByLibrary.simpleMessage("Invalid name"),
         "invalidPassword":
             MessageLookupByLibrary.simpleMessage("Invalid password"),
-        "invalid_email_address":
-            MessageLookupByLibrary.simpleMessage("Invalid email address"),
         "logIn": MessageLookupByLibrary.simpleMessage("Log in"),
         "logInToYourAccount":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "notification": MessageLookupByLibrary.simpleMessage("Notification"),
         "okay": MessageLookupByLibrary.simpleMessage("Okay"),
+        "operation_not_allowed":
+            MessageLookupByLibrary.simpleMessage("Operation not allowed"),
+        "receiveTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
+            "Receive timeout failure occurred"),
+        "sendTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
+            "Send timeout failure occurred"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign up"),
-        "takeAPhoto": MessageLookupByLibrary.simpleMessage("Take a photo")
+        "takeAPhoto": MessageLookupByLibrary.simpleMessage("Take a photo"),
+        "theRequestWasCanceled":
+            MessageLookupByLibrary.simpleMessage("The request was canceled"),
+        "theUserHasBeenSuccessfullyRegistered":
+            MessageLookupByLibrary.simpleMessage(
+                "The user has been successfully registered"),
+        "tooManyRequests":
+            MessageLookupByLibrary.simpleMessage("Too many requests"),
+        "userTokenExpired":
+            MessageLookupByLibrary.simpleMessage("User token expired"),
+        "weakPassword": MessageLookupByLibrary.simpleMessage("Weak password")
       };
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "101352715894",
+    "project_id": "uniqtrack-e3ab3",
+    "storage_bucket": "uniqtrack-e3ab3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101352715894:android:c760f723a5a299d9929157",
+        "android_client_info": {
+          "package_name": "com.uniqtrack.uniqtrack"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3-0O4AHMZwqEJtjvdRbVuKPqswHcKq2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

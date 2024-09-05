@@ -22,16 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "aBadCertificateErrorOccurred": MessageLookupByLibrary.simpleMessage(
+            "Произошла ошибка с ошибочным сертификатом"),
+        "aBadResponseErrorOccurred": MessageLookupByLibrary.simpleMessage(
+            "Произошла ошибка неправильного ответа"),
         "anErrorHasOccurredInTheApplication":
             MessageLookupByLibrary.simpleMessage(
                 "Произошла ошибка в приложении!"),
         "back": MessageLookupByLibrary.simpleMessage("Назад"),
         "cancel": MessageLookupByLibrary.simpleMessage("Назад"),
+        "checkYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Проверьте свое интернет-соединение и повторите попытку"),
         "chooseFromTheLibrary":
             MessageLookupByLibrary.simpleMessage("Выбрать из галереи"),
+        "connectionTimeoutFailureOccurred":
+            MessageLookupByLibrary.simpleMessage(
+                "Произошел сбой тайм-аута соединения"),
         "createAnAccount": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
+        "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+            "Электронная почта уже используется"),
         "enterYourEmail":
             MessageLookupByLibrary.simpleMessage("Введите вашу почту"),
         "enterYourFullName":
@@ -41,17 +53,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "error": MessageLookupByLibrary.simpleMessage("Ошибка!"),
         "female": MessageLookupByLibrary.simpleMessage("Женский"),
         "image": MessageLookupByLibrary.simpleMessage("Изображение"),
+        "invalidEmailAddress": MessageLookupByLibrary.simpleMessage(
+            "Введите корректный адрес электронной почты"),
         "invalidName": MessageLookupByLibrary.simpleMessage("Некорректное имя"),
         "invalidPassword":
             MessageLookupByLibrary.simpleMessage("Некорректный пароль"),
-        "invalid_email_address": MessageLookupByLibrary.simpleMessage(
-            "Введите корректный адрес электронной почты"),
         "logIn": MessageLookupByLibrary.simpleMessage("Войти"),
         "logInToYourAccount": MessageLookupByLibrary.simpleMessage(
             "Войдите в вашу учетную запись"),
         "male": MessageLookupByLibrary.simpleMessage("Мужской"),
+        "notification": MessageLookupByLibrary.simpleMessage("Уведомление"),
         "okay": MessageLookupByLibrary.simpleMessage("Хорошо"),
+        "operation_not_allowed":
+            MessageLookupByLibrary.simpleMessage("Операция запрещена"),
+        "receiveTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
+            "Произошел сбой тайм-аута приема"),
+        "sendTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
+            "Произошел сбой тайм-аута отправки"),
         "signUp": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
-        "takeAPhoto": MessageLookupByLibrary.simpleMessage("Сделать фотографию")
+        "takeAPhoto":
+            MessageLookupByLibrary.simpleMessage("Сделать фотографию"),
+        "theRequestWasCanceled":
+            MessageLookupByLibrary.simpleMessage("Запрос был отменен"),
+        "theUserHasBeenSuccessfullyRegistered":
+            MessageLookupByLibrary.simpleMessage(
+                "Пользователь успешно зарегистрирован"),
+        "tooManyRequests":
+            MessageLookupByLibrary.simpleMessage("Слишком много запросов"),
+        "userTokenExpired": MessageLookupByLibrary.simpleMessage(
+            "Срок действия пользовательского токена истек"),
+        "weakPassword": MessageLookupByLibrary.simpleMessage("Слабый пароль")
       };
 }

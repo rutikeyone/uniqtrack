@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:uniqtrack/core/common/activity.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_actions.dart';
@@ -28,31 +29,37 @@ class _CommonUIWrapperState extends ConsumerState<CommonUIContainer> {
 
   void _handleCommonUIActions(
     Activity<CommonUIActions>? previous,
-    Activity<CommonUIActions>? next,
-  ) {
+    Activity<CommonUIActions>? next, {
+    required GlobalKey<NavigatorState> navigatorKey,
+  }) {
     final value = next?.get();
     if (value == null) return;
-    value.when(cupertinoDialog: _showCupertinoDialog);
+    value.when(cupertinoDialog: (header, body, close) {
+      _showCupertinoDialog(header, body, close, navigatorKey: navigatorKey);
+    });
   }
 
   void _showCupertinoDialog(
     AppStrings header,
     AppStrings body,
-    AppStrings close,
-  ) {
+    AppStrings close, {
+    required GlobalKey<NavigatorState> navigatorKey,
+  }) {
+    final navigatorContext = navigatorKey.currentState?.context;
     final headerText = context.fromAppStrings(header);
     final bodyText = context.fromAppStrings(body);
     final closeText = context.fromAppStrings(close);
 
-    if (_dialogShowed) return;
+    if (_dialogShowed || navigatorContext == null) return;
 
     showCupertinoDialog(
-        context: navigatorKey.currentState!.context,
+        context: navigatorContext,
         builder: (context) {
           return CupertinoDialog(
             headerText: headerText,
             bodyText: bodyText,
             close: closeText,
+            closeDialog: navigatorContext.pop,
           );
         }).whenComplete(() {
       _dialogShowed = false;
@@ -61,9 +68,13 @@ class _CommonUIWrapperState extends ConsumerState<CommonUIContainer> {
 
   @override
   Widget build(BuildContext context) {
+    final navigatorKey = ref.watch(rootNavigatorKeyProvider);
+
     ref.listen<Activity<CommonUIActions>?>(
       commonUIDelegateProvider,
-      _handleCommonUIActions,
+      (prev, next) {
+        _handleCommonUIActions(prev, next, navigatorKey: navigatorKey);
+      },
     );
 
     return widget.child;

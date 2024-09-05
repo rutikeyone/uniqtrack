@@ -67,6 +67,8 @@ class _RegisterPageState extends ConsumerState<RegisterPage> {
 
   void _handleReactionAction(RegisterActions? action) => action?.when(
         showImageSourceChooser: _showImageSourceChooser,
+        hideFocus: _hideFocus,
+        navigateBack: _navigateBack,
       );
 
   void _showImageSourceChooser(
@@ -77,6 +79,14 @@ class _RegisterPageState extends ConsumerState<RegisterPage> {
       onFromGalleryPressed: chooseImageFromGallery,
       onFromCameraPressed: chooseImageFromCamera,
     );
+  }
+
+  void _hideFocus() {
+    FocusManager.instance.primaryFocus?.unfocus();
+  }
+
+  void _navigateBack() {
+    ref.read(registerNavCallbackStoreProvider).navigateBack.call();
   }
 
   @override

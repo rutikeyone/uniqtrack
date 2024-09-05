@@ -13,5 +13,6 @@ abstract interface class RegisterRepository {
     required String name,
     required String password,
     required Gender gender,
+    required File? file,
   });
 }

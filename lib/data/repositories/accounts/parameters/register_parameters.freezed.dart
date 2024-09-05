@@ -20,6 +20,7 @@ mixin _$RegisterParameters {
   String get email => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
   GenderModel get gender => throw _privateConstructorUsedError;
+  FileModel? get file => throw _privateConstructorUsedError;
 
   /// Create a copy of RegisterParameters
   /// with the given fields replaced by the non-null parameter values.
@@ -34,9 +35,15 @@ abstract class $RegisterParametersCopyWith<$Res> {
           RegisterParameters value, $Res Function(RegisterParameters) then) =
       _$RegisterParametersCopyWithImpl<$Res, RegisterParameters>;
   @useResult
-  $Res call({String name, String email, String password, GenderModel gender});
+  $Res call(
+      {String name,
+      String email,
+      String password,
+      GenderModel gender,
+      FileModel? file});
 
   $GenderModelCopyWith<$Res> get gender;
+  $FileModelCopyWith<$Res>? get file;
 }
 
 /// @nodoc
@@ -58,6 +65,7 @@ class _$RegisterParametersCopyWithImpl<$Res, $Val extends RegisterParameters>
     Object? email = null,
     Object? password = null,
     Object? gender = null,
+    Object? file = freezed,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -76,6 +84,10 @@ class _$RegisterParametersCopyWithImpl<$Res, $Val extends RegisterParameters>
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as GenderModel,
+      file: freezed == file
+          ? _value.file
+          : file // ignore: cast_nullable_to_non_nullable
+              as FileModel?,
     ) as $Val);
   }
 
@@ -88,6 +100,20 @@ class _$RegisterParametersCopyWithImpl<$Res, $Val extends RegisterParameters>
       return _then(_value.copyWith(gender: value) as $Val);
     });
   }
+
+  /// Create a copy of RegisterParameters
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $FileModelCopyWith<$Res>? get file {
+    if (_value.file == null) {
+      return null;
+    }
+
+    return $FileModelCopyWith<$Res>(_value.file!, (value) {
+      return _then(_value.copyWith(file: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -98,10 +124,17 @@ abstract class _$$RegisterParametersImplCopyWith<$Res>
       __$$RegisterParametersImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String email, String password, GenderModel gender});
+  $Res call(
+      {String name,
+      String email,
+      String password,
+      GenderModel gender,
+      FileModel? file});
 
   @override
   $GenderModelCopyWith<$Res> get gender;
+  @override
+  $FileModelCopyWith<$Res>? get file;
 }
 
 /// @nodoc
@@ -121,6 +154,7 @@ class __$$RegisterParametersImplCopyWithImpl<$Res>
     Object? email = null,
     Object? password = null,
     Object? gender = null,
+    Object? file = freezed,
   }) {
     return _then(_$RegisterParametersImpl(
       name: null == name
@@ -139,6 +173,10 @@ class __$$RegisterParametersImplCopyWithImpl<$Res>
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
               as GenderModel,
+      file: freezed == file
+          ? _value.file
+          : file // ignore: cast_nullable_to_non_nullable
+              as FileModel?,
     ));
   }
 }
@@ -150,7 +188,8 @@ class _$RegisterParametersImpl implements _RegisterParameters {
       {required this.name,
       required this.email,
       required this.password,
-      required this.gender});
+      required this.gender,
+      required this.file});
 
   @override
   final String name;
@@ -160,10 +199,12 @@ class _$RegisterParametersImpl implements _RegisterParameters {
   final String password;
   @override
   final GenderModel gender;
+  @override
+  final FileModel? file;
 
   @override
   String toString() {
-    return 'RegisterParameters(name: $name, email: $email, password: $password, gender: $gender)';
+    return 'RegisterParameters(name: $name, email: $email, password: $password, gender: $gender, file: $file)';
   }
 
   @override
@@ -175,11 +216,13 @@ class _$RegisterParametersImpl implements _RegisterParameters {
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password) &&
-            (identical(other.gender, gender) || other.gender == gender));
+            (identical(other.gender, gender) || other.gender == gender) &&
+            (identical(other.file, file) || other.file == file));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name, email, password, gender);
+  int get hashCode =>
+      Object.hash(runtimeType, name, email, password, gender, file);
 
   /// Create a copy of RegisterParameters
   /// with the given fields replaced by the non-null parameter values.
@@ -196,7 +239,8 @@ abstract class _RegisterParameters implements RegisterParameters {
       {required final String name,
       required final String email,
       required final String password,
-      required final GenderModel gender}) = _$RegisterParametersImpl;
+      required final GenderModel gender,
+      required final FileModel? file}) = _$RegisterParametersImpl;
 
   @override
   String get name;
@@ -206,6 +250,8 @@ abstract class _RegisterParameters implements RegisterParameters {
   String get password;
   @override
   GenderModel get gender;
+  @override
+  FileModel? get file;
 
   /// Create a copy of RegisterParameters
   /// with the given fields replaced by the non-null parameter values.

@@ -9,12 +9,9 @@ import 'package:uniqtrack/features/register/domain/entities/gender.dart';
 import 'package:uniqtrack/features/register/domain/repositorories/register_repository.dart';
 
 class RegisterAdapterRepository implements RegisterRepository {
-  final Future<Either<AppError, FileModel?>> Function()
-      _chooseImageFromCamera;
-  final Future<Either<AppError, FileModel?>> Function()
-      _chooseImageFromGallery;
-  final Future<Either<AppError, void>> Function(RegisterParameters)
-      _register;
+  final Future<Either<AppError, FileModel?>> Function() _chooseImageFromCamera;
+  final Future<Either<AppError, FileModel?>> Function() _chooseImageFromGallery;
+  final Future<Either<AppError, void>> Function(RegisterParameters) _register;
   final FileMapper _fileMapper;
   final GenderMapper _genderMapper;
 
@@ -63,6 +60,7 @@ class RegisterAdapterRepository implements RegisterRepository {
     required String name,
     required String password,
     required Gender gender,
+    required File? file,
   }) {
     final genderModel = _genderMapper.toGenderModel(gender);
     final parameters = RegisterParameters(
@@ -70,6 +68,7 @@ class RegisterAdapterRepository implements RegisterRepository {
       email: email,
       password: password,
       gender: genderModel,
+      file: file != null ? _fileMapper.toFileModel(file) : null,
     );
 
     return _register(parameters);

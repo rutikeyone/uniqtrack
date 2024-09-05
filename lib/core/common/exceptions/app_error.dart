@@ -2,31 +2,61 @@ part of 'exceptions.dart';
 
 @freezed
 class AppError with _$AppError {
-  bool get isCancelError => maybeWhen(
-        network: (category) {
-          return category.maybeMap(
-            requestCancelled: (_) => true,
-            orElse: () => false,
-          );
-        },
-        orElse: () => false,
-      );
+  bool get isCancelError {
+    return maybeWhen(
+      network: (category) {
+        return category.maybeMap(
+          requestCancelled: (_) => true,
+          orElse: () => false,
+        );
+      },
+      orElse: () => false,
+    );
+  }
 
   const AppError._();
 
-  const factory AppError.base() = _AppBaseException;
+  const factory AppError.base() = _AppBaseError;
 
-  const factory AppError.input() = _AppInputException;
+  const factory AppError.firebase({
+    required FirebaseErrorCategory category,
+  }) = _AppFirebaseError;
 
   const factory AppError.network({
     required NetworkErrorCategory category,
-  }) = _AppNetworkException;
+  }) = _AppNetworkError;
 
   AppStrings header() {
     return const AppStrings.error();
   }
 
   AppStrings body() {
-    return const AppStrings.errorHasOccurred();
+    return when(
+      base: () => const AppStrings.errorHasOccurred(),
+      firebase: (category) {
+        return category.when(
+          base: () => const AppStrings.errorHasOccurred(),
+          emailAlreadyInUse: () => const AppStrings.emailAlreadyInUse(),
+          invalidEmail: () => const AppStrings.invalidEmail(),
+          operationNotAllowed: () => const AppStrings.operationNotAllowed(),
+          weakPassword: () => const AppStrings.weakPassword(),
+          tooManyRequests: () => const AppStrings.tooManyRequests(),
+          userTokenExpired: () => const AppStrings.userTokenExpired(),
+          networkRequestFailed: () => const AppStrings.networkRequestFailed(),
+        );
+      },
+      network: (category) {
+        return category.when(
+          connectTimeout: () => const AppStrings.connectTimeout(),
+          sendTimeout: () => const AppStrings.sendTimeout(),
+          receiveTimeout: () => const AppStrings.receiveTimeout(),
+          requestCancelled: () => const AppStrings.requestCancelled(),
+          notInternetConnection: () => const AppStrings.notInternetConnection(),
+          badCertificate: () => const AppStrings.badCertificate(),
+          badResponse: () => const AppStrings.badResponse(),
+          base: () => const AppStrings.errorHasOccurred(),
+        );
+      },
+    );
   }
 }

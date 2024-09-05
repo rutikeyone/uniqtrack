@@ -201,10 +201,10 @@ class S {
   }
 
   /// `Invalid email address`
-  String get invalid_email_address {
+  String get invalidEmailAddress {
     return Intl.message(
       'Invalid email address',
-      name: 'invalid_email_address',
+      name: 'invalidEmailAddress',
       desc: '',
       args: [],
     );
@@ -255,6 +255,146 @@ class S {
     return Intl.message(
       'An error has occurred in the application!',
       name: 'anErrorHasOccurredInTheApplication',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email already in use`
+  String get emailAlreadyInUse {
+    return Intl.message(
+      'Email already in use',
+      name: 'emailAlreadyInUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Operation not allowed`
+  String get operation_not_allowed {
+    return Intl.message(
+      'Operation not allowed',
+      name: 'operation_not_allowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Weak password`
+  String get weakPassword {
+    return Intl.message(
+      'Weak password',
+      name: 'weakPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Too many requests`
+  String get tooManyRequests {
+    return Intl.message(
+      'Too many requests',
+      name: 'tooManyRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User token expired`
+  String get userTokenExpired {
+    return Intl.message(
+      'User token expired',
+      name: 'userTokenExpired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check your internet connection and try again`
+  String get checkYourInternetConnectionAndTryAgain {
+    return Intl.message(
+      'Check your internet connection and try again',
+      name: 'checkYourInternetConnectionAndTryAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Connection timeout failure occurred`
+  String get connectionTimeoutFailureOccurred {
+    return Intl.message(
+      'Connection timeout failure occurred',
+      name: 'connectionTimeoutFailureOccurred',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send timeout failure occurred`
+  String get sendTimeoutFailureOccurred {
+    return Intl.message(
+      'Send timeout failure occurred',
+      name: 'sendTimeoutFailureOccurred',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Receive timeout failure occurred`
+  String get receiveTimeoutFailureOccurred {
+    return Intl.message(
+      'Receive timeout failure occurred',
+      name: 'receiveTimeoutFailureOccurred',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The request was canceled`
+  String get theRequestWasCanceled {
+    return Intl.message(
+      'The request was canceled',
+      name: 'theRequestWasCanceled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A bad certificate error occurred`
+  String get aBadCertificateErrorOccurred {
+    return Intl.message(
+      'A bad certificate error occurred',
+      name: 'aBadCertificateErrorOccurred',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A bad response error occurred`
+  String get aBadResponseErrorOccurred {
+    return Intl.message(
+      'A bad response error occurred',
+      name: 'aBadResponseErrorOccurred',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notification`
+  String get notification {
+    return Intl.message(
+      'Notification',
+      name: 'notification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The user has been successfully registered`
+  String get theUserHasBeenSuccessfullyRegistered {
+    return Intl.message(
+      'The user has been successfully registered',
+      name: 'theUserHasBeenSuccessfullyRegistered',
       desc: '',
       args: [],
     );

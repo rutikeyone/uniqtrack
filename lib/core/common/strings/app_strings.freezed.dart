@@ -21,6 +21,22 @@ mixin _$AppStrings {
     required TResult Function() error,
     required TResult Function() okay,
     required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +44,22 @@ mixin _$AppStrings {
     TResult? Function()? error,
     TResult? Function()? okay,
     TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +67,22 @@ mixin _$AppStrings {
     TResult Function()? error,
     TResult Function()? okay,
     TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +91,30 @@ mixin _$AppStrings {
     required TResult Function(_AppErrorString value) error,
     required TResult Function(_AppOkayString value) okay,
     required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +122,26 @@ mixin _$AppStrings {
     TResult? Function(_AppErrorString value)? error,
     TResult? Function(_AppOkayString value)? okay,
     TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +149,25 @@ mixin _$AppStrings {
     TResult Function(_AppErrorString value)? error,
     TResult Function(_AppOkayString value)? okay,
     TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,6 +238,22 @@ class _$AppErrorStringImpl implements _AppErrorString {
     required TResult Function() error,
     required TResult Function() okay,
     required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
   }) {
     return error();
   }
@@ -137,6 +264,22 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult? Function()? error,
     TResult? Function()? okay,
     TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
   }) {
     return error?.call();
   }
@@ -147,6 +290,22 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult Function()? error,
     TResult Function()? okay,
     TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -161,6 +320,30 @@ class _$AppErrorStringImpl implements _AppErrorString {
     required TResult Function(_AppErrorString value) error,
     required TResult Function(_AppOkayString value) okay,
     required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
   }) {
     return error(this);
   }
@@ -171,6 +354,26 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult? Function(_AppErrorString value)? error,
     TResult? Function(_AppOkayString value)? okay,
     TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
   }) {
     return error?.call(this);
   }
@@ -181,6 +384,25 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult Function(_AppErrorString value)? error,
     TResult Function(_AppOkayString value)? okay,
     TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -238,6 +460,22 @@ class _$AppOkayStringImpl implements _AppOkayString {
     required TResult Function() error,
     required TResult Function() okay,
     required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
   }) {
     return okay();
   }
@@ -248,6 +486,22 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult? Function()? error,
     TResult? Function()? okay,
     TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
   }) {
     return okay?.call();
   }
@@ -258,6 +512,22 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult Function()? error,
     TResult Function()? okay,
     TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -272,6 +542,30 @@ class _$AppOkayStringImpl implements _AppOkayString {
     required TResult Function(_AppErrorString value) error,
     required TResult Function(_AppOkayString value) okay,
     required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
   }) {
     return okay(this);
   }
@@ -282,6 +576,26 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult? Function(_AppErrorString value)? error,
     TResult? Function(_AppOkayString value)? okay,
     TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
   }) {
     return okay?.call(this);
   }
@@ -292,6 +606,25 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult Function(_AppErrorString value)? error,
     TResult Function(_AppOkayString value)? okay,
     TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -352,6 +685,22 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     required TResult Function() error,
     required TResult Function() okay,
     required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
   }) {
     return errorHasOccurred();
   }
@@ -362,6 +711,22 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult? Function()? error,
     TResult? Function()? okay,
     TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
   }) {
     return errorHasOccurred?.call();
   }
@@ -372,6 +737,22 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult Function()? error,
     TResult Function()? okay,
     TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -386,6 +767,30 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     required TResult Function(_AppErrorString value) error,
     required TResult Function(_AppOkayString value) okay,
     required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
   }) {
     return errorHasOccurred(this);
   }
@@ -396,6 +801,26 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult? Function(_AppErrorString value)? error,
     TResult? Function(_AppOkayString value)? okay,
     TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
   }) {
     return errorHasOccurred?.call(this);
   }
@@ -406,6 +831,25 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult Function(_AppErrorString value)? error,
     TResult Function(_AppOkayString value)? okay,
     TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -417,4 +861,3621 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
 
 abstract class _AppErrorHasOccuredString implements AppStrings {
   const factory _AppErrorHasOccuredString() = _$AppErrorHasOccuredStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppInvalidEmailStringImplCopyWith<$Res> {
+  factory _$$$AppInvalidEmailStringImplCopyWith(
+          _$$AppInvalidEmailStringImpl value,
+          $Res Function(_$$AppInvalidEmailStringImpl) then) =
+      __$$$AppInvalidEmailStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppInvalidEmailStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppInvalidEmailStringImpl>
+    implements _$$$AppInvalidEmailStringImplCopyWith<$Res> {
+  __$$$AppInvalidEmailStringImplCopyWithImpl(
+      _$$AppInvalidEmailStringImpl _value,
+      $Res Function(_$$AppInvalidEmailStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
+  const _$$AppInvalidEmailStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.invalidEmail()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppInvalidEmailStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return invalidEmail();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return invalidEmail?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (invalidEmail != null) {
+      return invalidEmail();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return invalidEmail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return invalidEmail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (invalidEmail != null) {
+      return invalidEmail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppInvalidEmailString implements AppStrings {
+  const factory _$AppInvalidEmailString() = _$$AppInvalidEmailStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppEmailAlreadyInUseStringImplCopyWith<$Res> {
+  factory _$$$AppEmailAlreadyInUseStringImplCopyWith(
+          _$$AppEmailAlreadyInUseStringImpl value,
+          $Res Function(_$$AppEmailAlreadyInUseStringImpl) then) =
+      __$$$AppEmailAlreadyInUseStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppEmailAlreadyInUseStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppEmailAlreadyInUseStringImpl>
+    implements _$$$AppEmailAlreadyInUseStringImplCopyWith<$Res> {
+  __$$$AppEmailAlreadyInUseStringImplCopyWithImpl(
+      _$$AppEmailAlreadyInUseStringImpl _value,
+      $Res Function(_$$AppEmailAlreadyInUseStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppEmailAlreadyInUseStringImpl
+    implements _$AppEmailAlreadyInUseString {
+  const _$$AppEmailAlreadyInUseStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.emailAlreadyInUse()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppEmailAlreadyInUseStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return emailAlreadyInUse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return emailAlreadyInUse?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (emailAlreadyInUse != null) {
+      return emailAlreadyInUse();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return emailAlreadyInUse(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return emailAlreadyInUse?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (emailAlreadyInUse != null) {
+      return emailAlreadyInUse(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppEmailAlreadyInUseString implements AppStrings {
+  const factory _$AppEmailAlreadyInUseString() =
+      _$$AppEmailAlreadyInUseStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppOperationNotAllowedStringImplCopyWith<$Res> {
+  factory _$$$AppOperationNotAllowedStringImplCopyWith(
+          _$$AppOperationNotAllowedStringImpl value,
+          $Res Function(_$$AppOperationNotAllowedStringImpl) then) =
+      __$$$AppOperationNotAllowedStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppOperationNotAllowedStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppOperationNotAllowedStringImpl>
+    implements _$$$AppOperationNotAllowedStringImplCopyWith<$Res> {
+  __$$$AppOperationNotAllowedStringImplCopyWithImpl(
+      _$$AppOperationNotAllowedStringImpl _value,
+      $Res Function(_$$AppOperationNotAllowedStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppOperationNotAllowedStringImpl
+    implements _$AppOperationNotAllowedString {
+  const _$$AppOperationNotAllowedStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.operationNotAllowed()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppOperationNotAllowedStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return operationNotAllowed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return operationNotAllowed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (operationNotAllowed != null) {
+      return operationNotAllowed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return operationNotAllowed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return operationNotAllowed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (operationNotAllowed != null) {
+      return operationNotAllowed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppOperationNotAllowedString implements AppStrings {
+  const factory _$AppOperationNotAllowedString() =
+      _$$AppOperationNotAllowedStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppWeakPasswordStringImplCopyWith<$Res> {
+  factory _$$$AppWeakPasswordStringImplCopyWith(
+          _$$AppWeakPasswordStringImpl value,
+          $Res Function(_$$AppWeakPasswordStringImpl) then) =
+      __$$$AppWeakPasswordStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppWeakPasswordStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppWeakPasswordStringImpl>
+    implements _$$$AppWeakPasswordStringImplCopyWith<$Res> {
+  __$$$AppWeakPasswordStringImplCopyWithImpl(
+      _$$AppWeakPasswordStringImpl _value,
+      $Res Function(_$$AppWeakPasswordStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
+  const _$$AppWeakPasswordStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.weakPassword()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppWeakPasswordStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return weakPassword();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return weakPassword?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (weakPassword != null) {
+      return weakPassword();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return weakPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return weakPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (weakPassword != null) {
+      return weakPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppWeakPasswordString implements AppStrings {
+  const factory _$AppWeakPasswordString() = _$$AppWeakPasswordStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppTooManyRequestsStringImplCopyWith<$Res> {
+  factory _$$$AppTooManyRequestsStringImplCopyWith(
+          _$$AppTooManyRequestsStringImpl value,
+          $Res Function(_$$AppTooManyRequestsStringImpl) then) =
+      __$$$AppTooManyRequestsStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppTooManyRequestsStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppTooManyRequestsStringImpl>
+    implements _$$$AppTooManyRequestsStringImplCopyWith<$Res> {
+  __$$$AppTooManyRequestsStringImplCopyWithImpl(
+      _$$AppTooManyRequestsStringImpl _value,
+      $Res Function(_$$AppTooManyRequestsStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
+  const _$$AppTooManyRequestsStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.tooManyRequests()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppTooManyRequestsStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return tooManyRequests();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return tooManyRequests?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (tooManyRequests != null) {
+      return tooManyRequests();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return tooManyRequests(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return tooManyRequests?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (tooManyRequests != null) {
+      return tooManyRequests(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppTooManyRequestsString implements AppStrings {
+  const factory _$AppTooManyRequestsString() = _$$AppTooManyRequestsStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppUserTokenExpiredStringImplCopyWith<$Res> {
+  factory _$$$AppUserTokenExpiredStringImplCopyWith(
+          _$$AppUserTokenExpiredStringImpl value,
+          $Res Function(_$$AppUserTokenExpiredStringImpl) then) =
+      __$$$AppUserTokenExpiredStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppUserTokenExpiredStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppUserTokenExpiredStringImpl>
+    implements _$$$AppUserTokenExpiredStringImplCopyWith<$Res> {
+  __$$$AppUserTokenExpiredStringImplCopyWithImpl(
+      _$$AppUserTokenExpiredStringImpl _value,
+      $Res Function(_$$AppUserTokenExpiredStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
+  const _$$AppUserTokenExpiredStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.userTokenExpired()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppUserTokenExpiredStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return userTokenExpired();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return userTokenExpired?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (userTokenExpired != null) {
+      return userTokenExpired();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return userTokenExpired(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return userTokenExpired?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (userTokenExpired != null) {
+      return userTokenExpired(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppUserTokenExpiredString implements AppStrings {
+  const factory _$AppUserTokenExpiredString() =
+      _$$AppUserTokenExpiredStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppNetworkRequestsFailedStringImplCopyWith<$Res> {
+  factory _$$$AppNetworkRequestsFailedStringImplCopyWith(
+          _$$AppNetworkRequestsFailedStringImpl value,
+          $Res Function(_$$AppNetworkRequestsFailedStringImpl) then) =
+      __$$$AppNetworkRequestsFailedStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppNetworkRequestsFailedStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res,
+        _$$AppNetworkRequestsFailedStringImpl>
+    implements _$$$AppNetworkRequestsFailedStringImplCopyWith<$Res> {
+  __$$$AppNetworkRequestsFailedStringImplCopyWithImpl(
+      _$$AppNetworkRequestsFailedStringImpl _value,
+      $Res Function(_$$AppNetworkRequestsFailedStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppNetworkRequestsFailedStringImpl
+    implements _$AppNetworkRequestsFailedString {
+  const _$$AppNetworkRequestsFailedStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.networkRequestFailed()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppNetworkRequestsFailedStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return networkRequestFailed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return networkRequestFailed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (networkRequestFailed != null) {
+      return networkRequestFailed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return networkRequestFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return networkRequestFailed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (networkRequestFailed != null) {
+      return networkRequestFailed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppNetworkRequestsFailedString implements AppStrings {
+  const factory _$AppNetworkRequestsFailedString() =
+      _$$AppNetworkRequestsFailedStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppNotInternetConnectionStringImplCopyWith<$Res> {
+  factory _$$$AppNotInternetConnectionStringImplCopyWith(
+          _$$AppNotInternetConnectionStringImpl value,
+          $Res Function(_$$AppNotInternetConnectionStringImpl) then) =
+      __$$$AppNotInternetConnectionStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppNotInternetConnectionStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res,
+        _$$AppNotInternetConnectionStringImpl>
+    implements _$$$AppNotInternetConnectionStringImplCopyWith<$Res> {
+  __$$$AppNotInternetConnectionStringImplCopyWithImpl(
+      _$$AppNotInternetConnectionStringImpl _value,
+      $Res Function(_$$AppNotInternetConnectionStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppNotInternetConnectionStringImpl
+    implements _$AppNotInternetConnectionString {
+  const _$$AppNotInternetConnectionStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.notInternetConnection()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppNotInternetConnectionStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return notInternetConnection();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return notInternetConnection?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (notInternetConnection != null) {
+      return notInternetConnection();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return notInternetConnection(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return notInternetConnection?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (notInternetConnection != null) {
+      return notInternetConnection(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppNotInternetConnectionString implements AppStrings {
+  const factory _$AppNotInternetConnectionString() =
+      _$$AppNotInternetConnectionStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppConnectTimeoutStringImplCopyWith<$Res> {
+  factory _$$$AppConnectTimeoutStringImplCopyWith(
+          _$$AppConnectTimeoutStringImpl value,
+          $Res Function(_$$AppConnectTimeoutStringImpl) then) =
+      __$$$AppConnectTimeoutStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppConnectTimeoutStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppConnectTimeoutStringImpl>
+    implements _$$$AppConnectTimeoutStringImplCopyWith<$Res> {
+  __$$$AppConnectTimeoutStringImplCopyWithImpl(
+      _$$AppConnectTimeoutStringImpl _value,
+      $Res Function(_$$AppConnectTimeoutStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
+  const _$$AppConnectTimeoutStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.connectTimeout()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppConnectTimeoutStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return connectTimeout();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return connectTimeout?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (connectTimeout != null) {
+      return connectTimeout();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return connectTimeout(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return connectTimeout?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (connectTimeout != null) {
+      return connectTimeout(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppConnectTimeoutString implements AppStrings {
+  const factory _$AppConnectTimeoutString() = _$$AppConnectTimeoutStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppSendTimeoutStringImplCopyWith<$Res> {
+  factory _$$$AppSendTimeoutStringImplCopyWith(
+          _$$AppSendTimeoutStringImpl value,
+          $Res Function(_$$AppSendTimeoutStringImpl) then) =
+      __$$$AppSendTimeoutStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppSendTimeoutStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppSendTimeoutStringImpl>
+    implements _$$$AppSendTimeoutStringImplCopyWith<$Res> {
+  __$$$AppSendTimeoutStringImplCopyWithImpl(_$$AppSendTimeoutStringImpl _value,
+      $Res Function(_$$AppSendTimeoutStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
+  const _$$AppSendTimeoutStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.sendTimeout()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppSendTimeoutStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return sendTimeout();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return sendTimeout?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (sendTimeout != null) {
+      return sendTimeout();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return sendTimeout(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return sendTimeout?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (sendTimeout != null) {
+      return sendTimeout(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppSendTimeoutString implements AppStrings {
+  const factory _$AppSendTimeoutString() = _$$AppSendTimeoutStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppReceiveTimeoutStringImplCopyWith<$Res> {
+  factory _$$$AppReceiveTimeoutStringImplCopyWith(
+          _$$AppReceiveTimeoutStringImpl value,
+          $Res Function(_$$AppReceiveTimeoutStringImpl) then) =
+      __$$$AppReceiveTimeoutStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppReceiveTimeoutStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppReceiveTimeoutStringImpl>
+    implements _$$$AppReceiveTimeoutStringImplCopyWith<$Res> {
+  __$$$AppReceiveTimeoutStringImplCopyWithImpl(
+      _$$AppReceiveTimeoutStringImpl _value,
+      $Res Function(_$$AppReceiveTimeoutStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
+  const _$$AppReceiveTimeoutStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.receiveTimeout()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppReceiveTimeoutStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return receiveTimeout();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return receiveTimeout?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (receiveTimeout != null) {
+      return receiveTimeout();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return receiveTimeout(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return receiveTimeout?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (receiveTimeout != null) {
+      return receiveTimeout(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppReceiveTimeoutString implements AppStrings {
+  const factory _$AppReceiveTimeoutString() = _$$AppReceiveTimeoutStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppRequestCancelledStringImplCopyWith<$Res> {
+  factory _$$$AppRequestCancelledStringImplCopyWith(
+          _$$AppRequestCancelledStringImpl value,
+          $Res Function(_$$AppRequestCancelledStringImpl) then) =
+      __$$$AppRequestCancelledStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppRequestCancelledStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppRequestCancelledStringImpl>
+    implements _$$$AppRequestCancelledStringImplCopyWith<$Res> {
+  __$$$AppRequestCancelledStringImplCopyWithImpl(
+      _$$AppRequestCancelledStringImpl _value,
+      $Res Function(_$$AppRequestCancelledStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
+  const _$$AppRequestCancelledStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.requestCancelled()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppRequestCancelledStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return requestCancelled();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return requestCancelled?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (requestCancelled != null) {
+      return requestCancelled();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return requestCancelled(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return requestCancelled?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (requestCancelled != null) {
+      return requestCancelled(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppRequestCancelledString implements AppStrings {
+  const factory _$AppRequestCancelledString() =
+      _$$AppRequestCancelledStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppBadCertificateStringImplCopyWith<$Res> {
+  factory _$$$AppBadCertificateStringImplCopyWith(
+          _$$AppBadCertificateStringImpl value,
+          $Res Function(_$$AppBadCertificateStringImpl) then) =
+      __$$$AppBadCertificateStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppBadCertificateStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppBadCertificateStringImpl>
+    implements _$$$AppBadCertificateStringImplCopyWith<$Res> {
+  __$$$AppBadCertificateStringImplCopyWithImpl(
+      _$$AppBadCertificateStringImpl _value,
+      $Res Function(_$$AppBadCertificateStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
+  const _$$AppBadCertificateStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.badCertificate()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppBadCertificateStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return badCertificate();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return badCertificate?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (badCertificate != null) {
+      return badCertificate();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return badCertificate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return badCertificate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (badCertificate != null) {
+      return badCertificate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppBadCertificateString implements AppStrings {
+  const factory _$AppBadCertificateString() = _$$AppBadCertificateStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppBadResponseStringImplCopyWith<$Res> {
+  factory _$$$AppBadResponseStringImplCopyWith(
+          _$$AppBadResponseStringImpl value,
+          $Res Function(_$$AppBadResponseStringImpl) then) =
+      __$$$AppBadResponseStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppBadResponseStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppBadResponseStringImpl>
+    implements _$$$AppBadResponseStringImplCopyWith<$Res> {
+  __$$$AppBadResponseStringImplCopyWithImpl(_$$AppBadResponseStringImpl _value,
+      $Res Function(_$$AppBadResponseStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
+  const _$$AppBadResponseStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.badResponse()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppBadResponseStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return badResponse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return badResponse?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (badResponse != null) {
+      return badResponse();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return badResponse(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return badResponse?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (badResponse != null) {
+      return badResponse(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppBadResponseString implements AppStrings {
+  const factory _$AppBadResponseString() = _$$AppBadResponseStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppNotificationStringImplCopyWith<$Res> {
+  factory _$$$AppNotificationStringImplCopyWith(
+          _$$AppNotificationStringImpl value,
+          $Res Function(_$$AppNotificationStringImpl) then) =
+      __$$$AppNotificationStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppNotificationStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppNotificationStringImpl>
+    implements _$$$AppNotificationStringImplCopyWith<$Res> {
+  __$$$AppNotificationStringImplCopyWithImpl(
+      _$$AppNotificationStringImpl _value,
+      $Res Function(_$$AppNotificationStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppNotificationStringImpl implements _$AppNotificationString {
+  const _$$AppNotificationStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.notification()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppNotificationStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return notification();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return notification?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (notification != null) {
+      return notification();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return notification(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return notification?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (notification != null) {
+      return notification(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppNotificationString implements AppStrings {
+  const factory _$AppNotificationString() = _$$AppNotificationStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppTheUserHasBeenSuccessfullyRegisteredStringImplCopyWith<
+    $Res> {
+  factory _$$$AppTheUserHasBeenSuccessfullyRegisteredStringImplCopyWith(
+          _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl value,
+          $Res Function(_$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl)
+              then) =
+      __$$$AppTheUserHasBeenSuccessfullyRegisteredStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppTheUserHasBeenSuccessfullyRegisteredStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res,
+        _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl>
+    implements
+        _$$$AppTheUserHasBeenSuccessfullyRegisteredStringImplCopyWith<$Res> {
+  __$$$AppTheUserHasBeenSuccessfullyRegisteredStringImplCopyWithImpl(
+      _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl _value,
+      $Res Function(_$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
+    implements _$AppTheUserHasBeenSuccessfullyRegisteredString {
+  const _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.theUserHasBeenSuccessfullyRegistered()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return theUserHasBeenSuccessfullyRegistered();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return theUserHasBeenSuccessfullyRegistered?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (theUserHasBeenSuccessfullyRegistered != null) {
+      return theUserHasBeenSuccessfullyRegistered();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return theUserHasBeenSuccessfullyRegistered(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+  }) {
+    return theUserHasBeenSuccessfullyRegistered?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult orElse(),
+  }) {
+    if (theUserHasBeenSuccessfullyRegistered != null) {
+      return theUserHasBeenSuccessfullyRegistered(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppTheUserHasBeenSuccessfullyRegisteredString
+    implements AppStrings {
+  const factory _$AppTheUserHasBeenSuccessfullyRegisteredString() =
+      _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl;
 }

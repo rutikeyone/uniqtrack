@@ -10,7 +10,7 @@ class ValidationToolkit {
         email.error == EmailValidationError.incorrectEmail;
 
     if (hasError) {
-      return S.of(context).invalid_email_address;
+      return S.of(context).invalidEmailAddress;
     }
     return null;
   }

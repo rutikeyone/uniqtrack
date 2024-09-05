@@ -2,6 +2,7 @@ import 'package:formz/formz.dart';
 import 'package:mobx/mobx.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
+import 'package:uniqtrack/core/common/strings/app_strings.dart';
 import 'package:uniqtrack/core/presentation/validation/entities/email.dart';
 import 'package:uniqtrack/core/presentation/validation/entities/name.dart';
 import 'package:uniqtrack/core/presentation/validation/entities/password.dart';
@@ -148,11 +149,25 @@ abstract class _RegisterStore with Store {
     final password = state.password.value;
     final gender = state.gender;
 
-    final register = await _imageRepository.register(
+    final file = pickerModeState.when(
+      placeholder: () => null,
+      photo: (file) => file,
+    );
+
+    actions = const RegisterActions.hideFocus();
+    registerStatusState = const RegisterStatusState.pending();
+
+    final registerResult = await _imageRepository.register(
       email: email,
       name: name,
       password: password,
       gender: gender,
+      file: file,
+    );
+
+    registerResult.fold(
+      _handleRegisterFailureResult,
+      _handleRegisterSuccessResult,
     );
   }
 
@@ -173,5 +188,36 @@ abstract class _RegisterStore with Store {
       header: header,
       body: body,
     );
+  }
+
+  void _handleRegisterFailureResult(AppError l) {
+    registerStatusState = const RegisterStatusState.failure();
+    if (l.isCancelError) return;
+
+    final header = l.header();
+    final body = l.body();
+
+    _commonUIDelegate.cupertinoDialog(
+      header: header,
+      body: body,
+    );
+  }
+
+  void _handleRegisterSuccessResult(_) {
+    const duration = Duration(milliseconds: 200);
+
+    registerStatusState = const RegisterStatusState.success();
+
+    Future.delayed(duration, () {
+      const header = AppStrings.notification();
+      const body = AppStrings.theUserHasBeenSuccessfullyRegistered();
+
+      _commonUIDelegate.cupertinoDialog(
+        header: header,
+        body: body,
+      );
+    });
+
+    actions = const RegisterActions.navigateBack();
   }
 }
