@@ -9,7 +9,7 @@ class LoginAdapterRepository implements LoginRepository {
 
   const LoginAdapterRepository({
     required AccountsDataRepository accountsDataRepository,
-  }) : _accountsDataRepository = accountsDataRepository;
+  })  : _accountsDataRepository = accountsDataRepository;
 
   @override
   Future<Either<AppError, void>> signInWithEmailAndPassword({

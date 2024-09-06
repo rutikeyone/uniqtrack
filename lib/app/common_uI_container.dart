@@ -68,7 +68,7 @@ class _CommonUIWrapperState extends ConsumerState<CommonUIContainer> {
 
   @override
   Widget build(BuildContext context) {
-    final navigatorKey = ref.watch(rootNavigatorKeyProvider);
+    final navigatorKey = ref.watch(rootNavigatorProvider);
 
     ref.listen<Activity<CommonUIActions>?>(
       commonUIDelegateProvider,

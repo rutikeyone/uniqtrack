@@ -52,6 +52,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Введите ваш пароль"),
         "error": MessageLookupByLibrary.simpleMessage("Ошибка!"),
         "female": MessageLookupByLibrary.simpleMessage("Женский"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Забыли пароль?"),
         "image": MessageLookupByLibrary.simpleMessage("Изображение"),
         "invalidCredential":
             MessageLookupByLibrary.simpleMessage("Неверные учетные данные"),

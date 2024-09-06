@@ -17,6 +17,8 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$LoginNavCallbackStore {
   VoidCallback get navigateToRegister => throw _privateConstructorUsedError;
+  VoidCallback get navigateToForgotPassword =>
+      throw _privateConstructorUsedError;
 
   /// Create a copy of LoginNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.
@@ -31,7 +33,8 @@ abstract class $LoginNavCallbackStoreCopyWith<$Res> {
           $Res Function(LoginNavCallbackStore) then) =
       _$LoginNavCallbackStoreCopyWithImpl<$Res, LoginNavCallbackStore>;
   @useResult
-  $Res call({VoidCallback navigateToRegister});
+  $Res call(
+      {VoidCallback navigateToRegister, VoidCallback navigateToForgotPassword});
 }
 
 /// @nodoc
@@ -51,11 +54,16 @@ class _$LoginNavCallbackStoreCopyWithImpl<$Res,
   @override
   $Res call({
     Object? navigateToRegister = null,
+    Object? navigateToForgotPassword = null,
   }) {
     return _then(_value.copyWith(
       navigateToRegister: null == navigateToRegister
           ? _value.navigateToRegister
           : navigateToRegister // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+      navigateToForgotPassword: null == navigateToForgotPassword
+          ? _value.navigateToForgotPassword
+          : navigateToForgotPassword // ignore: cast_nullable_to_non_nullable
               as VoidCallback,
     ) as $Val);
   }
@@ -70,7 +78,8 @@ abstract class _$$LoginNavCallbackStoreImplCopyWith<$Res>
       __$$LoginNavCallbackStoreImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({VoidCallback navigateToRegister});
+  $Res call(
+      {VoidCallback navigateToRegister, VoidCallback navigateToForgotPassword});
 }
 
 /// @nodoc
@@ -88,11 +97,16 @@ class __$$LoginNavCallbackStoreImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? navigateToRegister = null,
+    Object? navigateToForgotPassword = null,
   }) {
     return _then(_$LoginNavCallbackStoreImpl(
       navigateToRegister: null == navigateToRegister
           ? _value.navigateToRegister
           : navigateToRegister // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+      navigateToForgotPassword: null == navigateToForgotPassword
+          ? _value.navigateToForgotPassword
+          : navigateToForgotPassword // ignore: cast_nullable_to_non_nullable
               as VoidCallback,
     ));
   }
@@ -101,14 +115,18 @@ class __$$LoginNavCallbackStoreImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoginNavCallbackStoreImpl implements _LoginNavCallbackStore {
-  const _$LoginNavCallbackStoreImpl({required this.navigateToRegister});
+  const _$LoginNavCallbackStoreImpl(
+      {required this.navigateToRegister,
+      required this.navigateToForgotPassword});
 
   @override
   final VoidCallback navigateToRegister;
+  @override
+  final VoidCallback navigateToForgotPassword;
 
   @override
   String toString() {
-    return 'LoginNavCallbackStore(navigateToRegister: $navigateToRegister)';
+    return 'LoginNavCallbackStore(navigateToRegister: $navigateToRegister, navigateToForgotPassword: $navigateToForgotPassword)';
   }
 
   @override
@@ -117,11 +135,15 @@ class _$LoginNavCallbackStoreImpl implements _LoginNavCallbackStore {
         (other.runtimeType == runtimeType &&
             other is _$LoginNavCallbackStoreImpl &&
             (identical(other.navigateToRegister, navigateToRegister) ||
-                other.navigateToRegister == navigateToRegister));
+                other.navigateToRegister == navigateToRegister) &&
+            (identical(
+                    other.navigateToForgotPassword, navigateToForgotPassword) ||
+                other.navigateToForgotPassword == navigateToForgotPassword));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, navigateToRegister);
+  int get hashCode =>
+      Object.hash(runtimeType, navigateToRegister, navigateToForgotPassword);
 
   /// Create a copy of LoginNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.
@@ -135,11 +157,14 @@ class _$LoginNavCallbackStoreImpl implements _LoginNavCallbackStore {
 
 abstract class _LoginNavCallbackStore implements LoginNavCallbackStore {
   const factory _LoginNavCallbackStore(
-          {required final VoidCallback navigateToRegister}) =
+          {required final VoidCallback navigateToRegister,
+          required final VoidCallback navigateToForgotPassword}) =
       _$LoginNavCallbackStoreImpl;
 
   @override
   VoidCallback get navigateToRegister;
+  @override
+  VoidCallback get navigateToForgotPassword;
 
   /// Create a copy of LoginNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.

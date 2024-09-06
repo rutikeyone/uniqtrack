@@ -37,5 +37,6 @@
   "userHasBeenDisabled": "Пользователь был отключен",
   "userNotFound": "Пользователь не найден",
   "wrongPassword": "Неверный пароль",
-  "invalidCredential": "Неверные учетные данные"
+  "invalidCredential": "Неверные учетные данные",
+  "forgotPassword": "Забыли пароль?"
 }

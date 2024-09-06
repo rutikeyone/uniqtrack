@@ -2,6 +2,7 @@ class AppDiments {
   static const dm0 = 0.0;
   static const dm1 = 1.0;
   static const dm2 = 2.0;
+  static const dm4 = 4.0;
   static const dm8 = 8.0;
   static const dm12 = 12.0;
   static const dm16 = 16.0;

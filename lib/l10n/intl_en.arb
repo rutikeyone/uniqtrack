@@ -37,5 +37,6 @@
   "userHasBeenDisabled": "User has been disabled",
   "userNotFound": "User not found",
   "wrongPassword": "Wrong password",
-  "invalidCredential": "Invalid credential"
+  "invalidCredential": "Invalid credential",
+  "forgotPassword": "Forgot password?"
 }

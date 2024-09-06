@@ -53,6 +53,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your password"),
         "error": MessageLookupByLibrary.simpleMessage("Error!"),
         "female": MessageLookupByLibrary.simpleMessage("Female"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "image": MessageLookupByLibrary.simpleMessage("Image"),
         "invalidCredential":
             MessageLookupByLibrary.simpleMessage("Invalid credential"),

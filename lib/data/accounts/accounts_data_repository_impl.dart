@@ -115,6 +115,14 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
     doc.set(json);
   }
 
+  Future<UserModel> _fetchUser(String uid) async {
+    final collection =
+        _firebaseFireStore.collection(FirebaseAuthConstants.users);
+    final doc = await collection.doc(uid).get();
+    final userModel = UserModel.fromJson(doc.data()!);
+    return userModel;
+  }
+
   @override
   Future<Either<AppError, void>> register(RegisterParameters parameters) async {
     final result = _appErrorHandler.handle(
@@ -133,5 +141,40 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
     );
 
     return result;
+  }
+
+  @override
+  Future<Either<AppError, UserModel>> fetchUser(String uid) async {
+    final result = _appErrorHandler.handle(
+      () {
+        return _fetchUser(uid);
+      },
+    );
+
+    return result;
+  }
+
+  @override
+  Stream<UserModel?> authStateChanges() {
+    return _firebaseAuth.authStateChanges().asyncMap(
+      (event) async {
+
+        final uid = event?.uid;
+        if (uid == null) {
+          return null;
+        }
+
+        final fetchUserResult = await _appErrorHandler.handle(
+          () {
+            return _fetchUser(uid);
+          },
+        );
+
+        return fetchUserResult.fold(
+          (_) => null,
+          (user) => user,
+        );
+      },
+    );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:go_router_paths/go_router_paths.dart';
 import 'package:uniqtrack/features/navigation/paths/forgot_password_path.dart';
-import 'package:uniqtrack/features/navigation/paths/register_page.dart';
+import 'package:uniqtrack/features/navigation/paths/register_path.dart';
 
 class LoginPath extends Path<LoginPath> {
   LoginPath() : super('login');

@@ -21,6 +21,8 @@ AccountsDataRepository accountsDataRepository(AccountsDataRepositoryRef ref) {
   final uuid = ref.watch(uuidProvider);
   final firebaseFireStore = ref.watch(firebaseFireStoreProvider);
 
+  ref.keepAlive();
+
   return AccountsDataRepositoryImpl(
     firebaseAuth: firebaseAuth,
     firebaseStorage: firebaseStorage,

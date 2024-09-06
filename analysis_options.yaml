@@ -5,4 +5,4 @@ analyzer:
     - custom_lint
 linter:
   rules:
-    library_private_types_in_public_api: false
+    library_private_types_in_public_api: false,
