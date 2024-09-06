@@ -1,6 +1,6 @@
 import 'package:image_picker/image_picker.dart';
-import 'package:uniqtrack/data/repositories/accounts/data_sources/image_data_source.dart';
-import 'package:uniqtrack/data/repositories/accounts/models/file_model.dart';
+import 'package:uniqtrack/data/accounts/data_sources/image_data_source.dart';
+import 'package:uniqtrack/data/accounts/models/file_model.dart';
 
 class GalleryDataSource implements ImageDataSource {
   final ImagePicker _imagePicker;

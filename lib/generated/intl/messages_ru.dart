@@ -53,6 +53,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "error": MessageLookupByLibrary.simpleMessage("Ошибка!"),
         "female": MessageLookupByLibrary.simpleMessage("Женский"),
         "image": MessageLookupByLibrary.simpleMessage("Изображение"),
+        "invalidCredential":
+            MessageLookupByLibrary.simpleMessage("Неверные учетные данные"),
         "invalidEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Введите корректный адрес электронной почты"),
         "invalidName": MessageLookupByLibrary.simpleMessage("Некорректное имя"),
@@ -80,8 +82,13 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Пользователь успешно зарегистрирован"),
         "tooManyRequests":
             MessageLookupByLibrary.simpleMessage("Слишком много запросов"),
+        "userHasBeenDisabled":
+            MessageLookupByLibrary.simpleMessage("Пользователь был отключен"),
+        "userNotFound":
+            MessageLookupByLibrary.simpleMessage("Пользователь не найден"),
         "userTokenExpired": MessageLookupByLibrary.simpleMessage(
             "Срок действия пользовательского токена истек"),
-        "weakPassword": MessageLookupByLibrary.simpleMessage("Слабый пароль")
+        "weakPassword": MessageLookupByLibrary.simpleMessage("Слабый пароль"),
+        "wrongPassword": MessageLookupByLibrary.simpleMessage("Неверный пароль")
       };
 }

@@ -399,6 +399,46 @@ class S {
       args: [],
     );
   }
+
+  /// `User has been disabled`
+  String get userHasBeenDisabled {
+    return Intl.message(
+      'User has been disabled',
+      name: 'userHasBeenDisabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User not found`
+  String get userNotFound {
+    return Intl.message(
+      'User not found',
+      name: 'userNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong password`
+  String get wrongPassword {
+    return Intl.message(
+      'Wrong password',
+      name: 'wrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid credential`
+  String get invalidCredential {
+    return Intl.message(
+      'Invalid credential',
+      name: 'invalidCredential',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

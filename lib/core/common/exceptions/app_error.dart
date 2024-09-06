@@ -43,6 +43,10 @@ class AppError with _$AppError {
           tooManyRequests: () => const AppStrings.tooManyRequests(),
           userTokenExpired: () => const AppStrings.userTokenExpired(),
           networkRequestFailed: () => const AppStrings.networkRequestFailed(),
+          userDisabled: () => const AppStrings.userDisabled(),
+          userNotFound: () => const AppStrings.userNotFound(),
+          wrongPassword: () => const AppStrings.wrongPassword(),
+          invalidCredential: () => const AppStrings.invalidCredential(),
         );
       },
       network: (category) {

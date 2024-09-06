@@ -47,8 +47,6 @@ class RegisterPage extends ConsumerStatefulWidget {
 }
 
 class _RegisterPageState extends ConsumerState<RegisterPage> {
-  RegisterStore get store => provider.Provider.of<RegisterStore>(context);
-
   late final ReactionDisposer actionsReactionDisposer;
 
   @override

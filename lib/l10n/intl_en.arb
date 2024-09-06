@@ -33,5 +33,9 @@
   "aBadCertificateErrorOccurred": "A bad certificate error occurred",
   "aBadResponseErrorOccurred": "A bad response error occurred",
   "notification": "Notification",
-  "theUserHasBeenSuccessfullyRegistered": "The user has been successfully registered"
+  "theUserHasBeenSuccessfullyRegistered": "The user has been successfully registered",
+  "userHasBeenDisabled": "User has been disabled",
+  "userNotFound": "User not found",
+  "wrongPassword": "Wrong password",
+  "invalidCredential": "Invalid credential"
 }

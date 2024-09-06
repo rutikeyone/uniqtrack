@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart' as provider;
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:uniqtrack/app/glue/login/providers/login_store_builder_provider.dart';
 import 'package:uniqtrack/app/glue/register/providers/register_provider.dart';
 import 'package:uniqtrack/features/login/presentation%20/pages/login_page.dart';
 import 'package:uniqtrack/features/navigation/paths/app_paths.dart';
@@ -44,7 +45,15 @@ GoRouter router(RouterRef ref) {
               loginNavCallbackStoreProvider
                   .overrideWithValue(loginNavCallbackStore),
             ],
-            child: const LoginPage(),
+            child: Consumer(builder: (context, ref, child) {
+              final loginStore = ref.watch(loginStoreBuilderProvider);
+
+              return provider.Provider(
+                  create: (context) => loginStore.create(),
+                  builder: (context, child) {
+                    return const LoginPage();
+                  });
+            }),
           );
         },
         routes: [

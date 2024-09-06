@@ -14,9 +14,9 @@ class AppErrorHandlerImpl implements AppErrorHandler {
   const AppErrorHandlerImpl({Logger? logger}) : _logger = logger;
 
   @override
-  Future<Either<AppError, T>> handle<T>(Future<T> call) async {
+  Future<Either<AppError, T>> handle<T>(Future<T> Function() call) async {
     try {
-      final result = await call;
+      final result = await call();
       return Right(result);
     } on DioException catch (e) {
       final category = switch (e.type) {
@@ -43,7 +43,7 @@ class AppErrorHandlerImpl implements AppErrorHandler {
 
       return Left(networkError);
     } on FirebaseAuthException catch (e) {
-      final code = e.code;
+      final code = e.code.toLowerCase();
       final category = switch (code) {
         FirebaseAuthConstants.emailAlreadyInUse =>
           const FirebaseErrorCategory.emailAlreadyInUse(),
@@ -59,6 +59,14 @@ class AppErrorHandlerImpl implements AppErrorHandler {
           const FirebaseErrorCategory.userTokenExpired(),
         FirebaseAuthConstants.networkRequestFailed =>
           const FirebaseErrorCategory.networkRequestFailed(),
+        FirebaseAuthConstants.userDisabled =>
+          const FirebaseErrorCategory.userDisabled(),
+        FirebaseAuthConstants.userNotFound =>
+          const FirebaseErrorCategory.userNotFound(),
+        FirebaseAuthConstants.wrongPassword =>
+          const FirebaseErrorCategory.wrongPassword(),
+        FirebaseAuthConstants.invalidCredential =>
+          const FirebaseErrorCategory.invalidCredential(),
         _ => const FirebaseErrorCategory.base(),
       };
 

@@ -1,4 +1,4 @@
-import 'package:uniqtrack/data/repositories/accounts/models/file_model.dart';
+import 'package:uniqtrack/data/accounts/models/file_model.dart';
 import 'package:uniqtrack/features/register/domain/entities/file.dart';
 
 abstract interface class FileMapper {

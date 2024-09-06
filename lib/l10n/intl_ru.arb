@@ -33,5 +33,9 @@
   "aBadCertificateErrorOccurred": "Произошла ошибка с ошибочным сертификатом",
   "aBadResponseErrorOccurred": "Произошла ошибка неправильного ответа",
   "notification": "Уведомление",
-  "theUserHasBeenSuccessfullyRegistered": "Пользователь успешно зарегистрирован"
+  "theUserHasBeenSuccessfullyRegistered": "Пользователь успешно зарегистрирован",
+  "userHasBeenDisabled": "Пользователь был отключен",
+  "userNotFound": "Пользователь не найден",
+  "wrongPassword": "Неверный пароль",
+  "invalidCredential": "Неверные учетные данные"
 }

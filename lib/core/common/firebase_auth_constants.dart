@@ -8,4 +8,8 @@ class FirebaseAuthConstants {
   static const networkRequestFailed = "network-request-failed";
   static const profilePictures = "profilePictures";
   static const users = "users";
+  static const userDisabled = "user-disabled";
+  static const userNotFound = "user-not-found";
+  static const wrongPassword = "wrong-password";
+  static const invalidCredential = "invalid-credential";
 }

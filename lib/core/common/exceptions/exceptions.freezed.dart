@@ -530,6 +530,10 @@ mixin _$FirebaseErrorCategory {
     required TResult Function() tooManyRequests,
     required TResult Function() userTokenExpired,
     required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -542,6 +546,10 @@ mixin _$FirebaseErrorCategory {
     TResult? Function()? tooManyRequests,
     TResult? Function()? userTokenExpired,
     TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -554,6 +562,10 @@ mixin _$FirebaseErrorCategory {
     TResult Function()? tooManyRequests,
     TResult Function()? userTokenExpired,
     TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -574,6 +586,14 @@ mixin _$FirebaseErrorCategory {
         userTokenExpired,
     required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
         networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -591,6 +611,11 @@ mixin _$FirebaseErrorCategory {
         userTokenExpired,
     TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -608,6 +633,11 @@ mixin _$FirebaseErrorCategory {
         userTokenExpired,
     TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -688,6 +718,10 @@ class _$FirebaseBaseErrorCategoryImpl implements _FirebaseBaseErrorCategory {
     required TResult Function() tooManyRequests,
     required TResult Function() userTokenExpired,
     required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
   }) {
     return base();
   }
@@ -703,6 +737,10 @@ class _$FirebaseBaseErrorCategoryImpl implements _FirebaseBaseErrorCategory {
     TResult? Function()? tooManyRequests,
     TResult? Function()? userTokenExpired,
     TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
   }) {
     return base?.call();
   }
@@ -718,6 +756,10 @@ class _$FirebaseBaseErrorCategoryImpl implements _FirebaseBaseErrorCategory {
     TResult Function()? tooManyRequests,
     TResult Function()? userTokenExpired,
     TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
     required TResult orElse(),
   }) {
     if (base != null) {
@@ -744,6 +786,14 @@ class _$FirebaseBaseErrorCategoryImpl implements _FirebaseBaseErrorCategory {
         userTokenExpired,
     required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
         networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
   }) {
     return base(this);
   }
@@ -764,6 +814,11 @@ class _$FirebaseBaseErrorCategoryImpl implements _FirebaseBaseErrorCategory {
         userTokenExpired,
     TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
   }) {
     return base?.call(this);
   }
@@ -784,6 +839,11 @@ class _$FirebaseBaseErrorCategoryImpl implements _FirebaseBaseErrorCategory {
         userTokenExpired,
     TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
     required TResult orElse(),
   }) {
     if (base != null) {
@@ -851,6 +911,10 @@ class _$FirebaseEmailAlreadyInUseErrorCategoryImpl
     required TResult Function() tooManyRequests,
     required TResult Function() userTokenExpired,
     required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
   }) {
     return emailAlreadyInUse();
   }
@@ -866,6 +930,10 @@ class _$FirebaseEmailAlreadyInUseErrorCategoryImpl
     TResult? Function()? tooManyRequests,
     TResult? Function()? userTokenExpired,
     TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -881,6 +949,10 @@ class _$FirebaseEmailAlreadyInUseErrorCategoryImpl
     TResult Function()? tooManyRequests,
     TResult Function()? userTokenExpired,
     TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -907,6 +979,14 @@ class _$FirebaseEmailAlreadyInUseErrorCategoryImpl
         userTokenExpired,
     required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
         networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
   }) {
     return emailAlreadyInUse(this);
   }
@@ -927,6 +1007,11 @@ class _$FirebaseEmailAlreadyInUseErrorCategoryImpl
         userTokenExpired,
     TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -947,6 +1032,11 @@ class _$FirebaseEmailAlreadyInUseErrorCategoryImpl
         userTokenExpired,
     TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -1016,6 +1106,10 @@ class _$FirebaseInvalidEmailErrorCategoryImpl
     required TResult Function() tooManyRequests,
     required TResult Function() userTokenExpired,
     required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
   }) {
     return invalidEmail();
   }
@@ -1031,6 +1125,10 @@ class _$FirebaseInvalidEmailErrorCategoryImpl
     TResult? Function()? tooManyRequests,
     TResult? Function()? userTokenExpired,
     TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
   }) {
     return invalidEmail?.call();
   }
@@ -1046,6 +1144,10 @@ class _$FirebaseInvalidEmailErrorCategoryImpl
     TResult Function()? tooManyRequests,
     TResult Function()? userTokenExpired,
     TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -1072,6 +1174,14 @@ class _$FirebaseInvalidEmailErrorCategoryImpl
         userTokenExpired,
     required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
         networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
   }) {
     return invalidEmail(this);
   }
@@ -1092,6 +1202,11 @@ class _$FirebaseInvalidEmailErrorCategoryImpl
         userTokenExpired,
     TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
   }) {
     return invalidEmail?.call(this);
   }
@@ -1112,6 +1227,11 @@ class _$FirebaseInvalidEmailErrorCategoryImpl
         userTokenExpired,
     TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -1181,6 +1301,10 @@ class _$FirebaseOperationNotAllowedErrorCategoryImpl
     required TResult Function() tooManyRequests,
     required TResult Function() userTokenExpired,
     required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
   }) {
     return operationNotAllowed();
   }
@@ -1196,6 +1320,10 @@ class _$FirebaseOperationNotAllowedErrorCategoryImpl
     TResult? Function()? tooManyRequests,
     TResult? Function()? userTokenExpired,
     TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
   }) {
     return operationNotAllowed?.call();
   }
@@ -1211,6 +1339,10 @@ class _$FirebaseOperationNotAllowedErrorCategoryImpl
     TResult Function()? tooManyRequests,
     TResult Function()? userTokenExpired,
     TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -1237,6 +1369,14 @@ class _$FirebaseOperationNotAllowedErrorCategoryImpl
         userTokenExpired,
     required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
         networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
   }) {
     return operationNotAllowed(this);
   }
@@ -1257,6 +1397,11 @@ class _$FirebaseOperationNotAllowedErrorCategoryImpl
         userTokenExpired,
     TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
   }) {
     return operationNotAllowed?.call(this);
   }
@@ -1277,6 +1422,11 @@ class _$FirebaseOperationNotAllowedErrorCategoryImpl
         userTokenExpired,
     TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -1346,6 +1496,10 @@ class _$FirebaseWeakPasswordErrorCategoryImpl
     required TResult Function() tooManyRequests,
     required TResult Function() userTokenExpired,
     required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
   }) {
     return weakPassword();
   }
@@ -1361,6 +1515,10 @@ class _$FirebaseWeakPasswordErrorCategoryImpl
     TResult? Function()? tooManyRequests,
     TResult? Function()? userTokenExpired,
     TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
   }) {
     return weakPassword?.call();
   }
@@ -1376,6 +1534,10 @@ class _$FirebaseWeakPasswordErrorCategoryImpl
     TResult Function()? tooManyRequests,
     TResult Function()? userTokenExpired,
     TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1402,6 +1564,14 @@ class _$FirebaseWeakPasswordErrorCategoryImpl
         userTokenExpired,
     required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
         networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
   }) {
     return weakPassword(this);
   }
@@ -1422,6 +1592,11 @@ class _$FirebaseWeakPasswordErrorCategoryImpl
         userTokenExpired,
     TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
   }) {
     return weakPassword?.call(this);
   }
@@ -1442,6 +1617,11 @@ class _$FirebaseWeakPasswordErrorCategoryImpl
         userTokenExpired,
     TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1511,6 +1691,10 @@ class _$FirebaseTooManyRequestsErrorCategoryImpl
     required TResult Function() tooManyRequests,
     required TResult Function() userTokenExpired,
     required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
   }) {
     return tooManyRequests();
   }
@@ -1526,6 +1710,10 @@ class _$FirebaseTooManyRequestsErrorCategoryImpl
     TResult? Function()? tooManyRequests,
     TResult? Function()? userTokenExpired,
     TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
   }) {
     return tooManyRequests?.call();
   }
@@ -1541,6 +1729,10 @@ class _$FirebaseTooManyRequestsErrorCategoryImpl
     TResult Function()? tooManyRequests,
     TResult Function()? userTokenExpired,
     TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -1567,6 +1759,14 @@ class _$FirebaseTooManyRequestsErrorCategoryImpl
         userTokenExpired,
     required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
         networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
   }) {
     return tooManyRequests(this);
   }
@@ -1587,6 +1787,11 @@ class _$FirebaseTooManyRequestsErrorCategoryImpl
         userTokenExpired,
     TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
   }) {
     return tooManyRequests?.call(this);
   }
@@ -1607,6 +1812,11 @@ class _$FirebaseTooManyRequestsErrorCategoryImpl
         userTokenExpired,
     TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -1676,6 +1886,10 @@ class _$FirebaseUserTokenExpiredErrorCategoryImpl
     required TResult Function() tooManyRequests,
     required TResult Function() userTokenExpired,
     required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
   }) {
     return userTokenExpired();
   }
@@ -1691,6 +1905,10 @@ class _$FirebaseUserTokenExpiredErrorCategoryImpl
     TResult? Function()? tooManyRequests,
     TResult? Function()? userTokenExpired,
     TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
   }) {
     return userTokenExpired?.call();
   }
@@ -1706,6 +1924,10 @@ class _$FirebaseUserTokenExpiredErrorCategoryImpl
     TResult Function()? tooManyRequests,
     TResult Function()? userTokenExpired,
     TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -1732,6 +1954,14 @@ class _$FirebaseUserTokenExpiredErrorCategoryImpl
         userTokenExpired,
     required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
         networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
   }) {
     return userTokenExpired(this);
   }
@@ -1752,6 +1982,11 @@ class _$FirebaseUserTokenExpiredErrorCategoryImpl
         userTokenExpired,
     TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
   }) {
     return userTokenExpired?.call(this);
   }
@@ -1772,6 +2007,11 @@ class _$FirebaseUserTokenExpiredErrorCategoryImpl
         userTokenExpired,
     TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -1842,6 +2082,10 @@ class _$FirebaseNetworkRequestsFailedErrorCategoryImpl
     required TResult Function() tooManyRequests,
     required TResult Function() userTokenExpired,
     required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
   }) {
     return networkRequestFailed();
   }
@@ -1857,6 +2101,10 @@ class _$FirebaseNetworkRequestsFailedErrorCategoryImpl
     TResult? Function()? tooManyRequests,
     TResult? Function()? userTokenExpired,
     TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
   }) {
     return networkRequestFailed?.call();
   }
@@ -1872,6 +2120,10 @@ class _$FirebaseNetworkRequestsFailedErrorCategoryImpl
     TResult Function()? tooManyRequests,
     TResult Function()? userTokenExpired,
     TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -1898,6 +2150,14 @@ class _$FirebaseNetworkRequestsFailedErrorCategoryImpl
         userTokenExpired,
     required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
         networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
   }) {
     return networkRequestFailed(this);
   }
@@ -1918,6 +2178,11 @@ class _$FirebaseNetworkRequestsFailedErrorCategoryImpl
         userTokenExpired,
     TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
   }) {
     return networkRequestFailed?.call(this);
   }
@@ -1938,6 +2203,11 @@ class _$FirebaseNetworkRequestsFailedErrorCategoryImpl
         userTokenExpired,
     TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
         networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -1951,6 +2221,786 @@ abstract class _FirebaseNetworkRequestsFailedErrorCategory
     implements FirebaseErrorCategory {
   const factory _FirebaseNetworkRequestsFailedErrorCategory() =
       _$FirebaseNetworkRequestsFailedErrorCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$FirebaseUserDisabledErrorCategoryImplCopyWith<$Res> {
+  factory _$$FirebaseUserDisabledErrorCategoryImplCopyWith(
+          _$FirebaseUserDisabledErrorCategoryImpl value,
+          $Res Function(_$FirebaseUserDisabledErrorCategoryImpl) then) =
+      __$$FirebaseUserDisabledErrorCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FirebaseUserDisabledErrorCategoryImplCopyWithImpl<$Res>
+    extends _$FirebaseErrorCategoryCopyWithImpl<$Res,
+        _$FirebaseUserDisabledErrorCategoryImpl>
+    implements _$$FirebaseUserDisabledErrorCategoryImplCopyWith<$Res> {
+  __$$FirebaseUserDisabledErrorCategoryImplCopyWithImpl(
+      _$FirebaseUserDisabledErrorCategoryImpl _value,
+      $Res Function(_$FirebaseUserDisabledErrorCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FirebaseErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FirebaseUserDisabledErrorCategoryImpl
+    implements _FirebaseUserDisabledErrorCategory {
+  const _$FirebaseUserDisabledErrorCategoryImpl();
+
+  @override
+  String toString() {
+    return 'FirebaseErrorCategory.userDisabled()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FirebaseUserDisabledErrorCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() base,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() invalidEmail,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+  }) {
+    return userDisabled();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? base,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+  }) {
+    return userDisabled?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? base,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    required TResult orElse(),
+  }) {
+    if (userDisabled != null) {
+      return userDisabled();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FirebaseBaseErrorCategory value) base,
+    required TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)
+        emailAlreadyInUse,
+    required TResult Function(_FirebaseInvalidEmailErrorCategory value)
+        invalidEmail,
+    required TResult Function(_FirebaseOperationNotAllowedErrorCategory value)
+        operationNotAllowed,
+    required TResult Function(_FirebaseWeakPasswordErrorCategory value)
+        weakPassword,
+    required TResult Function(_FirebaseTooManyRequestsErrorCategory value)
+        tooManyRequests,
+    required TResult Function(_FirebaseUserTokenExpiredErrorCategory value)
+        userTokenExpired,
+    required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
+        networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
+  }) {
+    return userDisabled(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FirebaseBaseErrorCategory value)? base,
+    TResult? Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult? Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult? Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult? Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult? Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult? Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+  }) {
+    return userDisabled?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FirebaseBaseErrorCategory value)? base,
+    TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    required TResult orElse(),
+  }) {
+    if (userDisabled != null) {
+      return userDisabled(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FirebaseUserDisabledErrorCategory
+    implements FirebaseErrorCategory {
+  const factory _FirebaseUserDisabledErrorCategory() =
+      _$FirebaseUserDisabledErrorCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$FirebaseUserNotFoundErrorCategoryImplCopyWith<$Res> {
+  factory _$$FirebaseUserNotFoundErrorCategoryImplCopyWith(
+          _$FirebaseUserNotFoundErrorCategoryImpl value,
+          $Res Function(_$FirebaseUserNotFoundErrorCategoryImpl) then) =
+      __$$FirebaseUserNotFoundErrorCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FirebaseUserNotFoundErrorCategoryImplCopyWithImpl<$Res>
+    extends _$FirebaseErrorCategoryCopyWithImpl<$Res,
+        _$FirebaseUserNotFoundErrorCategoryImpl>
+    implements _$$FirebaseUserNotFoundErrorCategoryImplCopyWith<$Res> {
+  __$$FirebaseUserNotFoundErrorCategoryImplCopyWithImpl(
+      _$FirebaseUserNotFoundErrorCategoryImpl _value,
+      $Res Function(_$FirebaseUserNotFoundErrorCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FirebaseErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FirebaseUserNotFoundErrorCategoryImpl
+    implements _FirebaseUserNotFoundErrorCategory {
+  const _$FirebaseUserNotFoundErrorCategoryImpl();
+
+  @override
+  String toString() {
+    return 'FirebaseErrorCategory.userNotFound()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FirebaseUserNotFoundErrorCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() base,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() invalidEmail,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+  }) {
+    return userNotFound();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? base,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+  }) {
+    return userNotFound?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? base,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    required TResult orElse(),
+  }) {
+    if (userNotFound != null) {
+      return userNotFound();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FirebaseBaseErrorCategory value) base,
+    required TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)
+        emailAlreadyInUse,
+    required TResult Function(_FirebaseInvalidEmailErrorCategory value)
+        invalidEmail,
+    required TResult Function(_FirebaseOperationNotAllowedErrorCategory value)
+        operationNotAllowed,
+    required TResult Function(_FirebaseWeakPasswordErrorCategory value)
+        weakPassword,
+    required TResult Function(_FirebaseTooManyRequestsErrorCategory value)
+        tooManyRequests,
+    required TResult Function(_FirebaseUserTokenExpiredErrorCategory value)
+        userTokenExpired,
+    required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
+        networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
+  }) {
+    return userNotFound(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FirebaseBaseErrorCategory value)? base,
+    TResult? Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult? Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult? Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult? Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult? Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult? Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+  }) {
+    return userNotFound?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FirebaseBaseErrorCategory value)? base,
+    TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    required TResult orElse(),
+  }) {
+    if (userNotFound != null) {
+      return userNotFound(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FirebaseUserNotFoundErrorCategory
+    implements FirebaseErrorCategory {
+  const factory _FirebaseUserNotFoundErrorCategory() =
+      _$FirebaseUserNotFoundErrorCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$FirebaseWrongPasswordErrorCategoryImplCopyWith<$Res> {
+  factory _$$FirebaseWrongPasswordErrorCategoryImplCopyWith(
+          _$FirebaseWrongPasswordErrorCategoryImpl value,
+          $Res Function(_$FirebaseWrongPasswordErrorCategoryImpl) then) =
+      __$$FirebaseWrongPasswordErrorCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FirebaseWrongPasswordErrorCategoryImplCopyWithImpl<$Res>
+    extends _$FirebaseErrorCategoryCopyWithImpl<$Res,
+        _$FirebaseWrongPasswordErrorCategoryImpl>
+    implements _$$FirebaseWrongPasswordErrorCategoryImplCopyWith<$Res> {
+  __$$FirebaseWrongPasswordErrorCategoryImplCopyWithImpl(
+      _$FirebaseWrongPasswordErrorCategoryImpl _value,
+      $Res Function(_$FirebaseWrongPasswordErrorCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FirebaseErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FirebaseWrongPasswordErrorCategoryImpl
+    implements _FirebaseWrongPasswordErrorCategory {
+  const _$FirebaseWrongPasswordErrorCategoryImpl();
+
+  @override
+  String toString() {
+    return 'FirebaseErrorCategory.wrongPassword()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FirebaseWrongPasswordErrorCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() base,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() invalidEmail,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+  }) {
+    return wrongPassword();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? base,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+  }) {
+    return wrongPassword?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? base,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    required TResult orElse(),
+  }) {
+    if (wrongPassword != null) {
+      return wrongPassword();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FirebaseBaseErrorCategory value) base,
+    required TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)
+        emailAlreadyInUse,
+    required TResult Function(_FirebaseInvalidEmailErrorCategory value)
+        invalidEmail,
+    required TResult Function(_FirebaseOperationNotAllowedErrorCategory value)
+        operationNotAllowed,
+    required TResult Function(_FirebaseWeakPasswordErrorCategory value)
+        weakPassword,
+    required TResult Function(_FirebaseTooManyRequestsErrorCategory value)
+        tooManyRequests,
+    required TResult Function(_FirebaseUserTokenExpiredErrorCategory value)
+        userTokenExpired,
+    required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
+        networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
+  }) {
+    return wrongPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FirebaseBaseErrorCategory value)? base,
+    TResult? Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult? Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult? Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult? Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult? Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult? Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+  }) {
+    return wrongPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FirebaseBaseErrorCategory value)? base,
+    TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    required TResult orElse(),
+  }) {
+    if (wrongPassword != null) {
+      return wrongPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FirebaseWrongPasswordErrorCategory
+    implements FirebaseErrorCategory {
+  const factory _FirebaseWrongPasswordErrorCategory() =
+      _$FirebaseWrongPasswordErrorCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$FirebaseInvalidCredentionErrorCategoryImplCopyWith<$Res> {
+  factory _$$FirebaseInvalidCredentionErrorCategoryImplCopyWith(
+          _$FirebaseInvalidCredentionErrorCategoryImpl value,
+          $Res Function(_$FirebaseInvalidCredentionErrorCategoryImpl) then) =
+      __$$FirebaseInvalidCredentionErrorCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FirebaseInvalidCredentionErrorCategoryImplCopyWithImpl<$Res>
+    extends _$FirebaseErrorCategoryCopyWithImpl<$Res,
+        _$FirebaseInvalidCredentionErrorCategoryImpl>
+    implements _$$FirebaseInvalidCredentionErrorCategoryImplCopyWith<$Res> {
+  __$$FirebaseInvalidCredentionErrorCategoryImplCopyWithImpl(
+      _$FirebaseInvalidCredentionErrorCategoryImpl _value,
+      $Res Function(_$FirebaseInvalidCredentionErrorCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FirebaseErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FirebaseInvalidCredentionErrorCategoryImpl
+    implements _FirebaseInvalidCredentionErrorCategory {
+  const _$FirebaseInvalidCredentionErrorCategoryImpl();
+
+  @override
+  String toString() {
+    return 'FirebaseErrorCategory.invalidCredential()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FirebaseInvalidCredentionErrorCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() base,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() invalidEmail,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+  }) {
+    return invalidCredential();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? base,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+  }) {
+    return invalidCredential?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? base,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    required TResult orElse(),
+  }) {
+    if (invalidCredential != null) {
+      return invalidCredential();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FirebaseBaseErrorCategory value) base,
+    required TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)
+        emailAlreadyInUse,
+    required TResult Function(_FirebaseInvalidEmailErrorCategory value)
+        invalidEmail,
+    required TResult Function(_FirebaseOperationNotAllowedErrorCategory value)
+        operationNotAllowed,
+    required TResult Function(_FirebaseWeakPasswordErrorCategory value)
+        weakPassword,
+    required TResult Function(_FirebaseTooManyRequestsErrorCategory value)
+        tooManyRequests,
+    required TResult Function(_FirebaseUserTokenExpiredErrorCategory value)
+        userTokenExpired,
+    required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
+        networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
+  }) {
+    return invalidCredential(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FirebaseBaseErrorCategory value)? base,
+    TResult? Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult? Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult? Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult? Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult? Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult? Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+  }) {
+    return invalidCredential?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FirebaseBaseErrorCategory value)? base,
+    TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    required TResult orElse(),
+  }) {
+    if (invalidCredential != null) {
+      return invalidCredential(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FirebaseInvalidCredentionErrorCategory
+    implements FirebaseErrorCategory {
+  const factory _FirebaseInvalidCredentionErrorCategory() =
+      _$FirebaseInvalidCredentionErrorCategoryImpl;
 }
 
 /// @nodoc

@@ -5,9 +5,9 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:uniqtrack/core/common/error_handler/app_error_handler.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/firebase_auth_constants.dart';
-import 'package:uniqtrack/data/repositories/accounts/models/user_model.dart';
-import 'package:uniqtrack/data/repositories/accounts/parameters/register_parameters.dart';
-import 'package:uniqtrack/data/repositories/accounts_data_repository.dart';
+import 'package:uniqtrack/data/accounts/models/user_model.dart';
+import 'package:uniqtrack/data/accounts/parameters/parameters.dart';
+import 'package:uniqtrack/data/accounts/accounts_data_repository.dart';
 import 'package:uuid/uuid.dart';
 
 class AccountsDataRepositoryImpl implements AccountsDataRepository {
@@ -45,7 +45,6 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
 
   Future<void> _registerWithoutHandleError(
       RegisterParameters parameters) async {
-
     final uid = await _register(
       email: parameters.email,
       password: parameters.password,
@@ -88,6 +87,14 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
     return null;
   }
 
+  Future<void> _loginWithoutHandleError(LoginParameters parameters) async {
+    final email = parameters.email;
+    final password = parameters.password;
+
+    await _firebaseAuth.signInWithEmailAndPassword(
+        email: email, password: password);
+  }
+
   Future<void> _uploadUserData({
     required RegisterParameters parameters,
     required String uid,
@@ -111,7 +118,18 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
   @override
   Future<Either<AppError, void>> register(RegisterParameters parameters) async {
     final result = _appErrorHandler.handle(
-      _registerWithoutHandleError(parameters),
+      () => _registerWithoutHandleError(parameters),
+    );
+
+    return result;
+  }
+
+  @override
+  Future<Either<AppError, void>> login(LoginParameters parameters) {
+    final result = _appErrorHandler.handle(
+      () {
+        return _loginWithoutHandleError(parameters);
+      },
     );
 
     return result;

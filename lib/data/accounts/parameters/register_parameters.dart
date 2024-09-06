@@ -1,8 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uniqtrack/data/repositories/accounts/models/file_model.dart';
-import 'package:uniqtrack/data/repositories/accounts/models/gender_model.dart';
-
-part 'register_parameters.freezed.dart';
+part of 'parameters.dart';
 
 @immutable
 @freezed

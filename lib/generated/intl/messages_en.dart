@@ -54,6 +54,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "error": MessageLookupByLibrary.simpleMessage("Error!"),
         "female": MessageLookupByLibrary.simpleMessage("Female"),
         "image": MessageLookupByLibrary.simpleMessage("Image"),
+        "invalidCredential":
+            MessageLookupByLibrary.simpleMessage("Invalid credential"),
         "invalidEmailAddress":
             MessageLookupByLibrary.simpleMessage("Invalid email address"),
         "invalidName": MessageLookupByLibrary.simpleMessage("Invalid name"),
@@ -80,8 +82,12 @@ class MessageLookup extends MessageLookupByLibrary {
                 "The user has been successfully registered"),
         "tooManyRequests":
             MessageLookupByLibrary.simpleMessage("Too many requests"),
+        "userHasBeenDisabled":
+            MessageLookupByLibrary.simpleMessage("User has been disabled"),
+        "userNotFound": MessageLookupByLibrary.simpleMessage("User not found"),
         "userTokenExpired":
             MessageLookupByLibrary.simpleMessage("User token expired"),
-        "weakPassword": MessageLookupByLibrary.simpleMessage("Weak password")
+        "weakPassword": MessageLookupByLibrary.simpleMessage("Weak password"),
+        "wrongPassword": MessageLookupByLibrary.simpleMessage("Wrong password")
       };
 }
