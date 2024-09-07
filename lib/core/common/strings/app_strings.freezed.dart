@@ -41,6 +41,13 @@ mixin _$AppStrings {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -68,6 +75,12 @@ mixin _$AppStrings {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -95,6 +108,12 @@ mixin _$AppStrings {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -132,6 +151,19 @@ mixin _$AppStrings {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -163,6 +195,16 @@ mixin _$AppStrings {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -193,6 +235,16 @@ mixin _$AppStrings {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -283,6 +335,13 @@ class _$AppErrorStringImpl implements _AppErrorString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return error();
   }
@@ -313,6 +372,12 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return error?.call();
   }
@@ -343,6 +408,12 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -386,6 +457,19 @@ class _$AppErrorStringImpl implements _AppErrorString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return error(this);
   }
@@ -420,6 +504,16 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return error?.call(this);
   }
@@ -453,6 +547,16 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -530,6 +634,13 @@ class _$AppOkayStringImpl implements _AppOkayString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return okay();
   }
@@ -560,6 +671,12 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return okay?.call();
   }
@@ -590,6 +707,12 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -633,6 +756,19 @@ class _$AppOkayStringImpl implements _AppOkayString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return okay(this);
   }
@@ -667,6 +803,16 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return okay?.call(this);
   }
@@ -700,6 +846,16 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -780,6 +936,13 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return errorHasOccurred();
   }
@@ -810,6 +973,12 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return errorHasOccurred?.call();
   }
@@ -840,6 +1009,12 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -883,6 +1058,19 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return errorHasOccurred(this);
   }
@@ -917,6 +1105,16 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return errorHasOccurred?.call(this);
   }
@@ -950,6 +1148,16 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -1030,6 +1238,13 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return invalidEmail();
   }
@@ -1060,6 +1275,12 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return invalidEmail?.call();
   }
@@ -1090,6 +1311,12 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -1133,6 +1360,19 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return invalidEmail(this);
   }
@@ -1167,6 +1407,16 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return invalidEmail?.call(this);
   }
@@ -1200,6 +1450,16 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -1281,6 +1541,13 @@ class _$$AppEmailAlreadyInUseStringImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return emailAlreadyInUse();
   }
@@ -1311,6 +1578,12 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -1341,6 +1614,12 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -1384,6 +1663,19 @@ class _$$AppEmailAlreadyInUseStringImpl
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return emailAlreadyInUse(this);
   }
@@ -1418,6 +1710,16 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -1451,6 +1753,16 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -1533,6 +1845,13 @@ class _$$AppOperationNotAllowedStringImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return operationNotAllowed();
   }
@@ -1563,6 +1882,12 @@ class _$$AppOperationNotAllowedStringImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return operationNotAllowed?.call();
   }
@@ -1593,6 +1918,12 @@ class _$$AppOperationNotAllowedStringImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -1636,6 +1967,19 @@ class _$$AppOperationNotAllowedStringImpl
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return operationNotAllowed(this);
   }
@@ -1670,6 +2014,16 @@ class _$$AppOperationNotAllowedStringImpl
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return operationNotAllowed?.call(this);
   }
@@ -1703,6 +2057,16 @@ class _$$AppOperationNotAllowedStringImpl
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -1784,6 +2148,13 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return weakPassword();
   }
@@ -1814,6 +2185,12 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return weakPassword?.call();
   }
@@ -1844,6 +2221,12 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1887,6 +2270,19 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return weakPassword(this);
   }
@@ -1921,6 +2317,16 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return weakPassword?.call(this);
   }
@@ -1954,6 +2360,16 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -2034,6 +2450,13 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return tooManyRequests();
   }
@@ -2064,6 +2487,12 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return tooManyRequests?.call();
   }
@@ -2094,6 +2523,12 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -2137,6 +2572,19 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return tooManyRequests(this);
   }
@@ -2171,6 +2619,16 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return tooManyRequests?.call(this);
   }
@@ -2204,6 +2662,16 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -2284,6 +2752,13 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return userTokenExpired();
   }
@@ -2314,6 +2789,12 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return userTokenExpired?.call();
   }
@@ -2344,6 +2825,12 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -2387,6 +2874,19 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return userTokenExpired(this);
   }
@@ -2421,6 +2921,16 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return userTokenExpired?.call(this);
   }
@@ -2454,6 +2964,16 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -2537,6 +3057,13 @@ class _$$AppNetworkRequestsFailedStringImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return networkRequestFailed();
   }
@@ -2567,6 +3094,12 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return networkRequestFailed?.call();
   }
@@ -2597,6 +3130,12 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -2640,6 +3179,19 @@ class _$$AppNetworkRequestsFailedStringImpl
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return networkRequestFailed(this);
   }
@@ -2674,6 +3226,16 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return networkRequestFailed?.call(this);
   }
@@ -2707,6 +3269,16 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -2790,6 +3362,13 @@ class _$$AppNotInternetConnectionStringImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return notInternetConnection();
   }
@@ -2820,6 +3399,12 @@ class _$$AppNotInternetConnectionStringImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return notInternetConnection?.call();
   }
@@ -2850,6 +3435,12 @@ class _$$AppNotInternetConnectionStringImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (notInternetConnection != null) {
@@ -2893,6 +3484,19 @@ class _$$AppNotInternetConnectionStringImpl
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return notInternetConnection(this);
   }
@@ -2927,6 +3531,16 @@ class _$$AppNotInternetConnectionStringImpl
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return notInternetConnection?.call(this);
   }
@@ -2960,6 +3574,16 @@ class _$$AppNotInternetConnectionStringImpl
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (notInternetConnection != null) {
@@ -3041,6 +3665,13 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return connectTimeout();
   }
@@ -3071,6 +3702,12 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return connectTimeout?.call();
   }
@@ -3101,6 +3738,12 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -3144,6 +3787,19 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return connectTimeout(this);
   }
@@ -3178,6 +3834,16 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return connectTimeout?.call(this);
   }
@@ -3211,6 +3877,16 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -3290,6 +3966,13 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return sendTimeout();
   }
@@ -3320,6 +4003,12 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return sendTimeout?.call();
   }
@@ -3350,6 +4039,12 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -3393,6 +4088,19 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return sendTimeout(this);
   }
@@ -3427,6 +4135,16 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return sendTimeout?.call(this);
   }
@@ -3460,6 +4178,16 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -3540,6 +4268,13 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return receiveTimeout();
   }
@@ -3570,6 +4305,12 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return receiveTimeout?.call();
   }
@@ -3600,6 +4341,12 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -3643,6 +4390,19 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return receiveTimeout(this);
   }
@@ -3677,6 +4437,16 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return receiveTimeout?.call(this);
   }
@@ -3710,6 +4480,16 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -3790,6 +4570,13 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return requestCancelled();
   }
@@ -3820,6 +4607,12 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return requestCancelled?.call();
   }
@@ -3850,6 +4643,12 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (requestCancelled != null) {
@@ -3893,6 +4692,19 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return requestCancelled(this);
   }
@@ -3927,6 +4739,16 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return requestCancelled?.call(this);
   }
@@ -3960,6 +4782,16 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (requestCancelled != null) {
@@ -4041,6 +4873,13 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return badCertificate();
   }
@@ -4071,6 +4910,12 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return badCertificate?.call();
   }
@@ -4101,6 +4946,12 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (badCertificate != null) {
@@ -4144,6 +4995,19 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return badCertificate(this);
   }
@@ -4178,6 +5042,16 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return badCertificate?.call(this);
   }
@@ -4211,6 +5085,16 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (badCertificate != null) {
@@ -4290,6 +5174,13 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return badResponse();
   }
@@ -4320,6 +5211,12 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return badResponse?.call();
   }
@@ -4350,6 +5247,12 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (badResponse != null) {
@@ -4393,6 +5296,19 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return badResponse(this);
   }
@@ -4427,6 +5343,16 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return badResponse?.call(this);
   }
@@ -4460,6 +5386,16 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (badResponse != null) {
@@ -4540,6 +5476,13 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return notification();
   }
@@ -4570,6 +5513,12 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return notification?.call();
   }
@@ -4600,6 +5549,12 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (notification != null) {
@@ -4643,6 +5598,19 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return notification(this);
   }
@@ -4677,6 +5645,16 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return notification?.call(this);
   }
@@ -4710,6 +5688,16 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (notification != null) {
@@ -4795,6 +5783,13 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return theUserHasBeenSuccessfullyRegistered();
   }
@@ -4825,6 +5820,12 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return theUserHasBeenSuccessfullyRegistered?.call();
   }
@@ -4855,6 +5856,12 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (theUserHasBeenSuccessfullyRegistered != null) {
@@ -4898,6 +5905,19 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return theUserHasBeenSuccessfullyRegistered(this);
   }
@@ -4932,6 +5952,16 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return theUserHasBeenSuccessfullyRegistered?.call(this);
   }
@@ -4965,6 +5995,16 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (theUserHasBeenSuccessfullyRegistered != null) {
@@ -5047,6 +6087,13 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return userDisabled();
   }
@@ -5077,6 +6124,12 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return userDisabled?.call();
   }
@@ -5107,6 +6160,12 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -5150,6 +6209,19 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return userDisabled(this);
   }
@@ -5184,6 +6256,16 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return userDisabled?.call(this);
   }
@@ -5217,6 +6299,16 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -5297,6 +6389,13 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return userNotFound();
   }
@@ -5327,6 +6426,12 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return userNotFound?.call();
   }
@@ -5357,6 +6462,12 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -5400,6 +6511,19 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return userNotFound(this);
   }
@@ -5434,6 +6558,16 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return userNotFound?.call(this);
   }
@@ -5467,6 +6601,16 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -5547,6 +6691,13 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return wrongPassword();
   }
@@ -5577,6 +6728,12 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return wrongPassword?.call();
   }
@@ -5607,6 +6764,12 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -5650,6 +6813,19 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return wrongPassword(this);
   }
@@ -5684,6 +6860,16 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return wrongPassword?.call(this);
   }
@@ -5717,6 +6903,16 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -5798,6 +6994,13 @@ class _$$AppInvalidCredentialStringImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return invalidCredential();
   }
@@ -5828,6 +7031,12 @@ class _$$AppInvalidCredentialStringImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return invalidCredential?.call();
   }
@@ -5858,6 +7067,12 @@ class _$$AppInvalidCredentialStringImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -5901,6 +7116,19 @@ class _$$AppInvalidCredentialStringImpl
     required TResult Function(_$AppWrongPasswordString value) wrongPassword,
     required TResult Function(_$AppInvalidCredentialString value)
         invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return invalidCredential(this);
   }
@@ -5935,6 +7163,16 @@ class _$$AppInvalidCredentialStringImpl
     TResult? Function(_$AppUserNotFoundString value)? userNotFound,
     TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
   }) {
     return invalidCredential?.call(this);
   }
@@ -5968,6 +7206,16 @@ class _$$AppInvalidCredentialStringImpl
     TResult Function(_$AppUserNotFoundString value)? userNotFound,
     TResult Function(_$AppWrongPasswordString value)? wrongPassword,
     TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -5980,4 +7228,1842 @@ class _$$AppInvalidCredentialStringImpl
 abstract class _$AppInvalidCredentialString implements AppStrings {
   const factory _$AppInvalidCredentialString() =
       _$$AppInvalidCredentialStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppUnathorizedContinueUriStringImplCopyWith<$Res> {
+  factory _$$$AppUnathorizedContinueUriStringImplCopyWith(
+          _$$AppUnathorizedContinueUriStringImpl value,
+          $Res Function(_$$AppUnathorizedContinueUriStringImpl) then) =
+      __$$$AppUnathorizedContinueUriStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppUnathorizedContinueUriStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res,
+        _$$AppUnathorizedContinueUriStringImpl>
+    implements _$$$AppUnathorizedContinueUriStringImplCopyWith<$Res> {
+  __$$$AppUnathorizedContinueUriStringImplCopyWithImpl(
+      _$$AppUnathorizedContinueUriStringImpl _value,
+      $Res Function(_$$AppUnathorizedContinueUriStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppUnathorizedContinueUriStringImpl
+    implements _$AppUnathorizedContinueUriString {
+  const _$$AppUnathorizedContinueUriStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.unauthorizedContinueUri()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppUnathorizedContinueUriStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return unauthorizedContinueUri();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return unauthorizedContinueUri?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult orElse(),
+  }) {
+    if (unauthorizedContinueUri != null) {
+      return unauthorizedContinueUri();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return unauthorizedContinueUri(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return unauthorizedContinueUri?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult orElse(),
+  }) {
+    if (unauthorizedContinueUri != null) {
+      return unauthorizedContinueUri(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppUnathorizedContinueUriString implements AppStrings {
+  const factory _$AppUnathorizedContinueUriString() =
+      _$$AppUnathorizedContinueUriStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppInvalidContinueUriStringImplCopyWith<$Res> {
+  factory _$$$AppInvalidContinueUriStringImplCopyWith(
+          _$$AppInvalidContinueUriStringImpl value,
+          $Res Function(_$$AppInvalidContinueUriStringImpl) then) =
+      __$$$AppInvalidContinueUriStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppInvalidContinueUriStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppInvalidContinueUriStringImpl>
+    implements _$$$AppInvalidContinueUriStringImplCopyWith<$Res> {
+  __$$$AppInvalidContinueUriStringImplCopyWithImpl(
+      _$$AppInvalidContinueUriStringImpl _value,
+      $Res Function(_$$AppInvalidContinueUriStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppInvalidContinueUriStringImpl
+    implements _$AppInvalidContinueUriString {
+  const _$$AppInvalidContinueUriStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.invalidContinueUri()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppInvalidContinueUriStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return invalidContinueUri();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return invalidContinueUri?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult orElse(),
+  }) {
+    if (invalidContinueUri != null) {
+      return invalidContinueUri();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return invalidContinueUri(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return invalidContinueUri?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult orElse(),
+  }) {
+    if (invalidContinueUri != null) {
+      return invalidContinueUri(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppInvalidContinueUriString implements AppStrings {
+  const factory _$AppInvalidContinueUriString() =
+      _$$AppInvalidContinueUriStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppMissingIOSBundleIdStringImplCopyWith<$Res> {
+  factory _$$$AppMissingIOSBundleIdStringImplCopyWith(
+          _$$AppMissingIOSBundleIdStringImpl value,
+          $Res Function(_$$AppMissingIOSBundleIdStringImpl) then) =
+      __$$$AppMissingIOSBundleIdStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppMissingIOSBundleIdStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppMissingIOSBundleIdStringImpl>
+    implements _$$$AppMissingIOSBundleIdStringImplCopyWith<$Res> {
+  __$$$AppMissingIOSBundleIdStringImplCopyWithImpl(
+      _$$AppMissingIOSBundleIdStringImpl _value,
+      $Res Function(_$$AppMissingIOSBundleIdStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppMissingIOSBundleIdStringImpl
+    implements _$AppMissingIOSBundleIdString {
+  const _$$AppMissingIOSBundleIdStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.missingIOSBundleId()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppMissingIOSBundleIdStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return missingIOSBundleId();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return missingIOSBundleId?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult orElse(),
+  }) {
+    if (missingIOSBundleId != null) {
+      return missingIOSBundleId();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return missingIOSBundleId(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return missingIOSBundleId?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult orElse(),
+  }) {
+    if (missingIOSBundleId != null) {
+      return missingIOSBundleId(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppMissingIOSBundleIdString implements AppStrings {
+  const factory _$AppMissingIOSBundleIdString() =
+      _$$AppMissingIOSBundleIdStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppMissingContinueUriStringImplCopyWith<$Res> {
+  factory _$$$AppMissingContinueUriStringImplCopyWith(
+          _$$AppMissingContinueUriStringImpl value,
+          $Res Function(_$$AppMissingContinueUriStringImpl) then) =
+      __$$$AppMissingContinueUriStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppMissingContinueUriStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppMissingContinueUriStringImpl>
+    implements _$$$AppMissingContinueUriStringImplCopyWith<$Res> {
+  __$$$AppMissingContinueUriStringImplCopyWithImpl(
+      _$$AppMissingContinueUriStringImpl _value,
+      $Res Function(_$$AppMissingContinueUriStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppMissingContinueUriStringImpl
+    implements _$AppMissingContinueUriString {
+  const _$$AppMissingContinueUriStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.missingContinueUri()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppMissingContinueUriStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return missingContinueUri();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return missingContinueUri?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult orElse(),
+  }) {
+    if (missingContinueUri != null) {
+      return missingContinueUri();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return missingContinueUri(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return missingContinueUri?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult orElse(),
+  }) {
+    if (missingContinueUri != null) {
+      return missingContinueUri(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppMissingContinueUriString implements AppStrings {
+  const factory _$AppMissingContinueUriString() =
+      _$$AppMissingContinueUriStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppMissingAndroidPkgNameStringImplCopyWith<$Res> {
+  factory _$$$AppMissingAndroidPkgNameStringImplCopyWith(
+          _$$AppMissingAndroidPkgNameStringImpl value,
+          $Res Function(_$$AppMissingAndroidPkgNameStringImpl) then) =
+      __$$$AppMissingAndroidPkgNameStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppMissingAndroidPkgNameStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res,
+        _$$AppMissingAndroidPkgNameStringImpl>
+    implements _$$$AppMissingAndroidPkgNameStringImplCopyWith<$Res> {
+  __$$$AppMissingAndroidPkgNameStringImplCopyWithImpl(
+      _$$AppMissingAndroidPkgNameStringImpl _value,
+      $Res Function(_$$AppMissingAndroidPkgNameStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppMissingAndroidPkgNameStringImpl
+    implements _$AppMissingAndroidPkgNameString {
+  const _$$AppMissingAndroidPkgNameStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.missingAndroidPkgName()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppMissingAndroidPkgNameStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return missingAndroidPkgName();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return missingAndroidPkgName?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult orElse(),
+  }) {
+    if (missingAndroidPkgName != null) {
+      return missingAndroidPkgName();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return missingAndroidPkgName(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return missingAndroidPkgName?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult orElse(),
+  }) {
+    if (missingAndroidPkgName != null) {
+      return missingAndroidPkgName(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppMissingAndroidPkgNameString implements AppStrings {
+  const factory _$AppMissingAndroidPkgNameString() =
+      _$$AppMissingAndroidPkgNameStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImplCopyWith<
+    $Res> {
+  factory _$$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImplCopyWith(
+          _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl value,
+          $Res Function(
+                  _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl)
+              then) =
+      __$$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImplCopyWithImpl<
+          $Res>;
+}
+
+/// @nodoc
+class __$$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImplCopyWithImpl<
+        $Res>
+    extends _$AppStringsCopyWithImpl<$Res,
+        _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl>
+    implements
+        _$$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImplCopyWith<
+            $Res> {
+  __$$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImplCopyWithImpl(
+      _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl _value,
+      $Res Function(
+              _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl)
+          _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
+    implements _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString {
+  const _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.thePasswordHasBeenSentToTheSpecifiedEmailAddress()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other
+                is _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return thePasswordHasBeenSentToTheSpecifiedEmailAddress();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return thePasswordHasBeenSentToTheSpecifiedEmailAddress?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult orElse(),
+  }) {
+    if (thePasswordHasBeenSentToTheSpecifiedEmailAddress != null) {
+      return thePasswordHasBeenSentToTheSpecifiedEmailAddress();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return thePasswordHasBeenSentToTheSpecifiedEmailAddress(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+  }) {
+    return thePasswordHasBeenSentToTheSpecifiedEmailAddress?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult orElse(),
+  }) {
+    if (thePasswordHasBeenSentToTheSpecifiedEmailAddress != null) {
+      return thePasswordHasBeenSentToTheSpecifiedEmailAddress(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString
+    implements AppStrings {
+  const factory _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString() =
+      _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl;
 }

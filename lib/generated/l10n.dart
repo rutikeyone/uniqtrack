@@ -449,6 +449,136 @@ class S {
       args: [],
     );
   }
+
+  /// `Enter your password recovery email`
+  String get enterYourPasswordRecoveryEmail {
+    return Intl.message(
+      'Enter your password recovery email',
+      name: 'enterYourPasswordRecoveryEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send password`
+  String get sendPassword {
+    return Intl.message(
+      'Send password',
+      name: 'sendPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The continuation URL is not whitelisted`
+  String get theContinuationUrlIsNotWhitelisted {
+    return Intl.message(
+      'The continuation URL is not whitelisted',
+      name: 'theContinuationUrlIsNotWhitelisted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The continue URL provided in the request is invalid`
+  String get theContinueUrlProvidedInTheRequestIsInvalid {
+    return Intl.message(
+      'The continue URL provided in the request is invalid',
+      name: 'theContinueUrlProvidedInTheRequestIsInvalid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An iOS Bundle ID must be provided if an App Store ID is provided`
+  String get anIosBundleIdMustBeProvidedIfAnApp {
+    return Intl.message(
+      'An iOS Bundle ID must be provided if an App Store ID is provided',
+      name: 'anIosBundleIdMustBeProvidedIfAnApp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A continue URL must be provided in the request`
+  String get aContinueUrlMustBeProvidedInTheRequest {
+    return Intl.message(
+      'A continue URL must be provided in the request',
+      name: 'aContinueUrlMustBeProvidedInTheRequest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An Android package name must be provided if the Android app is required to be installed`
+  String get anAndroidPackageNameMustBeProvidedIfTheAndroid {
+    return Intl.message(
+      'An Android package name must be provided if the Android app is required to be installed',
+      name: 'anAndroidPackageNameMustBeProvidedIfTheAndroid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password has been sent to the specified email address.`
+  String get thePasswordHasBeenSentToTheSpecifiedEmailAddress {
+    return Intl.message(
+      'The password has been sent to the specified email address.',
+      name: 'thePasswordHasBeenSentToTheSpecifiedEmailAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Community`
+  String get community {
+    return Intl.message(
+      'Community',
+      name: 'community',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign out`
+  String get signOut {
+    return Intl.message(
+      'Sign out',
+      name: 'signOut',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My tracks`
+  String get myTracks {
+    return Intl.message(
+      'My tracks',
+      name: 'myTracks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My favourite tracks`
+  String get myFavouriteTracks {
+    return Intl.message(
+      'My favourite tracks',
+      name: 'myFavouriteTracks',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

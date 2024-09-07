@@ -158,7 +158,6 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
   Stream<UserModel?> authStateChanges() {
     return _firebaseAuth.authStateChanges().asyncMap(
       (event) async {
-
         final uid = event?.uid;
         if (uid == null) {
           return null;
@@ -176,5 +175,27 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
         );
       },
     );
+  }
+
+  @override
+  Future<Either<AppError, void>> sendPasswordResetEmail({
+    required String email,
+  }) {
+    final result = _appErrorHandler.handle(() async {
+      final result = await _firebaseAuth.sendPasswordResetEmail(email: email);
+      return result;
+    });
+
+    return result;
+  }
+
+  @override
+  Future<Either<AppError, void>> signOut() {
+    final signOutResult = _appErrorHandler.handle(() async {
+      final result = _firebaseAuth.signOut();
+      return result;
+    });
+
+    return signOutResult;
   }
 }

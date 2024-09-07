@@ -38,5 +38,18 @@
   "userNotFound": "Пользователь не найден",
   "wrongPassword": "Неверный пароль",
   "invalidCredential": "Неверные учетные данные",
-  "forgotPassword": "Забыли пароль?"
+  "forgotPassword": "Забыли пароль?",
+  "enterYourPasswordRecoveryEmail": "Введите свой адрес электронной почты для восстановления пароля",
+  "sendPassword": "Отправить пароль",
+  "theContinuationUrlIsNotWhitelisted": "URL-адрес продолжения не занесен в белый список",
+  "theContinueUrlProvidedInTheRequestIsInvalid": "URL-адрес продолжения, указанный в запросе, является недопустимым",
+  "anIosBundleIdMustBeProvidedIfAnApp": "Если указан идентификатор магазина приложений, необходимо указать идентификатор пакета iOS",
+  "aContinueUrlMustBeProvidedInTheRequest": "В запросе должен быть указан URL-адрес продолжения",
+  "anAndroidPackageNameMustBeProvidedIfTheAndroid": "Если требуется установить приложение для Android, необходимо указать название пакета Android",
+  "thePasswordHasBeenSentToTheSpecifiedEmailAddress": "Пароль был отправлен на указанный адрес электронной почты.",
+  "community": "Сообщество",
+  "profile": "Профиль",
+  "signOut": "Выйти из аккаунта",
+  "myTracks": "Мои треки",
+  "myFavouriteTracks": "Мои избранные треки"
 }

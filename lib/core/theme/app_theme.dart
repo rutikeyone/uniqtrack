@@ -15,6 +15,10 @@ class AppTheme {
       colorScheme: AppColorScheme.lightColorScheme,
       bottomSheetTheme: AppBottomSheetTheme.lightBottomSheetTheme,
       dividerColor: AppColors.greyOlive,
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        selectedItemColor: AppColors.onSecondary,
+        unselectedItemColor: AppColors.black,
+      )
     );
   }
 }

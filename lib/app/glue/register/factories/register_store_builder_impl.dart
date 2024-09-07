@@ -1,5 +1,5 @@
 import 'package:uniqtrack/app/factories/stores/store_factory.dart';
-import 'package:uniqtrack/features/register/presentation/store/register_store.dart';
+import 'package:uniqtrack/features/register/presentation/stores/register_store.dart';
 
 class RegisterStoreBuilderImpl implements RegisterStoreBuilder {
   final StoreFactory _factory;

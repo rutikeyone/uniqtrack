@@ -6,7 +6,7 @@ import 'package:uniqtrack/app/glue/register/mappers/gender_mapper.dart';
 import 'package:uniqtrack/app/glue/register/repositories/register_adapter_repository.dart';
 import 'package:uniqtrack/data/accounts/providers/accounts_provider.dart';
 import 'package:uniqtrack/features/register/domain/repositorories/register_repository.dart';
-import 'package:uniqtrack/features/register/presentation/store/register_store.dart';
+import 'package:uniqtrack/features/register/presentation/stores/register_store.dart';
 
 part 'gender_mapper_provider.dart';
 part 'file_mapper_provider.dart';

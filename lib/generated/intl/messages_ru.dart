@@ -26,9 +26,17 @@ class MessageLookup extends MessageLookupByLibrary {
             "Произошла ошибка с ошибочным сертификатом"),
         "aBadResponseErrorOccurred": MessageLookupByLibrary.simpleMessage(
             "Произошла ошибка неправильного ответа"),
+        "aContinueUrlMustBeProvidedInTheRequest":
+            MessageLookupByLibrary.simpleMessage(
+                "В запросе должен быть указан URL-адрес продолжения"),
+        "anAndroidPackageNameMustBeProvidedIfTheAndroid":
+            MessageLookupByLibrary.simpleMessage(
+                "Если требуется установить приложение для Android, необходимо указать название пакета Android"),
         "anErrorHasOccurredInTheApplication":
             MessageLookupByLibrary.simpleMessage(
                 "Произошла ошибка в приложении!"),
+        "anIosBundleIdMustBeProvidedIfAnApp": MessageLookupByLibrary.simpleMessage(
+            "Если указан идентификатор магазина приложений, необходимо указать идентификатор пакета iOS"),
         "back": MessageLookupByLibrary.simpleMessage("Назад"),
         "cancel": MessageLookupByLibrary.simpleMessage("Назад"),
         "checkYourInternetConnectionAndTryAgain":
@@ -36,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Проверьте свое интернет-соединение и повторите попытку"),
         "chooseFromTheLibrary":
             MessageLookupByLibrary.simpleMessage("Выбрать из галереи"),
+        "community": MessageLookupByLibrary.simpleMessage("Сообщество"),
         "connectionTimeoutFailureOccurred":
             MessageLookupByLibrary.simpleMessage(
                 "Произошел сбой тайм-аута соединения"),
@@ -50,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Введите ваше имя"),
         "enterYourPassword":
             MessageLookupByLibrary.simpleMessage("Введите ваш пароль"),
+        "enterYourPasswordRecoveryEmail": MessageLookupByLibrary.simpleMessage(
+            "Введите свой адрес электронной почты для восстановления пароля"),
         "error": MessageLookupByLibrary.simpleMessage("Ошибка!"),
         "female": MessageLookupByLibrary.simpleMessage("Женский"),
         "forgotPassword":
@@ -66,17 +77,33 @@ class MessageLookup extends MessageLookupByLibrary {
         "logInToYourAccount": MessageLookupByLibrary.simpleMessage(
             "Войдите в вашу учетную запись"),
         "male": MessageLookupByLibrary.simpleMessage("Мужской"),
+        "myFavouriteTracks":
+            MessageLookupByLibrary.simpleMessage("Мои избранные треки"),
+        "myTracks": MessageLookupByLibrary.simpleMessage("Мои треки"),
         "notification": MessageLookupByLibrary.simpleMessage("Уведомление"),
         "okay": MessageLookupByLibrary.simpleMessage("Хорошо"),
         "operation_not_allowed":
             MessageLookupByLibrary.simpleMessage("Операция запрещена"),
+        "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
         "receiveTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
             "Произошел сбой тайм-аута приема"),
+        "sendPassword":
+            MessageLookupByLibrary.simpleMessage("Отправить пароль"),
         "sendTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
             "Произошел сбой тайм-аута отправки"),
+        "signOut": MessageLookupByLibrary.simpleMessage("Выйти из аккаунта"),
         "signUp": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
         "takeAPhoto":
             MessageLookupByLibrary.simpleMessage("Сделать фотографию"),
+        "theContinuationUrlIsNotWhitelisted":
+            MessageLookupByLibrary.simpleMessage(
+                "URL-адрес продолжения не занесен в белый список"),
+        "theContinueUrlProvidedInTheRequestIsInvalid":
+            MessageLookupByLibrary.simpleMessage(
+                "URL-адрес продолжения, указанный в запросе, является недопустимым"),
+        "thePasswordHasBeenSentToTheSpecifiedEmailAddress":
+            MessageLookupByLibrary.simpleMessage(
+                "Пароль был отправлен на указанный адрес электронной почты."),
         "theRequestWasCanceled":
             MessageLookupByLibrary.simpleMessage("Запрос был отменен"),
         "theUserHasBeenSuccessfullyRegistered":

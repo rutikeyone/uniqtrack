@@ -10,5 +10,12 @@ abstract interface class AccountsDataRepository {
 
   Future<Either<AppError, void>> login(LoginParameters parameters);
 
+  Future<Either<AppError, void>> sendPasswordResetEmail({
+    required String email,
+  });
+
   Future<Either<AppError, UserModel>> fetchUser(String uid);
+
+  Future<Either<AppError, void>> signOut();
+
 }

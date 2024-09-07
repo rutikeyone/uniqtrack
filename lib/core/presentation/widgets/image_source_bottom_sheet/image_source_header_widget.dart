@@ -1,9 +1,7 @@
 part of 'image_source_bottom_sheet.dart';
 
 class _ImageSourceHeaderWidget extends StatelessWidget {
-  const _ImageSourceHeaderWidget({
-    super.key,
-  });
+  const _ImageSourceHeaderWidget();
 
   @override
   Widget build(BuildContext context) {

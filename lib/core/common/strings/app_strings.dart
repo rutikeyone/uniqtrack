@@ -53,4 +53,16 @@ class AppStrings with _$AppStrings {
   const factory AppStrings.wrongPassword() = _$AppWrongPasswordString;
 
   const factory AppStrings.invalidCredential() = _$AppInvalidCredentialString;
+
+  const factory AppStrings.unauthorizedContinueUri() = _$AppUnathorizedContinueUriString;
+
+  const factory AppStrings.invalidContinueUri() = _$AppInvalidContinueUriString;
+
+  const factory AppStrings.missingIOSBundleId() = _$AppMissingIOSBundleIdString;
+
+  const factory AppStrings.missingContinueUri() = _$AppMissingContinueUriString;
+
+  const factory AppStrings.missingAndroidPkgName() = _$AppMissingAndroidPkgNameString;
+
+  const factory AppStrings.thePasswordHasBeenSentToTheSpecifiedEmailAddress() = _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString;
 }

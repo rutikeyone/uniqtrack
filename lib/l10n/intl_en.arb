@@ -38,5 +38,18 @@
   "userNotFound": "User not found",
   "wrongPassword": "Wrong password",
   "invalidCredential": "Invalid credential",
-  "forgotPassword": "Forgot password?"
+  "forgotPassword": "Forgot password?",
+  "enterYourPasswordRecoveryEmail": "Enter your password recovery email",
+  "sendPassword": "Send password",
+  "theContinuationUrlIsNotWhitelisted": "The continuation URL is not whitelisted",
+  "theContinueUrlProvidedInTheRequestIsInvalid": "The continue URL provided in the request is invalid",
+  "anIosBundleIdMustBeProvidedIfAnApp": "An iOS Bundle ID must be provided if an App Store ID is provided",
+  "aContinueUrlMustBeProvidedInTheRequest": "A continue URL must be provided in the request",
+  "anAndroidPackageNameMustBeProvidedIfTheAndroid": "An Android package name must be provided if the Android app is required to be installed",
+  "thePasswordHasBeenSentToTheSpecifiedEmailAddress": "The password has been sent to the specified email address.",
+  "community": "Community",
+  "profile": "Profile",
+  "signOut": "Sign out",
+  "myTracks": "My tracks",
+  "myFavouriteTracks": "My favourite tracks"
 }

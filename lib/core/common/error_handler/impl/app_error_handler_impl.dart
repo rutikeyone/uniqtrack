@@ -67,6 +67,14 @@ class AppErrorHandlerImpl implements AppErrorHandler {
           const FirebaseErrorCategory.wrongPassword(),
         FirebaseAuthConstants.invalidCredential =>
           const FirebaseErrorCategory.invalidCredential(),
+        FirebaseAuthConstants.unauthorizedContinueUri =>
+          const FirebaseErrorCategory.unauthorizedContinueUri(),
+        FirebaseAuthConstants.invalidContinueUri =>
+          const FirebaseErrorCategory.invalidContinueUri(),
+        FirebaseAuthConstants.missingIOSBundleId =>
+          const FirebaseErrorCategory.missingIOSBundleId(),
+        FirebaseAuthConstants.missingContinueUri => const FirebaseErrorCategory.missingContinueUri(),
+        FirebaseAuthConstants.missingAndroidPkgName => const FirebaseErrorCategory.missingAndroidPkgName(),
         _ => const FirebaseErrorCategory.base(),
       };
 

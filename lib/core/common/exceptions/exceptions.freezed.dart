@@ -534,6 +534,11 @@ mixin _$FirebaseErrorCategory {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -550,6 +555,11 @@ mixin _$FirebaseErrorCategory {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -566,6 +576,11 @@ mixin _$FirebaseErrorCategory {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -594,6 +609,17 @@ mixin _$FirebaseErrorCategory {
         wrongPassword,
     required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
         invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -616,6 +642,16 @@ mixin _$FirebaseErrorCategory {
     TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -638,6 +674,16 @@ mixin _$FirebaseErrorCategory {
     TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -722,6 +768,11 @@ class _$FirebaseBaseErrorCategoryImpl implements _FirebaseBaseErrorCategory {
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
   }) {
     return base();
   }
@@ -741,6 +792,11 @@ class _$FirebaseBaseErrorCategoryImpl implements _FirebaseBaseErrorCategory {
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
   }) {
     return base?.call();
   }
@@ -760,6 +816,11 @@ class _$FirebaseBaseErrorCategoryImpl implements _FirebaseBaseErrorCategory {
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (base != null) {
@@ -794,6 +855,17 @@ class _$FirebaseBaseErrorCategoryImpl implements _FirebaseBaseErrorCategory {
         wrongPassword,
     required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
         invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
   }) {
     return base(this);
   }
@@ -819,6 +891,16 @@ class _$FirebaseBaseErrorCategoryImpl implements _FirebaseBaseErrorCategory {
     TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
   }) {
     return base?.call(this);
   }
@@ -844,6 +926,16 @@ class _$FirebaseBaseErrorCategoryImpl implements _FirebaseBaseErrorCategory {
     TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (base != null) {
@@ -915,6 +1007,11 @@ class _$FirebaseEmailAlreadyInUseErrorCategoryImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
   }) {
     return emailAlreadyInUse();
   }
@@ -934,6 +1031,11 @@ class _$FirebaseEmailAlreadyInUseErrorCategoryImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -953,6 +1055,11 @@ class _$FirebaseEmailAlreadyInUseErrorCategoryImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -987,6 +1094,17 @@ class _$FirebaseEmailAlreadyInUseErrorCategoryImpl
         wrongPassword,
     required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
         invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
   }) {
     return emailAlreadyInUse(this);
   }
@@ -1012,6 +1130,16 @@ class _$FirebaseEmailAlreadyInUseErrorCategoryImpl
     TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -1037,6 +1165,16 @@ class _$FirebaseEmailAlreadyInUseErrorCategoryImpl
     TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -1110,6 +1248,11 @@ class _$FirebaseInvalidEmailErrorCategoryImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
   }) {
     return invalidEmail();
   }
@@ -1129,6 +1272,11 @@ class _$FirebaseInvalidEmailErrorCategoryImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
   }) {
     return invalidEmail?.call();
   }
@@ -1148,6 +1296,11 @@ class _$FirebaseInvalidEmailErrorCategoryImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -1182,6 +1335,17 @@ class _$FirebaseInvalidEmailErrorCategoryImpl
         wrongPassword,
     required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
         invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
   }) {
     return invalidEmail(this);
   }
@@ -1207,6 +1371,16 @@ class _$FirebaseInvalidEmailErrorCategoryImpl
     TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
   }) {
     return invalidEmail?.call(this);
   }
@@ -1232,6 +1406,16 @@ class _$FirebaseInvalidEmailErrorCategoryImpl
     TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -1305,6 +1489,11 @@ class _$FirebaseOperationNotAllowedErrorCategoryImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
   }) {
     return operationNotAllowed();
   }
@@ -1324,6 +1513,11 @@ class _$FirebaseOperationNotAllowedErrorCategoryImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
   }) {
     return operationNotAllowed?.call();
   }
@@ -1343,6 +1537,11 @@ class _$FirebaseOperationNotAllowedErrorCategoryImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -1377,6 +1576,17 @@ class _$FirebaseOperationNotAllowedErrorCategoryImpl
         wrongPassword,
     required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
         invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
   }) {
     return operationNotAllowed(this);
   }
@@ -1402,6 +1612,16 @@ class _$FirebaseOperationNotAllowedErrorCategoryImpl
     TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
   }) {
     return operationNotAllowed?.call(this);
   }
@@ -1427,6 +1647,16 @@ class _$FirebaseOperationNotAllowedErrorCategoryImpl
     TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -1500,6 +1730,11 @@ class _$FirebaseWeakPasswordErrorCategoryImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
   }) {
     return weakPassword();
   }
@@ -1519,6 +1754,11 @@ class _$FirebaseWeakPasswordErrorCategoryImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
   }) {
     return weakPassword?.call();
   }
@@ -1538,6 +1778,11 @@ class _$FirebaseWeakPasswordErrorCategoryImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1572,6 +1817,17 @@ class _$FirebaseWeakPasswordErrorCategoryImpl
         wrongPassword,
     required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
         invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
   }) {
     return weakPassword(this);
   }
@@ -1597,6 +1853,16 @@ class _$FirebaseWeakPasswordErrorCategoryImpl
     TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
   }) {
     return weakPassword?.call(this);
   }
@@ -1622,6 +1888,16 @@ class _$FirebaseWeakPasswordErrorCategoryImpl
     TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1695,6 +1971,11 @@ class _$FirebaseTooManyRequestsErrorCategoryImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
   }) {
     return tooManyRequests();
   }
@@ -1714,6 +1995,11 @@ class _$FirebaseTooManyRequestsErrorCategoryImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
   }) {
     return tooManyRequests?.call();
   }
@@ -1733,6 +2019,11 @@ class _$FirebaseTooManyRequestsErrorCategoryImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -1767,6 +2058,17 @@ class _$FirebaseTooManyRequestsErrorCategoryImpl
         wrongPassword,
     required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
         invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
   }) {
     return tooManyRequests(this);
   }
@@ -1792,6 +2094,16 @@ class _$FirebaseTooManyRequestsErrorCategoryImpl
     TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
   }) {
     return tooManyRequests?.call(this);
   }
@@ -1817,6 +2129,16 @@ class _$FirebaseTooManyRequestsErrorCategoryImpl
     TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -1890,6 +2212,11 @@ class _$FirebaseUserTokenExpiredErrorCategoryImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
   }) {
     return userTokenExpired();
   }
@@ -1909,6 +2236,11 @@ class _$FirebaseUserTokenExpiredErrorCategoryImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
   }) {
     return userTokenExpired?.call();
   }
@@ -1928,6 +2260,11 @@ class _$FirebaseUserTokenExpiredErrorCategoryImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -1962,6 +2299,17 @@ class _$FirebaseUserTokenExpiredErrorCategoryImpl
         wrongPassword,
     required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
         invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
   }) {
     return userTokenExpired(this);
   }
@@ -1987,6 +2335,16 @@ class _$FirebaseUserTokenExpiredErrorCategoryImpl
     TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
   }) {
     return userTokenExpired?.call(this);
   }
@@ -2012,6 +2370,16 @@ class _$FirebaseUserTokenExpiredErrorCategoryImpl
     TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -2086,6 +2454,11 @@ class _$FirebaseNetworkRequestsFailedErrorCategoryImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
   }) {
     return networkRequestFailed();
   }
@@ -2105,6 +2478,11 @@ class _$FirebaseNetworkRequestsFailedErrorCategoryImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
   }) {
     return networkRequestFailed?.call();
   }
@@ -2124,6 +2502,11 @@ class _$FirebaseNetworkRequestsFailedErrorCategoryImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -2158,6 +2541,17 @@ class _$FirebaseNetworkRequestsFailedErrorCategoryImpl
         wrongPassword,
     required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
         invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
   }) {
     return networkRequestFailed(this);
   }
@@ -2183,6 +2577,16 @@ class _$FirebaseNetworkRequestsFailedErrorCategoryImpl
     TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
   }) {
     return networkRequestFailed?.call(this);
   }
@@ -2208,6 +2612,16 @@ class _$FirebaseNetworkRequestsFailedErrorCategoryImpl
     TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -2281,6 +2695,11 @@ class _$FirebaseUserDisabledErrorCategoryImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
   }) {
     return userDisabled();
   }
@@ -2300,6 +2719,11 @@ class _$FirebaseUserDisabledErrorCategoryImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
   }) {
     return userDisabled?.call();
   }
@@ -2319,6 +2743,11 @@ class _$FirebaseUserDisabledErrorCategoryImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -2353,6 +2782,17 @@ class _$FirebaseUserDisabledErrorCategoryImpl
         wrongPassword,
     required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
         invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
   }) {
     return userDisabled(this);
   }
@@ -2378,6 +2818,16 @@ class _$FirebaseUserDisabledErrorCategoryImpl
     TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
   }) {
     return userDisabled?.call(this);
   }
@@ -2403,6 +2853,16 @@ class _$FirebaseUserDisabledErrorCategoryImpl
     TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -2476,6 +2936,11 @@ class _$FirebaseUserNotFoundErrorCategoryImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
   }) {
     return userNotFound();
   }
@@ -2495,6 +2960,11 @@ class _$FirebaseUserNotFoundErrorCategoryImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
   }) {
     return userNotFound?.call();
   }
@@ -2514,6 +2984,11 @@ class _$FirebaseUserNotFoundErrorCategoryImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -2548,6 +3023,17 @@ class _$FirebaseUserNotFoundErrorCategoryImpl
         wrongPassword,
     required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
         invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
   }) {
     return userNotFound(this);
   }
@@ -2573,6 +3059,16 @@ class _$FirebaseUserNotFoundErrorCategoryImpl
     TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
   }) {
     return userNotFound?.call(this);
   }
@@ -2598,6 +3094,16 @@ class _$FirebaseUserNotFoundErrorCategoryImpl
     TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -2671,6 +3177,11 @@ class _$FirebaseWrongPasswordErrorCategoryImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
   }) {
     return wrongPassword();
   }
@@ -2690,6 +3201,11 @@ class _$FirebaseWrongPasswordErrorCategoryImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
   }) {
     return wrongPassword?.call();
   }
@@ -2709,6 +3225,11 @@ class _$FirebaseWrongPasswordErrorCategoryImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -2743,6 +3264,17 @@ class _$FirebaseWrongPasswordErrorCategoryImpl
         wrongPassword,
     required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
         invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
   }) {
     return wrongPassword(this);
   }
@@ -2768,6 +3300,16 @@ class _$FirebaseWrongPasswordErrorCategoryImpl
     TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
   }) {
     return wrongPassword?.call(this);
   }
@@ -2793,6 +3335,16 @@ class _$FirebaseWrongPasswordErrorCategoryImpl
     TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -2866,6 +3418,11 @@ class _$FirebaseInvalidCredentionErrorCategoryImpl
     required TResult Function() userNotFound,
     required TResult Function() wrongPassword,
     required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
   }) {
     return invalidCredential();
   }
@@ -2885,6 +3442,11 @@ class _$FirebaseInvalidCredentionErrorCategoryImpl
     TResult? Function()? userNotFound,
     TResult? Function()? wrongPassword,
     TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
   }) {
     return invalidCredential?.call();
   }
@@ -2904,6 +3466,11 @@ class _$FirebaseInvalidCredentionErrorCategoryImpl
     TResult Function()? userNotFound,
     TResult Function()? wrongPassword,
     TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -2938,6 +3505,17 @@ class _$FirebaseInvalidCredentionErrorCategoryImpl
         wrongPassword,
     required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
         invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
   }) {
     return invalidCredential(this);
   }
@@ -2963,6 +3541,16 @@ class _$FirebaseInvalidCredentionErrorCategoryImpl
     TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
   }) {
     return invalidCredential?.call(this);
   }
@@ -2988,6 +3576,16 @@ class _$FirebaseInvalidCredentionErrorCategoryImpl
     TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
     TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
         invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -3001,6 +3599,1215 @@ abstract class _FirebaseInvalidCredentionErrorCategory
     implements FirebaseErrorCategory {
   const factory _FirebaseInvalidCredentionErrorCategory() =
       _$FirebaseInvalidCredentionErrorCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$FirebaseUnauthorizedContinueUriErrorCategoryImplCopyWith<
+    $Res> {
+  factory _$$FirebaseUnauthorizedContinueUriErrorCategoryImplCopyWith(
+          _$FirebaseUnauthorizedContinueUriErrorCategoryImpl value,
+          $Res Function(_$FirebaseUnauthorizedContinueUriErrorCategoryImpl)
+              then) =
+      __$$FirebaseUnauthorizedContinueUriErrorCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FirebaseUnauthorizedContinueUriErrorCategoryImplCopyWithImpl<$Res>
+    extends _$FirebaseErrorCategoryCopyWithImpl<$Res,
+        _$FirebaseUnauthorizedContinueUriErrorCategoryImpl>
+    implements
+        _$$FirebaseUnauthorizedContinueUriErrorCategoryImplCopyWith<$Res> {
+  __$$FirebaseUnauthorizedContinueUriErrorCategoryImplCopyWithImpl(
+      _$FirebaseUnauthorizedContinueUriErrorCategoryImpl _value,
+      $Res Function(_$FirebaseUnauthorizedContinueUriErrorCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FirebaseErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FirebaseUnauthorizedContinueUriErrorCategoryImpl
+    implements _FirebaseUnauthorizedContinueUriErrorCategory {
+  const _$FirebaseUnauthorizedContinueUriErrorCategoryImpl();
+
+  @override
+  String toString() {
+    return 'FirebaseErrorCategory.unauthorizedContinueUri()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FirebaseUnauthorizedContinueUriErrorCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() base,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() invalidEmail,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+  }) {
+    return unauthorizedContinueUri();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? base,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+  }) {
+    return unauthorizedContinueUri?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? base,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    required TResult orElse(),
+  }) {
+    if (unauthorizedContinueUri != null) {
+      return unauthorizedContinueUri();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FirebaseBaseErrorCategory value) base,
+    required TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)
+        emailAlreadyInUse,
+    required TResult Function(_FirebaseInvalidEmailErrorCategory value)
+        invalidEmail,
+    required TResult Function(_FirebaseOperationNotAllowedErrorCategory value)
+        operationNotAllowed,
+    required TResult Function(_FirebaseWeakPasswordErrorCategory value)
+        weakPassword,
+    required TResult Function(_FirebaseTooManyRequestsErrorCategory value)
+        tooManyRequests,
+    required TResult Function(_FirebaseUserTokenExpiredErrorCategory value)
+        userTokenExpired,
+    required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
+        networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
+  }) {
+    return unauthorizedContinueUri(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FirebaseBaseErrorCategory value)? base,
+    TResult? Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult? Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult? Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult? Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult? Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult? Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
+  }) {
+    return unauthorizedContinueUri?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FirebaseBaseErrorCategory value)? base,
+    TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
+    required TResult orElse(),
+  }) {
+    if (unauthorizedContinueUri != null) {
+      return unauthorizedContinueUri(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FirebaseUnauthorizedContinueUriErrorCategory
+    implements FirebaseErrorCategory {
+  const factory _FirebaseUnauthorizedContinueUriErrorCategory() =
+      _$FirebaseUnauthorizedContinueUriErrorCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$FirebaseInvalidContinueUriErrorCategoryImplCopyWith<$Res> {
+  factory _$$FirebaseInvalidContinueUriErrorCategoryImplCopyWith(
+          _$FirebaseInvalidContinueUriErrorCategoryImpl value,
+          $Res Function(_$FirebaseInvalidContinueUriErrorCategoryImpl) then) =
+      __$$FirebaseInvalidContinueUriErrorCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FirebaseInvalidContinueUriErrorCategoryImplCopyWithImpl<$Res>
+    extends _$FirebaseErrorCategoryCopyWithImpl<$Res,
+        _$FirebaseInvalidContinueUriErrorCategoryImpl>
+    implements _$$FirebaseInvalidContinueUriErrorCategoryImplCopyWith<$Res> {
+  __$$FirebaseInvalidContinueUriErrorCategoryImplCopyWithImpl(
+      _$FirebaseInvalidContinueUriErrorCategoryImpl _value,
+      $Res Function(_$FirebaseInvalidContinueUriErrorCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FirebaseErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FirebaseInvalidContinueUriErrorCategoryImpl
+    implements _FirebaseInvalidContinueUriErrorCategory {
+  const _$FirebaseInvalidContinueUriErrorCategoryImpl();
+
+  @override
+  String toString() {
+    return 'FirebaseErrorCategory.invalidContinueUri()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FirebaseInvalidContinueUriErrorCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() base,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() invalidEmail,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+  }) {
+    return invalidContinueUri();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? base,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+  }) {
+    return invalidContinueUri?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? base,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    required TResult orElse(),
+  }) {
+    if (invalidContinueUri != null) {
+      return invalidContinueUri();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FirebaseBaseErrorCategory value) base,
+    required TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)
+        emailAlreadyInUse,
+    required TResult Function(_FirebaseInvalidEmailErrorCategory value)
+        invalidEmail,
+    required TResult Function(_FirebaseOperationNotAllowedErrorCategory value)
+        operationNotAllowed,
+    required TResult Function(_FirebaseWeakPasswordErrorCategory value)
+        weakPassword,
+    required TResult Function(_FirebaseTooManyRequestsErrorCategory value)
+        tooManyRequests,
+    required TResult Function(_FirebaseUserTokenExpiredErrorCategory value)
+        userTokenExpired,
+    required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
+        networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
+  }) {
+    return invalidContinueUri(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FirebaseBaseErrorCategory value)? base,
+    TResult? Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult? Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult? Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult? Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult? Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult? Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
+  }) {
+    return invalidContinueUri?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FirebaseBaseErrorCategory value)? base,
+    TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
+    required TResult orElse(),
+  }) {
+    if (invalidContinueUri != null) {
+      return invalidContinueUri(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FirebaseInvalidContinueUriErrorCategory
+    implements FirebaseErrorCategory {
+  const factory _FirebaseInvalidContinueUriErrorCategory() =
+      _$FirebaseInvalidContinueUriErrorCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$FirebaseMissingIOSByndleIdErrorCategoryImplCopyWith<$Res> {
+  factory _$$FirebaseMissingIOSByndleIdErrorCategoryImplCopyWith(
+          _$FirebaseMissingIOSByndleIdErrorCategoryImpl value,
+          $Res Function(_$FirebaseMissingIOSByndleIdErrorCategoryImpl) then) =
+      __$$FirebaseMissingIOSByndleIdErrorCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FirebaseMissingIOSByndleIdErrorCategoryImplCopyWithImpl<$Res>
+    extends _$FirebaseErrorCategoryCopyWithImpl<$Res,
+        _$FirebaseMissingIOSByndleIdErrorCategoryImpl>
+    implements _$$FirebaseMissingIOSByndleIdErrorCategoryImplCopyWith<$Res> {
+  __$$FirebaseMissingIOSByndleIdErrorCategoryImplCopyWithImpl(
+      _$FirebaseMissingIOSByndleIdErrorCategoryImpl _value,
+      $Res Function(_$FirebaseMissingIOSByndleIdErrorCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FirebaseErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FirebaseMissingIOSByndleIdErrorCategoryImpl
+    implements _FirebaseMissingIOSByndleIdErrorCategory {
+  const _$FirebaseMissingIOSByndleIdErrorCategoryImpl();
+
+  @override
+  String toString() {
+    return 'FirebaseErrorCategory.missingIOSBundleId()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FirebaseMissingIOSByndleIdErrorCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() base,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() invalidEmail,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+  }) {
+    return missingIOSBundleId();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? base,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+  }) {
+    return missingIOSBundleId?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? base,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    required TResult orElse(),
+  }) {
+    if (missingIOSBundleId != null) {
+      return missingIOSBundleId();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FirebaseBaseErrorCategory value) base,
+    required TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)
+        emailAlreadyInUse,
+    required TResult Function(_FirebaseInvalidEmailErrorCategory value)
+        invalidEmail,
+    required TResult Function(_FirebaseOperationNotAllowedErrorCategory value)
+        operationNotAllowed,
+    required TResult Function(_FirebaseWeakPasswordErrorCategory value)
+        weakPassword,
+    required TResult Function(_FirebaseTooManyRequestsErrorCategory value)
+        tooManyRequests,
+    required TResult Function(_FirebaseUserTokenExpiredErrorCategory value)
+        userTokenExpired,
+    required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
+        networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
+  }) {
+    return missingIOSBundleId(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FirebaseBaseErrorCategory value)? base,
+    TResult? Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult? Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult? Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult? Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult? Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult? Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
+  }) {
+    return missingIOSBundleId?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FirebaseBaseErrorCategory value)? base,
+    TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
+    required TResult orElse(),
+  }) {
+    if (missingIOSBundleId != null) {
+      return missingIOSBundleId(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FirebaseMissingIOSByndleIdErrorCategory
+    implements FirebaseErrorCategory {
+  const factory _FirebaseMissingIOSByndleIdErrorCategory() =
+      _$FirebaseMissingIOSByndleIdErrorCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$FirebaseMissionContinueUriErrorCategoryImplCopyWith<$Res> {
+  factory _$$FirebaseMissionContinueUriErrorCategoryImplCopyWith(
+          _$FirebaseMissionContinueUriErrorCategoryImpl value,
+          $Res Function(_$FirebaseMissionContinueUriErrorCategoryImpl) then) =
+      __$$FirebaseMissionContinueUriErrorCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FirebaseMissionContinueUriErrorCategoryImplCopyWithImpl<$Res>
+    extends _$FirebaseErrorCategoryCopyWithImpl<$Res,
+        _$FirebaseMissionContinueUriErrorCategoryImpl>
+    implements _$$FirebaseMissionContinueUriErrorCategoryImplCopyWith<$Res> {
+  __$$FirebaseMissionContinueUriErrorCategoryImplCopyWithImpl(
+      _$FirebaseMissionContinueUriErrorCategoryImpl _value,
+      $Res Function(_$FirebaseMissionContinueUriErrorCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FirebaseErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FirebaseMissionContinueUriErrorCategoryImpl
+    implements _FirebaseMissionContinueUriErrorCategory {
+  const _$FirebaseMissionContinueUriErrorCategoryImpl();
+
+  @override
+  String toString() {
+    return 'FirebaseErrorCategory.missingContinueUri()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FirebaseMissionContinueUriErrorCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() base,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() invalidEmail,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+  }) {
+    return missingContinueUri();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? base,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+  }) {
+    return missingContinueUri?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? base,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    required TResult orElse(),
+  }) {
+    if (missingContinueUri != null) {
+      return missingContinueUri();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FirebaseBaseErrorCategory value) base,
+    required TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)
+        emailAlreadyInUse,
+    required TResult Function(_FirebaseInvalidEmailErrorCategory value)
+        invalidEmail,
+    required TResult Function(_FirebaseOperationNotAllowedErrorCategory value)
+        operationNotAllowed,
+    required TResult Function(_FirebaseWeakPasswordErrorCategory value)
+        weakPassword,
+    required TResult Function(_FirebaseTooManyRequestsErrorCategory value)
+        tooManyRequests,
+    required TResult Function(_FirebaseUserTokenExpiredErrorCategory value)
+        userTokenExpired,
+    required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
+        networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
+  }) {
+    return missingContinueUri(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FirebaseBaseErrorCategory value)? base,
+    TResult? Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult? Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult? Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult? Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult? Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult? Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
+  }) {
+    return missingContinueUri?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FirebaseBaseErrorCategory value)? base,
+    TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
+    required TResult orElse(),
+  }) {
+    if (missingContinueUri != null) {
+      return missingContinueUri(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FirebaseMissionContinueUriErrorCategory
+    implements FirebaseErrorCategory {
+  const factory _FirebaseMissionContinueUriErrorCategory() =
+      _$FirebaseMissionContinueUriErrorCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$FirebaseMissionAndroidPkgNameErrorCategoryImplCopyWith<$Res> {
+  factory _$$FirebaseMissionAndroidPkgNameErrorCategoryImplCopyWith(
+          _$FirebaseMissionAndroidPkgNameErrorCategoryImpl value,
+          $Res Function(_$FirebaseMissionAndroidPkgNameErrorCategoryImpl)
+              then) =
+      __$$FirebaseMissionAndroidPkgNameErrorCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FirebaseMissionAndroidPkgNameErrorCategoryImplCopyWithImpl<$Res>
+    extends _$FirebaseErrorCategoryCopyWithImpl<$Res,
+        _$FirebaseMissionAndroidPkgNameErrorCategoryImpl>
+    implements _$$FirebaseMissionAndroidPkgNameErrorCategoryImplCopyWith<$Res> {
+  __$$FirebaseMissionAndroidPkgNameErrorCategoryImplCopyWithImpl(
+      _$FirebaseMissionAndroidPkgNameErrorCategoryImpl _value,
+      $Res Function(_$FirebaseMissionAndroidPkgNameErrorCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FirebaseErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FirebaseMissionAndroidPkgNameErrorCategoryImpl
+    implements _FirebaseMissionAndroidPkgNameErrorCategory {
+  const _$FirebaseMissionAndroidPkgNameErrorCategoryImpl();
+
+  @override
+  String toString() {
+    return 'FirebaseErrorCategory.missingAndroidPkgName()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FirebaseMissionAndroidPkgNameErrorCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() base,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() invalidEmail,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+  }) {
+    return missingAndroidPkgName();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? base,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+  }) {
+    return missingAndroidPkgName?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? base,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? invalidEmail,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    required TResult orElse(),
+  }) {
+    if (missingAndroidPkgName != null) {
+      return missingAndroidPkgName();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FirebaseBaseErrorCategory value) base,
+    required TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)
+        emailAlreadyInUse,
+    required TResult Function(_FirebaseInvalidEmailErrorCategory value)
+        invalidEmail,
+    required TResult Function(_FirebaseOperationNotAllowedErrorCategory value)
+        operationNotAllowed,
+    required TResult Function(_FirebaseWeakPasswordErrorCategory value)
+        weakPassword,
+    required TResult Function(_FirebaseTooManyRequestsErrorCategory value)
+        tooManyRequests,
+    required TResult Function(_FirebaseUserTokenExpiredErrorCategory value)
+        userTokenExpired,
+    required TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)
+        networkRequestFailed,
+    required TResult Function(_FirebaseUserDisabledErrorCategory value)
+        userDisabled,
+    required TResult Function(_FirebaseUserNotFoundErrorCategory value)
+        userNotFound,
+    required TResult Function(_FirebaseWrongPasswordErrorCategory value)
+        wrongPassword,
+    required TResult Function(_FirebaseInvalidCredentionErrorCategory value)
+        invalidCredential,
+    required TResult Function(
+            _FirebaseUnauthorizedContinueUriErrorCategory value)
+        unauthorizedContinueUri,
+    required TResult Function(_FirebaseInvalidContinueUriErrorCategory value)
+        invalidContinueUri,
+    required TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)
+        missingIOSBundleId,
+    required TResult Function(_FirebaseMissionContinueUriErrorCategory value)
+        missingContinueUri,
+    required TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)
+        missingAndroidPkgName,
+  }) {
+    return missingAndroidPkgName(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FirebaseBaseErrorCategory value)? base,
+    TResult? Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult? Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult? Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult? Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult? Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult? Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult? Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult? Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult? Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult? Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult? Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    TResult? Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult? Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult? Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult? Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult? Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
+  }) {
+    return missingAndroidPkgName?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FirebaseBaseErrorCategory value)? base,
+    TResult Function(_FirebaseEmailAlreadyInUseErrorCategory value)?
+        emailAlreadyInUse,
+    TResult Function(_FirebaseInvalidEmailErrorCategory value)? invalidEmail,
+    TResult Function(_FirebaseOperationNotAllowedErrorCategory value)?
+        operationNotAllowed,
+    TResult Function(_FirebaseWeakPasswordErrorCategory value)? weakPassword,
+    TResult Function(_FirebaseTooManyRequestsErrorCategory value)?
+        tooManyRequests,
+    TResult Function(_FirebaseUserTokenExpiredErrorCategory value)?
+        userTokenExpired,
+    TResult Function(_FirebaseNetworkRequestsFailedErrorCategory value)?
+        networkRequestFailed,
+    TResult Function(_FirebaseUserDisabledErrorCategory value)? userDisabled,
+    TResult Function(_FirebaseUserNotFoundErrorCategory value)? userNotFound,
+    TResult Function(_FirebaseWrongPasswordErrorCategory value)? wrongPassword,
+    TResult Function(_FirebaseInvalidCredentionErrorCategory value)?
+        invalidCredential,
+    TResult Function(_FirebaseUnauthorizedContinueUriErrorCategory value)?
+        unauthorizedContinueUri,
+    TResult Function(_FirebaseInvalidContinueUriErrorCategory value)?
+        invalidContinueUri,
+    TResult Function(_FirebaseMissingIOSByndleIdErrorCategory value)?
+        missingIOSBundleId,
+    TResult Function(_FirebaseMissionContinueUriErrorCategory value)?
+        missingContinueUri,
+    TResult Function(_FirebaseMissionAndroidPkgNameErrorCategory value)?
+        missingAndroidPkgName,
+    required TResult orElse(),
+  }) {
+    if (missingAndroidPkgName != null) {
+      return missingAndroidPkgName(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FirebaseMissionAndroidPkgNameErrorCategory
+    implements FirebaseErrorCategory {
+  const factory _FirebaseMissionAndroidPkgNameErrorCategory() =
+      _$FirebaseMissionAndroidPkgNameErrorCategoryImpl;
 }
 
 /// @nodoc

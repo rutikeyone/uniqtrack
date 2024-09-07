@@ -15,33 +15,20 @@ class _LoginPasswordTextFieldWidget extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Observer(builder: (context) {
-            return AppTextField(
-              hintText: S.of(context).enterYourPassword,
-              style: context.textTheme.bodyLarge,
-              onChanged: store.updatePassword,
-              errorText: ValidationToolkit.validatePassword(
-                  store.passwordState, context),
-              suffixIcon: UnconstrainedBox(
-                child: SvgPicture.asset(
-                  AppAssets.icons.password,
-                  width: AppDiments.dm20,
-                  height: AppDiments.dm20,
-                  fit: BoxFit.cover,
-                  colorFilter: ColorFilter.mode(
-                    context.colorScheme.onPrimary,
-                    BlendMode.srcIn,
-                  ),
-                ),
-              ),
-              obscureText: true,
-            );
-          }),
+          Observer(
+            builder: (context) {
+              return AppObscureTextField(
+                hintText: S.of(context).enterYourPassword,
+                style: context.textTheme.bodyLarge,
+                onChanged: store.updatePassword,
+                errorText: ValidationToolkit.validatePassword(
+                    store.passwordState, context),
+              );
+            },
+          ),
           InkWell(
             borderRadius: BorderRadius.circular(AppDiments.dm4),
-            onTap: ref
-                .read(loginNavCallbackStoreProvider)
-                .navigateToForgotPassword,
+            onTap: store.navigateToForgotPassword,
             child: Ink(
               padding: EdgeInsets.all(AppDiments.dm4),
               child: Text(

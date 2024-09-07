@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:uniqtrack/app/navigation/router/router.dart';
 import 'package:uniqtrack/core/common/activity.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_actions.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/context_extension.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
-import 'package:uniqtrack/core/common_impl/common_ui_delegate_impl.dart';
+import 'package:uniqtrack/core/common_impl/common_ui_delegate_notifier.dart';
 import 'package:uniqtrack/core/presentation/widgets/cupertino_dialog.dart';
-import 'package:uniqtrack/features/navigation/router/router.dart';
 
 class CommonUIContainer extends ConsumerStatefulWidget {
   final Widget child;
@@ -34,15 +34,25 @@ class _CommonUIWrapperState extends ConsumerState<CommonUIContainer> {
   }) {
     final value = next?.get();
     if (value == null) return;
-    value.when(cupertinoDialog: (header, body, close) {
-      _showCupertinoDialog(header, body, close, navigatorKey: navigatorKey);
-    });
+
+    value.when(
+      cupertinoDialog: (header, body, closeCallback, close) {
+        _showCupertinoDialog(
+          header: header,
+          body: body,
+          closeCallback: closeCallback,
+          close: close,
+          navigatorKey: navigatorKey,
+        );
+      },
+    );
   }
 
-  void _showCupertinoDialog(
-    AppStrings header,
-    AppStrings body,
-    AppStrings close, {
+  void _showCupertinoDialog({
+    required AppStrings header,
+    required AppStrings body,
+    required VoidCallback? closeCallback,
+    required AppStrings close,
     required GlobalKey<NavigatorState> navigatorKey,
   }) {
     final navigatorContext = navigatorKey.currentState?.context;
@@ -59,6 +69,7 @@ class _CommonUIWrapperState extends ConsumerState<CommonUIContainer> {
             headerText: headerText,
             bodyText: bodyText,
             close: closeText,
+            closeCallback: closeCallback,
             closeDialog: navigatorContext.pop,
           );
         }).whenComplete(() {
@@ -68,10 +79,10 @@ class _CommonUIWrapperState extends ConsumerState<CommonUIContainer> {
 
   @override
   Widget build(BuildContext context) {
-    final navigatorKey = ref.watch(rootNavigatorProvider);
+    final navigatorKey = ref.watch(rootNavigatorKeyProvider);
 
     ref.listen<Activity<CommonUIActions>?>(
-      commonUIDelegateProvider,
+      commonUIDelegateNotifierProvider,
       (prev, next) {
         _handleCommonUIActions(prev, next, navigatorKey: navigatorKey);
       },

@@ -18,23 +18,26 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$CommonUIActions {
   AppStrings get header => throw _privateConstructorUsedError;
   AppStrings get body => throw _privateConstructorUsedError;
+  VoidCallback? get closeCallback => throw _privateConstructorUsedError;
   AppStrings get close => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            AppStrings header, AppStrings body, AppStrings close)
+    required TResult Function(AppStrings header, AppStrings body,
+            VoidCallback? closeCallback, AppStrings close)
         cupertinoDialog,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(AppStrings header, AppStrings body, AppStrings close)?
+    TResult? Function(AppStrings header, AppStrings body,
+            VoidCallback? closeCallback, AppStrings close)?
         cupertinoDialog,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(AppStrings header, AppStrings body, AppStrings close)?
+    TResult Function(AppStrings header, AppStrings body,
+            VoidCallback? closeCallback, AppStrings close)?
         cupertinoDialog,
     required TResult orElse(),
   }) =>
@@ -70,7 +73,11 @@ abstract class $CommonUIActionsCopyWith<$Res> {
           CommonUIActions value, $Res Function(CommonUIActions) then) =
       _$CommonUIActionsCopyWithImpl<$Res, CommonUIActions>;
   @useResult
-  $Res call({AppStrings header, AppStrings body, AppStrings close});
+  $Res call(
+      {AppStrings header,
+      AppStrings body,
+      VoidCallback? closeCallback,
+      AppStrings close});
 
   $AppStringsCopyWith<$Res> get header;
   $AppStringsCopyWith<$Res> get body;
@@ -94,6 +101,7 @@ class _$CommonUIActionsCopyWithImpl<$Res, $Val extends CommonUIActions>
   $Res call({
     Object? header = null,
     Object? body = null,
+    Object? closeCallback = freezed,
     Object? close = null,
   }) {
     return _then(_value.copyWith(
@@ -105,6 +113,10 @@ class _$CommonUIActionsCopyWithImpl<$Res, $Val extends CommonUIActions>
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as AppStrings,
+      closeCallback: freezed == closeCallback
+          ? _value.closeCallback
+          : closeCallback // ignore: cast_nullable_to_non_nullable
+              as VoidCallback?,
       close: null == close
           ? _value.close
           : close // ignore: cast_nullable_to_non_nullable
@@ -152,7 +164,11 @@ abstract class _$$CommonCupertinoDialogActionImplCopyWith<$Res>
       __$$CommonCupertinoDialogActionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({AppStrings header, AppStrings body, AppStrings close});
+  $Res call(
+      {AppStrings header,
+      AppStrings body,
+      VoidCallback? closeCallback,
+      AppStrings close});
 
   @override
   $AppStringsCopyWith<$Res> get header;
@@ -179,6 +195,7 @@ class __$$CommonCupertinoDialogActionImplCopyWithImpl<$Res>
   $Res call({
     Object? header = null,
     Object? body = null,
+    Object? closeCallback = freezed,
     Object? close = null,
   }) {
     return _then(_$CommonCupertinoDialogActionImpl(
@@ -190,6 +207,10 @@ class __$$CommonCupertinoDialogActionImplCopyWithImpl<$Res>
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as AppStrings,
+      closeCallback: freezed == closeCallback
+          ? _value.closeCallback
+          : closeCallback // ignore: cast_nullable_to_non_nullable
+              as VoidCallback?,
       close: null == close
           ? _value.close
           : close // ignore: cast_nullable_to_non_nullable
@@ -200,10 +221,13 @@ class __$$CommonCupertinoDialogActionImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CommonCupertinoDialogActionImpl implements CommonCupertinoDialogAction {
+class _$CommonCupertinoDialogActionImpl
+    with DiagnosticableTreeMixin
+    implements CommonCupertinoDialogAction {
   const _$CommonCupertinoDialogActionImpl(
       {required this.header,
       required this.body,
+      this.closeCallback = null,
       this.close = const AppStrings.okay()});
 
   @override
@@ -212,11 +236,25 @@ class _$CommonCupertinoDialogActionImpl implements CommonCupertinoDialogAction {
   final AppStrings body;
   @override
   @JsonKey()
+  final VoidCallback? closeCallback;
+  @override
+  @JsonKey()
   final AppStrings close;
 
   @override
-  String toString() {
-    return 'CommonUIActions.cupertinoDialog(header: $header, body: $body, close: $close)';
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'CommonUIActions.cupertinoDialog(header: $header, body: $body, closeCallback: $closeCallback, close: $close)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'CommonUIActions.cupertinoDialog'))
+      ..add(DiagnosticsProperty('header', header))
+      ..add(DiagnosticsProperty('body', body))
+      ..add(DiagnosticsProperty('closeCallback', closeCallback))
+      ..add(DiagnosticsProperty('close', close));
   }
 
   @override
@@ -226,11 +264,14 @@ class _$CommonCupertinoDialogActionImpl implements CommonCupertinoDialogAction {
             other is _$CommonCupertinoDialogActionImpl &&
             (identical(other.header, header) || other.header == header) &&
             (identical(other.body, body) || other.body == body) &&
+            (identical(other.closeCallback, closeCallback) ||
+                other.closeCallback == closeCallback) &&
             (identical(other.close, close) || other.close == close));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, header, body, close);
+  int get hashCode =>
+      Object.hash(runtimeType, header, body, closeCallback, close);
 
   /// Create a copy of CommonUIActions
   /// with the given fields replaced by the non-null parameter values.
@@ -244,31 +285,33 @@ class _$CommonCupertinoDialogActionImpl implements CommonCupertinoDialogAction {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            AppStrings header, AppStrings body, AppStrings close)
+    required TResult Function(AppStrings header, AppStrings body,
+            VoidCallback? closeCallback, AppStrings close)
         cupertinoDialog,
   }) {
-    return cupertinoDialog(header, body, close);
+    return cupertinoDialog(header, body, closeCallback, close);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(AppStrings header, AppStrings body, AppStrings close)?
+    TResult? Function(AppStrings header, AppStrings body,
+            VoidCallback? closeCallback, AppStrings close)?
         cupertinoDialog,
   }) {
-    return cupertinoDialog?.call(header, body, close);
+    return cupertinoDialog?.call(header, body, closeCallback, close);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(AppStrings header, AppStrings body, AppStrings close)?
+    TResult Function(AppStrings header, AppStrings body,
+            VoidCallback? closeCallback, AppStrings close)?
         cupertinoDialog,
     required TResult orElse(),
   }) {
     if (cupertinoDialog != null) {
-      return cupertinoDialog(header, body, close);
+      return cupertinoDialog(header, body, closeCallback, close);
     }
     return orElse();
   }
@@ -307,12 +350,15 @@ abstract class CommonCupertinoDialogAction implements CommonUIActions {
   const factory CommonCupertinoDialogAction(
       {required final AppStrings header,
       required final AppStrings body,
+      final VoidCallback? closeCallback,
       final AppStrings close}) = _$CommonCupertinoDialogActionImpl;
 
   @override
   AppStrings get header;
   @override
   AppStrings get body;
+  @override
+  VoidCallback? get closeCallback;
   @override
   AppStrings get close;
 

@@ -12,4 +12,10 @@ class FirebaseAuthConstants {
   static const userNotFound = "user-not-found";
   static const wrongPassword = "wrong-password";
   static const invalidCredential = "invalid-credential";
+
+  static const unauthorizedContinueUri = "unauthorized-continue-uri";
+  static const invalidContinueUri = "invalid-continue-uri";
+  static const missingIOSBundleId = "missing-ios-bundle-id";
+  static const missingContinueUri = "missing-continue-uri";
+  static const missingAndroidPkgName = "missing-android-pkg-name";
 }

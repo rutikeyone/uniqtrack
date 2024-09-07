@@ -183,21 +183,21 @@ mixin _$AuthStatus {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() pending,
-    required TResult Function() authenticated,
+    required TResult Function(User user) authenticated,
     required TResult Function() notAuth,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? pending,
-    TResult? Function()? authenticated,
+    TResult? Function(User user)? authenticated,
     TResult? Function()? notAuth,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? pending,
-    TResult Function()? authenticated,
+    TResult Function(User user)? authenticated,
     TResult Function()? notAuth,
     required TResult orElse(),
   }) =>
@@ -289,7 +289,7 @@ class _$AuthPendingStatusImpl implements _AuthPendingStatus {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() pending,
-    required TResult Function() authenticated,
+    required TResult Function(User user) authenticated,
     required TResult Function() notAuth,
   }) {
     return pending();
@@ -299,7 +299,7 @@ class _$AuthPendingStatusImpl implements _AuthPendingStatus {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? pending,
-    TResult? Function()? authenticated,
+    TResult? Function(User user)? authenticated,
     TResult? Function()? notAuth,
   }) {
     return pending?.call();
@@ -309,7 +309,7 @@ class _$AuthPendingStatusImpl implements _AuthPendingStatus {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? pending,
-    TResult Function()? authenticated,
+    TResult Function(User user)? authenticated,
     TResult Function()? notAuth,
     required TResult orElse(),
   }) {
@@ -364,6 +364,10 @@ abstract class _$$AuthAuthenticatedStatusImplCopyWith<$Res> {
           _$AuthAuthenticatedStatusImpl value,
           $Res Function(_$AuthAuthenticatedStatusImpl) then) =
       __$$AuthAuthenticatedStatusImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({User user});
+
+  $UserCopyWith<$Res> get user;
 }
 
 /// @nodoc
@@ -377,58 +381,93 @@ class __$$AuthAuthenticatedStatusImplCopyWithImpl<$Res>
 
   /// Create a copy of AuthStatus
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? user = null,
+  }) {
+    return _then(_$AuthAuthenticatedStatusImpl(
+      user: null == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User,
+    ));
+  }
+
+  /// Create a copy of AuthStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UserCopyWith<$Res> get user {
+    return $UserCopyWith<$Res>(_value.user, (value) {
+      return _then(_value.copyWith(user: value));
+    });
+  }
 }
 
 /// @nodoc
 
 class _$AuthAuthenticatedStatusImpl implements _AuthAuthenticatedStatus {
-  const _$AuthAuthenticatedStatusImpl();
+  const _$AuthAuthenticatedStatusImpl({required this.user});
+
+  @override
+  final User user;
 
   @override
   String toString() {
-    return 'AuthStatus.authenticated()';
+    return 'AuthStatus.authenticated(user: $user)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AuthAuthenticatedStatusImpl);
+            other is _$AuthAuthenticatedStatusImpl &&
+            (identical(other.user, user) || other.user == user));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, user);
+
+  /// Create a copy of AuthStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AuthAuthenticatedStatusImplCopyWith<_$AuthAuthenticatedStatusImpl>
+      get copyWith => __$$AuthAuthenticatedStatusImplCopyWithImpl<
+          _$AuthAuthenticatedStatusImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() pending,
-    required TResult Function() authenticated,
+    required TResult Function(User user) authenticated,
     required TResult Function() notAuth,
   }) {
-    return authenticated();
+    return authenticated(user);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? pending,
-    TResult? Function()? authenticated,
+    TResult? Function(User user)? authenticated,
     TResult? Function()? notAuth,
   }) {
-    return authenticated?.call();
+    return authenticated?.call(user);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? pending,
-    TResult Function()? authenticated,
+    TResult Function(User user)? authenticated,
     TResult Function()? notAuth,
     required TResult orElse(),
   }) {
     if (authenticated != null) {
-      return authenticated();
+      return authenticated(user);
     }
     return orElse();
   }
@@ -469,7 +508,16 @@ class _$AuthAuthenticatedStatusImpl implements _AuthAuthenticatedStatus {
 }
 
 abstract class _AuthAuthenticatedStatus implements AuthStatus {
-  const factory _AuthAuthenticatedStatus() = _$AuthAuthenticatedStatusImpl;
+  const factory _AuthAuthenticatedStatus({required final User user}) =
+      _$AuthAuthenticatedStatusImpl;
+
+  User get user;
+
+  /// Create a copy of AuthStatus
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AuthAuthenticatedStatusImplCopyWith<_$AuthAuthenticatedStatusImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -514,7 +562,7 @@ class _$AuthNotAuthStatusImpl implements _AuthNotAuthStatus {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() pending,
-    required TResult Function() authenticated,
+    required TResult Function(User user) authenticated,
     required TResult Function() notAuth,
   }) {
     return notAuth();
@@ -524,7 +572,7 @@ class _$AuthNotAuthStatusImpl implements _AuthNotAuthStatus {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? pending,
-    TResult? Function()? authenticated,
+    TResult? Function(User user)? authenticated,
     TResult? Function()? notAuth,
   }) {
     return notAuth?.call();
@@ -534,7 +582,7 @@ class _$AuthNotAuthStatusImpl implements _AuthNotAuthStatus {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? pending,
-    TResult Function()? authenticated,
+    TResult Function(User user)? authenticated,
     TResult Function()? notAuth,
     required TResult orElse(),
   }) {

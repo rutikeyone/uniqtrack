@@ -37,4 +37,19 @@ class FirebaseErrorCategory with _$FirebaseErrorCategory {
 
   const factory FirebaseErrorCategory.invalidCredential() =
       _FirebaseInvalidCredentionErrorCategory;
+
+  const factory FirebaseErrorCategory.unauthorizedContinueUri() =
+      _FirebaseUnauthorizedContinueUriErrorCategory;
+
+  const factory FirebaseErrorCategory.invalidContinueUri() =
+      _FirebaseInvalidContinueUriErrorCategory;
+
+  const factory FirebaseErrorCategory.missingIOSBundleId() =
+      _FirebaseMissingIOSByndleIdErrorCategory;
+
+  const factory FirebaseErrorCategory.missingContinueUri() =
+      _FirebaseMissionContinueUriErrorCategory;
+
+  const factory FirebaseErrorCategory.missingAndroidPkgName() =
+      _FirebaseMissionAndroidPkgNameErrorCategory;
 }

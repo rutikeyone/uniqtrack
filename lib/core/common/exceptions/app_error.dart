@@ -47,6 +47,12 @@ class AppError with _$AppError {
           userNotFound: () => const AppStrings.userNotFound(),
           wrongPassword: () => const AppStrings.wrongPassword(),
           invalidCredential: () => const AppStrings.invalidCredential(),
+          unauthorizedContinueUri: () =>
+              const AppStrings.unauthorizedContinueUri(),
+          invalidContinueUri: () => const AppStrings.invalidContinueUri(),
+          missingIOSBundleId: () => const AppStrings.missingIOSBundleId(),
+          missingContinueUri: () => const AppStrings.missingContinueUri(),
+          missingAndroidPkgName: () => const AppStrings.missingAndroidPkgName(),
         );
       },
       network: (category) {

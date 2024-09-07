@@ -6,6 +6,7 @@ class CupertinoDialog extends StatelessWidget {
   final String headerText;
   final String bodyText;
   final String close;
+  final VoidCallback? closeCallback;
   final VoidCallback closeDialog;
 
   const CupertinoDialog({
@@ -13,6 +14,7 @@ class CupertinoDialog extends StatelessWidget {
     required this.headerText,
     required this.bodyText,
     required this.close,
+    required this.closeCallback,
     required this.closeDialog,
   });
 
@@ -38,7 +40,10 @@ class CupertinoDialog extends StatelessWidget {
       ),
       actions: [
         CupertinoDialogAction(
-          onPressed: closeDialog,
+          onPressed: () {
+            closeCallback?.call();
+            closeDialog.call();
+          },
           child: Text(
             close,
             textAlign: TextAlign.center,
