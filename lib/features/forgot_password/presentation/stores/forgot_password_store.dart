@@ -23,7 +23,9 @@ abstract class _ForgotPasswordStore with Store {
   final String? _emailArgument;
 
   @observable
-  late Email emailState = _emailArgument != null && _emailArgument.isNotEmpty ? Email.dirty(_emailArgument) : Email.pure();
+  late Email emailState = _emailArgument != null && _emailArgument.isNotEmpty
+      ? Email.dirty(_emailArgument)
+      : Email.pure();
 
   @observable
   ForgotStatusState forgotStatusState = ForgotStatusState.pure();
@@ -75,6 +77,8 @@ abstract class _ForgotPasswordStore with Store {
     actions = const ForgotActions.hideFocus();
     forgotStatusState = const ForgotStatusState.pending();
 
+    _commonUIDelegate.showLoader();
+
     final forgotPasswordResult =
         await _forgotPasswordRepository.sendPasswordResetEmail(email: email);
 
@@ -85,6 +89,7 @@ abstract class _ForgotPasswordStore with Store {
   }
 
   void _handleForgotPasswordFailureResult(AppError l) {
+    _commonUIDelegate.hideLoader();
     forgotStatusState = ForgotStatusState.failure();
     if (l.isCancelError) return;
 
@@ -98,22 +103,24 @@ abstract class _ForgotPasswordStore with Store {
   }
 
   void _handleForgotPasswordSuccessResult(_) {
+    _commonUIDelegate.hideLoader();
     forgotStatusState = ForgotStatusState.success();
 
     final duration = const Duration(milliseconds: 200);
+
     Future.delayed(
       duration,
       () {
         final header = AppStrings.notification();
-        final body = AppStrings.thePasswordHasBeenSentToTheSpecifiedEmailAddress();
+        final body =
+            AppStrings.thePasswordHasBeenSentToTheSpecifiedEmailAddress();
 
         _commonUIDelegate.cupertinoDialog(
-          header: header,
-          body: body,
-          closeCallback: () {
-            actions = ForgotActions.navigateBack();
-          }
-        );
+            header: header,
+            body: body,
+            closeCallback: () {
+              actions = ForgotActions.navigateBack();
+            });
       },
     );
   }

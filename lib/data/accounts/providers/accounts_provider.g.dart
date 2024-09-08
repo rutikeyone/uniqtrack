@@ -6,7 +6,7 @@ part of 'accounts_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$galleryDataSourceHash() => r'a6d9dd71036e371e8d518577ccc98031d6070526';
+String _$galleryDataSourceHash() => r'4e13366f9a7bc199b1a489dcb83a0ff006eb39ac';
 
 /// See also [galleryDataSource].
 @ProviderFor(galleryDataSource)
@@ -21,7 +21,7 @@ final galleryDataSourceProvider = AutoDisposeProvider<ImageDataSource>.internal(
 );
 
 typedef GalleryDataSourceRef = AutoDisposeProviderRef<ImageDataSource>;
-String _$cameraDataSourceHash() => r'155fba641d6804ea5a02047206c6f60ddfbec03a';
+String _$cameraDataSourceHash() => r'fff78be4af588c81f13a3143f4a726ed18f76ea2';
 
 /// See also [cameraDataSource].
 @ProviderFor(cameraDataSource)

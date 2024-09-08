@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "aContinueUrlMustBeProvidedInTheRequest":
             MessageLookupByLibrary.simpleMessage(
                 "A continue URL must be provided in the request"),
+        "allow": MessageLookupByLibrary.simpleMessage("Allow"),
         "anAndroidPackageNameMustBeProvidedIfTheAndroid":
             MessageLookupByLibrary.simpleMessage(
                 "An Android package name must be provided if the Android app is required to be installed"),
@@ -86,6 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "operation_not_allowed":
             MessageLookupByLibrary.simpleMessage("Operation not allowed"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "prohibit": MessageLookupByLibrary.simpleMessage("Prohibit"),
         "receiveTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
             "Receive timeout failure occurred"),
         "sendPassword": MessageLookupByLibrary.simpleMessage("Send password"),
@@ -108,6 +110,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "theUserHasBeenSuccessfullyRegistered":
             MessageLookupByLibrary.simpleMessage(
                 "The user has been successfully registered"),
+        "thereIsNoPermissionToPerformThisAction":
+            MessageLookupByLibrary.simpleMessage(
+                "There is no permission to perform this action."),
         "tooManyRequests":
             MessageLookupByLibrary.simpleMessage("Too many requests"),
         "userHasBeenDisabled":

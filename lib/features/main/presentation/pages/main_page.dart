@@ -81,14 +81,29 @@ class MainPage extends ConsumerWidget {
                     width: AppDiments.dm32,
                     height: AppDiments.dm32,
                     fit: BoxFit.cover,
+                    loadingBuilder: (context, child, event) {
+                      if (event == null) return child;
+                      return Container(
+                        width: AppDiments.dm32,
+                        height: AppDiments.dm32,
+                        color: context.colorScheme.secondary,
+                      );
+                    },
+                    errorBuilder: (context, child, event) {
+                      return Container(
+                        width: AppDiments.dm32,
+                        height: AppDiments.dm32,
+                        color: context.colorScheme.secondary,
+                      );
+                    },
                   ),
                 );
               },
               orElse: () {
                 return SvgPicture.asset(
                   AppAssets.icons.profile,
-                  width: AppDiments.dm24,
-                  height: AppDiments.dm24,
+                  width: AppDiments.dm32,
+                  height: AppDiments.dm32,
                   fit: BoxFit.cover,
                   colorFilter: secondItemColor != null
                       ? ColorFilter.mode(secondItemColor, BlendMode.srcIn)

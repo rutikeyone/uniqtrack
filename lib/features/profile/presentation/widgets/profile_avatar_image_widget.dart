@@ -31,6 +31,21 @@ class _ProfileAvatarImageWidget extends StatelessWidget {
                 width: AppDiments.dm128,
                 height: AppDiments.dm128,
                 fit: BoxFit.cover,
+                loadingBuilder: (context, child, event) {
+                  if (event == null) return child;
+                  return Container(
+                    width: AppDiments.dm128,
+                    height: AppDiments.dm128,
+                    color: context.colorScheme.secondary,
+                  );
+                },
+                errorBuilder: (context, child, event) {
+                  return Container(
+                    width: AppDiments.dm128,
+                    height: AppDiments.dm128,
+                    color: context.colorScheme.secondary,
+                  );
+                },
               ),
             ),
           ),

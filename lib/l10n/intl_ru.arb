@@ -51,5 +51,8 @@
   "profile": "Профиль",
   "signOut": "Выйти из аккаунта",
   "myTracks": "Мои треки",
-  "myFavouriteTracks": "Мои избранные треки"
+  "myFavouriteTracks": "Мои избранные треки",
+  "thereIsNoPermissionToPerformThisAction": "Нет разрешения для выполнения этого действия.",
+  "allow": "Разрешить",
+  "prohibit": "Запретить"
 }

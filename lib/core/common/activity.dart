@@ -10,4 +10,11 @@ class Activity<T> {
     _value = null;
     return tempValue;
   }
+
+  @override
+  bool operator ==(Object other) => false;
+
+  @override
+  int get hashCode => 0;
+
 }

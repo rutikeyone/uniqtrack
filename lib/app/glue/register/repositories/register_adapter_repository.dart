@@ -9,16 +9,18 @@ import 'package:uniqtrack/features/register/domain/entities/gender.dart';
 import 'package:uniqtrack/features/register/domain/repositorories/register_repository.dart';
 
 class RegisterAdapterRepository implements RegisterRepository {
-  final Future<Either<AppError, FileModel?>> Function() _chooseImageFromCamera;
-  final Future<Either<AppError, FileModel?>> Function() _chooseImageFromGallery;
+  final Future<PermissionResultWithAppError<FileModel?>> Function()
+      _chooseImageFromCamera;
+  final Future<PermissionResultWithAppError<FileModel?>> Function()
+      _chooseImageFromGallery;
   final Future<Either<AppError, void>> Function(RegisterParameters) _register;
   final FileMapper _fileMapper;
   final GenderMapper _genderMapper;
 
   const RegisterAdapterRepository({
-    required Future<Either<AppError, FileModel?>> Function()
+    required Future<PermissionResultWithAppError<FileModel?>> Function()
         chooseImageFromCamera,
-    required Future<Either<AppError, FileModel?>> Function()
+    required Future<PermissionResultWithAppError<FileModel?>> Function()
         chooseImageFromGallery,
     required Future<Either<AppError, void>> Function(RegisterParameters)
         register,
@@ -31,25 +33,37 @@ class RegisterAdapterRepository implements RegisterRepository {
         _genderMapper = genderMapper;
 
   @override
-  Future<Either<AppError, File?>> chooseImageFromCamera() async {
+  Future<PermissionResultWithAppError<File?>> chooseImageFromCamera() async {
     final chooseImageResult = await _chooseImageFromCamera.call();
     return chooseImageResult.fold(
       (error) => Left(error),
-      (fileModel) {
-        final file = fileModel != null ? _fileMapper.toFile(fileModel) : null;
-        return Right(file);
+      (result) {
+        return result.fold(
+          (error) => Left(error),
+          (fileModel) {
+            final file =
+                fileModel != null ? _fileMapper.toFile(fileModel) : null;
+            return Right(Right(file));
+          },
+        );
       },
     );
   }
 
   @override
-  Future<Either<AppError, File?>> chooseImageFromGallery() async {
+  Future<PermissionResultWithAppError<File?>> chooseImageFromGallery() async {
     final chooseImageResult = await _chooseImageFromGallery.call();
     return chooseImageResult.fold(
       (error) => Left(error),
-      (fileModel) {
-        final file = fileModel != null ? _fileMapper.toFile(fileModel) : null;
-        return Right(file);
+      (result) {
+        return result.fold(
+          (error) => Left(error),
+          (fileModel) {
+            final file =
+                fileModel != null ? _fileMapper.toFile(fileModel) : null;
+            return Right(Right(file));
+          },
+        );
       },
     );
   }

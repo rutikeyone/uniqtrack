@@ -51,5 +51,8 @@
   "profile": "Profile",
   "signOut": "Sign out",
   "myTracks": "My tracks",
-  "myFavouriteTracks": "My favourite tracks"
+  "myFavouriteTracks": "My favourite tracks",
+  "thereIsNoPermissionToPerformThisAction": "There is no permission to perform this action.",
+  "allow": "Allow",
+  "prohibit": "Prohibit"
 }

@@ -1,0 +1,3 @@
+NSCameraUsageDescription = "The application requests access to the device's camera. This access is required for the app's features that allow you to take photos and shoot videos.";
+NSPhotoLibraryUsageDescription = "The application requires access to your gallery to be able to view, edit and delete photos. Allow access to use these functions.";
+NSMicrophoneUsageDescription = "The application requires access to your device's microphone to record audio and make voice calls.";

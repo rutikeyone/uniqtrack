@@ -110,6 +110,7 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
     final json = user.toJson();
     final collection =
         _firebaseFireStore.collection(FirebaseAuthConstants.users);
+
     final doc = collection.doc(uid);
 
     doc.set(json);

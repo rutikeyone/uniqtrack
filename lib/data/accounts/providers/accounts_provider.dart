@@ -5,6 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:uniqtrack/core/common/error_handler/app_error_handler.dart';
 import 'package:uniqtrack/core/common/error_handler/impl/app_error_handler_impl.dart';
+import 'package:uniqtrack/core/common_impl/app_permission_handler_impl.dart';
 import 'package:uniqtrack/data/accounts/accounts_data_repository_impl.dart';
 import 'package:uniqtrack/data/accounts/data_sources/impl/camera_data_source.dart';
 import 'package:uniqtrack/data/accounts/data_sources/impl/gallery_data_source.dart';

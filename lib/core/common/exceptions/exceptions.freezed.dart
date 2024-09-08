@@ -20,6 +20,7 @@ mixin _$AppError {
   TResult when<TResult extends Object?>({
     required TResult Function() base,
     required TResult Function(FirebaseErrorCategory category) firebase,
+    required TResult Function(PermissionErrorCategory category) permission,
     required TResult Function(NetworkErrorCategory category) network,
   }) =>
       throw _privateConstructorUsedError;
@@ -27,6 +28,7 @@ mixin _$AppError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? base,
     TResult? Function(FirebaseErrorCategory category)? firebase,
+    TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
   }) =>
       throw _privateConstructorUsedError;
@@ -34,29 +36,33 @@ mixin _$AppError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? base,
     TResult Function(FirebaseErrorCategory category)? firebase,
+    TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_AppBaseError value) base,
-    required TResult Function(_AppFirebaseError value) firebase,
-    required TResult Function(_AppNetworkError value) network,
+    required TResult Function(AppBaseError value) base,
+    required TResult Function(AppFirebaseError value) firebase,
+    required TResult Function(AppPermissionError value) permission,
+    required TResult Function(AppNetworkError value) network,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_AppBaseError value)? base,
-    TResult? Function(_AppFirebaseError value)? firebase,
-    TResult? Function(_AppNetworkError value)? network,
+    TResult? Function(AppBaseError value)? base,
+    TResult? Function(AppFirebaseError value)? firebase,
+    TResult? Function(AppPermissionError value)? permission,
+    TResult? Function(AppNetworkError value)? network,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_AppBaseError value)? base,
-    TResult Function(_AppFirebaseError value)? firebase,
-    TResult Function(_AppNetworkError value)? network,
+    TResult Function(AppBaseError value)? base,
+    TResult Function(AppFirebaseError value)? firebase,
+    TResult Function(AppPermissionError value)? permission,
+    TResult Function(AppNetworkError value)? network,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -103,12 +109,18 @@ class __$$AppBaseErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppBaseErrorImpl extends _AppBaseError {
+class _$AppBaseErrorImpl extends AppBaseError with DiagnosticableTreeMixin {
   const _$AppBaseErrorImpl() : super._();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AppError.base()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'AppError.base'));
   }
 
   @override
@@ -125,6 +137,7 @@ class _$AppBaseErrorImpl extends _AppBaseError {
   TResult when<TResult extends Object?>({
     required TResult Function() base,
     required TResult Function(FirebaseErrorCategory category) firebase,
+    required TResult Function(PermissionErrorCategory category) permission,
     required TResult Function(NetworkErrorCategory category) network,
   }) {
     return base();
@@ -135,6 +148,7 @@ class _$AppBaseErrorImpl extends _AppBaseError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? base,
     TResult? Function(FirebaseErrorCategory category)? firebase,
+    TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
   }) {
     return base?.call();
@@ -145,6 +159,7 @@ class _$AppBaseErrorImpl extends _AppBaseError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? base,
     TResult Function(FirebaseErrorCategory category)? firebase,
+    TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
     required TResult orElse(),
   }) {
@@ -157,9 +172,10 @@ class _$AppBaseErrorImpl extends _AppBaseError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_AppBaseError value) base,
-    required TResult Function(_AppFirebaseError value) firebase,
-    required TResult Function(_AppNetworkError value) network,
+    required TResult Function(AppBaseError value) base,
+    required TResult Function(AppFirebaseError value) firebase,
+    required TResult Function(AppPermissionError value) permission,
+    required TResult Function(AppNetworkError value) network,
   }) {
     return base(this);
   }
@@ -167,9 +183,10 @@ class _$AppBaseErrorImpl extends _AppBaseError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_AppBaseError value)? base,
-    TResult? Function(_AppFirebaseError value)? firebase,
-    TResult? Function(_AppNetworkError value)? network,
+    TResult? Function(AppBaseError value)? base,
+    TResult? Function(AppFirebaseError value)? firebase,
+    TResult? Function(AppPermissionError value)? permission,
+    TResult? Function(AppNetworkError value)? network,
   }) {
     return base?.call(this);
   }
@@ -177,9 +194,10 @@ class _$AppBaseErrorImpl extends _AppBaseError {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_AppBaseError value)? base,
-    TResult Function(_AppFirebaseError value)? firebase,
-    TResult Function(_AppNetworkError value)? network,
+    TResult Function(AppBaseError value)? base,
+    TResult Function(AppFirebaseError value)? firebase,
+    TResult Function(AppPermissionError value)? permission,
+    TResult Function(AppNetworkError value)? network,
     required TResult orElse(),
   }) {
     if (base != null) {
@@ -189,9 +207,9 @@ class _$AppBaseErrorImpl extends _AppBaseError {
   }
 }
 
-abstract class _AppBaseError extends AppError {
-  const factory _AppBaseError() = _$AppBaseErrorImpl;
-  const _AppBaseError._() : super._();
+abstract class AppBaseError extends AppError {
+  const factory AppBaseError() = _$AppBaseErrorImpl;
+  const AppBaseError._() : super._();
 }
 
 /// @nodoc
@@ -241,15 +259,24 @@ class __$$AppFirebaseErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppFirebaseErrorImpl extends _AppFirebaseError {
+class _$AppFirebaseErrorImpl extends AppFirebaseError
+    with DiagnosticableTreeMixin {
   const _$AppFirebaseErrorImpl({required this.category}) : super._();
 
   @override
   final FirebaseErrorCategory category;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AppError.firebase(category: $category)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AppError.firebase'))
+      ..add(DiagnosticsProperty('category', category));
   }
 
   @override
@@ -278,6 +305,7 @@ class _$AppFirebaseErrorImpl extends _AppFirebaseError {
   TResult when<TResult extends Object?>({
     required TResult Function() base,
     required TResult Function(FirebaseErrorCategory category) firebase,
+    required TResult Function(PermissionErrorCategory category) permission,
     required TResult Function(NetworkErrorCategory category) network,
   }) {
     return firebase(category);
@@ -288,6 +316,7 @@ class _$AppFirebaseErrorImpl extends _AppFirebaseError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? base,
     TResult? Function(FirebaseErrorCategory category)? firebase,
+    TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
   }) {
     return firebase?.call(category);
@@ -298,6 +327,7 @@ class _$AppFirebaseErrorImpl extends _AppFirebaseError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? base,
     TResult Function(FirebaseErrorCategory category)? firebase,
+    TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
     required TResult orElse(),
   }) {
@@ -310,9 +340,10 @@ class _$AppFirebaseErrorImpl extends _AppFirebaseError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_AppBaseError value) base,
-    required TResult Function(_AppFirebaseError value) firebase,
-    required TResult Function(_AppNetworkError value) network,
+    required TResult Function(AppBaseError value) base,
+    required TResult Function(AppFirebaseError value) firebase,
+    required TResult Function(AppPermissionError value) permission,
+    required TResult Function(AppNetworkError value) network,
   }) {
     return firebase(this);
   }
@@ -320,9 +351,10 @@ class _$AppFirebaseErrorImpl extends _AppFirebaseError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_AppBaseError value)? base,
-    TResult? Function(_AppFirebaseError value)? firebase,
-    TResult? Function(_AppNetworkError value)? network,
+    TResult? Function(AppBaseError value)? base,
+    TResult? Function(AppFirebaseError value)? firebase,
+    TResult? Function(AppPermissionError value)? permission,
+    TResult? Function(AppNetworkError value)? network,
   }) {
     return firebase?.call(this);
   }
@@ -330,9 +362,10 @@ class _$AppFirebaseErrorImpl extends _AppFirebaseError {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_AppBaseError value)? base,
-    TResult Function(_AppFirebaseError value)? firebase,
-    TResult Function(_AppNetworkError value)? network,
+    TResult Function(AppBaseError value)? base,
+    TResult Function(AppFirebaseError value)? firebase,
+    TResult Function(AppPermissionError value)? permission,
+    TResult Function(AppNetworkError value)? network,
     required TResult orElse(),
   }) {
     if (firebase != null) {
@@ -342,10 +375,10 @@ class _$AppFirebaseErrorImpl extends _AppFirebaseError {
   }
 }
 
-abstract class _AppFirebaseError extends AppError {
-  const factory _AppFirebaseError(
+abstract class AppFirebaseError extends AppError {
+  const factory AppFirebaseError(
       {required final FirebaseErrorCategory category}) = _$AppFirebaseErrorImpl;
-  const _AppFirebaseError._() : super._();
+  const AppFirebaseError._() : super._();
 
   FirebaseErrorCategory get category;
 
@@ -353,6 +386,184 @@ abstract class _AppFirebaseError extends AppError {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppFirebaseErrorImplCopyWith<_$AppFirebaseErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AppPermissionErrorImplCopyWith<$Res> {
+  factory _$$AppPermissionErrorImplCopyWith(_$AppPermissionErrorImpl value,
+          $Res Function(_$AppPermissionErrorImpl) then) =
+      __$$AppPermissionErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({PermissionErrorCategory category});
+
+  $PermissionErrorCategoryCopyWith<$Res> get category;
+}
+
+/// @nodoc
+class __$$AppPermissionErrorImplCopyWithImpl<$Res>
+    extends _$AppErrorCopyWithImpl<$Res, _$AppPermissionErrorImpl>
+    implements _$$AppPermissionErrorImplCopyWith<$Res> {
+  __$$AppPermissionErrorImplCopyWithImpl(_$AppPermissionErrorImpl _value,
+      $Res Function(_$AppPermissionErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppError
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? category = null,
+  }) {
+    return _then(_$AppPermissionErrorImpl(
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as PermissionErrorCategory,
+    ));
+  }
+
+  /// Create a copy of AppError
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PermissionErrorCategoryCopyWith<$Res> get category {
+    return $PermissionErrorCategoryCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AppPermissionErrorImpl extends AppPermissionError
+    with DiagnosticableTreeMixin {
+  const _$AppPermissionErrorImpl({required this.category}) : super._();
+
+  @override
+  final PermissionErrorCategory category;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AppError.permission(category: $category)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AppError.permission'))
+      ..add(DiagnosticsProperty('category', category));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AppPermissionErrorImpl &&
+            (identical(other.category, category) ||
+                other.category == category));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, category);
+
+  /// Create a copy of AppError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AppPermissionErrorImplCopyWith<_$AppPermissionErrorImpl> get copyWith =>
+      __$$AppPermissionErrorImplCopyWithImpl<_$AppPermissionErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() base,
+    required TResult Function(FirebaseErrorCategory category) firebase,
+    required TResult Function(PermissionErrorCategory category) permission,
+    required TResult Function(NetworkErrorCategory category) network,
+  }) {
+    return permission(category);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? base,
+    TResult? Function(FirebaseErrorCategory category)? firebase,
+    TResult? Function(PermissionErrorCategory category)? permission,
+    TResult? Function(NetworkErrorCategory category)? network,
+  }) {
+    return permission?.call(category);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? base,
+    TResult Function(FirebaseErrorCategory category)? firebase,
+    TResult Function(PermissionErrorCategory category)? permission,
+    TResult Function(NetworkErrorCategory category)? network,
+    required TResult orElse(),
+  }) {
+    if (permission != null) {
+      return permission(category);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AppBaseError value) base,
+    required TResult Function(AppFirebaseError value) firebase,
+    required TResult Function(AppPermissionError value) permission,
+    required TResult Function(AppNetworkError value) network,
+  }) {
+    return permission(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AppBaseError value)? base,
+    TResult? Function(AppFirebaseError value)? firebase,
+    TResult? Function(AppPermissionError value)? permission,
+    TResult? Function(AppNetworkError value)? network,
+  }) {
+    return permission?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AppBaseError value)? base,
+    TResult Function(AppFirebaseError value)? firebase,
+    TResult Function(AppPermissionError value)? permission,
+    TResult Function(AppNetworkError value)? network,
+    required TResult orElse(),
+  }) {
+    if (permission != null) {
+      return permission(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AppPermissionError extends AppError {
+  const factory AppPermissionError(
+          {required final PermissionErrorCategory category}) =
+      _$AppPermissionErrorImpl;
+  const AppPermissionError._() : super._();
+
+  PermissionErrorCategory get category;
+
+  /// Create a copy of AppError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AppPermissionErrorImplCopyWith<_$AppPermissionErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -403,15 +614,24 @@ class __$$AppNetworkErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppNetworkErrorImpl extends _AppNetworkError {
+class _$AppNetworkErrorImpl extends AppNetworkError
+    with DiagnosticableTreeMixin {
   const _$AppNetworkErrorImpl({required this.category}) : super._();
 
   @override
   final NetworkErrorCategory category;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AppError.network(category: $category)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AppError.network'))
+      ..add(DiagnosticsProperty('category', category));
   }
 
   @override
@@ -440,6 +660,7 @@ class _$AppNetworkErrorImpl extends _AppNetworkError {
   TResult when<TResult extends Object?>({
     required TResult Function() base,
     required TResult Function(FirebaseErrorCategory category) firebase,
+    required TResult Function(PermissionErrorCategory category) permission,
     required TResult Function(NetworkErrorCategory category) network,
   }) {
     return network(category);
@@ -450,6 +671,7 @@ class _$AppNetworkErrorImpl extends _AppNetworkError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? base,
     TResult? Function(FirebaseErrorCategory category)? firebase,
+    TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
   }) {
     return network?.call(category);
@@ -460,6 +682,7 @@ class _$AppNetworkErrorImpl extends _AppNetworkError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? base,
     TResult Function(FirebaseErrorCategory category)? firebase,
+    TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
     required TResult orElse(),
   }) {
@@ -472,9 +695,10 @@ class _$AppNetworkErrorImpl extends _AppNetworkError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_AppBaseError value) base,
-    required TResult Function(_AppFirebaseError value) firebase,
-    required TResult Function(_AppNetworkError value) network,
+    required TResult Function(AppBaseError value) base,
+    required TResult Function(AppFirebaseError value) firebase,
+    required TResult Function(AppPermissionError value) permission,
+    required TResult Function(AppNetworkError value) network,
   }) {
     return network(this);
   }
@@ -482,9 +706,10 @@ class _$AppNetworkErrorImpl extends _AppNetworkError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_AppBaseError value)? base,
-    TResult? Function(_AppFirebaseError value)? firebase,
-    TResult? Function(_AppNetworkError value)? network,
+    TResult? Function(AppBaseError value)? base,
+    TResult? Function(AppFirebaseError value)? firebase,
+    TResult? Function(AppPermissionError value)? permission,
+    TResult? Function(AppNetworkError value)? network,
   }) {
     return network?.call(this);
   }
@@ -492,9 +717,10 @@ class _$AppNetworkErrorImpl extends _AppNetworkError {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_AppBaseError value)? base,
-    TResult Function(_AppFirebaseError value)? firebase,
-    TResult Function(_AppNetworkError value)? network,
+    TResult Function(AppBaseError value)? base,
+    TResult Function(AppFirebaseError value)? firebase,
+    TResult Function(AppPermissionError value)? permission,
+    TResult Function(AppNetworkError value)? network,
     required TResult orElse(),
   }) {
     if (network != null) {
@@ -504,10 +730,10 @@ class _$AppNetworkErrorImpl extends _AppNetworkError {
   }
 }
 
-abstract class _AppNetworkError extends AppError {
-  const factory _AppNetworkError(
+abstract class AppNetworkError extends AppError {
+  const factory AppNetworkError(
       {required final NetworkErrorCategory category}) = _$AppNetworkErrorImpl;
-  const _AppNetworkError._() : super._();
+  const AppNetworkError._() : super._();
 
   NetworkErrorCategory get category;
 
@@ -735,12 +961,20 @@ class __$$FirebaseBaseErrorCategoryImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FirebaseBaseErrorCategoryImpl implements _FirebaseBaseErrorCategory {
+class _$FirebaseBaseErrorCategoryImpl
+    with DiagnosticableTreeMixin
+    implements _FirebaseBaseErrorCategory {
   const _$FirebaseBaseErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.base()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'FirebaseErrorCategory.base'));
   }
 
   @override
@@ -974,12 +1208,20 @@ class __$$FirebaseEmailAlreadyInUseErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseEmailAlreadyInUseErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseEmailAlreadyInUseErrorCategory {
   const _$FirebaseEmailAlreadyInUseErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.emailAlreadyInUse()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'FirebaseErrorCategory.emailAlreadyInUse'));
   }
 
   @override
@@ -1215,12 +1457,20 @@ class __$$FirebaseInvalidEmailErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseInvalidEmailErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseInvalidEmailErrorCategory {
   const _$FirebaseInvalidEmailErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.invalidEmail()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'FirebaseErrorCategory.invalidEmail'));
   }
 
   @override
@@ -1456,12 +1706,20 @@ class __$$FirebaseOperationNotAllowedErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseOperationNotAllowedErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseOperationNotAllowedErrorCategory {
   const _$FirebaseOperationNotAllowedErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.operationNotAllowed()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'FirebaseErrorCategory.operationNotAllowed'));
   }
 
   @override
@@ -1697,12 +1955,20 @@ class __$$FirebaseWeakPasswordErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseWeakPasswordErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseWeakPasswordErrorCategory {
   const _$FirebaseWeakPasswordErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.weakPassword()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'FirebaseErrorCategory.weakPassword'));
   }
 
   @override
@@ -1938,12 +2204,20 @@ class __$$FirebaseTooManyRequestsErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseTooManyRequestsErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseTooManyRequestsErrorCategory {
   const _$FirebaseTooManyRequestsErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.tooManyRequests()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'FirebaseErrorCategory.tooManyRequests'));
   }
 
   @override
@@ -2179,12 +2453,20 @@ class __$$FirebaseUserTokenExpiredErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseUserTokenExpiredErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseUserTokenExpiredErrorCategory {
   const _$FirebaseUserTokenExpiredErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.userTokenExpired()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'FirebaseErrorCategory.userTokenExpired'));
   }
 
   @override
@@ -2421,12 +2703,20 @@ class __$$FirebaseNetworkRequestsFailedErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseNetworkRequestsFailedErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseNetworkRequestsFailedErrorCategory {
   const _$FirebaseNetworkRequestsFailedErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.networkRequestFailed()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'FirebaseErrorCategory.networkRequestFailed'));
   }
 
   @override
@@ -2662,12 +2952,20 @@ class __$$FirebaseUserDisabledErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseUserDisabledErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseUserDisabledErrorCategory {
   const _$FirebaseUserDisabledErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.userDisabled()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'FirebaseErrorCategory.userDisabled'));
   }
 
   @override
@@ -2903,12 +3201,20 @@ class __$$FirebaseUserNotFoundErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseUserNotFoundErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseUserNotFoundErrorCategory {
   const _$FirebaseUserNotFoundErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.userNotFound()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'FirebaseErrorCategory.userNotFound'));
   }
 
   @override
@@ -3144,12 +3450,20 @@ class __$$FirebaseWrongPasswordErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseWrongPasswordErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseWrongPasswordErrorCategory {
   const _$FirebaseWrongPasswordErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.wrongPassword()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'FirebaseErrorCategory.wrongPassword'));
   }
 
   @override
@@ -3385,12 +3699,20 @@ class __$$FirebaseInvalidCredentionErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseInvalidCredentionErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseInvalidCredentionErrorCategory {
   const _$FirebaseInvalidCredentionErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.invalidCredential()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'FirebaseErrorCategory.invalidCredential'));
   }
 
   @override
@@ -3629,12 +3951,20 @@ class __$$FirebaseUnauthorizedContinueUriErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseUnauthorizedContinueUriErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseUnauthorizedContinueUriErrorCategory {
   const _$FirebaseUnauthorizedContinueUriErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.unauthorizedContinueUri()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'FirebaseErrorCategory.unauthorizedContinueUri'));
   }
 
   @override
@@ -3870,12 +4200,20 @@ class __$$FirebaseInvalidContinueUriErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseInvalidContinueUriErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseInvalidContinueUriErrorCategory {
   const _$FirebaseInvalidContinueUriErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.invalidContinueUri()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'FirebaseErrorCategory.invalidContinueUri'));
   }
 
   @override
@@ -4111,12 +4449,20 @@ class __$$FirebaseMissingIOSByndleIdErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseMissingIOSByndleIdErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseMissingIOSByndleIdErrorCategory {
   const _$FirebaseMissingIOSByndleIdErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.missingIOSBundleId()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'FirebaseErrorCategory.missingIOSBundleId'));
   }
 
   @override
@@ -4352,12 +4698,20 @@ class __$$FirebaseMissionContinueUriErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseMissionContinueUriErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseMissionContinueUriErrorCategory {
   const _$FirebaseMissionContinueUriErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.missingContinueUri()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'FirebaseErrorCategory.missingContinueUri'));
   }
 
   @override
@@ -4594,12 +4948,20 @@ class __$$FirebaseMissionAndroidPkgNameErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FirebaseMissionAndroidPkgNameErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _FirebaseMissionAndroidPkgNameErrorCategory {
   const _$FirebaseMissionAndroidPkgNameErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'FirebaseErrorCategory.missingAndroidPkgName()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'FirebaseErrorCategory.missingAndroidPkgName'));
   }
 
   @override
@@ -4811,6 +5173,311 @@ abstract class _FirebaseMissionAndroidPkgNameErrorCategory
 }
 
 /// @nodoc
+mixin _$PermissionErrorCategory {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() denied,
+    required TResult Function() permanentlyDenied,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? denied,
+    TResult? Function()? permanentlyDenied,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? denied,
+    TResult Function()? permanentlyDenied,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PermissionDeniedErrorCategory value) denied,
+    required TResult Function(_PermissionPermanentlyDenied value)
+        permanentlyDenied,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PermissionDeniedErrorCategory value)? denied,
+    TResult? Function(_PermissionPermanentlyDenied value)? permanentlyDenied,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PermissionDeniedErrorCategory value)? denied,
+    TResult Function(_PermissionPermanentlyDenied value)? permanentlyDenied,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PermissionErrorCategoryCopyWith<$Res> {
+  factory $PermissionErrorCategoryCopyWith(PermissionErrorCategory value,
+          $Res Function(PermissionErrorCategory) then) =
+      _$PermissionErrorCategoryCopyWithImpl<$Res, PermissionErrorCategory>;
+}
+
+/// @nodoc
+class _$PermissionErrorCategoryCopyWithImpl<$Res,
+        $Val extends PermissionErrorCategory>
+    implements $PermissionErrorCategoryCopyWith<$Res> {
+  _$PermissionErrorCategoryCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of PermissionErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$PermissionDeniedErrorCategoryImplCopyWith<$Res> {
+  factory _$$PermissionDeniedErrorCategoryImplCopyWith(
+          _$PermissionDeniedErrorCategoryImpl value,
+          $Res Function(_$PermissionDeniedErrorCategoryImpl) then) =
+      __$$PermissionDeniedErrorCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$PermissionDeniedErrorCategoryImplCopyWithImpl<$Res>
+    extends _$PermissionErrorCategoryCopyWithImpl<$Res,
+        _$PermissionDeniedErrorCategoryImpl>
+    implements _$$PermissionDeniedErrorCategoryImplCopyWith<$Res> {
+  __$$PermissionDeniedErrorCategoryImplCopyWithImpl(
+      _$PermissionDeniedErrorCategoryImpl _value,
+      $Res Function(_$PermissionDeniedErrorCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PermissionErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$PermissionDeniedErrorCategoryImpl extends _PermissionDeniedErrorCategory
+    with DiagnosticableTreeMixin {
+  const _$PermissionDeniedErrorCategoryImpl() : super._();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'PermissionErrorCategory.denied()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'PermissionErrorCategory.denied'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PermissionDeniedErrorCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() denied,
+    required TResult Function() permanentlyDenied,
+  }) {
+    return denied();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? denied,
+    TResult? Function()? permanentlyDenied,
+  }) {
+    return denied?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? denied,
+    TResult Function()? permanentlyDenied,
+    required TResult orElse(),
+  }) {
+    if (denied != null) {
+      return denied();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PermissionDeniedErrorCategory value) denied,
+    required TResult Function(_PermissionPermanentlyDenied value)
+        permanentlyDenied,
+  }) {
+    return denied(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PermissionDeniedErrorCategory value)? denied,
+    TResult? Function(_PermissionPermanentlyDenied value)? permanentlyDenied,
+  }) {
+    return denied?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PermissionDeniedErrorCategory value)? denied,
+    TResult Function(_PermissionPermanentlyDenied value)? permanentlyDenied,
+    required TResult orElse(),
+  }) {
+    if (denied != null) {
+      return denied(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PermissionDeniedErrorCategory extends PermissionErrorCategory {
+  const factory _PermissionDeniedErrorCategory() =
+      _$PermissionDeniedErrorCategoryImpl;
+  const _PermissionDeniedErrorCategory._() : super._();
+}
+
+/// @nodoc
+abstract class _$$PermissionPermanentlyDeniedImplCopyWith<$Res> {
+  factory _$$PermissionPermanentlyDeniedImplCopyWith(
+          _$PermissionPermanentlyDeniedImpl value,
+          $Res Function(_$PermissionPermanentlyDeniedImpl) then) =
+      __$$PermissionPermanentlyDeniedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$PermissionPermanentlyDeniedImplCopyWithImpl<$Res>
+    extends _$PermissionErrorCategoryCopyWithImpl<$Res,
+        _$PermissionPermanentlyDeniedImpl>
+    implements _$$PermissionPermanentlyDeniedImplCopyWith<$Res> {
+  __$$PermissionPermanentlyDeniedImplCopyWithImpl(
+      _$PermissionPermanentlyDeniedImpl _value,
+      $Res Function(_$PermissionPermanentlyDeniedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PermissionErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$PermissionPermanentlyDeniedImpl extends _PermissionPermanentlyDenied
+    with DiagnosticableTreeMixin {
+  const _$PermissionPermanentlyDeniedImpl() : super._();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'PermissionErrorCategory.permanentlyDenied()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'PermissionErrorCategory.permanentlyDenied'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PermissionPermanentlyDeniedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() denied,
+    required TResult Function() permanentlyDenied,
+  }) {
+    return permanentlyDenied();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? denied,
+    TResult? Function()? permanentlyDenied,
+  }) {
+    return permanentlyDenied?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? denied,
+    TResult Function()? permanentlyDenied,
+    required TResult orElse(),
+  }) {
+    if (permanentlyDenied != null) {
+      return permanentlyDenied();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PermissionDeniedErrorCategory value) denied,
+    required TResult Function(_PermissionPermanentlyDenied value)
+        permanentlyDenied,
+  }) {
+    return permanentlyDenied(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PermissionDeniedErrorCategory value)? denied,
+    TResult? Function(_PermissionPermanentlyDenied value)? permanentlyDenied,
+  }) {
+    return permanentlyDenied?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PermissionDeniedErrorCategory value)? denied,
+    TResult Function(_PermissionPermanentlyDenied value)? permanentlyDenied,
+    required TResult orElse(),
+  }) {
+    if (permanentlyDenied != null) {
+      return permanentlyDenied(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PermissionPermanentlyDenied extends PermissionErrorCategory {
+  const factory _PermissionPermanentlyDenied() =
+      _$PermissionPermanentlyDeniedImpl;
+  const _PermissionPermanentlyDenied._() : super._();
+}
+
+/// @nodoc
 mixin _$NetworkErrorCategory {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -4949,12 +5616,20 @@ class __$$NetworkConnectTimeoutErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$NetworkConnectTimeoutErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _NetworkConnectTimeoutErrorCategory {
   const _$NetworkConnectTimeoutErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'NetworkErrorCategory.connectTimeout()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'NetworkErrorCategory.connectTimeout'));
   }
 
   @override
@@ -5111,12 +5786,20 @@ class __$$NetworkSendTimeoutErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$NetworkSendTimeoutErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _NetworkSendTimeoutErrorCategory {
   const _$NetworkSendTimeoutErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'NetworkErrorCategory.sendTimeout()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'NetworkErrorCategory.sendTimeout'));
   }
 
   @override
@@ -5273,12 +5956,20 @@ class __$$NetworkReceiveTimeoutErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$NetworkReceiveTimeoutErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _NetworkReceiveTimeoutErrorCategory {
   const _$NetworkReceiveTimeoutErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'NetworkErrorCategory.receiveTimeout()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'NetworkErrorCategory.receiveTimeout'));
   }
 
   @override
@@ -5435,12 +6126,20 @@ class __$$NetworkRequestCancelledErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$NetworkRequestCancelledErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _NetworkRequestCancelledErrorCategory {
   const _$NetworkRequestCancelledErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'NetworkErrorCategory.requestCancelled()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'NetworkErrorCategory.requestCancelled'));
   }
 
   @override
@@ -5597,12 +6296,20 @@ class __$$NetworkNotInternetConnectionErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$NetworkNotInternetConnectionErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _NetworkNotInternetConnectionErrorCategory {
   const _$NetworkNotInternetConnectionErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'NetworkErrorCategory.notInternetConnection()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'NetworkErrorCategory.notInternetConnection'));
   }
 
   @override
@@ -5759,12 +6466,20 @@ class __$$NetworkBadCertificateErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$NetworkBadCertificateErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _NetworkBadCertificateErrorCategory {
   const _$NetworkBadCertificateErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'NetworkErrorCategory.badCertificate()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'NetworkErrorCategory.badCertificate'));
   }
 
   @override
@@ -5921,12 +6636,20 @@ class __$$NetworkBadResponseErrorCategoryImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$NetworkBadResponseErrorCategoryImpl
+    with DiagnosticableTreeMixin
     implements _NetworkBadResponseErrorCategory {
   const _$NetworkBadResponseErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'NetworkErrorCategory.badResponse()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'NetworkErrorCategory.badResponse'));
   }
 
   @override
@@ -6082,12 +6805,20 @@ class __$$NetworkBaseErrorCategoryImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$NetworkBaseErrorCategoryImpl implements _NetworkBaseErrorCategory {
+class _$NetworkBaseErrorCategoryImpl
+    with DiagnosticableTreeMixin
+    implements _NetworkBaseErrorCategory {
   const _$NetworkBaseErrorCategoryImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'NetworkErrorCategory.base()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'NetworkErrorCategory.base'));
   }
 
   @override

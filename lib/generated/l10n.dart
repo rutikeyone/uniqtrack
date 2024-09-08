@@ -579,6 +579,36 @@ class S {
       args: [],
     );
   }
+
+  /// `There is no permission to perform this action.`
+  String get thereIsNoPermissionToPerformThisAction {
+    return Intl.message(
+      'There is no permission to perform this action.',
+      name: 'thereIsNoPermissionToPerformThisAction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Allow`
+  String get allow {
+    return Intl.message(
+      'Allow',
+      name: 'allow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prohibit`
+  String get prohibit {
+    return Intl.message(
+      'Prohibit',
+      name: 'prohibit',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

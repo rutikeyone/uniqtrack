@@ -4,9 +4,11 @@ import 'package:uniqtrack/features/register/domain/entities/file.dart';
 import 'package:uniqtrack/features/register/domain/entities/gender.dart';
 
 abstract interface class RegisterRepository {
-  Future<Either<AppError, File?>> chooseImageFromGallery();
+  Future<Either<AppError, Either<AppPermissionError, File?>>>
+      chooseImageFromGallery();
 
-  Future<Either<AppError, File?>> chooseImageFromCamera();
+  Future<Either<AppError, Either<AppPermissionError, File?>>>
+      chooseImageFromCamera();
 
   Future<Either<AppError, void>> register({
     required String email,

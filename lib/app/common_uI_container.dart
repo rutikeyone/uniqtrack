@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:loader_overlay/loader_overlay.dart';
 import 'package:uniqtrack/app/navigation/router/router.dart';
 import 'package:uniqtrack/core/common/activity.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_actions.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/context_extension.dart';
-import 'package:uniqtrack/core/common/strings/app_strings.dart';
-import 'package:uniqtrack/core/common_impl/common_ui_delegate_notifier.dart';
+import 'package:uniqtrack/core/common_impl/common_ui/common_ui_delegate_notifier.dart';
 import 'package:uniqtrack/core/presentation/widgets/cupertino_dialog.dart';
 
 class CommonUIContainer extends ConsumerStatefulWidget {
@@ -35,30 +35,31 @@ class _CommonUIWrapperState extends ConsumerState<CommonUIContainer> {
     final value = next?.get();
     if (value == null) return;
 
-    value.when(
-      cupertinoDialog: (header, body, closeCallback, close) {
+    value.map(
+      cupertinoDialog: (action) {
         _showCupertinoDialog(
-          header: header,
-          body: body,
-          closeCallback: closeCallback,
-          close: close,
+          action: action,
           navigatorKey: navigatorKey,
         );
       },
+      showLoader: _showLoader,
+      hideLoader: _hideLoader,
     );
   }
 
   void _showCupertinoDialog({
-    required AppStrings header,
-    required AppStrings body,
-    required VoidCallback? closeCallback,
-    required AppStrings close,
+    required CommonCupertinoDialogAction action,
     required GlobalKey<NavigatorState> navigatorKey,
   }) {
+    final activity = action.activity;
+
     final navigatorContext = navigatorKey.currentState?.context;
-    final headerText = context.fromAppStrings(header);
-    final bodyText = context.fromAppStrings(body);
-    final closeText = context.fromAppStrings(close);
+    final headerText = context.fromAppStrings(action.header);
+    final bodyText = context.fromAppStrings(action.body);
+    final closeText = context.fromAppStrings(action.close);
+    final labelActivity = activity != null ? context.fromAppStrings(activity.label) : null;
+    final activityOnPressed = activity?.onPressed;
+    final closeCallback = action.closeCallback;
 
     if (_dialogShowed || navigatorContext == null) return;
 
@@ -70,11 +71,25 @@ class _CommonUIWrapperState extends ConsumerState<CommonUIContainer> {
             bodyText: bodyText,
             close: closeText,
             closeCallback: closeCallback,
+            cupertinoDialogActivity: (labelActivity, activityOnPressed),
             closeDialog: navigatorContext.pop,
           );
-        }).whenComplete(() {
-      _dialogShowed = false;
-    });
+        }).whenComplete(
+      () {
+        _dialogShowed = false;
+      },
+    );
+  }
+
+  void _showLoader(_) {
+    context.loaderOverlay.show();
+  }
+
+  void _hideLoader(_) {
+    final isVisible = context.loaderOverlay.visible;
+    if(isVisible) {
+      context.loaderOverlay.hide();
+    }
   }
 
   @override
@@ -90,4 +105,5 @@ class _CommonUIWrapperState extends ConsumerState<CommonUIContainer> {
 
     return widget.child;
   }
+
 }

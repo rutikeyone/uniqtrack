@@ -23,7 +23,6 @@ class _CancelButtonWidget extends StatelessWidget {
               S.of(context).cancel,
               style: context.textTheme.displaySmall?.copyWith(
                 color: context.colorScheme.onSecondary,
-                fontWeight: FontWeight.bold,
               ),
               overflow: TextOverflow.ellipsis,
               maxLines: 1,

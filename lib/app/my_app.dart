@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:loader_overlay/loader_overlay.dart';
 import 'package:uniqtrack/app/common_uI_container.dart';
 import 'package:uniqtrack/app/navigation/router/router.dart';
-import 'package:uniqtrack/core/common_impl/common_ui_delegate_notifier.dart';
+import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common_impl/common_ui/common_ui_delegate_notifier.dart';
+import 'package:uniqtrack/core/theme/app_circle_progress_indicator.dart';
 import 'package:uniqtrack/core/theme/app_theme.dart';
 import 'package:uniqtrack/generated/l10n.dart';
 
@@ -30,7 +33,16 @@ class MyApp extends ConsumerWidget {
       builder: (context, child) {
         return CommonUIContainer(
           commonUIDelegate: commonUIDelegate,
-          child: child ?? const SizedBox(),
+          child: LoaderOverlay(
+            overlayColor: context.colorScheme.primary.withOpacity(.3),
+            useDefaultLoading: false,
+            overlayWidgetBuilder: (_) {
+              return const Center(
+                child: AppCircleProgressIndicator(),
+              );
+            },
+            child: child ?? const SizedBox(),
+          ),
         );
       },
     );

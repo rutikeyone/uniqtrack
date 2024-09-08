@@ -65,4 +65,10 @@ class AppStrings with _$AppStrings {
   const factory AppStrings.missingAndroidPkgName() = _$AppMissingAndroidPkgNameString;
 
   const factory AppStrings.thePasswordHasBeenSentToTheSpecifiedEmailAddress() = _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString;
+
+  const factory AppStrings.noPermissionToPerform() = _$AppNoPermissionToPerformString;
+
+  const factory AppStrings.prohibit() = _$AppProhibitString;
+
+  const factory AppStrings.allow() = _$AppAllowString;
 }

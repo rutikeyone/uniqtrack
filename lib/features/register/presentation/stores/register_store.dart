@@ -1,5 +1,10 @@
+import 'dart:async';
+
+import 'package:flutter/foundation.dart';
 import 'package:formz/formz.dart';
 import 'package:mobx/mobx.dart';
+import 'package:uniqtrack/app/app_state/domain/auth_state_changes_use_case.dart';
+import 'package:uniqtrack/app/app_state/domain/entities/user.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
@@ -26,11 +31,16 @@ abstract class _RegisterStore with Store {
   final RegisterRepository _imageRepository;
   final CommonUIDelegate _commonUIDelegate;
 
+  final AuthStateChangesUseCase _authStateChangesUseCase;
+  StreamSubscription<User?>? _authStateChangesStreamSubscription;
+
   _RegisterStore({
     required RegisterRepository imageRepository,
     required CommonUIDelegate commonUIDelegate,
+    required AuthStateChangesUseCase authStateChangesUseCase,
   })  : _imageRepository = imageRepository,
-        _commonUIDelegate = commonUIDelegate;
+        _commonUIDelegate = commonUIDelegate,
+        _authStateChangesUseCase = authStateChangesUseCase;
 
   @observable
   ImagePickerModeState pickerModeState =
@@ -88,7 +98,10 @@ abstract class _RegisterStore with Store {
     final chooseImageResult = await _imageRepository.chooseImageFromGallery();
 
     chooseImageResult.fold(
-      _handleFailureChooseImage,
+      (error) => _handleFailureChooseImage(
+        error,
+        callback: _chooseImageFromGallery,
+      ),
       _handleSuccessChooseImage,
     );
   }
@@ -97,7 +110,10 @@ abstract class _RegisterStore with Store {
   Future<void> _chooseImageFromCamera() async {
     final chooseImageResult = await _imageRepository.chooseImageFromCamera();
     chooseImageResult.fold(
-      _handleFailureChooseImage,
+      (error) => _handleFailureChooseImage(
+        error,
+        callback: _chooseImageFromCamera,
+      ),
       _handleSuccessChooseImage,
     );
   }
@@ -154,8 +170,11 @@ abstract class _RegisterStore with Store {
       photo: (file) => file,
     );
 
+    _commonUIDelegate.showLoader();
     actions = const RegisterActions.hideFocus();
     registerStatusState = const RegisterStatusState.pending();
+
+    await Future.delayed(const Duration(seconds: 2));
 
     final registerResult = await _imageRepository.register(
       email: email,
@@ -171,26 +190,52 @@ abstract class _RegisterStore with Store {
     );
   }
 
-  void _handleSuccessChooseImage(File? file) {
-    if (file == null) return;
+  void _handleSuccessChooseImage(PermissionResult<File?> result) {
+    result.fold(
+      (error) {
+        final category = error.category;
+        final header = category.header();
+        final body = category.body();
 
-    final photoImagePickerModeState = ImagePickerModeState.photo(file: file);
-    pickerModeState = photoImagePickerModeState;
+        _commonUIDelegate.cupertinoDialog(
+          header: header,
+          body: body,
+        );
+      },
+      (file) {
+        if (file == null) return;
+        final photoImagePickerModeState =
+            ImagePickerModeState.photo(file: file);
+        pickerModeState = photoImagePickerModeState;
+      },
+    );
   }
 
-  void _handleFailureChooseImage(AppError l) {
+  void _handleFailureChooseImage(
+    AppError l, {
+    required VoidCallback callback,
+  }) {
     if (l.isCancelError) return;
 
     final header = l.header();
     final body = l.body();
+    final close = l.close();
+
+    final activity = l.activity(
+      requestPermissionAgain: callback,
+      openSettings: _commonUIDelegate.openAppSettings,
+    );
 
     _commonUIDelegate.cupertinoDialog(
       header: header,
+      activity: activity,
+      close: close,
       body: body,
     );
   }
 
   void _handleRegisterFailureResult(AppError l) {
+    _commonUIDelegate.hideLoader();
     registerStatusState = const RegisterStatusState.failure();
     if (l.isCancelError) return;
 
@@ -204,10 +249,20 @@ abstract class _RegisterStore with Store {
   }
 
   void _handleRegisterSuccessResult(_) {
-    const duration = Duration(milliseconds: 200);
-
     registerStatusState = const RegisterStatusState.success();
 
+    _authStateChangesStreamSubscription?.cancel();
+    _authStateChangesStreamSubscription = null;
+    _authStateChangesStreamSubscription =
+        _authStateChangesUseCase.call().listen(_onAuthStateChanges);
+  }
+
+  void _onAuthStateChanges(User? event) {
+    _commonUIDelegate.hideLoader();
+    _authStateChangesStreamSubscription?.cancel();
+    _authStateChangesStreamSubscription = null;
+
+    const duration = Duration(milliseconds: 200);
     Future.delayed(duration, () {
       const header = AppStrings.notification();
       const body = AppStrings.theUserHasBeenSuccessfullyRegistered();
@@ -217,5 +272,10 @@ abstract class _RegisterStore with Store {
         body: body,
       );
     });
+  }
+
+  void dispose() {
+    _authStateChangesStreamSubscription?.cancel();
+    _authStateChangesStreamSubscription = null;
   }
 }

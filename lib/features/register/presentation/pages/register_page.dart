@@ -48,7 +48,8 @@ class RegisterPage extends ConsumerStatefulWidget {
 }
 
 class _RegisterPageState extends ConsumerState<RegisterPage> {
-  late final ReactionDisposer actionsReactionDisposer;
+  late final ReactionDisposer _actionsReactionDisposer;
+  late final RegisterStore _store;
 
   @override
   void initState() {
@@ -57,9 +58,9 @@ class _RegisterPageState extends ConsumerState<RegisterPage> {
   }
 
   void _initActionReactionDisposer() {
-    final store = context.read<RegisterStore>();
-    actionsReactionDisposer = reaction(
-      (_) => store.actions,
+    _store = context.read<RegisterStore>();
+    _actionsReactionDisposer = reaction(
+      (_) => _store.actions,
       _handleReactionAction,
     );
   }
@@ -90,7 +91,8 @@ class _RegisterPageState extends ConsumerState<RegisterPage> {
 
   @override
   void dispose() {
-    actionsReactionDisposer();
+    _actionsReactionDisposer();
+    _store.dispose();
     super.dispose();
   }
 

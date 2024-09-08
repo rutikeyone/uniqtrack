@@ -1,5 +1,9 @@
 part of 'exceptions.dart';
 
+typedef PermissionResultWithAppError<T> = Either<AppError, PermissionResult<T>>;
+
+typedef PermissionResult<T> = Either<AppPermissionError, T>;
+
 @freezed
 class AppError with _$AppError {
   bool get isCancelError {
@@ -16,15 +20,19 @@ class AppError with _$AppError {
 
   const AppError._();
 
-  const factory AppError.base() = _AppBaseError;
+  const factory AppError.base() = AppBaseError;
 
   const factory AppError.firebase({
     required FirebaseErrorCategory category,
-  }) = _AppFirebaseError;
+  }) = AppFirebaseError;
+
+  const factory AppError.permission({
+    required PermissionErrorCategory category,
+  }) = AppPermissionError;
 
   const factory AppError.network({
     required NetworkErrorCategory category,
-  }) = _AppNetworkError;
+  }) = AppNetworkError;
 
   AppStrings header() {
     return const AppStrings.error();
@@ -67,6 +75,40 @@ class AppError with _$AppError {
           base: () => const AppStrings.errorHasOccurred(),
         );
       },
+      permission: (category) {
+        return category.when(
+          denied: () => const AppStrings.noPermissionToPerform(),
+          permanentlyDenied: () => const AppStrings.noPermissionToPerform(),
+        );
+      },
     );
   }
+
+  CupertinoDialogActivity? activity({
+    required VoidCallback requestPermissionAgain,
+    required VoidCallback openSettings,
+  }) {
+    return whenOrNull(
+      permission: (category) {
+        return category.when(
+          denied: () => CupertinoDialogActivity.new(
+            label: AppStrings.allow(),
+            onPressed: requestPermissionAgain,
+          ),
+          permanentlyDenied: () => CupertinoDialogActivity.new(
+            label: AppStrings.allow(),
+            onPressed: openSettings,
+          ),
+        );
+      },
+    );
+  }
+
+  AppStrings? close() {
+    return maybeWhen(
+      permission: (_) => AppStrings.prohibit(),
+      orElse: () => AppStrings.okay(),
+    );
+  }
+
 }

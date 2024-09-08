@@ -8,6 +8,7 @@ class CupertinoDialog extends StatelessWidget {
   final String close;
   final VoidCallback? closeCallback;
   final VoidCallback closeDialog;
+  final (String?, VoidCallback?) cupertinoDialogActivity;
 
   const CupertinoDialog({
     super.key,
@@ -16,6 +17,7 @@ class CupertinoDialog extends StatelessWidget {
     required this.close,
     required this.closeCallback,
     required this.closeDialog,
+    required this.cupertinoDialogActivity,
   });
 
   @override
@@ -39,6 +41,19 @@ class CupertinoDialog extends StatelessWidget {
         ),
       ),
       actions: [
+        if (cupertinoDialogActivity.$1 != null &&
+            cupertinoDialogActivity.$2 != null)
+          CupertinoDialogAction(
+            onPressed: () {
+              cupertinoDialogActivity.$2?.call();
+              closeDialog.call();
+            },
+            child: Text(
+              cupertinoDialogActivity.$1 ?? '',
+              textAlign: TextAlign.center,
+              style: actionTextStyle,
+            ),
+          ),
         CupertinoDialogAction(
           onPressed: () {
             closeCallback?.call();

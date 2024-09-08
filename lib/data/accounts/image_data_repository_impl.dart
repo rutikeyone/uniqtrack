@@ -16,7 +16,7 @@ class ImageDataRepositoryImpl implements ImageDataRepository {
         _appErrorHandler = appErrorHandler;
 
   @override
-  Future<Either<AppError, FileModel?>> chooseImage() async {
+  Future<Either<AppError, PermissionResult<FileModel?>>> chooseImage() async {
     final result = await _appErrorHandler.handle(() {
       return _imageDataSource.chooseImage();
     });

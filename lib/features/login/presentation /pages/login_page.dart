@@ -36,7 +36,8 @@ class LoginPage extends ConsumerStatefulWidget {
 }
 
 class _LoginPageState extends ConsumerState<LoginPage> {
-  late final ReactionDisposer actionsReactionDisposer;
+  late final LoginStore _store;
+  late final ReactionDisposer _actionsReactionDisposer;
 
   @override
   void initState() {
@@ -45,9 +46,9 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   }
 
   void _initActionReactionDisposer() {
-    final store = context.read<LoginStore>();
-    actionsReactionDisposer = reaction(
-      (_) => store.actions,
+    _store = context.read<LoginStore>();
+    _actionsReactionDisposer = reaction(
+      (_) => _store.actions,
       _handleReactionAction,
     );
   }
@@ -67,7 +68,8 @@ class _LoginPageState extends ConsumerState<LoginPage> {
 
   @override
   void dispose() {
-    actionsReactionDisposer();
+    _actionsReactionDisposer();
+    _store.dispose();
     super.dispose();
   }
 

@@ -21,7 +21,8 @@ extension ContextExtension on BuildContext {
 
   double get bottomSheetWidth => fullWidth - AppDiments.dm16;
 
-  BottomNavigationBarThemeData get bottomNavigationBarTheme => theme.bottomNavigationBarTheme;
+  BottomNavigationBarThemeData get bottomNavigationBarTheme =>
+      theme.bottomNavigationBarTheme;
 
   Future<void> showImageSourceModalBottomSheet({
     required VoidCallback onFromGalleryPressed,
@@ -71,12 +72,21 @@ extension ContextExtension on BuildContext {
       userNotFound: () => S.of(this).userNotFound,
       wrongPassword: () => S.of(this).wrongPassword,
       invalidCredential: () => S.of(this).invalidCredential,
-      unauthorizedContinueUri: () => S.of(this).theContinuationUrlIsNotWhitelisted,
-      invalidContinueUri: () => S.of(this).theContinueUrlProvidedInTheRequestIsInvalid,
+      unauthorizedContinueUri: () =>
+          S.of(this).theContinuationUrlIsNotWhitelisted,
+      invalidContinueUri: () =>
+          S.of(this).theContinueUrlProvidedInTheRequestIsInvalid,
       missingIOSBundleId: () => S.of(this).anIosBundleIdMustBeProvidedIfAnApp,
-      missingContinueUri: () => S.of(this).aContinueUrlMustBeProvidedInTheRequest,
-      missingAndroidPkgName: () => S.of(this).anAndroidPackageNameMustBeProvidedIfTheAndroid,
-      thePasswordHasBeenSentToTheSpecifiedEmailAddress: () => S.of(this).thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+      missingContinueUri: () =>
+          S.of(this).aContinueUrlMustBeProvidedInTheRequest,
+      missingAndroidPkgName: () =>
+          S.of(this).anAndroidPackageNameMustBeProvidedIfTheAndroid,
+      thePasswordHasBeenSentToTheSpecifiedEmailAddress: () =>
+          S.of(this).thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+      noPermissionToPerform: () =>
+          S.of(this).thereIsNoPermissionToPerformThisAction,
+      prohibit: () => S.of(this).prohibit,
+      allow: () => S.of(this).allow,
     );
   }
 }

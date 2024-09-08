@@ -42,6 +42,10 @@ dependencies:
   cloud_firestore: ^5.4.0
   generic_usecase: ^3.0.0
   flutter_native_splash: ^2.4.1
+  loader_overlay: ^4.0.1
+  permission_handler: ^11.3.1
+  device_info_plus: ^10.1.2
+  app_settings: ^5.1.1
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +66,28 @@ flutter:
     - assets/
     - assets/icons/
     - assets/placeholders/
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: fonts/montserrat/Montserrat-Black.ttf
+        - asset: fonts/montserrat/Montserrat-BlackItalic.ttf
+        - asset: fonts/montserrat/Montserrat-Bold.ttf
+        - asset: fonts/montserrat/Montserrat-BoldItalic.ttf
+        - asset: fonts/montserrat/Montserrat-ExtraBold.ttf
+        - asset: fonts/montserrat/Montserrat-ExtraBoldItalic.ttf
+        - asset: fonts/montserrat/Montserrat-ExtraLight.ttf
+        - asset: fonts/montserrat/Montserrat-ExtraLightItalic.ttf
+        - asset: fonts/montserrat/Montserrat-Italic.ttf
+        - asset: fonts/montserrat/Montserrat-Light.ttf
+        - asset: fonts/montserrat/Montserrat-LightItalic.ttf
+        - asset: fonts/montserrat/Montserrat-Medium.ttf
+        - asset: fonts/montserrat/Montserrat-MediumItalic.ttf
+        - asset: fonts/montserrat/Montserrat-Regular.ttf
+        - asset: fonts/montserrat/Montserrat-SemiBold.ttf
+        - asset: fonts/montserrat/Montserrat-SemiBoldItalic.ttf
+        - asset: fonts/montserrat/Montserrat-Thin.ttf
+        - asset: fonts/montserrat/Montserrat-ThinItalic.ttf
 
 flutter_intl:
   enabled: true
