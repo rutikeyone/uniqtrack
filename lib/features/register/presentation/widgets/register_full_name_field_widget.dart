@@ -15,7 +15,7 @@ class _RegisterFullNameFieldWidget extends StatelessWidget {
           
           return AppTextField(
             hintText: S.of(context).enterYourFullName,
-            style: context.textTheme.bodyLarge,
+            style: context.primaryTextTheme.bodyLarge,
             onChanged: store.updateName,
             errorText: ValidationToolkit.validateName(name, context),
             suffixIcon: UnconstrainedBox(

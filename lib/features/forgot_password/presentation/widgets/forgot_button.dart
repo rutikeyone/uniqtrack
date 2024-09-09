@@ -15,7 +15,7 @@ class _ForgotButton extends StatelessWidget {
         child: Observer(builder: (context) {
           return AppElevatedButton(
             text: S.of(context).sendPassword,
-            textStyle: context.textTheme.labelLarge?.copyWith(
+            textStyle: context.primaryTextTheme.labelLarge?.copyWith(
               color: context.colorScheme.secondary,
             ),
             onPressed: store.canForgotPassword ? store.forgotPassword : null,

@@ -26,7 +26,7 @@ class AppTransparentButton extends StatelessWidget {
           children: [
             Text(
               label,
-              style: context.textTheme.bodyLarge?.copyWith(
+              style: context.primaryTextTheme.bodyLarge?.copyWith(
                 fontWeight: FontWeight.w500,
               ),
             ),

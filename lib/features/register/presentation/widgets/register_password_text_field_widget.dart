@@ -14,7 +14,7 @@ class _RegisterPasswordTextField extends StatelessWidget {
 
           return AppObscureTextField(
             hintText: S.of(context).enterYourPassword,
-            style: context.textTheme.bodyLarge,
+            style: context.primaryTextTheme.bodyLarge,
             onChanged: store.updatePassword,
             errorText: ValidationToolkit.validatePassword(password, context),
             inputFormatter:

@@ -10,7 +10,7 @@ class _RegisterHeaderTextWidget extends StatelessWidget {
     return Center(
       child: Text(
         S.of(context).createAnAccount,
-        style: context.textTheme.displayLarge,
+        style: context.primaryTextTheme.displayLarge,
       ),
     );
   }

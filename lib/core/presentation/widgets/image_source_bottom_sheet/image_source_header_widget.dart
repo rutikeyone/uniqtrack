@@ -13,7 +13,7 @@ class _ImageSourceHeaderWidget extends StatelessWidget {
         S.of(context).image,
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
-        style: context.textTheme.bodyMedium,
+        style: context.primaryTextTheme.bodyMedium,
       ),
     );
   }

@@ -8,7 +8,7 @@ class _LoginHeaderTextWidget extends StatelessWidget {
     return Center(
       child: Text(
         S.of(context).logInToYourAccount,
-        style: context.textTheme.displayLarge,
+        style: context.primaryTextTheme.displayLarge,
       ),
     );
   }

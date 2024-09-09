@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uniqtrack/core/common/context_extension.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 
 class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -18,7 +19,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
       scrolledUnderElevation: 0.0,
       leading: IconButton(
         onPressed: navigateBack,
-        icon: const Icon(
+        icon: Icon(
           Icons.arrow_back,
           size: AppDiments.dm24,
         ),

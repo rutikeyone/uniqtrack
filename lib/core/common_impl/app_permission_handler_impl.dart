@@ -81,4 +81,5 @@ class AppPermissionHandlerImpl implements AppPermissionHandler {
 
     return AppPermissionResult.success();
   }
+
 }

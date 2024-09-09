@@ -7,7 +7,7 @@ import 'package:uniqtrack/app/navigation/router/router.dart';
 import 'package:uniqtrack/core/common/context_extension.dart';
 import 'package:uniqtrack/core/common_impl/common_ui/common_ui_delegate_notifier.dart';
 import 'package:uniqtrack/core/theme/app_circle_progress_indicator.dart';
-import 'package:uniqtrack/core/theme/app_theme.dart';
+import 'package:uniqtrack/core/theme/app_themes.dart';
 import 'package:uniqtrack/generated/l10n.dart';
 
 class MyApp extends ConsumerWidget {
@@ -21,7 +21,7 @@ class MyApp extends ConsumerWidget {
 
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme,
+      theme: AppThemes.lightTheme,
       routerConfig: router,
       supportedLocales: S.delegate.supportedLocales,
       localizationsDelegates: const [

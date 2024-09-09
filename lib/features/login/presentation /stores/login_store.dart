@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/material.dart';
 import 'package:formz/formz.dart';
 import 'package:mobx/mobx.dart';
 import 'package:uniqtrack/app/app_state/domain/auth_state_changes_use_case.dart';
@@ -15,7 +16,7 @@ import 'package:uniqtrack/features/login/presentation%20/stores/state/login_stat
 part 'login_store.g.dart';
 
 abstract interface class LoginStoreBuilder {
-  LoginStore create();
+  LoginStore create(BuildContext context);
 }
 
 class LoginStore = _LoginStore with _$LoginStore;

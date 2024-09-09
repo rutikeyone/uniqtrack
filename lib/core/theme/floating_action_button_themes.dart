@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:uniqtrack/core/theme/app_colors.dart';
 
-class FloatingActionButtonTheme {
+class FloatingActionButtonThemes {
   static final light = FloatingActionButtonThemeData(
     backgroundColor: AppColors.onSecondary,
+    focusColor: AppColors.white,
   );
 }

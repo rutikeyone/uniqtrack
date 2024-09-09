@@ -1,9 +1,7 @@
 part of '../pages/login_page.dart';
 
 class _LoginPasswordTextFieldWidget extends ConsumerWidget {
-  const _LoginPasswordTextFieldWidget({
-    super.key,
-  });
+  const _LoginPasswordTextFieldWidget();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -19,7 +17,7 @@ class _LoginPasswordTextFieldWidget extends ConsumerWidget {
             builder: (context) {
               return AppObscureTextField(
                 hintText: S.of(context).enterYourPassword,
-                style: context.textTheme.bodyLarge,
+                style: context.primaryTextTheme.bodyLarge,
                 onChanged: store.updatePassword,
                 errorText: ValidationToolkit.validatePassword(
                     store.passwordState, context),
@@ -33,7 +31,7 @@ class _LoginPasswordTextFieldWidget extends ConsumerWidget {
               padding: EdgeInsets.all(AppDiments.dm4),
               child: Text(
                 S.of(context).forgotPassword,
-                style: context.textTheme.bodyMedium?.copyWith(
+                style: context.primaryTextTheme.bodyMedium?.copyWith(
                   fontWeight: FontWeight.w500,
                 ),
               ),

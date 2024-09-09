@@ -16,8 +16,8 @@ class GenderTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textStyle = context.textTheme.labelLarge;
-    final selectedText = context.textTheme.labelLarge?.copyWith(
+    final textStyle = context.primaryTextTheme.labelLarge;
+    final selectedText = context.primaryTextTheme.labelLarge?.copyWith(
       color: context.colorScheme.secondary,
     );
 

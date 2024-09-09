@@ -15,7 +15,7 @@ class _RegisterEmailTextFieldWidget extends StatelessWidget {
 
         return AppTextField(
           hintText: S.of(context).enterYourEmail,
-          style: context.textTheme.bodyLarge,
+          style: context.primaryTextTheme.bodyLarge,
           onChanged: store.updateEmail,
           errorText: error,
           inputFormatter:

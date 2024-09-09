@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:uniqtrack/app/factories/stores/store_factory.dart';
 import 'package:uniqtrack/features/register/presentation/stores/register_store.dart';
 
@@ -7,7 +8,7 @@ class RegisterStoreBuilderImpl implements RegisterStoreBuilder {
   const RegisterStoreBuilderImpl(this._factory);
 
   @override
-  RegisterStore create() {
+  RegisterStore create(BuildContext context) {
     return _factory.createRegisterStore();
   }
 }

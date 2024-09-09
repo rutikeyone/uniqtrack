@@ -60,5 +60,23 @@ final forgotPasswordNavCallbackStoreProvider =
 
 typedef ForgotPasswordNavCallbackStoreRef
     = AutoDisposeProviderRef<ForgotPasswordNavCallbackStore>;
+String _$communityNavCallbackStoreHash() =>
+    r'69473ff3f5394790976eca66bc7f754b493a4d1b';
+
+/// See also [communityNavCallbackStore].
+@ProviderFor(communityNavCallbackStore)
+final communityNavCallbackStoreProvider =
+    AutoDisposeProvider<CommunityNavCallbackStore>.internal(
+  communityNavCallbackStore,
+  name: r'communityNavCallbackStoreProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$communityNavCallbackStoreHash,
+  dependencies: const <ProviderOrFamily>[],
+  allTransitiveDependencies: const <ProviderOrFamily>{},
+);
+
+typedef CommunityNavCallbackStoreRef
+    = AutoDisposeProviderRef<CommunityNavCallbackStore>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

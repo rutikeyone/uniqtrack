@@ -92,7 +92,7 @@ class _AppTextFieldState extends State<AppTextField> {
         suffixIcon: widget.suffixIcon,
         prefixIcon: widget.prefixIcon,
         errorText: widget.errorText,
-        errorStyle: context.textTheme.bodySmall?.copyWith(
+        errorStyle: context.primaryTextTheme.bodySmall?.copyWith(
           color: context.colorScheme.error,
         ),
         focusedErrorBorder: OutlineInputBorder(

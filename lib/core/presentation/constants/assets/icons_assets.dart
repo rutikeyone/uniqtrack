@@ -8,4 +8,7 @@ class IconsAssets {
   final profile = "$dir/ic_profile.svg";
   final community = "$dir/ic_community.svg";
   final obscure = "$dir/ic_obscure.svg";
+  final skier = "$dir/ic_skier.svg";
+  final play = "$dir/ic_play.svg";
+  final userMarker = "$dir/ic_user_marker.png";
 }

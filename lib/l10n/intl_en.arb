@@ -17,7 +17,7 @@
   "invalidEmailAddress": "Invalid email address",
   "invalidPassword": "Invalid password",
   "invalidName": "Invalid name",
-  "error" : "Error!",
+  "error": "Error!",
   "okay": "Okay",
   "anErrorHasOccurredInTheApplication": "An error has occurred in the application!",
   "emailAlreadyInUse": "Email already in use",
@@ -54,5 +54,12 @@
   "myFavouriteTracks": "My favourite tracks",
   "thereIsNoPermissionToPerformThisAction": "There is no permission to perform this action.",
   "allow": "Allow",
-  "prohibit": "Prohibit"
+  "prohibit": "Prohibit",
+  "startRecording": "Start recording",
+  "locationServiceAreDisabled": "Location service are disabled.",
+  "thereIsNoPermissionToDetermineTheUsersLocation": "There is no permission to determine the location.",
+  "itIsImpossibleToStartRecording": "It is impossible to start recording",
+  "itIsNotPossibleToGetYourCurrentLocation": "It is not possible to get your current location",
+  "trackingRecordNotificationTitle": "Uniqtrack receives information about your location",
+  "trackingRecordNotificationBody": "This is necessary for tracking records"
 }

@@ -1,9 +1,7 @@
 part of '../pages/login_page.dart';
 
 class _LoginButton extends StatelessWidget {
-  const _LoginButton({
-    super.key,
-  });
+  const _LoginButton();
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +17,7 @@ class _LoginButton extends StatelessWidget {
           builder: (context) {
             return AppElevatedButton(
               text: S.of(context).logIn,
-              textStyle: context.textTheme.labelLarge?.copyWith(
+              textStyle: context.primaryTextTheme.labelLarge?.copyWith(
                 color: context.colorScheme.secondary,
               ),
               onPressed: store.canLogin ? store.login : null,

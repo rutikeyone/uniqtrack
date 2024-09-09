@@ -1,9 +1,7 @@
 part of '../pages/register_page.dart';
 
 class _RegisterGenderWidget extends ConsumerWidget {
-  const _RegisterGenderWidget({
-    super.key,
-  });
+  const _RegisterGenderWidget();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

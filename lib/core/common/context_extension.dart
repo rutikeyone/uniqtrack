@@ -7,6 +7,8 @@ import 'package:uniqtrack/generated/l10n.dart';
 extension ContextExtension on BuildContext {
   ThemeData get theme => Theme.of(this);
 
+  TextTheme get primaryTextTheme => theme.primaryTextTheme;
+
   TextTheme get textTheme => theme.textTheme;
 
   ColorScheme get colorScheme => theme.colorScheme;
@@ -15,14 +17,21 @@ extension ContextExtension on BuildContext {
 
   BottomSheetThemeData get bottomSheetTheme => theme.bottomSheetTheme;
 
+  BottomNavigationBarThemeData get bottomNavigationBarTheme =>
+      theme.bottomNavigationBarTheme;
+
+  IconThemeData get iconTheme => theme.iconTheme;
+
+  AppBarTheme get appBarTheme => theme.appBarTheme;
+
+  FloatingActionButtonThemeData get floatingActionButtonTheme =>
+      theme.floatingActionButtonTheme;
+
   Size get size => MediaQuery.of(this).size;
 
   double get fullWidth => size.width;
 
   double get bottomSheetWidth => fullWidth - AppDiments.dm16;
-
-  BottomNavigationBarThemeData get bottomNavigationBarTheme =>
-      theme.bottomNavigationBarTheme;
 
   Future<void> showImageSourceModalBottomSheet({
     required VoidCallback onFromGalleryPressed,
@@ -87,6 +96,16 @@ extension ContextExtension on BuildContext {
           S.of(this).thereIsNoPermissionToPerformThisAction,
       prohibit: () => S.of(this).prohibit,
       allow: () => S.of(this).allow,
+      serviceDenied: () => S.of(this).locationServiceAreDisabled,
+      noPermissionDetermineUserLocation: () =>
+          S.of(this).thereIsNoPermissionToDetermineTheUsersLocation,
+      cantStartRecording: () => S.of(this).itIsImpossibleToStartRecording,
+      cantGetYourCurrentLocation: () =>
+          S.of(this).itIsNotPossibleToGetYourCurrentLocation,
+      trackingRecordNotificationTitle: () =>
+          S.of(this).trackingRecordNotificationTitle,
+      trackingRecordNotificationBody: () =>
+          S.of(this).trackingRecordNotificationBody,
     );
   }
 }

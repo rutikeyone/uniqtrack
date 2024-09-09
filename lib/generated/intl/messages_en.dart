@@ -75,6 +75,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "invalidName": MessageLookupByLibrary.simpleMessage("Invalid name"),
         "invalidPassword":
             MessageLookupByLibrary.simpleMessage("Invalid password"),
+        "itIsImpossibleToStartRecording": MessageLookupByLibrary.simpleMessage(
+            "It is impossible to start recording"),
+        "itIsNotPossibleToGetYourCurrentLocation":
+            MessageLookupByLibrary.simpleMessage(
+                "It is not possible to get your current location"),
+        "locationServiceAreDisabled": MessageLookupByLibrary.simpleMessage(
+            "Location service are disabled."),
         "logIn": MessageLookupByLibrary.simpleMessage("Log in"),
         "logInToYourAccount":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
@@ -95,6 +102,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Send timeout failure occurred"),
         "signOut": MessageLookupByLibrary.simpleMessage("Sign out"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign up"),
+        "startRecording":
+            MessageLookupByLibrary.simpleMessage("Start recording"),
         "takeAPhoto": MessageLookupByLibrary.simpleMessage("Take a photo"),
         "theContinuationUrlIsNotWhitelisted":
             MessageLookupByLibrary.simpleMessage(
@@ -110,11 +119,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "theUserHasBeenSuccessfullyRegistered":
             MessageLookupByLibrary.simpleMessage(
                 "The user has been successfully registered"),
+        "thereIsNoPermissionToDetermineTheUsersLocation":
+            MessageLookupByLibrary.simpleMessage(
+                "There is no permission to determine the location."),
         "thereIsNoPermissionToPerformThisAction":
             MessageLookupByLibrary.simpleMessage(
                 "There is no permission to perform this action."),
         "tooManyRequests":
             MessageLookupByLibrary.simpleMessage("Too many requests"),
+        "trackingRecordNotificationBody": MessageLookupByLibrary.simpleMessage(
+            "This is necessary for tracking records"),
+        "trackingRecordNotificationTitle": MessageLookupByLibrary.simpleMessage(
+            "Uniqtrack receives information about your location"),
         "userHasBeenDisabled":
             MessageLookupByLibrary.simpleMessage("User has been disabled"),
         "userNotFound": MessageLookupByLibrary.simpleMessage("User not found"),

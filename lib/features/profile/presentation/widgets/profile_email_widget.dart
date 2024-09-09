@@ -15,7 +15,7 @@ class _ProfileEmailWidget extends StatelessWidget {
         padding: const EdgeInsets.only(top: AppDiments.dm8),
         child: Text(
           email!,
-          style: context.textTheme.displaySmall,
+          style: context.primaryTextTheme.displaySmall,
         ),
       );
     }

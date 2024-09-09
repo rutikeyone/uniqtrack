@@ -54,7 +54,8 @@ class AppStrings with _$AppStrings {
 
   const factory AppStrings.invalidCredential() = _$AppInvalidCredentialString;
 
-  const factory AppStrings.unauthorizedContinueUri() = _$AppUnathorizedContinueUriString;
+  const factory AppStrings.unauthorizedContinueUri() =
+      _$AppUnathorizedContinueUriString;
 
   const factory AppStrings.invalidContinueUri() = _$AppInvalidContinueUriString;
 
@@ -62,13 +63,30 @@ class AppStrings with _$AppStrings {
 
   const factory AppStrings.missingContinueUri() = _$AppMissingContinueUriString;
 
-  const factory AppStrings.missingAndroidPkgName() = _$AppMissingAndroidPkgNameString;
+  const factory AppStrings.missingAndroidPkgName() =
+      _$AppMissingAndroidPkgNameString;
 
-  const factory AppStrings.thePasswordHasBeenSentToTheSpecifiedEmailAddress() = _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString;
+  const factory AppStrings.thePasswordHasBeenSentToTheSpecifiedEmailAddress() =
+      _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString;
 
-  const factory AppStrings.noPermissionToPerform() = _$AppNoPermissionToPerformString;
+  const factory AppStrings.noPermissionToPerform() =
+      _$AppNoPermissionToPerformString;
 
   const factory AppStrings.prohibit() = _$AppProhibitString;
 
   const factory AppStrings.allow() = _$AppAllowString;
+
+  const factory AppStrings.serviceDenied() = _$AppServiceDeniedString;
+
+  const factory AppStrings.noPermissionDetermineUserLocation() =
+      _$AppNoPermissionDeterminateUserLocationString;
+
+  const factory AppStrings.cantStartRecording() = _$AppCantStartRecordingString;
+
+  const factory AppStrings.cantGetYourCurrentLocation() =
+      _$AppStringsCantGetYourCurrentLocationString;
+
+  const factory AppStrings.trackingRecordNotificationTitle() = _$AppTrackingRecordNotificationTitleString;
+
+  const factory AppStrings.trackingRecordNotificationBody() = _$AppTrackingRecordNotificationBodyString;
 }

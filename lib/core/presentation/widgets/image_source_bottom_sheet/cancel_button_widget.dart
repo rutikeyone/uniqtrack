@@ -4,7 +4,6 @@ class _CancelButtonWidget extends StatelessWidget {
   final VoidCallback onClosePressed;
 
   const _CancelButtonWidget({
-    super.key,
     required this.onClosePressed,
   });
 
@@ -21,7 +20,7 @@ class _CancelButtonWidget extends StatelessWidget {
           child: Center(
             child: Text(
               S.of(context).cancel,
-              style: context.textTheme.displaySmall?.copyWith(
+              style: context.primaryTextTheme.displaySmall?.copyWith(
                 color: context.colorScheme.onSecondary,
               ),
               overflow: TextOverflow.ellipsis,

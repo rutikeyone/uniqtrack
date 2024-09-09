@@ -8,6 +8,7 @@ import 'package:uniqtrack/app/app_state/auth/auth_notifier.dart';
 import 'package:uniqtrack/app/glue/forgot_password/providers/forgot_password_provider.dart';
 import 'package:uniqtrack/app/glue/login/providers/login_store_builder_provider.dart';
 import 'package:uniqtrack/app/app_state/providers/auth_state_changes_use_case_provider.dart';
+import 'package:uniqtrack/app/glue/record_track/providers/record_track_store_builder_provider.dart';
 import 'package:uniqtrack/app/glue/register/providers/register_provider.dart';
 import 'package:uniqtrack/app/navigation/go_router_refresh_stream.dart';
 import 'package:uniqtrack/app/navigation/paths/app_paths.dart';
@@ -18,6 +19,7 @@ import 'package:uniqtrack/features/forgot_password/presentation/pages/forgot_pas
 import 'package:uniqtrack/features/login/presentation%20/pages/login_page.dart';
 import 'package:uniqtrack/features/main/presentation/pages/main_page.dart';
 import 'package:uniqtrack/features/profile/presentation/pages/profile_page.dart';
+import 'package:uniqtrack/features/record_track/presentation/record_track_page.dart';
 import 'package:uniqtrack/features/register/presentation/pages/register_page.dart';
 import 'package:uniqtrack/features/splash/presentation/splash_page.dart';
 
@@ -95,8 +97,39 @@ GoRouter router(RouterRef ref) {
               GoRoute(
                 path: AppPaths.community.goRoute,
                 builder: (context, state) {
-                  return CommunityPage();
+                  final navigateToTrackTracking =
+                      () => context.push(AppPaths.community.tracking.path);
+
+                  final communityNavCallbackStore = CommunityNavCallbackStore(
+                    navigateToTrackTracking: navigateToTrackTracking,
+                  );
+
+                  return ProviderScope(
+                    overrides: [
+                      communityNavCallbackStoreProvider.overrideWithValue(
+                        communityNavCallbackStore,
+                      ),
+                    ],
+                    child: CommunityPage(),
+                  );
                 },
+                routes: [
+                  GoRoute(
+                    parentNavigatorKey: rootNavigatorKey,
+                    path: AppPaths.community.tracking.goRoute,
+                    builder: (context, state) {
+                      return Consumer(builder: (context, ref, child) {
+                        final storeBuilder =
+                            ref.watch(recordTrackStoreBuilderProvider);
+
+                        return provider.Provider(
+                          create: storeBuilder.create,
+                          child: RecordTrackPage(),
+                        );
+                      });
+                    },
+                  )
+                ],
               ),
             ],
           ),
@@ -147,13 +180,14 @@ GoRouter router(RouterRef ref) {
             ],
             child: Consumer(
               builder: (context, ref, child) {
-                final loginStore = ref.watch(loginStoreBuilderProvider);
+                final storeBuilder = ref.watch(loginStoreBuilderProvider);
 
                 return provider.Provider(
-                    create: (context) => loginStore.create(),
-                    builder: (context, child) {
-                      return const LoginPage();
-                    });
+                  create: storeBuilder.create,
+                  builder: (context, child) {
+                    return const LoginPage();
+                  },
+                );
               },
             ),
           );
@@ -178,9 +212,7 @@ GoRouter router(RouterRef ref) {
                         ref.watch(registerStoreBuilderProvider);
 
                     return provider.Provider(
-                      create: (context) {
-                        return registerStoreBuilder.create();
-                      },
+                      create: registerStoreBuilder.create,
                       child: const RegisterPage(),
                     );
                   },
@@ -212,7 +244,8 @@ GoRouter router(RouterRef ref) {
                         ref.watch(forgotPasswordStoreProvider);
 
                     return provider.Provider(
-                      create: (context) => forgotPasswordStoreBuilder.create(emailArgument),
+                      create: (context) =>
+                          forgotPasswordStoreBuilder.create(emailArgument),
                       child: ForgotPasswordPage(),
                     );
                   },

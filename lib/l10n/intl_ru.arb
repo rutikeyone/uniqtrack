@@ -54,5 +54,12 @@
   "myFavouriteTracks": "Мои избранные треки",
   "thereIsNoPermissionToPerformThisAction": "Нет разрешения для выполнения этого действия.",
   "allow": "Разрешить",
-  "prohibit": "Запретить"
+  "prohibit": "Запретить",
+  "startRecording": "Начать запись",
+  "locationServiceAreDisabled": "Служба геолокации отключена.",
+  "thereIsNoPermissionToDetermineTheUsersLocation": "Нет разрешения на определение местоположения.",
+  "itIsImpossibleToStartRecording": "Невозможно начать запись",
+  "itIsNotPossibleToGetYourCurrentLocation": "Невозможно получить ваше текущее местоположение",
+  "trackingRecordNotificationTitle": "Uniqtrack получает информацию о вашем местоположении",
+  "trackingRecordNotificationBody": "Это необходимо для записи трекинга."
 }

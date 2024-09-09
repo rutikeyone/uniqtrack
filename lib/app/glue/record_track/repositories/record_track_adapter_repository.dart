@@ -1,15 +1,19 @@
-import 'package:geolocator/geolocator.dart';
-import 'package:geolocator_platform_interface/src/models/position.dart';
+import 'package:uniqtrack/app/glue/record_track/mappers/position_mapper.dart';
 import 'package:uniqtrack/core/common/app_location_handler/app_location_handler.dart';
-import 'package:uniqtrack/core/common/app_location_handler/result/app_location_permission_result.dart';
+import 'package:uniqtrack/core/common/app_location_handler/entities/app_location_permission_result.dart';
+import 'package:uniqtrack/core/common/app_location_handler/entities/location_settings.dart';
+import 'package:uniqtrack/features/record_track/domain/entities/position.dart';
 import 'package:uniqtrack/features/record_track/domain/repositories/record_track_repository.dart';
 
 class RecordTrackAdapterRepository implements RecordTrackRepository {
   final AppLocationHandler _appLocationHandler;
+  final PositionMapper _positionMapper;
 
   const RecordTrackAdapterRepository({
     required AppLocationHandler appLocationHandler,
-  }) : _appLocationHandler = appLocationHandler;
+    required PositionMapper positionMapper,
+  })  : _appLocationHandler = appLocationHandler,
+        _positionMapper = positionMapper;
 
   @override
   Future<AppLocationPermissionResult> requestLocationPermission() {
@@ -18,23 +22,18 @@ class RecordTrackAdapterRepository implements RecordTrackRepository {
 
   @override
   Future<Position?> getCurrentPosition() async {
-    Position? result;
+    final currentPosition = await _appLocationHandler.getCurrentPosition();
+    return currentPosition != null
+        ? _positionMapper.toPosition(currentPosition)
+        : null;
+  }
 
-    const duration = Duration(seconds: 4);
-
-    try {
-      result = await Geolocator.getCurrentPosition(
-        timeLimit: duration,
-        desiredAccuracy: LocationAccuracy.best,
-      );
-    } catch (e) {
-      try {
-        result = await Geolocator.getLastKnownPosition();
-      } catch (e) {
-        result = null;
-      }
-    }
-
-    return result;
+  @override
+  Stream<Position> listenPositions(AppLocationSettings settings) {
+    return _appLocationHandler.listenPositions(settings).map(
+      (event) {
+        return _positionMapper.toPosition(event);
+      },
+    );
   }
 }

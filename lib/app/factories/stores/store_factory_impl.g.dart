@@ -6,7 +6,7 @@ part of 'store_factory_impl.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$storeFactoryHash() => r'9501b4403558559056dadf2536579beeacaeeefb';
+String _$storeFactoryHash() => r'4f6666df85e54d3c76ac7c38df889b46eb5e902a';
 
 /// See also [storeFactory].
 @ProviderFor(storeFactory)
@@ -15,8 +15,11 @@ final storeFactoryProvider = AutoDisposeProvider<StoreFactory>.internal(
   name: r'storeFactoryProvider',
   debugGetCreateSourceHash:
       const bool.fromEnvironment('dart.vm.product') ? null : _$storeFactoryHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
+  dependencies: <ProviderOrFamily>[recordTrackRepositoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    recordTrackRepositoryProvider,
+    ...?recordTrackRepositoryProvider.allTransitiveDependencies
+  },
 );
 
 typedef StoreFactoryRef = AutoDisposeProviderRef<StoreFactory>;

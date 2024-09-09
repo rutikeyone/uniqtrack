@@ -9,7 +9,7 @@ import 'package:uniqtrack/app/navigation/providers/navigation_store_provider.dar
 import 'package:uniqtrack/core/common/context_extension.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
 import 'package:uniqtrack/core/presentation/validation/regexp_pattern.dart';
-import 'package:uniqtrack/core/presentation/validation/validation_toolkit.dart';
+import 'package:uniqtrack/core/presentation/toolskits/validation_toolkit.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_elevated_button.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_obscure_text_field.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_text_field.dart';

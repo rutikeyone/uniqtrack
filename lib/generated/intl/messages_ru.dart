@@ -74,6 +74,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "invalidName": MessageLookupByLibrary.simpleMessage("Некорректное имя"),
         "invalidPassword":
             MessageLookupByLibrary.simpleMessage("Некорректный пароль"),
+        "itIsImpossibleToStartRecording":
+            MessageLookupByLibrary.simpleMessage("Невозможно начать запись"),
+        "itIsNotPossibleToGetYourCurrentLocation":
+            MessageLookupByLibrary.simpleMessage(
+                "Невозможно получить ваше текущее местоположение"),
+        "locationServiceAreDisabled": MessageLookupByLibrary.simpleMessage(
+            "Служба геолокации отключена."),
         "logIn": MessageLookupByLibrary.simpleMessage("Войти"),
         "logInToYourAccount": MessageLookupByLibrary.simpleMessage(
             "Войдите в вашу учетную запись"),
@@ -95,6 +102,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Произошел сбой тайм-аута отправки"),
         "signOut": MessageLookupByLibrary.simpleMessage("Выйти из аккаунта"),
         "signUp": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
+        "startRecording": MessageLookupByLibrary.simpleMessage("Начать запись"),
         "takeAPhoto":
             MessageLookupByLibrary.simpleMessage("Сделать фотографию"),
         "theContinuationUrlIsNotWhitelisted":
@@ -111,11 +119,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "theUserHasBeenSuccessfullyRegistered":
             MessageLookupByLibrary.simpleMessage(
                 "Пользователь успешно зарегистрирован"),
+        "thereIsNoPermissionToDetermineTheUsersLocation":
+            MessageLookupByLibrary.simpleMessage(
+                "Нет разрешения на определение местоположения."),
         "thereIsNoPermissionToPerformThisAction":
             MessageLookupByLibrary.simpleMessage(
                 "Нет разрешения для выполнения этого действия."),
         "tooManyRequests":
             MessageLookupByLibrary.simpleMessage("Слишком много запросов"),
+        "trackingRecordNotificationBody": MessageLookupByLibrary.simpleMessage(
+            "Это необходимо для записи трекинга."),
+        "trackingRecordNotificationTitle": MessageLookupByLibrary.simpleMessage(
+            "Uniqtrack получает информацию о вашем местоположении"),
         "userHasBeenDisabled":
             MessageLookupByLibrary.simpleMessage("Пользователь был отключен"),
         "userNotFound":

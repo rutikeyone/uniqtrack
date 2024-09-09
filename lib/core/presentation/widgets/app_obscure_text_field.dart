@@ -115,7 +115,7 @@ class _AppObscureTextFieldState extends State<AppObscureTextField> {
         ),
         prefixIcon: widget.prefixIcon,
         errorText: widget.errorText,
-        errorStyle: context.textTheme.bodySmall?.copyWith(
+        errorStyle: context.primaryTextTheme.bodySmall?.copyWith(
           color: context.colorScheme.error,
         ),
         focusedErrorBorder: OutlineInputBorder(

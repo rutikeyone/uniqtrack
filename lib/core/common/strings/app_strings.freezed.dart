@@ -51,6 +51,12 @@ mixin _$AppStrings {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -87,6 +93,12 @@ mixin _$AppStrings {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -123,6 +135,12 @@ mixin _$AppStrings {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -177,6 +195,19 @@ mixin _$AppStrings {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -222,6 +253,16 @@ mixin _$AppStrings {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -266,6 +307,16 @@ mixin _$AppStrings {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -366,6 +417,12 @@ class _$AppErrorStringImpl implements _AppErrorString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return error();
   }
@@ -405,6 +462,12 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return error?.call();
   }
@@ -444,6 +507,12 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -504,6 +573,19 @@ class _$AppErrorStringImpl implements _AppErrorString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return error(this);
   }
@@ -552,6 +634,16 @@ class _$AppErrorStringImpl implements _AppErrorString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return error?.call(this);
   }
@@ -599,6 +691,16 @@ class _$AppErrorStringImpl implements _AppErrorString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -686,6 +788,12 @@ class _$AppOkayStringImpl implements _AppOkayString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return okay();
   }
@@ -725,6 +833,12 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return okay?.call();
   }
@@ -764,6 +878,12 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -824,6 +944,19 @@ class _$AppOkayStringImpl implements _AppOkayString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return okay(this);
   }
@@ -872,6 +1005,16 @@ class _$AppOkayStringImpl implements _AppOkayString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return okay?.call(this);
   }
@@ -919,6 +1062,16 @@ class _$AppOkayStringImpl implements _AppOkayString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -1009,6 +1162,12 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return errorHasOccurred();
   }
@@ -1048,6 +1207,12 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return errorHasOccurred?.call();
   }
@@ -1087,6 +1252,12 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -1147,6 +1318,19 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return errorHasOccurred(this);
   }
@@ -1195,6 +1379,16 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return errorHasOccurred?.call(this);
   }
@@ -1242,6 +1436,16 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -1332,6 +1536,12 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return invalidEmail();
   }
@@ -1371,6 +1581,12 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return invalidEmail?.call();
   }
@@ -1410,6 +1626,12 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -1470,6 +1692,19 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return invalidEmail(this);
   }
@@ -1518,6 +1753,16 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return invalidEmail?.call(this);
   }
@@ -1565,6 +1810,16 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -1656,6 +1911,12 @@ class _$$AppEmailAlreadyInUseStringImpl
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return emailAlreadyInUse();
   }
@@ -1695,6 +1956,12 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -1734,6 +2001,12 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -1794,6 +2067,19 @@ class _$$AppEmailAlreadyInUseStringImpl
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return emailAlreadyInUse(this);
   }
@@ -1842,6 +2128,16 @@ class _$$AppEmailAlreadyInUseStringImpl
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -1889,6 +2185,16 @@ class _$$AppEmailAlreadyInUseStringImpl
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -1981,6 +2287,12 @@ class _$$AppOperationNotAllowedStringImpl
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return operationNotAllowed();
   }
@@ -2020,6 +2332,12 @@ class _$$AppOperationNotAllowedStringImpl
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return operationNotAllowed?.call();
   }
@@ -2059,6 +2377,12 @@ class _$$AppOperationNotAllowedStringImpl
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -2119,6 +2443,19 @@ class _$$AppOperationNotAllowedStringImpl
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return operationNotAllowed(this);
   }
@@ -2167,6 +2504,16 @@ class _$$AppOperationNotAllowedStringImpl
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return operationNotAllowed?.call(this);
   }
@@ -2214,6 +2561,16 @@ class _$$AppOperationNotAllowedStringImpl
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -2305,6 +2662,12 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return weakPassword();
   }
@@ -2344,6 +2707,12 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return weakPassword?.call();
   }
@@ -2383,6 +2752,12 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -2443,6 +2818,19 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return weakPassword(this);
   }
@@ -2491,6 +2879,16 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return weakPassword?.call(this);
   }
@@ -2538,6 +2936,16 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -2628,6 +3036,12 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return tooManyRequests();
   }
@@ -2667,6 +3081,12 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return tooManyRequests?.call();
   }
@@ -2706,6 +3126,12 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -2766,6 +3192,19 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return tooManyRequests(this);
   }
@@ -2814,6 +3253,16 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return tooManyRequests?.call(this);
   }
@@ -2861,6 +3310,16 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -2951,6 +3410,12 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return userTokenExpired();
   }
@@ -2990,6 +3455,12 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return userTokenExpired?.call();
   }
@@ -3029,6 +3500,12 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -3089,6 +3566,19 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return userTokenExpired(this);
   }
@@ -3137,6 +3627,16 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return userTokenExpired?.call(this);
   }
@@ -3184,6 +3684,16 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -3277,6 +3787,12 @@ class _$$AppNetworkRequestsFailedStringImpl
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return networkRequestFailed();
   }
@@ -3316,6 +3832,12 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return networkRequestFailed?.call();
   }
@@ -3355,6 +3877,12 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -3415,6 +3943,19 @@ class _$$AppNetworkRequestsFailedStringImpl
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return networkRequestFailed(this);
   }
@@ -3463,6 +4004,16 @@ class _$$AppNetworkRequestsFailedStringImpl
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return networkRequestFailed?.call(this);
   }
@@ -3510,6 +4061,16 @@ class _$$AppNetworkRequestsFailedStringImpl
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -3603,6 +4164,12 @@ class _$$AppNotInternetConnectionStringImpl
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return notInternetConnection();
   }
@@ -3642,6 +4209,12 @@ class _$$AppNotInternetConnectionStringImpl
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return notInternetConnection?.call();
   }
@@ -3681,6 +4254,12 @@ class _$$AppNotInternetConnectionStringImpl
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (notInternetConnection != null) {
@@ -3741,6 +4320,19 @@ class _$$AppNotInternetConnectionStringImpl
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return notInternetConnection(this);
   }
@@ -3789,6 +4381,16 @@ class _$$AppNotInternetConnectionStringImpl
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return notInternetConnection?.call(this);
   }
@@ -3836,6 +4438,16 @@ class _$$AppNotInternetConnectionStringImpl
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (notInternetConnection != null) {
@@ -3927,6 +4539,12 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return connectTimeout();
   }
@@ -3966,6 +4584,12 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return connectTimeout?.call();
   }
@@ -4005,6 +4629,12 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -4065,6 +4695,19 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return connectTimeout(this);
   }
@@ -4113,6 +4756,16 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return connectTimeout?.call(this);
   }
@@ -4160,6 +4813,16 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -4249,6 +4912,12 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return sendTimeout();
   }
@@ -4288,6 +4957,12 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return sendTimeout?.call();
   }
@@ -4327,6 +5002,12 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -4387,6 +5068,19 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return sendTimeout(this);
   }
@@ -4435,6 +5129,16 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return sendTimeout?.call(this);
   }
@@ -4482,6 +5186,16 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -4572,6 +5286,12 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return receiveTimeout();
   }
@@ -4611,6 +5331,12 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return receiveTimeout?.call();
   }
@@ -4650,6 +5376,12 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -4710,6 +5442,19 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return receiveTimeout(this);
   }
@@ -4758,6 +5503,16 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return receiveTimeout?.call(this);
   }
@@ -4805,6 +5560,16 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -4895,6 +5660,12 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return requestCancelled();
   }
@@ -4934,6 +5705,12 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return requestCancelled?.call();
   }
@@ -4973,6 +5750,12 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (requestCancelled != null) {
@@ -5033,6 +5816,19 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return requestCancelled(this);
   }
@@ -5081,6 +5877,16 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return requestCancelled?.call(this);
   }
@@ -5128,6 +5934,16 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (requestCancelled != null) {
@@ -5219,6 +6035,12 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return badCertificate();
   }
@@ -5258,6 +6080,12 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return badCertificate?.call();
   }
@@ -5297,6 +6125,12 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (badCertificate != null) {
@@ -5357,6 +6191,19 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return badCertificate(this);
   }
@@ -5405,6 +6252,16 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return badCertificate?.call(this);
   }
@@ -5452,6 +6309,16 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (badCertificate != null) {
@@ -5541,6 +6408,12 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return badResponse();
   }
@@ -5580,6 +6453,12 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return badResponse?.call();
   }
@@ -5619,6 +6498,12 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (badResponse != null) {
@@ -5679,6 +6564,19 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return badResponse(this);
   }
@@ -5727,6 +6625,16 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return badResponse?.call(this);
   }
@@ -5774,6 +6682,16 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (badResponse != null) {
@@ -5864,6 +6782,12 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return notification();
   }
@@ -5903,6 +6827,12 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return notification?.call();
   }
@@ -5942,6 +6872,12 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (notification != null) {
@@ -6002,6 +6938,19 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return notification(this);
   }
@@ -6050,6 +6999,16 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return notification?.call(this);
   }
@@ -6097,6 +7056,16 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (notification != null) {
@@ -6192,6 +7161,12 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return theUserHasBeenSuccessfullyRegistered();
   }
@@ -6231,6 +7206,12 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return theUserHasBeenSuccessfullyRegistered?.call();
   }
@@ -6270,6 +7251,12 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (theUserHasBeenSuccessfullyRegistered != null) {
@@ -6330,6 +7317,19 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return theUserHasBeenSuccessfullyRegistered(this);
   }
@@ -6378,6 +7378,16 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return theUserHasBeenSuccessfullyRegistered?.call(this);
   }
@@ -6425,6 +7435,16 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (theUserHasBeenSuccessfullyRegistered != null) {
@@ -6517,6 +7537,12 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return userDisabled();
   }
@@ -6556,6 +7582,12 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return userDisabled?.call();
   }
@@ -6595,6 +7627,12 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -6655,6 +7693,19 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return userDisabled(this);
   }
@@ -6703,6 +7754,16 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return userDisabled?.call(this);
   }
@@ -6750,6 +7811,16 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -6840,6 +7911,12 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return userNotFound();
   }
@@ -6879,6 +7956,12 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return userNotFound?.call();
   }
@@ -6918,6 +8001,12 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -6978,6 +8067,19 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return userNotFound(this);
   }
@@ -7026,6 +8128,16 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return userNotFound?.call(this);
   }
@@ -7073,6 +8185,16 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -7163,6 +8285,12 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return wrongPassword();
   }
@@ -7202,6 +8330,12 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return wrongPassword?.call();
   }
@@ -7241,6 +8375,12 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -7301,6 +8441,19 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return wrongPassword(this);
   }
@@ -7349,6 +8502,16 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return wrongPassword?.call(this);
   }
@@ -7396,6 +8559,16 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -7487,6 +8660,12 @@ class _$$AppInvalidCredentialStringImpl
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return invalidCredential();
   }
@@ -7526,6 +8705,12 @@ class _$$AppInvalidCredentialStringImpl
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return invalidCredential?.call();
   }
@@ -7565,6 +8750,12 @@ class _$$AppInvalidCredentialStringImpl
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -7625,6 +8816,19 @@ class _$$AppInvalidCredentialStringImpl
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return invalidCredential(this);
   }
@@ -7673,6 +8877,16 @@ class _$$AppInvalidCredentialStringImpl
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return invalidCredential?.call(this);
   }
@@ -7720,6 +8934,16 @@ class _$$AppInvalidCredentialStringImpl
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -7813,6 +9037,12 @@ class _$$AppUnathorizedContinueUriStringImpl
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return unauthorizedContinueUri();
   }
@@ -7852,6 +9082,12 @@ class _$$AppUnathorizedContinueUriStringImpl
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return unauthorizedContinueUri?.call();
   }
@@ -7891,6 +9127,12 @@ class _$$AppUnathorizedContinueUriStringImpl
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (unauthorizedContinueUri != null) {
@@ -7951,6 +9193,19 @@ class _$$AppUnathorizedContinueUriStringImpl
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return unauthorizedContinueUri(this);
   }
@@ -7999,6 +9254,16 @@ class _$$AppUnathorizedContinueUriStringImpl
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return unauthorizedContinueUri?.call(this);
   }
@@ -8046,6 +9311,16 @@ class _$$AppUnathorizedContinueUriStringImpl
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (unauthorizedContinueUri != null) {
@@ -8138,6 +9413,12 @@ class _$$AppInvalidContinueUriStringImpl
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return invalidContinueUri();
   }
@@ -8177,6 +9458,12 @@ class _$$AppInvalidContinueUriStringImpl
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return invalidContinueUri?.call();
   }
@@ -8216,6 +9503,12 @@ class _$$AppInvalidContinueUriStringImpl
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (invalidContinueUri != null) {
@@ -8276,6 +9569,19 @@ class _$$AppInvalidContinueUriStringImpl
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return invalidContinueUri(this);
   }
@@ -8324,6 +9630,16 @@ class _$$AppInvalidContinueUriStringImpl
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return invalidContinueUri?.call(this);
   }
@@ -8371,6 +9687,16 @@ class _$$AppInvalidContinueUriStringImpl
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (invalidContinueUri != null) {
@@ -8463,6 +9789,12 @@ class _$$AppMissingIOSBundleIdStringImpl
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return missingIOSBundleId();
   }
@@ -8502,6 +9834,12 @@ class _$$AppMissingIOSBundleIdStringImpl
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return missingIOSBundleId?.call();
   }
@@ -8541,6 +9879,12 @@ class _$$AppMissingIOSBundleIdStringImpl
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (missingIOSBundleId != null) {
@@ -8601,6 +9945,19 @@ class _$$AppMissingIOSBundleIdStringImpl
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return missingIOSBundleId(this);
   }
@@ -8649,6 +10006,16 @@ class _$$AppMissingIOSBundleIdStringImpl
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return missingIOSBundleId?.call(this);
   }
@@ -8696,6 +10063,16 @@ class _$$AppMissingIOSBundleIdStringImpl
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (missingIOSBundleId != null) {
@@ -8788,6 +10165,12 @@ class _$$AppMissingContinueUriStringImpl
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return missingContinueUri();
   }
@@ -8827,6 +10210,12 @@ class _$$AppMissingContinueUriStringImpl
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return missingContinueUri?.call();
   }
@@ -8866,6 +10255,12 @@ class _$$AppMissingContinueUriStringImpl
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (missingContinueUri != null) {
@@ -8926,6 +10321,19 @@ class _$$AppMissingContinueUriStringImpl
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return missingContinueUri(this);
   }
@@ -8974,6 +10382,16 @@ class _$$AppMissingContinueUriStringImpl
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return missingContinueUri?.call(this);
   }
@@ -9021,6 +10439,16 @@ class _$$AppMissingContinueUriStringImpl
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (missingContinueUri != null) {
@@ -9114,6 +10542,12 @@ class _$$AppMissingAndroidPkgNameStringImpl
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return missingAndroidPkgName();
   }
@@ -9153,6 +10587,12 @@ class _$$AppMissingAndroidPkgNameStringImpl
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return missingAndroidPkgName?.call();
   }
@@ -9192,6 +10632,12 @@ class _$$AppMissingAndroidPkgNameStringImpl
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (missingAndroidPkgName != null) {
@@ -9252,6 +10698,19 @@ class _$$AppMissingAndroidPkgNameStringImpl
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return missingAndroidPkgName(this);
   }
@@ -9300,6 +10759,16 @@ class _$$AppMissingAndroidPkgNameStringImpl
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return missingAndroidPkgName?.call(this);
   }
@@ -9347,6 +10816,16 @@ class _$$AppMissingAndroidPkgNameStringImpl
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (missingAndroidPkgName != null) {
@@ -9450,6 +10929,12 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress();
   }
@@ -9489,6 +10974,12 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress?.call();
   }
@@ -9528,6 +11019,12 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (thePasswordHasBeenSentToTheSpecifiedEmailAddress != null) {
@@ -9588,6 +11085,19 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress(this);
   }
@@ -9636,6 +11146,16 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress?.call(this);
   }
@@ -9683,6 +11203,16 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (thePasswordHasBeenSentToTheSpecifiedEmailAddress != null) {
@@ -9777,6 +11307,12 @@ class _$$AppNoPermissionToPerformStringImpl
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return noPermissionToPerform();
   }
@@ -9816,6 +11352,12 @@ class _$$AppNoPermissionToPerformStringImpl
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return noPermissionToPerform?.call();
   }
@@ -9855,6 +11397,12 @@ class _$$AppNoPermissionToPerformStringImpl
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (noPermissionToPerform != null) {
@@ -9915,6 +11463,19 @@ class _$$AppNoPermissionToPerformStringImpl
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return noPermissionToPerform(this);
   }
@@ -9963,6 +11524,16 @@ class _$$AppNoPermissionToPerformStringImpl
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return noPermissionToPerform?.call(this);
   }
@@ -10010,6 +11581,16 @@ class _$$AppNoPermissionToPerformStringImpl
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (noPermissionToPerform != null) {
@@ -10098,6 +11679,12 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return prohibit();
   }
@@ -10137,6 +11724,12 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return prohibit?.call();
   }
@@ -10176,6 +11769,12 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (prohibit != null) {
@@ -10236,6 +11835,19 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return prohibit(this);
   }
@@ -10284,6 +11896,16 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return prohibit?.call(this);
   }
@@ -10331,6 +11953,16 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (prohibit != null) {
@@ -10418,6 +12050,12 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     required TResult Function() noPermissionToPerform,
     required TResult Function() prohibit,
     required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
   }) {
     return allow();
   }
@@ -10457,6 +12095,12 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     TResult? Function()? noPermissionToPerform,
     TResult? Function()? prohibit,
     TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
   }) {
     return allow?.call();
   }
@@ -10496,6 +12140,12 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     TResult Function()? noPermissionToPerform,
     TResult Function()? prohibit,
     TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (allow != null) {
@@ -10556,6 +12206,19 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
         noPermissionToPerform,
     required TResult Function(_$AppProhibitString value) prohibit,
     required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
   }) {
     return allow(this);
   }
@@ -10604,6 +12267,16 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
         noPermissionToPerform,
     TResult? Function(_$AppProhibitString value)? prohibit,
     TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
   }) {
     return allow?.call(this);
   }
@@ -10651,6 +12324,16 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
         noPermissionToPerform,
     TResult Function(_$AppProhibitString value)? prohibit,
     TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
     required TResult orElse(),
   }) {
     if (allow != null) {
@@ -10662,4 +12345,2271 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
 
 abstract class _$AppAllowString implements AppStrings {
   const factory _$AppAllowString() = _$$AppAllowStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppServiceDeniedStringImplCopyWith<$Res> {
+  factory _$$$AppServiceDeniedStringImplCopyWith(
+          _$$AppServiceDeniedStringImpl value,
+          $Res Function(_$$AppServiceDeniedStringImpl) then) =
+      __$$$AppServiceDeniedStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppServiceDeniedStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppServiceDeniedStringImpl>
+    implements _$$$AppServiceDeniedStringImplCopyWith<$Res> {
+  __$$$AppServiceDeniedStringImplCopyWithImpl(
+      _$$AppServiceDeniedStringImpl _value,
+      $Res Function(_$$AppServiceDeniedStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
+  const _$$AppServiceDeniedStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.serviceDenied()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppServiceDeniedStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+  }) {
+    return serviceDenied();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+  }) {
+    return serviceDenied?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    required TResult orElse(),
+  }) {
+    if (serviceDenied != null) {
+      return serviceDenied();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+  }) {
+    return serviceDenied(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+  }) {
+    return serviceDenied?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    required TResult orElse(),
+  }) {
+    if (serviceDenied != null) {
+      return serviceDenied(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppServiceDeniedString implements AppStrings {
+  const factory _$AppServiceDeniedString() = _$$AppServiceDeniedStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppNoPermissionDeterminateUserLocationStringImplCopyWith<
+    $Res> {
+  factory _$$$AppNoPermissionDeterminateUserLocationStringImplCopyWith(
+          _$$AppNoPermissionDeterminateUserLocationStringImpl value,
+          $Res Function(_$$AppNoPermissionDeterminateUserLocationStringImpl)
+              then) =
+      __$$$AppNoPermissionDeterminateUserLocationStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppNoPermissionDeterminateUserLocationStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res,
+        _$$AppNoPermissionDeterminateUserLocationStringImpl>
+    implements
+        _$$$AppNoPermissionDeterminateUserLocationStringImplCopyWith<$Res> {
+  __$$$AppNoPermissionDeterminateUserLocationStringImplCopyWithImpl(
+      _$$AppNoPermissionDeterminateUserLocationStringImpl _value,
+      $Res Function(_$$AppNoPermissionDeterminateUserLocationStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppNoPermissionDeterminateUserLocationStringImpl
+    implements _$AppNoPermissionDeterminateUserLocationString {
+  const _$$AppNoPermissionDeterminateUserLocationStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.noPermissionDetermineUserLocation()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppNoPermissionDeterminateUserLocationStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+  }) {
+    return noPermissionDetermineUserLocation();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+  }) {
+    return noPermissionDetermineUserLocation?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    required TResult orElse(),
+  }) {
+    if (noPermissionDetermineUserLocation != null) {
+      return noPermissionDetermineUserLocation();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+  }) {
+    return noPermissionDetermineUserLocation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+  }) {
+    return noPermissionDetermineUserLocation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    required TResult orElse(),
+  }) {
+    if (noPermissionDetermineUserLocation != null) {
+      return noPermissionDetermineUserLocation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppNoPermissionDeterminateUserLocationString
+    implements AppStrings {
+  const factory _$AppNoPermissionDeterminateUserLocationString() =
+      _$$AppNoPermissionDeterminateUserLocationStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppCantStartRecordingStringImplCopyWith<$Res> {
+  factory _$$$AppCantStartRecordingStringImplCopyWith(
+          _$$AppCantStartRecordingStringImpl value,
+          $Res Function(_$$AppCantStartRecordingStringImpl) then) =
+      __$$$AppCantStartRecordingStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppCantStartRecordingStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppCantStartRecordingStringImpl>
+    implements _$$$AppCantStartRecordingStringImplCopyWith<$Res> {
+  __$$$AppCantStartRecordingStringImplCopyWithImpl(
+      _$$AppCantStartRecordingStringImpl _value,
+      $Res Function(_$$AppCantStartRecordingStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppCantStartRecordingStringImpl
+    implements _$AppCantStartRecordingString {
+  const _$$AppCantStartRecordingStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.cantStartRecording()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppCantStartRecordingStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+  }) {
+    return cantStartRecording();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+  }) {
+    return cantStartRecording?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    required TResult orElse(),
+  }) {
+    if (cantStartRecording != null) {
+      return cantStartRecording();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+  }) {
+    return cantStartRecording(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+  }) {
+    return cantStartRecording?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    required TResult orElse(),
+  }) {
+    if (cantStartRecording != null) {
+      return cantStartRecording(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppCantStartRecordingString implements AppStrings {
+  const factory _$AppCantStartRecordingString() =
+      _$$AppCantStartRecordingStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppStringsCantGetYourCurrentLocationStringImplCopyWith<
+    $Res> {
+  factory _$$$AppStringsCantGetYourCurrentLocationStringImplCopyWith(
+          _$$AppStringsCantGetYourCurrentLocationStringImpl value,
+          $Res Function(_$$AppStringsCantGetYourCurrentLocationStringImpl)
+              then) =
+      __$$$AppStringsCantGetYourCurrentLocationStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppStringsCantGetYourCurrentLocationStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res,
+        _$$AppStringsCantGetYourCurrentLocationStringImpl>
+    implements
+        _$$$AppStringsCantGetYourCurrentLocationStringImplCopyWith<$Res> {
+  __$$$AppStringsCantGetYourCurrentLocationStringImplCopyWithImpl(
+      _$$AppStringsCantGetYourCurrentLocationStringImpl _value,
+      $Res Function(_$$AppStringsCantGetYourCurrentLocationStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppStringsCantGetYourCurrentLocationStringImpl
+    implements _$AppStringsCantGetYourCurrentLocationString {
+  const _$$AppStringsCantGetYourCurrentLocationStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.cantGetYourCurrentLocation()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppStringsCantGetYourCurrentLocationStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+  }) {
+    return cantGetYourCurrentLocation();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+  }) {
+    return cantGetYourCurrentLocation?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    required TResult orElse(),
+  }) {
+    if (cantGetYourCurrentLocation != null) {
+      return cantGetYourCurrentLocation();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+  }) {
+    return cantGetYourCurrentLocation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+  }) {
+    return cantGetYourCurrentLocation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    required TResult orElse(),
+  }) {
+    if (cantGetYourCurrentLocation != null) {
+      return cantGetYourCurrentLocation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppStringsCantGetYourCurrentLocationString
+    implements AppStrings {
+  const factory _$AppStringsCantGetYourCurrentLocationString() =
+      _$$AppStringsCantGetYourCurrentLocationStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppTrackingRecordNotificationTitleStringImplCopyWith<$Res> {
+  factory _$$$AppTrackingRecordNotificationTitleStringImplCopyWith(
+          _$$AppTrackingRecordNotificationTitleStringImpl value,
+          $Res Function(_$$AppTrackingRecordNotificationTitleStringImpl) then) =
+      __$$$AppTrackingRecordNotificationTitleStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppTrackingRecordNotificationTitleStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res,
+        _$$AppTrackingRecordNotificationTitleStringImpl>
+    implements _$$$AppTrackingRecordNotificationTitleStringImplCopyWith<$Res> {
+  __$$$AppTrackingRecordNotificationTitleStringImplCopyWithImpl(
+      _$$AppTrackingRecordNotificationTitleStringImpl _value,
+      $Res Function(_$$AppTrackingRecordNotificationTitleStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppTrackingRecordNotificationTitleStringImpl
+    implements _$AppTrackingRecordNotificationTitleString {
+  const _$$AppTrackingRecordNotificationTitleStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.trackingRecordNotificationTitle()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppTrackingRecordNotificationTitleStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+  }) {
+    return trackingRecordNotificationTitle();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+  }) {
+    return trackingRecordNotificationTitle?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    required TResult orElse(),
+  }) {
+    if (trackingRecordNotificationTitle != null) {
+      return trackingRecordNotificationTitle();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+  }) {
+    return trackingRecordNotificationTitle(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+  }) {
+    return trackingRecordNotificationTitle?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    required TResult orElse(),
+  }) {
+    if (trackingRecordNotificationTitle != null) {
+      return trackingRecordNotificationTitle(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppTrackingRecordNotificationTitleString
+    implements AppStrings {
+  const factory _$AppTrackingRecordNotificationTitleString() =
+      _$$AppTrackingRecordNotificationTitleStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppTrackingRecordNotificationBodyStringImplCopyWith<$Res> {
+  factory _$$$AppTrackingRecordNotificationBodyStringImplCopyWith(
+          _$$AppTrackingRecordNotificationBodyStringImpl value,
+          $Res Function(_$$AppTrackingRecordNotificationBodyStringImpl) then) =
+      __$$$AppTrackingRecordNotificationBodyStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppTrackingRecordNotificationBodyStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res,
+        _$$AppTrackingRecordNotificationBodyStringImpl>
+    implements _$$$AppTrackingRecordNotificationBodyStringImplCopyWith<$Res> {
+  __$$$AppTrackingRecordNotificationBodyStringImplCopyWithImpl(
+      _$$AppTrackingRecordNotificationBodyStringImpl _value,
+      $Res Function(_$$AppTrackingRecordNotificationBodyStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppTrackingRecordNotificationBodyStringImpl
+    implements _$AppTrackingRecordNotificationBodyString {
+  const _$$AppTrackingRecordNotificationBodyStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.trackingRecordNotificationBody()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppTrackingRecordNotificationBodyStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+  }) {
+    return trackingRecordNotificationBody();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+  }) {
+    return trackingRecordNotificationBody?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    required TResult orElse(),
+  }) {
+    if (trackingRecordNotificationBody != null) {
+      return trackingRecordNotificationBody();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+  }) {
+    return trackingRecordNotificationBody(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+  }) {
+    return trackingRecordNotificationBody?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    required TResult orElse(),
+  }) {
+    if (trackingRecordNotificationBody != null) {
+      return trackingRecordNotificationBody(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppTrackingRecordNotificationBodyString implements AppStrings {
+  const factory _$AppTrackingRecordNotificationBodyString() =
+      _$$AppTrackingRecordNotificationBodyStringImpl;
 }

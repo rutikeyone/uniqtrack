@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:formz/formz.dart';
 import 'package:mobx/mobx.dart';
 import 'package:uniqtrack/app/app_state/domain/auth_state_changes_use_case.dart';
@@ -22,7 +23,7 @@ import 'package:uniqtrack/features/register/presentation/stores/state/image_pick
 part 'register_store.g.dart';
 
 abstract interface class RegisterStoreBuilder {
-  RegisterStore create();
+  RegisterStore create(BuildContext context);
 }
 
 class RegisterStore = _RegisterStore with _$RegisterStore;

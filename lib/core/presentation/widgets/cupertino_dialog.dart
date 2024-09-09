@@ -23,10 +23,10 @@ class CupertinoDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final headerTextStyle =
-        context.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600);
+        context.primaryTextTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600);
     final bodyTextStyle =
-        context.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w500);
-    final actionTextStyle = context.textTheme.bodyMedium;
+        context.primaryTextTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w500);
+    final actionTextStyle = context.primaryTextTheme.bodyMedium;
 
     return CupertinoAlertDialog(
       title: Text(

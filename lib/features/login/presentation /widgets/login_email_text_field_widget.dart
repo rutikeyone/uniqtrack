@@ -14,7 +14,7 @@ class _LoginEmailTextFieldWidget extends StatelessWidget {
       child: Observer(builder: (context) {
         return AppTextField(
           hintText: S.of(context).enterYourEmail,
-          style: context.textTheme.bodyLarge,
+          style: context.primaryTextTheme.bodyLarge,
           onChanged: store.updateEmail,
           errorText: ValidationToolkit.validateEmail(store.emailState, context),
           suffixIcon: UnconstrainedBox(

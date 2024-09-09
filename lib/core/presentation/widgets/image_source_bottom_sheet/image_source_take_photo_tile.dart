@@ -4,7 +4,6 @@ class _ImageSourceTakePhotoTile extends StatelessWidget {
   final VoidCallback onPressed;
 
   const _ImageSourceTakePhotoTile({
-    super.key,
     required this.onPressed,
   });
 
@@ -25,7 +24,7 @@ class _ImageSourceTakePhotoTile extends StatelessWidget {
           ),
           child: Text(
             S.of(context).takeAPhoto,
-            style: context.textTheme.displaySmall?.copyWith(
+            style: context.primaryTextTheme.displaySmall?.copyWith(
               color: context.colorScheme.onSecondary,
             ),
             maxLines: 1,

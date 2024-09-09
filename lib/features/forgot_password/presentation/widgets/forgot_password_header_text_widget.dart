@@ -10,7 +10,7 @@ class _ForgotPasswordHeaderTextWidget extends StatelessWidget {
     return Center(
       child: Text(
         S.of(context).enterYourPasswordRecoveryEmail,
-        style: context.textTheme.displayLarge,
+        style: context.primaryTextTheme.displayLarge,
       ),
     );
   }

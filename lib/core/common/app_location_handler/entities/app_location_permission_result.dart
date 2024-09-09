@@ -7,8 +7,8 @@ class AppLocationPermissionResult with _$AppLocationPermissionResult {
   const AppLocationPermissionResult._();
 
   const factory AppLocationPermissionResult.success() =
-      _AppLocationPermissionSuccessResult;
-  const factory AppLocationPermissionResult.serviceDisabled() = _AppLocationPermissionServiceDeniedResult;
-  const factory AppLocationPermissionResult.permissionDenied() = _AppLocationPermissionDeniedResult;
-  const factory AppLocationPermissionResult.permissionDeniedForever() = _AppLocationPermissionDeniedForeverResult;
+      AppLocationPermissionSuccessResult;
+  const factory AppLocationPermissionResult.serviceDisabled() = AppLocationPermissionServiceDeniedResult;
+  const factory AppLocationPermissionResult.permissionDenied() = AppLocationPermissionDeniedResult;
+  const factory AppLocationPermissionResult.permissionDeniedForever() = AppLocationPermissionDeniedForeverResult;
 }

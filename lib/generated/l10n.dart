@@ -609,6 +609,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Start recording`
+  String get startRecording {
+    return Intl.message(
+      'Start recording',
+      name: 'startRecording',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location service are disabled.`
+  String get locationServiceAreDisabled {
+    return Intl.message(
+      'Location service are disabled.',
+      name: 'locationServiceAreDisabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There is no permission to determine the location.`
+  String get thereIsNoPermissionToDetermineTheUsersLocation {
+    return Intl.message(
+      'There is no permission to determine the location.',
+      name: 'thereIsNoPermissionToDetermineTheUsersLocation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It is impossible to start recording`
+  String get itIsImpossibleToStartRecording {
+    return Intl.message(
+      'It is impossible to start recording',
+      name: 'itIsImpossibleToStartRecording',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It is not possible to get your current location`
+  String get itIsNotPossibleToGetYourCurrentLocation {
+    return Intl.message(
+      'It is not possible to get your current location',
+      name: 'itIsNotPossibleToGetYourCurrentLocation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Uniqtrack receives information about your location`
+  String get trackingRecordNotificationTitle {
+    return Intl.message(
+      'Uniqtrack receives information about your location',
+      name: 'trackingRecordNotificationTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This is necessary for tracking records`
+  String get trackingRecordNotificationBody {
+    return Intl.message(
+      'This is necessary for tracking records',
+      name: 'trackingRecordNotificationBody',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

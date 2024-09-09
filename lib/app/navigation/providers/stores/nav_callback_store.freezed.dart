@@ -15,6 +15,148 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
+mixin _$ForgotPasswordNavCallbackStore {
+  VoidCallback get navigateBack => throw _privateConstructorUsedError;
+
+  /// Create a copy of ForgotPasswordNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $ForgotPasswordNavCallbackStoreCopyWith<ForgotPasswordNavCallbackStore>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ForgotPasswordNavCallbackStoreCopyWith<$Res> {
+  factory $ForgotPasswordNavCallbackStoreCopyWith(
+          ForgotPasswordNavCallbackStore value,
+          $Res Function(ForgotPasswordNavCallbackStore) then) =
+      _$ForgotPasswordNavCallbackStoreCopyWithImpl<$Res,
+          ForgotPasswordNavCallbackStore>;
+  @useResult
+  $Res call({VoidCallback navigateBack});
+}
+
+/// @nodoc
+class _$ForgotPasswordNavCallbackStoreCopyWithImpl<$Res,
+        $Val extends ForgotPasswordNavCallbackStore>
+    implements $ForgotPasswordNavCallbackStoreCopyWith<$Res> {
+  _$ForgotPasswordNavCallbackStoreCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of ForgotPasswordNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? navigateBack = null,
+  }) {
+    return _then(_value.copyWith(
+      navigateBack: null == navigateBack
+          ? _value.navigateBack
+          : navigateBack // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ForgotPasswordNavCallbackStoreImplCopyWith<$Res>
+    implements $ForgotPasswordNavCallbackStoreCopyWith<$Res> {
+  factory _$$ForgotPasswordNavCallbackStoreImplCopyWith(
+          _$ForgotPasswordNavCallbackStoreImpl value,
+          $Res Function(_$ForgotPasswordNavCallbackStoreImpl) then) =
+      __$$ForgotPasswordNavCallbackStoreImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({VoidCallback navigateBack});
+}
+
+/// @nodoc
+class __$$ForgotPasswordNavCallbackStoreImplCopyWithImpl<$Res>
+    extends _$ForgotPasswordNavCallbackStoreCopyWithImpl<$Res,
+        _$ForgotPasswordNavCallbackStoreImpl>
+    implements _$$ForgotPasswordNavCallbackStoreImplCopyWith<$Res> {
+  __$$ForgotPasswordNavCallbackStoreImplCopyWithImpl(
+      _$ForgotPasswordNavCallbackStoreImpl _value,
+      $Res Function(_$ForgotPasswordNavCallbackStoreImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ForgotPasswordNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? navigateBack = null,
+  }) {
+    return _then(_$ForgotPasswordNavCallbackStoreImpl(
+      navigateBack: null == navigateBack
+          ? _value.navigateBack
+          : navigateBack // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ForgotPasswordNavCallbackStoreImpl
+    implements _ForgotPasswordNavCallbackStore {
+  const _$ForgotPasswordNavCallbackStoreImpl({required this.navigateBack});
+
+  @override
+  final VoidCallback navigateBack;
+
+  @override
+  String toString() {
+    return 'ForgotPasswordNavCallbackStore(navigateBack: $navigateBack)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ForgotPasswordNavCallbackStoreImpl &&
+            (identical(other.navigateBack, navigateBack) ||
+                other.navigateBack == navigateBack));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, navigateBack);
+
+  /// Create a copy of ForgotPasswordNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ForgotPasswordNavCallbackStoreImplCopyWith<
+          _$ForgotPasswordNavCallbackStoreImpl>
+      get copyWith => __$$ForgotPasswordNavCallbackStoreImplCopyWithImpl<
+          _$ForgotPasswordNavCallbackStoreImpl>(this, _$identity);
+}
+
+abstract class _ForgotPasswordNavCallbackStore
+    implements ForgotPasswordNavCallbackStore {
+  const factory _ForgotPasswordNavCallbackStore(
+          {required final VoidCallback navigateBack}) =
+      _$ForgotPasswordNavCallbackStoreImpl;
+
+  @override
+  VoidCallback get navigateBack;
+
+  /// Create a copy of ForgotPasswordNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ForgotPasswordNavCallbackStoreImplCopyWith<
+          _$ForgotPasswordNavCallbackStoreImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$LoginNavCallbackStore {
   VoidCallback get navigateToRegister => throw _privateConstructorUsedError;
   dynamic Function(String) get navigateToForgotPassword =>
@@ -313,87 +455,86 @@ abstract class _RegisterNavCallbackStore implements RegisterNavCallbackStore {
 }
 
 /// @nodoc
-mixin _$ForgotPasswordNavCallbackStore {
-  VoidCallback get navigateBack => throw _privateConstructorUsedError;
+mixin _$CommunityNavCallbackStore {
+  VoidCallback get navigateToTrackTracking =>
+      throw _privateConstructorUsedError;
 
-  /// Create a copy of ForgotPasswordNavCallbackStore
+  /// Create a copy of CommunityNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ForgotPasswordNavCallbackStoreCopyWith<ForgotPasswordNavCallbackStore>
-      get copyWith => throw _privateConstructorUsedError;
+  $CommunityNavCallbackStoreCopyWith<CommunityNavCallbackStore> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ForgotPasswordNavCallbackStoreCopyWith<$Res> {
-  factory $ForgotPasswordNavCallbackStoreCopyWith(
-          ForgotPasswordNavCallbackStore value,
-          $Res Function(ForgotPasswordNavCallbackStore) then) =
-      _$ForgotPasswordNavCallbackStoreCopyWithImpl<$Res,
-          ForgotPasswordNavCallbackStore>;
+abstract class $CommunityNavCallbackStoreCopyWith<$Res> {
+  factory $CommunityNavCallbackStoreCopyWith(CommunityNavCallbackStore value,
+          $Res Function(CommunityNavCallbackStore) then) =
+      _$CommunityNavCallbackStoreCopyWithImpl<$Res, CommunityNavCallbackStore>;
   @useResult
-  $Res call({VoidCallback navigateBack});
+  $Res call({VoidCallback navigateToTrackTracking});
 }
 
 /// @nodoc
-class _$ForgotPasswordNavCallbackStoreCopyWithImpl<$Res,
-        $Val extends ForgotPasswordNavCallbackStore>
-    implements $ForgotPasswordNavCallbackStoreCopyWith<$Res> {
-  _$ForgotPasswordNavCallbackStoreCopyWithImpl(this._value, this._then);
+class _$CommunityNavCallbackStoreCopyWithImpl<$Res,
+        $Val extends CommunityNavCallbackStore>
+    implements $CommunityNavCallbackStoreCopyWith<$Res> {
+  _$CommunityNavCallbackStoreCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ForgotPasswordNavCallbackStore
+  /// Create a copy of CommunityNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? navigateBack = null,
+    Object? navigateToTrackTracking = null,
   }) {
     return _then(_value.copyWith(
-      navigateBack: null == navigateBack
-          ? _value.navigateBack
-          : navigateBack // ignore: cast_nullable_to_non_nullable
+      navigateToTrackTracking: null == navigateToTrackTracking
+          ? _value.navigateToTrackTracking
+          : navigateToTrackTracking // ignore: cast_nullable_to_non_nullable
               as VoidCallback,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$ForgotPasswordNavCallbackStoreImplCopyWith<$Res>
-    implements $ForgotPasswordNavCallbackStoreCopyWith<$Res> {
-  factory _$$ForgotPasswordNavCallbackStoreImplCopyWith(
-          _$ForgotPasswordNavCallbackStoreImpl value,
-          $Res Function(_$ForgotPasswordNavCallbackStoreImpl) then) =
-      __$$ForgotPasswordNavCallbackStoreImplCopyWithImpl<$Res>;
+abstract class _$$CommunityNavCallbackStoreImplCopyWith<$Res>
+    implements $CommunityNavCallbackStoreCopyWith<$Res> {
+  factory _$$CommunityNavCallbackStoreImplCopyWith(
+          _$CommunityNavCallbackStoreImpl value,
+          $Res Function(_$CommunityNavCallbackStoreImpl) then) =
+      __$$CommunityNavCallbackStoreImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({VoidCallback navigateBack});
+  $Res call({VoidCallback navigateToTrackTracking});
 }
 
 /// @nodoc
-class __$$ForgotPasswordNavCallbackStoreImplCopyWithImpl<$Res>
-    extends _$ForgotPasswordNavCallbackStoreCopyWithImpl<$Res,
-        _$ForgotPasswordNavCallbackStoreImpl>
-    implements _$$ForgotPasswordNavCallbackStoreImplCopyWith<$Res> {
-  __$$ForgotPasswordNavCallbackStoreImplCopyWithImpl(
-      _$ForgotPasswordNavCallbackStoreImpl _value,
-      $Res Function(_$ForgotPasswordNavCallbackStoreImpl) _then)
+class __$$CommunityNavCallbackStoreImplCopyWithImpl<$Res>
+    extends _$CommunityNavCallbackStoreCopyWithImpl<$Res,
+        _$CommunityNavCallbackStoreImpl>
+    implements _$$CommunityNavCallbackStoreImplCopyWith<$Res> {
+  __$$CommunityNavCallbackStoreImplCopyWithImpl(
+      _$CommunityNavCallbackStoreImpl _value,
+      $Res Function(_$CommunityNavCallbackStoreImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ForgotPasswordNavCallbackStore
+  /// Create a copy of CommunityNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? navigateBack = null,
+    Object? navigateToTrackTracking = null,
   }) {
-    return _then(_$ForgotPasswordNavCallbackStoreImpl(
-      navigateBack: null == navigateBack
-          ? _value.navigateBack
-          : navigateBack // ignore: cast_nullable_to_non_nullable
+    return _then(_$CommunityNavCallbackStoreImpl(
+      navigateToTrackTracking: null == navigateToTrackTracking
+          ? _value.navigateToTrackTracking
+          : navigateToTrackTracking // ignore: cast_nullable_to_non_nullable
               as VoidCallback,
     ));
   }
@@ -401,55 +542,53 @@ class __$$ForgotPasswordNavCallbackStoreImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ForgotPasswordNavCallbackStoreImpl
-    implements _ForgotPasswordNavCallbackStore {
-  const _$ForgotPasswordNavCallbackStoreImpl({required this.navigateBack});
+class _$CommunityNavCallbackStoreImpl implements _CommunityNavCallbackStore {
+  const _$CommunityNavCallbackStoreImpl(
+      {required this.navigateToTrackTracking});
 
   @override
-  final VoidCallback navigateBack;
+  final VoidCallback navigateToTrackTracking;
 
   @override
   String toString() {
-    return 'ForgotPasswordNavCallbackStore(navigateBack: $navigateBack)';
+    return 'CommunityNavCallbackStore(navigateToTrackTracking: $navigateToTrackTracking)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ForgotPasswordNavCallbackStoreImpl &&
-            (identical(other.navigateBack, navigateBack) ||
-                other.navigateBack == navigateBack));
+            other is _$CommunityNavCallbackStoreImpl &&
+            (identical(
+                    other.navigateToTrackTracking, navigateToTrackTracking) ||
+                other.navigateToTrackTracking == navigateToTrackTracking));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, navigateBack);
+  int get hashCode => Object.hash(runtimeType, navigateToTrackTracking);
 
-  /// Create a copy of ForgotPasswordNavCallbackStore
+  /// Create a copy of CommunityNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ForgotPasswordNavCallbackStoreImplCopyWith<
-          _$ForgotPasswordNavCallbackStoreImpl>
-      get copyWith => __$$ForgotPasswordNavCallbackStoreImplCopyWithImpl<
-          _$ForgotPasswordNavCallbackStoreImpl>(this, _$identity);
+  _$$CommunityNavCallbackStoreImplCopyWith<_$CommunityNavCallbackStoreImpl>
+      get copyWith => __$$CommunityNavCallbackStoreImplCopyWithImpl<
+          _$CommunityNavCallbackStoreImpl>(this, _$identity);
 }
 
-abstract class _ForgotPasswordNavCallbackStore
-    implements ForgotPasswordNavCallbackStore {
-  const factory _ForgotPasswordNavCallbackStore(
-          {required final VoidCallback navigateBack}) =
-      _$ForgotPasswordNavCallbackStoreImpl;
+abstract class _CommunityNavCallbackStore implements CommunityNavCallbackStore {
+  const factory _CommunityNavCallbackStore(
+          {required final VoidCallback navigateToTrackTracking}) =
+      _$CommunityNavCallbackStoreImpl;
 
   @override
-  VoidCallback get navigateBack;
+  VoidCallback get navigateToTrackTracking;
 
-  /// Create a copy of ForgotPasswordNavCallbackStore
+  /// Create a copy of CommunityNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ForgotPasswordNavCallbackStoreImplCopyWith<
-          _$ForgotPasswordNavCallbackStoreImpl>
+  _$$CommunityNavCallbackStoreImplCopyWith<_$CommunityNavCallbackStoreImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

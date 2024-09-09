@@ -4,7 +4,6 @@ class _ImageSourceChooseFromGalleryTile extends StatelessWidget {
   final VoidCallback onPressed;
 
   const _ImageSourceChooseFromGalleryTile({
-    super.key,
     required this.onPressed,
   });
 
@@ -20,7 +19,7 @@ class _ImageSourceChooseFromGalleryTile extends StatelessWidget {
         alignment: Alignment.center,
         child: Text(
           S.of(context).chooseFromTheLibrary,
-          style: context.textTheme.displaySmall?.copyWith(
+          style: context.primaryTextTheme.displaySmall?.copyWith(
             color: context.colorScheme.onSecondary,
           ),
           maxLines: 1,

@@ -20,6 +20,7 @@ class AppDiments {
   static const dm64 = 64.0;
   static const dm75 = 75.0;
   static const dm76 = 76.0;
+  static const dm84 = 84.0;
   static const dm128 = 128.0;
   static const dm164 = 164.0;
   static const dm262 = 262.0;
