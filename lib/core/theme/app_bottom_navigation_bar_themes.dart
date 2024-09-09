@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:uniqtrack/core/theme/app_colors.dart';
-import 'package:uniqtrack/core/theme/app_text_theme.dart';
+import 'package:uniqtrack/core/theme/app_primary_text_theme.dart';
 
 class AppBottomNavigationBarTheme {
   static final light = BottomNavigationBarThemeData(
-    selectedLabelStyle: AppTextThemes.light.bodySmall?.copyWith(
+    selectedLabelStyle: AppPrimaryTextThemes.light.bodySmall?.copyWith(
       color: AppColors.onSecondary,
     ),
-    unselectedLabelStyle: AppTextThemes.light.bodySmall,
+    unselectedLabelStyle: AppPrimaryTextThemes.light.bodySmall,
     selectedItemColor: AppColors.onSecondary,
     unselectedItemColor: AppColors.black,
   );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uniqtrack/core/theme/app_text_styles.dart';
 
-class AppTextThemes {
+class AppPrimaryTextThemes {
   static TextTheme get light {
     return TextTheme(
       displayLarge: AppTextStyles.h1,
