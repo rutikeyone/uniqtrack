@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "aContinueUrlMustBeProvidedInTheRequest":
             MessageLookupByLibrary.simpleMessage(
                 "В запросе должен быть указан URL-адрес продолжения"),
+        "addMemory": MessageLookupByLibrary.simpleMessage("Add memory"),
         "allow": MessageLookupByLibrary.simpleMessage("Разрешить"),
         "anAndroidPackageNameMustBeProvidedIfTheAndroid":
             MessageLookupByLibrary.simpleMessage(
@@ -38,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Произошла ошибка в приложении!"),
         "anIosBundleIdMustBeProvidedIfAnApp": MessageLookupByLibrary.simpleMessage(
             "Если указан идентификатор магазина приложений, необходимо указать идентификатор пакета iOS"),
+        "averageSpeed":
+            MessageLookupByLibrary.simpleMessage("Средняя скорость"),
         "back": MessageLookupByLibrary.simpleMessage("Назад"),
         "cancel": MessageLookupByLibrary.simpleMessage("Назад"),
         "checkYourInternetConnectionAndTryAgain":
@@ -52,6 +55,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "createAnAccount": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
+        "doYouWantToFinishRecordingTheTrack":
+            MessageLookupByLibrary.simpleMessage(
+                "Вы хотите закончить запись трека?"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "Электронная почта уже используется"),
         "enterYourEmail":
@@ -92,10 +98,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "okay": MessageLookupByLibrary.simpleMessage("Хорошо"),
         "operation_not_allowed":
             MessageLookupByLibrary.simpleMessage("Операция запрещена"),
+        "pause": MessageLookupByLibrary.simpleMessage("Пауза"),
         "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
         "prohibit": MessageLookupByLibrary.simpleMessage("Запретить"),
         "receiveTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
             "Произошел сбой тайм-аута приема"),
+        "routeLength": MessageLookupByLibrary.simpleMessage("Расстояние"),
+        "save": MessageLookupByLibrary.simpleMessage("Сохранить"),
         "sendPassword":
             MessageLookupByLibrary.simpleMessage("Отправить пароль"),
         "sendTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
@@ -103,6 +112,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "signOut": MessageLookupByLibrary.simpleMessage("Выйти из аккаунта"),
         "signUp": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
         "startRecording": MessageLookupByLibrary.simpleMessage("Начать запись"),
+        "stop": MessageLookupByLibrary.simpleMessage(" Остановить"),
         "takeAPhoto":
             MessageLookupByLibrary.simpleMessage("Сделать фотографию"),
         "theContinuationUrlIsNotWhitelisted":
@@ -125,6 +135,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "thereIsNoPermissionToPerformThisAction":
             MessageLookupByLibrary.simpleMessage(
                 "Нет разрешения для выполнения этого действия."),
+        "time": MessageLookupByLibrary.simpleMessage("Время"),
+        "toContinue": MessageLookupByLibrary.simpleMessage("Continue"),
         "tooManyRequests":
             MessageLookupByLibrary.simpleMessage("Слишком много запросов"),
         "trackingRecordNotificationBody": MessageLookupByLibrary.simpleMessage(

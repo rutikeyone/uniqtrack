@@ -6,4 +6,6 @@ part 'record_track_state.dart';
 part 'record_track_permission_state.dart';
 part 'user_location_state.dart';
 part 'record_track_actions.dart';
+part 'record_track_status_state.dart';
+part 'record_track_mode_state.dart';
 part 'states.freezed.dart';

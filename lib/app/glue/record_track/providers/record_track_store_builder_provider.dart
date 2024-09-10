@@ -5,7 +5,7 @@ import 'package:uniqtrack/features/record_track/presentation/stores/record_track
 
 part 'record_track_store_builder_provider.g.dart';
 
-@riverpod
+@Riverpod(dependencies: [storeFactory])
 RecordTrackStoreBuilder recordTrackStoreBuilder(
     RecordTrackStoreBuilderRef ref) {
   final storeFactory = ref.watch(storeFactoryProvider);

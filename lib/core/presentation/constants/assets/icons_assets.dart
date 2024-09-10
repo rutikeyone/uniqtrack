@@ -11,4 +11,6 @@ class IconsAssets {
   final skier = "$dir/ic_skier.svg";
   final play = "$dir/ic_play.svg";
   final userMarker = "$dir/ic_user_marker.png";
+  final pause = "$dir/ic_pause.svg";
+  final stop = "$dir/ic_stop.svg";
 }

@@ -1,7 +1,7 @@
 part of '../pages/register_page.dart';
 
 class _BackButton extends ConsumerWidget {
-  const _BackButton({super.key});
+  const _BackButton();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

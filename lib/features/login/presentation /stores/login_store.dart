@@ -6,8 +6,8 @@ import 'package:uniqtrack/app/app_state/domain/auth_state_changes_use_case.dart'
 import 'package:uniqtrack/app/app_state/domain/entities/user.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
-import 'package:uniqtrack/core/presentation/validation/entities/email.dart';
-import 'package:uniqtrack/core/presentation/validation/entities/password.dart';
+import 'package:uniqtrack/core/common/validation/entities/email.dart';
+import 'package:uniqtrack/core/common/validation/entities/password.dart';
 import 'package:uniqtrack/features/login/domain/repositories/login_repository.dart';
 import 'package:uniqtrack/features/login/presentation%20/stores/state/login_actions.dart';
 import 'package:uniqtrack/features/login/presentation%20/stores/state/login_state.dart';

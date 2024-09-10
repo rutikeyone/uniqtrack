@@ -5,5 +5,6 @@ class RecordTrackState with _$RecordTrackState {
   const factory RecordTrackState({
     required RecordTrackPermissionState permissionState,
     required UserLocationState locationState,
+    required TrackRecordStatusState trackRecordStatusState,
   }) = _RecordTrackState;
 }

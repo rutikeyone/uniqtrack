@@ -1,9 +1,7 @@
 part of '../pages/profile_page.dart';
 
 class _SignOutButton extends ConsumerWidget {
-  const _SignOutButton({
-    super.key,
-  });
+  const _SignOutButton();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

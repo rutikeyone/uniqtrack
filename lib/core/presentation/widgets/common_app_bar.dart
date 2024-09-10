@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 
 class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {

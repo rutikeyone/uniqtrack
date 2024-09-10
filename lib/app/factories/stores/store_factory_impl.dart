@@ -6,8 +6,10 @@ import 'package:uniqtrack/app/glue/forgot_password/providers/forgot_password_pro
 import 'package:uniqtrack/app/glue/login/providers/login_provider.dart';
 import 'package:uniqtrack/app/glue/record_track/providers/record_track_repository_provider.dart';
 import 'package:uniqtrack/app/glue/register/providers/register_provider.dart';
+import 'package:uniqtrack/core/common/app_location_handler/app_location_handler.dart';
 import 'package:uniqtrack/core/common/app_permission_handler/app_permission_handler.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
+import 'package:uniqtrack/core/common_impl/app_location_handler_impl.dart';
 import 'package:uniqtrack/core/common_impl/app_permission_handler_impl.dart';
 import 'package:uniqtrack/core/common_impl/common_ui/common_ui_delegate_notifier.dart';
 import 'package:uniqtrack/features/forgot_password/domain/repositories/forgot_password_repository.dart';
@@ -22,7 +24,7 @@ import 'package:uniqtrack/features/register/presentation/stores/register_store.d
 part 'store_factory_impl.g.dart';
 
 @Riverpod(
-  dependencies: [recordTrackRepository],
+  dependencies: [recordTrackRepository, appLocationHandler],
 )
 StoreFactory storeFactory(StoreFactoryRef ref) {
   final commonUIDelegate = ref.watch(commonUIDelegateNotifierProvider.notifier);
@@ -32,6 +34,7 @@ StoreFactory storeFactory(StoreFactoryRef ref) {
   final authStateChangesUseCase = ref.watch(authStateChangesUseCaseProvider);
   final appPermissionHandler = ref.watch(appPermissionHandlerProvider);
   final recordTrackRepository = ref.watch(recordTrackRepositoryProvider);
+  final appLocationHandler = ref.watch(appLocationHandlerProvider);
 
   return StoreFactoryImpl(
     registerRepository: registerRepository,
@@ -41,6 +44,7 @@ StoreFactory storeFactory(StoreFactoryRef ref) {
     forgotPasswordRepository: forgotPasswordRepository,
     appPermissionHandler: appPermissionHandler,
     recordTrackRepository: recordTrackRepository,
+    appLocationHandler: appLocationHandler,
   );
 }
 
@@ -51,20 +55,23 @@ class StoreFactoryImpl implements StoreFactory {
   final ForgotPasswordRepository _forgotPasswordRepository;
   final AuthStateChangesUseCase _authStateChangesUseCase;
   final RecordTrackRepository _recordTrackRepository;
+  final AppLocationHandler _appLocationHandler;
 
   const StoreFactoryImpl({
+    required CommonUIDelegate commonUIDelegate,
     required RegisterRepository registerRepository,
     required LoginRepository loginRepository,
-    required CommonUIDelegate commonUIDelegate,
     required ForgotPasswordRepository forgotPasswordRepository,
     required AuthStateChangesUseCase authStateChangesUseCase,
     required AppPermissionHandler appPermissionHandler,
     required RecordTrackRepository recordTrackRepository,
+    required AppLocationHandler appLocationHandler,
   })  : _imageRepository = registerRepository,
         _loginRepository = loginRepository,
         _forgotPasswordRepository = forgotPasswordRepository,
         _commonUIDelegate = commonUIDelegate,
         _authStateChangesUseCase = authStateChangesUseCase,
+        _appLocationHandler = appLocationHandler,
         _recordTrackRepository = recordTrackRepository;
 
   @override
@@ -99,6 +106,7 @@ class StoreFactoryImpl implements StoreFactory {
     return RecordTrackStore(
       recordTrackRepository: _recordTrackRepository,
       commonUIDelegate: _commonUIDelegate,
+      appLocationHandler: _appLocationHandler,
     );
   }
 }

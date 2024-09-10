@@ -4,6 +4,8 @@ part 'app_location_permission_result.freezed.dart';
 
 @freezed
 class AppLocationPermissionResult with _$AppLocationPermissionResult {
+  bool get isSuccess => this is AppLocationPermissionSuccessResult;
+
   const AppLocationPermissionResult._();
 
   const factory AppLocationPermissionResult.success() =

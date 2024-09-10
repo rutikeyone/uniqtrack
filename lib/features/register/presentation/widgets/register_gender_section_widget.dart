@@ -1,7 +1,7 @@
 part of '../pages/register_page.dart';
 
 class _RegisterGenderSectionWidget extends StatelessWidget {
-  const _RegisterGenderSectionWidget({super.key});
+  const _RegisterGenderSectionWidget();
 
   @override
   Widget build(BuildContext context) {

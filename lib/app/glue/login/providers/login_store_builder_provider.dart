@@ -5,7 +5,7 @@ import 'package:uniqtrack/features/login/presentation%20/stores/login_store.dart
 
 part 'login_store_builder_provider.g.dart';
 
-@riverpod
+@Riverpod(dependencies: [storeFactory])
 LoginStoreBuilder loginStoreBuilder(LoginStoreBuilderRef ref) {
   final storeFactory = ref.watch(storeFactoryProvider);
 

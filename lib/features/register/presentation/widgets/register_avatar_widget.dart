@@ -1,7 +1,7 @@
 part of '../pages/register_page.dart';
 
 class _RegisterAvatarWidget extends ConsumerWidget {
-  const _RegisterAvatarWidget({super.key});
+  const _RegisterAvatarWidget();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

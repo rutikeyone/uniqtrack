@@ -17,20 +17,20 @@ mixin _$RecordTrackStore on _RecordTrackStore, Store {
               name: '_RecordTrackStore.state'))
           .value;
 
-  late final _$trackLocationPermissionStateAtom = Atom(
-      name: '_RecordTrackStore.trackLocationPermissionState', context: context);
+  late final _$recordTrackPermissionStateAtom = Atom(
+      name: '_RecordTrackStore.recordTrackPermissionState', context: context);
 
   @override
-  RecordTrackPermissionState get trackLocationPermissionState {
-    _$trackLocationPermissionStateAtom.reportRead();
-    return super.trackLocationPermissionState;
+  RecordTrackPermissionState get recordTrackPermissionState {
+    _$recordTrackPermissionStateAtom.reportRead();
+    return super.recordTrackPermissionState;
   }
 
   @override
-  set trackLocationPermissionState(RecordTrackPermissionState value) {
-    _$trackLocationPermissionStateAtom
-        .reportWrite(value, super.trackLocationPermissionState, () {
-      super.trackLocationPermissionState = value;
+  set recordTrackPermissionState(RecordTrackPermissionState value) {
+    _$recordTrackPermissionStateAtom
+        .reportWrite(value, super.recordTrackPermissionState, () {
+      super.recordTrackPermissionState = value;
     });
   }
 
@@ -66,12 +66,38 @@ mixin _$RecordTrackStore on _RecordTrackStore, Store {
     });
   }
 
+  late final _$trackRecordStatusStateAtom =
+      Atom(name: '_RecordTrackStore.trackRecordStatusState', context: context);
+
+  @override
+  TrackRecordStatusState get trackRecordStatusState {
+    _$trackRecordStatusStateAtom.reportRead();
+    return super.trackRecordStatusState;
+  }
+
+  @override
+  set trackRecordStatusState(TrackRecordStatusState value) {
+    _$trackRecordStatusStateAtom
+        .reportWrite(value, super.trackRecordStatusState, () {
+      super.trackRecordStatusState = value;
+    });
+  }
+
+  late final _$startTrackingAsyncAction =
+      AsyncAction('_RecordTrackStore.startTracking', context: context);
+
+  @override
+  Future<void> startTracking() {
+    return _$startTrackingAsyncAction.run(() => super.startTracking());
+  }
+
   @override
   String toString() {
     return '''
-trackLocationPermissionState: ${trackLocationPermissionState},
+recordTrackPermissionState: ${recordTrackPermissionState},
 userLocationState: ${userLocationState},
 actions: ${actions},
+trackRecordStatusState: ${trackRecordStatusState},
 state: ${state}
     ''';
   }

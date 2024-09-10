@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:app_settings/app_settings.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_actions.dart';
 import 'package:uniqtrack/core/common/activity.dart';

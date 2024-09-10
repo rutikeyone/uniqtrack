@@ -7,7 +7,6 @@ class _ProfileAvatarImageWidget extends StatelessWidget {
   const _ProfileAvatarImageWidget({
     required this.photo,
     required this.gender,
-    super.key,
   });
 
   @override
@@ -26,24 +25,23 @@ class _ProfileAvatarImageWidget extends StatelessWidget {
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(AppDiments.dm64),
-              child: Image.network(
-                photo!,
+              child: CachedNetworkImage(
+                imageUrl: photo!,
                 width: AppDiments.dm128,
                 height: AppDiments.dm128,
                 fit: BoxFit.cover,
-                loadingBuilder: (context, child, event) {
-                  if (event == null) return child;
+                placeholder: (_, __) {
                   return Container(
                     width: AppDiments.dm128,
                     height: AppDiments.dm128,
-                    color: context.colorScheme.secondary,
+                    color: context.colorScheme.onPrimary.withOpacity(.35),
                   );
                 },
-                errorBuilder: (context, child, event) {
+                errorWidget: (_, __, ___) {
                   return Container(
                     width: AppDiments.dm128,
                     height: AppDiments.dm128,
-                    color: context.colorScheme.secondary,
+                    color: context.colorScheme.onPrimary.withOpacity(.35),
                   );
                 },
               ),

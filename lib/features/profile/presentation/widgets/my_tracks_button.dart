@@ -1,9 +1,7 @@
 part of '../pages/profile_page.dart';
 
 class _MyTracksButton extends StatelessWidget {
-  const _MyTracksButton({
-    super.key,
-  });
+  const _MyTracksButton();
 
   @override
   Widget build(BuildContext context) {

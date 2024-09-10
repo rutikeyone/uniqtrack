@@ -19,6 +19,8 @@ mixin _$RecordTrackState {
   RecordTrackPermissionState get permissionState =>
       throw _privateConstructorUsedError;
   UserLocationState get locationState => throw _privateConstructorUsedError;
+  TrackRecordStatusState get trackRecordStatusState =>
+      throw _privateConstructorUsedError;
 
   /// Create a copy of RecordTrackState
   /// with the given fields replaced by the non-null parameter values.
@@ -35,10 +37,12 @@ abstract class $RecordTrackStateCopyWith<$Res> {
   @useResult
   $Res call(
       {RecordTrackPermissionState permissionState,
-      UserLocationState locationState});
+      UserLocationState locationState,
+      TrackRecordStatusState trackRecordStatusState});
 
   $RecordTrackPermissionStateCopyWith<$Res> get permissionState;
   $UserLocationStateCopyWith<$Res> get locationState;
+  $TrackRecordStatusStateCopyWith<$Res> get trackRecordStatusState;
 }
 
 /// @nodoc
@@ -58,6 +62,7 @@ class _$RecordTrackStateCopyWithImpl<$Res, $Val extends RecordTrackState>
   $Res call({
     Object? permissionState = null,
     Object? locationState = null,
+    Object? trackRecordStatusState = null,
   }) {
     return _then(_value.copyWith(
       permissionState: null == permissionState
@@ -68,6 +73,10 @@ class _$RecordTrackStateCopyWithImpl<$Res, $Val extends RecordTrackState>
           ? _value.locationState
           : locationState // ignore: cast_nullable_to_non_nullable
               as UserLocationState,
+      trackRecordStatusState: null == trackRecordStatusState
+          ? _value.trackRecordStatusState
+          : trackRecordStatusState // ignore: cast_nullable_to_non_nullable
+              as TrackRecordStatusState,
     ) as $Val);
   }
 
@@ -91,6 +100,17 @@ class _$RecordTrackStateCopyWithImpl<$Res, $Val extends RecordTrackState>
       return _then(_value.copyWith(locationState: value) as $Val);
     });
   }
+
+  /// Create a copy of RecordTrackState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TrackRecordStatusStateCopyWith<$Res> get trackRecordStatusState {
+    return $TrackRecordStatusStateCopyWith<$Res>(_value.trackRecordStatusState,
+        (value) {
+      return _then(_value.copyWith(trackRecordStatusState: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -103,12 +123,15 @@ abstract class _$$RecordTrackStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {RecordTrackPermissionState permissionState,
-      UserLocationState locationState});
+      UserLocationState locationState,
+      TrackRecordStatusState trackRecordStatusState});
 
   @override
   $RecordTrackPermissionStateCopyWith<$Res> get permissionState;
   @override
   $UserLocationStateCopyWith<$Res> get locationState;
+  @override
+  $TrackRecordStatusStateCopyWith<$Res> get trackRecordStatusState;
 }
 
 /// @nodoc
@@ -126,6 +149,7 @@ class __$$RecordTrackStateImplCopyWithImpl<$Res>
   $Res call({
     Object? permissionState = null,
     Object? locationState = null,
+    Object? trackRecordStatusState = null,
   }) {
     return _then(_$RecordTrackStateImpl(
       permissionState: null == permissionState
@@ -136,6 +160,10 @@ class __$$RecordTrackStateImplCopyWithImpl<$Res>
           ? _value.locationState
           : locationState // ignore: cast_nullable_to_non_nullable
               as UserLocationState,
+      trackRecordStatusState: null == trackRecordStatusState
+          ? _value.trackRecordStatusState
+          : trackRecordStatusState // ignore: cast_nullable_to_non_nullable
+              as TrackRecordStatusState,
     ));
   }
 }
@@ -144,16 +172,20 @@ class __$$RecordTrackStateImplCopyWithImpl<$Res>
 
 class _$RecordTrackStateImpl implements _RecordTrackState {
   const _$RecordTrackStateImpl(
-      {required this.permissionState, required this.locationState});
+      {required this.permissionState,
+      required this.locationState,
+      required this.trackRecordStatusState});
 
   @override
   final RecordTrackPermissionState permissionState;
   @override
   final UserLocationState locationState;
+  @override
+  final TrackRecordStatusState trackRecordStatusState;
 
   @override
   String toString() {
-    return 'RecordTrackState(permissionState: $permissionState, locationState: $locationState)';
+    return 'RecordTrackState(permissionState: $permissionState, locationState: $locationState, trackRecordStatusState: $trackRecordStatusState)';
   }
 
   @override
@@ -164,11 +196,14 @@ class _$RecordTrackStateImpl implements _RecordTrackState {
             (identical(other.permissionState, permissionState) ||
                 other.permissionState == permissionState) &&
             (identical(other.locationState, locationState) ||
-                other.locationState == locationState));
+                other.locationState == locationState) &&
+            (identical(other.trackRecordStatusState, trackRecordStatusState) ||
+                other.trackRecordStatusState == trackRecordStatusState));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, permissionState, locationState);
+  int get hashCode => Object.hash(
+      runtimeType, permissionState, locationState, trackRecordStatusState);
 
   /// Create a copy of RecordTrackState
   /// with the given fields replaced by the non-null parameter values.
@@ -182,13 +217,17 @@ class _$RecordTrackStateImpl implements _RecordTrackState {
 
 abstract class _RecordTrackState implements RecordTrackState {
   const factory _RecordTrackState(
-      {required final RecordTrackPermissionState permissionState,
-      required final UserLocationState locationState}) = _$RecordTrackStateImpl;
+          {required final RecordTrackPermissionState permissionState,
+          required final UserLocationState locationState,
+          required final TrackRecordStatusState trackRecordStatusState}) =
+      _$RecordTrackStateImpl;
 
   @override
   RecordTrackPermissionState get permissionState;
   @override
   UserLocationState get locationState;
+  @override
+  TrackRecordStatusState get trackRecordStatusState;
 
   /// Create a copy of RecordTrackState
   /// with the given fields replaced by the non-null parameter values.
@@ -968,21 +1007,19 @@ mixin _$UserLocationState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() empty,
-    required TResult Function(
-            Position currentPosition, List<Position> positions)
-        mark,
+    required TResult Function(Position currentPosition) mark,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? empty,
-    TResult? Function(Position currentPosition, List<Position> positions)? mark,
+    TResult? Function(Position currentPosition)? mark,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? empty,
-    TResult Function(Position currentPosition, List<Position> positions)? mark,
+    TResult Function(Position currentPosition)? mark,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1073,9 +1110,7 @@ class _$UserLocationEmptyStateImpl implements _UserLocationEmptyState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() empty,
-    required TResult Function(
-            Position currentPosition, List<Position> positions)
-        mark,
+    required TResult Function(Position currentPosition) mark,
   }) {
     return empty();
   }
@@ -1084,7 +1119,7 @@ class _$UserLocationEmptyStateImpl implements _UserLocationEmptyState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? empty,
-    TResult? Function(Position currentPosition, List<Position> positions)? mark,
+    TResult? Function(Position currentPosition)? mark,
   }) {
     return empty?.call();
   }
@@ -1093,7 +1128,7 @@ class _$UserLocationEmptyStateImpl implements _UserLocationEmptyState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? empty,
-    TResult Function(Position currentPosition, List<Position> positions)? mark,
+    TResult Function(Position currentPosition)? mark,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -1145,7 +1180,7 @@ abstract class _$$UserLocationMarkStateImplCopyWith<$Res> {
           $Res Function(_$UserLocationMarkStateImpl) then) =
       __$$UserLocationMarkStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({Position currentPosition, List<Position> positions});
+  $Res call({Position currentPosition});
 
   $PositionCopyWith<$Res> get currentPosition;
 }
@@ -1164,17 +1199,12 @@ class __$$UserLocationMarkStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? currentPosition = null,
-    Object? positions = null,
   }) {
     return _then(_$UserLocationMarkStateImpl(
       currentPosition: null == currentPosition
           ? _value.currentPosition
           : currentPosition // ignore: cast_nullable_to_non_nullable
               as Position,
-      positions: null == positions
-          ? _value._positions
-          : positions // ignore: cast_nullable_to_non_nullable
-              as List<Position>,
     ));
   }
 
@@ -1192,25 +1222,14 @@ class __$$UserLocationMarkStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$UserLocationMarkStateImpl implements _UserLocationMarkState {
-  const _$UserLocationMarkStateImpl(
-      {required this.currentPosition,
-      final List<Position> positions = const []})
-      : _positions = positions;
+  const _$UserLocationMarkStateImpl({required this.currentPosition});
 
   @override
   final Position currentPosition;
-  final List<Position> _positions;
-  @override
-  @JsonKey()
-  List<Position> get positions {
-    if (_positions is EqualUnmodifiableListView) return _positions;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_positions);
-  }
 
   @override
   String toString() {
-    return 'UserLocationState.mark(currentPosition: $currentPosition, positions: $positions)';
+    return 'UserLocationState.mark(currentPosition: $currentPosition)';
   }
 
   @override
@@ -1219,14 +1238,11 @@ class _$UserLocationMarkStateImpl implements _UserLocationMarkState {
         (other.runtimeType == runtimeType &&
             other is _$UserLocationMarkStateImpl &&
             (identical(other.currentPosition, currentPosition) ||
-                other.currentPosition == currentPosition) &&
-            const DeepCollectionEquality()
-                .equals(other._positions, _positions));
+                other.currentPosition == currentPosition));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, currentPosition,
-      const DeepCollectionEquality().hash(_positions));
+  int get hashCode => Object.hash(runtimeType, currentPosition);
 
   /// Create a copy of UserLocationState
   /// with the given fields replaced by the non-null parameter values.
@@ -1241,31 +1257,29 @@ class _$UserLocationMarkStateImpl implements _UserLocationMarkState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() empty,
-    required TResult Function(
-            Position currentPosition, List<Position> positions)
-        mark,
+    required TResult Function(Position currentPosition) mark,
   }) {
-    return mark(currentPosition, positions);
+    return mark(currentPosition);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? empty,
-    TResult? Function(Position currentPosition, List<Position> positions)? mark,
+    TResult? Function(Position currentPosition)? mark,
   }) {
-    return mark?.call(currentPosition, positions);
+    return mark?.call(currentPosition);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? empty,
-    TResult Function(Position currentPosition, List<Position> positions)? mark,
+    TResult Function(Position currentPosition)? mark,
     required TResult orElse(),
   }) {
     if (mark != null) {
-      return mark(currentPosition, positions);
+      return mark(currentPosition);
     }
     return orElse();
   }
@@ -1304,11 +1318,9 @@ class _$UserLocationMarkStateImpl implements _UserLocationMarkState {
 
 abstract class _UserLocationMarkState implements UserLocationState {
   const factory _UserLocationMarkState(
-      {required final Position currentPosition,
-      final List<Position> positions}) = _$UserLocationMarkStateImpl;
+      {required final Position currentPosition}) = _$UserLocationMarkStateImpl;
 
   Position get currentPosition;
-  List<Position> get positions;
 
   /// Create a copy of UserLocationState
   /// with the given fields replaced by the non-null parameter values.
@@ -1319,15 +1331,17 @@ abstract class _UserLocationMarkState implements UserLocationState {
 
 /// @nodoc
 mixin _$RecordTrackActions {
-  void Function(String, String) get callback =>
-      throw _privateConstructorUsedError;
-  AppStrings get title => throw _privateConstructorUsedError;
-  AppStrings get body => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(void Function(String, String) callback,
             AppStrings title, AppStrings body)
         initStreamPositions,
+    required TResult Function(Position position, double zoom)
+        moveToUserPosition,
+    required TResult Function() showDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
+    required TResult Function() showConfirmToFinishRecordDialog,
+    required TResult Function() navigateBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1335,6 +1349,11 @@ mixin _$RecordTrackActions {
     TResult? Function(void Function(String, String) callback, AppStrings title,
             AppStrings body)?
         initStreamPositions,
+    TResult? Function(Position position, double zoom)? moveToUserPosition,
+    TResult? Function()? showDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
+    TResult? Function()? showConfirmToFinishRecordDialog,
+    TResult? Function()? navigateBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1342,33 +1361,55 @@ mixin _$RecordTrackActions {
     TResult Function(void Function(String, String) callback, AppStrings title,
             AppStrings body)?
         initStreamPositions,
+    TResult Function(Position position, double zoom)? moveToUserPosition,
+    TResult Function()? showDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
+    TResult Function()? showConfirmToFinishRecordDialog,
+    TResult Function()? navigateBack,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_RecordTrackInitStreamPositionsAction value)
+    required TResult Function(_InitStreamPositionsAction value)
         initStreamPositions,
+    required TResult Function(_UserPositionChangesAction value)
+        moveToUserPosition,
+    required TResult Function(_ShowDetailsRecordingDataAction value)
+        showDetailsRecordingData,
+    required TResult Function(_HideDetailsRecordingDataAction value)
+        hideDetailsRecordingData,
+    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
+        showConfirmToFinishRecordDialog,
+    required TResult Function(_NavigateBackAction value) navigateBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RecordTrackInitStreamPositionsAction value)?
-        initStreamPositions,
+    TResult? Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult? Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult? Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult? Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult? Function(_NavigateBackAction value)? navigateBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RecordTrackInitStreamPositionsAction value)?
-        initStreamPositions,
+    TResult Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult Function(_NavigateBackAction value)? navigateBack,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  /// Create a copy of RecordTrackActions
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $RecordTrackActionsCopyWith<RecordTrackActions> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1377,14 +1418,6 @@ abstract class $RecordTrackActionsCopyWith<$Res> {
   factory $RecordTrackActionsCopyWith(
           RecordTrackActions value, $Res Function(RecordTrackActions) then) =
       _$RecordTrackActionsCopyWithImpl<$Res, RecordTrackActions>;
-  @useResult
-  $Res call(
-      {void Function(String, String) callback,
-      AppStrings title,
-      AppStrings body});
-
-  $AppStringsCopyWith<$Res> get title;
-  $AppStringsCopyWith<$Res> get body;
 }
 
 /// @nodoc
@@ -1399,78 +1432,32 @@ class _$RecordTrackActionsCopyWithImpl<$Res, $Val extends RecordTrackActions>
 
   /// Create a copy of RecordTrackActions
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? callback = null,
-    Object? title = null,
-    Object? body = null,
-  }) {
-    return _then(_value.copyWith(
-      callback: null == callback
-          ? _value.callback
-          : callback // ignore: cast_nullable_to_non_nullable
-              as void Function(String, String),
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as AppStrings,
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as AppStrings,
-    ) as $Val);
-  }
-
-  /// Create a copy of RecordTrackActions
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $AppStringsCopyWith<$Res> get title {
-    return $AppStringsCopyWith<$Res>(_value.title, (value) {
-      return _then(_value.copyWith(title: value) as $Val);
-    });
-  }
-
-  /// Create a copy of RecordTrackActions
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $AppStringsCopyWith<$Res> get body {
-    return $AppStringsCopyWith<$Res>(_value.body, (value) {
-      return _then(_value.copyWith(body: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
-abstract class _$$RecordTrackInitStreamPositionsActionImplCopyWith<$Res>
-    implements $RecordTrackActionsCopyWith<$Res> {
-  factory _$$RecordTrackInitStreamPositionsActionImplCopyWith(
-          _$RecordTrackInitStreamPositionsActionImpl value,
-          $Res Function(_$RecordTrackInitStreamPositionsActionImpl) then) =
-      __$$RecordTrackInitStreamPositionsActionImplCopyWithImpl<$Res>;
-  @override
+abstract class _$$InitStreamPositionsActionImplCopyWith<$Res> {
+  factory _$$InitStreamPositionsActionImplCopyWith(
+          _$InitStreamPositionsActionImpl value,
+          $Res Function(_$InitStreamPositionsActionImpl) then) =
+      __$$InitStreamPositionsActionImplCopyWithImpl<$Res>;
   @useResult
   $Res call(
       {void Function(String, String) callback,
       AppStrings title,
       AppStrings body});
 
-  @override
   $AppStringsCopyWith<$Res> get title;
-  @override
   $AppStringsCopyWith<$Res> get body;
 }
 
 /// @nodoc
-class __$$RecordTrackInitStreamPositionsActionImplCopyWithImpl<$Res>
+class __$$InitStreamPositionsActionImplCopyWithImpl<$Res>
     extends _$RecordTrackActionsCopyWithImpl<$Res,
-        _$RecordTrackInitStreamPositionsActionImpl>
-    implements _$$RecordTrackInitStreamPositionsActionImplCopyWith<$Res> {
-  __$$RecordTrackInitStreamPositionsActionImplCopyWithImpl(
-      _$RecordTrackInitStreamPositionsActionImpl _value,
-      $Res Function(_$RecordTrackInitStreamPositionsActionImpl) _then)
+        _$InitStreamPositionsActionImpl>
+    implements _$$InitStreamPositionsActionImplCopyWith<$Res> {
+  __$$InitStreamPositionsActionImplCopyWithImpl(
+      _$InitStreamPositionsActionImpl _value,
+      $Res Function(_$InitStreamPositionsActionImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of RecordTrackActions
@@ -1482,7 +1469,7 @@ class __$$RecordTrackInitStreamPositionsActionImplCopyWithImpl<$Res>
     Object? title = null,
     Object? body = null,
   }) {
-    return _then(_$RecordTrackInitStreamPositionsActionImpl(
+    return _then(_$InitStreamPositionsActionImpl(
       callback: null == callback
           ? _value.callback
           : callback // ignore: cast_nullable_to_non_nullable
@@ -1497,13 +1484,32 @@ class __$$RecordTrackInitStreamPositionsActionImplCopyWithImpl<$Res>
               as AppStrings,
     ));
   }
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AppStringsCopyWith<$Res> get title {
+    return $AppStringsCopyWith<$Res>(_value.title, (value) {
+      return _then(_value.copyWith(title: value));
+    });
+  }
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AppStringsCopyWith<$Res> get body {
+    return $AppStringsCopyWith<$Res>(_value.body, (value) {
+      return _then(_value.copyWith(body: value));
+    });
+  }
 }
 
 /// @nodoc
 
-class _$RecordTrackInitStreamPositionsActionImpl
-    implements _RecordTrackInitStreamPositionsAction {
-  const _$RecordTrackInitStreamPositionsActionImpl(
+class _$InitStreamPositionsActionImpl implements _InitStreamPositionsAction {
+  const _$InitStreamPositionsActionImpl(
       {required this.callback, required this.title, required this.body});
 
   @override
@@ -1522,7 +1528,7 @@ class _$RecordTrackInitStreamPositionsActionImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RecordTrackInitStreamPositionsActionImpl &&
+            other is _$InitStreamPositionsActionImpl &&
             (identical(other.callback, callback) ||
                 other.callback == callback) &&
             (identical(other.title, title) || other.title == title) &&
@@ -1537,10 +1543,9 @@ class _$RecordTrackInitStreamPositionsActionImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$RecordTrackInitStreamPositionsActionImplCopyWith<
-          _$RecordTrackInitStreamPositionsActionImpl>
-      get copyWith => __$$RecordTrackInitStreamPositionsActionImplCopyWithImpl<
-          _$RecordTrackInitStreamPositionsActionImpl>(this, _$identity);
+  _$$InitStreamPositionsActionImplCopyWith<_$InitStreamPositionsActionImpl>
+      get copyWith => __$$InitStreamPositionsActionImplCopyWithImpl<
+          _$InitStreamPositionsActionImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1548,6 +1553,12 @@ class _$RecordTrackInitStreamPositionsActionImpl
     required TResult Function(void Function(String, String) callback,
             AppStrings title, AppStrings body)
         initStreamPositions,
+    required TResult Function(Position position, double zoom)
+        moveToUserPosition,
+    required TResult Function() showDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
+    required TResult Function() showConfirmToFinishRecordDialog,
+    required TResult Function() navigateBack,
   }) {
     return initStreamPositions(callback, title, body);
   }
@@ -1558,6 +1569,11 @@ class _$RecordTrackInitStreamPositionsActionImpl
     TResult? Function(void Function(String, String) callback, AppStrings title,
             AppStrings body)?
         initStreamPositions,
+    TResult? Function(Position position, double zoom)? moveToUserPosition,
+    TResult? Function()? showDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
+    TResult? Function()? showConfirmToFinishRecordDialog,
+    TResult? Function()? navigateBack,
   }) {
     return initStreamPositions?.call(callback, title, body);
   }
@@ -1568,6 +1584,11 @@ class _$RecordTrackInitStreamPositionsActionImpl
     TResult Function(void Function(String, String) callback, AppStrings title,
             AppStrings body)?
         initStreamPositions,
+    TResult Function(Position position, double zoom)? moveToUserPosition,
+    TResult Function()? showDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
+    TResult Function()? showConfirmToFinishRecordDialog,
+    TResult Function()? navigateBack,
     required TResult orElse(),
   }) {
     if (initStreamPositions != null) {
@@ -1579,8 +1600,17 @@ class _$RecordTrackInitStreamPositionsActionImpl
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_RecordTrackInitStreamPositionsAction value)
+    required TResult Function(_InitStreamPositionsAction value)
         initStreamPositions,
+    required TResult Function(_UserPositionChangesAction value)
+        moveToUserPosition,
+    required TResult Function(_ShowDetailsRecordingDataAction value)
+        showDetailsRecordingData,
+    required TResult Function(_HideDetailsRecordingDataAction value)
+        hideDetailsRecordingData,
+    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
+        showConfirmToFinishRecordDialog,
+    required TResult Function(_NavigateBackAction value) navigateBack,
   }) {
     return initStreamPositions(this);
   }
@@ -1588,8 +1618,15 @@ class _$RecordTrackInitStreamPositionsActionImpl
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_RecordTrackInitStreamPositionsAction value)?
-        initStreamPositions,
+    TResult? Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult? Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult? Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult? Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult? Function(_NavigateBackAction value)? navigateBack,
   }) {
     return initStreamPositions?.call(this);
   }
@@ -1597,8 +1634,15 @@ class _$RecordTrackInitStreamPositionsActionImpl
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_RecordTrackInitStreamPositionsAction value)?
-        initStreamPositions,
+    TResult Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult Function(_NavigateBackAction value)? navigateBack,
     required TResult orElse(),
   }) {
     if (initStreamPositions != null) {
@@ -1608,26 +1652,1722 @@ class _$RecordTrackInitStreamPositionsActionImpl
   }
 }
 
-abstract class _RecordTrackInitStreamPositionsAction
-    implements RecordTrackActions {
-  const factory _RecordTrackInitStreamPositionsAction(
-          {required final void Function(String, String) callback,
-          required final AppStrings title,
-          required final AppStrings body}) =
-      _$RecordTrackInitStreamPositionsActionImpl;
+abstract class _InitStreamPositionsAction implements RecordTrackActions {
+  const factory _InitStreamPositionsAction(
+      {required final void Function(String, String) callback,
+      required final AppStrings title,
+      required final AppStrings body}) = _$InitStreamPositionsActionImpl;
 
-  @override
   void Function(String, String) get callback;
-  @override
   AppStrings get title;
-  @override
   AppStrings get body;
 
   /// Create a copy of RecordTrackActions
   /// with the given fields replaced by the non-null parameter values.
-  @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RecordTrackInitStreamPositionsActionImplCopyWith<
-          _$RecordTrackInitStreamPositionsActionImpl>
+  _$$InitStreamPositionsActionImplCopyWith<_$InitStreamPositionsActionImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UserPositionChangesActionImplCopyWith<$Res> {
+  factory _$$UserPositionChangesActionImplCopyWith(
+          _$UserPositionChangesActionImpl value,
+          $Res Function(_$UserPositionChangesActionImpl) then) =
+      __$$UserPositionChangesActionImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Position position, double zoom});
+
+  $PositionCopyWith<$Res> get position;
+}
+
+/// @nodoc
+class __$$UserPositionChangesActionImplCopyWithImpl<$Res>
+    extends _$RecordTrackActionsCopyWithImpl<$Res,
+        _$UserPositionChangesActionImpl>
+    implements _$$UserPositionChangesActionImplCopyWith<$Res> {
+  __$$UserPositionChangesActionImplCopyWithImpl(
+      _$UserPositionChangesActionImpl _value,
+      $Res Function(_$UserPositionChangesActionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? position = null,
+    Object? zoom = null,
+  }) {
+    return _then(_$UserPositionChangesActionImpl(
+      position: null == position
+          ? _value.position
+          : position // ignore: cast_nullable_to_non_nullable
+              as Position,
+      zoom: null == zoom
+          ? _value.zoom
+          : zoom // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PositionCopyWith<$Res> get position {
+    return $PositionCopyWith<$Res>(_value.position, (value) {
+      return _then(_value.copyWith(position: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$UserPositionChangesActionImpl implements _UserPositionChangesAction {
+  const _$UserPositionChangesActionImpl(
+      {required this.position, required this.zoom});
+
+  @override
+  final Position position;
+  @override
+  final double zoom;
+
+  @override
+  String toString() {
+    return 'RecordTrackActions.moveToUserPosition(position: $position, zoom: $zoom)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UserPositionChangesActionImpl &&
+            (identical(other.position, position) ||
+                other.position == position) &&
+            (identical(other.zoom, zoom) || other.zoom == zoom));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, position, zoom);
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UserPositionChangesActionImplCopyWith<_$UserPositionChangesActionImpl>
+      get copyWith => __$$UserPositionChangesActionImplCopyWithImpl<
+          _$UserPositionChangesActionImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(void Function(String, String) callback,
+            AppStrings title, AppStrings body)
+        initStreamPositions,
+    required TResult Function(Position position, double zoom)
+        moveToUserPosition,
+    required TResult Function() showDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
+    required TResult Function() showConfirmToFinishRecordDialog,
+    required TResult Function() navigateBack,
+  }) {
+    return moveToUserPosition(position, zoom);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult? Function(Position position, double zoom)? moveToUserPosition,
+    TResult? Function()? showDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
+    TResult? Function()? showConfirmToFinishRecordDialog,
+    TResult? Function()? navigateBack,
+  }) {
+    return moveToUserPosition?.call(position, zoom);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult Function(Position position, double zoom)? moveToUserPosition,
+    TResult Function()? showDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
+    TResult Function()? showConfirmToFinishRecordDialog,
+    TResult Function()? navigateBack,
+    required TResult orElse(),
+  }) {
+    if (moveToUserPosition != null) {
+      return moveToUserPosition(position, zoom);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitStreamPositionsAction value)
+        initStreamPositions,
+    required TResult Function(_UserPositionChangesAction value)
+        moveToUserPosition,
+    required TResult Function(_ShowDetailsRecordingDataAction value)
+        showDetailsRecordingData,
+    required TResult Function(_HideDetailsRecordingDataAction value)
+        hideDetailsRecordingData,
+    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
+        showConfirmToFinishRecordDialog,
+    required TResult Function(_NavigateBackAction value) navigateBack,
+  }) {
+    return moveToUserPosition(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult? Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult? Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult? Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult? Function(_NavigateBackAction value)? navigateBack,
+  }) {
+    return moveToUserPosition?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult Function(_NavigateBackAction value)? navigateBack,
+    required TResult orElse(),
+  }) {
+    if (moveToUserPosition != null) {
+      return moveToUserPosition(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UserPositionChangesAction implements RecordTrackActions {
+  const factory _UserPositionChangesAction(
+      {required final Position position,
+      required final double zoom}) = _$UserPositionChangesActionImpl;
+
+  Position get position;
+  double get zoom;
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UserPositionChangesActionImplCopyWith<_$UserPositionChangesActionImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ShowDetailsRecordingDataActionImplCopyWith<$Res> {
+  factory _$$ShowDetailsRecordingDataActionImplCopyWith(
+          _$ShowDetailsRecordingDataActionImpl value,
+          $Res Function(_$ShowDetailsRecordingDataActionImpl) then) =
+      __$$ShowDetailsRecordingDataActionImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ShowDetailsRecordingDataActionImplCopyWithImpl<$Res>
+    extends _$RecordTrackActionsCopyWithImpl<$Res,
+        _$ShowDetailsRecordingDataActionImpl>
+    implements _$$ShowDetailsRecordingDataActionImplCopyWith<$Res> {
+  __$$ShowDetailsRecordingDataActionImplCopyWithImpl(
+      _$ShowDetailsRecordingDataActionImpl _value,
+      $Res Function(_$ShowDetailsRecordingDataActionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ShowDetailsRecordingDataActionImpl
+    implements _ShowDetailsRecordingDataAction {
+  const _$ShowDetailsRecordingDataActionImpl();
+
+  @override
+  String toString() {
+    return 'RecordTrackActions.showDetailsRecordingData()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ShowDetailsRecordingDataActionImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(void Function(String, String) callback,
+            AppStrings title, AppStrings body)
+        initStreamPositions,
+    required TResult Function(Position position, double zoom)
+        moveToUserPosition,
+    required TResult Function() showDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
+    required TResult Function() showConfirmToFinishRecordDialog,
+    required TResult Function() navigateBack,
+  }) {
+    return showDetailsRecordingData();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult? Function(Position position, double zoom)? moveToUserPosition,
+    TResult? Function()? showDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
+    TResult? Function()? showConfirmToFinishRecordDialog,
+    TResult? Function()? navigateBack,
+  }) {
+    return showDetailsRecordingData?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult Function(Position position, double zoom)? moveToUserPosition,
+    TResult Function()? showDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
+    TResult Function()? showConfirmToFinishRecordDialog,
+    TResult Function()? navigateBack,
+    required TResult orElse(),
+  }) {
+    if (showDetailsRecordingData != null) {
+      return showDetailsRecordingData();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitStreamPositionsAction value)
+        initStreamPositions,
+    required TResult Function(_UserPositionChangesAction value)
+        moveToUserPosition,
+    required TResult Function(_ShowDetailsRecordingDataAction value)
+        showDetailsRecordingData,
+    required TResult Function(_HideDetailsRecordingDataAction value)
+        hideDetailsRecordingData,
+    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
+        showConfirmToFinishRecordDialog,
+    required TResult Function(_NavigateBackAction value) navigateBack,
+  }) {
+    return showDetailsRecordingData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult? Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult? Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult? Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult? Function(_NavigateBackAction value)? navigateBack,
+  }) {
+    return showDetailsRecordingData?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult Function(_NavigateBackAction value)? navigateBack,
+    required TResult orElse(),
+  }) {
+    if (showDetailsRecordingData != null) {
+      return showDetailsRecordingData(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ShowDetailsRecordingDataAction implements RecordTrackActions {
+  const factory _ShowDetailsRecordingDataAction() =
+      _$ShowDetailsRecordingDataActionImpl;
+}
+
+/// @nodoc
+abstract class _$$HideDetailsRecordingDataActionImplCopyWith<$Res> {
+  factory _$$HideDetailsRecordingDataActionImplCopyWith(
+          _$HideDetailsRecordingDataActionImpl value,
+          $Res Function(_$HideDetailsRecordingDataActionImpl) then) =
+      __$$HideDetailsRecordingDataActionImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$HideDetailsRecordingDataActionImplCopyWithImpl<$Res>
+    extends _$RecordTrackActionsCopyWithImpl<$Res,
+        _$HideDetailsRecordingDataActionImpl>
+    implements _$$HideDetailsRecordingDataActionImplCopyWith<$Res> {
+  __$$HideDetailsRecordingDataActionImplCopyWithImpl(
+      _$HideDetailsRecordingDataActionImpl _value,
+      $Res Function(_$HideDetailsRecordingDataActionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$HideDetailsRecordingDataActionImpl
+    implements _HideDetailsRecordingDataAction {
+  const _$HideDetailsRecordingDataActionImpl();
+
+  @override
+  String toString() {
+    return 'RecordTrackActions.hideDetailsRecordingData()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HideDetailsRecordingDataActionImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(void Function(String, String) callback,
+            AppStrings title, AppStrings body)
+        initStreamPositions,
+    required TResult Function(Position position, double zoom)
+        moveToUserPosition,
+    required TResult Function() showDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
+    required TResult Function() showConfirmToFinishRecordDialog,
+    required TResult Function() navigateBack,
+  }) {
+    return hideDetailsRecordingData();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult? Function(Position position, double zoom)? moveToUserPosition,
+    TResult? Function()? showDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
+    TResult? Function()? showConfirmToFinishRecordDialog,
+    TResult? Function()? navigateBack,
+  }) {
+    return hideDetailsRecordingData?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult Function(Position position, double zoom)? moveToUserPosition,
+    TResult Function()? showDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
+    TResult Function()? showConfirmToFinishRecordDialog,
+    TResult Function()? navigateBack,
+    required TResult orElse(),
+  }) {
+    if (hideDetailsRecordingData != null) {
+      return hideDetailsRecordingData();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitStreamPositionsAction value)
+        initStreamPositions,
+    required TResult Function(_UserPositionChangesAction value)
+        moveToUserPosition,
+    required TResult Function(_ShowDetailsRecordingDataAction value)
+        showDetailsRecordingData,
+    required TResult Function(_HideDetailsRecordingDataAction value)
+        hideDetailsRecordingData,
+    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
+        showConfirmToFinishRecordDialog,
+    required TResult Function(_NavigateBackAction value) navigateBack,
+  }) {
+    return hideDetailsRecordingData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult? Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult? Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult? Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult? Function(_NavigateBackAction value)? navigateBack,
+  }) {
+    return hideDetailsRecordingData?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult Function(_NavigateBackAction value)? navigateBack,
+    required TResult orElse(),
+  }) {
+    if (hideDetailsRecordingData != null) {
+      return hideDetailsRecordingData(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _HideDetailsRecordingDataAction implements RecordTrackActions {
+  const factory _HideDetailsRecordingDataAction() =
+      _$HideDetailsRecordingDataActionImpl;
+}
+
+/// @nodoc
+abstract class _$$ShowConfirmToFinishRecordDialogActionImplCopyWith<$Res> {
+  factory _$$ShowConfirmToFinishRecordDialogActionImplCopyWith(
+          _$ShowConfirmToFinishRecordDialogActionImpl value,
+          $Res Function(_$ShowConfirmToFinishRecordDialogActionImpl) then) =
+      __$$ShowConfirmToFinishRecordDialogActionImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ShowConfirmToFinishRecordDialogActionImplCopyWithImpl<$Res>
+    extends _$RecordTrackActionsCopyWithImpl<$Res,
+        _$ShowConfirmToFinishRecordDialogActionImpl>
+    implements _$$ShowConfirmToFinishRecordDialogActionImplCopyWith<$Res> {
+  __$$ShowConfirmToFinishRecordDialogActionImplCopyWithImpl(
+      _$ShowConfirmToFinishRecordDialogActionImpl _value,
+      $Res Function(_$ShowConfirmToFinishRecordDialogActionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ShowConfirmToFinishRecordDialogActionImpl
+    implements _ShowConfirmToFinishRecordDialogAction {
+  const _$ShowConfirmToFinishRecordDialogActionImpl();
+
+  @override
+  String toString() {
+    return 'RecordTrackActions.showConfirmToFinishRecordDialog()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ShowConfirmToFinishRecordDialogActionImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(void Function(String, String) callback,
+            AppStrings title, AppStrings body)
+        initStreamPositions,
+    required TResult Function(Position position, double zoom)
+        moveToUserPosition,
+    required TResult Function() showDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
+    required TResult Function() showConfirmToFinishRecordDialog,
+    required TResult Function() navigateBack,
+  }) {
+    return showConfirmToFinishRecordDialog();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult? Function(Position position, double zoom)? moveToUserPosition,
+    TResult? Function()? showDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
+    TResult? Function()? showConfirmToFinishRecordDialog,
+    TResult? Function()? navigateBack,
+  }) {
+    return showConfirmToFinishRecordDialog?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult Function(Position position, double zoom)? moveToUserPosition,
+    TResult Function()? showDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
+    TResult Function()? showConfirmToFinishRecordDialog,
+    TResult Function()? navigateBack,
+    required TResult orElse(),
+  }) {
+    if (showConfirmToFinishRecordDialog != null) {
+      return showConfirmToFinishRecordDialog();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitStreamPositionsAction value)
+        initStreamPositions,
+    required TResult Function(_UserPositionChangesAction value)
+        moveToUserPosition,
+    required TResult Function(_ShowDetailsRecordingDataAction value)
+        showDetailsRecordingData,
+    required TResult Function(_HideDetailsRecordingDataAction value)
+        hideDetailsRecordingData,
+    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
+        showConfirmToFinishRecordDialog,
+    required TResult Function(_NavigateBackAction value) navigateBack,
+  }) {
+    return showConfirmToFinishRecordDialog(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult? Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult? Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult? Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult? Function(_NavigateBackAction value)? navigateBack,
+  }) {
+    return showConfirmToFinishRecordDialog?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult Function(_NavigateBackAction value)? navigateBack,
+    required TResult orElse(),
+  }) {
+    if (showConfirmToFinishRecordDialog != null) {
+      return showConfirmToFinishRecordDialog(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ShowConfirmToFinishRecordDialogAction
+    implements RecordTrackActions {
+  const factory _ShowConfirmToFinishRecordDialogAction() =
+      _$ShowConfirmToFinishRecordDialogActionImpl;
+}
+
+/// @nodoc
+abstract class _$$NavigateBackActionImplCopyWith<$Res> {
+  factory _$$NavigateBackActionImplCopyWith(_$NavigateBackActionImpl value,
+          $Res Function(_$NavigateBackActionImpl) then) =
+      __$$NavigateBackActionImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NavigateBackActionImplCopyWithImpl<$Res>
+    extends _$RecordTrackActionsCopyWithImpl<$Res, _$NavigateBackActionImpl>
+    implements _$$NavigateBackActionImplCopyWith<$Res> {
+  __$$NavigateBackActionImplCopyWithImpl(_$NavigateBackActionImpl _value,
+      $Res Function(_$NavigateBackActionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NavigateBackActionImpl implements _NavigateBackAction {
+  const _$NavigateBackActionImpl();
+
+  @override
+  String toString() {
+    return 'RecordTrackActions.navigateBack()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$NavigateBackActionImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(void Function(String, String) callback,
+            AppStrings title, AppStrings body)
+        initStreamPositions,
+    required TResult Function(Position position, double zoom)
+        moveToUserPosition,
+    required TResult Function() showDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
+    required TResult Function() showConfirmToFinishRecordDialog,
+    required TResult Function() navigateBack,
+  }) {
+    return navigateBack();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult? Function(Position position, double zoom)? moveToUserPosition,
+    TResult? Function()? showDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
+    TResult? Function()? showConfirmToFinishRecordDialog,
+    TResult? Function()? navigateBack,
+  }) {
+    return navigateBack?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult Function(Position position, double zoom)? moveToUserPosition,
+    TResult Function()? showDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
+    TResult Function()? showConfirmToFinishRecordDialog,
+    TResult Function()? navigateBack,
+    required TResult orElse(),
+  }) {
+    if (navigateBack != null) {
+      return navigateBack();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitStreamPositionsAction value)
+        initStreamPositions,
+    required TResult Function(_UserPositionChangesAction value)
+        moveToUserPosition,
+    required TResult Function(_ShowDetailsRecordingDataAction value)
+        showDetailsRecordingData,
+    required TResult Function(_HideDetailsRecordingDataAction value)
+        hideDetailsRecordingData,
+    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
+        showConfirmToFinishRecordDialog,
+    required TResult Function(_NavigateBackAction value) navigateBack,
+  }) {
+    return navigateBack(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult? Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult? Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult? Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult? Function(_NavigateBackAction value)? navigateBack,
+  }) {
+    return navigateBack?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
+        showConfirmToFinishRecordDialog,
+    TResult Function(_NavigateBackAction value)? navigateBack,
+    required TResult orElse(),
+  }) {
+    if (navigateBack != null) {
+      return navigateBack(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NavigateBackAction implements RecordTrackActions {
+  const factory _NavigateBackAction() = _$NavigateBackActionImpl;
+}
+
+/// @nodoc
+mixin _$TrackRecordStatusState {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() withoutRecording,
+    required TResult Function(List<Position> positions, double distance,
+            int duration, RecordTrackModeState mode)
+        recording,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? withoutRecording,
+    TResult? Function(List<Position> positions, double distance, int duration,
+            RecordTrackModeState mode)?
+        recording,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? withoutRecording,
+    TResult Function(List<Position> positions, double distance, int duration,
+            RecordTrackModeState mode)?
+        recording,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(TrackRecordWithoutRecordingStatusState value)
+        withoutRecording,
+    required TResult Function(TrackRecordingStatusState value) recording,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(TrackRecordWithoutRecordingStatusState value)?
+        withoutRecording,
+    TResult? Function(TrackRecordingStatusState value)? recording,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TrackRecordWithoutRecordingStatusState value)?
+        withoutRecording,
+    TResult Function(TrackRecordingStatusState value)? recording,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TrackRecordStatusStateCopyWith<$Res> {
+  factory $TrackRecordStatusStateCopyWith(TrackRecordStatusState value,
+          $Res Function(TrackRecordStatusState) then) =
+      _$TrackRecordStatusStateCopyWithImpl<$Res, TrackRecordStatusState>;
+}
+
+/// @nodoc
+class _$TrackRecordStatusStateCopyWithImpl<$Res,
+        $Val extends TrackRecordStatusState>
+    implements $TrackRecordStatusStateCopyWith<$Res> {
+  _$TrackRecordStatusStateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of TrackRecordStatusState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$TrackRecordWithoutRecordingStatusStateImplCopyWith<$Res> {
+  factory _$$TrackRecordWithoutRecordingStatusStateImplCopyWith(
+          _$TrackRecordWithoutRecordingStatusStateImpl value,
+          $Res Function(_$TrackRecordWithoutRecordingStatusStateImpl) then) =
+      __$$TrackRecordWithoutRecordingStatusStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$TrackRecordWithoutRecordingStatusStateImplCopyWithImpl<$Res>
+    extends _$TrackRecordStatusStateCopyWithImpl<$Res,
+        _$TrackRecordWithoutRecordingStatusStateImpl>
+    implements _$$TrackRecordWithoutRecordingStatusStateImplCopyWith<$Res> {
+  __$$TrackRecordWithoutRecordingStatusStateImplCopyWithImpl(
+      _$TrackRecordWithoutRecordingStatusStateImpl _value,
+      $Res Function(_$TrackRecordWithoutRecordingStatusStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of TrackRecordStatusState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$TrackRecordWithoutRecordingStatusStateImpl
+    extends TrackRecordWithoutRecordingStatusState {
+  const _$TrackRecordWithoutRecordingStatusStateImpl() : super._();
+
+  @override
+  String toString() {
+    return 'TrackRecordStatusState.withoutRecording()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TrackRecordWithoutRecordingStatusStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() withoutRecording,
+    required TResult Function(List<Position> positions, double distance,
+            int duration, RecordTrackModeState mode)
+        recording,
+  }) {
+    return withoutRecording();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? withoutRecording,
+    TResult? Function(List<Position> positions, double distance, int duration,
+            RecordTrackModeState mode)?
+        recording,
+  }) {
+    return withoutRecording?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? withoutRecording,
+    TResult Function(List<Position> positions, double distance, int duration,
+            RecordTrackModeState mode)?
+        recording,
+    required TResult orElse(),
+  }) {
+    if (withoutRecording != null) {
+      return withoutRecording();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(TrackRecordWithoutRecordingStatusState value)
+        withoutRecording,
+    required TResult Function(TrackRecordingStatusState value) recording,
+  }) {
+    return withoutRecording(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(TrackRecordWithoutRecordingStatusState value)?
+        withoutRecording,
+    TResult? Function(TrackRecordingStatusState value)? recording,
+  }) {
+    return withoutRecording?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TrackRecordWithoutRecordingStatusState value)?
+        withoutRecording,
+    TResult Function(TrackRecordingStatusState value)? recording,
+    required TResult orElse(),
+  }) {
+    if (withoutRecording != null) {
+      return withoutRecording(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TrackRecordWithoutRecordingStatusState
+    extends TrackRecordStatusState {
+  const factory TrackRecordWithoutRecordingStatusState() =
+      _$TrackRecordWithoutRecordingStatusStateImpl;
+  const TrackRecordWithoutRecordingStatusState._() : super._();
+}
+
+/// @nodoc
+abstract class _$$TrackRecordingStatusStateImplCopyWith<$Res> {
+  factory _$$TrackRecordingStatusStateImplCopyWith(
+          _$TrackRecordingStatusStateImpl value,
+          $Res Function(_$TrackRecordingStatusStateImpl) then) =
+      __$$TrackRecordingStatusStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call(
+      {List<Position> positions,
+      double distance,
+      int duration,
+      RecordTrackModeState mode});
+
+  $RecordTrackModeStateCopyWith<$Res> get mode;
+}
+
+/// @nodoc
+class __$$TrackRecordingStatusStateImplCopyWithImpl<$Res>
+    extends _$TrackRecordStatusStateCopyWithImpl<$Res,
+        _$TrackRecordingStatusStateImpl>
+    implements _$$TrackRecordingStatusStateImplCopyWith<$Res> {
+  __$$TrackRecordingStatusStateImplCopyWithImpl(
+      _$TrackRecordingStatusStateImpl _value,
+      $Res Function(_$TrackRecordingStatusStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of TrackRecordStatusState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? positions = null,
+    Object? distance = null,
+    Object? duration = null,
+    Object? mode = null,
+  }) {
+    return _then(_$TrackRecordingStatusStateImpl(
+      positions: null == positions
+          ? _value._positions
+          : positions // ignore: cast_nullable_to_non_nullable
+              as List<Position>,
+      distance: null == distance
+          ? _value.distance
+          : distance // ignore: cast_nullable_to_non_nullable
+              as double,
+      duration: null == duration
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as int,
+      mode: null == mode
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as RecordTrackModeState,
+    ));
+  }
+
+  /// Create a copy of TrackRecordStatusState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $RecordTrackModeStateCopyWith<$Res> get mode {
+    return $RecordTrackModeStateCopyWith<$Res>(_value.mode, (value) {
+      return _then(_value.copyWith(mode: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$TrackRecordingStatusStateImpl extends TrackRecordingStatusState {
+  const _$TrackRecordingStatusStateImpl(
+      {required final List<Position> positions,
+      required this.distance,
+      required this.duration,
+      required this.mode})
+      : _positions = positions,
+        super._();
+
+  final List<Position> _positions;
+  @override
+  List<Position> get positions {
+    if (_positions is EqualUnmodifiableListView) return _positions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_positions);
+  }
+
+  @override
+  final double distance;
+  @override
+  final int duration;
+  @override
+  final RecordTrackModeState mode;
+
+  @override
+  String toString() {
+    return 'TrackRecordStatusState.recording(positions: $positions, distance: $distance, duration: $duration, mode: $mode)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TrackRecordingStatusStateImpl &&
+            const DeepCollectionEquality()
+                .equals(other._positions, _positions) &&
+            (identical(other.distance, distance) ||
+                other.distance == distance) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.mode, mode) || other.mode == mode));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_positions),
+      distance,
+      duration,
+      mode);
+
+  /// Create a copy of TrackRecordStatusState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TrackRecordingStatusStateImplCopyWith<_$TrackRecordingStatusStateImpl>
+      get copyWith => __$$TrackRecordingStatusStateImplCopyWithImpl<
+          _$TrackRecordingStatusStateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() withoutRecording,
+    required TResult Function(List<Position> positions, double distance,
+            int duration, RecordTrackModeState mode)
+        recording,
+  }) {
+    return recording(positions, distance, duration, mode);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? withoutRecording,
+    TResult? Function(List<Position> positions, double distance, int duration,
+            RecordTrackModeState mode)?
+        recording,
+  }) {
+    return recording?.call(positions, distance, duration, mode);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? withoutRecording,
+    TResult Function(List<Position> positions, double distance, int duration,
+            RecordTrackModeState mode)?
+        recording,
+    required TResult orElse(),
+  }) {
+    if (recording != null) {
+      return recording(positions, distance, duration, mode);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(TrackRecordWithoutRecordingStatusState value)
+        withoutRecording,
+    required TResult Function(TrackRecordingStatusState value) recording,
+  }) {
+    return recording(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(TrackRecordWithoutRecordingStatusState value)?
+        withoutRecording,
+    TResult? Function(TrackRecordingStatusState value)? recording,
+  }) {
+    return recording?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TrackRecordWithoutRecordingStatusState value)?
+        withoutRecording,
+    TResult Function(TrackRecordingStatusState value)? recording,
+    required TResult orElse(),
+  }) {
+    if (recording != null) {
+      return recording(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TrackRecordingStatusState extends TrackRecordStatusState {
+  const factory TrackRecordingStatusState(
+          {required final List<Position> positions,
+          required final double distance,
+          required final int duration,
+          required final RecordTrackModeState mode}) =
+      _$TrackRecordingStatusStateImpl;
+  const TrackRecordingStatusState._() : super._();
+
+  List<Position> get positions;
+  double get distance;
+  int get duration;
+  RecordTrackModeState get mode;
+
+  /// Create a copy of TrackRecordStatusState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TrackRecordingStatusStateImplCopyWith<_$TrackRecordingStatusStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$RecordTrackModeState {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Position currentPosition) recording,
+    required TResult Function() pause,
+    required TResult Function() stop,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Position currentPosition)? recording,
+    TResult? Function()? pause,
+    TResult? Function()? stop,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Position currentPosition)? recording,
+    TResult Function()? pause,
+    TResult Function()? stop,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_RecordTrackRecordingModeState value) recording,
+    required TResult Function(_RecordTrackPauseModeState value) pause,
+    required TResult Function(_RecordTrackStopModeState value) stop,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_RecordTrackRecordingModeState value)? recording,
+    TResult? Function(_RecordTrackPauseModeState value)? pause,
+    TResult? Function(_RecordTrackStopModeState value)? stop,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_RecordTrackRecordingModeState value)? recording,
+    TResult Function(_RecordTrackPauseModeState value)? pause,
+    TResult Function(_RecordTrackStopModeState value)? stop,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $RecordTrackModeStateCopyWith<$Res> {
+  factory $RecordTrackModeStateCopyWith(RecordTrackModeState value,
+          $Res Function(RecordTrackModeState) then) =
+      _$RecordTrackModeStateCopyWithImpl<$Res, RecordTrackModeState>;
+}
+
+/// @nodoc
+class _$RecordTrackModeStateCopyWithImpl<$Res,
+        $Val extends RecordTrackModeState>
+    implements $RecordTrackModeStateCopyWith<$Res> {
+  _$RecordTrackModeStateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of RecordTrackModeState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$RecordTrackRecordingModeStateImplCopyWith<$Res> {
+  factory _$$RecordTrackRecordingModeStateImplCopyWith(
+          _$RecordTrackRecordingModeStateImpl value,
+          $Res Function(_$RecordTrackRecordingModeStateImpl) then) =
+      __$$RecordTrackRecordingModeStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Position currentPosition});
+
+  $PositionCopyWith<$Res> get currentPosition;
+}
+
+/// @nodoc
+class __$$RecordTrackRecordingModeStateImplCopyWithImpl<$Res>
+    extends _$RecordTrackModeStateCopyWithImpl<$Res,
+        _$RecordTrackRecordingModeStateImpl>
+    implements _$$RecordTrackRecordingModeStateImplCopyWith<$Res> {
+  __$$RecordTrackRecordingModeStateImplCopyWithImpl(
+      _$RecordTrackRecordingModeStateImpl _value,
+      $Res Function(_$RecordTrackRecordingModeStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackModeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? currentPosition = null,
+  }) {
+    return _then(_$RecordTrackRecordingModeStateImpl(
+      currentPosition: null == currentPosition
+          ? _value.currentPosition
+          : currentPosition // ignore: cast_nullable_to_non_nullable
+              as Position,
+    ));
+  }
+
+  /// Create a copy of RecordTrackModeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PositionCopyWith<$Res> get currentPosition {
+    return $PositionCopyWith<$Res>(_value.currentPosition, (value) {
+      return _then(_value.copyWith(currentPosition: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$RecordTrackRecordingModeStateImpl
+    implements _RecordTrackRecordingModeState {
+  const _$RecordTrackRecordingModeStateImpl({required this.currentPosition});
+
+  @override
+  final Position currentPosition;
+
+  @override
+  String toString() {
+    return 'RecordTrackModeState.recording(currentPosition: $currentPosition)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RecordTrackRecordingModeStateImpl &&
+            (identical(other.currentPosition, currentPosition) ||
+                other.currentPosition == currentPosition));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, currentPosition);
+
+  /// Create a copy of RecordTrackModeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RecordTrackRecordingModeStateImplCopyWith<
+          _$RecordTrackRecordingModeStateImpl>
+      get copyWith => __$$RecordTrackRecordingModeStateImplCopyWithImpl<
+          _$RecordTrackRecordingModeStateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Position currentPosition) recording,
+    required TResult Function() pause,
+    required TResult Function() stop,
+  }) {
+    return recording(currentPosition);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Position currentPosition)? recording,
+    TResult? Function()? pause,
+    TResult? Function()? stop,
+  }) {
+    return recording?.call(currentPosition);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Position currentPosition)? recording,
+    TResult Function()? pause,
+    TResult Function()? stop,
+    required TResult orElse(),
+  }) {
+    if (recording != null) {
+      return recording(currentPosition);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_RecordTrackRecordingModeState value) recording,
+    required TResult Function(_RecordTrackPauseModeState value) pause,
+    required TResult Function(_RecordTrackStopModeState value) stop,
+  }) {
+    return recording(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_RecordTrackRecordingModeState value)? recording,
+    TResult? Function(_RecordTrackPauseModeState value)? pause,
+    TResult? Function(_RecordTrackStopModeState value)? stop,
+  }) {
+    return recording?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_RecordTrackRecordingModeState value)? recording,
+    TResult Function(_RecordTrackPauseModeState value)? pause,
+    TResult Function(_RecordTrackStopModeState value)? stop,
+    required TResult orElse(),
+  }) {
+    if (recording != null) {
+      return recording(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RecordTrackRecordingModeState implements RecordTrackModeState {
+  const factory _RecordTrackRecordingModeState(
+          {required final Position currentPosition}) =
+      _$RecordTrackRecordingModeStateImpl;
+
+  Position get currentPosition;
+
+  /// Create a copy of RecordTrackModeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RecordTrackRecordingModeStateImplCopyWith<
+          _$RecordTrackRecordingModeStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$RecordTrackPauseModeStateImplCopyWith<$Res> {
+  factory _$$RecordTrackPauseModeStateImplCopyWith(
+          _$RecordTrackPauseModeStateImpl value,
+          $Res Function(_$RecordTrackPauseModeStateImpl) then) =
+      __$$RecordTrackPauseModeStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RecordTrackPauseModeStateImplCopyWithImpl<$Res>
+    extends _$RecordTrackModeStateCopyWithImpl<$Res,
+        _$RecordTrackPauseModeStateImpl>
+    implements _$$RecordTrackPauseModeStateImplCopyWith<$Res> {
+  __$$RecordTrackPauseModeStateImplCopyWithImpl(
+      _$RecordTrackPauseModeStateImpl _value,
+      $Res Function(_$RecordTrackPauseModeStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackModeState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$RecordTrackPauseModeStateImpl implements _RecordTrackPauseModeState {
+  const _$RecordTrackPauseModeStateImpl();
+
+  @override
+  String toString() {
+    return 'RecordTrackModeState.pause()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RecordTrackPauseModeStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Position currentPosition) recording,
+    required TResult Function() pause,
+    required TResult Function() stop,
+  }) {
+    return pause();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Position currentPosition)? recording,
+    TResult? Function()? pause,
+    TResult? Function()? stop,
+  }) {
+    return pause?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Position currentPosition)? recording,
+    TResult Function()? pause,
+    TResult Function()? stop,
+    required TResult orElse(),
+  }) {
+    if (pause != null) {
+      return pause();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_RecordTrackRecordingModeState value) recording,
+    required TResult Function(_RecordTrackPauseModeState value) pause,
+    required TResult Function(_RecordTrackStopModeState value) stop,
+  }) {
+    return pause(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_RecordTrackRecordingModeState value)? recording,
+    TResult? Function(_RecordTrackPauseModeState value)? pause,
+    TResult? Function(_RecordTrackStopModeState value)? stop,
+  }) {
+    return pause?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_RecordTrackRecordingModeState value)? recording,
+    TResult Function(_RecordTrackPauseModeState value)? pause,
+    TResult Function(_RecordTrackStopModeState value)? stop,
+    required TResult orElse(),
+  }) {
+    if (pause != null) {
+      return pause(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RecordTrackPauseModeState implements RecordTrackModeState {
+  const factory _RecordTrackPauseModeState() = _$RecordTrackPauseModeStateImpl;
+}
+
+/// @nodoc
+abstract class _$$RecordTrackStopModeStateImplCopyWith<$Res> {
+  factory _$$RecordTrackStopModeStateImplCopyWith(
+          _$RecordTrackStopModeStateImpl value,
+          $Res Function(_$RecordTrackStopModeStateImpl) then) =
+      __$$RecordTrackStopModeStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$RecordTrackStopModeStateImplCopyWithImpl<$Res>
+    extends _$RecordTrackModeStateCopyWithImpl<$Res,
+        _$RecordTrackStopModeStateImpl>
+    implements _$$RecordTrackStopModeStateImplCopyWith<$Res> {
+  __$$RecordTrackStopModeStateImplCopyWithImpl(
+      _$RecordTrackStopModeStateImpl _value,
+      $Res Function(_$RecordTrackStopModeStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackModeState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$RecordTrackStopModeStateImpl implements _RecordTrackStopModeState {
+  const _$RecordTrackStopModeStateImpl();
+
+  @override
+  String toString() {
+    return 'RecordTrackModeState.stop()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RecordTrackStopModeStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Position currentPosition) recording,
+    required TResult Function() pause,
+    required TResult Function() stop,
+  }) {
+    return stop();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Position currentPosition)? recording,
+    TResult? Function()? pause,
+    TResult? Function()? stop,
+  }) {
+    return stop?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Position currentPosition)? recording,
+    TResult Function()? pause,
+    TResult Function()? stop,
+    required TResult orElse(),
+  }) {
+    if (stop != null) {
+      return stop();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_RecordTrackRecordingModeState value) recording,
+    required TResult Function(_RecordTrackPauseModeState value) pause,
+    required TResult Function(_RecordTrackStopModeState value) stop,
+  }) {
+    return stop(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_RecordTrackRecordingModeState value)? recording,
+    TResult? Function(_RecordTrackPauseModeState value)? pause,
+    TResult? Function(_RecordTrackStopModeState value)? stop,
+  }) {
+    return stop?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_RecordTrackRecordingModeState value)? recording,
+    TResult Function(_RecordTrackPauseModeState value)? pause,
+    TResult Function(_RecordTrackStopModeState value)? stop,
+    required TResult orElse(),
+  }) {
+    if (stop != null) {
+      return stop(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RecordTrackStopModeState implements RecordTrackModeState {
+  const factory _RecordTrackStopModeState() = _$RecordTrackStopModeStateImpl;
 }

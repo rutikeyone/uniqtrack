@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:formz/formz.dart';
 import 'package:mobx/mobx.dart';
@@ -9,9 +8,9 @@ import 'package:uniqtrack/app/app_state/domain/entities/user.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
-import 'package:uniqtrack/core/presentation/validation/entities/email.dart';
-import 'package:uniqtrack/core/presentation/validation/entities/name.dart';
-import 'package:uniqtrack/core/presentation/validation/entities/password.dart';
+import 'package:uniqtrack/core/common/validation/entities/email.dart';
+import 'package:uniqtrack/core/common/validation/entities/name.dart';
+import 'package:uniqtrack/core/common/validation/entities/password.dart';
 import 'package:uniqtrack/features/register/domain/entities/file.dart';
 import 'package:uniqtrack/features/register/domain/entities/gender.dart';
 import 'package:uniqtrack/features/register/domain/repositorories/register_repository.dart';
@@ -175,8 +174,6 @@ abstract class _RegisterStore with Store {
     actions = const RegisterActions.hideFocus();
     registerStatusState = const RegisterStatusState.pending();
 
-    await Future.delayed(const Duration(seconds: 2));
-
     final registerResult = await _imageRepository.register(
       email: email,
       name: name,
@@ -264,6 +261,7 @@ abstract class _RegisterStore with Store {
     _authStateChangesStreamSubscription = null;
 
     const duration = Duration(milliseconds: 200);
+
     Future.delayed(duration, () {
       const header = AppStrings.notification();
       const body = AppStrings.theUserHasBeenSuccessfullyRegistered();

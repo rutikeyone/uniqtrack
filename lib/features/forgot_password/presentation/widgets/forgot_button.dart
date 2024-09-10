@@ -1,7 +1,7 @@
 part of '../pages/forgot_password_page.dart';
 
 class _ForgotButton extends StatelessWidget {
-  const _ForgotButton({super.key});
+  const _ForgotButton();
 
   @override
   Widget build(BuildContext context) {

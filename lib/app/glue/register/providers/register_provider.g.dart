@@ -52,7 +52,7 @@ final registerRepositoryProvider =
 
 typedef RegisterRepositoryRef = AutoDisposeProviderRef<RegisterRepository>;
 String _$registerStoreBuilderHash() =>
-    r'0fb1486da57a999b16c39848eb4eed794c583d42';
+    r'a5f2b4198c63e2fc18f045fbbc7079f7cf6fbef9';
 
 /// See also [registerStoreBuilder].
 @ProviderFor(registerStoreBuilder)
@@ -63,8 +63,11 @@ final registerStoreBuilderProvider =
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : _$registerStoreBuilderHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
+  dependencies: <ProviderOrFamily>[storeFactoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    storeFactoryProvider,
+    ...?storeFactoryProvider.allTransitiveDependencies
+  },
 );
 
 typedef RegisterStoreBuilderRef = AutoDisposeProviderRef<RegisterStoreBuilder>;

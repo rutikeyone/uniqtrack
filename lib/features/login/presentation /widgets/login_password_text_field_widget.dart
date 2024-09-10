@@ -6,6 +6,7 @@ class _LoginPasswordTextFieldWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = context.read<LoginStore>();
+    final appValidationToolkit = ref.watch(appValidationToolkitProvider);
 
     return Padding(
       padding: const EdgeInsets.only(top: AppDiments.dm16),
@@ -15,12 +16,15 @@ class _LoginPasswordTextFieldWidget extends ConsumerWidget {
         children: [
           Observer(
             builder: (context) {
+              final passwordState = store.passwordState;
+              final error =
+                  appValidationToolkit.validatePassword(passwordState, context);
+
               return AppObscureTextField(
                 hintText: S.of(context).enterYourPassword,
                 style: context.primaryTextTheme.bodyLarge,
                 onChanged: store.updatePassword,
-                errorText: ValidationToolkit.validatePassword(
-                    store.passwordState, context),
+                errorText: error,
               );
             },
           ),

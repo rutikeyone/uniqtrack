@@ -61,5 +61,14 @@
   "itIsImpossibleToStartRecording": "It is impossible to start recording",
   "itIsNotPossibleToGetYourCurrentLocation": "It is not possible to get your current location",
   "trackingRecordNotificationTitle": "Uniqtrack receives information about your location",
-  "trackingRecordNotificationBody": "This is necessary for tracking records"
+  "trackingRecordNotificationBody": "This is necessary for tracking records",
+  "routeLength": "Route length",
+  "time": "Time",
+  "averageSpeed": "Average speed",
+  "pause": "Pause",
+  "stop": "Stop",
+  "save": "Save",
+  "toContinue": "Continue",
+  "addMemory": "Add memory",
+  "doYouWantToFinishRecordingTheTrack": "Do you want to finish recording the track?"
 }

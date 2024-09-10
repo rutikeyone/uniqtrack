@@ -1,6 +1,6 @@
 part of 'forgot_password_provider.dart';
 
-@riverpod
+@Riverpod(dependencies: [storeFactory])
 ForgotPasswordStoreBuilder forgotPasswordStore(ForgotPasswordStoreRef ref) {
   final storeFactory = ref.watch(storeFactoryProvider);
 

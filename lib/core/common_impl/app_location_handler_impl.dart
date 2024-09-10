@@ -18,6 +18,7 @@ class AppLocationHandlerImpl implements AppLocationHandler {
   Future<AppLocationPermissionResult> requestLocationPermission() async {
     final isLocationServiceEnabled =
         await Geolocator.isLocationServiceEnabled();
+
     if (!isLocationServiceEnabled) {
       return AppLocationPermissionResult.serviceDisabled();
     }
@@ -86,6 +87,12 @@ class AppLocationHandlerImpl implements AppLocationHandler {
     final isIOS = defaultTargetPlatform == TargetPlatform.iOS;
     final isMacOS = defaultTargetPlatform == TargetPlatform.macOS;
 
+    final foregroundNotificationConfig = ForegroundNotificationConfig(
+      notificationText: settings.notificationTitle,
+      notificationTitle: settings.notificationBody,
+      enableWakeLock: true,
+    );
+
     late final LocationSettings locationSettings;
 
     if (isAndroid) {
@@ -93,6 +100,7 @@ class AppLocationHandlerImpl implements AppLocationHandler {
         accuracy: LocationAccuracy.best,
         distanceFilter: settings.distanceFilter,
         intervalDuration: settings.intervalDuration,
+        foregroundNotificationConfig: foregroundNotificationConfig,
       );
     } else if (isIOS || isMacOS) {
       locationSettings = AppleSettings(
@@ -116,6 +124,17 @@ class AppLocationHandlerImpl implements AppLocationHandler {
           longitude: event.longitude,
         );
       },
+    );
+  }
+
+  @override
+  double betweenDistance(
+      AppPosition firstPosition, AppPosition secondPosition) {
+    return Geolocator.distanceBetween(
+      firstPosition.latitude,
+      firstPosition.longitude,
+      secondPosition.latitude,
+      secondPosition.longitude,
     );
   }
 }

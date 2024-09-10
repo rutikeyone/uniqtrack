@@ -7,7 +7,7 @@ part of 'record_track_store_builder_provider.dart';
 // **************************************************************************
 
 String _$recordTrackStoreBuilderHash() =>
-    r'efa9993c7d412559bb373b0f0f7032a4373fc72c';
+    r'b947d90a5b3e0b59577f94664186959e65f68203';
 
 /// See also [recordTrackStoreBuilder].
 @ProviderFor(recordTrackStoreBuilder)
@@ -18,8 +18,11 @@ final recordTrackStoreBuilderProvider =
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : _$recordTrackStoreBuilderHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
+  dependencies: <ProviderOrFamily>[storeFactoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    storeFactoryProvider,
+    ...?storeFactoryProvider.allTransitiveDependencies
+  },
 );
 
 typedef RecordTrackStoreBuilderRef

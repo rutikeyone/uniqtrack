@@ -6,5 +6,20 @@ class RecordTrackActions with _$RecordTrackActions {
     required void Function(String, String) callback,
     required AppStrings title,
     required AppStrings body,
-  }) = _RecordTrackInitStreamPositionsAction;
+  }) = _InitStreamPositionsAction;
+
+  const factory RecordTrackActions.moveToUserPosition({
+    required Position position,
+    required double zoom,
+  }) = _UserPositionChangesAction;
+
+  const factory RecordTrackActions.showDetailsRecordingData() =
+      _ShowDetailsRecordingDataAction;
+
+  const factory RecordTrackActions.hideDetailsRecordingData() =
+      _HideDetailsRecordingDataAction;
+
+  const factory RecordTrackActions.showConfirmToFinishRecordDialog() = _ShowConfirmToFinishRecordDialogAction;
+
+  const factory RecordTrackActions.navigateBack() = _NavigateBackAction;
 }

@@ -3,7 +3,7 @@ import 'package:mobx/mobx.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
-import 'package:uniqtrack/core/presentation/validation/entities/email.dart';
+import 'package:uniqtrack/core/common/validation/entities/email.dart';
 import 'package:uniqtrack/features/forgot_password/domain/repositories/forgot_password_repository.dart';
 import 'package:uniqtrack/features/forgot_password/presentation/stores/state/forgot_actions.dart';
 import 'package:uniqtrack/features/forgot_password/presentation/stores/state/forgot_password_state.dart';

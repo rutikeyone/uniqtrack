@@ -1,10 +1,12 @@
 part of '../pages/register_page.dart';
 
-class _RegisterPasswordTextField extends StatelessWidget {
-  const _RegisterPasswordTextField({super.key});
+class _RegisterPasswordTextField extends ConsumerWidget {
+  const _RegisterPasswordTextField();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final appValidationToolkit = ref.watch(appValidationToolkitProvider);
+
     return Padding(
       padding: const EdgeInsets.only(top: AppDiments.dm16),
       child: Observer(
@@ -16,7 +18,7 @@ class _RegisterPasswordTextField extends StatelessWidget {
             hintText: S.of(context).enterYourPassword,
             style: context.primaryTextTheme.bodyLarge,
             onChanged: store.updatePassword,
-            errorText: ValidationToolkit.validatePassword(password, context),
+            errorText: appValidationToolkit.validatePassword(password, context),
             inputFormatter:
                 FilteringTextInputFormatter.deny(RegexpPattern.space),
           );

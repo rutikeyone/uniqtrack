@@ -5,10 +5,10 @@ import 'package:uniqtrack/core/theme/app_primary_text_themes.dart';
 class AppBottomNavigationBarThemes {
   static final light = BottomNavigationBarThemeData(
     selectedLabelStyle: AppPrimaryTextThemes.light.bodySmall?.copyWith(
-      color: AppColors.onSecondary,
+      color: AppColors.malachite,
     ),
     unselectedLabelStyle: AppPrimaryTextThemes.light.bodySmall,
-    selectedItemColor: AppColors.onSecondary,
+    selectedItemColor: AppColors.malachite,
     unselectedItemColor: AppColors.black,
   );
 }

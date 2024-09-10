@@ -8,4 +8,6 @@ abstract interface class AppLocationHandler {
   Future<AppPosition?> getCurrentPosition();
 
   Stream<AppPosition> listenPositions(AppLocationSettings settings);
+
+  double betweenDistance(AppPosition firstPosition, AppPosition secondPosition);
 }

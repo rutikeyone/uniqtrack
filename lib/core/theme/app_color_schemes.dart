@@ -3,10 +3,10 @@ import 'package:uniqtrack/core/theme/app_colors.dart';
 
 class AppColorSchemes {
   static const light = ColorScheme.light(
-    primary: AppColors.primary,
-    onPrimary: AppColors.onPrimary,
-    secondary: AppColors.secondary,
-    onSecondary: AppColors.onSecondary,
+    primary: AppColors.dartTeal,
+    onPrimary: AppColors.steelBlue,
+    secondary: AppColors.charcoalGray,
+    onSecondary: AppColors.malachite,
     error: AppColors.red,
 
   );

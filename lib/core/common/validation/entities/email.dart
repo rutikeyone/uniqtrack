@@ -1,5 +1,5 @@
 import 'package:formz/formz.dart';
-import 'package:uniqtrack/core/presentation/validation/regexp_pattern.dart';
+import 'package:uniqtrack/core/common/validation/regexp_pattern.dart';
 
 enum EmailValidationError { incorrectEmail }
 

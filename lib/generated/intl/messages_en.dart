@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "aContinueUrlMustBeProvidedInTheRequest":
             MessageLookupByLibrary.simpleMessage(
                 "A continue URL must be provided in the request"),
+        "addMemory": MessageLookupByLibrary.simpleMessage("Add memory"),
         "allow": MessageLookupByLibrary.simpleMessage("Allow"),
         "anAndroidPackageNameMustBeProvidedIfTheAndroid":
             MessageLookupByLibrary.simpleMessage(
@@ -38,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "An error has occurred in the application!"),
         "anIosBundleIdMustBeProvidedIfAnApp": MessageLookupByLibrary.simpleMessage(
             "An iOS Bundle ID must be provided if an App Store ID is provided"),
+        "averageSpeed": MessageLookupByLibrary.simpleMessage("Average speed"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "checkYourInternetConnectionAndTryAgain":
@@ -53,6 +55,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create an account"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
+        "doYouWantToFinishRecordingTheTrack":
+            MessageLookupByLibrary.simpleMessage(
+                "Do you want to finish recording the track?"),
         "emailAlreadyInUse":
             MessageLookupByLibrary.simpleMessage("Email already in use"),
         "enterYourEmail":
@@ -93,10 +98,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "okay": MessageLookupByLibrary.simpleMessage("Okay"),
         "operation_not_allowed":
             MessageLookupByLibrary.simpleMessage("Operation not allowed"),
+        "pause": MessageLookupByLibrary.simpleMessage("Pause"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "prohibit": MessageLookupByLibrary.simpleMessage("Prohibit"),
         "receiveTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
             "Receive timeout failure occurred"),
+        "routeLength": MessageLookupByLibrary.simpleMessage("Route length"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "sendPassword": MessageLookupByLibrary.simpleMessage("Send password"),
         "sendTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
             "Send timeout failure occurred"),
@@ -104,6 +112,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "signUp": MessageLookupByLibrary.simpleMessage("Sign up"),
         "startRecording":
             MessageLookupByLibrary.simpleMessage("Start recording"),
+        "stop": MessageLookupByLibrary.simpleMessage("Stop"),
         "takeAPhoto": MessageLookupByLibrary.simpleMessage("Take a photo"),
         "theContinuationUrlIsNotWhitelisted":
             MessageLookupByLibrary.simpleMessage(
@@ -125,6 +134,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "thereIsNoPermissionToPerformThisAction":
             MessageLookupByLibrary.simpleMessage(
                 "There is no permission to perform this action."),
+        "time": MessageLookupByLibrary.simpleMessage("Time"),
+        "toContinue": MessageLookupByLibrary.simpleMessage("Continue"),
         "tooManyRequests":
             MessageLookupByLibrary.simpleMessage("Too many requests"),
         "trackingRecordNotificationBody": MessageLookupByLibrary.simpleMessage(

@@ -3,7 +3,7 @@ import 'package:uniqtrack/core/theme/app_colors.dart';
 
 class FloatingActionButtonThemes {
   static final light = FloatingActionButtonThemeData(
-    backgroundColor: AppColors.onSecondary,
+    backgroundColor: AppColors.malachite,
     focusColor: AppColors.white,
   );
 }

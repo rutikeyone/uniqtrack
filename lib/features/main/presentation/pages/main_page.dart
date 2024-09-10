@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -76,24 +77,23 @@ class MainPage extends ConsumerWidget {
 
                 return ClipRRect(
                   borderRadius: BorderRadius.circular(AppDiments.dm16),
-                  child: Image.network(
-                    photo,
+                  child: CachedNetworkImage(
+                    imageUrl: photo,
                     width: AppDiments.dm32,
                     height: AppDiments.dm32,
                     fit: BoxFit.cover,
-                    loadingBuilder: (context, child, event) {
-                      if (event == null) return child;
+                    placeholder: (_, __) {
                       return Container(
                         width: AppDiments.dm32,
                         height: AppDiments.dm32,
-                        color: context.colorScheme.secondary,
+                        color: context.colorScheme.onPrimary.withOpacity(.35),
                       );
                     },
-                    errorBuilder: (context, child, event) {
+                    errorWidget: (_, __, ___) {
                       return Container(
                         width: AppDiments.dm32,
                         height: AppDiments.dm32,
-                        color: context.colorScheme.secondary,
+                        color: context.colorScheme.onPrimary.withOpacity(.35),
                       );
                     },
                   ),

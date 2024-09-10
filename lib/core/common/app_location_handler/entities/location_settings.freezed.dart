@@ -18,8 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$AppLocationSettings {
   int get distanceFilter => throw _privateConstructorUsedError;
   Duration get intervalDuration => throw _privateConstructorUsedError;
-  String? get notificationText => throw _privateConstructorUsedError;
-  String? get notificationTitle => throw _privateConstructorUsedError;
+  String get notificationTitle => throw _privateConstructorUsedError;
+  String get notificationBody => throw _privateConstructorUsedError;
 
   /// Create a copy of AppLocationSettings
   /// with the given fields replaced by the non-null parameter values.
@@ -37,8 +37,8 @@ abstract class $AppLocationSettingsCopyWith<$Res> {
   $Res call(
       {int distanceFilter,
       Duration intervalDuration,
-      String? notificationText,
-      String? notificationTitle});
+      String notificationTitle,
+      String notificationBody});
 }
 
 /// @nodoc
@@ -58,8 +58,8 @@ class _$AppLocationSettingsCopyWithImpl<$Res, $Val extends AppLocationSettings>
   $Res call({
     Object? distanceFilter = null,
     Object? intervalDuration = null,
-    Object? notificationText = freezed,
-    Object? notificationTitle = freezed,
+    Object? notificationTitle = null,
+    Object? notificationBody = null,
   }) {
     return _then(_value.copyWith(
       distanceFilter: null == distanceFilter
@@ -70,14 +70,14 @@ class _$AppLocationSettingsCopyWithImpl<$Res, $Val extends AppLocationSettings>
           ? _value.intervalDuration
           : intervalDuration // ignore: cast_nullable_to_non_nullable
               as Duration,
-      notificationText: freezed == notificationText
-          ? _value.notificationText
-          : notificationText // ignore: cast_nullable_to_non_nullable
-              as String?,
-      notificationTitle: freezed == notificationTitle
+      notificationTitle: null == notificationTitle
           ? _value.notificationTitle
           : notificationTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
+      notificationBody: null == notificationBody
+          ? _value.notificationBody
+          : notificationBody // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -93,8 +93,8 @@ abstract class _$$AppLocationSettingsImplCopyWith<$Res>
   $Res call(
       {int distanceFilter,
       Duration intervalDuration,
-      String? notificationText,
-      String? notificationTitle});
+      String notificationTitle,
+      String notificationBody});
 }
 
 /// @nodoc
@@ -112,8 +112,8 @@ class __$$AppLocationSettingsImplCopyWithImpl<$Res>
   $Res call({
     Object? distanceFilter = null,
     Object? intervalDuration = null,
-    Object? notificationText = freezed,
-    Object? notificationTitle = freezed,
+    Object? notificationTitle = null,
+    Object? notificationBody = null,
   }) {
     return _then(_$AppLocationSettingsImpl(
       distanceFilter: null == distanceFilter
@@ -124,14 +124,14 @@ class __$$AppLocationSettingsImplCopyWithImpl<$Res>
           ? _value.intervalDuration
           : intervalDuration // ignore: cast_nullable_to_non_nullable
               as Duration,
-      notificationText: freezed == notificationText
-          ? _value.notificationText
-          : notificationText // ignore: cast_nullable_to_non_nullable
-              as String?,
-      notificationTitle: freezed == notificationTitle
+      notificationTitle: null == notificationTitle
           ? _value.notificationTitle
           : notificationTitle // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
+      notificationBody: null == notificationBody
+          ? _value.notificationBody
+          : notificationBody // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -140,10 +140,10 @@ class __$$AppLocationSettingsImplCopyWithImpl<$Res>
 
 class _$AppLocationSettingsImpl implements _AppLocationSettings {
   const _$AppLocationSettingsImpl(
-      {this.distanceFilter = 10,
-      this.intervalDuration = const Duration(seconds: 3),
-      required this.notificationText,
-      required this.notificationTitle});
+      {this.distanceFilter = 3,
+      this.intervalDuration = const Duration(seconds: 1),
+      required this.notificationTitle,
+      required this.notificationBody});
 
   @override
   @JsonKey()
@@ -152,13 +152,13 @@ class _$AppLocationSettingsImpl implements _AppLocationSettings {
   @JsonKey()
   final Duration intervalDuration;
   @override
-  final String? notificationText;
+  final String notificationTitle;
   @override
-  final String? notificationTitle;
+  final String notificationBody;
 
   @override
   String toString() {
-    return 'AppLocationSettings(distanceFilter: $distanceFilter, intervalDuration: $intervalDuration, notificationText: $notificationText, notificationTitle: $notificationTitle)';
+    return 'AppLocationSettings(distanceFilter: $distanceFilter, intervalDuration: $intervalDuration, notificationTitle: $notificationTitle, notificationBody: $notificationBody)';
   }
 
   @override
@@ -170,15 +170,15 @@ class _$AppLocationSettingsImpl implements _AppLocationSettings {
                 other.distanceFilter == distanceFilter) &&
             (identical(other.intervalDuration, intervalDuration) ||
                 other.intervalDuration == intervalDuration) &&
-            (identical(other.notificationText, notificationText) ||
-                other.notificationText == notificationText) &&
             (identical(other.notificationTitle, notificationTitle) ||
-                other.notificationTitle == notificationTitle));
+                other.notificationTitle == notificationTitle) &&
+            (identical(other.notificationBody, notificationBody) ||
+                other.notificationBody == notificationBody));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, distanceFilter, intervalDuration,
-      notificationText, notificationTitle);
+      notificationTitle, notificationBody);
 
   /// Create a copy of AppLocationSettings
   /// with the given fields replaced by the non-null parameter values.
@@ -194,17 +194,17 @@ abstract class _AppLocationSettings implements AppLocationSettings {
   const factory _AppLocationSettings(
       {final int distanceFilter,
       final Duration intervalDuration,
-      required final String? notificationText,
-      required final String? notificationTitle}) = _$AppLocationSettingsImpl;
+      required final String notificationTitle,
+      required final String notificationBody}) = _$AppLocationSettingsImpl;
 
   @override
   int get distanceFilter;
   @override
   Duration get intervalDuration;
   @override
-  String? get notificationText;
+  String get notificationTitle;
   @override
-  String? get notificationTitle;
+  String get notificationBody;
 
   /// Create a copy of AppLocationSettings
   /// with the given fields replaced by the non-null parameter values.

@@ -5,9 +5,9 @@ part 'location_settings.freezed.dart';
 @freezed
 class AppLocationSettings with _$AppLocationSettings {
   const factory AppLocationSettings({
-    @Default(10) int distanceFilter,
-    @Default(Duration(seconds: 3)) Duration intervalDuration,
-    required String? notificationText,
-    required String? notificationTitle,
+    @Default(3) int distanceFilter,
+    @Default(Duration(seconds: 1)) Duration intervalDuration,
+    required String notificationTitle,
+    required String notificationBody,
   }) = _AppLocationSettings;
 }

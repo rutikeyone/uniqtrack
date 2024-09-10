@@ -4,24 +4,24 @@ import 'package:uniqtrack/core/theme/app_colors.dart';
 class AppTextStyles {
   static final _montserrat = "Montserrat";
 
-  static final h1 = TextStyle(
+  static final h2 = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.bold,
-    color: AppColors.primary,
+    color: AppColors.dartTeal,
     fontFamily: _montserrat,
   );
 
   static final TextStyle h3 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w500,
-    color: AppColors.primary,
+    color: AppColors.dartTeal,
     fontFamily: _montserrat,
   );
 
   static final hint = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.normal,
-    color: AppColors.onPrimary,
+    color: AppColors.steelBlue,
     fontFamily: _montserrat,
   );
 

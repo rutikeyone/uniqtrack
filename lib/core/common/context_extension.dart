@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
 import 'package:uniqtrack/core/presentation/widgets/image_source_bottom_sheet/image_source_bottom_sheet.dart';
+import 'package:uniqtrack/core/theme/app_colors_theme.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
+import 'package:uniqtrack/core/theme/app_map_theme.dart';
 import 'package:uniqtrack/generated/l10n.dart';
 
 extension ContextExtension on BuildContext {
@@ -32,6 +34,16 @@ extension ContextExtension on BuildContext {
   double get fullWidth => size.width;
 
   double get bottomSheetWidth => fullWidth - AppDiments.dm16;
+
+  AppMapTheme get appMapTheme =>
+      theme.extension<AppMapTheme>() ?? AppMapTheme.light;
+
+  IconButtonThemeData get iconButtonTheme => theme.iconButtonTheme;
+
+  ButtonStyle? get iconButtonStyle => iconButtonTheme.style;
+
+  AppColorsTheme get appColorsTheme =>
+      theme.extension<AppColorsTheme>() ?? AppColorsTheme.light;
 
   Future<void> showImageSourceModalBottomSheet({
     required VoidCallback onFromGalleryPressed,
@@ -106,6 +118,7 @@ extension ContextExtension on BuildContext {
           S.of(this).trackingRecordNotificationTitle,
       trackingRecordNotificationBody: () =>
           S.of(this).trackingRecordNotificationBody,
+      doYouWantToFinishRecordingTheTrackQuestion: () => S.of(this).doYouWantToFinishRecordingTheTrack
     );
   }
 }

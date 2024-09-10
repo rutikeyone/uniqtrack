@@ -7,7 +7,7 @@ part of 'forgot_password_provider.dart';
 // **************************************************************************
 
 String _$forgotPasswordStoreHash() =>
-    r'29be9264ef053c85f4ede9590920e3843709f6f7';
+    r'55774566837aa2e4f0c23cd4db4b065218dd823b';
 
 /// See also [forgotPasswordStore].
 @ProviderFor(forgotPasswordStore)
@@ -18,8 +18,11 @@ final forgotPasswordStoreProvider =
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : _$forgotPasswordStoreHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
+  dependencies: <ProviderOrFamily>[storeFactoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    storeFactoryProvider,
+    ...?storeFactoryProvider.allTransitiveDependencies
+  },
 );
 
 typedef ForgotPasswordStoreRef

@@ -1,9 +1,7 @@
 part of '../pages/login_page.dart';
 
 class _RegisterButton extends ConsumerWidget {
-  const _RegisterButton({
-    super.key,
-  });
+  const _RegisterButton();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

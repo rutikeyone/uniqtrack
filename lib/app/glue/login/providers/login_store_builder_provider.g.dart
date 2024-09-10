@@ -6,7 +6,7 @@ part of 'login_store_builder_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$loginStoreBuilderHash() => r'8cb88ad3cc944c3447efa1d96128059775a0cc0e';
+String _$loginStoreBuilderHash() => r'5cd7198d38cbe97ae86abac9ff2efdb832cea30c';
 
 /// See also [loginStoreBuilder].
 @ProviderFor(loginStoreBuilder)
@@ -17,8 +17,11 @@ final loginStoreBuilderProvider =
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : _$loginStoreBuilderHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
+  dependencies: <ProviderOrFamily>[storeFactoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    storeFactoryProvider,
+    ...?storeFactoryProvider.allTransitiveDependencies
+  },
 );
 
 typedef LoginStoreBuilderRef = AutoDisposeProviderRef<LoginStoreBuilder>;

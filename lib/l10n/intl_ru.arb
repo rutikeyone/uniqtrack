@@ -61,5 +61,14 @@
   "itIsImpossibleToStartRecording": "Невозможно начать запись",
   "itIsNotPossibleToGetYourCurrentLocation": "Невозможно получить ваше текущее местоположение",
   "trackingRecordNotificationTitle": "Uniqtrack получает информацию о вашем местоположении",
-  "trackingRecordNotificationBody": "Это необходимо для записи трекинга."
+  "trackingRecordNotificationBody": "Это необходимо для записи трекинга.",
+  "routeLength": "Расстояние",
+  "time": "Время",
+  "averageSpeed": "Средняя скорость",
+  "pause": "Пауза",
+  "stop": " Остановить",
+  "save": "Сохранить",
+  "toContinue": "Continue",
+  "addMemory": "Add memory",
+  "doYouWantToFinishRecordingTheTrack": "Вы хотите закончить запись трека?"
 }

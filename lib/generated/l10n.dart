@@ -679,6 +679,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Route length`
+  String get routeLength {
+    return Intl.message(
+      'Route length',
+      name: 'routeLength',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Time`
+  String get time {
+    return Intl.message(
+      'Time',
+      name: 'time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Average speed`
+  String get averageSpeed {
+    return Intl.message(
+      'Average speed',
+      name: 'averageSpeed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pause`
+  String get pause {
+    return Intl.message(
+      'Pause',
+      name: 'pause',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stop`
+  String get stop {
+    return Intl.message(
+      'Stop',
+      name: 'stop',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get toContinue {
+    return Intl.message(
+      'Continue',
+      name: 'toContinue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add memory`
+  String get addMemory {
+    return Intl.message(
+      'Add memory',
+      name: 'addMemory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you want to finish recording the track?`
+  String get doYouWantToFinishRecordingTheTrack {
+    return Intl.message(
+      'Do you want to finish recording the track?',
+      name: 'doYouWantToFinishRecordingTheTrack',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

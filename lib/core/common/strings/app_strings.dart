@@ -89,4 +89,6 @@ class AppStrings with _$AppStrings {
   const factory AppStrings.trackingRecordNotificationTitle() = _$AppTrackingRecordNotificationTitleString;
 
   const factory AppStrings.trackingRecordNotificationBody() = _$AppTrackingRecordNotificationBodyString;
+
+  const factory AppStrings.doYouWantToFinishRecordingTheTrackQuestion() = _$AppDoYouWantToFinishRecordingTheTrackQuestion;
 }

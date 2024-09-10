@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uniqtrack/core/presentation/validation/entities/email.dart';
-import 'package:uniqtrack/core/presentation/validation/entities/name.dart';
-import 'package:uniqtrack/core/presentation/validation/entities/password.dart';
+import 'package:uniqtrack/core/common/validation/entities/email.dart';
+import 'package:uniqtrack/core/common/validation/entities/name.dart';
+import 'package:uniqtrack/core/common/validation/entities/password.dart';
 import 'package:uniqtrack/features/register/domain/entities/gender.dart';
 import 'package:uniqtrack/features/register/presentation/stores/state/image_picker_mode_state.dart';
 import 'package:uniqtrack/features/register/presentation/stores/state/register_status_state.dart';

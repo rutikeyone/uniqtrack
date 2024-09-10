@@ -19,7 +19,7 @@ import 'package:uniqtrack/features/forgot_password/presentation/pages/forgot_pas
 import 'package:uniqtrack/features/login/presentation%20/pages/login_page.dart';
 import 'package:uniqtrack/features/main/presentation/pages/main_page.dart';
 import 'package:uniqtrack/features/profile/presentation/pages/profile_page.dart';
-import 'package:uniqtrack/features/record_track/presentation/record_track_page.dart';
+import 'package:uniqtrack/features/record_track/presentation/pages/record_track_page.dart';
 import 'package:uniqtrack/features/register/presentation/pages/register_page.dart';
 import 'package:uniqtrack/features/splash/presentation/splash_page.dart';
 
@@ -46,6 +46,7 @@ GoRouter router(RouterRef ref) {
   final mainNavigatorKey = ref.watch(mainNavigatorKeyProvider);
   final profileNavigatorKey = ref.watch(profileNavigatorKeyProvider);
 
+  // ignore: avoid_manual_providers_as_generated_provider_dependency
   final authState = ref.watch(authStateNotifierProvider);
   final authStateChangesUseCase = ref.watch(authStateChangesUseCaseProvider);
 

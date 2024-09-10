@@ -4,7 +4,6 @@ class _ProfileEmailWidget extends StatelessWidget {
   final String? email;
 
   const _ProfileEmailWidget({
-    super.key,
     required this.email,
   });
 
