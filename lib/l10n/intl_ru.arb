@@ -70,5 +70,31 @@
   "save": "Сохранить",
   "toContinue": "Continue",
   "addMemory": "Add memory",
-  "doYouWantToFinishRecordingTheTrack": "Вы хотите закончить запись трека?"
+  "doYouWantToFinishRecordingTheTrack": "Вы хотите закончить запись трека?",
+  "attention": "Внимание",
+  "delete": "Удалить",
+  "km": "{distance} км",
+  "@km": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "value_m": "{value} м",
+  "km_per_h": "{speed} км/ч",
+  "@km_per_h": {
+    "placeholders": {
+      "speed": {
+        "type": "String",
+        "format": "compact"
+      }
+    }
+  },
+  "editMemory": "Редактировать воспоминание",
+  "enterTrackName": "Введите название трека",
+  "name": "Имя",
+  "comment": "Comment",
+  "enterYourComment": "Enter your comment",
+  "dontSave": "Don't save"
 }

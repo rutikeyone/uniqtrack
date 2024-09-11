@@ -32,7 +32,8 @@ class _RecordTrackButton extends StatelessWidget {
                 ),
               );
             },
-            recording: (_, __, ___, ____) {
+            recording: (positions, distance, duration, averageSpeed,
+                maxAltitude, mode, isRecording) {
               return const SizedBox.shrink();
             },
           );

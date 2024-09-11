@@ -13,4 +13,5 @@ class IconsAssets {
   final userMarker = "$dir/ic_user_marker.png";
   final pause = "$dir/ic_pause.svg";
   final stop = "$dir/ic_stop.svg";
+  final delete = "$dir/ic_delete.svg";
 }

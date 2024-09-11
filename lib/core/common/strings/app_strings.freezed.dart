@@ -58,6 +58,9 @@ mixin _$AppStrings {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -101,6 +104,9 @@ mixin _$AppStrings {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -144,6 +150,9 @@ mixin _$AppStrings {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -212,8 +221,11 @@ mixin _$AppStrings {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -269,8 +281,12 @@ mixin _$AppStrings {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -325,8 +341,12 @@ mixin _$AppStrings {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -434,6 +454,9 @@ class _$AppErrorStringImpl implements _AppErrorString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return error();
   }
@@ -480,6 +503,9 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return error?.call();
   }
@@ -526,6 +552,9 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -600,8 +629,11 @@ class _$AppErrorStringImpl implements _AppErrorString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return error(this);
   }
@@ -660,8 +692,12 @@ class _$AppErrorStringImpl implements _AppErrorString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return error?.call(this);
   }
@@ -719,8 +755,12 @@ class _$AppErrorStringImpl implements _AppErrorString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -815,6 +855,9 @@ class _$AppOkayStringImpl implements _AppOkayString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return okay();
   }
@@ -861,6 +904,9 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return okay?.call();
   }
@@ -907,6 +953,9 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -981,8 +1030,11 @@ class _$AppOkayStringImpl implements _AppOkayString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return okay(this);
   }
@@ -1041,8 +1093,12 @@ class _$AppOkayStringImpl implements _AppOkayString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return okay?.call(this);
   }
@@ -1100,8 +1156,12 @@ class _$AppOkayStringImpl implements _AppOkayString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -1199,6 +1259,9 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return errorHasOccurred();
   }
@@ -1245,6 +1308,9 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return errorHasOccurred?.call();
   }
@@ -1291,6 +1357,9 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -1365,8 +1434,11 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return errorHasOccurred(this);
   }
@@ -1425,8 +1497,12 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return errorHasOccurred?.call(this);
   }
@@ -1484,8 +1560,12 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -1583,6 +1663,9 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return invalidEmail();
   }
@@ -1629,6 +1712,9 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return invalidEmail?.call();
   }
@@ -1675,6 +1761,9 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -1749,8 +1838,11 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return invalidEmail(this);
   }
@@ -1809,8 +1901,12 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return invalidEmail?.call(this);
   }
@@ -1868,8 +1964,12 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -1968,6 +2068,9 @@ class _$$AppEmailAlreadyInUseStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return emailAlreadyInUse();
   }
@@ -2014,6 +2117,9 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -2060,6 +2166,9 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -2134,8 +2243,11 @@ class _$$AppEmailAlreadyInUseStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return emailAlreadyInUse(this);
   }
@@ -2194,8 +2306,12 @@ class _$$AppEmailAlreadyInUseStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -2253,8 +2369,12 @@ class _$$AppEmailAlreadyInUseStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -2354,6 +2474,9 @@ class _$$AppOperationNotAllowedStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return operationNotAllowed();
   }
@@ -2400,6 +2523,9 @@ class _$$AppOperationNotAllowedStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return operationNotAllowed?.call();
   }
@@ -2446,6 +2572,9 @@ class _$$AppOperationNotAllowedStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -2520,8 +2649,11 @@ class _$$AppOperationNotAllowedStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return operationNotAllowed(this);
   }
@@ -2580,8 +2712,12 @@ class _$$AppOperationNotAllowedStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return operationNotAllowed?.call(this);
   }
@@ -2639,8 +2775,12 @@ class _$$AppOperationNotAllowedStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -2739,6 +2879,9 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return weakPassword();
   }
@@ -2785,6 +2928,9 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return weakPassword?.call();
   }
@@ -2831,6 +2977,9 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -2905,8 +3054,11 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return weakPassword(this);
   }
@@ -2965,8 +3117,12 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return weakPassword?.call(this);
   }
@@ -3024,8 +3180,12 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -3123,6 +3283,9 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return tooManyRequests();
   }
@@ -3169,6 +3332,9 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return tooManyRequests?.call();
   }
@@ -3215,6 +3381,9 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -3289,8 +3458,11 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return tooManyRequests(this);
   }
@@ -3349,8 +3521,12 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return tooManyRequests?.call(this);
   }
@@ -3408,8 +3584,12 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -3507,6 +3687,9 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return userTokenExpired();
   }
@@ -3553,6 +3736,9 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return userTokenExpired?.call();
   }
@@ -3599,6 +3785,9 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -3673,8 +3862,11 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return userTokenExpired(this);
   }
@@ -3733,8 +3925,12 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return userTokenExpired?.call(this);
   }
@@ -3792,8 +3988,12 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -3894,6 +4094,9 @@ class _$$AppNetworkRequestsFailedStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return networkRequestFailed();
   }
@@ -3940,6 +4143,9 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return networkRequestFailed?.call();
   }
@@ -3986,6 +4192,9 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -4060,8 +4269,11 @@ class _$$AppNetworkRequestsFailedStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return networkRequestFailed(this);
   }
@@ -4120,8 +4332,12 @@ class _$$AppNetworkRequestsFailedStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return networkRequestFailed?.call(this);
   }
@@ -4179,8 +4395,12 @@ class _$$AppNetworkRequestsFailedStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -4281,6 +4501,9 @@ class _$$AppNotInternetConnectionStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return notInternetConnection();
   }
@@ -4327,6 +4550,9 @@ class _$$AppNotInternetConnectionStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return notInternetConnection?.call();
   }
@@ -4373,6 +4599,9 @@ class _$$AppNotInternetConnectionStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (notInternetConnection != null) {
@@ -4447,8 +4676,11 @@ class _$$AppNotInternetConnectionStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return notInternetConnection(this);
   }
@@ -4507,8 +4739,12 @@ class _$$AppNotInternetConnectionStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return notInternetConnection?.call(this);
   }
@@ -4566,8 +4802,12 @@ class _$$AppNotInternetConnectionStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (notInternetConnection != null) {
@@ -4666,6 +4906,9 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return connectTimeout();
   }
@@ -4712,6 +4955,9 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return connectTimeout?.call();
   }
@@ -4758,6 +5004,9 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -4832,8 +5081,11 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return connectTimeout(this);
   }
@@ -4892,8 +5144,12 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return connectTimeout?.call(this);
   }
@@ -4951,8 +5207,12 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -5049,6 +5309,9 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return sendTimeout();
   }
@@ -5095,6 +5358,9 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return sendTimeout?.call();
   }
@@ -5141,6 +5407,9 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -5215,8 +5484,11 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return sendTimeout(this);
   }
@@ -5275,8 +5547,12 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return sendTimeout?.call(this);
   }
@@ -5334,8 +5610,12 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -5433,6 +5713,9 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return receiveTimeout();
   }
@@ -5479,6 +5762,9 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return receiveTimeout?.call();
   }
@@ -5525,6 +5811,9 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -5599,8 +5888,11 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return receiveTimeout(this);
   }
@@ -5659,8 +5951,12 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return receiveTimeout?.call(this);
   }
@@ -5718,8 +6014,12 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -5817,6 +6117,9 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return requestCancelled();
   }
@@ -5863,6 +6166,9 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return requestCancelled?.call();
   }
@@ -5909,6 +6215,9 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (requestCancelled != null) {
@@ -5983,8 +6292,11 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return requestCancelled(this);
   }
@@ -6043,8 +6355,12 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return requestCancelled?.call(this);
   }
@@ -6102,8 +6418,12 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (requestCancelled != null) {
@@ -6202,6 +6522,9 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return badCertificate();
   }
@@ -6248,6 +6571,9 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return badCertificate?.call();
   }
@@ -6294,6 +6620,9 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (badCertificate != null) {
@@ -6368,8 +6697,11 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return badCertificate(this);
   }
@@ -6428,8 +6760,12 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return badCertificate?.call(this);
   }
@@ -6487,8 +6823,12 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (badCertificate != null) {
@@ -6585,6 +6925,9 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return badResponse();
   }
@@ -6631,6 +6974,9 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return badResponse?.call();
   }
@@ -6677,6 +7023,9 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (badResponse != null) {
@@ -6751,8 +7100,11 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return badResponse(this);
   }
@@ -6811,8 +7163,12 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return badResponse?.call(this);
   }
@@ -6870,8 +7226,12 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (badResponse != null) {
@@ -6969,6 +7329,9 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return notification();
   }
@@ -7015,6 +7378,9 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return notification?.call();
   }
@@ -7061,6 +7427,9 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (notification != null) {
@@ -7135,8 +7504,11 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return notification(this);
   }
@@ -7195,8 +7567,12 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return notification?.call(this);
   }
@@ -7254,8 +7630,12 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (notification != null) {
@@ -7358,6 +7738,9 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return theUserHasBeenSuccessfullyRegistered();
   }
@@ -7404,6 +7787,9 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return theUserHasBeenSuccessfullyRegistered?.call();
   }
@@ -7450,6 +7836,9 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (theUserHasBeenSuccessfullyRegistered != null) {
@@ -7524,8 +7913,11 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return theUserHasBeenSuccessfullyRegistered(this);
   }
@@ -7584,8 +7976,12 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return theUserHasBeenSuccessfullyRegistered?.call(this);
   }
@@ -7643,8 +8039,12 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (theUserHasBeenSuccessfullyRegistered != null) {
@@ -7744,6 +8144,9 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return userDisabled();
   }
@@ -7790,6 +8193,9 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return userDisabled?.call();
   }
@@ -7836,6 +8242,9 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -7910,8 +8319,11 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return userDisabled(this);
   }
@@ -7970,8 +8382,12 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return userDisabled?.call(this);
   }
@@ -8029,8 +8445,12 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -8128,6 +8548,9 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return userNotFound();
   }
@@ -8174,6 +8597,9 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return userNotFound?.call();
   }
@@ -8220,6 +8646,9 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -8294,8 +8723,11 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return userNotFound(this);
   }
@@ -8354,8 +8786,12 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return userNotFound?.call(this);
   }
@@ -8413,8 +8849,12 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -8512,6 +8952,9 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return wrongPassword();
   }
@@ -8558,6 +9001,9 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return wrongPassword?.call();
   }
@@ -8604,6 +9050,9 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -8678,8 +9127,11 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return wrongPassword(this);
   }
@@ -8738,8 +9190,12 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return wrongPassword?.call(this);
   }
@@ -8797,8 +9253,12 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -8897,6 +9357,9 @@ class _$$AppInvalidCredentialStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return invalidCredential();
   }
@@ -8943,6 +9406,9 @@ class _$$AppInvalidCredentialStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return invalidCredential?.call();
   }
@@ -8989,6 +9455,9 @@ class _$$AppInvalidCredentialStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -9063,8 +9532,11 @@ class _$$AppInvalidCredentialStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return invalidCredential(this);
   }
@@ -9123,8 +9595,12 @@ class _$$AppInvalidCredentialStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return invalidCredential?.call(this);
   }
@@ -9182,8 +9658,12 @@ class _$$AppInvalidCredentialStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -9284,6 +9764,9 @@ class _$$AppUnathorizedContinueUriStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return unauthorizedContinueUri();
   }
@@ -9330,6 +9813,9 @@ class _$$AppUnathorizedContinueUriStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return unauthorizedContinueUri?.call();
   }
@@ -9376,6 +9862,9 @@ class _$$AppUnathorizedContinueUriStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (unauthorizedContinueUri != null) {
@@ -9450,8 +9939,11 @@ class _$$AppUnathorizedContinueUriStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return unauthorizedContinueUri(this);
   }
@@ -9510,8 +10002,12 @@ class _$$AppUnathorizedContinueUriStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return unauthorizedContinueUri?.call(this);
   }
@@ -9569,8 +10065,12 @@ class _$$AppUnathorizedContinueUriStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (unauthorizedContinueUri != null) {
@@ -9670,6 +10170,9 @@ class _$$AppInvalidContinueUriStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return invalidContinueUri();
   }
@@ -9716,6 +10219,9 @@ class _$$AppInvalidContinueUriStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return invalidContinueUri?.call();
   }
@@ -9762,6 +10268,9 @@ class _$$AppInvalidContinueUriStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (invalidContinueUri != null) {
@@ -9836,8 +10345,11 @@ class _$$AppInvalidContinueUriStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return invalidContinueUri(this);
   }
@@ -9896,8 +10408,12 @@ class _$$AppInvalidContinueUriStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return invalidContinueUri?.call(this);
   }
@@ -9955,8 +10471,12 @@ class _$$AppInvalidContinueUriStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (invalidContinueUri != null) {
@@ -10056,6 +10576,9 @@ class _$$AppMissingIOSBundleIdStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return missingIOSBundleId();
   }
@@ -10102,6 +10625,9 @@ class _$$AppMissingIOSBundleIdStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return missingIOSBundleId?.call();
   }
@@ -10148,6 +10674,9 @@ class _$$AppMissingIOSBundleIdStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (missingIOSBundleId != null) {
@@ -10222,8 +10751,11 @@ class _$$AppMissingIOSBundleIdStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return missingIOSBundleId(this);
   }
@@ -10282,8 +10814,12 @@ class _$$AppMissingIOSBundleIdStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return missingIOSBundleId?.call(this);
   }
@@ -10341,8 +10877,12 @@ class _$$AppMissingIOSBundleIdStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (missingIOSBundleId != null) {
@@ -10442,6 +10982,9 @@ class _$$AppMissingContinueUriStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return missingContinueUri();
   }
@@ -10488,6 +11031,9 @@ class _$$AppMissingContinueUriStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return missingContinueUri?.call();
   }
@@ -10534,6 +11080,9 @@ class _$$AppMissingContinueUriStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (missingContinueUri != null) {
@@ -10608,8 +11157,11 @@ class _$$AppMissingContinueUriStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return missingContinueUri(this);
   }
@@ -10668,8 +11220,12 @@ class _$$AppMissingContinueUriStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return missingContinueUri?.call(this);
   }
@@ -10727,8 +11283,12 @@ class _$$AppMissingContinueUriStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (missingContinueUri != null) {
@@ -10829,6 +11389,9 @@ class _$$AppMissingAndroidPkgNameStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return missingAndroidPkgName();
   }
@@ -10875,6 +11438,9 @@ class _$$AppMissingAndroidPkgNameStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return missingAndroidPkgName?.call();
   }
@@ -10921,6 +11487,9 @@ class _$$AppMissingAndroidPkgNameStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (missingAndroidPkgName != null) {
@@ -10995,8 +11564,11 @@ class _$$AppMissingAndroidPkgNameStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return missingAndroidPkgName(this);
   }
@@ -11055,8 +11627,12 @@ class _$$AppMissingAndroidPkgNameStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return missingAndroidPkgName?.call(this);
   }
@@ -11114,8 +11690,12 @@ class _$$AppMissingAndroidPkgNameStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (missingAndroidPkgName != null) {
@@ -11226,6 +11806,9 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress();
   }
@@ -11272,6 +11855,9 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress?.call();
   }
@@ -11318,6 +11904,9 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (thePasswordHasBeenSentToTheSpecifiedEmailAddress != null) {
@@ -11392,8 +11981,11 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress(this);
   }
@@ -11452,8 +12044,12 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress?.call(this);
   }
@@ -11511,8 +12107,12 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (thePasswordHasBeenSentToTheSpecifiedEmailAddress != null) {
@@ -11614,6 +12214,9 @@ class _$$AppNoPermissionToPerformStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return noPermissionToPerform();
   }
@@ -11660,6 +12263,9 @@ class _$$AppNoPermissionToPerformStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return noPermissionToPerform?.call();
   }
@@ -11706,6 +12312,9 @@ class _$$AppNoPermissionToPerformStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (noPermissionToPerform != null) {
@@ -11780,8 +12389,11 @@ class _$$AppNoPermissionToPerformStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return noPermissionToPerform(this);
   }
@@ -11840,8 +12452,12 @@ class _$$AppNoPermissionToPerformStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return noPermissionToPerform?.call(this);
   }
@@ -11899,8 +12515,12 @@ class _$$AppNoPermissionToPerformStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (noPermissionToPerform != null) {
@@ -11996,6 +12616,9 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return prohibit();
   }
@@ -12042,6 +12665,9 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return prohibit?.call();
   }
@@ -12088,6 +12714,9 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (prohibit != null) {
@@ -12162,8 +12791,11 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return prohibit(this);
   }
@@ -12222,8 +12854,12 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return prohibit?.call(this);
   }
@@ -12281,8 +12917,12 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (prohibit != null) {
@@ -12377,6 +13017,9 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return allow();
   }
@@ -12423,6 +13066,9 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return allow?.call();
   }
@@ -12469,6 +13115,9 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (allow != null) {
@@ -12543,8 +13192,11 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return allow(this);
   }
@@ -12603,8 +13255,12 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return allow?.call(this);
   }
@@ -12662,8 +13318,12 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (allow != null) {
@@ -12761,6 +13421,9 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return serviceDenied();
   }
@@ -12807,6 +13470,9 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return serviceDenied?.call();
   }
@@ -12853,6 +13519,9 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (serviceDenied != null) {
@@ -12927,8 +13596,11 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return serviceDenied(this);
   }
@@ -12987,8 +13659,12 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return serviceDenied?.call(this);
   }
@@ -13046,8 +13722,12 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (serviceDenied != null) {
@@ -13150,6 +13830,9 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return noPermissionDetermineUserLocation();
   }
@@ -13196,6 +13879,9 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return noPermissionDetermineUserLocation?.call();
   }
@@ -13242,6 +13928,9 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (noPermissionDetermineUserLocation != null) {
@@ -13316,8 +14005,11 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return noPermissionDetermineUserLocation(this);
   }
@@ -13376,8 +14068,12 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return noPermissionDetermineUserLocation?.call(this);
   }
@@ -13435,8 +14131,12 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (noPermissionDetermineUserLocation != null) {
@@ -13537,6 +14237,9 @@ class _$$AppCantStartRecordingStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return cantStartRecording();
   }
@@ -13583,6 +14286,9 @@ class _$$AppCantStartRecordingStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return cantStartRecording?.call();
   }
@@ -13629,6 +14335,9 @@ class _$$AppCantStartRecordingStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (cantStartRecording != null) {
@@ -13703,8 +14412,11 @@ class _$$AppCantStartRecordingStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return cantStartRecording(this);
   }
@@ -13763,8 +14475,12 @@ class _$$AppCantStartRecordingStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return cantStartRecording?.call(this);
   }
@@ -13822,8 +14538,12 @@ class _$$AppCantStartRecordingStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (cantStartRecording != null) {
@@ -13927,6 +14647,9 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return cantGetYourCurrentLocation();
   }
@@ -13973,6 +14696,9 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return cantGetYourCurrentLocation?.call();
   }
@@ -14019,6 +14745,9 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (cantGetYourCurrentLocation != null) {
@@ -14093,8 +14822,11 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return cantGetYourCurrentLocation(this);
   }
@@ -14153,8 +14885,12 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return cantGetYourCurrentLocation?.call(this);
   }
@@ -14212,8 +14948,12 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (cantGetYourCurrentLocation != null) {
@@ -14315,6 +15055,9 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return trackingRecordNotificationTitle();
   }
@@ -14361,6 +15104,9 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return trackingRecordNotificationTitle?.call();
   }
@@ -14407,6 +15153,9 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationTitle != null) {
@@ -14481,8 +15230,11 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return trackingRecordNotificationTitle(this);
   }
@@ -14541,8 +15293,12 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return trackingRecordNotificationTitle?.call(this);
   }
@@ -14600,8 +15356,12 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationTitle != null) {
@@ -14703,6 +15463,9 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return trackingRecordNotificationBody();
   }
@@ -14749,6 +15512,9 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return trackingRecordNotificationBody?.call();
   }
@@ -14795,6 +15561,9 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationBody != null) {
@@ -14869,8 +15638,11 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return trackingRecordNotificationBody(this);
   }
@@ -14929,8 +15701,12 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return trackingRecordNotificationBody?.call(this);
   }
@@ -14988,8 +15764,12 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationBody != null) {
@@ -15005,24 +15785,29 @@ abstract class _$AppTrackingRecordNotificationBodyString implements AppStrings {
 }
 
 /// @nodoc
-abstract class _$$$AppDoYouWantToFinishRecordingTheTrackQuestionImplCopyWith<
+abstract class _$$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImplCopyWith<
     $Res> {
-  factory _$$$AppDoYouWantToFinishRecordingTheTrackQuestionImplCopyWith(
-          _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl value,
-          $Res Function(_$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl)
+  factory _$$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImplCopyWith(
+          _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl value,
+          $Res Function(
+                  _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl)
               then) =
-      __$$$AppDoYouWantToFinishRecordingTheTrackQuestionImplCopyWithImpl<$Res>;
+      __$$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImplCopyWithImpl<
+          $Res>;
 }
 
 /// @nodoc
-class __$$$AppDoYouWantToFinishRecordingTheTrackQuestionImplCopyWithImpl<$Res>
+class __$$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImplCopyWithImpl<
+        $Res>
     extends _$AppStringsCopyWithImpl<$Res,
-        _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl>
+        _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl>
     implements
-        _$$$AppDoYouWantToFinishRecordingTheTrackQuestionImplCopyWith<$Res> {
-  __$$$AppDoYouWantToFinishRecordingTheTrackQuestionImplCopyWithImpl(
-      _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl _value,
-      $Res Function(_$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl) _then)
+        _$$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImplCopyWith<
+            $Res> {
+  __$$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImplCopyWithImpl(
+      _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl _value,
+      $Res Function(_$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl)
+          _then)
       : super(_value, _then);
 
   /// Create a copy of AppStrings
@@ -15031,9 +15816,9 @@ class __$$$AppDoYouWantToFinishRecordingTheTrackQuestionImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl
-    implements _$AppDoYouWantToFinishRecordingTheTrackQuestion {
-  const _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl();
+class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
+    implements _$AppDoYouWantToFinishRecordingTheTrackQuestionString {
+  const _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl();
 
   @override
   String toString() {
@@ -15044,7 +15829,8 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl);
+            other
+                is _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl);
   }
 
   @override
@@ -15093,6 +15879,9 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl
     required TResult Function() trackingRecordNotificationTitle,
     required TResult Function() trackingRecordNotificationBody,
     required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion();
   }
@@ -15139,6 +15928,9 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl
     TResult? Function()? trackingRecordNotificationTitle,
     TResult? Function()? trackingRecordNotificationBody,
     TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion?.call();
   }
@@ -15185,6 +15977,9 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl
     TResult Function()? trackingRecordNotificationTitle,
     TResult Function()? trackingRecordNotificationBody,
     TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
     required TResult orElse(),
   }) {
     if (doYouWantToFinishRecordingTheTrackQuestion != null) {
@@ -15259,8 +16054,11 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl
     required TResult Function(_$AppTrackingRecordNotificationBodyString value)
         trackingRecordNotificationBody,
     required TResult Function(
-            _$AppDoYouWantToFinishRecordingTheTrackQuestion value)
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
         doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion(this);
   }
@@ -15319,8 +16117,12 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl
         trackingRecordNotificationTitle,
     TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult? Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion?.call(this);
   }
@@ -15378,8 +16180,12 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl
         trackingRecordNotificationTitle,
     TResult Function(_$AppTrackingRecordNotificationBodyString value)?
         trackingRecordNotificationBody,
-    TResult Function(_$AppDoYouWantToFinishRecordingTheTrackQuestion value)?
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
         doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
     required TResult orElse(),
   }) {
     if (doYouWantToFinishRecordingTheTrackQuestion != null) {
@@ -15389,8 +16195,1211 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl
   }
 }
 
-abstract class _$AppDoYouWantToFinishRecordingTheTrackQuestion
+abstract class _$AppDoYouWantToFinishRecordingTheTrackQuestionString
     implements AppStrings {
-  const factory _$AppDoYouWantToFinishRecordingTheTrackQuestion() =
-      _$$AppDoYouWantToFinishRecordingTheTrackQuestionImpl;
+  const factory _$AppDoYouWantToFinishRecordingTheTrackQuestionString() =
+      _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl;
+}
+
+/// @nodoc
+abstract class _$$AppAttentionStringImplCopyWith<$Res> {
+  factory _$$AppAttentionStringImplCopyWith(_$AppAttentionStringImpl value,
+          $Res Function(_$AppAttentionStringImpl) then) =
+      __$$AppAttentionStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AppAttentionStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$AppAttentionStringImpl>
+    implements _$$AppAttentionStringImplCopyWith<$Res> {
+  __$$AppAttentionStringImplCopyWithImpl(_$AppAttentionStringImpl _value,
+      $Res Function(_$AppAttentionStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AppAttentionStringImpl implements _AppAttentionString {
+  const _$AppAttentionStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.attention()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AppAttentionStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+    required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
+  }) {
+    return attention();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+    TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
+  }) {
+    return attention?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
+    required TResult orElse(),
+  }) {
+    if (attention != null) {
+      return attention();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+    required TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
+        doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
+  }) {
+    return attention(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
+  }) {
+    return attention?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
+    required TResult orElse(),
+  }) {
+    if (attention != null) {
+      return attention(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AppAttentionString implements AppStrings {
+  const factory _AppAttentionString() = _$AppAttentionStringImpl;
+}
+
+/// @nodoc
+abstract class _$$AppSaveStringImplCopyWith<$Res> {
+  factory _$$AppSaveStringImplCopyWith(
+          _$AppSaveStringImpl value, $Res Function(_$AppSaveStringImpl) then) =
+      __$$AppSaveStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AppSaveStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$AppSaveStringImpl>
+    implements _$$AppSaveStringImplCopyWith<$Res> {
+  __$$AppSaveStringImplCopyWithImpl(
+      _$AppSaveStringImpl _value, $Res Function(_$AppSaveStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AppSaveStringImpl implements _AppSaveString {
+  const _$AppSaveStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.save()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AppSaveStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+    required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
+  }) {
+    return save();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+    TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
+  }) {
+    return save?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
+    required TResult orElse(),
+  }) {
+    if (save != null) {
+      return save();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+    required TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
+        doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
+  }) {
+    return save(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
+  }) {
+    return save?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
+    required TResult orElse(),
+  }) {
+    if (save != null) {
+      return save(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AppSaveString implements AppStrings {
+  const factory _AppSaveString() = _$AppSaveStringImpl;
+}
+
+/// @nodoc
+abstract class _$$AppDeleteStringImplCopyWith<$Res> {
+  factory _$$AppDeleteStringImplCopyWith(_$AppDeleteStringImpl value,
+          $Res Function(_$AppDeleteStringImpl) then) =
+      __$$AppDeleteStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AppDeleteStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$AppDeleteStringImpl>
+    implements _$$AppDeleteStringImplCopyWith<$Res> {
+  __$$AppDeleteStringImplCopyWithImpl(
+      _$AppDeleteStringImpl _value, $Res Function(_$AppDeleteStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AppDeleteStringImpl implements _AppDeleteString {
+  const _$AppDeleteStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.delete()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AppDeleteStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+    required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
+  }) {
+    return delete();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+    TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
+  }) {
+    return delete?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
+    required TResult orElse(),
+  }) {
+    if (delete != null) {
+      return delete();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+    required TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
+        doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
+  }) {
+    return delete(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
+  }) {
+    return delete?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
+    required TResult orElse(),
+  }) {
+    if (delete != null) {
+      return delete(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AppDeleteString implements AppStrings {
+  const factory _AppDeleteString() = _$AppDeleteStringImpl;
 }

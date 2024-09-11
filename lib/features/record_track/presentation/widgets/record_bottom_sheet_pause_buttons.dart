@@ -5,8 +5,13 @@ import 'package:uniqtrack/core/presentation/widgets/app_outlined_button.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/generated/l10n.dart';
 
+import 'record_track_modal_bottom_sheet.dart';
+
 class RecordBottomSheetPauseButtons extends StatelessWidget {
+  final RecordTrackModalBottomSheetArgument argument;
+
   const RecordBottomSheetPauseButtons({
+    required this.argument,
     super.key,
   });
 
@@ -18,14 +23,22 @@ class RecordBottomSheetPauseButtons extends StatelessWidget {
         children: [
           SizedBox(
             height: AppDiments.dm48,
-            child: AppElevatedButton(
-              textStyle: context.primaryTextTheme.labelLarge?.copyWith(
-                color: context.colorScheme.secondary,
-                fontWeight: FontWeight.w500,
-              ),
-              borderRadius: BorderRadius.circular(AppDiments.dm6),
-              text: S.of(context).toContinue,
-              onPressed: () {},
+            child: StreamBuilder<bool>(
+              stream: argument.continueAvailable,
+              initialData: argument.continueAvailableInitialData,
+              builder: (context, snapshot) {
+                final value = snapshot.data ?? argument.continueAvailableInitialData;
+
+                return AppElevatedButton(
+                  textStyle: context.primaryTextTheme.labelLarge?.copyWith(
+                    color: context.colorScheme.secondary,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  borderRadius: BorderRadius.circular(AppDiments.dm6),
+                  text: S.of(context).toContinue,
+                  onPressed: value ? argument.onContinuePressed : null,
+                );
+              }
             ),
           ),
           Padding(
@@ -39,7 +52,7 @@ class RecordBottomSheetPauseButtons extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(AppDiments.dm6),
                 text: S.of(context).addMemory,
-                onPressed: () {},
+                onPressed: argument.onAddMemoryPressed,
               ),
             ),
           ),

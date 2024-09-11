@@ -20,6 +20,12 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ru';
 
+  static String m0(distance) => "${distance} км";
+
+  static String m1(speed) => "${speed} км/ч";
+
+  static String m2(value) => "${value} м";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aBadCertificateErrorOccurred": MessageLookupByLibrary.simpleMessage(
@@ -39,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Произошла ошибка в приложении!"),
         "anIosBundleIdMustBeProvidedIfAnApp": MessageLookupByLibrary.simpleMessage(
             "Если указан идентификатор магазина приложений, необходимо указать идентификатор пакета iOS"),
+        "attention": MessageLookupByLibrary.simpleMessage("Внимание"),
         "averageSpeed":
             MessageLookupByLibrary.simpleMessage("Средняя скорость"),
         "back": MessageLookupByLibrary.simpleMessage("Назад"),
@@ -48,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Проверьте свое интернет-соединение и повторите попытку"),
         "chooseFromTheLibrary":
             MessageLookupByLibrary.simpleMessage("Выбрать из галереи"),
+        "comment": MessageLookupByLibrary.simpleMessage("Comment"),
         "community": MessageLookupByLibrary.simpleMessage("Сообщество"),
         "connectionTimeoutFailureOccurred":
             MessageLookupByLibrary.simpleMessage(
@@ -55,11 +63,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "createAnAccount": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
+        "delete": MessageLookupByLibrary.simpleMessage("Удалить"),
         "doYouWantToFinishRecordingTheTrack":
             MessageLookupByLibrary.simpleMessage(
                 "Вы хотите закончить запись трека?"),
+        "dontSave": MessageLookupByLibrary.simpleMessage("Don\'t save"),
+        "editMemory":
+            MessageLookupByLibrary.simpleMessage("Редактировать воспоминание"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "Электронная почта уже используется"),
+        "enterTrackName":
+            MessageLookupByLibrary.simpleMessage("Введите название трека"),
+        "enterYourComment":
+            MessageLookupByLibrary.simpleMessage("Enter your comment"),
         "enterYourEmail":
             MessageLookupByLibrary.simpleMessage("Введите вашу почту"),
         "enterYourFullName":
@@ -85,6 +101,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "itIsNotPossibleToGetYourCurrentLocation":
             MessageLookupByLibrary.simpleMessage(
                 "Невозможно получить ваше текущее местоположение"),
+        "km": m0,
+        "km_per_h": m1,
         "locationServiceAreDisabled": MessageLookupByLibrary.simpleMessage(
             "Служба геолокации отключена."),
         "logIn": MessageLookupByLibrary.simpleMessage("Войти"),
@@ -94,6 +112,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "myFavouriteTracks":
             MessageLookupByLibrary.simpleMessage("Мои избранные треки"),
         "myTracks": MessageLookupByLibrary.simpleMessage("Мои треки"),
+        "name": MessageLookupByLibrary.simpleMessage("Имя"),
         "notification": MessageLookupByLibrary.simpleMessage("Уведомление"),
         "okay": MessageLookupByLibrary.simpleMessage("Хорошо"),
         "operation_not_allowed":
@@ -149,6 +168,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Пользователь не найден"),
         "userTokenExpired": MessageLookupByLibrary.simpleMessage(
             "Срок действия пользовательского токена истек"),
+        "value_m": m2,
         "weakPassword": MessageLookupByLibrary.simpleMessage("Слабый пароль"),
         "wrongPassword": MessageLookupByLibrary.simpleMessage("Неверный пароль")
       };

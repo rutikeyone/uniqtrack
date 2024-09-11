@@ -118,7 +118,10 @@ extension ContextExtension on BuildContext {
           S.of(this).trackingRecordNotificationTitle,
       trackingRecordNotificationBody: () =>
           S.of(this).trackingRecordNotificationBody,
-      doYouWantToFinishRecordingTheTrackQuestion: () => S.of(this).doYouWantToFinishRecordingTheTrack
+      doYouWantToFinishRecordingTheTrackQuestion: () => S.of(this).doYouWantToFinishRecordingTheTrack,
+      attention: () => S.of(this).attention,
+      save: () => S.of(this).save,
+      delete: () => S.of(this).delete,
     );
   }
 }

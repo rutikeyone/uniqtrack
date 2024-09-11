@@ -70,5 +70,31 @@
   "save": "Save",
   "toContinue": "Continue",
   "addMemory": "Add memory",
-  "doYouWantToFinishRecordingTheTrack": "Do you want to finish recording the track?"
+  "doYouWantToFinishRecordingTheTrack": "Do you want to finish recording the track?",
+  "attention": "Attention",
+  "delete": "Delete",
+  "km": "{distance} km",
+  "@km": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "value_m": "{value} m",
+  "km_per_h": "{speed} km/h",
+  "@km_per_h": {
+    "placeholders": {
+      "speed": {
+        "type": "String",
+        "format": "compact"
+      }
+    }
+  },
+  "editMemory": "Edit Memory",
+  "enterTrackName": "Enter track name",
+  "name": "Name",
+  "comment": "Comment",
+  "enterYourComment": "Enter your comment",
+  "dontSave": "Don't save"
 }

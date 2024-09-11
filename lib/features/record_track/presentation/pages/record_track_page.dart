@@ -3,16 +3,19 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mobx/mobx.dart';
 import 'package:provider/provider.dart';
+import 'package:uniqtrack/app/navigation/providers/navigation_store_provider.dart';
 import 'package:uniqtrack/core/common/activity.dart';
 import 'package:uniqtrack/core/common/context_extension.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
 import 'package:uniqtrack/core/common_impl/app_widget_toolkit_impl.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_elevated_button.dart';
+import 'package:uniqtrack/core/presentation/widgets/map_controller_button.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/features/record_track/domain/entities/position.dart';
 import 'package:uniqtrack/features/record_track/presentation/stores/record_track_store.dart';
@@ -21,6 +24,7 @@ import 'package:uniqtrack/features/record_track/presentation/widgets/record_trac
 import 'package:uniqtrack/generated/l10n.dart';
 
 part '../widgets/record_track_button.dart';
+part '../widgets/record_map_buttons.dart';
 
 const _initialCenter = const LatLng(0, 0);
 const _initialCameraPosition = CameraPosition(target: _initialCenter);
@@ -46,13 +50,14 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
   final Set<Polyline> _polylines = {};
   final Set<Circle> _circles = {};
 
+  late final GlobalKey<ScaffoldState> _scaffoldKey;
+  PersistentBottomSheetController? _bottomSheetController;
   bool _bottomSheetShowed = false;
-
-  final _key = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     _store = context.read<RecordTrackStore>();
+    _scaffoldKey = GlobalKey<ScaffoldState>();
 
     _reactionActionsDisposer = reaction(
       (_) => _store.actions,
@@ -81,8 +86,9 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
       moveToUserPosition: _moveToUserPosition,
       showDetailsRecordingData: _showDetailsRecordData,
       hideDetailsRecordingData: _hideDetailsRecordData,
-      showConfirmToFinishRecordDialog: _showConfirmToFinishRecordDialog,
       navigateBack: _navigateBack,
+      navigateToAddMemory: _navigateToAddMemory,
+      navigateToAddRecordTrack: _navigateToAddRecordTrack,
     );
   }
 
@@ -112,13 +118,23 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     );
   }
 
-  void _handleWithoutRecordingState() {}
+  void _handleWithoutRecordingState() {
+    final emptyPositions = <Position>[];
+
+    _updateLines(emptyPositions);
+    _updateCircles(emptyPositions);
+
+    setState(() {});
+  }
 
   void _handleRecordingState(
     List<Position> positions,
     double distance,
     int duration,
+    double averageSpeed,
+    double maxAltitude,
     RecordTrackModeState mode,
+    bool isRecording,
   ) {
     _updateLines(positions);
     _updateCircles(positions);
@@ -157,7 +173,7 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
   }
 
   void _updateLines(List<Position> positions) {
-    final id = ref.read(appWidgetToolkitProvider).generateUID();
+    final id = ref.read(appWidgetToolkitProvider).uid();
 
     final points = positions.map((item) {
       final latitude = item.latitude;
@@ -185,8 +201,8 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     final firstCoordinate = positions.firstOrNull;
     final lastCoordinate = positions.lastOrNull;
 
-    final firstId = ref.read(appWidgetToolkitProvider).generateUID();
-    final lastId = ref.read(appWidgetToolkitProvider).generateUID();
+    final firstId = ref.read(appWidgetToolkitProvider).uid();
+    final lastId = ref.read(appWidgetToolkitProvider).uid();
 
     if (firstCoordinate != null) {
       final latitude = firstCoordinate.latitude;
@@ -232,17 +248,34 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     if (_bottomSheetShowed) return;
     _bottomSheetShowed = true;
 
+    final argument = RecordTrackModalBottomSheetArgument(
+      scaffoldKey: _scaffoldKey,
+      stream: store.trackRecordStatusStateStream,
+      initialData: store.trackRecordStatusState,
+      continueAvailable: store.continueAvailableStream,
+      continueAvailableInitialData: store.continueAvailable,
+      onPausePressed: store.pauseRecordTrack,
+      onStopPressed: store.stopRecordTrack,
+      onContinuePressed: store.continueRecordTrack,
+      onAddMemoryPressed: store.addMemory,
+      onDeletePressed: store.deleteRecordTrack,
+      onSavePressed: store.saveRecordTrack,
+    );
+
     Future.delayed(duration, () {
-      RecordTrackModalBottomSheet.show(
-        scaffoldKey: _key,
+      _bottomSheetController = RecordTrackModalBottomSheet.show(
         context: context,
-        stream: store.trackRecordStatusStateStream,
-        initialData: store.trackRecordStatusState,
+        argument: argument,
       );
     });
   }
 
-  void _hideDetailsRecordData() {}
+  void _hideDetailsRecordData() {
+    if (_bottomSheetShowed) {
+      _bottomSheetShowed = false;
+      _bottomSheetController?.close();
+    }
+  }
 
   Future<void> _moveToUserPosition(Position position, double zoom) async {
     final latLng = LatLng(position.latitude, position.longitude);
@@ -265,9 +298,16 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     }
   }
 
-  void _showConfirmToFinishRecordDialog() {}
-
   void _navigateBack() {
+    ref.read(recordTrackNavCallbackStoreProvider).navigateBack();
+  }
+
+  void _navigateToAddMemory() {
+    ref.read(recordTrackNavCallbackStoreProvider).navigateToAddMemory();
+  }
+
+  void _navigateToAddRecordTrack() {
+    ref.read(recordTrackNavCallbackStoreProvider).navigateToAddRecordTrack();
   }
 
   @override
@@ -287,7 +327,7 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
       canPop: false,
       onPopInvokedWithResult: store.onPopInvokedWithResult,
       child: Scaffold(
-        key: _key,
+        key: _scaffoldKey,
         body: SafeArea(
           child: Stack(
             children: [
@@ -302,6 +342,7 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
                   onMapCreated: onMapCreated,
                 ),
               ),
+              _RecordMapButtons(controller: _controller),
               _RecordTrackButton(),
             ],
           ),
@@ -310,3 +351,5 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     );
   }
 }
+
+

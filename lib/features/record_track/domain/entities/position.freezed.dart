@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$Position {
   double get latitude => throw _privateConstructorUsedError;
   double get longitude => throw _privateConstructorUsedError;
+  double get altitude => throw _privateConstructorUsedError;
 
   /// Create a copy of Position
   /// with the given fields replaced by the non-null parameter values.
@@ -31,7 +32,7 @@ abstract class $PositionCopyWith<$Res> {
   factory $PositionCopyWith(Position value, $Res Function(Position) then) =
       _$PositionCopyWithImpl<$Res, Position>;
   @useResult
-  $Res call({double latitude, double longitude});
+  $Res call({double latitude, double longitude, double altitude});
 }
 
 /// @nodoc
@@ -51,6 +52,7 @@ class _$PositionCopyWithImpl<$Res, $Val extends Position>
   $Res call({
     Object? latitude = null,
     Object? longitude = null,
+    Object? altitude = null,
   }) {
     return _then(_value.copyWith(
       latitude: null == latitude
@@ -60,6 +62,10 @@ class _$PositionCopyWithImpl<$Res, $Val extends Position>
       longitude: null == longitude
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
+              as double,
+      altitude: null == altitude
+          ? _value.altitude
+          : altitude // ignore: cast_nullable_to_non_nullable
               as double,
     ) as $Val);
   }
@@ -73,7 +79,7 @@ abstract class _$$PositionImplCopyWith<$Res>
       __$$PositionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double latitude, double longitude});
+  $Res call({double latitude, double longitude, double altitude});
 }
 
 /// @nodoc
@@ -91,6 +97,7 @@ class __$$PositionImplCopyWithImpl<$Res>
   $Res call({
     Object? latitude = null,
     Object? longitude = null,
+    Object? altitude = null,
   }) {
     return _then(_$PositionImpl(
       latitude: null == latitude
@@ -101,6 +108,10 @@ class __$$PositionImplCopyWithImpl<$Res>
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as double,
+      altitude: null == altitude
+          ? _value.altitude
+          : altitude // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -108,16 +119,21 @@ class __$$PositionImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$PositionImpl implements _Position {
-  const _$PositionImpl({required this.latitude, required this.longitude});
+  const _$PositionImpl(
+      {required this.latitude,
+      required this.longitude,
+      required this.altitude});
 
   @override
   final double latitude;
   @override
   final double longitude;
+  @override
+  final double altitude;
 
   @override
   String toString() {
-    return 'Position(latitude: $latitude, longitude: $longitude)';
+    return 'Position(latitude: $latitude, longitude: $longitude, altitude: $altitude)';
   }
 
   @override
@@ -128,11 +144,13 @@ class _$PositionImpl implements _Position {
             (identical(other.latitude, latitude) ||
                 other.latitude == latitude) &&
             (identical(other.longitude, longitude) ||
-                other.longitude == longitude));
+                other.longitude == longitude) &&
+            (identical(other.altitude, altitude) ||
+                other.altitude == altitude));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, latitude, longitude);
+  int get hashCode => Object.hash(runtimeType, latitude, longitude, altitude);
 
   /// Create a copy of Position
   /// with the given fields replaced by the non-null parameter values.
@@ -146,12 +164,15 @@ class _$PositionImpl implements _Position {
 abstract class _Position implements Position {
   const factory _Position(
       {required final double latitude,
-      required final double longitude}) = _$PositionImpl;
+      required final double longitude,
+      required final double altitude}) = _$PositionImpl;
 
   @override
   double get latitude;
   @override
   double get longitude;
+  @override
+  double get altitude;
 
   /// Create a copy of Position
   /// with the given fields replaced by the non-null parameter values.

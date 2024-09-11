@@ -7,8 +7,13 @@ import 'package:uniqtrack/core/presentation/widgets/app_elevated_button.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/generated/l10n.dart';
 
+import 'record_track_modal_bottom_sheet.dart';
+
 class RecordBottomSheetRecordingButtons extends StatelessWidget {
+  final RecordTrackModalBottomSheetArgument argument;
+
   const RecordBottomSheetRecordingButtons({
+    required this.argument,
     super.key,
   });
 
@@ -28,7 +33,7 @@ class RecordBottomSheetRecordingButtons extends StatelessWidget {
                   color: context.colorScheme.secondary,
                   fontWeight: FontWeight.w500,
                 ),
-                onPressed: () {},
+                onPressed: argument.onPausePressed,
                 borderRadius: BorderRadius.circular(AppDiments.dm6),
                 borderColor: context.appColorsTheme.primaryButtonBorder,
                 icon: Padding(
@@ -57,7 +62,7 @@ class RecordBottomSheetRecordingButtons extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(AppDiments.dm6),
                 text: S.of(context).stop,
-                onPressed: () {},
+                onPressed: argument.onStopPressed,
                 icon: Padding(
                   padding: const EdgeInsets.only(left: AppDiments.dm8),
                   child: SvgPicture.asset(

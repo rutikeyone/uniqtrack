@@ -86,9 +86,18 @@ class AppStrings with _$AppStrings {
   const factory AppStrings.cantGetYourCurrentLocation() =
       _$AppStringsCantGetYourCurrentLocationString;
 
-  const factory AppStrings.trackingRecordNotificationTitle() = _$AppTrackingRecordNotificationTitleString;
+  const factory AppStrings.trackingRecordNotificationTitle() =
+      _$AppTrackingRecordNotificationTitleString;
 
-  const factory AppStrings.trackingRecordNotificationBody() = _$AppTrackingRecordNotificationBodyString;
+  const factory AppStrings.trackingRecordNotificationBody() =
+      _$AppTrackingRecordNotificationBodyString;
 
-  const factory AppStrings.doYouWantToFinishRecordingTheTrackQuestion() = _$AppDoYouWantToFinishRecordingTheTrackQuestion;
+  const factory AppStrings.doYouWantToFinishRecordingTheTrackQuestion() =
+      _$AppDoYouWantToFinishRecordingTheTrackQuestionString;
+
+  const factory AppStrings.attention() = _AppAttentionString;
+
+  const factory AppStrings.save() = _AppSaveString;
+
+  const factory AppStrings.delete() = _AppDeleteString;
 }

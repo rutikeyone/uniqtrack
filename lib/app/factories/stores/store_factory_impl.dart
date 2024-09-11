@@ -12,6 +12,7 @@ import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common_impl/app_location_handler_impl.dart';
 import 'package:uniqtrack/core/common_impl/app_permission_handler_impl.dart';
 import 'package:uniqtrack/core/common_impl/common_ui/common_ui_delegate_notifier.dart';
+import 'package:uniqtrack/features/add_or_edit_record_track/presentation/stores/add_or_edit_record_track_store.dart';
 import 'package:uniqtrack/features/forgot_password/domain/repositories/forgot_password_repository.dart';
 import 'package:uniqtrack/features/forgot_password/presentation/stores/forgot_password_store.dart';
 import 'package:uniqtrack/features/login/domain/repositories/login_repository.dart';
@@ -108,5 +109,10 @@ class StoreFactoryImpl implements StoreFactory {
       commonUIDelegate: _commonUIDelegate,
       appLocationHandler: _appLocationHandler,
     );
+  }
+
+  @override
+  AddOrEditRecordTrackStore createAddOrEditRecordTrackStore() {
+    return AddOrEditRecordTrackStore();
   }
 }

@@ -26,6 +26,7 @@ class AppTextField extends StatefulWidget {
   final Color? borderColor;
   final TextStyle? style;
   final bool obscureText;
+  final int? maxLength;
 
   const AppTextField({
     this.enabled = true,
@@ -50,6 +51,7 @@ class AppTextField extends StatefulWidget {
     this.borderColor,
     this.style,
     this.obscureText = false,
+    this.maxLength,
     super.key,
   });
 
@@ -83,7 +85,9 @@ class _AppTextFieldState extends State<AppTextField> {
       validator: widget.validator,
       textInputAction: widget.textInputAction,
       style: widget.style,
+      maxLength: widget.maxLength,
       decoration: InputDecoration(
+        counterStyle: context.primaryTextTheme.bodySmall,
         filled: true,
         fillColor: context.colorScheme.secondary,
         hintText: widget.hintText,

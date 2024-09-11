@@ -75,6 +75,7 @@ class AppLocationHandlerImpl implements AppLocationHandler {
         ? AppPosition(
             latitude: result.latitude,
             longitude: result.longitude,
+            altitude: result.altitude,
           )
         : null;
 
@@ -97,14 +98,14 @@ class AppLocationHandlerImpl implements AppLocationHandler {
 
     if (isAndroid) {
       locationSettings = AndroidSettings(
-        accuracy: LocationAccuracy.best,
+        accuracy: LocationAccuracy.bestForNavigation,
         distanceFilter: settings.distanceFilter,
         intervalDuration: settings.intervalDuration,
         foregroundNotificationConfig: foregroundNotificationConfig,
       );
     } else if (isIOS || isMacOS) {
       locationSettings = AppleSettings(
-        accuracy: LocationAccuracy.high,
+        accuracy: LocationAccuracy.bestForNavigation,
         distanceFilter: settings.distanceFilter,
         pauseLocationUpdatesAutomatically: true,
         showBackgroundLocationIndicator: true,
@@ -112,7 +113,7 @@ class AppLocationHandlerImpl implements AppLocationHandler {
       );
     } else {
       locationSettings = LocationSettings(
-        accuracy: LocationAccuracy.best,
+        accuracy: LocationAccuracy.bestForNavigation,
         distanceFilter: settings.distanceFilter,
       );
     }
@@ -122,6 +123,7 @@ class AppLocationHandlerImpl implements AppLocationHandler {
         return AppPosition(
           latitude: event.latitude,
           longitude: event.longitude,
+          altitude: event.altitude,
         );
       },
     );

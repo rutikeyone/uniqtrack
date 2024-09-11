@@ -10,7 +10,9 @@ class AppDiments {
   static const dm18 = 18.0;
   static const dm20 = 20.0;
   static const dm24 = 24.0;
+  static const dm28 = 28.0;
   static const dm32 = 32.0;
+  static const dm36 = 36.0;
   static const dm40 = 40.0;
   static const dm42 = 42.0;
   static const dm44 = 44.0;
@@ -22,6 +24,7 @@ class AppDiments {
   static const dm76 = 76.0;
   static const dm84 = 84.0;
   static const dm128 = 128.0;
+  static const dm144 = 144.0;
   static const dm164 = 164.0;
   static const dm262 = 262.0;
 }

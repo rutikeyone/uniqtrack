@@ -21,6 +21,13 @@ ForgotPasswordNavCallbackStore forgotPasswordNavCallbackStore(
 }
 
 @Riverpod(dependencies: [])
-CommunityNavCallbackStore communityNavCallbackStore(CommunityNavCallbackStoreRef ref) {
+CommunityNavCallbackStore communityNavCallbackStore(
+    CommunityNavCallbackStoreRef ref) {
+  throw UnimplementedError();
+}
+
+@Riverpod(dependencies: [])
+RecordTrackNavCallbackStore recordTrackNavCallbackStore(
+    RecordTrackNavCallbackStoreRef ref) {
   throw UnimplementedError();
 }

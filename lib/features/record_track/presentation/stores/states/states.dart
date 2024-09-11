@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
 import 'package:uniqtrack/features/record_track/domain/entities/position.dart';

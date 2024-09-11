@@ -6,5 +6,6 @@ class RecordTrackState with _$RecordTrackState {
     required RecordTrackPermissionState permissionState,
     required UserLocationState locationState,
     required TrackRecordStatusState trackRecordStatusState,
+    required bool continueAvailable,
   }) = _RecordTrackState;
 }

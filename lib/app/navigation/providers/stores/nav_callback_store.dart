@@ -35,3 +35,13 @@ class CommunityNavCallbackStore with _$CommunityNavCallbackStore {
     required VoidCallback navigateToTrackTracking,
   }) = _CommunityNavCallbackStore;
 }
+
+@immutable
+@freezed
+class RecordTrackNavCallbackStore with _$RecordTrackNavCallbackStore {
+  const factory RecordTrackNavCallbackStore({
+    required VoidCallback navigateBack,
+    required VoidCallback navigateToAddMemory,
+    required VoidCallback navigateToAddRecordTrack,
+  }) = _RecordTrackNavCallbackStore;
+}

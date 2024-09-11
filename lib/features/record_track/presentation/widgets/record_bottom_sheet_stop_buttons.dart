@@ -6,8 +6,13 @@ import 'package:uniqtrack/core/presentation/widgets/app_outlined_button.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/generated/l10n.dart';
 
+import 'record_track_modal_bottom_sheet.dart';
+
 class RecordBottomSheetStopButtons extends StatelessWidget {
+  final RecordTrackModalBottomSheetArgument argument;
+
   const RecordBottomSheetStopButtons({
+    required this.argument,
     super.key,
   });
 
@@ -22,12 +27,12 @@ class RecordBottomSheetStopButtons extends StatelessWidget {
               height: AppDiments.dm48,
               child: AppOutlinedButton(
                 backgroundColor: context.appColorsTheme.secondaryButtonColor,
-                text: S.of(context).pause,
+                text: S.of(context).delete,
                 textStyle: context.primaryTextTheme.labelLarge?.copyWith(
                   color: context.colorScheme.onSecondary,
                   fontWeight: FontWeight.w500,
                 ),
-                onPressed: () {},
+                onPressed: argument.onDeletePressed,
                 borderRadius: BorderRadius.circular(AppDiments.dm6),
               ),
             ),
@@ -43,7 +48,7 @@ class RecordBottomSheetStopButtons extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(AppDiments.dm6),
                 text: S.of(context).save,
-                onPressed: () {},
+                onPressed: argument.onSavePressed,
               ),
             ),
           ),

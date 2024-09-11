@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
@@ -7,6 +8,7 @@ import 'package:uniqtrack/core/common/app_location_handler/app_location_handler.
 import 'package:uniqtrack/core/common/app_location_handler/entities/app_position.dart';
 import 'package:uniqtrack/core/common/app_location_handler/entities/location_settings.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
+import 'package:uniqtrack/core/common/common_ui/cupertino_dialog_activity.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
 import 'package:uniqtrack/features/record_track/domain/entities/position.dart';
@@ -44,17 +46,27 @@ abstract class _RecordTrackStore with Store {
   TrackRecordStatusState trackRecordStatusState =
       TrackRecordStatusState.withoutRecording();
 
+  @observable
+  bool continueAvailable = true;
+
   final StreamController<TrackRecordStatusState>
       _trackRecordStatusStateStreamController = StreamController.broadcast();
 
   Stream<TrackRecordStatusState> get trackRecordStatusStateStream =>
       _trackRecordStatusStateStreamController.stream;
 
+  final StreamController<bool> _continueAvailableStreamController =
+      StreamController.broadcast();
+
+  Stream<bool> get continueAvailableStream =>
+      _continueAvailableStreamController.stream;
+
   @computed
   RecordTrackState get state => RecordTrackState(
         permissionState: recordTrackPermissionState,
         locationState: userLocationState,
         trackRecordStatusState: trackRecordStatusState,
+        continueAvailable: continueAvailable,
       );
 
   _RecordTrackStore({
@@ -65,6 +77,223 @@ abstract class _RecordTrackStore with Store {
         _commonUIDelegate = commonUIDelegate,
         _appLocationHandler = appLocationHandler {
     _checkInitialLocationPermission();
+  }
+
+  @action
+  Future<void> startTracking() async {
+    if (trackRecordStatusState.isRecording) return;
+
+    _showAndHideLoader(
+      callback: () async {
+        final requestLocationPermissionResult =
+            await _recordTrackRepository.requestLocationPermission();
+
+        final callback = requestLocationPermissionResult.map(
+          success: (_) => _handleSuccessLocationPermission,
+          serviceDisabled: (_) => _handleServiceDisabledLocationPermission,
+          permissionDenied: (_) => _handlePermissionDeniedLocationPermission,
+          permissionDeniedForever: (_) =>
+              _handlePermissionDeniedForeverLocationPermission,
+        );
+        await callback.call();
+
+        final canStartTracking = requestLocationPermissionResult.isSuccess &&
+            trackRecordStatusState.isWithoutRecording;
+
+        if (canStartTracking) {
+          final currentPosition = await userLocationState.when(
+            empty: () => null,
+            mark: (position) => position,
+          );
+
+          if (currentPosition != null) {
+            final positions = [currentPosition];
+            final recordingMode = RecordTrackModeState.recording(
+                currentPosition: currentPosition);
+
+            final isRecording = trackRecordStatusState.map(
+              withoutRecording: (_) => false,
+              recording: (mode) =>
+                  mode.maybeMap(recording: (_) => true, orElse: () => false),
+            );
+
+            final recordingStatusState = TrackRecordStatusState.recording(
+              positions: positions,
+              distance: 0.0,
+              duration: 0,
+              averageSpeed: 0.0,
+              maxAltitude: .0,
+              mode: recordingMode,
+              isRecording: isRecording,
+            );
+
+            actions = Activity(RecordTrackActions.showDetailsRecordingData());
+            trackRecordStatusState = recordingStatusState;
+            _trackRecordStatusStateStreamController.add(recordingStatusState);
+
+            _initTimer();
+          } else {
+            _disposeTimer();
+
+            trackRecordStatusState = TrackRecordStatusState.withoutRecording();
+
+            final header = AppStrings.cantStartRecording();
+            final body = AppStrings.cantGetYourCurrentLocation();
+
+            _commonUIDelegate.cupertinoDialog(
+              header: header,
+              body: body,
+            );
+          }
+        }
+      },
+    );
+  }
+
+  @action
+  void onPopInvokedWithResult(bool didPop, dynamic result) {
+    trackRecordStatusState.when(
+      withoutRecording: () {
+        final action = RecordTrackActions.navigateBack();
+        final activity = Activity(action);
+        actions = activity;
+      },
+      recording: (positions, distance, duration, averageSpeed, maxAltitude,
+          isRecording, mode) {
+        final header = AppStrings.attention();
+        final body = AppStrings.doYouWantToFinishRecordingTheTrackQuestion();
+        final close = AppStrings.delete();
+
+        final activity = CupertinoDialogActivity(
+          label: AppStrings.save(),
+          onPressed: () => _saveAndFinishRecordTrack(closeDialog: true),
+        );
+
+        _commonUIDelegate.cupertinoDialog(
+          header: header,
+          body: body,
+          activity: activity,
+          close: close,
+          closeCallback: () => _finishRecordTrack(closeDialog: true),
+        );
+      },
+    );
+  }
+
+  @action
+  void pauseRecordTrack() {
+    trackRecordStatusState.mapOrNull(
+      recording: (state) {
+        final pauseMode = RecordTrackModeState.pause();
+        final newState = state.copyWith(mode: pauseMode);
+
+        trackRecordStatusState = newState;
+        _trackRecordStatusStateStreamController.add(newState);
+
+        _disposeTimer();
+      },
+    );
+  }
+
+  @action
+  void stopRecordTrack() {
+    trackRecordStatusState.mapOrNull(
+      recording: (state) {
+        final stopMode = RecordTrackModeState.stop();
+        final newState = state.copyWith(mode: stopMode);
+
+        trackRecordStatusState = newState;
+        _trackRecordStatusStateStreamController.add(newState);
+
+        _disposeTimer();
+      },
+    );
+  }
+
+  @action
+  void continueRecordTrack() {
+    trackRecordStatusState.mapOrNull(
+      recording: (state) {
+        final mode = state.mode;
+
+        mode.whenOrNull(
+          pause: () async {
+            final currentPosition = await userLocationState.when(
+              empty: () => null,
+              mark: (position) => position,
+            );
+
+            if (currentPosition != null) {
+              final newMode = RecordTrackModeState.recording(
+                currentPosition: currentPosition,
+              );
+
+              final oldPositions = state.positions;
+              final newPositions = [...oldPositions, currentPosition];
+
+              final oldMaxAltitude = state.maxAltitude;
+              final newAltitude = currentPosition.altitude;
+
+              final newMaxAltitude = [oldMaxAltitude, newAltitude].reduce(max);
+
+              final newState = state.copyWith(
+                positions: newPositions,
+                mode: newMode,
+                maxAltitude: newMaxAltitude,
+              );
+
+              trackRecordStatusState = newState;
+              _trackRecordStatusStateStreamController.add(newState);
+
+              _initTimer();
+            } else {
+              final header = AppStrings.cantStartRecording();
+              final body = AppStrings.cantGetYourCurrentLocation();
+
+              _commonUIDelegate.cupertinoDialog(
+                header: header,
+                body: body,
+              );
+
+              final stopModeState = RecordTrackModeState.stop();
+              final newState = state.copyWith(mode: stopModeState);
+
+              trackRecordStatusState = newState;
+              _trackRecordStatusStateStreamController.add(newState);
+
+              _disposeTimer();
+            }
+          },
+        );
+      },
+    );
+  }
+
+  @action
+  void addMemory() {
+    if (trackRecordStatusState.isRecordingPause) {
+      final navigateToAddMemoryAction =
+          RecordTrackActions.navigateToAddMemory();
+      final activity = Activity(navigateToAddMemoryAction);
+
+      actions = activity;
+    }
+  }
+
+  @action
+  void deleteRecordTrack() {
+    _finishRecordTrack();
+  }
+
+  @action
+  void saveRecordTrack() {
+    _saveAndFinishRecordTrack();
+  }
+
+  void dispose() {
+    _disposeUserPositionChanges();
+    _disposeTimer();
+    _trackRecordStatusStateStreamController.close();
   }
 
   Future<void> _checkInitialLocationPermission() async {
@@ -132,15 +361,18 @@ abstract class _RecordTrackStore with Store {
   }
 
   Future<void> _handlePermissionDeniedLocationPermission() async {
-    final error =
-        AppPermissionError(category: PermissionErrorCategory.denied());
+    final category = PermissionErrorCategory.denied();
+    final error = AppPermissionError(category: category);
 
     _showCupertinoDialogByAppPermissionError(error);
   }
 
   Future<void> _handlePermissionDeniedForeverLocationPermission() async {
+    final permanentlyDeniedCategory =
+        PermissionErrorCategory.permanentlyDenied();
     final error = AppPermissionError(
-        category: PermissionErrorCategory.permanentlyDenied());
+      category: permanentlyDeniedCategory,
+    );
 
     _showCupertinoDialogByAppPermissionError(error);
   }
@@ -202,31 +434,36 @@ abstract class _RecordTrackStore with Store {
             .listen(_userPositionChanges);
   }
 
-  void _userPositionChanges(Position event) {
+  void _userPositionChanges(Position newPosition) {
     final newLocationState = userLocationState.map(
       empty: (_) => UserLocationState.empty(),
-      mark: (state) => UserLocationState.mark(currentPosition: event),
+      mark: (state) => UserLocationState.mark(currentPosition: newPosition),
     );
 
     final newTrackRecordStatusState = trackRecordStatusState.map(
       withoutRecording: (withoutRecordingState) => withoutRecordingState,
       recording: (recordingState) {
         final mode = recordingState.mode;
+
         return mode.maybeMap(
           recording: (mode) {
+            final oldMaxAltitude = recordingState.maxAltitude;
             final oldPositions = recordingState.positions;
             final oldDistance = recordingState.distance;
             final oldPosition = mode.currentPosition;
 
-            final newPositions = [...oldPositions, event];
+            final newPositions = [...oldPositions, newPosition];
+            final newAltitude = recordingState.maxAltitude;
 
             final firstPosition = AppPosition(
               latitude: oldPosition.latitude,
               longitude: oldPosition.longitude,
+              altitude: oldPosition.altitude,
             );
             final secondPosition = AppPosition(
-              latitude: event.latitude,
-              longitude: event.longitude,
+              latitude: newPosition.latitude,
+              longitude: newPosition.longitude,
+              altitude: newPosition.altitude,
             );
 
             final distanceBetween = _appLocationHandler.betweenDistance(
@@ -236,11 +473,17 @@ abstract class _RecordTrackStore with Store {
 
             final newDistance = oldDistance + distanceBetween;
 
-            final newMode = mode.copyWith(currentPosition: event);
+            final newAverageSpeed = newDistance / recordingState.duration;
+
+            final maxAltitude = [oldMaxAltitude, newAltitude].reduce(max);
+
+            final newMode = mode.copyWith(currentPosition: newPosition);
             final newState = recordingState.copyWith(
               positions: newPositions,
               distance: newDistance,
+              averageSpeed: newAverageSpeed,
               mode: newMode,
+              maxAltitude: maxAltitude,
             );
             return newState;
           },
@@ -259,53 +502,6 @@ abstract class _RecordTrackStore with Store {
     _userPositionChangedSubscription = null;
   }
 
-  @action
-  Future<void> startTracking() async {
-    if (trackRecordStatusState.isRecording) return;
-
-    _showAndHideLoader(
-      callback: () async {
-        final requestLocationPermissionResult =
-            await _recordTrackRepository.requestLocationPermission();
-
-        final callback = requestLocationPermissionResult.map(
-          success: (_) => _handleSuccessLocationPermission,
-          serviceDisabled: (_) => _handleServiceDisabledLocationPermission,
-          permissionDenied: (_) => _handlePermissionDeniedLocationPermission,
-          permissionDeniedForever: (_) =>
-              _handlePermissionDeniedForeverLocationPermission,
-        );
-        await callback.call();
-
-        final canStartTracking = requestLocationPermissionResult.isSuccess &&
-            trackRecordStatusState.isWithoutRecording;
-
-        if (canStartTracking) {
-          final currentPosition =
-              await _recordTrackRepository.getCurrentPosition();
-          if (currentPosition == null) return;
-
-          final positions = [currentPosition];
-          final recordingMode =
-              RecordTrackModeState.recording(currentPosition: currentPosition);
-
-          final recordingStatusState = TrackRecordStatusState.recording(
-            positions: positions,
-            distance: 0.0,
-            duration: 0,
-            mode: recordingMode,
-          );
-
-          actions = Activity(RecordTrackActions.showDetailsRecordingData());
-          trackRecordStatusState = recordingStatusState;
-          _trackRecordStatusStateStreamController.add(recordingStatusState);
-
-          _initTimer();
-        }
-      },
-    );
-  }
-
   void _initTimer() {
     _disposeTimer();
 
@@ -316,6 +512,7 @@ abstract class _RecordTrackStore with Store {
     );
   }
 
+  @action
   void _handleTimeChanged(_) {
     final newTrackRecordStatusState = trackRecordStatusState.map(
       withoutRecording: (withoutRecordingState) => withoutRecordingState,
@@ -326,7 +523,9 @@ abstract class _RecordTrackStore with Store {
             final oldDuration = recordingState.duration;
             final newDuration = oldDuration + 1;
 
-            final newState = recordingState.copyWith(duration: newDuration);
+            final newState = recordingState.copyWith(
+              duration: newDuration,
+            );
             return newState;
           },
           orElse: () => recordingState,
@@ -338,18 +537,47 @@ abstract class _RecordTrackStore with Store {
     _trackRecordStatusStateStreamController.add(newTrackRecordStatusState);
   }
 
-  void onPopInvokedWithResult(bool didPop, dynamic result) {
+  @action
+  Future<void> _saveAndFinishRecordTrack({bool closeDialog = false}) async {
+    if (trackRecordStatusState.isWithoutRecording) return;
+    await _finishRecordTrack(closeDialog: closeDialog);
 
+    final navigateToAddRecordTrackAction =
+        RecordTrackActions.navigateToAddRecordTrack();
+    final navigateToAddRecordTrackActivity =
+        Activity(navigateToAddRecordTrackAction);
+
+    actions = navigateToAddRecordTrackActivity;
+  }
+
+  @action
+  Future<void> _finishRecordTrack({bool closeDialog = false}) async {
+    if (trackRecordStatusState.isWithoutRecording) return;
+    final duration = const Duration(milliseconds: 300);
+
+    final hideDetailsAction = RecordTrackActions.hideDetailsRecordingData();
+    final navigateBackAction = RecordTrackActions.navigateBack();
+
+    final hideDetailsActivity = Activity(hideDetailsAction);
+    final navigateBackActivity = Activity(navigateBackAction);
+
+    trackRecordStatusState = TrackRecordStatusState.withoutRecording();
+
+    _disposeTimer();
+
+    if (closeDialog) {
+      actions = navigateBackActivity;
+
+      return Future.delayed(duration, () {
+        actions = hideDetailsActivity;
+      });
+    } else {
+      actions = hideDetailsActivity;
+    }
   }
 
   void _disposeTimer() {
     _timer?.cancel();
     _timer = null;
-  }
-
-  void dispose() {
-    _disposeUserPositionChanges();
-    _disposeTimer();
-    _trackRecordStatusStateStreamController.close();
   }
 }

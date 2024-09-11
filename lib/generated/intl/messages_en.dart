@@ -20,6 +20,12 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(distance) => "${distance} km";
+
+  static String m1(speed) => "${speed} km/h";
+
+  static String m2(value) => "${value} m";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "aBadCertificateErrorOccurred": MessageLookupByLibrary.simpleMessage(
@@ -39,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "An error has occurred in the application!"),
         "anIosBundleIdMustBeProvidedIfAnApp": MessageLookupByLibrary.simpleMessage(
             "An iOS Bundle ID must be provided if an App Store ID is provided"),
+        "attention": MessageLookupByLibrary.simpleMessage("Attention"),
         "averageSpeed": MessageLookupByLibrary.simpleMessage("Average speed"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
@@ -47,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Check your internet connection and try again"),
         "chooseFromTheLibrary":
             MessageLookupByLibrary.simpleMessage("Choose from the library"),
+        "comment": MessageLookupByLibrary.simpleMessage("Comment"),
         "community": MessageLookupByLibrary.simpleMessage("Community"),
         "connectionTimeoutFailureOccurred":
             MessageLookupByLibrary.simpleMessage(
@@ -55,11 +63,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create an account"),
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "doYouWantToFinishRecordingTheTrack":
             MessageLookupByLibrary.simpleMessage(
                 "Do you want to finish recording the track?"),
+        "dontSave": MessageLookupByLibrary.simpleMessage("Don\'t save"),
+        "editMemory": MessageLookupByLibrary.simpleMessage("Edit Memory"),
         "emailAlreadyInUse":
             MessageLookupByLibrary.simpleMessage("Email already in use"),
+        "enterTrackName":
+            MessageLookupByLibrary.simpleMessage("Enter track name"),
+        "enterYourComment":
+            MessageLookupByLibrary.simpleMessage("Enter your comment"),
         "enterYourEmail":
             MessageLookupByLibrary.simpleMessage("Enter your email"),
         "enterYourFullName":
@@ -85,6 +100,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "itIsNotPossibleToGetYourCurrentLocation":
             MessageLookupByLibrary.simpleMessage(
                 "It is not possible to get your current location"),
+        "km": m0,
+        "km_per_h": m1,
         "locationServiceAreDisabled": MessageLookupByLibrary.simpleMessage(
             "Location service are disabled."),
         "logIn": MessageLookupByLibrary.simpleMessage("Log in"),
@@ -94,6 +111,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "myFavouriteTracks":
             MessageLookupByLibrary.simpleMessage("My favourite tracks"),
         "myTracks": MessageLookupByLibrary.simpleMessage("My tracks"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
         "notification": MessageLookupByLibrary.simpleMessage("Notification"),
         "okay": MessageLookupByLibrary.simpleMessage("Okay"),
         "operation_not_allowed":
@@ -147,6 +165,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "userNotFound": MessageLookupByLibrary.simpleMessage("User not found"),
         "userTokenExpired":
             MessageLookupByLibrary.simpleMessage("User token expired"),
+        "value_m": m2,
         "weakPassword": MessageLookupByLibrary.simpleMessage("Weak password"),
         "wrongPassword": MessageLookupByLibrary.simpleMessage("Wrong password")
       };

@@ -3,14 +3,16 @@ import 'package:uniqtrack/core/theme/app_colors.dart';
 
 class AppColorsTheme extends ThemeExtension<AppColorsTheme> {
   final Color primaryIconColor;
-  final Color primaryButtonBorder;
+  final Color secondaryIconColor;
 
+  final Color primaryButtonBorder;
   final Color secondaryButtonColor;
 
   final Color primaryTextHintColor;
 
   static final light = AppColorsTheme(
     primaryIconColor: AppColors.white,
+    secondaryIconColor: AppColors.black,
     primaryButtonBorder: AppColors.sliderGray,
     secondaryButtonColor: AppColors.lavenderMist,
     primaryTextHintColor: AppColors.lavenderGray,
@@ -18,6 +20,7 @@ class AppColorsTheme extends ThemeExtension<AppColorsTheme> {
 
   const AppColorsTheme({
     required this.primaryIconColor,
+    required this.secondaryIconColor,
     required this.primaryButtonBorder,
     required this.secondaryButtonColor,
     required this.primaryTextHintColor,
@@ -26,12 +29,13 @@ class AppColorsTheme extends ThemeExtension<AppColorsTheme> {
   @override
   ThemeExtension<AppColorsTheme> copyWith({
     Color? primaryIconColor,
-    Color? primaryButtonBorder,
     Color? secondaryIconColor,
+    Color? primaryButtonBorder,
     Color? primaryTextHintColor,
   }) {
     return AppColorsTheme(
       primaryIconColor: primaryIconColor ?? this.primaryIconColor,
+      secondaryIconColor: secondaryIconColor ?? this.secondaryIconColor,
       primaryButtonBorder: primaryButtonBorder ?? this.primaryButtonBorder,
       secondaryButtonColor: secondaryIconColor ?? this.secondaryButtonColor,
       primaryTextHintColor: primaryTextHintColor ?? this.primaryTextHintColor,
@@ -49,6 +53,9 @@ class AppColorsTheme extends ThemeExtension<AppColorsTheme> {
       primaryIconColor:
           Color.lerp(this.primaryIconColor, other.primaryIconColor, t) ??
               this.primaryIconColor,
+      secondaryIconColor:
+          Color.lerp(this.secondaryIconColor, other.secondaryIconColor, t) ??
+              this.secondaryIconColor,
       primaryButtonBorder:
           Color.lerp(this.primaryButtonBorder, other.primaryButtonBorder, t) ??
               this.primaryButtonBorder,

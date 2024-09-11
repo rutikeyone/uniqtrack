@@ -769,6 +769,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Attention`
+  String get attention {
+    return Intl.message(
+      'Attention',
+      name: 'attention',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{distance} km`
+  String km(String distance) {
+    return Intl.message(
+      '$distance km',
+      name: 'km',
+      desc: '',
+      args: [distance],
+    );
+  }
+
+  /// `{value} m`
+  String value_m(Object value) {
+    return Intl.message(
+      '$value m',
+      name: 'value_m',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `{speed} km/h`
+  String km_per_h(String speed) {
+    return Intl.message(
+      '$speed km/h',
+      name: 'km_per_h',
+      desc: '',
+      args: [speed],
+    );
+  }
+
+  /// `Edit Memory`
+  String get editMemory {
+    return Intl.message(
+      'Edit Memory',
+      name: 'editMemory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter track name`
+  String get enterTrackName {
+    return Intl.message(
+      'Enter track name',
+      name: 'enterTrackName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Comment`
+  String get comment {
+    return Intl.message(
+      'Comment',
+      name: 'comment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your comment`
+  String get enterYourComment {
+    return Intl.message(
+      'Enter your comment',
+      name: 'enterYourComment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't save`
+  String get dontSave {
+    return Intl.message(
+      'Don\'t save',
+      name: 'dontSave',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

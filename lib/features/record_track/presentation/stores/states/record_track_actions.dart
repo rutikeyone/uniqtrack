@@ -19,7 +19,9 @@ class RecordTrackActions with _$RecordTrackActions {
   const factory RecordTrackActions.hideDetailsRecordingData() =
       _HideDetailsRecordingDataAction;
 
-  const factory RecordTrackActions.showConfirmToFinishRecordDialog() = _ShowConfirmToFinishRecordDialogAction;
-
   const factory RecordTrackActions.navigateBack() = _NavigateBackAction;
+
+  const factory RecordTrackActions.navigateToAddMemory() = _NavigateToAddMemoryAction;
+
+  const factory RecordTrackActions.navigateToAddRecordTrack() = _NavigateToAddRecordTrackAction;
 }

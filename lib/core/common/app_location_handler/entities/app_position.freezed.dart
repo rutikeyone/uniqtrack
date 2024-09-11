@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$AppPosition {
   double get latitude => throw _privateConstructorUsedError;
   double get longitude => throw _privateConstructorUsedError;
+  double get altitude => throw _privateConstructorUsedError;
 
   /// Create a copy of AppPosition
   /// with the given fields replaced by the non-null parameter values.
@@ -32,7 +33,7 @@ abstract class $AppPositionCopyWith<$Res> {
           AppPosition value, $Res Function(AppPosition) then) =
       _$AppPositionCopyWithImpl<$Res, AppPosition>;
   @useResult
-  $Res call({double latitude, double longitude});
+  $Res call({double latitude, double longitude, double altitude});
 }
 
 /// @nodoc
@@ -52,6 +53,7 @@ class _$AppPositionCopyWithImpl<$Res, $Val extends AppPosition>
   $Res call({
     Object? latitude = null,
     Object? longitude = null,
+    Object? altitude = null,
   }) {
     return _then(_value.copyWith(
       latitude: null == latitude
@@ -61,6 +63,10 @@ class _$AppPositionCopyWithImpl<$Res, $Val extends AppPosition>
       longitude: null == longitude
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
+              as double,
+      altitude: null == altitude
+          ? _value.altitude
+          : altitude // ignore: cast_nullable_to_non_nullable
               as double,
     ) as $Val);
   }
@@ -74,7 +80,7 @@ abstract class _$$AppPositionImplCopyWith<$Res>
       __$$AppPositionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({double latitude, double longitude});
+  $Res call({double latitude, double longitude, double altitude});
 }
 
 /// @nodoc
@@ -92,6 +98,7 @@ class __$$AppPositionImplCopyWithImpl<$Res>
   $Res call({
     Object? latitude = null,
     Object? longitude = null,
+    Object? altitude = null,
   }) {
     return _then(_$AppPositionImpl(
       latitude: null == latitude
@@ -102,6 +109,10 @@ class __$$AppPositionImplCopyWithImpl<$Res>
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
               as double,
+      altitude: null == altitude
+          ? _value.altitude
+          : altitude // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -109,16 +120,21 @@ class __$$AppPositionImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AppPositionImpl implements _AppPosition {
-  const _$AppPositionImpl({required this.latitude, required this.longitude});
+  const _$AppPositionImpl(
+      {required this.latitude,
+      required this.longitude,
+      required this.altitude});
 
   @override
   final double latitude;
   @override
   final double longitude;
+  @override
+  final double altitude;
 
   @override
   String toString() {
-    return 'AppPosition(latitude: $latitude, longitude: $longitude)';
+    return 'AppPosition(latitude: $latitude, longitude: $longitude, altitude: $altitude)';
   }
 
   @override
@@ -129,11 +145,13 @@ class _$AppPositionImpl implements _AppPosition {
             (identical(other.latitude, latitude) ||
                 other.latitude == latitude) &&
             (identical(other.longitude, longitude) ||
-                other.longitude == longitude));
+                other.longitude == longitude) &&
+            (identical(other.altitude, altitude) ||
+                other.altitude == altitude));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, latitude, longitude);
+  int get hashCode => Object.hash(runtimeType, latitude, longitude, altitude);
 
   /// Create a copy of AppPosition
   /// with the given fields replaced by the non-null parameter values.
@@ -147,12 +165,15 @@ class _$AppPositionImpl implements _AppPosition {
 abstract class _AppPosition implements AppPosition {
   const factory _AppPosition(
       {required final double latitude,
-      required final double longitude}) = _$AppPositionImpl;
+      required final double longitude,
+      required final double altitude}) = _$AppPositionImpl;
 
   @override
   double get latitude;
   @override
   double get longitude;
+  @override
+  double get altitude;
 
   /// Create a copy of AppPosition
   /// with the given fields replaced by the non-null parameter values.

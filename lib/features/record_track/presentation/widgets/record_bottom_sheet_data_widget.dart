@@ -5,16 +5,22 @@ import 'package:uniqtrack/features/record_track/presentation/widgets/modal_botto
 
 import 'record_bottom_sheet_action_buttons.dart';
 import 'record_data_section_widget.dart';
+import 'record_track_modal_bottom_sheet.dart';
 
 class RecordBottomSheetDataWidget extends StatelessWidget {
   final int duration;
   final double distance;
+  final double averageSpeed;
   final RecordTrackModeState mode;
+
+  final RecordTrackModalBottomSheetArgument argument;
 
   const RecordBottomSheetDataWidget({
     required this.duration,
     required this.distance,
+    required this.averageSpeed,
     required this.mode,
+    required this.argument,
     super.key,
   });
 
@@ -37,13 +43,15 @@ class RecordBottomSheetDataWidget extends StatelessWidget {
             RecordDataSectionWidget(
               distance: distance,
               duration: duration,
+              averageSpeed: averageSpeed,
             ),
-            RecordBottomSheetActionButtons(mode: mode),
+            RecordBottomSheetActionButtons(
+              mode: mode,
+              argument: argument,
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-

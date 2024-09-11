@@ -78,5 +78,23 @@ final communityNavCallbackStoreProvider =
 
 typedef CommunityNavCallbackStoreRef
     = AutoDisposeProviderRef<CommunityNavCallbackStore>;
+String _$recordTrackNavCallbackStoreHash() =>
+    r'35faaa5f0f7825bc63bd98ccb0ca3c6da2b6a4dd';
+
+/// See also [recordTrackNavCallbackStore].
+@ProviderFor(recordTrackNavCallbackStore)
+final recordTrackNavCallbackStoreProvider =
+    AutoDisposeProvider<RecordTrackNavCallbackStore>.internal(
+  recordTrackNavCallbackStore,
+  name: r'recordTrackNavCallbackStoreProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$recordTrackNavCallbackStoreHash,
+  dependencies: const <ProviderOrFamily>[],
+  allTransitiveDependencies: const <ProviderOrFamily>{},
+);
+
+typedef RecordTrackNavCallbackStoreRef
+    = AutoDisposeProviderRef<RecordTrackNavCallbackStore>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

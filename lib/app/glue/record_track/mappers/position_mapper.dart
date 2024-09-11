@@ -11,6 +11,7 @@ class PositionMapperImpl implements PositionMapper {
     return Position(
       latitude: position.latitude,
       longitude: position.longitude,
+      altitude: position.altitude,
     );
   }
 }

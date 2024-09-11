@@ -7,5 +7,6 @@ class AppPosition with _$AppPosition {
   const factory AppPosition({
     required double latitude,
     required double longitude,
+    required double altitude,
   }) = _AppPosition;
 }

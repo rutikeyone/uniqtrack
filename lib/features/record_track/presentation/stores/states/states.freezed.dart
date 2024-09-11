@@ -21,6 +21,7 @@ mixin _$RecordTrackState {
   UserLocationState get locationState => throw _privateConstructorUsedError;
   TrackRecordStatusState get trackRecordStatusState =>
       throw _privateConstructorUsedError;
+  bool get continueAvailable => throw _privateConstructorUsedError;
 
   /// Create a copy of RecordTrackState
   /// with the given fields replaced by the non-null parameter values.
@@ -38,7 +39,8 @@ abstract class $RecordTrackStateCopyWith<$Res> {
   $Res call(
       {RecordTrackPermissionState permissionState,
       UserLocationState locationState,
-      TrackRecordStatusState trackRecordStatusState});
+      TrackRecordStatusState trackRecordStatusState,
+      bool continueAvailable});
 
   $RecordTrackPermissionStateCopyWith<$Res> get permissionState;
   $UserLocationStateCopyWith<$Res> get locationState;
@@ -63,6 +65,7 @@ class _$RecordTrackStateCopyWithImpl<$Res, $Val extends RecordTrackState>
     Object? permissionState = null,
     Object? locationState = null,
     Object? trackRecordStatusState = null,
+    Object? continueAvailable = null,
   }) {
     return _then(_value.copyWith(
       permissionState: null == permissionState
@@ -77,6 +80,10 @@ class _$RecordTrackStateCopyWithImpl<$Res, $Val extends RecordTrackState>
           ? _value.trackRecordStatusState
           : trackRecordStatusState // ignore: cast_nullable_to_non_nullable
               as TrackRecordStatusState,
+      continueAvailable: null == continueAvailable
+          ? _value.continueAvailable
+          : continueAvailable // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 
@@ -124,7 +131,8 @@ abstract class _$$RecordTrackStateImplCopyWith<$Res>
   $Res call(
       {RecordTrackPermissionState permissionState,
       UserLocationState locationState,
-      TrackRecordStatusState trackRecordStatusState});
+      TrackRecordStatusState trackRecordStatusState,
+      bool continueAvailable});
 
   @override
   $RecordTrackPermissionStateCopyWith<$Res> get permissionState;
@@ -150,6 +158,7 @@ class __$$RecordTrackStateImplCopyWithImpl<$Res>
     Object? permissionState = null,
     Object? locationState = null,
     Object? trackRecordStatusState = null,
+    Object? continueAvailable = null,
   }) {
     return _then(_$RecordTrackStateImpl(
       permissionState: null == permissionState
@@ -164,17 +173,24 @@ class __$$RecordTrackStateImplCopyWithImpl<$Res>
           ? _value.trackRecordStatusState
           : trackRecordStatusState // ignore: cast_nullable_to_non_nullable
               as TrackRecordStatusState,
+      continueAvailable: null == continueAvailable
+          ? _value.continueAvailable
+          : continueAvailable // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
 
 /// @nodoc
 
-class _$RecordTrackStateImpl implements _RecordTrackState {
+class _$RecordTrackStateImpl
+    with DiagnosticableTreeMixin
+    implements _RecordTrackState {
   const _$RecordTrackStateImpl(
       {required this.permissionState,
       required this.locationState,
-      required this.trackRecordStatusState});
+      required this.trackRecordStatusState,
+      required this.continueAvailable});
 
   @override
   final RecordTrackPermissionState permissionState;
@@ -182,10 +198,24 @@ class _$RecordTrackStateImpl implements _RecordTrackState {
   final UserLocationState locationState;
   @override
   final TrackRecordStatusState trackRecordStatusState;
+  @override
+  final bool continueAvailable;
 
   @override
-  String toString() {
-    return 'RecordTrackState(permissionState: $permissionState, locationState: $locationState, trackRecordStatusState: $trackRecordStatusState)';
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'RecordTrackState(permissionState: $permissionState, locationState: $locationState, trackRecordStatusState: $trackRecordStatusState, continueAvailable: $continueAvailable)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'RecordTrackState'))
+      ..add(DiagnosticsProperty('permissionState', permissionState))
+      ..add(DiagnosticsProperty('locationState', locationState))
+      ..add(
+          DiagnosticsProperty('trackRecordStatusState', trackRecordStatusState))
+      ..add(DiagnosticsProperty('continueAvailable', continueAvailable));
   }
 
   @override
@@ -198,12 +228,14 @@ class _$RecordTrackStateImpl implements _RecordTrackState {
             (identical(other.locationState, locationState) ||
                 other.locationState == locationState) &&
             (identical(other.trackRecordStatusState, trackRecordStatusState) ||
-                other.trackRecordStatusState == trackRecordStatusState));
+                other.trackRecordStatusState == trackRecordStatusState) &&
+            (identical(other.continueAvailable, continueAvailable) ||
+                other.continueAvailable == continueAvailable));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, permissionState, locationState, trackRecordStatusState);
+  int get hashCode => Object.hash(runtimeType, permissionState, locationState,
+      trackRecordStatusState, continueAvailable);
 
   /// Create a copy of RecordTrackState
   /// with the given fields replaced by the non-null parameter values.
@@ -217,10 +249,10 @@ class _$RecordTrackStateImpl implements _RecordTrackState {
 
 abstract class _RecordTrackState implements RecordTrackState {
   const factory _RecordTrackState(
-          {required final RecordTrackPermissionState permissionState,
-          required final UserLocationState locationState,
-          required final TrackRecordStatusState trackRecordStatusState}) =
-      _$RecordTrackStateImpl;
+      {required final RecordTrackPermissionState permissionState,
+      required final UserLocationState locationState,
+      required final TrackRecordStatusState trackRecordStatusState,
+      required final bool continueAvailable}) = _$RecordTrackStateImpl;
 
   @override
   RecordTrackPermissionState get permissionState;
@@ -228,6 +260,8 @@ abstract class _RecordTrackState implements RecordTrackState {
   UserLocationState get locationState;
   @override
   TrackRecordStatusState get trackRecordStatusState;
+  @override
+  bool get continueAvailable;
 
   /// Create a copy of RecordTrackState
   /// with the given fields replaced by the non-null parameter values.
@@ -349,12 +383,19 @@ class __$$RecordTrackPermissionPureStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$RecordTrackPermissionPureStateImpl
-    extends _RecordTrackPermissionPureState {
+    extends _RecordTrackPermissionPureState with DiagnosticableTreeMixin {
   const _$RecordTrackPermissionPureStateImpl() : super._();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RecordTrackPermissionState.pure()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'RecordTrackPermissionState.pure'));
   }
 
   @override
@@ -484,12 +525,19 @@ class __$$RecordTrackPermissionPendingStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$RecordTrackPermissionPendingStateImpl
-    extends _RecordTrackPermissionPendingState {
+    extends _RecordTrackPermissionPendingState with DiagnosticableTreeMixin {
   const _$RecordTrackPermissionPendingStateImpl() : super._();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RecordTrackPermissionState.pending()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'RecordTrackPermissionState.pending'));
   }
 
   @override
@@ -619,12 +667,19 @@ class __$$RecordTrackPermissionSuccessStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$RecordTrackPermissionSuccessStateImpl
-    extends _RecordTrackPermissionSuccessState {
+    extends _RecordTrackPermissionSuccessState with DiagnosticableTreeMixin {
   const _$RecordTrackPermissionSuccessStateImpl() : super._();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RecordTrackPermissionState.success()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'RecordTrackPermissionState.success'));
   }
 
   @override
@@ -754,12 +809,19 @@ class __$$RecordTrackPermissionDeniedStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$RecordTrackPermissionDeniedStateImpl
-    extends _RecordTrackPermissionDeniedState {
+    extends _RecordTrackPermissionDeniedState with DiagnosticableTreeMixin {
   const _$RecordTrackPermissionDeniedStateImpl() : super._();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RecordTrackPermissionState.denied()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'RecordTrackPermissionState.denied'));
   }
 
   @override
@@ -892,12 +954,20 @@ class __$$RecordTrackPermissionPermanentlyDeniedStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$RecordTrackPermissionPermanentlyDeniedStateImpl
-    extends _RecordTrackPermissionPermanentlyDeniedState {
+    extends _RecordTrackPermissionPermanentlyDeniedState
+    with DiagnosticableTreeMixin {
   const _$RecordTrackPermissionPermanentlyDeniedStateImpl() : super._();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RecordTrackPermissionState.permanentlyDenied()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'RecordTrackPermissionState.permanentlyDenied'));
   }
 
   @override
@@ -1088,12 +1158,20 @@ class __$$UserLocationEmptyStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UserLocationEmptyStateImpl implements _UserLocationEmptyState {
+class _$UserLocationEmptyStateImpl
+    with DiagnosticableTreeMixin
+    implements _UserLocationEmptyState {
   const _$UserLocationEmptyStateImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'UserLocationState.empty()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'UserLocationState.empty'));
   }
 
   @override
@@ -1221,15 +1299,25 @@ class __$$UserLocationMarkStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UserLocationMarkStateImpl implements _UserLocationMarkState {
+class _$UserLocationMarkStateImpl
+    with DiagnosticableTreeMixin
+    implements _UserLocationMarkState {
   const _$UserLocationMarkStateImpl({required this.currentPosition});
 
   @override
   final Position currentPosition;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'UserLocationState.mark(currentPosition: $currentPosition)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'UserLocationState.mark'))
+      ..add(DiagnosticsProperty('currentPosition', currentPosition));
   }
 
   @override
@@ -1340,8 +1428,9 @@ mixin _$RecordTrackActions {
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
     required TResult Function() hideDetailsRecordingData,
-    required TResult Function() showConfirmToFinishRecordDialog,
     required TResult Function() navigateBack,
+    required TResult Function() navigateToAddMemory,
+    required TResult Function() navigateToAddRecordTrack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1352,8 +1441,9 @@ mixin _$RecordTrackActions {
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
     TResult? Function()? hideDetailsRecordingData,
-    TResult? Function()? showConfirmToFinishRecordDialog,
     TResult? Function()? navigateBack,
+    TResult? Function()? navigateToAddMemory,
+    TResult? Function()? navigateToAddRecordTrack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1364,8 +1454,9 @@ mixin _$RecordTrackActions {
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
     TResult Function()? hideDetailsRecordingData,
-    TResult Function()? showConfirmToFinishRecordDialog,
     TResult Function()? navigateBack,
+    TResult Function()? navigateToAddMemory,
+    TResult Function()? navigateToAddRecordTrack,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1379,9 +1470,11 @@ mixin _$RecordTrackActions {
         showDetailsRecordingData,
     required TResult Function(_HideDetailsRecordingDataAction value)
         hideDetailsRecordingData,
-    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
-        showConfirmToFinishRecordDialog,
     required TResult Function(_NavigateBackAction value) navigateBack,
+    required TResult Function(_NavigateToAddMemoryAction value)
+        navigateToAddMemory,
+    required TResult Function(_NavigateToAddRecordTrackAction value)
+        navigateToAddRecordTrack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1392,9 +1485,10 @@ mixin _$RecordTrackActions {
         showDetailsRecordingData,
     TResult? Function(_HideDetailsRecordingDataAction value)?
         hideDetailsRecordingData,
-    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
     TResult? Function(_NavigateBackAction value)? navigateBack,
+    TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1405,9 +1499,10 @@ mixin _$RecordTrackActions {
         showDetailsRecordingData,
     TResult Function(_HideDetailsRecordingDataAction value)?
         hideDetailsRecordingData,
-    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
     TResult Function(_NavigateBackAction value)? navigateBack,
+    TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1508,7 +1603,9 @@ class __$$InitStreamPositionsActionImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitStreamPositionsActionImpl implements _InitStreamPositionsAction {
+class _$InitStreamPositionsActionImpl
+    with DiagnosticableTreeMixin
+    implements _InitStreamPositionsAction {
   const _$InitStreamPositionsActionImpl(
       {required this.callback, required this.title, required this.body});
 
@@ -1520,8 +1617,19 @@ class _$InitStreamPositionsActionImpl implements _InitStreamPositionsAction {
   final AppStrings body;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RecordTrackActions.initStreamPositions(callback: $callback, title: $title, body: $body)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+          DiagnosticsProperty('type', 'RecordTrackActions.initStreamPositions'))
+      ..add(DiagnosticsProperty('callback', callback))
+      ..add(DiagnosticsProperty('title', title))
+      ..add(DiagnosticsProperty('body', body));
   }
 
   @override
@@ -1557,8 +1665,9 @@ class _$InitStreamPositionsActionImpl implements _InitStreamPositionsAction {
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
     required TResult Function() hideDetailsRecordingData,
-    required TResult Function() showConfirmToFinishRecordDialog,
     required TResult Function() navigateBack,
+    required TResult Function() navigateToAddMemory,
+    required TResult Function() navigateToAddRecordTrack,
   }) {
     return initStreamPositions(callback, title, body);
   }
@@ -1572,8 +1681,9 @@ class _$InitStreamPositionsActionImpl implements _InitStreamPositionsAction {
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
     TResult? Function()? hideDetailsRecordingData,
-    TResult? Function()? showConfirmToFinishRecordDialog,
     TResult? Function()? navigateBack,
+    TResult? Function()? navigateToAddMemory,
+    TResult? Function()? navigateToAddRecordTrack,
   }) {
     return initStreamPositions?.call(callback, title, body);
   }
@@ -1587,8 +1697,9 @@ class _$InitStreamPositionsActionImpl implements _InitStreamPositionsAction {
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
     TResult Function()? hideDetailsRecordingData,
-    TResult Function()? showConfirmToFinishRecordDialog,
     TResult Function()? navigateBack,
+    TResult Function()? navigateToAddMemory,
+    TResult Function()? navigateToAddRecordTrack,
     required TResult orElse(),
   }) {
     if (initStreamPositions != null) {
@@ -1608,9 +1719,11 @@ class _$InitStreamPositionsActionImpl implements _InitStreamPositionsAction {
         showDetailsRecordingData,
     required TResult Function(_HideDetailsRecordingDataAction value)
         hideDetailsRecordingData,
-    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
-        showConfirmToFinishRecordDialog,
     required TResult Function(_NavigateBackAction value) navigateBack,
+    required TResult Function(_NavigateToAddMemoryAction value)
+        navigateToAddMemory,
+    required TResult Function(_NavigateToAddRecordTrackAction value)
+        navigateToAddRecordTrack,
   }) {
     return initStreamPositions(this);
   }
@@ -1624,9 +1737,10 @@ class _$InitStreamPositionsActionImpl implements _InitStreamPositionsAction {
         showDetailsRecordingData,
     TResult? Function(_HideDetailsRecordingDataAction value)?
         hideDetailsRecordingData,
-    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
     TResult? Function(_NavigateBackAction value)? navigateBack,
+    TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
   }) {
     return initStreamPositions?.call(this);
   }
@@ -1640,9 +1754,10 @@ class _$InitStreamPositionsActionImpl implements _InitStreamPositionsAction {
         showDetailsRecordingData,
     TResult Function(_HideDetailsRecordingDataAction value)?
         hideDetailsRecordingData,
-    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
     TResult Function(_NavigateBackAction value)? navigateBack,
+    TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
     required TResult orElse(),
   }) {
     if (initStreamPositions != null) {
@@ -1724,7 +1839,9 @@ class __$$UserPositionChangesActionImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UserPositionChangesActionImpl implements _UserPositionChangesAction {
+class _$UserPositionChangesActionImpl
+    with DiagnosticableTreeMixin
+    implements _UserPositionChangesAction {
   const _$UserPositionChangesActionImpl(
       {required this.position, required this.zoom});
 
@@ -1734,8 +1851,18 @@ class _$UserPositionChangesActionImpl implements _UserPositionChangesAction {
   final double zoom;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RecordTrackActions.moveToUserPosition(position: $position, zoom: $zoom)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+          DiagnosticsProperty('type', 'RecordTrackActions.moveToUserPosition'))
+      ..add(DiagnosticsProperty('position', position))
+      ..add(DiagnosticsProperty('zoom', zoom));
   }
 
   @override
@@ -1770,8 +1897,9 @@ class _$UserPositionChangesActionImpl implements _UserPositionChangesAction {
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
     required TResult Function() hideDetailsRecordingData,
-    required TResult Function() showConfirmToFinishRecordDialog,
     required TResult Function() navigateBack,
+    required TResult Function() navigateToAddMemory,
+    required TResult Function() navigateToAddRecordTrack,
   }) {
     return moveToUserPosition(position, zoom);
   }
@@ -1785,8 +1913,9 @@ class _$UserPositionChangesActionImpl implements _UserPositionChangesAction {
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
     TResult? Function()? hideDetailsRecordingData,
-    TResult? Function()? showConfirmToFinishRecordDialog,
     TResult? Function()? navigateBack,
+    TResult? Function()? navigateToAddMemory,
+    TResult? Function()? navigateToAddRecordTrack,
   }) {
     return moveToUserPosition?.call(position, zoom);
   }
@@ -1800,8 +1929,9 @@ class _$UserPositionChangesActionImpl implements _UserPositionChangesAction {
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
     TResult Function()? hideDetailsRecordingData,
-    TResult Function()? showConfirmToFinishRecordDialog,
     TResult Function()? navigateBack,
+    TResult Function()? navigateToAddMemory,
+    TResult Function()? navigateToAddRecordTrack,
     required TResult orElse(),
   }) {
     if (moveToUserPosition != null) {
@@ -1821,9 +1951,11 @@ class _$UserPositionChangesActionImpl implements _UserPositionChangesAction {
         showDetailsRecordingData,
     required TResult Function(_HideDetailsRecordingDataAction value)
         hideDetailsRecordingData,
-    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
-        showConfirmToFinishRecordDialog,
     required TResult Function(_NavigateBackAction value) navigateBack,
+    required TResult Function(_NavigateToAddMemoryAction value)
+        navigateToAddMemory,
+    required TResult Function(_NavigateToAddRecordTrackAction value)
+        navigateToAddRecordTrack,
   }) {
     return moveToUserPosition(this);
   }
@@ -1837,9 +1969,10 @@ class _$UserPositionChangesActionImpl implements _UserPositionChangesAction {
         showDetailsRecordingData,
     TResult? Function(_HideDetailsRecordingDataAction value)?
         hideDetailsRecordingData,
-    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
     TResult? Function(_NavigateBackAction value)? navigateBack,
+    TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
   }) {
     return moveToUserPosition?.call(this);
   }
@@ -1853,9 +1986,10 @@ class _$UserPositionChangesActionImpl implements _UserPositionChangesAction {
         showDetailsRecordingData,
     TResult Function(_HideDetailsRecordingDataAction value)?
         hideDetailsRecordingData,
-    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
     TResult Function(_NavigateBackAction value)? navigateBack,
+    TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
     required TResult orElse(),
   }) {
     if (moveToUserPosition != null) {
@@ -1905,12 +2039,20 @@ class __$$ShowDetailsRecordingDataActionImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ShowDetailsRecordingDataActionImpl
+    with DiagnosticableTreeMixin
     implements _ShowDetailsRecordingDataAction {
   const _$ShowDetailsRecordingDataActionImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RecordTrackActions.showDetailsRecordingData()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'RecordTrackActions.showDetailsRecordingData'));
   }
 
   @override
@@ -1933,8 +2075,9 @@ class _$ShowDetailsRecordingDataActionImpl
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
     required TResult Function() hideDetailsRecordingData,
-    required TResult Function() showConfirmToFinishRecordDialog,
     required TResult Function() navigateBack,
+    required TResult Function() navigateToAddMemory,
+    required TResult Function() navigateToAddRecordTrack,
   }) {
     return showDetailsRecordingData();
   }
@@ -1948,8 +2091,9 @@ class _$ShowDetailsRecordingDataActionImpl
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
     TResult? Function()? hideDetailsRecordingData,
-    TResult? Function()? showConfirmToFinishRecordDialog,
     TResult? Function()? navigateBack,
+    TResult? Function()? navigateToAddMemory,
+    TResult? Function()? navigateToAddRecordTrack,
   }) {
     return showDetailsRecordingData?.call();
   }
@@ -1963,8 +2107,9 @@ class _$ShowDetailsRecordingDataActionImpl
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
     TResult Function()? hideDetailsRecordingData,
-    TResult Function()? showConfirmToFinishRecordDialog,
     TResult Function()? navigateBack,
+    TResult Function()? navigateToAddMemory,
+    TResult Function()? navigateToAddRecordTrack,
     required TResult orElse(),
   }) {
     if (showDetailsRecordingData != null) {
@@ -1984,9 +2129,11 @@ class _$ShowDetailsRecordingDataActionImpl
         showDetailsRecordingData,
     required TResult Function(_HideDetailsRecordingDataAction value)
         hideDetailsRecordingData,
-    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
-        showConfirmToFinishRecordDialog,
     required TResult Function(_NavigateBackAction value) navigateBack,
+    required TResult Function(_NavigateToAddMemoryAction value)
+        navigateToAddMemory,
+    required TResult Function(_NavigateToAddRecordTrackAction value)
+        navigateToAddRecordTrack,
   }) {
     return showDetailsRecordingData(this);
   }
@@ -2000,9 +2147,10 @@ class _$ShowDetailsRecordingDataActionImpl
         showDetailsRecordingData,
     TResult? Function(_HideDetailsRecordingDataAction value)?
         hideDetailsRecordingData,
-    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
     TResult? Function(_NavigateBackAction value)? navigateBack,
+    TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
   }) {
     return showDetailsRecordingData?.call(this);
   }
@@ -2016,9 +2164,10 @@ class _$ShowDetailsRecordingDataActionImpl
         showDetailsRecordingData,
     TResult Function(_HideDetailsRecordingDataAction value)?
         hideDetailsRecordingData,
-    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
     TResult Function(_NavigateBackAction value)? navigateBack,
+    TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
     required TResult orElse(),
   }) {
     if (showDetailsRecordingData != null) {
@@ -2058,12 +2207,20 @@ class __$$HideDetailsRecordingDataActionImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$HideDetailsRecordingDataActionImpl
+    with DiagnosticableTreeMixin
     implements _HideDetailsRecordingDataAction {
   const _$HideDetailsRecordingDataActionImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RecordTrackActions.hideDetailsRecordingData()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'RecordTrackActions.hideDetailsRecordingData'));
   }
 
   @override
@@ -2086,8 +2243,9 @@ class _$HideDetailsRecordingDataActionImpl
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
     required TResult Function() hideDetailsRecordingData,
-    required TResult Function() showConfirmToFinishRecordDialog,
     required TResult Function() navigateBack,
+    required TResult Function() navigateToAddMemory,
+    required TResult Function() navigateToAddRecordTrack,
   }) {
     return hideDetailsRecordingData();
   }
@@ -2101,8 +2259,9 @@ class _$HideDetailsRecordingDataActionImpl
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
     TResult? Function()? hideDetailsRecordingData,
-    TResult? Function()? showConfirmToFinishRecordDialog,
     TResult? Function()? navigateBack,
+    TResult? Function()? navigateToAddMemory,
+    TResult? Function()? navigateToAddRecordTrack,
   }) {
     return hideDetailsRecordingData?.call();
   }
@@ -2116,8 +2275,9 @@ class _$HideDetailsRecordingDataActionImpl
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
     TResult Function()? hideDetailsRecordingData,
-    TResult Function()? showConfirmToFinishRecordDialog,
     TResult Function()? navigateBack,
+    TResult Function()? navigateToAddMemory,
+    TResult Function()? navigateToAddRecordTrack,
     required TResult orElse(),
   }) {
     if (hideDetailsRecordingData != null) {
@@ -2137,9 +2297,11 @@ class _$HideDetailsRecordingDataActionImpl
         showDetailsRecordingData,
     required TResult Function(_HideDetailsRecordingDataAction value)
         hideDetailsRecordingData,
-    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
-        showConfirmToFinishRecordDialog,
     required TResult Function(_NavigateBackAction value) navigateBack,
+    required TResult Function(_NavigateToAddMemoryAction value)
+        navigateToAddMemory,
+    required TResult Function(_NavigateToAddRecordTrackAction value)
+        navigateToAddRecordTrack,
   }) {
     return hideDetailsRecordingData(this);
   }
@@ -2153,9 +2315,10 @@ class _$HideDetailsRecordingDataActionImpl
         showDetailsRecordingData,
     TResult? Function(_HideDetailsRecordingDataAction value)?
         hideDetailsRecordingData,
-    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
     TResult? Function(_NavigateBackAction value)? navigateBack,
+    TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
   }) {
     return hideDetailsRecordingData?.call(this);
   }
@@ -2169,9 +2332,10 @@ class _$HideDetailsRecordingDataActionImpl
         showDetailsRecordingData,
     TResult Function(_HideDetailsRecordingDataAction value)?
         hideDetailsRecordingData,
-    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
     TResult Function(_NavigateBackAction value)? navigateBack,
+    TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
     required TResult orElse(),
   }) {
     if (hideDetailsRecordingData != null) {
@@ -2184,160 +2348,6 @@ class _$HideDetailsRecordingDataActionImpl
 abstract class _HideDetailsRecordingDataAction implements RecordTrackActions {
   const factory _HideDetailsRecordingDataAction() =
       _$HideDetailsRecordingDataActionImpl;
-}
-
-/// @nodoc
-abstract class _$$ShowConfirmToFinishRecordDialogActionImplCopyWith<$Res> {
-  factory _$$ShowConfirmToFinishRecordDialogActionImplCopyWith(
-          _$ShowConfirmToFinishRecordDialogActionImpl value,
-          $Res Function(_$ShowConfirmToFinishRecordDialogActionImpl) then) =
-      __$$ShowConfirmToFinishRecordDialogActionImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ShowConfirmToFinishRecordDialogActionImplCopyWithImpl<$Res>
-    extends _$RecordTrackActionsCopyWithImpl<$Res,
-        _$ShowConfirmToFinishRecordDialogActionImpl>
-    implements _$$ShowConfirmToFinishRecordDialogActionImplCopyWith<$Res> {
-  __$$ShowConfirmToFinishRecordDialogActionImplCopyWithImpl(
-      _$ShowConfirmToFinishRecordDialogActionImpl _value,
-      $Res Function(_$ShowConfirmToFinishRecordDialogActionImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of RecordTrackActions
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$ShowConfirmToFinishRecordDialogActionImpl
-    implements _ShowConfirmToFinishRecordDialogAction {
-  const _$ShowConfirmToFinishRecordDialogActionImpl();
-
-  @override
-  String toString() {
-    return 'RecordTrackActions.showConfirmToFinishRecordDialog()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ShowConfirmToFinishRecordDialogActionImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(void Function(String, String) callback,
-            AppStrings title, AppStrings body)
-        initStreamPositions,
-    required TResult Function(Position position, double zoom)
-        moveToUserPosition,
-    required TResult Function() showDetailsRecordingData,
-    required TResult Function() hideDetailsRecordingData,
-    required TResult Function() showConfirmToFinishRecordDialog,
-    required TResult Function() navigateBack,
-  }) {
-    return showConfirmToFinishRecordDialog();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(void Function(String, String) callback, AppStrings title,
-            AppStrings body)?
-        initStreamPositions,
-    TResult? Function(Position position, double zoom)? moveToUserPosition,
-    TResult? Function()? showDetailsRecordingData,
-    TResult? Function()? hideDetailsRecordingData,
-    TResult? Function()? showConfirmToFinishRecordDialog,
-    TResult? Function()? navigateBack,
-  }) {
-    return showConfirmToFinishRecordDialog?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(void Function(String, String) callback, AppStrings title,
-            AppStrings body)?
-        initStreamPositions,
-    TResult Function(Position position, double zoom)? moveToUserPosition,
-    TResult Function()? showDetailsRecordingData,
-    TResult Function()? hideDetailsRecordingData,
-    TResult Function()? showConfirmToFinishRecordDialog,
-    TResult Function()? navigateBack,
-    required TResult orElse(),
-  }) {
-    if (showConfirmToFinishRecordDialog != null) {
-      return showConfirmToFinishRecordDialog();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitStreamPositionsAction value)
-        initStreamPositions,
-    required TResult Function(_UserPositionChangesAction value)
-        moveToUserPosition,
-    required TResult Function(_ShowDetailsRecordingDataAction value)
-        showDetailsRecordingData,
-    required TResult Function(_HideDetailsRecordingDataAction value)
-        hideDetailsRecordingData,
-    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
-        showConfirmToFinishRecordDialog,
-    required TResult Function(_NavigateBackAction value) navigateBack,
-  }) {
-    return showConfirmToFinishRecordDialog(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_InitStreamPositionsAction value)? initStreamPositions,
-    TResult? Function(_UserPositionChangesAction value)? moveToUserPosition,
-    TResult? Function(_ShowDetailsRecordingDataAction value)?
-        showDetailsRecordingData,
-    TResult? Function(_HideDetailsRecordingDataAction value)?
-        hideDetailsRecordingData,
-    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
-    TResult? Function(_NavigateBackAction value)? navigateBack,
-  }) {
-    return showConfirmToFinishRecordDialog?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitStreamPositionsAction value)? initStreamPositions,
-    TResult Function(_UserPositionChangesAction value)? moveToUserPosition,
-    TResult Function(_ShowDetailsRecordingDataAction value)?
-        showDetailsRecordingData,
-    TResult Function(_HideDetailsRecordingDataAction value)?
-        hideDetailsRecordingData,
-    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
-    TResult Function(_NavigateBackAction value)? navigateBack,
-    required TResult orElse(),
-  }) {
-    if (showConfirmToFinishRecordDialog != null) {
-      return showConfirmToFinishRecordDialog(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ShowConfirmToFinishRecordDialogAction
-    implements RecordTrackActions {
-  const factory _ShowConfirmToFinishRecordDialogAction() =
-      _$ShowConfirmToFinishRecordDialogActionImpl;
 }
 
 /// @nodoc
@@ -2361,12 +2371,21 @@ class __$$NavigateBackActionImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$NavigateBackActionImpl implements _NavigateBackAction {
+class _$NavigateBackActionImpl
+    with DiagnosticableTreeMixin
+    implements _NavigateBackAction {
   const _$NavigateBackActionImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RecordTrackActions.navigateBack()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'RecordTrackActions.navigateBack'));
   }
 
   @override
@@ -2388,8 +2407,9 @@ class _$NavigateBackActionImpl implements _NavigateBackAction {
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
     required TResult Function() hideDetailsRecordingData,
-    required TResult Function() showConfirmToFinishRecordDialog,
     required TResult Function() navigateBack,
+    required TResult Function() navigateToAddMemory,
+    required TResult Function() navigateToAddRecordTrack,
   }) {
     return navigateBack();
   }
@@ -2403,8 +2423,9 @@ class _$NavigateBackActionImpl implements _NavigateBackAction {
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
     TResult? Function()? hideDetailsRecordingData,
-    TResult? Function()? showConfirmToFinishRecordDialog,
     TResult? Function()? navigateBack,
+    TResult? Function()? navigateToAddMemory,
+    TResult? Function()? navigateToAddRecordTrack,
   }) {
     return navigateBack?.call();
   }
@@ -2418,8 +2439,9 @@ class _$NavigateBackActionImpl implements _NavigateBackAction {
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
     TResult Function()? hideDetailsRecordingData,
-    TResult Function()? showConfirmToFinishRecordDialog,
     TResult Function()? navigateBack,
+    TResult Function()? navigateToAddMemory,
+    TResult Function()? navigateToAddRecordTrack,
     required TResult orElse(),
   }) {
     if (navigateBack != null) {
@@ -2439,9 +2461,11 @@ class _$NavigateBackActionImpl implements _NavigateBackAction {
         showDetailsRecordingData,
     required TResult Function(_HideDetailsRecordingDataAction value)
         hideDetailsRecordingData,
-    required TResult Function(_ShowConfirmToFinishRecordDialogAction value)
-        showConfirmToFinishRecordDialog,
     required TResult Function(_NavigateBackAction value) navigateBack,
+    required TResult Function(_NavigateToAddMemoryAction value)
+        navigateToAddMemory,
+    required TResult Function(_NavigateToAddRecordTrackAction value)
+        navigateToAddRecordTrack,
   }) {
     return navigateBack(this);
   }
@@ -2455,9 +2479,10 @@ class _$NavigateBackActionImpl implements _NavigateBackAction {
         showDetailsRecordingData,
     TResult? Function(_HideDetailsRecordingDataAction value)?
         hideDetailsRecordingData,
-    TResult? Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
     TResult? Function(_NavigateBackAction value)? navigateBack,
+    TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
   }) {
     return navigateBack?.call(this);
   }
@@ -2471,9 +2496,10 @@ class _$NavigateBackActionImpl implements _NavigateBackAction {
         showDetailsRecordingData,
     TResult Function(_HideDetailsRecordingDataAction value)?
         hideDetailsRecordingData,
-    TResult Function(_ShowConfirmToFinishRecordDialogAction value)?
-        showConfirmToFinishRecordDialog,
     TResult Function(_NavigateBackAction value)? navigateBack,
+    TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
     required TResult orElse(),
   }) {
     if (navigateBack != null) {
@@ -2488,28 +2514,381 @@ abstract class _NavigateBackAction implements RecordTrackActions {
 }
 
 /// @nodoc
+abstract class _$$NavigateToAddMemoryActionImplCopyWith<$Res> {
+  factory _$$NavigateToAddMemoryActionImplCopyWith(
+          _$NavigateToAddMemoryActionImpl value,
+          $Res Function(_$NavigateToAddMemoryActionImpl) then) =
+      __$$NavigateToAddMemoryActionImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NavigateToAddMemoryActionImplCopyWithImpl<$Res>
+    extends _$RecordTrackActionsCopyWithImpl<$Res,
+        _$NavigateToAddMemoryActionImpl>
+    implements _$$NavigateToAddMemoryActionImplCopyWith<$Res> {
+  __$$NavigateToAddMemoryActionImplCopyWithImpl(
+      _$NavigateToAddMemoryActionImpl _value,
+      $Res Function(_$NavigateToAddMemoryActionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NavigateToAddMemoryActionImpl
+    with DiagnosticableTreeMixin
+    implements _NavigateToAddMemoryAction {
+  const _$NavigateToAddMemoryActionImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'RecordTrackActions.navigateToAddMemory()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'RecordTrackActions.navigateToAddMemory'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NavigateToAddMemoryActionImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(void Function(String, String) callback,
+            AppStrings title, AppStrings body)
+        initStreamPositions,
+    required TResult Function(Position position, double zoom)
+        moveToUserPosition,
+    required TResult Function() showDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
+    required TResult Function() navigateBack,
+    required TResult Function() navigateToAddMemory,
+    required TResult Function() navigateToAddRecordTrack,
+  }) {
+    return navigateToAddMemory();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult? Function(Position position, double zoom)? moveToUserPosition,
+    TResult? Function()? showDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
+    TResult? Function()? navigateBack,
+    TResult? Function()? navigateToAddMemory,
+    TResult? Function()? navigateToAddRecordTrack,
+  }) {
+    return navigateToAddMemory?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult Function(Position position, double zoom)? moveToUserPosition,
+    TResult Function()? showDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
+    TResult Function()? navigateBack,
+    TResult Function()? navigateToAddMemory,
+    TResult Function()? navigateToAddRecordTrack,
+    required TResult orElse(),
+  }) {
+    if (navigateToAddMemory != null) {
+      return navigateToAddMemory();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitStreamPositionsAction value)
+        initStreamPositions,
+    required TResult Function(_UserPositionChangesAction value)
+        moveToUserPosition,
+    required TResult Function(_ShowDetailsRecordingDataAction value)
+        showDetailsRecordingData,
+    required TResult Function(_HideDetailsRecordingDataAction value)
+        hideDetailsRecordingData,
+    required TResult Function(_NavigateBackAction value) navigateBack,
+    required TResult Function(_NavigateToAddMemoryAction value)
+        navigateToAddMemory,
+    required TResult Function(_NavigateToAddRecordTrackAction value)
+        navigateToAddRecordTrack,
+  }) {
+    return navigateToAddMemory(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult? Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult? Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult? Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult? Function(_NavigateBackAction value)? navigateBack,
+    TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
+  }) {
+    return navigateToAddMemory?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult Function(_NavigateBackAction value)? navigateBack,
+    TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
+    required TResult orElse(),
+  }) {
+    if (navigateToAddMemory != null) {
+      return navigateToAddMemory(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NavigateToAddMemoryAction implements RecordTrackActions {
+  const factory _NavigateToAddMemoryAction() = _$NavigateToAddMemoryActionImpl;
+}
+
+/// @nodoc
+abstract class _$$NavigateToAddRecordTrackActionImplCopyWith<$Res> {
+  factory _$$NavigateToAddRecordTrackActionImplCopyWith(
+          _$NavigateToAddRecordTrackActionImpl value,
+          $Res Function(_$NavigateToAddRecordTrackActionImpl) then) =
+      __$$NavigateToAddRecordTrackActionImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NavigateToAddRecordTrackActionImplCopyWithImpl<$Res>
+    extends _$RecordTrackActionsCopyWithImpl<$Res,
+        _$NavigateToAddRecordTrackActionImpl>
+    implements _$$NavigateToAddRecordTrackActionImplCopyWith<$Res> {
+  __$$NavigateToAddRecordTrackActionImplCopyWithImpl(
+      _$NavigateToAddRecordTrackActionImpl _value,
+      $Res Function(_$NavigateToAddRecordTrackActionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NavigateToAddRecordTrackActionImpl
+    with DiagnosticableTreeMixin
+    implements _NavigateToAddRecordTrackAction {
+  const _$NavigateToAddRecordTrackActionImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'RecordTrackActions.navigateToAddRecordTrack()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'RecordTrackActions.navigateToAddRecordTrack'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NavigateToAddRecordTrackActionImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(void Function(String, String) callback,
+            AppStrings title, AppStrings body)
+        initStreamPositions,
+    required TResult Function(Position position, double zoom)
+        moveToUserPosition,
+    required TResult Function() showDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
+    required TResult Function() navigateBack,
+    required TResult Function() navigateToAddMemory,
+    required TResult Function() navigateToAddRecordTrack,
+  }) {
+    return navigateToAddRecordTrack();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult? Function(Position position, double zoom)? moveToUserPosition,
+    TResult? Function()? showDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
+    TResult? Function()? navigateBack,
+    TResult? Function()? navigateToAddMemory,
+    TResult? Function()? navigateToAddRecordTrack,
+  }) {
+    return navigateToAddRecordTrack?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult Function(Position position, double zoom)? moveToUserPosition,
+    TResult Function()? showDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
+    TResult Function()? navigateBack,
+    TResult Function()? navigateToAddMemory,
+    TResult Function()? navigateToAddRecordTrack,
+    required TResult orElse(),
+  }) {
+    if (navigateToAddRecordTrack != null) {
+      return navigateToAddRecordTrack();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitStreamPositionsAction value)
+        initStreamPositions,
+    required TResult Function(_UserPositionChangesAction value)
+        moveToUserPosition,
+    required TResult Function(_ShowDetailsRecordingDataAction value)
+        showDetailsRecordingData,
+    required TResult Function(_HideDetailsRecordingDataAction value)
+        hideDetailsRecordingData,
+    required TResult Function(_NavigateBackAction value) navigateBack,
+    required TResult Function(_NavigateToAddMemoryAction value)
+        navigateToAddMemory,
+    required TResult Function(_NavigateToAddRecordTrackAction value)
+        navigateToAddRecordTrack,
+  }) {
+    return navigateToAddRecordTrack(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult? Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult? Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult? Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult? Function(_NavigateBackAction value)? navigateBack,
+    TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
+  }) {
+    return navigateToAddRecordTrack?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult Function(_NavigateBackAction value)? navigateBack,
+    TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
+    required TResult orElse(),
+  }) {
+    if (navigateToAddRecordTrack != null) {
+      return navigateToAddRecordTrack(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NavigateToAddRecordTrackAction implements RecordTrackActions {
+  const factory _NavigateToAddRecordTrackAction() =
+      _$NavigateToAddRecordTrackActionImpl;
+}
+
+/// @nodoc
 mixin _$TrackRecordStatusState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() withoutRecording,
-    required TResult Function(List<Position> positions, double distance,
-            int duration, RecordTrackModeState mode)
+    required TResult Function(
+            List<Position> positions,
+            double distance,
+            int duration,
+            double averageSpeed,
+            double maxAltitude,
+            RecordTrackModeState mode,
+            bool isRecording)
         recording,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? withoutRecording,
-    TResult? Function(List<Position> positions, double distance, int duration,
-            RecordTrackModeState mode)?
+    TResult? Function(
+            List<Position> positions,
+            double distance,
+            int duration,
+            double averageSpeed,
+            double maxAltitude,
+            RecordTrackModeState mode,
+            bool isRecording)?
         recording,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? withoutRecording,
-    TResult Function(List<Position> positions, double distance, int duration,
-            RecordTrackModeState mode)?
+    TResult Function(
+            List<Position> positions,
+            double distance,
+            int duration,
+            double averageSpeed,
+            double maxAltitude,
+            RecordTrackModeState mode,
+            bool isRecording)?
         recording,
     required TResult orElse(),
   }) =>
@@ -2585,12 +2964,20 @@ class __$$TrackRecordWithoutRecordingStatusStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$TrackRecordWithoutRecordingStatusStateImpl
-    extends TrackRecordWithoutRecordingStatusState {
+    extends TrackRecordWithoutRecordingStatusState
+    with DiagnosticableTreeMixin {
   const _$TrackRecordWithoutRecordingStatusStateImpl() : super._();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'TrackRecordStatusState.withoutRecording()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'TrackRecordStatusState.withoutRecording'));
   }
 
   @override
@@ -2607,8 +2994,14 @@ class _$TrackRecordWithoutRecordingStatusStateImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() withoutRecording,
-    required TResult Function(List<Position> positions, double distance,
-            int duration, RecordTrackModeState mode)
+    required TResult Function(
+            List<Position> positions,
+            double distance,
+            int duration,
+            double averageSpeed,
+            double maxAltitude,
+            RecordTrackModeState mode,
+            bool isRecording)
         recording,
   }) {
     return withoutRecording();
@@ -2618,8 +3011,14 @@ class _$TrackRecordWithoutRecordingStatusStateImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? withoutRecording,
-    TResult? Function(List<Position> positions, double distance, int duration,
-            RecordTrackModeState mode)?
+    TResult? Function(
+            List<Position> positions,
+            double distance,
+            int duration,
+            double averageSpeed,
+            double maxAltitude,
+            RecordTrackModeState mode,
+            bool isRecording)?
         recording,
   }) {
     return withoutRecording?.call();
@@ -2629,8 +3028,14 @@ class _$TrackRecordWithoutRecordingStatusStateImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? withoutRecording,
-    TResult Function(List<Position> positions, double distance, int duration,
-            RecordTrackModeState mode)?
+    TResult Function(
+            List<Position> positions,
+            double distance,
+            int duration,
+            double averageSpeed,
+            double maxAltitude,
+            RecordTrackModeState mode,
+            bool isRecording)?
         recording,
     required TResult orElse(),
   }) {
@@ -2693,7 +3098,10 @@ abstract class _$$TrackRecordingStatusStateImplCopyWith<$Res> {
       {List<Position> positions,
       double distance,
       int duration,
-      RecordTrackModeState mode});
+      double averageSpeed,
+      double maxAltitude,
+      RecordTrackModeState mode,
+      bool isRecording});
 
   $RecordTrackModeStateCopyWith<$Res> get mode;
 }
@@ -2716,7 +3124,10 @@ class __$$TrackRecordingStatusStateImplCopyWithImpl<$Res>
     Object? positions = null,
     Object? distance = null,
     Object? duration = null,
+    Object? averageSpeed = null,
+    Object? maxAltitude = null,
     Object? mode = null,
+    Object? isRecording = null,
   }) {
     return _then(_$TrackRecordingStatusStateImpl(
       positions: null == positions
@@ -2731,10 +3142,22 @@ class __$$TrackRecordingStatusStateImplCopyWithImpl<$Res>
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as int,
+      averageSpeed: null == averageSpeed
+          ? _value.averageSpeed
+          : averageSpeed // ignore: cast_nullable_to_non_nullable
+              as double,
+      maxAltitude: null == maxAltitude
+          ? _value.maxAltitude
+          : maxAltitude // ignore: cast_nullable_to_non_nullable
+              as double,
       mode: null == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as RecordTrackModeState,
+      isRecording: null == isRecording
+          ? _value.isRecording
+          : isRecording // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 
@@ -2751,12 +3174,16 @@ class __$$TrackRecordingStatusStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackRecordingStatusStateImpl extends TrackRecordingStatusState {
+class _$TrackRecordingStatusStateImpl extends TrackRecordingStatusState
+    with DiagnosticableTreeMixin {
   const _$TrackRecordingStatusStateImpl(
       {required final List<Position> positions,
       required this.distance,
       required this.duration,
-      required this.mode})
+      required this.averageSpeed,
+      required this.maxAltitude,
+      required this.mode,
+      required this.isRecording})
       : _positions = positions,
         super._();
 
@@ -2773,11 +3200,31 @@ class _$TrackRecordingStatusStateImpl extends TrackRecordingStatusState {
   @override
   final int duration;
   @override
+  final double averageSpeed;
+  @override
+  final double maxAltitude;
+  @override
   final RecordTrackModeState mode;
+  @override
+  final bool isRecording;
 
   @override
-  String toString() {
-    return 'TrackRecordStatusState.recording(positions: $positions, distance: $distance, duration: $duration, mode: $mode)';
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'TrackRecordStatusState.recording(positions: $positions, distance: $distance, duration: $duration, averageSpeed: $averageSpeed, maxAltitude: $maxAltitude, mode: $mode, isRecording: $isRecording)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'TrackRecordStatusState.recording'))
+      ..add(DiagnosticsProperty('positions', positions))
+      ..add(DiagnosticsProperty('distance', distance))
+      ..add(DiagnosticsProperty('duration', duration))
+      ..add(DiagnosticsProperty('averageSpeed', averageSpeed))
+      ..add(DiagnosticsProperty('maxAltitude', maxAltitude))
+      ..add(DiagnosticsProperty('mode', mode))
+      ..add(DiagnosticsProperty('isRecording', isRecording));
   }
 
   @override
@@ -2791,7 +3238,13 @@ class _$TrackRecordingStatusStateImpl extends TrackRecordingStatusState {
                 other.distance == distance) &&
             (identical(other.duration, duration) ||
                 other.duration == duration) &&
-            (identical(other.mode, mode) || other.mode == mode));
+            (identical(other.averageSpeed, averageSpeed) ||
+                other.averageSpeed == averageSpeed) &&
+            (identical(other.maxAltitude, maxAltitude) ||
+                other.maxAltitude == maxAltitude) &&
+            (identical(other.mode, mode) || other.mode == mode) &&
+            (identical(other.isRecording, isRecording) ||
+                other.isRecording == isRecording));
   }
 
   @override
@@ -2800,7 +3253,10 @@ class _$TrackRecordingStatusStateImpl extends TrackRecordingStatusState {
       const DeepCollectionEquality().hash(_positions),
       distance,
       duration,
-      mode);
+      averageSpeed,
+      maxAltitude,
+      mode,
+      isRecording);
 
   /// Create a copy of TrackRecordStatusState
   /// with the given fields replaced by the non-null parameter values.
@@ -2815,35 +3271,56 @@ class _$TrackRecordingStatusStateImpl extends TrackRecordingStatusState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() withoutRecording,
-    required TResult Function(List<Position> positions, double distance,
-            int duration, RecordTrackModeState mode)
+    required TResult Function(
+            List<Position> positions,
+            double distance,
+            int duration,
+            double averageSpeed,
+            double maxAltitude,
+            RecordTrackModeState mode,
+            bool isRecording)
         recording,
   }) {
-    return recording(positions, distance, duration, mode);
+    return recording(positions, distance, duration, averageSpeed, maxAltitude,
+        mode, isRecording);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? withoutRecording,
-    TResult? Function(List<Position> positions, double distance, int duration,
-            RecordTrackModeState mode)?
+    TResult? Function(
+            List<Position> positions,
+            double distance,
+            int duration,
+            double averageSpeed,
+            double maxAltitude,
+            RecordTrackModeState mode,
+            bool isRecording)?
         recording,
   }) {
-    return recording?.call(positions, distance, duration, mode);
+    return recording?.call(positions, distance, duration, averageSpeed,
+        maxAltitude, mode, isRecording);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? withoutRecording,
-    TResult Function(List<Position> positions, double distance, int duration,
-            RecordTrackModeState mode)?
+    TResult Function(
+            List<Position> positions,
+            double distance,
+            int duration,
+            double averageSpeed,
+            double maxAltitude,
+            RecordTrackModeState mode,
+            bool isRecording)?
         recording,
     required TResult orElse(),
   }) {
     if (recording != null) {
-      return recording(positions, distance, duration, mode);
+      return recording(positions, distance, duration, averageSpeed, maxAltitude,
+          mode, isRecording);
     }
     return orElse();
   }
@@ -2885,17 +3362,22 @@ class _$TrackRecordingStatusStateImpl extends TrackRecordingStatusState {
 
 abstract class TrackRecordingStatusState extends TrackRecordStatusState {
   const factory TrackRecordingStatusState(
-          {required final List<Position> positions,
-          required final double distance,
-          required final int duration,
-          required final RecordTrackModeState mode}) =
-      _$TrackRecordingStatusStateImpl;
+      {required final List<Position> positions,
+      required final double distance,
+      required final int duration,
+      required final double averageSpeed,
+      required final double maxAltitude,
+      required final RecordTrackModeState mode,
+      required final bool isRecording}) = _$TrackRecordingStatusStateImpl;
   const TrackRecordingStatusState._() : super._();
 
   List<Position> get positions;
   double get distance;
   int get duration;
+  double get averageSpeed;
+  double get maxAltitude;
   RecordTrackModeState get mode;
+  bool get isRecording;
 
   /// Create a copy of TrackRecordStatusState
   /// with the given fields replaced by the non-null parameter values.
@@ -3025,6 +3507,7 @@ class __$$RecordTrackRecordingModeStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$RecordTrackRecordingModeStateImpl
+    with DiagnosticableTreeMixin
     implements _RecordTrackRecordingModeState {
   const _$RecordTrackRecordingModeStateImpl({required this.currentPosition});
 
@@ -3032,8 +3515,16 @@ class _$RecordTrackRecordingModeStateImpl
   final Position currentPosition;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RecordTrackModeState.recording(currentPosition: $currentPosition)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'RecordTrackModeState.recording'))
+      ..add(DiagnosticsProperty('currentPosition', currentPosition));
   }
 
   @override
@@ -3166,12 +3657,20 @@ class __$$RecordTrackPauseModeStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RecordTrackPauseModeStateImpl implements _RecordTrackPauseModeState {
+class _$RecordTrackPauseModeStateImpl
+    with DiagnosticableTreeMixin
+    implements _RecordTrackPauseModeState {
   const _$RecordTrackPauseModeStateImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RecordTrackModeState.pause()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'RecordTrackModeState.pause'));
   }
 
   @override
@@ -3281,12 +3780,20 @@ class __$$RecordTrackStopModeStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RecordTrackStopModeStateImpl implements _RecordTrackStopModeState {
+class _$RecordTrackStopModeStateImpl
+    with DiagnosticableTreeMixin
+    implements _RecordTrackStopModeState {
   const _$RecordTrackStopModeStateImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'RecordTrackModeState.stop()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'RecordTrackModeState.stop'));
   }
 
   @override

@@ -592,3 +592,191 @@ abstract class _CommunityNavCallbackStore implements CommunityNavCallbackStore {
   _$$CommunityNavCallbackStoreImplCopyWith<_$CommunityNavCallbackStoreImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$RecordTrackNavCallbackStore {
+  VoidCallback get navigateBack => throw _privateConstructorUsedError;
+  VoidCallback get navigateToAddMemory => throw _privateConstructorUsedError;
+  VoidCallback get navigateToAddRecordTrack =>
+      throw _privateConstructorUsedError;
+
+  /// Create a copy of RecordTrackNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $RecordTrackNavCallbackStoreCopyWith<RecordTrackNavCallbackStore>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $RecordTrackNavCallbackStoreCopyWith<$Res> {
+  factory $RecordTrackNavCallbackStoreCopyWith(
+          RecordTrackNavCallbackStore value,
+          $Res Function(RecordTrackNavCallbackStore) then) =
+      _$RecordTrackNavCallbackStoreCopyWithImpl<$Res,
+          RecordTrackNavCallbackStore>;
+  @useResult
+  $Res call(
+      {VoidCallback navigateBack,
+      VoidCallback navigateToAddMemory,
+      VoidCallback navigateToAddRecordTrack});
+}
+
+/// @nodoc
+class _$RecordTrackNavCallbackStoreCopyWithImpl<$Res,
+        $Val extends RecordTrackNavCallbackStore>
+    implements $RecordTrackNavCallbackStoreCopyWith<$Res> {
+  _$RecordTrackNavCallbackStoreCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of RecordTrackNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? navigateBack = null,
+    Object? navigateToAddMemory = null,
+    Object? navigateToAddRecordTrack = null,
+  }) {
+    return _then(_value.copyWith(
+      navigateBack: null == navigateBack
+          ? _value.navigateBack
+          : navigateBack // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+      navigateToAddMemory: null == navigateToAddMemory
+          ? _value.navigateToAddMemory
+          : navigateToAddMemory // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+      navigateToAddRecordTrack: null == navigateToAddRecordTrack
+          ? _value.navigateToAddRecordTrack
+          : navigateToAddRecordTrack // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$RecordTrackNavCallbackStoreImplCopyWith<$Res>
+    implements $RecordTrackNavCallbackStoreCopyWith<$Res> {
+  factory _$$RecordTrackNavCallbackStoreImplCopyWith(
+          _$RecordTrackNavCallbackStoreImpl value,
+          $Res Function(_$RecordTrackNavCallbackStoreImpl) then) =
+      __$$RecordTrackNavCallbackStoreImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {VoidCallback navigateBack,
+      VoidCallback navigateToAddMemory,
+      VoidCallback navigateToAddRecordTrack});
+}
+
+/// @nodoc
+class __$$RecordTrackNavCallbackStoreImplCopyWithImpl<$Res>
+    extends _$RecordTrackNavCallbackStoreCopyWithImpl<$Res,
+        _$RecordTrackNavCallbackStoreImpl>
+    implements _$$RecordTrackNavCallbackStoreImplCopyWith<$Res> {
+  __$$RecordTrackNavCallbackStoreImplCopyWithImpl(
+      _$RecordTrackNavCallbackStoreImpl _value,
+      $Res Function(_$RecordTrackNavCallbackStoreImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? navigateBack = null,
+    Object? navigateToAddMemory = null,
+    Object? navigateToAddRecordTrack = null,
+  }) {
+    return _then(_$RecordTrackNavCallbackStoreImpl(
+      navigateBack: null == navigateBack
+          ? _value.navigateBack
+          : navigateBack // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+      navigateToAddMemory: null == navigateToAddMemory
+          ? _value.navigateToAddMemory
+          : navigateToAddMemory // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+      navigateToAddRecordTrack: null == navigateToAddRecordTrack
+          ? _value.navigateToAddRecordTrack
+          : navigateToAddRecordTrack // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$RecordTrackNavCallbackStoreImpl
+    implements _RecordTrackNavCallbackStore {
+  const _$RecordTrackNavCallbackStoreImpl(
+      {required this.navigateBack,
+      required this.navigateToAddMemory,
+      required this.navigateToAddRecordTrack});
+
+  @override
+  final VoidCallback navigateBack;
+  @override
+  final VoidCallback navigateToAddMemory;
+  @override
+  final VoidCallback navigateToAddRecordTrack;
+
+  @override
+  String toString() {
+    return 'RecordTrackNavCallbackStore(navigateBack: $navigateBack, navigateToAddMemory: $navigateToAddMemory, navigateToAddRecordTrack: $navigateToAddRecordTrack)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RecordTrackNavCallbackStoreImpl &&
+            (identical(other.navigateBack, navigateBack) ||
+                other.navigateBack == navigateBack) &&
+            (identical(other.navigateToAddMemory, navigateToAddMemory) ||
+                other.navigateToAddMemory == navigateToAddMemory) &&
+            (identical(
+                    other.navigateToAddRecordTrack, navigateToAddRecordTrack) ||
+                other.navigateToAddRecordTrack == navigateToAddRecordTrack));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, navigateBack, navigateToAddMemory, navigateToAddRecordTrack);
+
+  /// Create a copy of RecordTrackNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RecordTrackNavCallbackStoreImplCopyWith<_$RecordTrackNavCallbackStoreImpl>
+      get copyWith => __$$RecordTrackNavCallbackStoreImplCopyWithImpl<
+          _$RecordTrackNavCallbackStoreImpl>(this, _$identity);
+}
+
+abstract class _RecordTrackNavCallbackStore
+    implements RecordTrackNavCallbackStore {
+  const factory _RecordTrackNavCallbackStore(
+          {required final VoidCallback navigateBack,
+          required final VoidCallback navigateToAddMemory,
+          required final VoidCallback navigateToAddRecordTrack}) =
+      _$RecordTrackNavCallbackStoreImpl;
+
+  @override
+  VoidCallback get navigateBack;
+  @override
+  VoidCallback get navigateToAddMemory;
+  @override
+  VoidCallback get navigateToAddRecordTrack;
+
+  /// Create a copy of RecordTrackNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RecordTrackNavCallbackStoreImplCopyWith<_$RecordTrackNavCallbackStoreImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}

@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart' as provider;
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:uniqtrack/app/app_state/auth/auth_notifier.dart';
+import 'package:uniqtrack/app/glue/add_or_edit_record_track/providers/add_or_edit_store_builder_provider.dart';
 import 'package:uniqtrack/app/glue/forgot_password/providers/forgot_password_provider.dart';
 import 'package:uniqtrack/app/glue/login/providers/login_store_builder_provider.dart';
 import 'package:uniqtrack/app/app_state/providers/auth_state_changes_use_case_provider.dart';
@@ -14,6 +15,8 @@ import 'package:uniqtrack/app/navigation/go_router_refresh_stream.dart';
 import 'package:uniqtrack/app/navigation/paths/app_paths.dart';
 import 'package:uniqtrack/app/navigation/providers/navigation_store_provider.dart';
 import 'package:uniqtrack/app/navigation/providers/stores/nav_callback_store.dart';
+import 'package:uniqtrack/features/add_memory/presentation/pages/add_memory_page.dart';
+import 'package:uniqtrack/features/add_or_edit_record_track/presentation/pages/add_or_edit_record_track_page.dart';
 import 'package:uniqtrack/features/community/presentation/pages/community_page.dart';
 import 'package:uniqtrack/features/forgot_password/presentation/pages/forgot_password_page.dart';
 import 'package:uniqtrack/features/login/presentation%20/pages/login_page.dart';
@@ -119,17 +122,68 @@ GoRouter router(RouterRef ref) {
                     parentNavigatorKey: rootNavigatorKey,
                     path: AppPaths.community.tracking.goRoute,
                     builder: (context, state) {
-                      return Consumer(builder: (context, ref, child) {
-                        final storeBuilder =
+                      final recordTrackNavCallback =
+                      RecordTrackNavCallbackStore(
+                        navigateBack: context.pop,
+                        navigateToAddMemory: () {
+                          context.push(
+                              AppPaths.community.tracking.addMemoryPath.path);
+                        },
+                        navigateToAddRecordTrack: () {
+                          final path =
+                              AppPaths.community.tracking.addRecordTrack.path;
+
+                          context.push(path);
+                        },
+                      );
+
+                      return ProviderScope(
+                        overrides: [
+                          recordTrackNavCallbackStoreProvider
+                              .overrideWithValue(recordTrackNavCallback),
+                        ],
+                        child: Consumer(
+                          builder: (context, ref, child) {
+                            final storeBuilder =
                             ref.watch(recordTrackStoreBuilderProvider);
 
-                        return provider.Provider(
-                          create: storeBuilder.create,
-                          child: RecordTrackPage(),
-                        );
-                      });
+                            return provider.Provider(
+                              create: storeBuilder.create,
+                              child: RecordTrackPage(),
+                            );
+                          },
+                        ),
+                      );
                     },
-                  )
+                    routes: [
+                      GoRoute(
+                        parentNavigatorKey: rootNavigatorKey,
+                        path: AppPaths.community.tracking.addMemoryPath.goRoute,
+                        builder: (context, state) {
+                          return AddMemoryPage();
+                        },
+                      ),
+                      GoRoute(
+                        parentNavigatorKey: rootNavigatorKey,
+                        path:
+                        AppPaths.community.tracking.addRecordTrack.goRoute,
+                        builder: (context, state) {
+                          return Consumer(
+                              builder: (context, ref, child) {
+                                final storeBuilder = ref.watch(
+                                    addOrEditRecordStoreBuilderProvider);
+
+                                return provider.Provider(
+                                  create: (context) => storeBuilder.create(
+                                      context),
+                                  child: AddOrEditRecordTrackPage(),
+                                );
+                              }
+                          );
+                        },
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ],
@@ -166,9 +220,9 @@ GoRouter router(RouterRef ref) {
             },
             navigateToForgotPassword: (email) {
               final queryParameters =
-                  AppPaths.login.forgotPassword.queryEmail(email);
+              AppPaths.login.forgotPassword.queryEmail(email);
               final forgotPath =
-                  AppPaths.login.forgotPassword.query(queryParameters);
+              AppPaths.login.forgotPassword.query(queryParameters);
 
               context.push(forgotPath.path);
             },
@@ -210,7 +264,7 @@ GoRouter router(RouterRef ref) {
                 child: Consumer(
                   builder: (context, ref, child) {
                     final registerStoreBuilder =
-                        ref.watch(registerStoreBuilderProvider);
+                    ref.watch(registerStoreBuilderProvider);
 
                     return provider.Provider(
                       create: registerStoreBuilder.create,
@@ -226,7 +280,7 @@ GoRouter router(RouterRef ref) {
             path: AppPaths.login.forgotPassword.goRoute,
             builder: (context, state) {
               final forgotPasswordNavCallbackStore =
-                  ForgotPasswordNavCallbackStore(
+              ForgotPasswordNavCallbackStore(
                 navigateBack: context.pop,
               );
 
@@ -242,7 +296,7 @@ GoRouter router(RouterRef ref) {
                 child: Consumer(
                   builder: (context, WidgetRef ref, child) {
                     final forgotPasswordStoreBuilder =
-                        ref.watch(forgotPasswordStoreProvider);
+                    ref.watch(forgotPasswordStoreProvider);
 
                     return provider.Provider(
                       create: (context) =>
