@@ -8,6 +8,5 @@ class AppColorSchemes {
     secondary: AppColors.charcoalGray,
     onSecondary: AppColors.malachite,
     error: AppColors.red,
-
   );
 }

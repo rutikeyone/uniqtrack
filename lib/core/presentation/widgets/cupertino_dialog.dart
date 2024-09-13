@@ -65,6 +65,7 @@ class CupertinoDialog extends StatelessWidget {
             style: actionTextStyle,
           ),
         ),
+
       ],
     );
   }

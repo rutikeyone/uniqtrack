@@ -1,3 +1,4 @@
+// ignore_for_file: avoid_manual_providers_as_generated_provider_dependency
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -5,26 +6,22 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart' as provider;
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:uniqtrack/app/app_state/auth/auth_notifier.dart';
-import 'package:uniqtrack/app/glue/add_or_edit_record_track/providers/add_or_edit_store_builder_provider.dart';
-import 'package:uniqtrack/app/glue/forgot_password/providers/forgot_password_provider.dart';
-import 'package:uniqtrack/app/glue/login/providers/login_store_builder_provider.dart';
-import 'package:uniqtrack/app/app_state/providers/auth_state_changes_use_case_provider.dart';
-import 'package:uniqtrack/app/glue/record_track/providers/record_track_store_builder_provider.dart';
-import 'package:uniqtrack/app/glue/register/providers/register_provider.dart';
+import 'package:uniqtrack/app/glue/accounts/providers/providers.dart';
+import 'package:uniqtrack/app/glue/tracks/providers/providers.dart';
 import 'package:uniqtrack/app/navigation/go_router_refresh_stream.dart';
+import 'package:uniqtrack/app/navigation/main_page.dart';
 import 'package:uniqtrack/app/navigation/paths/app_paths.dart';
-import 'package:uniqtrack/app/navigation/providers/navigation_store_provider.dart';
-import 'package:uniqtrack/app/navigation/providers/stores/nav_callback_store.dart';
-import 'package:uniqtrack/features/add_memory/presentation/pages/add_memory_page.dart';
-import 'package:uniqtrack/features/add_or_edit_record_track/presentation/pages/add_or_edit_record_track_page.dart';
-import 'package:uniqtrack/features/community/presentation/pages/community_page.dart';
-import 'package:uniqtrack/features/forgot_password/presentation/pages/forgot_password_page.dart';
-import 'package:uniqtrack/features/login/presentation%20/pages/login_page.dart';
-import 'package:uniqtrack/features/main/presentation/pages/main_page.dart';
-import 'package:uniqtrack/features/profile/presentation/pages/profile_page.dart';
-import 'package:uniqtrack/features/record_track/presentation/pages/record_track_page.dart';
-import 'package:uniqtrack/features/register/presentation/pages/register_page.dart';
-import 'package:uniqtrack/features/splash/presentation/splash_page.dart';
+import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
+import 'package:uniqtrack/features/accounts/presentation/forgot_password/pages/forgot_password_page.dart';
+import 'package:uniqtrack/features/accounts/presentation/login/pages/login_page.dart';
+import 'package:uniqtrack/features/accounts/presentation/profile/pages/profile_page.dart';
+import 'package:uniqtrack/features/accounts/presentation/register/pages/register_page.dart';
+import 'package:uniqtrack/features/placeholders/presentation/splash/pages/splash_page.dart';
+import 'package:uniqtrack/features/tracks/presentation/add_or_edit_edit_memory/pages/add_or_edit_memory_page.dart';
+import 'package:uniqtrack/features/tracks/presentation/add_or_edit_record_track/pages/add_or_edit_record_track_page.dart';
+import 'package:uniqtrack/features/tracks/presentation/community/pages/community_page.dart';
+import 'package:uniqtrack/features/tracks/presentation/photo_viewer/pages/photo_viewer_page.dart';
+import 'package:uniqtrack/features/tracks/presentation/record_track/pages/record_track_page.dart';
 
 part 'router.g.dart';
 
@@ -49,14 +46,13 @@ GoRouter router(RouterRef ref) {
   final mainNavigatorKey = ref.watch(mainNavigatorKeyProvider);
   final profileNavigatorKey = ref.watch(profileNavigatorKeyProvider);
 
-  // ignore: avoid_manual_providers_as_generated_provider_dependency
   final authState = ref.watch(authStateNotifierProvider);
-  final authStateChangesUseCase = ref.watch(authStateChangesUseCaseProvider);
+  final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
 
   return GoRouter(
     navigatorKey: rootNavigatorKey,
     initialLocation: AppPaths.splash.goRoute,
-    refreshListenable: GoRouterRefreshStream(authStateChangesUseCase.call()),
+    refreshListenable: GoRouterRefreshStream(userChangesUseCase.call()),
     redirect: (context, state) {
       final uri = state.uri.path;
 
@@ -104,16 +100,12 @@ GoRouter router(RouterRef ref) {
                   final navigateToTrackTracking =
                       () => context.push(AppPaths.community.tracking.path);
 
-                  final communityNavCallbackStore = CommunityNavCallbackStore(
+                  final navCallbackStore = CommunityNavCallbackStore(
                     navigateToTrackTracking: navigateToTrackTracking,
                   );
 
-                  return ProviderScope(
-                    overrides: [
-                      communityNavCallbackStoreProvider.overrideWithValue(
-                        communityNavCallbackStore,
-                      ),
-                    ],
+                  return provider.Provider.value(
+                    value: navCallbackStore,
                     child: CommunityPage(),
                   );
                 },
@@ -122,12 +114,17 @@ GoRouter router(RouterRef ref) {
                     parentNavigatorKey: rootNavigatorKey,
                     path: AppPaths.community.tracking.goRoute,
                     builder: (context, state) {
-                      final recordTrackNavCallback =
-                      RecordTrackNavCallbackStore(
+                      final navCallbackStore = RecordTrackNavCallbackStore(
                         navigateBack: context.pop,
-                        navigateToAddMemory: () {
-                          context.push(
-                              AppPaths.community.tracking.addMemoryPath.path);
+                        navigateToAddMemory: (data) {
+                          final addOrEditMemoryPath =
+                              AppPaths.community.tracking.addOrEditMemoryPath;
+                          final queryParameters =
+                              addOrEditMemoryPath.queryPosition(data);
+                          final path =
+                              addOrEditMemoryPath.query(queryParameters).path;
+
+                          return context.push(path);
                         },
                         navigateToAddRecordTrack: () {
                           final path =
@@ -135,51 +132,167 @@ GoRouter router(RouterRef ref) {
 
                           context.push(path);
                         },
+                        navigateToPhotoViewerByBytes: (data) {
+                          final photoViewer =
+                              AppPaths.community.tracking.photoViewer;
+                          final queryParameters = data != null
+                              ? photoViewer.queryBytes(data)
+                              : <String, String>{};
+
+                          final path = photoViewer.query(queryParameters).path;
+
+                          context.push(path);
+                        },
+                        navigateToPhotoViewerByLink: (data) {},
                       );
 
-                      return ProviderScope(
-                        overrides: [
-                          recordTrackNavCallbackStoreProvider
-                              .overrideWithValue(recordTrackNavCallback),
-                        ],
-                        child: Consumer(
-                          builder: (context, ref, child) {
-                            final storeBuilder =
-                            ref.watch(recordTrackStoreBuilderProvider);
+                      return Consumer(
+                        builder: (context, ref, child) {
+                          final storeBuilder =
+                              ref.watch(recordTrackStoreBuilderProvider);
 
-                            return provider.Provider(
-                              create: storeBuilder.create,
-                              child: RecordTrackPage(),
-                            );
-                          },
-                        ),
+                          return provider.MultiProvider(
+                            providers: [
+                              provider.Provider(create: storeBuilder.create),
+                              provider.Provider.value(value: navCallbackStore),
+                            ],
+                            child: RecordTrackPage(),
+                          );
+                        },
                       );
                     },
                     routes: [
                       GoRoute(
                         parentNavigatorKey: rootNavigatorKey,
-                        path: AppPaths.community.tracking.addMemoryPath.goRoute,
+                        path: AppPaths
+                            .community.tracking.addOrEditMemoryPath.goRoute,
                         builder: (context, state) {
-                          return AddMemoryPage();
+                          final path =
+                              AppPaths.community.tracking.addOrEditMemoryPath;
+                          final position = path.position(state);
+
+                          final navCallbackStore =
+                              AddOrEditMemoryNavCallbackStore(
+                            navigateBack: context.pop,
+                            navigateToPhotoViewerByBytes: (data) {
+                              final photoViewer = AppPaths.community.tracking
+                                  .addOrEditMemoryPath.photoViewer;
+
+                              final queryParameters =
+                                  photoViewer.queryBytes(data);
+
+                              final path =
+                                  photoViewer.query(queryParameters).path;
+
+                              context.push(path);
+                            },
+                            navigateToPhotoViewerByLink: (data) {},
+                            navigateWithResult: (memory) => context.pop(memory),
+                          );
+
+                          return Consumer(
+                            builder: (context, ref, child) {
+                              final storeBuilder = ref
+                                  .watch(addOrEditMemoryStoreBuilderProvider);
+
+                              return provider.MultiProvider(
+                                providers: [
+                                  provider.Provider.value(
+                                      value: navCallbackStore),
+                                  provider.Provider(
+                                    create: (context) => storeBuilder
+                                        .create(context, position: position),
+                                  ),
+                                ],
+                                child: AddOrEditMemoryPage(),
+                              );
+                            },
+                          );
                         },
+                        routes: [
+                          GoRoute(
+                            parentNavigatorKey: rootNavigatorKey,
+                            path: AppPaths.community.tracking
+                                .addOrEditMemoryPath.photoViewer.goRoute,
+                            builder: (context, state) {
+                              final photoViewerPath = AppPaths.community
+                                  .tracking.addOrEditMemoryPath.photoViewer;
+
+                              final linkArgument = photoViewerPath.link(state);
+                              final bytesData = photoViewerPath.bytes(state);
+
+                              return Consumer(builder: (context, ref, child) {
+                                final storeBuilder =
+                                    ref.watch(photoViewerStoreBuilderProvider);
+
+                                return provider.Provider(
+                                  create: (context) {
+                                    return storeBuilder.create(
+                                      context,
+                                      bytes: bytesData,
+                                      link: linkArgument,
+                                    );
+                                  },
+                                  child: PhotoViewerPage(),
+                                );
+                              });
+                            },
+                          ),
+                        ],
                       ),
                       GoRoute(
                         parentNavigatorKey: rootNavigatorKey,
                         path:
-                        AppPaths.community.tracking.addRecordTrack.goRoute,
+                            AppPaths.community.tracking.addRecordTrack.goRoute,
                         builder: (context, state) {
-                          return Consumer(
-                              builder: (context, ref, child) {
-                                final storeBuilder = ref.watch(
-                                    addOrEditRecordStoreBuilderProvider);
-
-                                return provider.Provider(
-                                  create: (context) => storeBuilder.create(
-                                      context),
-                                  child: AddOrEditRecordTrackPage(),
-                                );
-                              }
+                          final navCallbackStore =
+                              AddOrEditRecordTrackNavCallbackStore(
+                            navigateBack: context.pop,
                           );
+
+                          return Consumer(builder: (context, ref, child) {
+                            final storeBuilder =
+                                ref.watch(addOrEditRecordStoreBuilderProvider);
+
+                            return provider.MultiProvider(
+                              providers: [
+                                provider.Provider.value(
+                                    value: navCallbackStore),
+                                provider.Provider(
+                                  create: (context) =>
+                                      storeBuilder.create(context),
+                                ),
+                              ],
+                              child: AddOrEditRecordTrackPage(),
+                            );
+                          });
+                        },
+                      ),
+                      GoRoute(
+                        parentNavigatorKey: rootNavigatorKey,
+                        path: AppPaths.community.tracking.photoViewer.goRoute,
+                        builder: (context, state) {
+                          final photoViewerPath =
+                              AppPaths.community.tracking.photoViewer;
+
+                          final linkArgument = photoViewerPath.link(state);
+                          final bytesData = photoViewerPath.bytes(state);
+
+                          return Consumer(builder: (context, ref, child) {
+                            final storeBuilder =
+                                ref.watch(photoViewerStoreBuilderProvider);
+
+                            return provider.Provider(
+                              create: (context) {
+                                return storeBuilder.create(
+                                  context,
+                                  bytes: bytesData,
+                                  link: linkArgument,
+                                );
+                              },
+                              child: PhotoViewerPage(),
+                            );
+                          });
                         },
                       ),
                     ],
@@ -212,7 +325,7 @@ GoRouter router(RouterRef ref) {
         parentNavigatorKey: rootNavigatorKey,
         path: AppPaths.login.goRoute,
         builder: (context, state) {
-          final loginNavCallbackStore = LoginNavCallbackStore(
+          final navCallbackStore = LoginNavCallbackStore(
             navigateToRegister: () {
               final registerPath = AppPaths.login.register.path;
 
@@ -220,31 +333,28 @@ GoRouter router(RouterRef ref) {
             },
             navigateToForgotPassword: (email) {
               final queryParameters =
-              AppPaths.login.forgotPassword.queryEmail(email);
+                  AppPaths.login.forgotPassword.queryEmail(email);
               final forgotPath =
-              AppPaths.login.forgotPassword.query(queryParameters);
+                  AppPaths.login.forgotPassword.query(queryParameters);
 
               context.push(forgotPath.path);
             },
           );
 
-          return ProviderScope(
-            overrides: [
-              loginNavCallbackStoreProvider
-                  .overrideWithValue(loginNavCallbackStore),
-            ],
-            child: Consumer(
-              builder: (context, ref, child) {
-                final storeBuilder = ref.watch(loginStoreBuilderProvider);
+          return Consumer(
+            builder: (context, ref, child) {
+              final storeBuilder = ref.watch(loginStoreBuilderProvider);
 
-                return provider.Provider(
-                  create: storeBuilder.create,
-                  builder: (context, child) {
-                    return const LoginPage();
-                  },
-                );
-              },
-            ),
+              return provider.MultiProvider(
+                providers: [
+                  provider.Provider.value(value: navCallbackStore),
+                  provider.Provider(create: storeBuilder.create),
+                ],
+                builder: (context, child) {
+                  return const LoginPage();
+                },
+              );
+            },
           );
         },
         routes: [
@@ -252,26 +362,23 @@ GoRouter router(RouterRef ref) {
             parentNavigatorKey: rootNavigatorKey,
             path: AppPaths.login.register.goRoute,
             builder: (context, state) {
-              final registerNavCallbackStore = RegisterNavCallbackStore(
+              final navCallbackStore = RegisterNavCallbackStore(
                 navigateBack: context.pop,
               );
 
-              return ProviderScope(
-                overrides: [
-                  registerNavCallbackStoreProvider
-                      .overrideWithValue(registerNavCallbackStore),
-                ],
-                child: Consumer(
-                  builder: (context, ref, child) {
-                    final registerStoreBuilder =
-                    ref.watch(registerStoreBuilderProvider);
+              return Consumer(
+                builder: (context, ref, child) {
+                  final registerStoreBuilder =
+                      ref.watch(registerStoreBuilderProvider);
 
-                    return provider.Provider(
-                      create: registerStoreBuilder.create,
-                      child: const RegisterPage(),
-                    );
-                  },
-                ),
+                  return provider.MultiProvider(
+                    providers: [
+                      provider.Provider.value(value: navCallbackStore),
+                      provider.Provider(create: registerStoreBuilder.create),
+                    ],
+                    child: const RegisterPage(),
+                  );
+                },
               );
             },
           ),
@@ -279,32 +386,28 @@ GoRouter router(RouterRef ref) {
             parentNavigatorKey: rootNavigatorKey,
             path: AppPaths.login.forgotPassword.goRoute,
             builder: (context, state) {
-              final forgotPasswordNavCallbackStore =
-              ForgotPasswordNavCallbackStore(
+              final navCallbackStore = ForgotPasswordNavCallbackStore(
                 navigateBack: context.pop,
               );
 
-              final emailArgument = state.uri
-                  .queryParameters[AppPaths.login.forgotPassword.emailArgument];
+              final emailArgument = AppPaths.login.forgotPassword.email(state);
 
-              return ProviderScope(
-                overrides: [
-                  forgotPasswordNavCallbackStoreProvider.overrideWithValue(
-                    forgotPasswordNavCallbackStore,
-                  ),
-                ],
-                child: Consumer(
-                  builder: (context, WidgetRef ref, child) {
-                    final forgotPasswordStoreBuilder =
-                    ref.watch(forgotPasswordStoreProvider);
+              return Consumer(
+                builder: (context, WidgetRef ref, child) {
+                  final forgotPasswordStoreBuilder =
+                      ref.watch(forgotPasswordStoreProvider);
 
-                    return provider.Provider(
-                      create: (context) =>
-                          forgotPasswordStoreBuilder.create(emailArgument),
-                      child: ForgotPasswordPage(),
-                    );
-                  },
-                ),
+                  return provider.MultiProvider(
+                    providers: [
+                      provider.Provider.value(value: navCallbackStore),
+                      provider.Provider(
+                        create: (context) =>
+                            forgotPasswordStoreBuilder.create(emailArgument),
+                      ),
+                    ],
+                    child: ForgotPasswordPage(),
+                  );
+                },
               );
             },
           ),

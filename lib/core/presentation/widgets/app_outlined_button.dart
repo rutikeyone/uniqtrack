@@ -25,7 +25,10 @@ class AppOutlinedButton extends StatelessWidget {
       onPressed: onPressed,
       style: OutlinedButton.styleFrom(
         side: BorderSide(
-          color: context.colorScheme.onSecondary,
+          width: 1,
+          color: onPressed != null
+              ? context.colorScheme.onSecondary
+              : context.appColorsTheme.primaryDisableButtonColor,
         ),
         elevation: 0,
         shadowColor: Colors.transparent,
@@ -35,9 +38,14 @@ class AppOutlinedButton extends StatelessWidget {
         children: [
           Text(
             text,
-            style: textStyle ?? context.primaryTextTheme.labelLarge?.copyWith(
-              color: context.colorScheme.onSecondary,
-            ),
+            style: onPressed != null
+                ? textStyle ??
+                    context.primaryTextTheme.labelLarge?.copyWith(
+                      color: context.colorScheme.onSecondary,
+                    )
+                : context.primaryTextTheme.labelLarge?.copyWith(
+                    color: context.appColorsTheme.primaryDisableButtonColor,
+                  ),
           ),
           icon ?? const SizedBox.shrink(),
         ],

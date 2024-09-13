@@ -10,12 +10,15 @@ class AppColorsTheme extends ThemeExtension<AppColorsTheme> {
 
   final Color primaryTextHintColor;
 
+  final Color primaryDisableButtonColor;
+
   static final light = AppColorsTheme(
     primaryIconColor: AppColors.white,
     secondaryIconColor: AppColors.black,
     primaryButtonBorder: AppColors.sliderGray,
     secondaryButtonColor: AppColors.lavenderMist,
     primaryTextHintColor: AppColors.lavenderGray,
+    primaryDisableButtonColor: AppColors.paleGray,
   );
 
   const AppColorsTheme({
@@ -24,6 +27,7 @@ class AppColorsTheme extends ThemeExtension<AppColorsTheme> {
     required this.primaryButtonBorder,
     required this.secondaryButtonColor,
     required this.primaryTextHintColor,
+    required this.primaryDisableButtonColor,
   });
 
   @override
@@ -32,6 +36,7 @@ class AppColorsTheme extends ThemeExtension<AppColorsTheme> {
     Color? secondaryIconColor,
     Color? primaryButtonBorder,
     Color? primaryTextHintColor,
+    Color? primaryDisableButtonColor,
   }) {
     return AppColorsTheme(
       primaryIconColor: primaryIconColor ?? this.primaryIconColor,
@@ -39,6 +44,8 @@ class AppColorsTheme extends ThemeExtension<AppColorsTheme> {
       primaryButtonBorder: primaryButtonBorder ?? this.primaryButtonBorder,
       secondaryButtonColor: secondaryIconColor ?? this.secondaryButtonColor,
       primaryTextHintColor: primaryTextHintColor ?? this.primaryTextHintColor,
+      primaryDisableButtonColor:
+          primaryDisableButtonColor ?? this.primaryDisableButtonColor,
     );
   }
 
@@ -65,6 +72,9 @@ class AppColorsTheme extends ThemeExtension<AppColorsTheme> {
       primaryTextHintColor: Color.lerp(
               this.primaryTextHintColor, other.primaryTextHintColor, t) ??
           this.primaryTextHintColor,
+      primaryDisableButtonColor: Color.lerp(
+              primaryDisableButtonColor, other.primaryDisableButtonColor, t) ??
+          this.primaryDisableButtonColor,
     );
   }
 }

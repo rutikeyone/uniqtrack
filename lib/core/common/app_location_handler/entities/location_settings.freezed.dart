@@ -140,8 +140,8 @@ class __$$AppLocationSettingsImplCopyWithImpl<$Res>
 
 class _$AppLocationSettingsImpl implements _AppLocationSettings {
   const _$AppLocationSettingsImpl(
-      {this.distanceFilter = 3,
-      this.intervalDuration = const Duration(seconds: 1),
+      {this.distanceFilter = 15,
+      this.intervalDuration = const Duration(seconds: 2),
       required this.notificationTitle,
       required this.notificationBody});
 

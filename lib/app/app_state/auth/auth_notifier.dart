@@ -1,21 +1,21 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:rxdart/rxdart.dart';
 import 'package:uniqtrack/app/app_state/auth/states/auth_state.dart';
-import 'package:uniqtrack/app/app_state/domain/auth_state_changes_use_case.dart';
-import 'package:uniqtrack/app/app_state/domain/entities/user.dart';
-import 'package:uniqtrack/app/app_state/domain/sign_out_use_case.dart';
-import 'package:uniqtrack/app/app_state/providers/auth_state_changes_use_case_provider.dart';
-import 'package:uniqtrack/app/app_state/providers/sign_out_use_case_provider.dart';
+import 'package:uniqtrack/app/glue/accounts/providers/providers.dart';
+import 'package:uniqtrack/features/accounts/domain/user_changes_use_case.dart';
+import 'package:uniqtrack/features/accounts/domain/sign_out_use_case.dart';
+import 'package:uniqtrack/features/accounts/domain/entities/entities.dart';
 
 final authStateNotifierProvider =
     StateNotifierProvider.autoDispose<AuthStateNotifier, AuthState>(
   (ref) {
-    final authStateChangesUseCase = ref.watch(authStateChangesUseCaseProvider);
+    final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
     final signOutUseCase = ref.watch(signOutUseCaseProvider);
 
     final authStateNotifier = AuthStateNotifier(
-      authStateChangesUseCase: authStateChangesUseCase,
+      userChangesUseCase: userChangesUseCase,
       signOutUseCase: signOutUseCase,
     );
 
@@ -23,22 +23,26 @@ final authStateNotifierProvider =
   },
 );
 
+final _initialState = const AuthState(
+  firstTime: true,
+  authStatus: AuthStatus.pending(),
+);
+
 class AuthStateNotifier extends StateNotifier<AuthState> {
   final SignOutUseCase _signOutUseCase;
   late final StreamSubscription<User?> _authStateChangesSubscription;
 
+  final BehaviorSubject<AuthState> _authStateBehaviourSubject;
+
   AuthStateNotifier({
-    required AuthStateChangesUseCase authStateChangesUseCase,
+    required UserChangesUseCase userChangesUseCase,
     required SignOutUseCase signOutUseCase,
   })  : _signOutUseCase = signOutUseCase,
-        super(
-          const AuthState(
-            firstTime: true,
-            authStatus: AuthStatus.pending(),
-          ),
-        ) {
+        _authStateBehaviourSubject = BehaviorSubject(),
+        super(_initialState) {
+    _authStateBehaviourSubject.add(_initialState);
     _authStateChangesSubscription =
-        authStateChangesUseCase.call().listen(_authStateChanged);
+        userChangesUseCase.call().listen(_authStateChanged);
   }
 
   void _authStateChanged(User? user) {
@@ -51,7 +55,10 @@ class AuthStateNotifier extends StateNotifier<AuthState> {
     );
 
     state = newState;
+    _authStateBehaviourSubject.add(newState);
   }
+
+  Stream<AuthState> listenAuthState() => _authStateBehaviourSubject.stream;
 
   void signOut() {
     _signOutUseCase.call();
@@ -59,6 +66,7 @@ class AuthStateNotifier extends StateNotifier<AuthState> {
 
   @override
   void dispose() {
+    _authStateBehaviourSubject.close();
     _authStateChangesSubscription.cancel();
     super.dispose();
   }

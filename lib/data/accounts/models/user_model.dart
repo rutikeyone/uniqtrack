@@ -1,9 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uniqtrack/data/accounts/converters/gender_converter.dart';
-import 'package:uniqtrack/data/accounts/models/gender_model.dart';
-
-part 'user_model.freezed.dart';
-part 'user_model.g.dart';
+part of 'models.dart';
 
 @freezed
 class UserModel with _$UserModel {

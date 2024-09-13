@@ -100,4 +100,8 @@ class AppStrings with _$AppStrings {
   const factory AppStrings.save() = _AppSaveString;
 
   const factory AppStrings.delete() = _AppDeleteString;
+
+  const factory AppStrings.deleteAndExit() = _AppDeleteAndExitString;
+
+  const factory AppStrings.toContinue() = _$AppToContinueString;
 }

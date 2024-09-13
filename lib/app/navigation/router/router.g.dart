@@ -56,7 +56,7 @@ final profileNavigatorKeyProvider =
 
 typedef ProfileNavigatorKeyRef
     = AutoDisposeProviderRef<GlobalKey<NavigatorState>>;
-String _$routerHash() => r'bca370815044818d1d2539fd37c0842a89279268';
+String _$routerHash() => r'150e5e3f6920f0710a069a63b8100daa83a716fc';
 
 /// See also [router].
 @ProviderFor(router)

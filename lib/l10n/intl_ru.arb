@@ -94,7 +94,16 @@
   "editMemory": "Редактировать воспоминание",
   "enterTrackName": "Введите название трека",
   "name": "Имя",
-  "comment": "Comment",
-  "enterYourComment": "Enter your comment",
-  "dontSave": "Don't save"
+  "comment": "Комментарий",
+  "enterYourComment": "Введите ваш комментарий",
+  "dontSave": "Не сохранять",
+  "deleteAndExit": "Удалить и выйти",
+  "addTrack": "Добавить трек",
+  "editTrack": "Редактировать трек",
+  "invalidTrackName": "Некорректное имя трека",
+  "invalidComment": "Некорректный комментарий",
+  "addPicture": "Добавить фотографию",
+  "invalidMemoryName": "Некорректное имя воспоминания",
+  "uploadPhotos": "Upload photos",
+  "edit": "Edit"
 }

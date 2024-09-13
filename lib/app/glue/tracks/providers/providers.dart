@@ -1,0 +1,22 @@
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:uniqtrack/app/factories/stores/store_factory_impl.dart';
+import 'package:uniqtrack/app/glue/tracks/factories/add_or_edit_memory_builder_impl.dart';
+import 'package:uniqtrack/app/glue/tracks/factories/add_or_edit_record_track_store_builder_impl.dart';
+import 'package:uniqtrack/app/glue/tracks/factories/photo_viewer_builder_impl.dart';
+import 'package:uniqtrack/app/glue/tracks/factories/record_track_store_builder_impl.dart';
+import 'package:uniqtrack/app/glue/tracks/mappers/position_mapper.dart';
+import 'package:uniqtrack/app/glue/tracks/repositories/choose_images_adapter_repository.dart';
+import 'package:uniqtrack/app/glue/tracks/repositories/record_track_adapter_repository.dart';
+import 'package:uniqtrack/core/common_impl/app_location_handler_impl.dart';
+import 'package:uniqtrack/data/images/providers/providers.dart';
+import 'package:uniqtrack/features/tracks/domain/repositories/choose_image_repository.dart';
+import 'package:uniqtrack/features/tracks/domain/repositories/record_track_repository.dart';
+import 'package:uniqtrack/features/tracks/presentation/add_or_edit_edit_memory/stores/add_or_edit_memory_store.dart';
+import 'package:uniqtrack/features/tracks/presentation/add_or_edit_record_track/stores/add_or_edit_record_track_store.dart';
+import 'package:uniqtrack/features/tracks/presentation/photo_viewer/stores/photo_viewer_store.dart';
+import 'package:uniqtrack/features/tracks/presentation/record_track/stores/record_track_store.dart';
+
+part 'store_builder_providers.dart';
+part 'mappers_provider.dart';
+part 'repositories_provider.dart';
+part 'providers.g.dart';

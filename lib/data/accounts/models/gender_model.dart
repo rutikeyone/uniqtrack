@@ -1,6 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-part 'gender_model.freezed.dart';
+part of 'models.dart';
 
 @immutable
 @freezed

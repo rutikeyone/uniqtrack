@@ -36,6 +36,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "В запросе должен быть указан URL-адрес продолжения"),
         "addMemory": MessageLookupByLibrary.simpleMessage("Add memory"),
+        "addPicture":
+            MessageLookupByLibrary.simpleMessage("Добавить фотографию"),
+        "addTrack": MessageLookupByLibrary.simpleMessage("Добавить трек"),
         "allow": MessageLookupByLibrary.simpleMessage("Разрешить"),
         "anAndroidPackageNameMustBeProvidedIfTheAndroid":
             MessageLookupByLibrary.simpleMessage(
@@ -55,7 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Проверьте свое интернет-соединение и повторите попытку"),
         "chooseFromTheLibrary":
             MessageLookupByLibrary.simpleMessage("Выбрать из галереи"),
-        "comment": MessageLookupByLibrary.simpleMessage("Comment"),
+        "comment": MessageLookupByLibrary.simpleMessage("Комментарий"),
         "community": MessageLookupByLibrary.simpleMessage("Сообщество"),
         "connectionTimeoutFailureOccurred":
             MessageLookupByLibrary.simpleMessage(
@@ -64,18 +67,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
         "delete": MessageLookupByLibrary.simpleMessage("Удалить"),
+        "deleteAndExit":
+            MessageLookupByLibrary.simpleMessage("Удалить и выйти"),
         "doYouWantToFinishRecordingTheTrack":
             MessageLookupByLibrary.simpleMessage(
                 "Вы хотите закончить запись трека?"),
-        "dontSave": MessageLookupByLibrary.simpleMessage("Don\'t save"),
+        "dontSave": MessageLookupByLibrary.simpleMessage("Не сохранять"),
+        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "editMemory":
             MessageLookupByLibrary.simpleMessage("Редактировать воспоминание"),
+        "editTrack": MessageLookupByLibrary.simpleMessage("Редактировать трек"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "Электронная почта уже используется"),
         "enterTrackName":
             MessageLookupByLibrary.simpleMessage("Введите название трека"),
         "enterYourComment":
-            MessageLookupByLibrary.simpleMessage("Enter your comment"),
+            MessageLookupByLibrary.simpleMessage("Введите ваш комментарий"),
         "enterYourEmail":
             MessageLookupByLibrary.simpleMessage("Введите вашу почту"),
         "enterYourFullName":
@@ -89,13 +96,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Забыли пароль?"),
         "image": MessageLookupByLibrary.simpleMessage("Изображение"),
+        "invalidComment":
+            MessageLookupByLibrary.simpleMessage("Некорректный комментарий"),
         "invalidCredential":
             MessageLookupByLibrary.simpleMessage("Неверные учетные данные"),
         "invalidEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Введите корректный адрес электронной почты"),
+        "invalidMemoryName": MessageLookupByLibrary.simpleMessage(
+            "Некорректное имя воспоминания"),
         "invalidName": MessageLookupByLibrary.simpleMessage("Некорректное имя"),
         "invalidPassword":
             MessageLookupByLibrary.simpleMessage("Некорректный пароль"),
+        "invalidTrackName":
+            MessageLookupByLibrary.simpleMessage("Некорректное имя трека"),
         "itIsImpossibleToStartRecording":
             MessageLookupByLibrary.simpleMessage("Невозможно начать запись"),
         "itIsNotPossibleToGetYourCurrentLocation":
@@ -162,6 +175,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Это необходимо для записи трекинга."),
         "trackingRecordNotificationTitle": MessageLookupByLibrary.simpleMessage(
             "Uniqtrack получает информацию о вашем местоположении"),
+        "uploadPhotos": MessageLookupByLibrary.simpleMessage("Upload photos"),
         "userHasBeenDisabled":
             MessageLookupByLibrary.simpleMessage("Пользователь был отключен"),
         "userNotFound":

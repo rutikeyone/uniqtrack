@@ -122,6 +122,8 @@ extension ContextExtension on BuildContext {
       attention: () => S.of(this).attention,
       save: () => S.of(this).save,
       delete: () => S.of(this).delete,
+      toContinue: () => S.of(this).toContinue,
+      deleteAndExit: () => S.of(this).deleteAndExit,
     );
   }
 }

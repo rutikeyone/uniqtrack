@@ -36,6 +36,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "A continue URL must be provided in the request"),
         "addMemory": MessageLookupByLibrary.simpleMessage("Add memory"),
+        "addPicture": MessageLookupByLibrary.simpleMessage("Add picture"),
+        "addTrack": MessageLookupByLibrary.simpleMessage("Add track"),
         "allow": MessageLookupByLibrary.simpleMessage("Allow"),
         "anAndroidPackageNameMustBeProvidedIfTheAndroid":
             MessageLookupByLibrary.simpleMessage(
@@ -64,11 +66,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewAccount":
             MessageLookupByLibrary.simpleMessage("Create New Account"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
+        "deleteAndExit":
+            MessageLookupByLibrary.simpleMessage("Delete and exit"),
         "doYouWantToFinishRecordingTheTrack":
             MessageLookupByLibrary.simpleMessage(
                 "Do you want to finish recording the track?"),
         "dontSave": MessageLookupByLibrary.simpleMessage("Don\'t save"),
+        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "editMemory": MessageLookupByLibrary.simpleMessage("Edit Memory"),
+        "editTrack": MessageLookupByLibrary.simpleMessage("Edit track"),
         "emailAlreadyInUse":
             MessageLookupByLibrary.simpleMessage("Email already in use"),
         "enterTrackName":
@@ -88,13 +94,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "image": MessageLookupByLibrary.simpleMessage("Image"),
+        "invalidComment":
+            MessageLookupByLibrary.simpleMessage("Invalid comment"),
         "invalidCredential":
             MessageLookupByLibrary.simpleMessage("Invalid credential"),
         "invalidEmailAddress":
             MessageLookupByLibrary.simpleMessage("Invalid email address"),
+        "invalidMemoryName":
+            MessageLookupByLibrary.simpleMessage("Invalid memory name"),
         "invalidName": MessageLookupByLibrary.simpleMessage("Invalid name"),
         "invalidPassword":
             MessageLookupByLibrary.simpleMessage("Invalid password"),
+        "invalidTrackName":
+            MessageLookupByLibrary.simpleMessage("Invalid track name"),
         "itIsImpossibleToStartRecording": MessageLookupByLibrary.simpleMessage(
             "It is impossible to start recording"),
         "itIsNotPossibleToGetYourCurrentLocation":
@@ -160,6 +172,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "This is necessary for tracking records"),
         "trackingRecordNotificationTitle": MessageLookupByLibrary.simpleMessage(
             "Uniqtrack receives information about your location"),
+        "uploadPhotos": MessageLookupByLibrary.simpleMessage("Upload photos"),
         "userHasBeenDisabled":
             MessageLookupByLibrary.simpleMessage("User has been disabled"),
         "userNotFound": MessageLookupByLibrary.simpleMessage("User not found"),

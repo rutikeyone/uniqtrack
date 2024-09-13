@@ -879,6 +879,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Delete and exit`
+  String get deleteAndExit {
+    return Intl.message(
+      'Delete and exit',
+      name: 'deleteAndExit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add track`
+  String get addTrack {
+    return Intl.message(
+      'Add track',
+      name: 'addTrack',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit track`
+  String get editTrack {
+    return Intl.message(
+      'Edit track',
+      name: 'editTrack',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid track name`
+  String get invalidTrackName {
+    return Intl.message(
+      'Invalid track name',
+      name: 'invalidTrackName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid comment`
+  String get invalidComment {
+    return Intl.message(
+      'Invalid comment',
+      name: 'invalidComment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add picture`
+  String get addPicture {
+    return Intl.message(
+      'Add picture',
+      name: 'addPicture',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid memory name`
+  String get invalidMemoryName {
+    return Intl.message(
+      'Invalid memory name',
+      name: 'invalidMemoryName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload photos`
+  String get uploadPhotos {
+    return Intl.message(
+      'Upload photos',
+      name: 'uploadPhotos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uniqtrack/app/app_state/domain/entities/user.dart';
+import 'package:uniqtrack/features/accounts/domain/entities/entities.dart';
 
 part 'auth_state.freezed.dart';
 

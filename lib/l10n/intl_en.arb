@@ -96,5 +96,14 @@
   "name": "Name",
   "comment": "Comment",
   "enterYourComment": "Enter your comment",
-  "dontSave": "Don't save"
+  "dontSave": "Don't save",
+  "deleteAndExit": "Delete and exit",
+  "addTrack": "Add track",
+  "editTrack": "Edit track",
+  "invalidTrackName": "Invalid track name",
+  "invalidComment": "Invalid comment",
+  "addPicture": "Add picture",
+  "invalidMemoryName": "Invalid memory name",
+  "uploadPhotos": "Upload photos",
+  "edit": "Edit"
 }

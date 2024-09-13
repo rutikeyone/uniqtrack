@@ -10,6 +10,7 @@ class AppPrimaryTextThemes {
       bodyMedium: AppTextStyles.body,
       bodySmall: AppTextStyles.bodySm,
       labelLarge: AppTextStyles.labelLg,
+      titleLarge: AppTextStyles.titleLg,
     );
   }
 }

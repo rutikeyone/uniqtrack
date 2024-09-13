@@ -7,7 +7,7 @@ part of 'common_ui_delegate_notifier.dart';
 // **************************************************************************
 
 String _$commonUIDelegateNotifierHash() =>
-    r'16a68dae5d6d16a2d196d1ad5a4fa3c52a7a9c1e';
+    r'0f52d32ce7a7066495f945791e7030ba77c27815';
 
 /// See also [CommonUIDelegateNotifier].
 @ProviderFor(CommonUIDelegateNotifier)

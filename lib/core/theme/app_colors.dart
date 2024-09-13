@@ -28,4 +28,10 @@ class AppColors {
   static const sliderGray = Color(0xffC1C1C1);
 
   static const lavenderGray = Color(0xffBBBCC0);
+
+  static const paleGray = Color(0xffC3C6C6);
+
+  static const sliverGray = Color(0xffC1C1C1);
+
+  static const lightSlateGray = Color(0xffA1A2A5);
 }

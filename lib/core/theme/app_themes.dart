@@ -25,7 +25,7 @@ class AppThemes {
       inputDecorationTheme: AppInputDecorationThemes.light,
       colorScheme: AppColorSchemes.light,
       bottomSheetTheme: AppBottomSheetThemes.light,
-      dividerColor: AppColors.greyOlive,
+      dividerColor: AppColors.lightSlateGray,
       bottomNavigationBarTheme: AppBottomNavigationBarThemes.light,
       floatingActionButtonTheme: FloatingActionButtonThemes.light,
       iconTheme: AppIconThemes.light,

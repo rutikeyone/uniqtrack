@@ -6,6 +6,7 @@ class AppElevatedButton extends StatelessWidget {
   final String text;
   final Color? backgroundColor;
   final TextStyle? textStyle;
+  final Widget? prefixIcon;
   final Widget? icon;
   final VoidCallback? onPressed;
   final Color? borderColor;
@@ -17,6 +18,7 @@ class AppElevatedButton extends StatelessWidget {
     this.borderRadius,
     this.backgroundColor,
     this.textStyle,
+    this.prefixIcon,
     this.icon,
     this.borderColor,
     super.key,
@@ -34,7 +36,9 @@ class AppElevatedButton extends StatelessWidget {
         disabledBackgroundColor: disabledBackgroundColor,
         shape: RoundedRectangleBorder(
           borderRadius: borderRadius ?? BorderRadius.circular(AppDiments.dm12),
-          side: borderColor != null ? BorderSide(color: borderColor!) : BorderSide.none,
+          side: borderColor != null
+              ? BorderSide(color: borderColor!)
+              : BorderSide.none,
         ),
         elevation: 0,
         shadowColor: Colors.transparent,
@@ -44,6 +48,7 @@ class AppElevatedButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          prefixIcon ?? const SizedBox.shrink(),
           Text(
             text,
             style: textStyle ?? context.primaryTextTheme.labelLarge,

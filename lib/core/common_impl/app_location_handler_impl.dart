@@ -61,7 +61,7 @@ class AppLocationHandlerImpl implements AppLocationHandler {
     try {
       result = await Geolocator.getCurrentPosition(
         timeLimit: duration,
-        desiredAccuracy: LocationAccuracy.best,
+        desiredAccuracy: LocationAccuracy.high,
       );
     } catch (e) {
       try {
@@ -98,14 +98,14 @@ class AppLocationHandlerImpl implements AppLocationHandler {
 
     if (isAndroid) {
       locationSettings = AndroidSettings(
-        accuracy: LocationAccuracy.bestForNavigation,
+        accuracy: LocationAccuracy.high,
         distanceFilter: settings.distanceFilter,
         intervalDuration: settings.intervalDuration,
         foregroundNotificationConfig: foregroundNotificationConfig,
       );
     } else if (isIOS || isMacOS) {
       locationSettings = AppleSettings(
-        accuracy: LocationAccuracy.bestForNavigation,
+        accuracy: LocationAccuracy.high,
         distanceFilter: settings.distanceFilter,
         pauseLocationUpdatesAutomatically: true,
         showBackgroundLocationIndicator: true,
@@ -113,7 +113,7 @@ class AppLocationHandlerImpl implements AppLocationHandler {
       );
     } else {
       locationSettings = LocationSettings(
-        accuracy: LocationAccuracy.bestForNavigation,
+        accuracy: LocationAccuracy.high,
         distanceFilter: settings.distanceFilter,
       );
     }

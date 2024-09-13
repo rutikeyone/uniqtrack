@@ -14,4 +14,6 @@ class IconsAssets {
   final pause = "$dir/ic_pause.svg";
   final stop = "$dir/ic_stop.svg";
   final delete = "$dir/ic_delete.svg";
+  final memory = "$dir/ic_memory.svg";
+  final memoryMap = "$dir/ic_memory.png";
 }

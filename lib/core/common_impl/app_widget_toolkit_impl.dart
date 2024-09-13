@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:uniqtrack/core/common/app_widget_toolkit.dart';
-import 'package:uniqtrack/data/accounts/providers/accounts_provider.dart';
+import 'package:uniqtrack/data/accounts/providers/providers.dart';
 import 'package:uniqtrack/generated/l10n.dart';
 import 'package:uuid/uuid.dart';
 

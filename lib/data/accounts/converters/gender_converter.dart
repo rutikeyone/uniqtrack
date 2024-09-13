@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:uniqtrack/data/accounts/models/gender_model.dart';
+import 'package:uniqtrack/data/accounts/models/models.dart';
 
 class GenderConverter
     implements JsonConverter<GenderModel?, Map<String, dynamic>?> {

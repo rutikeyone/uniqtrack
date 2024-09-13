@@ -18,6 +18,13 @@ class AppTextStyles {
     fontFamily: _montserrat,
   );
 
+  static final TextStyle titleLg = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+    color: AppColors.dartTeal,
+    fontFamily: _montserrat,
+  );
+
   static final hint = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.normal,

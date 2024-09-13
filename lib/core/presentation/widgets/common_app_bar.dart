@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 
 class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final VoidCallback navigateBack;
+  final VoidCallback? navigateBack;
 
   const CommonAppBar({
-    required this.navigateBack,
+    this.navigateBack,
     super.key,
   });
 
@@ -17,7 +18,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       scrolledUnderElevation: 0.0,
       leading: IconButton(
-        onPressed: navigateBack,
+        onPressed: navigateBack ?? context.pop,
         icon: Icon(
           Icons.arrow_back,
           size: AppDiments.dm24,

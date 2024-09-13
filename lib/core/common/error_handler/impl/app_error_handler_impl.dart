@@ -2,11 +2,19 @@ import 'dart:io';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:uniqtrack/core/common/error_handler/app_error_handler.dart';
 import 'package:uniqtrack/core/common/error_handler/logger.dart';
 import 'package:uniqtrack/core/common/error_handler/result_state.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/firebase_auth_constants.dart';
+
+part 'app_error_handler_impl.g.dart';
+
+@riverpod
+AppErrorHandler appErrorHandler(AppErrorHandlerRef ref) {
+  return const AppErrorHandlerImpl();
+}
 
 class AppErrorHandlerImpl implements AppErrorHandler {
   final Logger? _logger;

@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:app_settings/app_settings.dart';
 import 'package:flutter/foundation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -14,11 +12,8 @@ part 'common_ui_delegate_notifier.g.dart';
 @riverpod
 class CommonUIDelegateNotifier extends _$CommonUIDelegateNotifier
     implements CommonUIDelegate {
-  Timer? _timer;
-
   @override
   Activity<CommonUIActions>? build() {
-    _dispose();
     return null;
   }
 
@@ -49,30 +44,14 @@ class CommonUIDelegateNotifier extends _$CommonUIDelegateNotifier
     final action = Activity(hideLoader);
 
     state = action;
-
-    _timer?.cancel();
-    _timer = null;
   }
 
   @override
   void showLoader() {
-    final durationForHideLode = const Duration(seconds: 30);
-
     final showLoader = CommonUIActions.showLoader();
     final action = Activity(showLoader);
 
     state = action;
-
-    _timer?.cancel();
-    _timer = null;
-    _timer = Timer(durationForHideLode, hideLoader);
-  }
-
-  void _dispose() {
-    ref.onDispose(() {
-      _timer?.cancel();
-      _timer = null;
-    });
   }
 
   @override
