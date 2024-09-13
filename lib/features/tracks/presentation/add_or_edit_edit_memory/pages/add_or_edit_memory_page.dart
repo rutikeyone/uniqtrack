@@ -18,7 +18,7 @@ import 'package:uniqtrack/core/presentation/widgets/app_outlined_button.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_text_field.dart';
 import 'package:uniqtrack/core/presentation/widgets/image_bytes_tile.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
-import 'package:uniqtrack/features/accounts/domain/entities/entities.dart';
+import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/presentation/add_or_edit_edit_memory/stores/add_or_edit_memory_store.dart';
 import 'package:uniqtrack/features/tracks/presentation/add_or_edit_edit_memory/stores/states/add_or_edit_memory_actions.dart';
 import 'package:uniqtrack/generated/l10n.dart';

@@ -1,8 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-import 'position.dart';
-
-part 'position_data.freezed.dart';
+part of 'entities.dart';
 
 @freezed
 class PositionData with _$PositionData {

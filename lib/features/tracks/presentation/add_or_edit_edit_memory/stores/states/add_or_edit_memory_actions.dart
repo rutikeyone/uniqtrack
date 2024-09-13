@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uniqtrack/features/accounts/domain/entities/entities.dart';
+import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 
 part 'add_or_edit_memory_actions.freezed.dart';
 

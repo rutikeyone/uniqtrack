@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:uniqtrack/data/accounts/providers/providers.dart';
 import 'package:uniqtrack/features/accounts/domain/user_changes_use_case.dart';
 import 'package:uniqtrack/app/factories/stores/store_factory.dart';
 import 'package:uniqtrack/app/glue/accounts/providers/providers.dart';
@@ -15,13 +16,14 @@ import 'package:uniqtrack/features/accounts/domain/accounts_repository.dart';
 import 'package:uniqtrack/features/accounts/presentation/forgot_password/stores/forgot_password_store.dart';
 import 'package:uniqtrack/features/accounts/presentation/login/stores/login_store.dart';
 import 'package:uniqtrack/features/accounts/presentation/register/stores/register_store.dart';
-import 'package:uniqtrack/features/tracks/domain/entities/position.dart';
+import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/domain/repositories/choose_image_repository.dart';
 import 'package:uniqtrack/features/tracks/domain/repositories/record_track_repository.dart';
 import 'package:uniqtrack/features/tracks/presentation/add_or_edit_edit_memory/stores/add_or_edit_memory_store.dart';
 import 'package:uniqtrack/features/tracks/presentation/add_or_edit_record_track/stores/add_or_edit_record_track_store.dart';
 import 'package:uniqtrack/features/tracks/presentation/photo_viewer/stores/photo_viewer_store.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/stores/record_track_store.dart';
+import 'package:uuid/uuid.dart';
 
 part 'store_factory_impl.g.dart';
 
@@ -34,6 +36,7 @@ StoreFactory storeFactory(StoreFactoryRef ref) {
   final appLocationHandler = ref.watch(appLocationHandlerProvider);
   final chooseImagesRepository = ref.watch(chooseImageRepositoryProvider);
   final accountsRepository = ref.watch(accountsRepositoryProvider);
+  final uuid = ref.watch(uuidProvider);
 
   return StoreFactoryImpl(
     commonUIDelegate: commonUIDelegate,
@@ -43,6 +46,7 @@ StoreFactory storeFactory(StoreFactoryRef ref) {
     appLocationHandler: appLocationHandler,
     chooseImagesRepository: chooseImagesRepository,
     accountsRepository: accountsRepository,
+    uuid: uuid,
   );
 }
 
@@ -53,8 +57,10 @@ class StoreFactoryImpl implements StoreFactory {
   final AppLocationHandler _appLocationHandler;
   final ChooseImageRepository _addOrEditMemoryRepository;
   final RecordTrackRepository _recordTrackRepository;
+  final Uuid _uuid;
 
   const StoreFactoryImpl({
+    required Uuid uuid,
     required CommonUIDelegate commonUIDelegate,
     required AccountsRepository accountsRepository,
     required UserChangesUseCase userChangesUseCase,
@@ -62,7 +68,8 @@ class StoreFactoryImpl implements StoreFactory {
     required AppLocationHandler appLocationHandler,
     required ChooseImageRepository chooseImagesRepository,
     required RecordTrackRepository recordTrackRepository,
-  })  : _accountsRepository = accountsRepository,
+  })  : _uuid = uuid,
+        _accountsRepository = accountsRepository,
         _commonUIDelegate = commonUIDelegate,
         _authStateChangesUseCase = userChangesUseCase,
         _appLocationHandler = appLocationHandler,
@@ -118,6 +125,7 @@ class StoreFactoryImpl implements StoreFactory {
       addOrEditMemoryRepository: _addOrEditMemoryRepository,
       commonUIDelegate: _commonUIDelegate,
       position: position,
+      uuid: _uuid,
     );
   }
 

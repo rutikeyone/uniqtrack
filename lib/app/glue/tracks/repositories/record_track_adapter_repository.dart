@@ -2,7 +2,7 @@ import 'package:uniqtrack/app/glue/tracks/mappers/position_mapper.dart';
 import 'package:uniqtrack/core/common/app_location_handler/app_location_handler.dart';
 import 'package:uniqtrack/core/common/app_location_handler/entities/app_location_permission_result.dart';
 import 'package:uniqtrack/core/common/app_location_handler/entities/location_settings.dart';
-import 'package:uniqtrack/features/tracks/domain/entities/position.dart';
+import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/domain/repositories/record_track_repository.dart';
 
 class RecordTrackAdapterRepository implements RecordTrackRepository {

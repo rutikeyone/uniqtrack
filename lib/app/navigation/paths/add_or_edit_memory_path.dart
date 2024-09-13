@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:go_router_paths/go_router_paths.dart';
 import 'package:uniqtrack/app/navigation/paths/record_track_path.dart';
-import 'package:uniqtrack/features/tracks/domain/entities/position.dart';
+import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 
 import 'photo_viewer_path.dart';
 

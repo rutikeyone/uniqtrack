@@ -8,9 +8,9 @@ import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/validation/entities/comment.dart';
 import 'package:uniqtrack/core/common/validation/entities/memory_name.dart';
-import 'package:uniqtrack/features/accounts/domain/entities/entities.dart';
-import 'package:uniqtrack/features/tracks/domain/entities/position.dart';
+import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/domain/repositories/choose_image_repository.dart';
+import 'package:uuid/uuid.dart';
 
 import 'states/add_or_edit_memory_actions.dart';
 import 'states/add_or_edit_memory_mode_state.dart';
@@ -32,6 +32,7 @@ abstract class _AddOrEditMemoryStore with Store {
 
   final ChooseImageRepository _addOrEditMemoryRepository;
   final CommonUIDelegate _commonUIDelegate;
+  final Uuid _uuid;
 
   @observable
   AddOrEditMemoryModeState modeState;
@@ -65,11 +66,13 @@ abstract class _AddOrEditMemoryStore with Store {
   }
 
   _AddOrEditMemoryStore({
+    required Uuid uuid,
     required ChooseImageRepository addOrEditMemoryRepository,
     required CommonUIDelegate commonUIDelegate,
     required this.position,
   })  : _addOrEditMemoryRepository = addOrEditMemoryRepository,
         _commonUIDelegate = commonUIDelegate,
+        _uuid = uuid,
         modeState = AddOrEditMemoryModeState.add(),
         uploadPhotosModeState = UploadPhotosModeState.add(
           photos: [],
@@ -196,6 +199,7 @@ abstract class _AddOrEditMemoryStore with Store {
     );
 
     final memory = Memory(
+      id: _uuid.v1(),
       name: memoryName.value,
       comment: comment.value,
       uploadedPhotos: uploadedPhotos,

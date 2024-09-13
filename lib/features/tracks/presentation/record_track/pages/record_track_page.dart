@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -18,18 +19,15 @@ import 'package:uniqtrack/core/presentation/widgets/app_elevated_button.dart';
 import 'package:uniqtrack/core/presentation/widgets/common_app_bar.dart';
 import 'package:uniqtrack/core/presentation/widgets/map_controller_button.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
-import 'package:uniqtrack/features/accounts/domain/entities/entities.dart';
-import 'package:uniqtrack/features/tracks/domain/entities/position.dart';
-import 'package:uniqtrack/features/tracks/domain/entities/position_data.dart';
+import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/stores/record_track_store.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/stores/states/states.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/memory_details_bottom_sheet/memory_details_bottom_sheet.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/record_track_bottom_sheet/record_track_modal_bottom_sheet.dart';
 import 'package:uniqtrack/generated/l10n.dart';
 
-part '../widgets/record_track_button.dart';
-
 part '../widgets/record_map_buttons.dart';
+part '../widgets/record_track_button.dart';
 
 const _initialCenter = const LatLng(0, 0);
 const _initialCameraPosition = CameraPosition(target: _initialCenter);
@@ -383,8 +381,8 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     });
   }
 
-  void _hideDetailsRecordData() {
-    if (_bottomSheetRecordTrackShowed) {
+  void _hideDetailsRecordData(bool ignoreLimit) {
+    if (_bottomSheetRecordTrackShowed  || ignoreLimit) {
       _bottomSheetRecordTrackShowed = false;
       _bottomSheetRecordTrackController?.close();
       _bottomSheetRecordTrackController = null;
@@ -433,11 +431,12 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     context.read<RecordTrackNavCallbackStore>().navigateToAddRecordTrack();
   }
 
-  void _showMemoryDetails(Memory memory) {
+  void _showMemoryDetails(Memory memory, bool ignoreLimit) {
     final navCallbackStore = context.read<RecordTrackNavCallbackStore>();
     final duration = const Duration(milliseconds: 300);
 
-    if (!_bottomSheetRecordTrackShowed && !_bottomSheetMemoryShowed) {
+    if (!_bottomSheetRecordTrackShowed &&
+        (!_bottomSheetMemoryShowed || ignoreLimit)) {
       _bottomSheetMemoryShowed = true;
 
       Future.delayed(duration, () {

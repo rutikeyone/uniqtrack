@@ -11,9 +11,7 @@ import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/common_ui/cupertino_dialog_activity.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
-import 'package:uniqtrack/features/accounts/domain/entities/entities.dart';
-import 'package:uniqtrack/features/tracks/domain/entities/position.dart';
-import 'package:uniqtrack/features/tracks/domain/entities/position_data.dart';
+import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/domain/repositories/record_track_repository.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/stores/states/record_track_bottom_sheet_state.dart';
 
@@ -375,16 +373,22 @@ abstract class _RecordTrackStore with Store {
   void showMemoryDetails(Memory memory) {
     trackRecordStatusState.mapOrNull(
       recording: (state) {
-        final duration = const Duration(milliseconds: 150);
+        final ignoreLimit = bottomSheetState.maybeWhen(
+          memoryDetails: () => true,
+          orElse: () => false,
+        );
+        final duration = Duration(milliseconds: 150);
 
         final hideDetailsRecordingDataAction =
-            RecordTrackActions.hideDetailsRecordingData();
+            RecordTrackActions.hideDetailsRecordingData(
+                ignoreLimit: ignoreLimit);
         actions = Activity(hideDetailsRecordingDataAction);
         bottomSheetState = RecordTrackBottomSheetState.none();
 
         Future.delayed(duration, () {
-          final showMemoryDetailsAction =
-              RecordTrackActions.showMemoryDetails(memory: memory);
+          final showMemoryDetailsAction = RecordTrackActions.showMemoryDetails(
+              memory: memory, ignoreLimit: ignoreLimit);
+
           actions = Activity(showMemoryDetailsAction);
           bottomSheetState = RecordTrackBottomSheetState.memoryDetails();
         });

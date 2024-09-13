@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:go_router/go_router.dart';
 import 'package:go_router_paths/go_router_paths.dart';
-import 'package:uniqtrack/app/navigation/paths/add_or_edit_memory_path.dart';
 
 class PhotoViewerPath extends Path<PhotoViewerPath> {
   final bytesArgument = "bytes";

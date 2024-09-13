@@ -1,5 +1,5 @@
 import 'package:uniqtrack/core/common/app_location_handler/entities/app_position.dart';
-import 'package:uniqtrack/features/tracks/domain/entities/position.dart';
+import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 
 abstract interface class PositionMapper {
   Position toPosition(AppPosition position);
