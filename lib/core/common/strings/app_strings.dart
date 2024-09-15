@@ -104,4 +104,8 @@ class AppStrings with _$AppStrings {
   const factory AppStrings.deleteAndExit() = _AppDeleteAndExitString;
 
   const factory AppStrings.toContinue() = _$AppToContinueString;
+
+  const factory AppStrings.userIsUnauthorized() = _$AppUserNotAuthorizedString;
+
+  const factory AppStrings.entryWasSuccessfullyAdded() = _$AppEntryWasSuccessfullyAddedString;
 }

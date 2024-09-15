@@ -13,6 +13,10 @@ class AuthState with _$AuthState {
 
   bool get isNotAuthenticated => authStatus is _AuthNotAuthStatus;
 
+  String? get userId => authStatus.whenOrNull(
+        authenticated: (user) => user.userId,
+      );
+
   const factory AuthState({
     required bool firstTime,
     required AuthStatus authStatus,

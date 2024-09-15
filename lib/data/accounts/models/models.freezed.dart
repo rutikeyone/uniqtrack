@@ -446,7 +446,7 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$UserModel {
-  String? get id => throw _privateConstructorUsedError;
+  String? get userId => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
   String? get photo => throw _privateConstructorUsedError;
@@ -469,7 +469,7 @@ abstract class $UserModelCopyWith<$Res> {
       _$UserModelCopyWithImpl<$Res, UserModel>;
   @useResult
   $Res call(
-      {String? id,
+      {String? userId,
       String? name,
       String? email,
       String? photo,
@@ -493,16 +493,16 @@ class _$UserModelCopyWithImpl<$Res, $Val extends UserModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? userId = freezed,
     Object? name = freezed,
     Object? email = freezed,
     Object? photo = freezed,
     Object? gender = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
               as String?,
       name: freezed == name
           ? _value.name
@@ -547,7 +547,7 @@ abstract class _$$UserModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? id,
+      {String? userId,
       String? name,
       String? email,
       String? photo,
@@ -570,16 +570,16 @@ class __$$UserModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? userId = freezed,
     Object? name = freezed,
     Object? email = freezed,
     Object? photo = freezed,
     Object? gender = freezed,
   }) {
     return _then(_$UserModelImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
               as String?,
       name: freezed == name
           ? _value.name
@@ -605,7 +605,7 @@ class __$$UserModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$UserModelImpl with DiagnosticableTreeMixin implements _UserModel {
   const _$UserModelImpl(
-      {required this.id,
+      {required this.userId,
       required this.name,
       required this.email,
       required this.photo,
@@ -615,7 +615,7 @@ class _$UserModelImpl with DiagnosticableTreeMixin implements _UserModel {
       _$$UserModelImplFromJson(json);
 
   @override
-  final String? id;
+  final String? userId;
   @override
   final String? name;
   @override
@@ -628,7 +628,7 @@ class _$UserModelImpl with DiagnosticableTreeMixin implements _UserModel {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'UserModel(id: $id, name: $name, email: $email, photo: $photo, gender: $gender)';
+    return 'UserModel(userId: $userId, name: $name, email: $email, photo: $photo, gender: $gender)';
   }
 
   @override
@@ -636,7 +636,7 @@ class _$UserModelImpl with DiagnosticableTreeMixin implements _UserModel {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'UserModel'))
-      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('userId', userId))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('email', email))
       ..add(DiagnosticsProperty('photo', photo))
@@ -648,7 +648,7 @@ class _$UserModelImpl with DiagnosticableTreeMixin implements _UserModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UserModelImpl &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.userId, userId) || other.userId == userId) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.photo, photo) || other.photo == photo) &&
@@ -657,7 +657,8 @@ class _$UserModelImpl with DiagnosticableTreeMixin implements _UserModel {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, email, photo, gender);
+  int get hashCode =>
+      Object.hash(runtimeType, userId, name, email, photo, gender);
 
   /// Create a copy of UserModel
   /// with the given fields replaced by the non-null parameter values.
@@ -677,7 +678,7 @@ class _$UserModelImpl with DiagnosticableTreeMixin implements _UserModel {
 
 abstract class _UserModel implements UserModel {
   const factory _UserModel(
-      {required final String? id,
+      {required final String? userId,
       required final String? name,
       required final String? email,
       required final String? photo,
@@ -687,7 +688,7 @@ abstract class _UserModel implements UserModel {
       _$UserModelImpl.fromJson;
 
   @override
-  String? get id;
+  String? get userId;
   @override
   String? get name;
   @override

@@ -1,13 +1,24 @@
+// ignore_for_file: avoid_manual_providers_as_generated_provider_dependency
 part of 'providers.dart';
 
-@Riverpod(dependencies: [appLocationHandler, positionMapper])
+@Riverpod(dependencies: [appLocationHandler, positionMapper, trackMapper])
 RecordTrackRepository recordTrackRepository(RecordTrackRepositoryRef ref) {
   final appLocationHandler = ref.watch(appLocationHandlerProvider);
   final positionMapper = ref.watch(positionMapperProvider);
+  final trackMapper = ref.watch(trackMapperProvider);
+
+  final tracksDataRepository = ref.watch(tracksDataRepositoryProvider);
+  final accountsDataRepository = ref.watch(accountsDataRepositoryProvider);
+
+  final uuid = ref.watch(uuidProvider);
 
   return RecordTrackAdapterRepository(
     appLocationHandler: appLocationHandler,
     positionMapper: positionMapper,
+    trackMapper: trackMapper,
+    tracksDataRepository: tracksDataRepository,
+    accountsDataRepository: accountsDataRepository,
+    uuid: uuid,
   );
 }
 

@@ -979,6 +979,26 @@ class S {
       args: [],
     );
   }
+
+  /// `The user is unauthorized`
+  String get theUserIsUnauthorized {
+    return Intl.message(
+      'The user is unauthorized',
+      name: 'theUserIsUnauthorized',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The entry was successfully added`
+  String get theEntryWasSuccessfullyAdded {
+    return Intl.message(
+      'The entry was successfully added',
+      name: 'theEntryWasSuccessfullyAdded',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -151,6 +151,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "theContinueUrlProvidedInTheRequestIsInvalid":
             MessageLookupByLibrary.simpleMessage(
                 "The continue URL provided in the request is invalid"),
+        "theEntryWasSuccessfullyAdded": MessageLookupByLibrary.simpleMessage(
+            "The entry was successfully added"),
         "thePasswordHasBeenSentToTheSpecifiedEmailAddress":
             MessageLookupByLibrary.simpleMessage(
                 "The password has been sent to the specified email address."),
@@ -159,6 +161,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "theUserHasBeenSuccessfullyRegistered":
             MessageLookupByLibrary.simpleMessage(
                 "The user has been successfully registered"),
+        "theUserIsUnauthorized":
+            MessageLookupByLibrary.simpleMessage("The user is unauthorized"),
         "thereIsNoPermissionToDetermineTheUsersLocation":
             MessageLookupByLibrary.simpleMessage(
                 "There is no permission to determine the location."),

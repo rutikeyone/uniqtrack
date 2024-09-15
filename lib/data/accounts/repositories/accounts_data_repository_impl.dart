@@ -8,6 +8,7 @@ import 'package:uniqtrack/core/common/firebase_auth_constants.dart';
 import 'package:uniqtrack/data/accounts/models/models.dart';
 import 'package:uniqtrack/data/accounts/accounts_data_repository.dart';
 import 'package:uniqtrack/data/accounts/parameters/parameters.dart';
+import 'package:uniqtrack/data/tracks/models/models.dart';
 import 'package:uuid/uuid.dart';
 
 class AccountsDataRepositoryImpl implements AccountsDataRepository {
@@ -28,6 +29,113 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
         _firebaseStorage = firebaseStorage,
         _uuid = uuid,
         _firebaseFireStore = firebaseFireStore;
+
+  @override
+  Future<Either<AppError, void>> register(
+      RegisterDataParameters parameters) async {
+    final result = _appErrorHandler.handle(
+      () => _registerWithoutHandleError(parameters),
+    );
+
+    return result;
+  }
+
+  @override
+  Future<Either<AppError, void>> login(LoginDataParameters parameters) {
+    final result = _appErrorHandler.handle(
+      () {
+        return _loginWithoutHandleError(parameters);
+      },
+    );
+
+    return result;
+  }
+
+  @override
+  Future<Either<AppError, UserModel>> fetchUserByUid(String uid) async {
+    final result = _appErrorHandler.handle(
+      () {
+        return _fetchUser(uid);
+      },
+    );
+
+    return result;
+  }
+
+  @override
+  Stream<UserModel?> authStateChanges() {
+    return _firebaseAuth.authStateChanges().asyncMap(
+      (event) async {
+        final uid = event?.uid;
+        if (uid == null) {
+          return null;
+        }
+
+        final fetchUserResult = await _appErrorHandler.handle(
+          () {
+            return _fetchUser(uid);
+          },
+        );
+
+        return fetchUserResult.fold(
+          (_) => null,
+          (user) => user,
+        );
+      },
+    );
+  }
+
+  @override
+  Future<Either<AppError, void>> sendPasswordResetEmail({
+    required String email,
+  }) {
+    final result = _appErrorHandler.handle(() async {
+      final result = await _firebaseAuth.sendPasswordResetEmail(email: email);
+      return result;
+    });
+
+    return result;
+  }
+
+  @override
+  Future<Either<AppError, void>> signOut() {
+    final signOutResult = _appErrorHandler.handle(() async {
+      final result = _firebaseAuth.signOut();
+      return result;
+    });
+
+    return signOutResult;
+  }
+
+  @override
+  Future<Either<AppError, void>> saveMyRecordTrackData({
+    required TrackModel track,
+    required String id,
+  }) {
+    final result = _appErrorHandler.handle(
+      () => _saveMyRecordTrackData(track: track, id: id),
+    );
+
+    return result;
+  }
+
+  @override
+  Future<UserModel?> fetchCurrentUser() async {
+    final result = await _appErrorHandler.handle(
+      () async {
+        final currentUser = _firebaseAuth.currentUser;
+        final uid = currentUser?.uid;
+        if (uid == null) return null;
+        final user = await _fetchUser(uid);
+        return user;
+      },
+    );
+
+    return result.fold(
+      (_) => null,
+      (user) => user,
+    );
+  }
 
   Future<String> _register({
     required String email,
@@ -101,7 +209,7 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
     required String? photo,
   }) async {
     final user = UserModel(
-      id: uid,
+      userId: uid,
       name: parameters.name,
       email: parameters.email,
       photo: photo,
@@ -125,80 +233,16 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
     return userModel;
   }
 
-  @override
-  Future<Either<AppError, void>> register(
-      RegisterDataParameters parameters) async {
-    final result = _appErrorHandler.handle(
-      () => _registerWithoutHandleError(parameters),
-    );
-
-    return result;
-  }
-
-  @override
-  Future<Either<AppError, void>> login(LoginDataParameters parameters) {
-    final result = _appErrorHandler.handle(
-      () {
-        return _loginWithoutHandleError(parameters);
-      },
-    );
-
-    return result;
-  }
-
-  @override
-  Future<Either<AppError, UserModel>> fetchUser(String uid) async {
-    final result = _appErrorHandler.handle(
-      () {
-        return _fetchUser(uid);
-      },
-    );
-
-    return result;
-  }
-
-  @override
-  Stream<UserModel?> authStateChanges() {
-    return _firebaseAuth.authStateChanges().asyncMap(
-      (event) async {
-        final uid = event?.uid;
-        if (uid == null) {
-          return null;
-        }
-
-        final fetchUserResult = await _appErrorHandler.handle(
-          () {
-            return _fetchUser(uid);
-          },
-        );
-
-        return fetchUserResult.fold(
-          (_) => null,
-          (user) => user,
-        );
-      },
-    );
-  }
-
-  @override
-  Future<Either<AppError, void>> sendPasswordResetEmail({
-    required String email,
-  }) {
-    final result = _appErrorHandler.handle(() async {
-      final result = await _firebaseAuth.sendPasswordResetEmail(email: email);
-      return result;
-    });
-
-    return result;
-  }
-
-  @override
-  Future<Either<AppError, void>> signOut() {
-    final signOutResult = _appErrorHandler.handle(() async {
-      final result = _firebaseAuth.signOut();
-      return result;
-    });
-
-    return signOutResult;
+  Future<void> _saveMyRecordTrackData({
+    required TrackModel track,
+    required String id,
+  }) async {
+    final json = track.toJson();
+    final collection = _firebaseFireStore
+        .collection(FirebaseAuthConstants.userCollections)
+        .doc(id)
+        .collection(FirebaseAuthConstants.myRecordTracks);
+    final doc = collection.doc(track.id ?? '0');
+    doc.set(json);
   }
 }

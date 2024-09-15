@@ -81,8 +81,10 @@ class AppErrorHandlerImpl implements AppErrorHandler {
           const FirebaseErrorCategory.invalidContinueUri(),
         FirebaseAuthConstants.missingIOSBundleId =>
           const FirebaseErrorCategory.missingIOSBundleId(),
-        FirebaseAuthConstants.missingContinueUri => const FirebaseErrorCategory.missingContinueUri(),
-        FirebaseAuthConstants.missingAndroidPkgName => const FirebaseErrorCategory.missingAndroidPkgName(),
+        FirebaseAuthConstants.missingContinueUri =>
+          const FirebaseErrorCategory.missingContinueUri(),
+        FirebaseAuthConstants.missingAndroidPkgName =>
+          const FirebaseErrorCategory.missingAndroidPkgName(),
         _ => const FirebaseErrorCategory.base(),
       };
 
@@ -100,6 +102,8 @@ class AppErrorHandlerImpl implements AppErrorHandler {
       _sentStateLog(networkError);
 
       return const Left(networkError);
+    } on AppError catch (e) {
+      return Left(e);
     } catch (e) {
       const baseAppError = AppError.base();
 

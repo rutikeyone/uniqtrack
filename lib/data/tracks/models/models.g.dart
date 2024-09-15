@@ -62,26 +62,24 @@ _$TrackModelImpl _$$TrackModelImplFromJson(Map<String, dynamic> json) =>
     _$TrackModelImpl(
       id: json['id'] as String?,
       creatorId: json['creatorId'] as String?,
-      positions: (json['positions'] as List<dynamic>?)
-          ?.map((e) => PositionDataModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      positions: const ListPositionDataConverter()
+          .fromJson(json['positions'] as String?),
       distance: (json['distance'] as num?)?.toDouble(),
       duration: (json['duration'] as num?)?.toInt(),
       averageSpeed: (json['averageSpeed'] as num?)?.toDouble(),
       maxAltitude: (json['maxAltitude'] as num?)?.toDouble(),
-      memories: (json['memories'] as List<dynamic>?)
-          ?.map((e) => MemoryModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      memories: const ListMemoryModelConverter()
+          .fromJson(json['memories'] as String?),
     );
 
 Map<String, dynamic> _$$TrackModelImplToJson(_$TrackModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'creatorId': instance.creatorId,
-      'positions': instance.positions,
+      'positions': const ListPositionDataConverter().toJson(instance.positions),
       'distance': instance.distance,
       'duration': instance.duration,
       'averageSpeed': instance.averageSpeed,
       'maxAltitude': instance.maxAltitude,
-      'memories': instance.memories,
+      'memories': const ListMemoryModelConverter().toJson(instance.memories),
     };

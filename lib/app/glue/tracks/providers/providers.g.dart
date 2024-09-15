@@ -105,8 +105,67 @@ final positionMapperProvider = AutoDisposeProvider<PositionMapper>.internal(
 );
 
 typedef PositionMapperRef = AutoDisposeProviderRef<PositionMapper>;
+String _$positionDataMapperHash() =>
+    r'314234f5b6b6f1e9d869bd728d00933d26d5b069';
+
+/// See also [positionDataMapper].
+@ProviderFor(positionDataMapper)
+final positionDataMapperProvider =
+    AutoDisposeProvider<PositionDataMapper>.internal(
+  positionDataMapper,
+  name: r'positionDataMapperProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$positionDataMapperHash,
+  dependencies: <ProviderOrFamily>[positionMapperProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    positionMapperProvider,
+    ...?positionMapperProvider.allTransitiveDependencies
+  },
+);
+
+typedef PositionDataMapperRef = AutoDisposeProviderRef<PositionDataMapper>;
+String _$memoryMapperHash() => r'dfcee5888cbe686831e0dce7e725789358089817';
+
+/// See also [memoryMapper].
+@ProviderFor(memoryMapper)
+final memoryMapperProvider = AutoDisposeProvider<MemoryMapper>.internal(
+  memoryMapper,
+  name: r'memoryMapperProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$memoryMapperHash,
+  dependencies: <ProviderOrFamily>[positionMapperProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    positionMapperProvider,
+    ...?positionMapperProvider.allTransitiveDependencies
+  },
+);
+
+typedef MemoryMapperRef = AutoDisposeProviderRef<MemoryMapper>;
+String _$trackMapperHash() => r'64efe148c99f961beb519857d7ce97db99024854';
+
+/// See also [trackMapper].
+@ProviderFor(trackMapper)
+final trackMapperProvider = AutoDisposeProvider<TrackMapper>.internal(
+  trackMapper,
+  name: r'trackMapperProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$trackMapperHash,
+  dependencies: <ProviderOrFamily>[
+    memoryMapperProvider,
+    positionDataMapperProvider
+  ],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    memoryMapperProvider,
+    ...?memoryMapperProvider.allTransitiveDependencies,
+    positionDataMapperProvider,
+    ...?positionDataMapperProvider.allTransitiveDependencies
+  },
+);
+
+typedef TrackMapperRef = AutoDisposeProviderRef<TrackMapper>;
 String _$recordTrackRepositoryHash() =>
-    r'407fe1a4806fffa4c33f5a53d01495a3796a2bb4';
+    r'95e583e134b6e506314c7d72e14909332c3e17ab';
 
 /// See also [recordTrackRepository].
 @ProviderFor(recordTrackRepository)
@@ -119,13 +178,16 @@ final recordTrackRepositoryProvider =
       : _$recordTrackRepositoryHash,
   dependencies: <ProviderOrFamily>[
     appLocationHandlerProvider,
-    positionMapperProvider
+    positionMapperProvider,
+    trackMapperProvider
   ],
   allTransitiveDependencies: <ProviderOrFamily>{
     appLocationHandlerProvider,
     ...?appLocationHandlerProvider.allTransitiveDependencies,
     positionMapperProvider,
-    ...?positionMapperProvider.allTransitiveDependencies
+    ...?positionMapperProvider.allTransitiveDependencies,
+    trackMapperProvider,
+    ...?trackMapperProvider.allTransitiveDependencies
   },
 );
 

@@ -1,13 +1,12 @@
 import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
-import 'package:uniqtrack/features/tracks/domain/converters/memory_converter.dart';
-import 'package:uniqtrack/features/tracks/domain/converters/position_converter.dart';
-import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
+import 'package:flutter/services.dart';
+import 'package:json_annotation/json_annotation.dart';
+import 'package:uniqtrack/data/tracks/converters/position_model_converter.dart';
+import 'package:uniqtrack/data/tracks/models/models.dart';
 
-class MemoryConverterImpl implements MemoryConverter {
-  final PositionConverter _positionConverter;
-
+class MemoryModelConverterImpl
+    implements JsonConverter<MemoryModel?, Map<String, dynamic>?> {
   final _idArgument = 'id';
   final _nameArgument = 'name';
   final _commentArgument = 'comment';
@@ -15,13 +14,15 @@ class MemoryConverterImpl implements MemoryConverter {
   final _photosArgument = 'photos';
   final _positionArgument = 'position';
 
-  const MemoryConverterImpl({
-    required PositionConverter positionConverter,
-  }) : _positionConverter = positionConverter;
-
   @override
-  Memory? fromJson(Map<String, String> json) {
+  MemoryModel? fromJson(Map<String, dynamic>? json) {
+    final positionModelConverter = PositionModelConverterImpl();
+
     try {
+      if (json == null) {
+        return null;
+      }
+
       final id = json[_idArgument];
       final name = json[_nameArgument];
       final comment = json[_commentArgument];
@@ -58,11 +59,13 @@ class MemoryConverterImpl implements MemoryConverter {
               final data = jsonDecoded
                   ?.map((key, item) => MapEntry(key, item.toString()));
 
-              return data != null ? _positionConverter.fromJson(data) : null;
+              return data != null
+                  ? positionModelConverter.fromJson(data)
+                  : null;
             }.call()
           : null;
 
-      return Memory(
+      return MemoryModel(
         id: id,
         name: name,
         comment: comment,
@@ -76,7 +79,9 @@ class MemoryConverterImpl implements MemoryConverter {
   }
 
   @override
-  Map<String, String> toJson(Memory? object) {
+  Map<String, dynamic>? toJson(MemoryModel? object) {
+    final positionModelConverter = PositionModelConverterImpl();
+
     try {
       if (object == null) {
         return {};
@@ -129,7 +134,7 @@ class MemoryConverterImpl implements MemoryConverter {
       }
 
       if (position != null) {
-        final positionMap = _positionConverter.toJson(position);
+        final positionMap = positionModelConverter.toJson(position);
         final data = jsonEncode(positionMap);
 
         result.addAll({

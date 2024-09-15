@@ -87,6 +87,22 @@ mixin _$AddOrEditRecordTrackStore on _AddOrEditRecordTrackStore, Store {
     });
   }
 
+  late final _$actionsAtom =
+      Atom(name: '_AddOrEditRecordTrackStore.actions', context: context);
+
+  @override
+  Activity<AddOrEditRecordTrackActions>? get actions {
+    _$actionsAtom.reportRead();
+    return super.actions;
+  }
+
+  @override
+  set actions(Activity<AddOrEditRecordTrackActions>? value) {
+    _$actionsAtom.reportWrite(value, super.actions, () {
+      super.actions = value;
+    });
+  }
+
   late final _$memoriesAtom =
       Atom(name: '_AddOrEditRecordTrackStore.memories', context: context);
 
@@ -101,6 +117,14 @@ mixin _$AddOrEditRecordTrackStore on _AddOrEditRecordTrackStore, Store {
     _$memoriesAtom.reportWrite(value, super.memories, () {
       super.memories = value;
     });
+  }
+
+  late final _$saveAsyncAction =
+      AsyncAction('_AddOrEditRecordTrackStore.save', context: context);
+
+  @override
+  Future<void> save() {
+    return _$saveAsyncAction.run(() => super.save());
   }
 
   late final _$_AddOrEditRecordTrackStoreActionController =
@@ -123,17 +147,6 @@ mixin _$AddOrEditRecordTrackStore on _AddOrEditRecordTrackStore, Store {
         .startAction(name: '_AddOrEditRecordTrackStore.updateTrackName');
     try {
       return super.updateTrackName(value);
-    } finally {
-      _$_AddOrEditRecordTrackStoreActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
-  void save() {
-    final _$actionInfo = _$_AddOrEditRecordTrackStoreActionController
-        .startAction(name: '_AddOrEditRecordTrackStore.save');
-    try {
-      return super.save();
     } finally {
       _$_AddOrEditRecordTrackStoreActionController.endAction(_$actionInfo);
     }
@@ -168,6 +181,7 @@ modeState: ${modeState},
 comment: ${comment},
 trackName: ${trackName},
 statusMode: ${statusMode},
+actions: ${actions},
 memories: ${memories},
 canSave: ${canSave},
 state: ${state}

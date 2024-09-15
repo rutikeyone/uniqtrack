@@ -124,6 +124,8 @@ extension ContextExtension on BuildContext {
       delete: () => S.of(this).delete,
       toContinue: () => S.of(this).toContinue,
       deleteAndExit: () => S.of(this).deleteAndExit,
+      userIsUnauthorized: () => S.of(this).theUserIsUnauthorized,
+      entryWasSuccessfullyAdded: () => S.of(this).theEntryWasSuccessfullyAdded,
     );
   }
 }

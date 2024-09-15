@@ -9,7 +9,7 @@ class AddOrEditRecordTrackPath extends Path<AddOrEditRecordTrackPath> {
 
   Map<String, String> queryParameters({
     required Track track,
-    required AddOrEditRecordTrackConverter converter,
+    required AddOrEditRecordTrackArgsConverter converter,
   }) {
     final args = AddOrEditRecordTrackArgs(track: track);
 
@@ -18,7 +18,7 @@ class AddOrEditRecordTrackPath extends Path<AddOrEditRecordTrackPath> {
 
   AddOrEditRecordTrackArgs? arguments({
     required Map<String, String> parameters,
-    required AddOrEditRecordTrackConverter converter,
+    required AddOrEditRecordTrackArgsConverter converter,
   }) {
     return converter.fromJson(parameters);
   }

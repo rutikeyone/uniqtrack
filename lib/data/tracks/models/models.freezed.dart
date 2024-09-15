@@ -711,11 +711,13 @@ TrackModel _$TrackModelFromJson(Map<String, dynamic> json) {
 mixin _$TrackModel {
   String? get id => throw _privateConstructorUsedError;
   String? get creatorId => throw _privateConstructorUsedError;
+  @ListPositionDataConverter()
   List<PositionDataModel>? get positions => throw _privateConstructorUsedError;
   double? get distance => throw _privateConstructorUsedError;
   int? get duration => throw _privateConstructorUsedError;
   double? get averageSpeed => throw _privateConstructorUsedError;
   double? get maxAltitude => throw _privateConstructorUsedError;
+  @ListMemoryModelConverter()
   List<MemoryModel>? get memories => throw _privateConstructorUsedError;
 
   /// Serializes this TrackModel to a JSON map.
@@ -737,12 +739,12 @@ abstract class $TrackModelCopyWith<$Res> {
   $Res call(
       {String? id,
       String? creatorId,
-      List<PositionDataModel>? positions,
+      @ListPositionDataConverter() List<PositionDataModel>? positions,
       double? distance,
       int? duration,
       double? averageSpeed,
       double? maxAltitude,
-      List<MemoryModel>? memories});
+      @ListMemoryModelConverter() List<MemoryModel>? memories});
 }
 
 /// @nodoc
@@ -817,12 +819,12 @@ abstract class _$$TrackModelImplCopyWith<$Res>
   $Res call(
       {String? id,
       String? creatorId,
-      List<PositionDataModel>? positions,
+      @ListPositionDataConverter() List<PositionDataModel>? positions,
       double? distance,
       int? duration,
       double? averageSpeed,
       double? maxAltitude,
-      List<MemoryModel>? memories});
+      @ListMemoryModelConverter() List<MemoryModel>? memories});
 }
 
 /// @nodoc
@@ -890,12 +892,13 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
   const _$TrackModelImpl(
       {required this.id,
       required this.creatorId,
+      @ListPositionDataConverter()
       required final List<PositionDataModel>? positions,
       required this.distance,
       required this.duration,
       required this.averageSpeed,
       required this.maxAltitude,
-      required final List<MemoryModel>? memories})
+      @ListMemoryModelConverter() required final List<MemoryModel>? memories})
       : _positions = positions,
         _memories = memories;
 
@@ -908,6 +911,7 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
   final String? creatorId;
   final List<PositionDataModel>? _positions;
   @override
+  @ListPositionDataConverter()
   List<PositionDataModel>? get positions {
     final value = _positions;
     if (value == null) return null;
@@ -926,6 +930,7 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
   final double? maxAltitude;
   final List<MemoryModel>? _memories;
   @override
+  @ListMemoryModelConverter()
   List<MemoryModel>? get memories {
     final value = _memories;
     if (value == null) return null;
@@ -1008,11 +1013,13 @@ abstract class _TrackModel implements TrackModel {
   const factory _TrackModel(
       {required final String? id,
       required final String? creatorId,
+      @ListPositionDataConverter()
       required final List<PositionDataModel>? positions,
       required final double? distance,
       required final int? duration,
       required final double? averageSpeed,
       required final double? maxAltitude,
+      @ListMemoryModelConverter()
       required final List<MemoryModel>? memories}) = _$TrackModelImpl;
 
   factory _TrackModel.fromJson(Map<String, dynamic> json) =
@@ -1023,6 +1030,7 @@ abstract class _TrackModel implements TrackModel {
   @override
   String? get creatorId;
   @override
+  @ListPositionDataConverter()
   List<PositionDataModel>? get positions;
   @override
   double? get distance;
@@ -1033,6 +1041,7 @@ abstract class _TrackModel implements TrackModel {
   @override
   double? get maxAltitude;
   @override
+  @ListMemoryModelConverter()
   List<MemoryModel>? get memories;
 
   /// Create a copy of TrackModel

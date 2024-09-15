@@ -63,6 +63,8 @@ mixin _$AppStrings {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -111,6 +113,8 @@ mixin _$AppStrings {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -159,6 +163,8 @@ mixin _$AppStrings {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -234,6 +240,10 @@ mixin _$AppStrings {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -297,6 +307,9 @@ mixin _$AppStrings {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -359,6 +372,9 @@ mixin _$AppStrings {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -471,6 +487,8 @@ class _$AppErrorStringImpl implements _AppErrorString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return error();
   }
@@ -522,6 +540,8 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return error?.call();
   }
@@ -573,6 +593,8 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -654,6 +676,10 @@ class _$AppErrorStringImpl implements _AppErrorString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return error(this);
   }
@@ -720,6 +746,9 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return error?.call(this);
   }
@@ -785,6 +814,9 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -884,6 +916,8 @@ class _$AppOkayStringImpl implements _AppOkayString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return okay();
   }
@@ -935,6 +969,8 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return okay?.call();
   }
@@ -986,6 +1022,8 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -1067,6 +1105,10 @@ class _$AppOkayStringImpl implements _AppOkayString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return okay(this);
   }
@@ -1133,6 +1175,9 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return okay?.call(this);
   }
@@ -1198,6 +1243,9 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -1300,6 +1348,8 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return errorHasOccurred();
   }
@@ -1351,6 +1401,8 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return errorHasOccurred?.call();
   }
@@ -1402,6 +1454,8 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -1483,6 +1537,10 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return errorHasOccurred(this);
   }
@@ -1549,6 +1607,9 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return errorHasOccurred?.call(this);
   }
@@ -1614,6 +1675,9 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -1716,6 +1780,8 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return invalidEmail();
   }
@@ -1767,6 +1833,8 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return invalidEmail?.call();
   }
@@ -1818,6 +1886,8 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -1899,6 +1969,10 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return invalidEmail(this);
   }
@@ -1965,6 +2039,9 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return invalidEmail?.call(this);
   }
@@ -2030,6 +2107,9 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -2133,6 +2213,8 @@ class _$$AppEmailAlreadyInUseStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return emailAlreadyInUse();
   }
@@ -2184,6 +2266,8 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -2235,6 +2319,8 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -2316,6 +2402,10 @@ class _$$AppEmailAlreadyInUseStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return emailAlreadyInUse(this);
   }
@@ -2382,6 +2472,9 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -2447,6 +2540,9 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -2551,6 +2647,8 @@ class _$$AppOperationNotAllowedStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return operationNotAllowed();
   }
@@ -2602,6 +2700,8 @@ class _$$AppOperationNotAllowedStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return operationNotAllowed?.call();
   }
@@ -2653,6 +2753,8 @@ class _$$AppOperationNotAllowedStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -2734,6 +2836,10 @@ class _$$AppOperationNotAllowedStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return operationNotAllowed(this);
   }
@@ -2800,6 +2906,9 @@ class _$$AppOperationNotAllowedStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return operationNotAllowed?.call(this);
   }
@@ -2865,6 +2974,9 @@ class _$$AppOperationNotAllowedStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -2968,6 +3080,8 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return weakPassword();
   }
@@ -3019,6 +3133,8 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return weakPassword?.call();
   }
@@ -3070,6 +3186,8 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -3151,6 +3269,10 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return weakPassword(this);
   }
@@ -3217,6 +3339,9 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return weakPassword?.call(this);
   }
@@ -3282,6 +3407,9 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -3384,6 +3512,8 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return tooManyRequests();
   }
@@ -3435,6 +3565,8 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return tooManyRequests?.call();
   }
@@ -3486,6 +3618,8 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -3567,6 +3701,10 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return tooManyRequests(this);
   }
@@ -3633,6 +3771,9 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return tooManyRequests?.call(this);
   }
@@ -3698,6 +3839,9 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -3800,6 +3944,8 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return userTokenExpired();
   }
@@ -3851,6 +3997,8 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return userTokenExpired?.call();
   }
@@ -3902,6 +4050,8 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -3983,6 +4133,10 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return userTokenExpired(this);
   }
@@ -4049,6 +4203,9 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return userTokenExpired?.call(this);
   }
@@ -4114,6 +4271,9 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -4219,6 +4379,8 @@ class _$$AppNetworkRequestsFailedStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return networkRequestFailed();
   }
@@ -4270,6 +4432,8 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return networkRequestFailed?.call();
   }
@@ -4321,6 +4485,8 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -4402,6 +4568,10 @@ class _$$AppNetworkRequestsFailedStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return networkRequestFailed(this);
   }
@@ -4468,6 +4638,9 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return networkRequestFailed?.call(this);
   }
@@ -4533,6 +4706,9 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -4638,6 +4814,8 @@ class _$$AppNotInternetConnectionStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return notInternetConnection();
   }
@@ -4689,6 +4867,8 @@ class _$$AppNotInternetConnectionStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return notInternetConnection?.call();
   }
@@ -4740,6 +4920,8 @@ class _$$AppNotInternetConnectionStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (notInternetConnection != null) {
@@ -4821,6 +5003,10 @@ class _$$AppNotInternetConnectionStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return notInternetConnection(this);
   }
@@ -4887,6 +5073,9 @@ class _$$AppNotInternetConnectionStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return notInternetConnection?.call(this);
   }
@@ -4952,6 +5141,9 @@ class _$$AppNotInternetConnectionStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (notInternetConnection != null) {
@@ -5055,6 +5247,8 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return connectTimeout();
   }
@@ -5106,6 +5300,8 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return connectTimeout?.call();
   }
@@ -5157,6 +5353,8 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -5238,6 +5436,10 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return connectTimeout(this);
   }
@@ -5304,6 +5506,9 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return connectTimeout?.call(this);
   }
@@ -5369,6 +5574,9 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -5470,6 +5678,8 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return sendTimeout();
   }
@@ -5521,6 +5731,8 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return sendTimeout?.call();
   }
@@ -5572,6 +5784,8 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -5653,6 +5867,10 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return sendTimeout(this);
   }
@@ -5719,6 +5937,9 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return sendTimeout?.call(this);
   }
@@ -5784,6 +6005,9 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -5886,6 +6110,8 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return receiveTimeout();
   }
@@ -5937,6 +6163,8 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return receiveTimeout?.call();
   }
@@ -5988,6 +6216,8 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -6069,6 +6299,10 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return receiveTimeout(this);
   }
@@ -6135,6 +6369,9 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return receiveTimeout?.call(this);
   }
@@ -6200,6 +6437,9 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -6302,6 +6542,8 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return requestCancelled();
   }
@@ -6353,6 +6595,8 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return requestCancelled?.call();
   }
@@ -6404,6 +6648,8 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (requestCancelled != null) {
@@ -6485,6 +6731,10 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return requestCancelled(this);
   }
@@ -6551,6 +6801,9 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return requestCancelled?.call(this);
   }
@@ -6616,6 +6869,9 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (requestCancelled != null) {
@@ -6719,6 +6975,8 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return badCertificate();
   }
@@ -6770,6 +7028,8 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return badCertificate?.call();
   }
@@ -6821,6 +7081,8 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (badCertificate != null) {
@@ -6902,6 +7164,10 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return badCertificate(this);
   }
@@ -6968,6 +7234,9 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return badCertificate?.call(this);
   }
@@ -7033,6 +7302,9 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (badCertificate != null) {
@@ -7134,6 +7406,8 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return badResponse();
   }
@@ -7185,6 +7459,8 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return badResponse?.call();
   }
@@ -7236,6 +7512,8 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (badResponse != null) {
@@ -7317,6 +7595,10 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return badResponse(this);
   }
@@ -7383,6 +7665,9 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return badResponse?.call(this);
   }
@@ -7448,6 +7733,9 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (badResponse != null) {
@@ -7550,6 +7838,8 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return notification();
   }
@@ -7601,6 +7891,8 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return notification?.call();
   }
@@ -7652,6 +7944,8 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (notification != null) {
@@ -7733,6 +8027,10 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return notification(this);
   }
@@ -7799,6 +8097,9 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return notification?.call(this);
   }
@@ -7864,6 +8165,9 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (notification != null) {
@@ -7971,6 +8275,8 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return theUserHasBeenSuccessfullyRegistered();
   }
@@ -8022,6 +8328,8 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return theUserHasBeenSuccessfullyRegistered?.call();
   }
@@ -8073,6 +8381,8 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (theUserHasBeenSuccessfullyRegistered != null) {
@@ -8154,6 +8464,10 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return theUserHasBeenSuccessfullyRegistered(this);
   }
@@ -8220,6 +8534,9 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return theUserHasBeenSuccessfullyRegistered?.call(this);
   }
@@ -8285,6 +8602,9 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (theUserHasBeenSuccessfullyRegistered != null) {
@@ -8389,6 +8709,8 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return userDisabled();
   }
@@ -8440,6 +8762,8 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return userDisabled?.call();
   }
@@ -8491,6 +8815,8 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -8572,6 +8898,10 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return userDisabled(this);
   }
@@ -8638,6 +8968,9 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return userDisabled?.call(this);
   }
@@ -8703,6 +9036,9 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -8805,6 +9141,8 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return userNotFound();
   }
@@ -8856,6 +9194,8 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return userNotFound?.call();
   }
@@ -8907,6 +9247,8 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -8988,6 +9330,10 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return userNotFound(this);
   }
@@ -9054,6 +9400,9 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return userNotFound?.call(this);
   }
@@ -9119,6 +9468,9 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -9221,6 +9573,8 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return wrongPassword();
   }
@@ -9272,6 +9626,8 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return wrongPassword?.call();
   }
@@ -9323,6 +9679,8 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -9404,6 +9762,10 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return wrongPassword(this);
   }
@@ -9470,6 +9832,9 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return wrongPassword?.call(this);
   }
@@ -9535,6 +9900,9 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -9638,6 +10006,8 @@ class _$$AppInvalidCredentialStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return invalidCredential();
   }
@@ -9689,6 +10059,8 @@ class _$$AppInvalidCredentialStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return invalidCredential?.call();
   }
@@ -9740,6 +10112,8 @@ class _$$AppInvalidCredentialStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -9821,6 +10195,10 @@ class _$$AppInvalidCredentialStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return invalidCredential(this);
   }
@@ -9887,6 +10265,9 @@ class _$$AppInvalidCredentialStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return invalidCredential?.call(this);
   }
@@ -9952,6 +10333,9 @@ class _$$AppInvalidCredentialStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -10057,6 +10441,8 @@ class _$$AppUnathorizedContinueUriStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return unauthorizedContinueUri();
   }
@@ -10108,6 +10494,8 @@ class _$$AppUnathorizedContinueUriStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return unauthorizedContinueUri?.call();
   }
@@ -10159,6 +10547,8 @@ class _$$AppUnathorizedContinueUriStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (unauthorizedContinueUri != null) {
@@ -10240,6 +10630,10 @@ class _$$AppUnathorizedContinueUriStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return unauthorizedContinueUri(this);
   }
@@ -10306,6 +10700,9 @@ class _$$AppUnathorizedContinueUriStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return unauthorizedContinueUri?.call(this);
   }
@@ -10371,6 +10768,9 @@ class _$$AppUnathorizedContinueUriStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (unauthorizedContinueUri != null) {
@@ -10475,6 +10875,8 @@ class _$$AppInvalidContinueUriStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return invalidContinueUri();
   }
@@ -10526,6 +10928,8 @@ class _$$AppInvalidContinueUriStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return invalidContinueUri?.call();
   }
@@ -10577,6 +10981,8 @@ class _$$AppInvalidContinueUriStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (invalidContinueUri != null) {
@@ -10658,6 +11064,10 @@ class _$$AppInvalidContinueUriStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return invalidContinueUri(this);
   }
@@ -10724,6 +11134,9 @@ class _$$AppInvalidContinueUriStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return invalidContinueUri?.call(this);
   }
@@ -10789,6 +11202,9 @@ class _$$AppInvalidContinueUriStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (invalidContinueUri != null) {
@@ -10893,6 +11309,8 @@ class _$$AppMissingIOSBundleIdStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return missingIOSBundleId();
   }
@@ -10944,6 +11362,8 @@ class _$$AppMissingIOSBundleIdStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return missingIOSBundleId?.call();
   }
@@ -10995,6 +11415,8 @@ class _$$AppMissingIOSBundleIdStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (missingIOSBundleId != null) {
@@ -11076,6 +11498,10 @@ class _$$AppMissingIOSBundleIdStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return missingIOSBundleId(this);
   }
@@ -11142,6 +11568,9 @@ class _$$AppMissingIOSBundleIdStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return missingIOSBundleId?.call(this);
   }
@@ -11207,6 +11636,9 @@ class _$$AppMissingIOSBundleIdStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (missingIOSBundleId != null) {
@@ -11311,6 +11743,8 @@ class _$$AppMissingContinueUriStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return missingContinueUri();
   }
@@ -11362,6 +11796,8 @@ class _$$AppMissingContinueUriStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return missingContinueUri?.call();
   }
@@ -11413,6 +11849,8 @@ class _$$AppMissingContinueUriStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (missingContinueUri != null) {
@@ -11494,6 +11932,10 @@ class _$$AppMissingContinueUriStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return missingContinueUri(this);
   }
@@ -11560,6 +12002,9 @@ class _$$AppMissingContinueUriStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return missingContinueUri?.call(this);
   }
@@ -11625,6 +12070,9 @@ class _$$AppMissingContinueUriStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (missingContinueUri != null) {
@@ -11730,6 +12178,8 @@ class _$$AppMissingAndroidPkgNameStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return missingAndroidPkgName();
   }
@@ -11781,6 +12231,8 @@ class _$$AppMissingAndroidPkgNameStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return missingAndroidPkgName?.call();
   }
@@ -11832,6 +12284,8 @@ class _$$AppMissingAndroidPkgNameStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (missingAndroidPkgName != null) {
@@ -11913,6 +12367,10 @@ class _$$AppMissingAndroidPkgNameStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return missingAndroidPkgName(this);
   }
@@ -11979,6 +12437,9 @@ class _$$AppMissingAndroidPkgNameStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return missingAndroidPkgName?.call(this);
   }
@@ -12044,6 +12505,9 @@ class _$$AppMissingAndroidPkgNameStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (missingAndroidPkgName != null) {
@@ -12159,6 +12623,8 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress();
   }
@@ -12210,6 +12676,8 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress?.call();
   }
@@ -12261,6 +12729,8 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (thePasswordHasBeenSentToTheSpecifiedEmailAddress != null) {
@@ -12342,6 +12812,10 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress(this);
   }
@@ -12408,6 +12882,9 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress?.call(this);
   }
@@ -12473,6 +12950,9 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (thePasswordHasBeenSentToTheSpecifiedEmailAddress != null) {
@@ -12579,6 +13059,8 @@ class _$$AppNoPermissionToPerformStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return noPermissionToPerform();
   }
@@ -12630,6 +13112,8 @@ class _$$AppNoPermissionToPerformStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return noPermissionToPerform?.call();
   }
@@ -12681,6 +13165,8 @@ class _$$AppNoPermissionToPerformStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (noPermissionToPerform != null) {
@@ -12762,6 +13248,10 @@ class _$$AppNoPermissionToPerformStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return noPermissionToPerform(this);
   }
@@ -12828,6 +13318,9 @@ class _$$AppNoPermissionToPerformStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return noPermissionToPerform?.call(this);
   }
@@ -12893,6 +13386,9 @@ class _$$AppNoPermissionToPerformStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (noPermissionToPerform != null) {
@@ -12993,6 +13489,8 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return prohibit();
   }
@@ -13044,6 +13542,8 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return prohibit?.call();
   }
@@ -13095,6 +13595,8 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (prohibit != null) {
@@ -13176,6 +13678,10 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return prohibit(this);
   }
@@ -13242,6 +13748,9 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return prohibit?.call(this);
   }
@@ -13307,6 +13816,9 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (prohibit != null) {
@@ -13406,6 +13918,8 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return allow();
   }
@@ -13457,6 +13971,8 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return allow?.call();
   }
@@ -13508,6 +14024,8 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (allow != null) {
@@ -13589,6 +14107,10 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return allow(this);
   }
@@ -13655,6 +14177,9 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return allow?.call(this);
   }
@@ -13720,6 +14245,9 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (allow != null) {
@@ -13822,6 +14350,8 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return serviceDenied();
   }
@@ -13873,6 +14403,8 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return serviceDenied?.call();
   }
@@ -13924,6 +14456,8 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (serviceDenied != null) {
@@ -14005,6 +14539,10 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return serviceDenied(this);
   }
@@ -14071,6 +14609,9 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return serviceDenied?.call(this);
   }
@@ -14136,6 +14677,9 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (serviceDenied != null) {
@@ -14243,6 +14787,8 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return noPermissionDetermineUserLocation();
   }
@@ -14294,6 +14840,8 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return noPermissionDetermineUserLocation?.call();
   }
@@ -14345,6 +14893,8 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (noPermissionDetermineUserLocation != null) {
@@ -14426,6 +14976,10 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return noPermissionDetermineUserLocation(this);
   }
@@ -14492,6 +15046,9 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return noPermissionDetermineUserLocation?.call(this);
   }
@@ -14557,6 +15114,9 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (noPermissionDetermineUserLocation != null) {
@@ -14662,6 +15222,8 @@ class _$$AppCantStartRecordingStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return cantStartRecording();
   }
@@ -14713,6 +15275,8 @@ class _$$AppCantStartRecordingStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return cantStartRecording?.call();
   }
@@ -14764,6 +15328,8 @@ class _$$AppCantStartRecordingStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (cantStartRecording != null) {
@@ -14845,6 +15411,10 @@ class _$$AppCantStartRecordingStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return cantStartRecording(this);
   }
@@ -14911,6 +15481,9 @@ class _$$AppCantStartRecordingStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return cantStartRecording?.call(this);
   }
@@ -14976,6 +15549,9 @@ class _$$AppCantStartRecordingStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (cantStartRecording != null) {
@@ -15084,6 +15660,8 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return cantGetYourCurrentLocation();
   }
@@ -15135,6 +15713,8 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return cantGetYourCurrentLocation?.call();
   }
@@ -15186,6 +15766,8 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (cantGetYourCurrentLocation != null) {
@@ -15267,6 +15849,10 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return cantGetYourCurrentLocation(this);
   }
@@ -15333,6 +15919,9 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return cantGetYourCurrentLocation?.call(this);
   }
@@ -15398,6 +15987,9 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (cantGetYourCurrentLocation != null) {
@@ -15504,6 +16096,8 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return trackingRecordNotificationTitle();
   }
@@ -15555,6 +16149,8 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return trackingRecordNotificationTitle?.call();
   }
@@ -15606,6 +16202,8 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationTitle != null) {
@@ -15687,6 +16285,10 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return trackingRecordNotificationTitle(this);
   }
@@ -15753,6 +16355,9 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return trackingRecordNotificationTitle?.call(this);
   }
@@ -15818,6 +16423,9 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationTitle != null) {
@@ -15924,6 +16532,8 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return trackingRecordNotificationBody();
   }
@@ -15975,6 +16585,8 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return trackingRecordNotificationBody?.call();
   }
@@ -16026,6 +16638,8 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationBody != null) {
@@ -16107,6 +16721,10 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return trackingRecordNotificationBody(this);
   }
@@ -16173,6 +16791,9 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return trackingRecordNotificationBody?.call(this);
   }
@@ -16238,6 +16859,9 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationBody != null) {
@@ -16352,6 +16976,8 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion();
   }
@@ -16403,6 +17029,8 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion?.call();
   }
@@ -16454,6 +17082,8 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (doYouWantToFinishRecordingTheTrackQuestion != null) {
@@ -16535,6 +17165,10 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion(this);
   }
@@ -16601,6 +17235,9 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion?.call(this);
   }
@@ -16666,6 +17303,9 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (doYouWantToFinishRecordingTheTrackQuestion != null) {
@@ -16767,6 +17407,8 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return attention();
   }
@@ -16818,6 +17460,8 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return attention?.call();
   }
@@ -16869,6 +17513,8 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (attention != null) {
@@ -16950,6 +17596,10 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return attention(this);
   }
@@ -17016,6 +17666,9 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return attention?.call(this);
   }
@@ -17081,6 +17734,9 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (attention != null) {
@@ -17180,6 +17836,8 @@ class _$AppSaveStringImpl implements _AppSaveString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return save();
   }
@@ -17231,6 +17889,8 @@ class _$AppSaveStringImpl implements _AppSaveString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return save?.call();
   }
@@ -17282,6 +17942,8 @@ class _$AppSaveStringImpl implements _AppSaveString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (save != null) {
@@ -17363,6 +18025,10 @@ class _$AppSaveStringImpl implements _AppSaveString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return save(this);
   }
@@ -17429,6 +18095,9 @@ class _$AppSaveStringImpl implements _AppSaveString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return save?.call(this);
   }
@@ -17494,6 +18163,9 @@ class _$AppSaveStringImpl implements _AppSaveString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (save != null) {
@@ -17593,6 +18265,8 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return delete();
   }
@@ -17644,6 +18318,8 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return delete?.call();
   }
@@ -17695,6 +18371,8 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -17776,6 +18454,10 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return delete(this);
   }
@@ -17842,6 +18524,9 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return delete?.call(this);
   }
@@ -17907,6 +18592,9 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -18009,6 +18697,8 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return deleteAndExit();
   }
@@ -18060,6 +18750,8 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return deleteAndExit?.call();
   }
@@ -18111,6 +18803,8 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (deleteAndExit != null) {
@@ -18192,6 +18886,10 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return deleteAndExit(this);
   }
@@ -18258,6 +18956,9 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return deleteAndExit?.call(this);
   }
@@ -18323,6 +19024,9 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (deleteAndExit != null) {
@@ -18423,6 +19127,8 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
     required TResult Function() delete,
     required TResult Function() deleteAndExit,
     required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
   }) {
     return toContinue();
   }
@@ -18474,6 +19180,8 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
     TResult? Function()? delete,
     TResult? Function()? deleteAndExit,
     TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
   }) {
     return toContinue?.call();
   }
@@ -18525,6 +19233,8 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
     TResult Function()? delete,
     TResult Function()? deleteAndExit,
     TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (toContinue != null) {
@@ -18606,6 +19316,10 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
     required TResult Function(_AppDeleteString value) delete,
     required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
     required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
   }) {
     return toContinue(this);
   }
@@ -18672,6 +19386,9 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
     TResult? Function(_AppDeleteString value)? delete,
     TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
   }) {
     return toContinue?.call(this);
   }
@@ -18737,6 +19454,9 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
     TResult Function(_AppDeleteString value)? delete,
     TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
     TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
     required TResult orElse(),
   }) {
     if (toContinue != null) {
@@ -18748,4 +19468,873 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
 
 abstract class _$AppToContinueString implements AppStrings {
   const factory _$AppToContinueString() = _$$AppToContinueStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppUserNotAuthorizedStringImplCopyWith<$Res> {
+  factory _$$$AppUserNotAuthorizedStringImplCopyWith(
+          _$$AppUserNotAuthorizedStringImpl value,
+          $Res Function(_$$AppUserNotAuthorizedStringImpl) then) =
+      __$$$AppUserNotAuthorizedStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppUserNotAuthorizedStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$$AppUserNotAuthorizedStringImpl>
+    implements _$$$AppUserNotAuthorizedStringImplCopyWith<$Res> {
+  __$$$AppUserNotAuthorizedStringImplCopyWithImpl(
+      _$$AppUserNotAuthorizedStringImpl _value,
+      $Res Function(_$$AppUserNotAuthorizedStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppUserNotAuthorizedStringImpl
+    implements _$AppUserNotAuthorizedString {
+  const _$$AppUserNotAuthorizedStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.userIsUnauthorized()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppUserNotAuthorizedStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+    required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
+    required TResult Function() deleteAndExit,
+    required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
+  }) {
+    return userIsUnauthorized();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+    TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
+    TResult? Function()? deleteAndExit,
+    TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
+  }) {
+    return userIsUnauthorized?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
+    TResult Function()? deleteAndExit,
+    TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
+    required TResult orElse(),
+  }) {
+    if (userIsUnauthorized != null) {
+      return userIsUnauthorized();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+    required TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
+        doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
+    required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
+    required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
+  }) {
+    return userIsUnauthorized(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
+    TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+  }) {
+    return userIsUnauthorized?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
+    TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    required TResult orElse(),
+  }) {
+    if (userIsUnauthorized != null) {
+      return userIsUnauthorized(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppUserNotAuthorizedString implements AppStrings {
+  const factory _$AppUserNotAuthorizedString() =
+      _$$AppUserNotAuthorizedStringImpl;
+}
+
+/// @nodoc
+abstract class _$$$AppEntryWasSuccessfullyAddedStringImplCopyWith<$Res> {
+  factory _$$$AppEntryWasSuccessfullyAddedStringImplCopyWith(
+          _$$AppEntryWasSuccessfullyAddedStringImpl value,
+          $Res Function(_$$AppEntryWasSuccessfullyAddedStringImpl) then) =
+      __$$$AppEntryWasSuccessfullyAddedStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$AppEntryWasSuccessfullyAddedStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res,
+        _$$AppEntryWasSuccessfullyAddedStringImpl>
+    implements _$$$AppEntryWasSuccessfullyAddedStringImplCopyWith<$Res> {
+  __$$$AppEntryWasSuccessfullyAddedStringImplCopyWithImpl(
+      _$$AppEntryWasSuccessfullyAddedStringImpl _value,
+      $Res Function(_$$AppEntryWasSuccessfullyAddedStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$AppEntryWasSuccessfullyAddedStringImpl
+    implements _$AppEntryWasSuccessfullyAddedString {
+  const _$$AppEntryWasSuccessfullyAddedStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.entryWasSuccessfullyAdded()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$AppEntryWasSuccessfullyAddedStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+    required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
+    required TResult Function() deleteAndExit,
+    required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
+  }) {
+    return entryWasSuccessfullyAdded();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+    TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
+    TResult? Function()? deleteAndExit,
+    TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
+  }) {
+    return entryWasSuccessfullyAdded?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
+    TResult Function()? deleteAndExit,
+    TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
+    required TResult orElse(),
+  }) {
+    if (entryWasSuccessfullyAdded != null) {
+      return entryWasSuccessfullyAdded();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+    required TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
+        doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
+    required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
+    required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
+  }) {
+    return entryWasSuccessfullyAdded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
+    TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+  }) {
+    return entryWasSuccessfullyAdded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
+    TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    required TResult orElse(),
+  }) {
+    if (entryWasSuccessfullyAdded != null) {
+      return entryWasSuccessfullyAdded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$AppEntryWasSuccessfullyAddedString implements AppStrings {
+  const factory _$AppEntryWasSuccessfullyAddedString() =
+      _$$AppEntryWasSuccessfullyAddedStringImpl;
 }

@@ -8,7 +8,7 @@ part of 'models.dart';
 
 _$UserModelImpl _$$UserModelImplFromJson(Map<String, dynamic> json) =>
     _$UserModelImpl(
-      id: json['id'] as String?,
+      userId: json['userId'] as String?,
       name: json['name'] as String?,
       email: json['email'] as String?,
       photo: json['photo'] as String?,
@@ -18,7 +18,7 @@ _$UserModelImpl _$$UserModelImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$UserModelImplToJson(_$UserModelImpl instance) =>
     <String, dynamic>{
-      'id': instance.id,
+      'userId': instance.userId,
       'name': instance.name,
       'email': instance.email,
       'photo': instance.photo,

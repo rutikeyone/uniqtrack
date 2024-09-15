@@ -42,12 +42,12 @@ final photoViewerConverterProvider =
 
 typedef PhotoViewerConverterRef = AutoDisposeProviderRef<PhotoViewerConverter>;
 String _$addOrEditRecordTrackConverterHash() =>
-    r'73a7c8d545b73ccafe40f91027c8a3ed6385ce96';
+    r'1055274d23c84eb7843232c1c3b461427f07a0b0';
 
 /// See also [addOrEditRecordTrackConverter].
 @ProviderFor(addOrEditRecordTrackConverter)
 final addOrEditRecordTrackConverterProvider =
-    AutoDisposeProvider<AddOrEditRecordTrackConverter>.internal(
+    AutoDisposeProvider<AddOrEditRecordTrackArgsConverter>.internal(
   addOrEditRecordTrackConverter,
   name: r'addOrEditRecordTrackConverterProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
@@ -58,6 +58,24 @@ final addOrEditRecordTrackConverterProvider =
 );
 
 typedef AddOrEditRecordTrackConverterRef
-    = AutoDisposeProviderRef<AddOrEditRecordTrackConverter>;
+    = AutoDisposeProviderRef<AddOrEditRecordTrackArgsConverter>;
+String _$addOrEditMemoryArgsConverterHash() =>
+    r'1ce4f0b0c5726f645dae5a8e460d73eadfbbc098';
+
+/// See also [addOrEditMemoryArgsConverter].
+@ProviderFor(addOrEditMemoryArgsConverter)
+final addOrEditMemoryArgsConverterProvider =
+    AutoDisposeProvider<AddOrEditMemoryArgsConverter>.internal(
+  addOrEditMemoryArgsConverter,
+  name: r'addOrEditMemoryArgsConverterProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$addOrEditMemoryArgsConverterHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef AddOrEditMemoryArgsConverterRef
+    = AutoDisposeProviderRef<AddOrEditMemoryArgsConverter>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

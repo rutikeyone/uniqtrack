@@ -154,6 +154,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "theContinueUrlProvidedInTheRequestIsInvalid":
             MessageLookupByLibrary.simpleMessage(
                 "URL-адрес продолжения, указанный в запросе, является недопустимым"),
+        "theEntryWasSuccessfullyAdded": MessageLookupByLibrary.simpleMessage(
+            "Запись была успешно добавлена"),
         "thePasswordHasBeenSentToTheSpecifiedEmailAddress":
             MessageLookupByLibrary.simpleMessage(
                 "Пароль был отправлен на указанный адрес электронной почты."),
@@ -162,6 +164,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "theUserHasBeenSuccessfullyRegistered":
             MessageLookupByLibrary.simpleMessage(
                 "Пользователь успешно зарегистрирован"),
+        "theUserIsUnauthorized":
+            MessageLookupByLibrary.simpleMessage("Пользователь неавторизован"),
         "thereIsNoPermissionToDetermineTheUsersLocation":
             MessageLookupByLibrary.simpleMessage(
                 "Нет разрешения на определение местоположения."),

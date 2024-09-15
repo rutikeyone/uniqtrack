@@ -106,5 +106,7 @@
   "invalidMemoryName": "Invalid memory name",
   "uploadPhotos": "Upload photos",
   "edit": "Edit",
-  "memories": "Memories"
+  "memories": "Memories",
+  "theUserIsUnauthorized": "The user is unauthorized",
+  "theEntryWasSuccessfullyAdded": "The entry was successfully added"
 }

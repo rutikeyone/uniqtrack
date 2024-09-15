@@ -631,6 +631,8 @@ abstract class _PositionData implements PositionData {
 mixin _$Track {
   String? get id => throw _privateConstructorUsedError;
   String? get creatorId => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  String? get comment => throw _privateConstructorUsedError;
   List<PositionData>? get positions => throw _privateConstructorUsedError;
   double? get distance => throw _privateConstructorUsedError;
   int? get duration => throw _privateConstructorUsedError;
@@ -652,6 +654,8 @@ abstract class $TrackCopyWith<$Res> {
   $Res call(
       {String? id,
       String? creatorId,
+      String? name,
+      String? comment,
       List<PositionData>? positions,
       double? distance,
       int? duration,
@@ -677,6 +681,8 @@ class _$TrackCopyWithImpl<$Res, $Val extends Track>
   $Res call({
     Object? id = freezed,
     Object? creatorId = freezed,
+    Object? name = freezed,
+    Object? comment = freezed,
     Object? positions = freezed,
     Object? distance = freezed,
     Object? duration = freezed,
@@ -692,6 +698,14 @@ class _$TrackCopyWithImpl<$Res, $Val extends Track>
       creatorId: freezed == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      comment: freezed == comment
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
               as String?,
       positions: freezed == positions
           ? _value.positions
@@ -731,6 +745,8 @@ abstract class _$$TrackImplCopyWith<$Res> implements $TrackCopyWith<$Res> {
   $Res call(
       {String? id,
       String? creatorId,
+      String? name,
+      String? comment,
       List<PositionData>? positions,
       double? distance,
       int? duration,
@@ -754,6 +770,8 @@ class __$$TrackImplCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? creatorId = freezed,
+    Object? name = freezed,
+    Object? comment = freezed,
     Object? positions = freezed,
     Object? distance = freezed,
     Object? duration = freezed,
@@ -769,6 +787,14 @@ class __$$TrackImplCopyWithImpl<$Res>
       creatorId: freezed == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      comment: freezed == comment
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
               as String?,
       positions: freezed == positions
           ? _value._positions
@@ -804,6 +830,8 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
   const _$TrackImpl(
       {required this.id,
       required this.creatorId,
+      required this.name,
+      required this.comment,
       required final List<PositionData>? positions,
       required this.distance,
       required this.duration,
@@ -817,6 +845,10 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
   final String? id;
   @override
   final String? creatorId;
+  @override
+  final String? name;
+  @override
+  final String? comment;
   final List<PositionData>? _positions;
   @override
   List<PositionData>? get positions {
@@ -847,7 +879,7 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Track(id: $id, creatorId: $creatorId, positions: $positions, distance: $distance, duration: $duration, averageSpeed: $averageSpeed, maxAltitude: $maxAltitude, memories: $memories)';
+    return 'Track(id: $id, creatorId: $creatorId, name: $name, comment: $comment, positions: $positions, distance: $distance, duration: $duration, averageSpeed: $averageSpeed, maxAltitude: $maxAltitude, memories: $memories)';
   }
 
   @override
@@ -857,6 +889,8 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
       ..add(DiagnosticsProperty('type', 'Track'))
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('creatorId', creatorId))
+      ..add(DiagnosticsProperty('name', name))
+      ..add(DiagnosticsProperty('comment', comment))
       ..add(DiagnosticsProperty('positions', positions))
       ..add(DiagnosticsProperty('distance', distance))
       ..add(DiagnosticsProperty('duration', duration))
@@ -873,6 +907,8 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.creatorId, creatorId) ||
                 other.creatorId == creatorId) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.comment, comment) || other.comment == comment) &&
             const DeepCollectionEquality()
                 .equals(other._positions, _positions) &&
             (identical(other.distance, distance) ||
@@ -891,6 +927,8 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
       runtimeType,
       id,
       creatorId,
+      name,
+      comment,
       const DeepCollectionEquality().hash(_positions),
       distance,
       duration,
@@ -911,6 +949,8 @@ abstract class _Track implements Track {
   const factory _Track(
       {required final String? id,
       required final String? creatorId,
+      required final String? name,
+      required final String? comment,
       required final List<PositionData>? positions,
       required final double? distance,
       required final int? duration,
@@ -922,6 +962,10 @@ abstract class _Track implements Track {
   String? get id;
   @override
   String? get creatorId;
+  @override
+  String? get name;
+  @override
+  String? get comment;
   @override
   List<PositionData>? get positions;
   @override

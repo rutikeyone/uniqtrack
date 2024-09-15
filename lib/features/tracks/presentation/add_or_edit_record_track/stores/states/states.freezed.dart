@@ -591,3 +591,175 @@ abstract class _AddOrEditRecordTrackState extends AddOrEditRecordTrackState {
   _$$AddOrEditRecordTrackStateImplCopyWith<_$AddOrEditRecordTrackStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$AddOrEditRecordTrackActions {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() navigateBack,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? navigateBack,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? navigateBack,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AddOrEditRecordTrackNavigateBackAction value)
+        navigateBack,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AddOrEditRecordTrackNavigateBackAction value)?
+        navigateBack,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AddOrEditRecordTrackNavigateBackAction value)?
+        navigateBack,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AddOrEditRecordTrackActionsCopyWith<$Res> {
+  factory $AddOrEditRecordTrackActionsCopyWith(
+          AddOrEditRecordTrackActions value,
+          $Res Function(AddOrEditRecordTrackActions) then) =
+      _$AddOrEditRecordTrackActionsCopyWithImpl<$Res,
+          AddOrEditRecordTrackActions>;
+}
+
+/// @nodoc
+class _$AddOrEditRecordTrackActionsCopyWithImpl<$Res,
+        $Val extends AddOrEditRecordTrackActions>
+    implements $AddOrEditRecordTrackActionsCopyWith<$Res> {
+  _$AddOrEditRecordTrackActionsCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of AddOrEditRecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$AddOrEditRecordTrackNavigateBackActionImplCopyWith<$Res> {
+  factory _$$AddOrEditRecordTrackNavigateBackActionImplCopyWith(
+          _$AddOrEditRecordTrackNavigateBackActionImpl value,
+          $Res Function(_$AddOrEditRecordTrackNavigateBackActionImpl) then) =
+      __$$AddOrEditRecordTrackNavigateBackActionImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddOrEditRecordTrackNavigateBackActionImplCopyWithImpl<$Res>
+    extends _$AddOrEditRecordTrackActionsCopyWithImpl<$Res,
+        _$AddOrEditRecordTrackNavigateBackActionImpl>
+    implements _$$AddOrEditRecordTrackNavigateBackActionImplCopyWith<$Res> {
+  __$$AddOrEditRecordTrackNavigateBackActionImplCopyWithImpl(
+      _$AddOrEditRecordTrackNavigateBackActionImpl _value,
+      $Res Function(_$AddOrEditRecordTrackNavigateBackActionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddOrEditRecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AddOrEditRecordTrackNavigateBackActionImpl
+    implements _AddOrEditRecordTrackNavigateBackAction {
+  const _$AddOrEditRecordTrackNavigateBackActionImpl();
+
+  @override
+  String toString() {
+    return 'AddOrEditRecordTrackActions.navigateBack()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddOrEditRecordTrackNavigateBackActionImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() navigateBack,
+  }) {
+    return navigateBack();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? navigateBack,
+  }) {
+    return navigateBack?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? navigateBack,
+    required TResult orElse(),
+  }) {
+    if (navigateBack != null) {
+      return navigateBack();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AddOrEditRecordTrackNavigateBackAction value)
+        navigateBack,
+  }) {
+    return navigateBack(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AddOrEditRecordTrackNavigateBackAction value)?
+        navigateBack,
+  }) {
+    return navigateBack?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AddOrEditRecordTrackNavigateBackAction value)?
+        navigateBack,
+    required TResult orElse(),
+  }) {
+    if (navigateBack != null) {
+      return navigateBack(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddOrEditRecordTrackNavigateBackAction
+    implements AddOrEditRecordTrackActions {
+  const factory _AddOrEditRecordTrackNavigateBackAction() =
+      _$AddOrEditRecordTrackNavigateBackActionImpl;
+}

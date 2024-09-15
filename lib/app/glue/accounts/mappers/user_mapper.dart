@@ -22,7 +22,7 @@ class UserMapperImpl implements UserMapper {
         userGender != null ? _genderMapper.toGender(userGender) : null;
 
     return User(
-      id: userModel.id,
+      userId: userModel.userId,
       name: userModel.name,
       photo: userModel.photo,
       email: userModel.email,
@@ -38,7 +38,7 @@ class UserMapperImpl implements UserMapper {
         gender != null ? _genderMapper.toGenderModel(gender) : null;
 
     return UserModel(
-      id: user.id,
+      userId: user.userId,
       name: user.name,
       email: user.email,
       photo: user.photo,

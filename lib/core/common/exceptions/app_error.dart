@@ -34,6 +34,10 @@ class AppError with _$AppError {
     required NetworkErrorCategory category,
   }) = AppNetworkError;
 
+  const factory AppError.authentication({
+    required AuthenticationErrorCategory category,
+  }) = AppAuthenticationError;
+
   AppStrings header() {
     return const AppStrings.error();
   }
@@ -81,6 +85,11 @@ class AppError with _$AppError {
           permanentlyDenied: () => const AppStrings.noPermissionToPerform(),
         );
       },
+      authentication: (category) {
+        return category.when(
+          notAuth: () => AppStrings.userIsUnauthorized(),
+        );
+      },
     );
   }
 
@@ -110,5 +119,4 @@ class AppError with _$AppError {
       orElse: () => AppStrings.okay(),
     );
   }
-
 }

@@ -1,23 +1,23 @@
 part of 'args.dart';
 
 @riverpod
-AddOrEditRecordTrackConverter addOrEditRecordTrackConverter(
+AddOrEditRecordTrackArgsConverter addOrEditRecordTrackConverter(
     AddOrEditRecordTrackConverterRef ref) {
   final trackConverter = ref.watch(trackConverterProvider);
 
-  return AddOrEditRecordTrackConverterImpl(trackConverter: trackConverter);
+  return AddOrEditRecordTrackArgsConverterImpl(trackConverter: trackConverter);
 }
 
-abstract interface class AddOrEditRecordTrackConverter
+abstract interface class AddOrEditRecordTrackArgsConverter
     implements JsonConverter<AddOrEditRecordTrackArgs?, Map<String, String>> {}
 
-class AddOrEditRecordTrackConverterImpl
-    implements AddOrEditRecordTrackConverter {
+class AddOrEditRecordTrackArgsConverterImpl
+    implements AddOrEditRecordTrackArgsConverter {
   final TrackConverter _trackConverter;
 
   final _trackArgument = "track";
 
-  const AddOrEditRecordTrackConverterImpl({
+  const AddOrEditRecordTrackArgsConverterImpl({
     required TrackConverter trackConverter,
   }) : _trackConverter = trackConverter;
 

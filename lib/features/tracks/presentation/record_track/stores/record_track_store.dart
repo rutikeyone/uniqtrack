@@ -12,7 +12,7 @@ import 'package:uniqtrack/core/common/common_ui/cupertino_dialog_activity.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
-import 'package:uniqtrack/features/tracks/domain/repositories/record_track_repository.dart';
+import 'package:uniqtrack/features/tracks/domain/record_track_repository.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/stores/states/record_track_bottom_sheet_state.dart';
 
 import 'states/states.dart';
@@ -711,8 +711,6 @@ abstract class _RecordTrackStore with Store {
   Future<void> _saveAndFinishRecordTrack({bool closeDialog = false}) async {
     if (trackRecordStatusState.isWithoutRecording) return;
 
-    final duration = const Duration(milliseconds: 200);
-
     await trackRecordStatusState.maybeMap(
       recording: (state) async {
         final finishPosition = state.positions.isNotEmpty
@@ -727,6 +725,8 @@ abstract class _RecordTrackStore with Store {
         final track = Track(
           id: null,
           creatorId: null,
+          name: null,
+          comment: null,
           positions: positions,
           distance: state.distance,
           duration: state.duration,

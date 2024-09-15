@@ -17,6 +17,8 @@ class TrackConverterImpl implements TrackConverter {
   final _averageSpeedArgument = 'averageSpeed';
   final _maxAltitudeArgument = 'maxAltitude';
   final _memoriesArgument = 'memories';
+  final _nameArgument = "name";
+  final _commentArgument = "comment";
 
   const TrackConverterImpl({
     required PositionDataConverter positionDataConverter,
@@ -35,6 +37,8 @@ class TrackConverterImpl implements TrackConverter {
       final jsonAverageSpeed = json[_averageSpeedArgument];
       final jsonMaxAltitude = json[_maxAltitudeArgument];
       final jsonMemories = json[_memoriesArgument];
+      final name = json[_nameArgument];
+      final comment = json[_commentArgument];
 
       final positionsDataDecode = jsonPositionsData != null
           ? jsonDecode(jsonPositionsData) as List
@@ -78,6 +82,8 @@ class TrackConverterImpl implements TrackConverter {
 
       return Track(
         id: id,
+        name: name,
+        comment: comment,
         creatorId: creatorId,
         positions: positions,
         distance: distance,
@@ -102,6 +108,8 @@ class TrackConverterImpl implements TrackConverter {
 
       final id = object.id;
       final creatorId = object.creatorId;
+      final name = object.name;
+      final comment = object.comment;
       final positions = object.positions;
       final distance = object.distance;
       final duration = object.duration;
@@ -118,6 +126,18 @@ class TrackConverterImpl implements TrackConverter {
       if (creatorId != null) {
         result.addAll({
           _creatorIdArgument: creatorId,
+        });
+      }
+
+      if (name != null) {
+        result.addAll({
+          _nameArgument: name,
+        });
+      }
+
+      if (comment != null) {
+        result.addAll({
+          _commentArgument: comment,
         });
       }
 

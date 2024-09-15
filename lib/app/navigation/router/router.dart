@@ -99,7 +99,7 @@ GoRouter router(RouterRef ref) {
                 path: AppPaths.community.goRoute,
                 builder: (context, state) {
                   final navCallbackStore =
-                  NavCallbackStoreBuilder.createCommunityNavCallbackStore(
+                      NavCallbackStoreBuilder.createCommunityNavCallbackStore(
                     context: context,
                     recordTrackPath: AppPaths.community.tracking,
                   );
@@ -117,28 +117,29 @@ GoRouter router(RouterRef ref) {
                       return Consumer(
                         builder: (context, ref, child) {
                           final storeBuilder =
-                          ref.watch(recordTrackStoreBuilderProvider);
+                              ref.watch(recordTrackStoreBuilderProvider);
 
-                          final positionConverter =
-                          ref.watch(positionConverterProvider);
+                          final addOrEditMemoryArgsConverter =
+                              ref.watch(addOrEditMemoryArgsConverterProvider);
                           final photoViewerConverter =
-                          ref.watch(photoViewerConverterProvider);
+                              ref.watch(photoViewerConverterProvider);
                           final addOrEditRecordTrackConverter =
-                          ref.watch(addOrEditRecordTrackConverterProvider);
+                              ref.watch(addOrEditRecordTrackConverterProvider);
 
                           final navCallbackStore = NavCallbackStoreBuilder
                               .createRecordTrackNavCallbackStore(
                             context: context,
                             addOrEditMemoryPath:
-                            AppPaths.community.tracking.addOrEditMemoryPath,
+                                AppPaths.community.tracking.addOrEditMemoryPath,
                             addOrEditRecordTrackPath: AppPaths
                                 .community.tracking.addOrEditRecordTrack,
                             photoViewerPath:
-                            AppPaths.community.tracking.photoViewer,
-                            positionConverter: positionConverter,
+                                AppPaths.community.tracking.photoViewer,
                             photoViewerConverter: photoViewerConverter,
                             addOrEditRecordTrackConverter:
-                            addOrEditRecordTrackConverter,
+                                addOrEditRecordTrackConverter,
+                            addOrEditMemoryArgsConverter:
+                                addOrEditMemoryArgsConverter,
                           );
 
                           return provider.MultiProvider(
@@ -162,17 +163,19 @@ GoRouter router(RouterRef ref) {
                               final storeBuilder = ref
                                   .watch(addOrEditMemoryStoreBuilderProvider);
 
-                              final positionConverter =
-                              ref.watch(positionConverterProvider);
+                              final addOrEditMemoryArgsConverter = ref
+                                  .watch(addOrEditMemoryArgsConverterProvider);
 
                               final photoViewerConverter =
-                              ref.watch(photoViewerConverterProvider);
+                                  ref.watch(photoViewerConverterProvider);
 
                               final path = AppPaths
                                   .community.tracking.addOrEditMemoryPath;
 
-                              final position =
-                              path.arguments(state, positionConverter);
+                              final args = path.arguments(
+                                parameters: state.uri.queryParameters,
+                                converter: addOrEditMemoryArgsConverter,
+                              );
 
                               final navCallbackStore = NavCallbackStoreBuilder
                                   .createAddOrEditMemoryNavCallbackStore(
@@ -187,10 +190,10 @@ GoRouter router(RouterRef ref) {
                                   provider.Provider.value(
                                       value: navCallbackStore),
                                   provider.Provider(
-                                    create: (context) =>
-                                        storeBuilder
-                                            .create(
-                                            context, position: position),
+                                    create: (context) => storeBuilder.create(
+                                      context,
+                                      position: args?.position,
+                                    ),
                                   ),
                                 ],
                                 child: AddOrEditMemoryPage(),
@@ -206,10 +209,10 @@ GoRouter router(RouterRef ref) {
                             builder: (context, state) {
                               return Consumer(builder: (context, ref, child) {
                                 final storeBuilder =
-                                ref.watch(photoViewerStoreBuilderProvider);
+                                    ref.watch(photoViewerStoreBuilderProvider);
 
                                 final photoViewerConverter =
-                                ref.watch(photoViewerConverterProvider);
+                                    ref.watch(photoViewerConverterProvider);
 
                                 final photoViewerPath = AppPaths
                                     .community
@@ -244,26 +247,25 @@ GoRouter router(RouterRef ref) {
                         builder: (context, state) {
                           final navCallbackStore = NavCallbackStoreBuilder
                               .createAddOrEditRecordTrackNavCallbackStore(
-                              context: context);
+                                  context: context);
 
-                          final addOrEditRecordTrackConverter = ref.watch(
-                              addOrEditRecordTrackConverterProvider);
+                          final addOrEditRecordTrackConverter =
+                              ref.watch(addOrEditRecordTrackConverterProvider);
 
-                          final args = addOrEditRecordTrackConverter.fromJson(
-                              state.uri.queryParameters);
+                          final args = addOrEditRecordTrackConverter
+                              .fromJson(state.uri.queryParameters);
 
                           return Consumer(builder: (context, ref, child) {
                             final storeBuilder =
-                            ref.watch(addOrEditRecordStoreBuilderProvider);
+                                ref.watch(addOrEditRecordStoreBuilderProvider);
 
                             return provider.MultiProvider(
                               providers: [
                                 provider.Provider.value(
                                     value: navCallbackStore),
                                 provider.Provider(
-                                  create: (context) =>
-                                      storeBuilder.create(
-                                          context: context, track: args?.track),
+                                  create: (context) => storeBuilder.create(
+                                      context: context, track: args?.track),
                                 ),
                               ],
                               child: AddOrEditRecordTrackPage(),
@@ -277,9 +279,9 @@ GoRouter router(RouterRef ref) {
                         builder: (context, state) {
                           return Consumer(builder: (context, ref, child) {
                             final storeBuilder =
-                            ref.watch(photoViewerStoreBuilderProvider);
+                                ref.watch(photoViewerStoreBuilderProvider);
                             final photoViewerConverter =
-                            ref.watch(photoViewerConverterProvider);
+                                ref.watch(photoViewerConverterProvider);
 
                             final photoViewerPath =
                                 AppPaths.community.tracking.photoViewer;
@@ -338,7 +340,7 @@ GoRouter router(RouterRef ref) {
               final converter = ref.watch(forgotPasswordArgsConverterProvider);
 
               final navCallbackStore =
-              NavCallbackStoreBuilder.createLoginNavCallbackStore(
+                  NavCallbackStoreBuilder.createLoginNavCallbackStore(
                 context: context,
                 registerPath: AppPaths.login.register,
                 forgotPasswordPath: AppPaths.login.forgotPassword,
@@ -363,13 +365,13 @@ GoRouter router(RouterRef ref) {
             path: AppPaths.login.register.goRoute,
             builder: (context, state) {
               final navCallbackStore =
-              NavCallbackStoreBuilder.createRegisterNavCallbackStore(
-                  context);
+                  NavCallbackStoreBuilder.createRegisterNavCallbackStore(
+                      context);
 
               return Consumer(
                 builder: (context, ref, child) {
                   final registerStoreBuilder =
-                  ref.watch(registerStoreBuilderProvider);
+                      ref.watch(registerStoreBuilderProvider);
 
                   return provider.MultiProvider(
                     providers: [
@@ -388,7 +390,7 @@ GoRouter router(RouterRef ref) {
             builder: (context, state) {
               final path = AppPaths.login.forgotPassword;
               final navCallbackStore =
-              NavCallbackStoreBuilder.createForgotPasswordNavCallbackStore(
+                  NavCallbackStoreBuilder.createForgotPasswordNavCallbackStore(
                 path: path,
                 context: context,
               );
@@ -396,10 +398,10 @@ GoRouter router(RouterRef ref) {
               return Consumer(
                 builder: (context, WidgetRef ref, child) {
                   final forgotPasswordStoreBuilder =
-                  ref.watch(forgotPasswordStoreProvider);
+                      ref.watch(forgotPasswordStoreProvider);
 
                   final forgotPasswordArgsConverter =
-                  ref.watch(forgotPasswordArgsConverterProvider);
+                      ref.watch(forgotPasswordArgsConverterProvider);
 
                   final queryParameters = state.uri.queryParameters;
                   final args = path.arguments(

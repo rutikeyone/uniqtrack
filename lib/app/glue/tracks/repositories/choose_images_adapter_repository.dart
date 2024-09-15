@@ -3,7 +3,7 @@ import 'dart:typed_data';
 import 'package:dartz/dartz.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/data/images/models/models.dart';
-import 'package:uniqtrack/features/tracks/domain/repositories/choose_image_repository.dart';
+import 'package:uniqtrack/features/tracks/domain/choose_image_repository.dart';
 
 class ChooseImagesAdapterRepository implements ChooseImageRepository {
   final Future<PermissionResultWithAppError<FileModel?>> Function()

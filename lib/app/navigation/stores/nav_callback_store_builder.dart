@@ -53,15 +53,17 @@ abstract class NavCallbackStoreBuilder {
     required AddOrEditMemoryPath addOrEditMemoryPath,
     required AddOrEditRecordTrackPath addOrEditRecordTrackPath,
     required PhotoViewerPath photoViewerPath,
-    required AddOrEditRecordTrackConverter addOrEditRecordTrackConverter,
-    required PositionConverter positionConverter,
+    required AddOrEditRecordTrackArgsConverter addOrEditRecordTrackConverter,
     required PhotoViewerConverter photoViewerConverter,
+    required AddOrEditMemoryArgsConverter addOrEditMemoryArgsConverter,
   }) {
     final navCallbackStore = RecordTrackNavCallbackStore(
       navigateBack: context.pop,
       navigateToAddMemory: (data) {
-        final queryParameters =
-            addOrEditMemoryPath.queryParameters(data, positionConverter);
+        final queryParameters = addOrEditMemoryPath.queryParameters(
+          position: data,
+          converter: addOrEditMemoryArgsConverter,
+        );
 
         final path = addOrEditMemoryPath.query(queryParameters).path;
 

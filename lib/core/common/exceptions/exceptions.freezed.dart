@@ -22,6 +22,8 @@ mixin _$AppError {
     required TResult Function(FirebaseErrorCategory category) firebase,
     required TResult Function(PermissionErrorCategory category) permission,
     required TResult Function(NetworkErrorCategory category) network,
+    required TResult Function(AuthenticationErrorCategory category)
+        authentication,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +32,7 @@ mixin _$AppError {
     TResult? Function(FirebaseErrorCategory category)? firebase,
     TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
+    TResult? Function(AuthenticationErrorCategory category)? authentication,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +41,7 @@ mixin _$AppError {
     TResult Function(FirebaseErrorCategory category)? firebase,
     TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
+    TResult Function(AuthenticationErrorCategory category)? authentication,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +51,7 @@ mixin _$AppError {
     required TResult Function(AppFirebaseError value) firebase,
     required TResult Function(AppPermissionError value) permission,
     required TResult Function(AppNetworkError value) network,
+    required TResult Function(AppAuthenticationError value) authentication,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +60,7 @@ mixin _$AppError {
     TResult? Function(AppFirebaseError value)? firebase,
     TResult? Function(AppPermissionError value)? permission,
     TResult? Function(AppNetworkError value)? network,
+    TResult? Function(AppAuthenticationError value)? authentication,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +69,7 @@ mixin _$AppError {
     TResult Function(AppFirebaseError value)? firebase,
     TResult Function(AppPermissionError value)? permission,
     TResult Function(AppNetworkError value)? network,
+    TResult Function(AppAuthenticationError value)? authentication,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -139,6 +146,8 @@ class _$AppBaseErrorImpl extends AppBaseError with DiagnosticableTreeMixin {
     required TResult Function(FirebaseErrorCategory category) firebase,
     required TResult Function(PermissionErrorCategory category) permission,
     required TResult Function(NetworkErrorCategory category) network,
+    required TResult Function(AuthenticationErrorCategory category)
+        authentication,
   }) {
     return base();
   }
@@ -150,6 +159,7 @@ class _$AppBaseErrorImpl extends AppBaseError with DiagnosticableTreeMixin {
     TResult? Function(FirebaseErrorCategory category)? firebase,
     TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
+    TResult? Function(AuthenticationErrorCategory category)? authentication,
   }) {
     return base?.call();
   }
@@ -161,6 +171,7 @@ class _$AppBaseErrorImpl extends AppBaseError with DiagnosticableTreeMixin {
     TResult Function(FirebaseErrorCategory category)? firebase,
     TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
+    TResult Function(AuthenticationErrorCategory category)? authentication,
     required TResult orElse(),
   }) {
     if (base != null) {
@@ -176,6 +187,7 @@ class _$AppBaseErrorImpl extends AppBaseError with DiagnosticableTreeMixin {
     required TResult Function(AppFirebaseError value) firebase,
     required TResult Function(AppPermissionError value) permission,
     required TResult Function(AppNetworkError value) network,
+    required TResult Function(AppAuthenticationError value) authentication,
   }) {
     return base(this);
   }
@@ -187,6 +199,7 @@ class _$AppBaseErrorImpl extends AppBaseError with DiagnosticableTreeMixin {
     TResult? Function(AppFirebaseError value)? firebase,
     TResult? Function(AppPermissionError value)? permission,
     TResult? Function(AppNetworkError value)? network,
+    TResult? Function(AppAuthenticationError value)? authentication,
   }) {
     return base?.call(this);
   }
@@ -198,6 +211,7 @@ class _$AppBaseErrorImpl extends AppBaseError with DiagnosticableTreeMixin {
     TResult Function(AppFirebaseError value)? firebase,
     TResult Function(AppPermissionError value)? permission,
     TResult Function(AppNetworkError value)? network,
+    TResult Function(AppAuthenticationError value)? authentication,
     required TResult orElse(),
   }) {
     if (base != null) {
@@ -307,6 +321,8 @@ class _$AppFirebaseErrorImpl extends AppFirebaseError
     required TResult Function(FirebaseErrorCategory category) firebase,
     required TResult Function(PermissionErrorCategory category) permission,
     required TResult Function(NetworkErrorCategory category) network,
+    required TResult Function(AuthenticationErrorCategory category)
+        authentication,
   }) {
     return firebase(category);
   }
@@ -318,6 +334,7 @@ class _$AppFirebaseErrorImpl extends AppFirebaseError
     TResult? Function(FirebaseErrorCategory category)? firebase,
     TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
+    TResult? Function(AuthenticationErrorCategory category)? authentication,
   }) {
     return firebase?.call(category);
   }
@@ -329,6 +346,7 @@ class _$AppFirebaseErrorImpl extends AppFirebaseError
     TResult Function(FirebaseErrorCategory category)? firebase,
     TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
+    TResult Function(AuthenticationErrorCategory category)? authentication,
     required TResult orElse(),
   }) {
     if (firebase != null) {
@@ -344,6 +362,7 @@ class _$AppFirebaseErrorImpl extends AppFirebaseError
     required TResult Function(AppFirebaseError value) firebase,
     required TResult Function(AppPermissionError value) permission,
     required TResult Function(AppNetworkError value) network,
+    required TResult Function(AppAuthenticationError value) authentication,
   }) {
     return firebase(this);
   }
@@ -355,6 +374,7 @@ class _$AppFirebaseErrorImpl extends AppFirebaseError
     TResult? Function(AppFirebaseError value)? firebase,
     TResult? Function(AppPermissionError value)? permission,
     TResult? Function(AppNetworkError value)? network,
+    TResult? Function(AppAuthenticationError value)? authentication,
   }) {
     return firebase?.call(this);
   }
@@ -366,6 +386,7 @@ class _$AppFirebaseErrorImpl extends AppFirebaseError
     TResult Function(AppFirebaseError value)? firebase,
     TResult Function(AppPermissionError value)? permission,
     TResult Function(AppNetworkError value)? network,
+    TResult Function(AppAuthenticationError value)? authentication,
     required TResult orElse(),
   }) {
     if (firebase != null) {
@@ -484,6 +505,8 @@ class _$AppPermissionErrorImpl extends AppPermissionError
     required TResult Function(FirebaseErrorCategory category) firebase,
     required TResult Function(PermissionErrorCategory category) permission,
     required TResult Function(NetworkErrorCategory category) network,
+    required TResult Function(AuthenticationErrorCategory category)
+        authentication,
   }) {
     return permission(category);
   }
@@ -495,6 +518,7 @@ class _$AppPermissionErrorImpl extends AppPermissionError
     TResult? Function(FirebaseErrorCategory category)? firebase,
     TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
+    TResult? Function(AuthenticationErrorCategory category)? authentication,
   }) {
     return permission?.call(category);
   }
@@ -506,6 +530,7 @@ class _$AppPermissionErrorImpl extends AppPermissionError
     TResult Function(FirebaseErrorCategory category)? firebase,
     TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
+    TResult Function(AuthenticationErrorCategory category)? authentication,
     required TResult orElse(),
   }) {
     if (permission != null) {
@@ -521,6 +546,7 @@ class _$AppPermissionErrorImpl extends AppPermissionError
     required TResult Function(AppFirebaseError value) firebase,
     required TResult Function(AppPermissionError value) permission,
     required TResult Function(AppNetworkError value) network,
+    required TResult Function(AppAuthenticationError value) authentication,
   }) {
     return permission(this);
   }
@@ -532,6 +558,7 @@ class _$AppPermissionErrorImpl extends AppPermissionError
     TResult? Function(AppFirebaseError value)? firebase,
     TResult? Function(AppPermissionError value)? permission,
     TResult? Function(AppNetworkError value)? network,
+    TResult? Function(AppAuthenticationError value)? authentication,
   }) {
     return permission?.call(this);
   }
@@ -543,6 +570,7 @@ class _$AppPermissionErrorImpl extends AppPermissionError
     TResult Function(AppFirebaseError value)? firebase,
     TResult Function(AppPermissionError value)? permission,
     TResult Function(AppNetworkError value)? network,
+    TResult Function(AppAuthenticationError value)? authentication,
     required TResult orElse(),
   }) {
     if (permission != null) {
@@ -662,6 +690,8 @@ class _$AppNetworkErrorImpl extends AppNetworkError
     required TResult Function(FirebaseErrorCategory category) firebase,
     required TResult Function(PermissionErrorCategory category) permission,
     required TResult Function(NetworkErrorCategory category) network,
+    required TResult Function(AuthenticationErrorCategory category)
+        authentication,
   }) {
     return network(category);
   }
@@ -673,6 +703,7 @@ class _$AppNetworkErrorImpl extends AppNetworkError
     TResult? Function(FirebaseErrorCategory category)? firebase,
     TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
+    TResult? Function(AuthenticationErrorCategory category)? authentication,
   }) {
     return network?.call(category);
   }
@@ -684,6 +715,7 @@ class _$AppNetworkErrorImpl extends AppNetworkError
     TResult Function(FirebaseErrorCategory category)? firebase,
     TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
+    TResult Function(AuthenticationErrorCategory category)? authentication,
     required TResult orElse(),
   }) {
     if (network != null) {
@@ -699,6 +731,7 @@ class _$AppNetworkErrorImpl extends AppNetworkError
     required TResult Function(AppFirebaseError value) firebase,
     required TResult Function(AppPermissionError value) permission,
     required TResult Function(AppNetworkError value) network,
+    required TResult Function(AppAuthenticationError value) authentication,
   }) {
     return network(this);
   }
@@ -710,6 +743,7 @@ class _$AppNetworkErrorImpl extends AppNetworkError
     TResult? Function(AppFirebaseError value)? firebase,
     TResult? Function(AppPermissionError value)? permission,
     TResult? Function(AppNetworkError value)? network,
+    TResult? Function(AppAuthenticationError value)? authentication,
   }) {
     return network?.call(this);
   }
@@ -721,6 +755,7 @@ class _$AppNetworkErrorImpl extends AppNetworkError
     TResult Function(AppFirebaseError value)? firebase,
     TResult Function(AppPermissionError value)? permission,
     TResult Function(AppNetworkError value)? network,
+    TResult Function(AppAuthenticationError value)? authentication,
     required TResult orElse(),
   }) {
     if (network != null) {
@@ -742,6 +777,193 @@ abstract class AppNetworkError extends AppError {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppNetworkErrorImplCopyWith<_$AppNetworkErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AppAuthenticationErrorImplCopyWith<$Res> {
+  factory _$$AppAuthenticationErrorImplCopyWith(
+          _$AppAuthenticationErrorImpl value,
+          $Res Function(_$AppAuthenticationErrorImpl) then) =
+      __$$AppAuthenticationErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({AuthenticationErrorCategory category});
+
+  $AuthenticationErrorCategoryCopyWith<$Res> get category;
+}
+
+/// @nodoc
+class __$$AppAuthenticationErrorImplCopyWithImpl<$Res>
+    extends _$AppErrorCopyWithImpl<$Res, _$AppAuthenticationErrorImpl>
+    implements _$$AppAuthenticationErrorImplCopyWith<$Res> {
+  __$$AppAuthenticationErrorImplCopyWithImpl(
+      _$AppAuthenticationErrorImpl _value,
+      $Res Function(_$AppAuthenticationErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppError
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? category = null,
+  }) {
+    return _then(_$AppAuthenticationErrorImpl(
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as AuthenticationErrorCategory,
+    ));
+  }
+
+  /// Create a copy of AppError
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AuthenticationErrorCategoryCopyWith<$Res> get category {
+    return $AuthenticationErrorCategoryCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AppAuthenticationErrorImpl extends AppAuthenticationError
+    with DiagnosticableTreeMixin {
+  const _$AppAuthenticationErrorImpl({required this.category}) : super._();
+
+  @override
+  final AuthenticationErrorCategory category;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AppError.authentication(category: $category)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AppError.authentication'))
+      ..add(DiagnosticsProperty('category', category));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AppAuthenticationErrorImpl &&
+            (identical(other.category, category) ||
+                other.category == category));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, category);
+
+  /// Create a copy of AppError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AppAuthenticationErrorImplCopyWith<_$AppAuthenticationErrorImpl>
+      get copyWith => __$$AppAuthenticationErrorImplCopyWithImpl<
+          _$AppAuthenticationErrorImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() base,
+    required TResult Function(FirebaseErrorCategory category) firebase,
+    required TResult Function(PermissionErrorCategory category) permission,
+    required TResult Function(NetworkErrorCategory category) network,
+    required TResult Function(AuthenticationErrorCategory category)
+        authentication,
+  }) {
+    return authentication(category);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? base,
+    TResult? Function(FirebaseErrorCategory category)? firebase,
+    TResult? Function(PermissionErrorCategory category)? permission,
+    TResult? Function(NetworkErrorCategory category)? network,
+    TResult? Function(AuthenticationErrorCategory category)? authentication,
+  }) {
+    return authentication?.call(category);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? base,
+    TResult Function(FirebaseErrorCategory category)? firebase,
+    TResult Function(PermissionErrorCategory category)? permission,
+    TResult Function(NetworkErrorCategory category)? network,
+    TResult Function(AuthenticationErrorCategory category)? authentication,
+    required TResult orElse(),
+  }) {
+    if (authentication != null) {
+      return authentication(category);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AppBaseError value) base,
+    required TResult Function(AppFirebaseError value) firebase,
+    required TResult Function(AppPermissionError value) permission,
+    required TResult Function(AppNetworkError value) network,
+    required TResult Function(AppAuthenticationError value) authentication,
+  }) {
+    return authentication(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AppBaseError value)? base,
+    TResult? Function(AppFirebaseError value)? firebase,
+    TResult? Function(AppPermissionError value)? permission,
+    TResult? Function(AppNetworkError value)? network,
+    TResult? Function(AppAuthenticationError value)? authentication,
+  }) {
+    return authentication?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AppBaseError value)? base,
+    TResult Function(AppFirebaseError value)? firebase,
+    TResult Function(AppPermissionError value)? permission,
+    TResult Function(AppNetworkError value)? network,
+    TResult Function(AppAuthenticationError value)? authentication,
+    required TResult orElse(),
+  }) {
+    if (authentication != null) {
+      return authentication(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AppAuthenticationError extends AppError {
+  const factory AppAuthenticationError(
+          {required final AuthenticationErrorCategory category}) =
+      _$AppAuthenticationErrorImpl;
+  const AppAuthenticationError._() : super._();
+
+  AuthenticationErrorCategory get category;
+
+  /// Create a copy of AppError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AppAuthenticationErrorImplCopyWith<_$AppAuthenticationErrorImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6946,4 +7168,178 @@ class _$NetworkBaseErrorCategoryImpl
 
 abstract class _NetworkBaseErrorCategory implements NetworkErrorCategory {
   const factory _NetworkBaseErrorCategory() = _$NetworkBaseErrorCategoryImpl;
+}
+
+/// @nodoc
+mixin _$AuthenticationErrorCategory {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() notAuth,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? notAuth,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? notAuth,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_NotAuthenticatedErrorCategory value) notAuth,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_NotAuthenticatedErrorCategory value)? notAuth,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_NotAuthenticatedErrorCategory value)? notAuth,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AuthenticationErrorCategoryCopyWith<$Res> {
+  factory $AuthenticationErrorCategoryCopyWith(
+          AuthenticationErrorCategory value,
+          $Res Function(AuthenticationErrorCategory) then) =
+      _$AuthenticationErrorCategoryCopyWithImpl<$Res,
+          AuthenticationErrorCategory>;
+}
+
+/// @nodoc
+class _$AuthenticationErrorCategoryCopyWithImpl<$Res,
+        $Val extends AuthenticationErrorCategory>
+    implements $AuthenticationErrorCategoryCopyWith<$Res> {
+  _$AuthenticationErrorCategoryCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of AuthenticationErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$NotAuthenticatedErrorCategoryImplCopyWith<$Res> {
+  factory _$$NotAuthenticatedErrorCategoryImplCopyWith(
+          _$NotAuthenticatedErrorCategoryImpl value,
+          $Res Function(_$NotAuthenticatedErrorCategoryImpl) then) =
+      __$$NotAuthenticatedErrorCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NotAuthenticatedErrorCategoryImplCopyWithImpl<$Res>
+    extends _$AuthenticationErrorCategoryCopyWithImpl<$Res,
+        _$NotAuthenticatedErrorCategoryImpl>
+    implements _$$NotAuthenticatedErrorCategoryImplCopyWith<$Res> {
+  __$$NotAuthenticatedErrorCategoryImplCopyWithImpl(
+      _$NotAuthenticatedErrorCategoryImpl _value,
+      $Res Function(_$NotAuthenticatedErrorCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthenticationErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NotAuthenticatedErrorCategoryImpl
+    with DiagnosticableTreeMixin
+    implements _NotAuthenticatedErrorCategory {
+  const _$NotAuthenticatedErrorCategoryImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthenticationErrorCategory.notAuth()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'AuthenticationErrorCategory.notAuth'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NotAuthenticatedErrorCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() notAuth,
+  }) {
+    return notAuth();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? notAuth,
+  }) {
+    return notAuth?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? notAuth,
+    required TResult orElse(),
+  }) {
+    if (notAuth != null) {
+      return notAuth();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_NotAuthenticatedErrorCategory value) notAuth,
+  }) {
+    return notAuth(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_NotAuthenticatedErrorCategory value)? notAuth,
+  }) {
+    return notAuth?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_NotAuthenticatedErrorCategory value)? notAuth,
+    required TResult orElse(),
+  }) {
+    if (notAuth != null) {
+      return notAuth(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NotAuthenticatedErrorCategory
+    implements AuthenticationErrorCategory {
+  const factory _NotAuthenticatedErrorCategory() =
+      _$NotAuthenticatedErrorCategoryImpl;
 }

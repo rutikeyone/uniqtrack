@@ -9,7 +9,7 @@ import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/validation/entities/comment.dart';
 import 'package:uniqtrack/core/common/validation/entities/memory_name.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
-import 'package:uniqtrack/features/tracks/domain/repositories/choose_image_repository.dart';
+import 'package:uniqtrack/features/tracks/domain/choose_image_repository.dart';
 import 'package:uuid/uuid.dart';
 
 import 'states/add_or_edit_memory_actions.dart';

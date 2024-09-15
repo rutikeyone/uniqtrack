@@ -471,3 +471,163 @@ abstract class _AddOrEditRecordTrackArgs implements AddOrEditRecordTrackArgs {
   _$$AddOrEditRecordTrackArgsImplCopyWith<_$AddOrEditRecordTrackArgsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$AddOrEditMemoryArgs {
+  Position? get position => throw _privateConstructorUsedError;
+
+  /// Create a copy of AddOrEditMemoryArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $AddOrEditMemoryArgsCopyWith<AddOrEditMemoryArgs> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AddOrEditMemoryArgsCopyWith<$Res> {
+  factory $AddOrEditMemoryArgsCopyWith(
+          AddOrEditMemoryArgs value, $Res Function(AddOrEditMemoryArgs) then) =
+      _$AddOrEditMemoryArgsCopyWithImpl<$Res, AddOrEditMemoryArgs>;
+  @useResult
+  $Res call({Position? position});
+
+  $PositionCopyWith<$Res>? get position;
+}
+
+/// @nodoc
+class _$AddOrEditMemoryArgsCopyWithImpl<$Res, $Val extends AddOrEditMemoryArgs>
+    implements $AddOrEditMemoryArgsCopyWith<$Res> {
+  _$AddOrEditMemoryArgsCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of AddOrEditMemoryArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? position = freezed,
+  }) {
+    return _then(_value.copyWith(
+      position: freezed == position
+          ? _value.position
+          : position // ignore: cast_nullable_to_non_nullable
+              as Position?,
+    ) as $Val);
+  }
+
+  /// Create a copy of AddOrEditMemoryArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $PositionCopyWith<$Res>? get position {
+    if (_value.position == null) {
+      return null;
+    }
+
+    return $PositionCopyWith<$Res>(_value.position!, (value) {
+      return _then(_value.copyWith(position: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$AddOrEditMemoryArgsImplCopyWith<$Res>
+    implements $AddOrEditMemoryArgsCopyWith<$Res> {
+  factory _$$AddOrEditMemoryArgsImplCopyWith(_$AddOrEditMemoryArgsImpl value,
+          $Res Function(_$AddOrEditMemoryArgsImpl) then) =
+      __$$AddOrEditMemoryArgsImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Position? position});
+
+  @override
+  $PositionCopyWith<$Res>? get position;
+}
+
+/// @nodoc
+class __$$AddOrEditMemoryArgsImplCopyWithImpl<$Res>
+    extends _$AddOrEditMemoryArgsCopyWithImpl<$Res, _$AddOrEditMemoryArgsImpl>
+    implements _$$AddOrEditMemoryArgsImplCopyWith<$Res> {
+  __$$AddOrEditMemoryArgsImplCopyWithImpl(_$AddOrEditMemoryArgsImpl _value,
+      $Res Function(_$AddOrEditMemoryArgsImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddOrEditMemoryArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? position = freezed,
+  }) {
+    return _then(_$AddOrEditMemoryArgsImpl(
+      position: freezed == position
+          ? _value.position
+          : position // ignore: cast_nullable_to_non_nullable
+              as Position?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddOrEditMemoryArgsImpl
+    with DiagnosticableTreeMixin
+    implements _AddOrEditMemoryArgs {
+  const _$AddOrEditMemoryArgsImpl({required this.position});
+
+  @override
+  final Position? position;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AddOrEditMemoryArgs(position: $position)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AddOrEditMemoryArgs'))
+      ..add(DiagnosticsProperty('position', position));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddOrEditMemoryArgsImpl &&
+            (identical(other.position, position) ||
+                other.position == position));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, position);
+
+  /// Create a copy of AddOrEditMemoryArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddOrEditMemoryArgsImplCopyWith<_$AddOrEditMemoryArgsImpl> get copyWith =>
+      __$$AddOrEditMemoryArgsImplCopyWithImpl<_$AddOrEditMemoryArgsImpl>(
+          this, _$identity);
+}
+
+abstract class _AddOrEditMemoryArgs implements AddOrEditMemoryArgs {
+  const factory _AddOrEditMemoryArgs({required final Position? position}) =
+      _$AddOrEditMemoryArgsImpl;
+
+  @override
+  Position? get position;
+
+  /// Create a copy of AddOrEditMemoryArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddOrEditMemoryArgsImplCopyWith<_$AddOrEditMemoryArgsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
