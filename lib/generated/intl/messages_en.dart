@@ -120,6 +120,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logInToYourAccount":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "memories": MessageLookupByLibrary.simpleMessage("Memories"),
         "myFavouriteTracks":
             MessageLookupByLibrary.simpleMessage("My favourite tracks"),
         "myTracks": MessageLookupByLibrary.simpleMessage("My tracks"),

@@ -1,6 +1,10 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:uniqtrack/app/app_state/auth/auth_notifier.dart';
 import 'package:uniqtrack/app/factories/stores/store_factory_impl.dart';
+import 'package:uniqtrack/app/glue/accounts/converters/memory_converter_impl.dart';
+import 'package:uniqtrack/app/glue/accounts/converters/position_converter_impl.dart';
+import 'package:uniqtrack/app/glue/accounts/converters/position_data_converter_impl.dart';
+import 'package:uniqtrack/app/glue/accounts/converters/track_converter_impl.dart';
 import 'package:uniqtrack/app/glue/accounts/factories/forgot_password_store_builder_impl.dart';
 import 'package:uniqtrack/app/glue/accounts/factories/login_store_builder_impl.dart';
 import 'package:uniqtrack/app/glue/accounts/factories/register_store_builder_impl.dart';
@@ -20,9 +24,14 @@ import 'package:uniqtrack/features/accounts/domain/sign_out_use_case.dart';
 import 'package:uniqtrack/features/accounts/presentation/forgot_password/stores/forgot_password_store.dart';
 import 'package:uniqtrack/features/accounts/presentation/login/stores/login_store.dart';
 import 'package:uniqtrack/features/accounts/presentation/register/stores/register_store.dart';
+import 'package:uniqtrack/features/tracks/domain/converters/memory_converter.dart';
+import 'package:uniqtrack/features/tracks/domain/converters/position_converter.dart';
+import 'package:uniqtrack/features/tracks/domain/converters/position_data_converter.dart';
+import 'package:uniqtrack/features/tracks/domain/converters/track_converter.dart';
 
 part 'mappers_provider.dart';
 part 'store_builder_providers.dart';
 part 'repositories_provider.dart';
 part 'use_cases_provider.dart';
+part 'converters.dart';
 part 'providers.g.dart';

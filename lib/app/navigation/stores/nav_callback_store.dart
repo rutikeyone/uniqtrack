@@ -43,7 +43,7 @@ class RecordTrackNavCallbackStore with _$RecordTrackNavCallbackStore {
   const factory RecordTrackNavCallbackStore({
     required VoidCallback navigateBack,
     required Future<Memory?> Function(Position?) navigateToAddMemory,
-    required VoidCallback navigateToAddRecordTrack,
+    required void Function(Track) navigateToAddRecordTrack,
     required void Function(Uint8List?) navigateToPhotoViewerByBytes,
     required void Function(String?) navigateToPhotoViewerByLink,
   }) = _RecordTrackNavCallbackStore;

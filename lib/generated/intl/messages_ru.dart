@@ -73,7 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Вы хотите закончить запись трека?"),
         "dontSave": MessageLookupByLibrary.simpleMessage("Не сохранять"),
-        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
+        "edit": MessageLookupByLibrary.simpleMessage("Редактировать"),
         "editMemory":
             MessageLookupByLibrary.simpleMessage("Редактировать воспоминание"),
         "editTrack": MessageLookupByLibrary.simpleMessage("Редактировать трек"),
@@ -102,8 +102,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Неверные учетные данные"),
         "invalidEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Введите корректный адрес электронной почты"),
-        "invalidMemoryName": MessageLookupByLibrary.simpleMessage(
-            "Некорректное имя воспоминания"),
+        "invalidMemoryName":
+            MessageLookupByLibrary.simpleMessage("Некорректное имя"),
         "invalidName": MessageLookupByLibrary.simpleMessage("Некорректное имя"),
         "invalidPassword":
             MessageLookupByLibrary.simpleMessage("Некорректный пароль"),
@@ -122,6 +122,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logInToYourAccount": MessageLookupByLibrary.simpleMessage(
             "Войдите в вашу учетную запись"),
         "male": MessageLookupByLibrary.simpleMessage("Мужской"),
+        "memories": MessageLookupByLibrary.simpleMessage("Воспоминания"),
         "myFavouriteTracks":
             MessageLookupByLibrary.simpleMessage("Мои избранные треки"),
         "myTracks": MessageLookupByLibrary.simpleMessage("Мои треки"),
@@ -175,7 +176,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Это необходимо для записи трекинга."),
         "trackingRecordNotificationTitle": MessageLookupByLibrary.simpleMessage(
             "Uniqtrack получает информацию о вашем местоположении"),
-        "uploadPhotos": MessageLookupByLibrary.simpleMessage("Upload photos"),
+        "uploadPhotos":
+            MessageLookupByLibrary.simpleMessage("Добавленные фотографии"),
         "userHasBeenDisabled":
             MessageLookupByLibrary.simpleMessage("Пользователь был отключен"),
         "userNotFound":

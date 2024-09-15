@@ -17,7 +17,9 @@ abstract interface class StoreFactory {
 
   RecordTrackStore createRecordTrackStore();
 
-  AddOrEditRecordTrackStore createAddOrEditRecordTrackStore();
+  AddOrEditRecordTrackStore createAddOrEditRecordTrackStore({
+    required Track? track,
+  });
 
   AddOrEditMemoryStore createAddOrEditMemoryStore({
     required Position? position,

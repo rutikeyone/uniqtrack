@@ -101,6 +101,7 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
     required String? photo,
   }) async {
     final user = UserModel(
+      id: uid,
       name: parameters.name,
       email: parameters.email,
       photo: photo,

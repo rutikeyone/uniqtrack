@@ -103,7 +103,8 @@
   "invalidTrackName": "Некорректное имя трека",
   "invalidComment": "Некорректный комментарий",
   "addPicture": "Добавить фотографию",
-  "invalidMemoryName": "Некорректное имя воспоминания",
-  "uploadPhotos": "Upload photos",
-  "edit": "Edit"
+  "invalidMemoryName": "Некорректное имя",
+  "uploadPhotos": "Добавленные фотографии",
+  "edit": "Редактировать",
+  "memories": "Воспоминания"
 }

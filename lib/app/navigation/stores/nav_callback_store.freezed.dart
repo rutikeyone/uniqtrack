@@ -640,7 +640,7 @@ mixin _$RecordTrackNavCallbackStore {
   VoidCallback get navigateBack => throw _privateConstructorUsedError;
   Future<Memory?> Function(Position?) get navigateToAddMemory =>
       throw _privateConstructorUsedError;
-  VoidCallback get navigateToAddRecordTrack =>
+  void Function(Track) get navigateToAddRecordTrack =>
       throw _privateConstructorUsedError;
   void Function(Uint8List?) get navigateToPhotoViewerByBytes =>
       throw _privateConstructorUsedError;
@@ -665,7 +665,7 @@ abstract class $RecordTrackNavCallbackStoreCopyWith<$Res> {
   $Res call(
       {VoidCallback navigateBack,
       Future<Memory?> Function(Position?) navigateToAddMemory,
-      VoidCallback navigateToAddRecordTrack,
+      void Function(Track) navigateToAddRecordTrack,
       void Function(Uint8List?) navigateToPhotoViewerByBytes,
       void Function(String?) navigateToPhotoViewerByLink});
 }
@@ -704,7 +704,7 @@ class _$RecordTrackNavCallbackStoreCopyWithImpl<$Res,
       navigateToAddRecordTrack: null == navigateToAddRecordTrack
           ? _value.navigateToAddRecordTrack
           : navigateToAddRecordTrack // ignore: cast_nullable_to_non_nullable
-              as VoidCallback,
+              as void Function(Track),
       navigateToPhotoViewerByBytes: null == navigateToPhotoViewerByBytes
           ? _value.navigateToPhotoViewerByBytes
           : navigateToPhotoViewerByBytes // ignore: cast_nullable_to_non_nullable
@@ -729,7 +729,7 @@ abstract class _$$RecordTrackNavCallbackStoreImplCopyWith<$Res>
   $Res call(
       {VoidCallback navigateBack,
       Future<Memory?> Function(Position?) navigateToAddMemory,
-      VoidCallback navigateToAddRecordTrack,
+      void Function(Track) navigateToAddRecordTrack,
       void Function(Uint8List?) navigateToPhotoViewerByBytes,
       void Function(String?) navigateToPhotoViewerByLink});
 }
@@ -767,7 +767,7 @@ class __$$RecordTrackNavCallbackStoreImplCopyWithImpl<$Res>
       navigateToAddRecordTrack: null == navigateToAddRecordTrack
           ? _value.navigateToAddRecordTrack
           : navigateToAddRecordTrack // ignore: cast_nullable_to_non_nullable
-              as VoidCallback,
+              as void Function(Track),
       navigateToPhotoViewerByBytes: null == navigateToPhotoViewerByBytes
           ? _value.navigateToPhotoViewerByBytes
           : navigateToPhotoViewerByBytes // ignore: cast_nullable_to_non_nullable
@@ -797,7 +797,7 @@ class _$RecordTrackNavCallbackStoreImpl
   @override
   final Future<Memory?> Function(Position?) navigateToAddMemory;
   @override
-  final VoidCallback navigateToAddRecordTrack;
+  final void Function(Track) navigateToAddRecordTrack;
   @override
   final void Function(Uint8List?) navigateToPhotoViewerByBytes;
   @override
@@ -869,7 +869,7 @@ abstract class _RecordTrackNavCallbackStore
   const factory _RecordTrackNavCallbackStore(
       {required final VoidCallback navigateBack,
       required final Future<Memory?> Function(Position?) navigateToAddMemory,
-      required final VoidCallback navigateToAddRecordTrack,
+      required final void Function(Track) navigateToAddRecordTrack,
       required final void Function(Uint8List?) navigateToPhotoViewerByBytes,
       required final void Function(String?)
           navigateToPhotoViewerByLink}) = _$RecordTrackNavCallbackStoreImpl;
@@ -879,7 +879,7 @@ abstract class _RecordTrackNavCallbackStore
   @override
   Future<Memory?> Function(Position?) get navigateToAddMemory;
   @override
-  VoidCallback get navigateToAddRecordTrack;
+  void Function(Track) get navigateToAddRecordTrack;
   @override
   void Function(Uint8List?) get navigateToPhotoViewerByBytes;
   @override

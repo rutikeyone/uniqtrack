@@ -3,13 +3,17 @@ import 'package:formz/formz.dart';
 import 'package:mobx/mobx.dart';
 import 'package:uniqtrack/core/common/validation/entities/comment.dart';
 import 'package:uniqtrack/core/common/validation/entities/track_name.dart';
+import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 
 import 'states/states.dart';
 
 part 'add_or_edit_record_track_store.g.dart';
 
 abstract interface class AddOrEditRecordTrackStoreBuilder {
-  AddOrEditRecordTrackStore create(BuildContext context);
+  AddOrEditRecordTrackStore create({
+    required BuildContext context,
+    required Track? track,
+  });
 }
 
 class AddOrEditRecordTrackStore = _AddOrEditRecordTrackStore
@@ -28,12 +32,21 @@ abstract class _AddOrEditRecordTrackStore with Store {
   @observable
   FormzSubmissionStatus statusMode = FormzSubmissionStatus.initial;
 
+  @MakeObservable(useDeepEquality: true)
+  List<Memory> memories;
+
   @computed
   bool get canSave {
     final List<FormzInput> allInputs = [trackName, comment];
     final isAllInputValid = allInputs.every((item) => item.isValid);
     final saveInProgress = statusMode == FormzSubmissionStatus.inProgress;
-    return isAllInputValid && !saveInProgress;
+
+    final isNotNullTrack = modeState.when(
+      add: (track) => track != null,
+      edit: () => false,
+    );
+
+    return isAllInputValid && !saveInProgress && isNotNullTrack;
   }
 
   @computed
@@ -45,8 +58,10 @@ abstract class _AddOrEditRecordTrackStore with Store {
         canSave: canSave,
       );
 
-  _AddOrEditRecordTrackStore()
-      : modeState = AddOrEditRecordTrackModeState.add();
+  _AddOrEditRecordTrackStore({
+    required Track? track,
+  })  : modeState = AddOrEditRecordTrackModeState.add(track: track),
+        memories = track?.memories ?? [];
 
   @action
   void updateComment(String? value) {
@@ -67,6 +82,12 @@ abstract class _AddOrEditRecordTrackStore with Store {
   @action
   void save() {
     if (!canSave) return;
+  }
+
+  @action
+  void deleteMemory(Memory memory) {
+    final newMemories = [...memories]..remove(memory);
+    memories = newMemories;
   }
 
   @action

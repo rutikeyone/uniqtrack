@@ -175,5 +175,69 @@ final authStateChangesUseCaseProvider =
 
 typedef AuthStateChangesUseCaseRef
     = AutoDisposeProviderRef<AuthStateChangesUseCase>;
+String _$positionConverterHash() => r'295cce727f6ac205430008006f24d521cd5f99db';
+
+/// See also [positionConverter].
+@ProviderFor(positionConverter)
+final positionConverterProvider =
+    AutoDisposeProvider<PositionConverter>.internal(
+  positionConverter,
+  name: r'positionConverterProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$positionConverterHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef PositionConverterRef = AutoDisposeProviderRef<PositionConverter>;
+String _$positionDataConverterHash() =>
+    r'5524b8e7539cb178402456de62c3efe887173ced';
+
+/// See also [positionDataConverter].
+@ProviderFor(positionDataConverter)
+final positionDataConverterProvider =
+    AutoDisposeProvider<PositionDataConverter>.internal(
+  positionDataConverter,
+  name: r'positionDataConverterProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$positionDataConverterHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef PositionDataConverterRef
+    = AutoDisposeProviderRef<PositionDataConverter>;
+String _$memoryConverterHash() => r'3ae941408dd7b03a908a6289040319865ee3b068';
+
+/// See also [memoryConverter].
+@ProviderFor(memoryConverter)
+final memoryConverterProvider = AutoDisposeProvider<MemoryConverter>.internal(
+  memoryConverter,
+  name: r'memoryConverterProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$memoryConverterHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef MemoryConverterRef = AutoDisposeProviderRef<MemoryConverter>;
+String _$trackConverterHash() => r'b7dbac323643992e1c15bd73193849883f7bafca';
+
+/// See also [trackConverter].
+@ProviderFor(trackConverter)
+final trackConverterProvider = AutoDisposeProvider<TrackConverter>.internal(
+  trackConverter,
+  name: r'trackConverterProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$trackConverterHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef TrackConverterRef = AutoDisposeProviderRef<TrackConverter>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

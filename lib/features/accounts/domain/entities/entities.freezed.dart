@@ -16,6 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$User {
+  String? get id => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get photo => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
@@ -32,7 +33,8 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res, User>;
   @useResult
-  $Res call({String? name, String? photo, String? email, Gender? gender});
+  $Res call(
+      {String? id, String? name, String? photo, String? email, Gender? gender});
 
   $GenderCopyWith<$Res>? get gender;
 }
@@ -52,12 +54,17 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? name = freezed,
     Object? photo = freezed,
     Object? email = freezed,
     Object? gender = freezed,
   }) {
     return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -99,7 +106,8 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$$UserImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? name, String? photo, String? email, Gender? gender});
+  $Res call(
+      {String? id, String? name, String? photo, String? email, Gender? gender});
 
   @override
   $GenderCopyWith<$Res>? get gender;
@@ -117,12 +125,17 @@ class __$$UserImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? name = freezed,
     Object? photo = freezed,
     Object? email = freezed,
     Object? gender = freezed,
   }) {
     return _then(_$UserImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -147,11 +160,14 @@ class __$$UserImplCopyWithImpl<$Res>
 
 class _$UserImpl with DiagnosticableTreeMixin implements _User {
   const _$UserImpl(
-      {required this.name,
+      {required this.id,
+      required this.name,
       required this.photo,
       required this.email,
       required this.gender});
 
+  @override
+  final String? id;
   @override
   final String? name;
   @override
@@ -163,7 +179,7 @@ class _$UserImpl with DiagnosticableTreeMixin implements _User {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'User(name: $name, photo: $photo, email: $email, gender: $gender)';
+    return 'User(id: $id, name: $name, photo: $photo, email: $email, gender: $gender)';
   }
 
   @override
@@ -171,6 +187,7 @@ class _$UserImpl with DiagnosticableTreeMixin implements _User {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'User'))
+      ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('photo', photo))
       ..add(DiagnosticsProperty('email', email))
@@ -182,6 +199,7 @@ class _$UserImpl with DiagnosticableTreeMixin implements _User {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UserImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.photo, photo) || other.photo == photo) &&
             (identical(other.email, email) || other.email == email) &&
@@ -189,7 +207,7 @@ class _$UserImpl with DiagnosticableTreeMixin implements _User {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name, photo, email, gender);
+  int get hashCode => Object.hash(runtimeType, id, name, photo, email, gender);
 
   /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.
@@ -202,11 +220,14 @@ class _$UserImpl with DiagnosticableTreeMixin implements _User {
 
 abstract class _User implements User {
   const factory _User(
-      {required final String? name,
+      {required final String? id,
+      required final String? name,
       required final String? photo,
       required final String? email,
       required final Gender? gender}) = _$UserImpl;
 
+  @override
+  String? get id;
   @override
   String? get name;
   @override

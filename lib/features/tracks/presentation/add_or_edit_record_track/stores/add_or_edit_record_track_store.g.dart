@@ -87,6 +87,22 @@ mixin _$AddOrEditRecordTrackStore on _AddOrEditRecordTrackStore, Store {
     });
   }
 
+  late final _$memoriesAtom =
+      Atom(name: '_AddOrEditRecordTrackStore.memories', context: context);
+
+  @override
+  List<Memory> get memories {
+    _$memoriesAtom.reportRead();
+    return super.memories;
+  }
+
+  @override
+  set memories(List<Memory> value) {
+    _$memoriesAtom.reportWrite(value, super.memories, () {
+      super.memories = value;
+    });
+  }
+
   late final _$_AddOrEditRecordTrackStoreActionController =
       ActionController(name: '_AddOrEditRecordTrackStore', context: context);
 
@@ -124,6 +140,17 @@ mixin _$AddOrEditRecordTrackStore on _AddOrEditRecordTrackStore, Store {
   }
 
   @override
+  void deleteMemory(Memory memory) {
+    final _$actionInfo = _$_AddOrEditRecordTrackStoreActionController
+        .startAction(name: '_AddOrEditRecordTrackStore.deleteMemory');
+    try {
+      return super.deleteMemory(memory);
+    } finally {
+      _$_AddOrEditRecordTrackStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   void deleteRecordTrack() {
     final _$actionInfo = _$_AddOrEditRecordTrackStoreActionController
         .startAction(name: '_AddOrEditRecordTrackStore.deleteRecordTrack');
@@ -141,6 +168,7 @@ modeState: ${modeState},
 comment: ${comment},
 trackName: ${trackName},
 statusMode: ${statusMode},
+memories: ${memories},
 canSave: ${canSave},
 state: ${state}
     ''';

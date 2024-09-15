@@ -14,7 +14,7 @@ class _BottomSheetWidget extends StatelessWidget {
         final modeState = store.modeState;
 
         return modeState.when(
-          add: () => _AddActionButtons(),
+          add: (_) => _AddActionButtons(),
           edit: () => _EditActionButtons(),
         );
       }),

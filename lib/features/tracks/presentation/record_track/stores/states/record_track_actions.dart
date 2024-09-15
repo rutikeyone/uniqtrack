@@ -16,9 +16,8 @@ class RecordTrackActions with _$RecordTrackActions {
   const factory RecordTrackActions.showDetailsRecordingData() =
       _ShowDetailsRecordingDataAction;
 
-  const factory RecordTrackActions.hideDetailsRecordingData({
-    @Default(false) bool ignoreLimit,
-  }) = _HideDetailsRecordingDataAction;
+  const factory RecordTrackActions.hideDetailsRecordingData() =
+      _HideDetailsRecordingDataAction;
 
   const factory RecordTrackActions.navigateBack() = _NavigateBackAction;
 
@@ -26,12 +25,12 @@ class RecordTrackActions with _$RecordTrackActions {
     required Position? position,
   }) = _NavigateToAddMemoryAction;
 
-  const factory RecordTrackActions.navigateToAddRecordTrack() =
-      _NavigateToAddRecordTrackAction;
+  const factory RecordTrackActions.navigateToAddRecordTrack({
+    required Track track,
+  }) = _NavigateToAddRecordTrackAction;
 
   const factory RecordTrackActions.showMemoryDetails({
     required Memory memory,
-    @Default(false) bool ignoreLimit,
   }) = _ShowMemoryDetailsAction;
 
   const factory RecordTrackActions.hideMemoryDetails() =

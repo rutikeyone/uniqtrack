@@ -626,3 +626,319 @@ abstract class _PositionData implements PositionData {
   _$$PositionDataImplCopyWith<_$PositionDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$Track {
+  String? get id => throw _privateConstructorUsedError;
+  String? get creatorId => throw _privateConstructorUsedError;
+  List<PositionData>? get positions => throw _privateConstructorUsedError;
+  double? get distance => throw _privateConstructorUsedError;
+  int? get duration => throw _privateConstructorUsedError;
+  double? get averageSpeed => throw _privateConstructorUsedError;
+  double? get maxAltitude => throw _privateConstructorUsedError;
+  List<Memory>? get memories => throw _privateConstructorUsedError;
+
+  /// Create a copy of Track
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $TrackCopyWith<Track> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TrackCopyWith<$Res> {
+  factory $TrackCopyWith(Track value, $Res Function(Track) then) =
+      _$TrackCopyWithImpl<$Res, Track>;
+  @useResult
+  $Res call(
+      {String? id,
+      String? creatorId,
+      List<PositionData>? positions,
+      double? distance,
+      int? duration,
+      double? averageSpeed,
+      double? maxAltitude,
+      List<Memory>? memories});
+}
+
+/// @nodoc
+class _$TrackCopyWithImpl<$Res, $Val extends Track>
+    implements $TrackCopyWith<$Res> {
+  _$TrackCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of Track
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? creatorId = freezed,
+    Object? positions = freezed,
+    Object? distance = freezed,
+    Object? duration = freezed,
+    Object? averageSpeed = freezed,
+    Object? maxAltitude = freezed,
+    Object? memories = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      creatorId: freezed == creatorId
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      positions: freezed == positions
+          ? _value.positions
+          : positions // ignore: cast_nullable_to_non_nullable
+              as List<PositionData>?,
+      distance: freezed == distance
+          ? _value.distance
+          : distance // ignore: cast_nullable_to_non_nullable
+              as double?,
+      duration: freezed == duration
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as int?,
+      averageSpeed: freezed == averageSpeed
+          ? _value.averageSpeed
+          : averageSpeed // ignore: cast_nullable_to_non_nullable
+              as double?,
+      maxAltitude: freezed == maxAltitude
+          ? _value.maxAltitude
+          : maxAltitude // ignore: cast_nullable_to_non_nullable
+              as double?,
+      memories: freezed == memories
+          ? _value.memories
+          : memories // ignore: cast_nullable_to_non_nullable
+              as List<Memory>?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$TrackImplCopyWith<$Res> implements $TrackCopyWith<$Res> {
+  factory _$$TrackImplCopyWith(
+          _$TrackImpl value, $Res Function(_$TrackImpl) then) =
+      __$$TrackImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      String? creatorId,
+      List<PositionData>? positions,
+      double? distance,
+      int? duration,
+      double? averageSpeed,
+      double? maxAltitude,
+      List<Memory>? memories});
+}
+
+/// @nodoc
+class __$$TrackImplCopyWithImpl<$Res>
+    extends _$TrackCopyWithImpl<$Res, _$TrackImpl>
+    implements _$$TrackImplCopyWith<$Res> {
+  __$$TrackImplCopyWithImpl(
+      _$TrackImpl _value, $Res Function(_$TrackImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of Track
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? creatorId = freezed,
+    Object? positions = freezed,
+    Object? distance = freezed,
+    Object? duration = freezed,
+    Object? averageSpeed = freezed,
+    Object? maxAltitude = freezed,
+    Object? memories = freezed,
+  }) {
+    return _then(_$TrackImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      creatorId: freezed == creatorId
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      positions: freezed == positions
+          ? _value._positions
+          : positions // ignore: cast_nullable_to_non_nullable
+              as List<PositionData>?,
+      distance: freezed == distance
+          ? _value.distance
+          : distance // ignore: cast_nullable_to_non_nullable
+              as double?,
+      duration: freezed == duration
+          ? _value.duration
+          : duration // ignore: cast_nullable_to_non_nullable
+              as int?,
+      averageSpeed: freezed == averageSpeed
+          ? _value.averageSpeed
+          : averageSpeed // ignore: cast_nullable_to_non_nullable
+              as double?,
+      maxAltitude: freezed == maxAltitude
+          ? _value.maxAltitude
+          : maxAltitude // ignore: cast_nullable_to_non_nullable
+              as double?,
+      memories: freezed == memories
+          ? _value._memories
+          : memories // ignore: cast_nullable_to_non_nullable
+              as List<Memory>?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
+  const _$TrackImpl(
+      {required this.id,
+      required this.creatorId,
+      required final List<PositionData>? positions,
+      required this.distance,
+      required this.duration,
+      required this.averageSpeed,
+      required this.maxAltitude,
+      required final List<Memory>? memories})
+      : _positions = positions,
+        _memories = memories;
+
+  @override
+  final String? id;
+  @override
+  final String? creatorId;
+  final List<PositionData>? _positions;
+  @override
+  List<PositionData>? get positions {
+    final value = _positions;
+    if (value == null) return null;
+    if (_positions is EqualUnmodifiableListView) return _positions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final double? distance;
+  @override
+  final int? duration;
+  @override
+  final double? averageSpeed;
+  @override
+  final double? maxAltitude;
+  final List<Memory>? _memories;
+  @override
+  List<Memory>? get memories {
+    final value = _memories;
+    if (value == null) return null;
+    if (_memories is EqualUnmodifiableListView) return _memories;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'Track(id: $id, creatorId: $creatorId, positions: $positions, distance: $distance, duration: $duration, averageSpeed: $averageSpeed, maxAltitude: $maxAltitude, memories: $memories)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'Track'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('creatorId', creatorId))
+      ..add(DiagnosticsProperty('positions', positions))
+      ..add(DiagnosticsProperty('distance', distance))
+      ..add(DiagnosticsProperty('duration', duration))
+      ..add(DiagnosticsProperty('averageSpeed', averageSpeed))
+      ..add(DiagnosticsProperty('maxAltitude', maxAltitude))
+      ..add(DiagnosticsProperty('memories', memories));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TrackImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.creatorId, creatorId) ||
+                other.creatorId == creatorId) &&
+            const DeepCollectionEquality()
+                .equals(other._positions, _positions) &&
+            (identical(other.distance, distance) ||
+                other.distance == distance) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.averageSpeed, averageSpeed) ||
+                other.averageSpeed == averageSpeed) &&
+            (identical(other.maxAltitude, maxAltitude) ||
+                other.maxAltitude == maxAltitude) &&
+            const DeepCollectionEquality().equals(other._memories, _memories));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      creatorId,
+      const DeepCollectionEquality().hash(_positions),
+      distance,
+      duration,
+      averageSpeed,
+      maxAltitude,
+      const DeepCollectionEquality().hash(_memories));
+
+  /// Create a copy of Track
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TrackImplCopyWith<_$TrackImpl> get copyWith =>
+      __$$TrackImplCopyWithImpl<_$TrackImpl>(this, _$identity);
+}
+
+abstract class _Track implements Track {
+  const factory _Track(
+      {required final String? id,
+      required final String? creatorId,
+      required final List<PositionData>? positions,
+      required final double? distance,
+      required final int? duration,
+      required final double? averageSpeed,
+      required final double? maxAltitude,
+      required final List<Memory>? memories}) = _$TrackImpl;
+
+  @override
+  String? get id;
+  @override
+  String? get creatorId;
+  @override
+  List<PositionData>? get positions;
+  @override
+  double? get distance;
+  @override
+  int? get duration;
+  @override
+  double? get averageSpeed;
+  @override
+  double? get maxAltitude;
+  @override
+  List<Memory>? get memories;
+
+  /// Create a copy of Track
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TrackImplCopyWith<_$TrackImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

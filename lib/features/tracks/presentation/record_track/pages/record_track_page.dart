@@ -27,6 +27,7 @@ import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/reco
 import 'package:uniqtrack/generated/l10n.dart';
 
 part '../widgets/record_map_buttons.dart';
+
 part '../widgets/record_track_button.dart';
 
 const _initialCenter = const LatLng(0, 0);
@@ -127,7 +128,7 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     );
   }
 
-  void _handleWithoutRecordingState(_) {
+  Future<void> _handleWithoutRecordingState(_) async {
     final emptyPositions = List<Position>.empty();
     final emptyPositionsData = List<PositionData>.empty();
     final emptyMemories = List<Memory>.empty();
@@ -144,14 +145,15 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
       isPaintFirstPoint: false,
     );
 
-    _updateMemories(
+    await _updateMemories(
       memories: emptyMemories,
     );
 
     setState(() {});
   }
 
-  void _handleRecordingState(TrackRecordingStatusState statusState) {
+  Future<void> _handleRecordingState(
+      TrackRecordingStatusState statusState) async {
     _updateLines(
       positionsData: statusState.positionsData,
       positions: statusState.positions,
@@ -163,7 +165,8 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
       recording: statusState.isRecording,
       isPaintFirstPoint: statusState.isPaintFirstPoint,
     );
-    _updateMemories(
+
+    await _updateMemories(
       memories: statusState.memories,
     );
 
@@ -244,7 +247,7 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     return polyline;
   }
 
-  Future<void> _updateCircles({
+  void _updateCircles({
     required List<PositionData> positionsData,
     required List<Position> positions,
     required bool isPaintFirstPoint,
@@ -274,7 +277,7 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
   }) async {
     final asset = await ref.read(appWidgetToolkitProvider).bytesFromAsset(
           AppAssets.icons.memoryMap,
-          AppDiments.dm96.toInt(),
+          AppDiments.dm64.toInt(),
         );
 
     _memoriesMarkers.clear();
@@ -381,8 +384,8 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     });
   }
 
-  void _hideDetailsRecordData(bool ignoreLimit) {
-    if (_bottomSheetRecordTrackShowed  || ignoreLimit) {
+  void _hideDetailsRecordData() {
+    if (_bottomSheetRecordTrackShowed) {
       _bottomSheetRecordTrackShowed = false;
       _bottomSheetRecordTrackController?.close();
       _bottomSheetRecordTrackController = null;
@@ -427,16 +430,15 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     _store.addMemoryWithData(result);
   }
 
-  void _navigateToAddRecordTrack() {
-    context.read<RecordTrackNavCallbackStore>().navigateToAddRecordTrack();
+  void _navigateToAddRecordTrack(Track track) {
+    context.read<RecordTrackNavCallbackStore>().navigateToAddRecordTrack(track);
   }
 
-  void _showMemoryDetails(Memory memory, bool ignoreLimit) {
+  void _showMemoryDetails(Memory memory) {
     final navCallbackStore = context.read<RecordTrackNavCallbackStore>();
     final duration = const Duration(milliseconds: 300);
 
-    if (!_bottomSheetRecordTrackShowed &&
-        (!_bottomSheetMemoryShowed || ignoreLimit)) {
+    if (!_bottomSheetRecordTrackShowed && (!_bottomSheetMemoryShowed)) {
       _bottomSheetMemoryShowed = true;
 
       Future.delayed(duration, () {

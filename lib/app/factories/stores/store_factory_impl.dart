@@ -113,8 +113,10 @@ class StoreFactoryImpl implements StoreFactory {
   }
 
   @override
-  AddOrEditRecordTrackStore createAddOrEditRecordTrackStore() {
-    return AddOrEditRecordTrackStore();
+  AddOrEditRecordTrackStore createAddOrEditRecordTrackStore({
+    required Track? track,
+  }) {
+    return AddOrEditRecordTrackStore(track: track);
   }
 
   @override

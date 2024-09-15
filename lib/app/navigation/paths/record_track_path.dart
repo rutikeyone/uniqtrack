@@ -10,7 +10,7 @@ class RecordTrackPath extends Path<RecordTrackPath> {
 
   AddOrEditMemoryPath get addOrEditMemoryPath => AddOrEditMemoryPath(this);
 
-  AddOrEditRecordTrackPath get addRecordTrack => AddOrEditRecordTrackPath(this);
+  AddOrEditRecordTrackPath get addOrEditRecordTrack => AddOrEditRecordTrackPath(this);
 
   PhotoViewerPath get photoViewer => PhotoViewerPath(this);
 }

@@ -1406,12 +1406,11 @@ mixin _$RecordTrackActions {
     required TResult Function(Position position, double zoom)
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
-    required TResult Function(bool ignoreLimit) hideDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
-    required TResult Function() navigateToAddRecordTrack,
-    required TResult Function(Memory memory, bool ignoreLimit)
-        showMemoryDetails,
+    required TResult Function(Track track) navigateToAddRecordTrack,
+    required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
   }) =>
       throw _privateConstructorUsedError;
@@ -1422,11 +1421,11 @@ mixin _$RecordTrackActions {
         initStreamPositions,
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
-    TResult? Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
-    TResult? Function()? navigateToAddRecordTrack,
-    TResult? Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult? Function(Track track)? navigateToAddRecordTrack,
+    TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
   }) =>
       throw _privateConstructorUsedError;
@@ -1437,11 +1436,11 @@ mixin _$RecordTrackActions {
         initStreamPositions,
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
-    TResult Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
-    TResult Function()? navigateToAddRecordTrack,
-    TResult Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult Function(Track track)? navigateToAddRecordTrack,
+    TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
     required TResult orElse(),
   }) =>
@@ -1656,12 +1655,11 @@ class _$InitStreamPositionsActionImpl
     required TResult Function(Position position, double zoom)
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
-    required TResult Function(bool ignoreLimit) hideDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
-    required TResult Function() navigateToAddRecordTrack,
-    required TResult Function(Memory memory, bool ignoreLimit)
-        showMemoryDetails,
+    required TResult Function(Track track) navigateToAddRecordTrack,
+    required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
   }) {
     return initStreamPositions(callback, title, body);
@@ -1675,11 +1673,11 @@ class _$InitStreamPositionsActionImpl
         initStreamPositions,
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
-    TResult? Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
-    TResult? Function()? navigateToAddRecordTrack,
-    TResult? Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult? Function(Track track)? navigateToAddRecordTrack,
+    TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
   }) {
     return initStreamPositions?.call(callback, title, body);
@@ -1693,11 +1691,11 @@ class _$InitStreamPositionsActionImpl
         initStreamPositions,
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
-    TResult Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
-    TResult Function()? navigateToAddRecordTrack,
-    TResult Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult Function(Track track)? navigateToAddRecordTrack,
+    TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
     required TResult orElse(),
   }) {
@@ -1901,12 +1899,11 @@ class _$UserPositionChangesActionImpl
     required TResult Function(Position position, double zoom)
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
-    required TResult Function(bool ignoreLimit) hideDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
-    required TResult Function() navigateToAddRecordTrack,
-    required TResult Function(Memory memory, bool ignoreLimit)
-        showMemoryDetails,
+    required TResult Function(Track track) navigateToAddRecordTrack,
+    required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
   }) {
     return moveToUserPosition(position, zoom);
@@ -1920,11 +1917,11 @@ class _$UserPositionChangesActionImpl
         initStreamPositions,
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
-    TResult? Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
-    TResult? Function()? navigateToAddRecordTrack,
-    TResult? Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult? Function(Track track)? navigateToAddRecordTrack,
+    TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
   }) {
     return moveToUserPosition?.call(position, zoom);
@@ -1938,11 +1935,11 @@ class _$UserPositionChangesActionImpl
         initStreamPositions,
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
-    TResult Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
-    TResult Function()? navigateToAddRecordTrack,
-    TResult Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult Function(Track track)? navigateToAddRecordTrack,
+    TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
     required TResult orElse(),
   }) {
@@ -2092,12 +2089,11 @@ class _$ShowDetailsRecordingDataActionImpl
     required TResult Function(Position position, double zoom)
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
-    required TResult Function(bool ignoreLimit) hideDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
-    required TResult Function() navigateToAddRecordTrack,
-    required TResult Function(Memory memory, bool ignoreLimit)
-        showMemoryDetails,
+    required TResult Function(Track track) navigateToAddRecordTrack,
+    required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
   }) {
     return showDetailsRecordingData();
@@ -2111,11 +2107,11 @@ class _$ShowDetailsRecordingDataActionImpl
         initStreamPositions,
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
-    TResult? Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
-    TResult? Function()? navigateToAddRecordTrack,
-    TResult? Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult? Function(Track track)? navigateToAddRecordTrack,
+    TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
   }) {
     return showDetailsRecordingData?.call();
@@ -2129,11 +2125,11 @@ class _$ShowDetailsRecordingDataActionImpl
         initStreamPositions,
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
-    TResult Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
-    TResult Function()? navigateToAddRecordTrack,
-    TResult Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult Function(Track track)? navigateToAddRecordTrack,
+    TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
     required TResult orElse(),
   }) {
@@ -2219,8 +2215,6 @@ abstract class _$$HideDetailsRecordingDataActionImplCopyWith<$Res> {
           _$HideDetailsRecordingDataActionImpl value,
           $Res Function(_$HideDetailsRecordingDataActionImpl) then) =
       __$$HideDetailsRecordingDataActionImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({bool ignoreLimit});
 }
 
 /// @nodoc
@@ -2235,18 +2229,6 @@ class __$$HideDetailsRecordingDataActionImplCopyWithImpl<$Res>
 
   /// Create a copy of RecordTrackActions
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? ignoreLimit = null,
-  }) {
-    return _then(_$HideDetailsRecordingDataActionImpl(
-      ignoreLimit: null == ignoreLimit
-          ? _value.ignoreLimit
-          : ignoreLimit // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
 }
 
 /// @nodoc
@@ -2254,47 +2236,29 @@ class __$$HideDetailsRecordingDataActionImplCopyWithImpl<$Res>
 class _$HideDetailsRecordingDataActionImpl
     with DiagnosticableTreeMixin
     implements _HideDetailsRecordingDataAction {
-  const _$HideDetailsRecordingDataActionImpl({this.ignoreLimit = false});
-
-  @override
-  @JsonKey()
-  final bool ignoreLimit;
+  const _$HideDetailsRecordingDataActionImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RecordTrackActions.hideDetailsRecordingData(ignoreLimit: $ignoreLimit)';
+    return 'RecordTrackActions.hideDetailsRecordingData()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'RecordTrackActions.hideDetailsRecordingData'))
-      ..add(DiagnosticsProperty('ignoreLimit', ignoreLimit));
+    properties.add(DiagnosticsProperty(
+        'type', 'RecordTrackActions.hideDetailsRecordingData'));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$HideDetailsRecordingDataActionImpl &&
-            (identical(other.ignoreLimit, ignoreLimit) ||
-                other.ignoreLimit == ignoreLimit));
+            other is _$HideDetailsRecordingDataActionImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, ignoreLimit);
-
-  /// Create a copy of RecordTrackActions
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$HideDetailsRecordingDataActionImplCopyWith<
-          _$HideDetailsRecordingDataActionImpl>
-      get copyWith => __$$HideDetailsRecordingDataActionImplCopyWithImpl<
-          _$HideDetailsRecordingDataActionImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -2305,15 +2269,14 @@ class _$HideDetailsRecordingDataActionImpl
     required TResult Function(Position position, double zoom)
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
-    required TResult Function(bool ignoreLimit) hideDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
-    required TResult Function() navigateToAddRecordTrack,
-    required TResult Function(Memory memory, bool ignoreLimit)
-        showMemoryDetails,
+    required TResult Function(Track track) navigateToAddRecordTrack,
+    required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
   }) {
-    return hideDetailsRecordingData(ignoreLimit);
+    return hideDetailsRecordingData();
   }
 
   @override
@@ -2324,14 +2287,14 @@ class _$HideDetailsRecordingDataActionImpl
         initStreamPositions,
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
-    TResult? Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
-    TResult? Function()? navigateToAddRecordTrack,
-    TResult? Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult? Function(Track track)? navigateToAddRecordTrack,
+    TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
   }) {
-    return hideDetailsRecordingData?.call(ignoreLimit);
+    return hideDetailsRecordingData?.call();
   }
 
   @override
@@ -2342,16 +2305,16 @@ class _$HideDetailsRecordingDataActionImpl
         initStreamPositions,
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
-    TResult Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
-    TResult Function()? navigateToAddRecordTrack,
-    TResult Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult Function(Track track)? navigateToAddRecordTrack,
+    TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
     required TResult orElse(),
   }) {
     if (hideDetailsRecordingData != null) {
-      return hideDetailsRecordingData(ignoreLimit);
+      return hideDetailsRecordingData();
     }
     return orElse();
   }
@@ -2422,17 +2385,8 @@ class _$HideDetailsRecordingDataActionImpl
 }
 
 abstract class _HideDetailsRecordingDataAction implements RecordTrackActions {
-  const factory _HideDetailsRecordingDataAction({final bool ignoreLimit}) =
+  const factory _HideDetailsRecordingDataAction() =
       _$HideDetailsRecordingDataActionImpl;
-
-  bool get ignoreLimit;
-
-  /// Create a copy of RecordTrackActions
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$HideDetailsRecordingDataActionImplCopyWith<
-          _$HideDetailsRecordingDataActionImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2491,12 +2445,11 @@ class _$NavigateBackActionImpl
     required TResult Function(Position position, double zoom)
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
-    required TResult Function(bool ignoreLimit) hideDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
-    required TResult Function() navigateToAddRecordTrack,
-    required TResult Function(Memory memory, bool ignoreLimit)
-        showMemoryDetails,
+    required TResult Function(Track track) navigateToAddRecordTrack,
+    required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
   }) {
     return navigateBack();
@@ -2510,11 +2463,11 @@ class _$NavigateBackActionImpl
         initStreamPositions,
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
-    TResult? Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
-    TResult? Function()? navigateToAddRecordTrack,
-    TResult? Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult? Function(Track track)? navigateToAddRecordTrack,
+    TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
   }) {
     return navigateBack?.call();
@@ -2528,11 +2481,11 @@ class _$NavigateBackActionImpl
         initStreamPositions,
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
-    TResult Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
-    TResult Function()? navigateToAddRecordTrack,
-    TResult Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult Function(Track track)? navigateToAddRecordTrack,
+    TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
     required TResult orElse(),
   }) {
@@ -2717,12 +2670,11 @@ class _$NavigateToAddMemoryActionImpl
     required TResult Function(Position position, double zoom)
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
-    required TResult Function(bool ignoreLimit) hideDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
-    required TResult Function() navigateToAddRecordTrack,
-    required TResult Function(Memory memory, bool ignoreLimit)
-        showMemoryDetails,
+    required TResult Function(Track track) navigateToAddRecordTrack,
+    required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
   }) {
     return navigateToAddMemory(position);
@@ -2736,11 +2688,11 @@ class _$NavigateToAddMemoryActionImpl
         initStreamPositions,
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
-    TResult? Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
-    TResult? Function()? navigateToAddRecordTrack,
-    TResult? Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult? Function(Track track)? navigateToAddRecordTrack,
+    TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
   }) {
     return navigateToAddMemory?.call(position);
@@ -2754,11 +2706,11 @@ class _$NavigateToAddMemoryActionImpl
         initStreamPositions,
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
-    TResult Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
-    TResult Function()? navigateToAddRecordTrack,
-    TResult Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult Function(Track track)? navigateToAddRecordTrack,
+    TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
     required TResult orElse(),
   }) {
@@ -2852,6 +2804,10 @@ abstract class _$$NavigateToAddRecordTrackActionImplCopyWith<$Res> {
           _$NavigateToAddRecordTrackActionImpl value,
           $Res Function(_$NavigateToAddRecordTrackActionImpl) then) =
       __$$NavigateToAddRecordTrackActionImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Track track});
+
+  $TrackCopyWith<$Res> get track;
 }
 
 /// @nodoc
@@ -2866,6 +2822,28 @@ class __$$NavigateToAddRecordTrackActionImplCopyWithImpl<$Res>
 
   /// Create a copy of RecordTrackActions
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? track = null,
+  }) {
+    return _then(_$NavigateToAddRecordTrackActionImpl(
+      track: null == track
+          ? _value.track
+          : track // ignore: cast_nullable_to_non_nullable
+              as Track,
+    ));
+  }
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TrackCopyWith<$Res> get track {
+    return $TrackCopyWith<$Res>(_value.track, (value) {
+      return _then(_value.copyWith(track: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -2873,29 +2851,45 @@ class __$$NavigateToAddRecordTrackActionImplCopyWithImpl<$Res>
 class _$NavigateToAddRecordTrackActionImpl
     with DiagnosticableTreeMixin
     implements _NavigateToAddRecordTrackAction {
-  const _$NavigateToAddRecordTrackActionImpl();
+  const _$NavigateToAddRecordTrackActionImpl({required this.track});
+
+  @override
+  final Track track;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RecordTrackActions.navigateToAddRecordTrack()';
+    return 'RecordTrackActions.navigateToAddRecordTrack(track: $track)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty(
-        'type', 'RecordTrackActions.navigateToAddRecordTrack'));
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'RecordTrackActions.navigateToAddRecordTrack'))
+      ..add(DiagnosticsProperty('track', track));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$NavigateToAddRecordTrackActionImpl);
+            other is _$NavigateToAddRecordTrackActionImpl &&
+            (identical(other.track, track) || other.track == track));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, track);
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NavigateToAddRecordTrackActionImplCopyWith<
+          _$NavigateToAddRecordTrackActionImpl>
+      get copyWith => __$$NavigateToAddRecordTrackActionImplCopyWithImpl<
+          _$NavigateToAddRecordTrackActionImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2906,15 +2900,14 @@ class _$NavigateToAddRecordTrackActionImpl
     required TResult Function(Position position, double zoom)
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
-    required TResult Function(bool ignoreLimit) hideDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
-    required TResult Function() navigateToAddRecordTrack,
-    required TResult Function(Memory memory, bool ignoreLimit)
-        showMemoryDetails,
+    required TResult Function(Track track) navigateToAddRecordTrack,
+    required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
   }) {
-    return navigateToAddRecordTrack();
+    return navigateToAddRecordTrack(track);
   }
 
   @override
@@ -2925,14 +2918,14 @@ class _$NavigateToAddRecordTrackActionImpl
         initStreamPositions,
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
-    TResult? Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
-    TResult? Function()? navigateToAddRecordTrack,
-    TResult? Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult? Function(Track track)? navigateToAddRecordTrack,
+    TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
   }) {
-    return navigateToAddRecordTrack?.call();
+    return navigateToAddRecordTrack?.call(track);
   }
 
   @override
@@ -2943,16 +2936,16 @@ class _$NavigateToAddRecordTrackActionImpl
         initStreamPositions,
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
-    TResult Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
-    TResult Function()? navigateToAddRecordTrack,
-    TResult Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult Function(Track track)? navigateToAddRecordTrack,
+    TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
     required TResult orElse(),
   }) {
     if (navigateToAddRecordTrack != null) {
-      return navigateToAddRecordTrack();
+      return navigateToAddRecordTrack(track);
     }
     return orElse();
   }
@@ -3023,8 +3016,17 @@ class _$NavigateToAddRecordTrackActionImpl
 }
 
 abstract class _NavigateToAddRecordTrackAction implements RecordTrackActions {
-  const factory _NavigateToAddRecordTrackAction() =
+  const factory _NavigateToAddRecordTrackAction({required final Track track}) =
       _$NavigateToAddRecordTrackActionImpl;
+
+  Track get track;
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$NavigateToAddRecordTrackActionImplCopyWith<
+          _$NavigateToAddRecordTrackActionImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3034,7 +3036,7 @@ abstract class _$$ShowMemoryDetailsActionImplCopyWith<$Res> {
           $Res Function(_$ShowMemoryDetailsActionImpl) then) =
       __$$ShowMemoryDetailsActionImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({Memory memory, bool ignoreLimit});
+  $Res call({Memory memory});
 
   $MemoryCopyWith<$Res> get memory;
 }
@@ -3055,17 +3057,12 @@ class __$$ShowMemoryDetailsActionImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? memory = null,
-    Object? ignoreLimit = null,
   }) {
     return _then(_$ShowMemoryDetailsActionImpl(
       memory: null == memory
           ? _value.memory
           : memory // ignore: cast_nullable_to_non_nullable
               as Memory,
-      ignoreLimit: null == ignoreLimit
-          ? _value.ignoreLimit
-          : ignoreLimit // ignore: cast_nullable_to_non_nullable
-              as bool,
     ));
   }
 
@@ -3085,18 +3082,14 @@ class __$$ShowMemoryDetailsActionImplCopyWithImpl<$Res>
 class _$ShowMemoryDetailsActionImpl
     with DiagnosticableTreeMixin
     implements _ShowMemoryDetailsAction {
-  const _$ShowMemoryDetailsActionImpl(
-      {required this.memory, this.ignoreLimit = false});
+  const _$ShowMemoryDetailsActionImpl({required this.memory});
 
   @override
   final Memory memory;
-  @override
-  @JsonKey()
-  final bool ignoreLimit;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RecordTrackActions.showMemoryDetails(memory: $memory, ignoreLimit: $ignoreLimit)';
+    return 'RecordTrackActions.showMemoryDetails(memory: $memory)';
   }
 
   @override
@@ -3104,8 +3097,7 @@ class _$ShowMemoryDetailsActionImpl
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'RecordTrackActions.showMemoryDetails'))
-      ..add(DiagnosticsProperty('memory', memory))
-      ..add(DiagnosticsProperty('ignoreLimit', ignoreLimit));
+      ..add(DiagnosticsProperty('memory', memory));
   }
 
   @override
@@ -3113,13 +3105,11 @@ class _$ShowMemoryDetailsActionImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ShowMemoryDetailsActionImpl &&
-            (identical(other.memory, memory) || other.memory == memory) &&
-            (identical(other.ignoreLimit, ignoreLimit) ||
-                other.ignoreLimit == ignoreLimit));
+            (identical(other.memory, memory) || other.memory == memory));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, memory, ignoreLimit);
+  int get hashCode => Object.hash(runtimeType, memory);
 
   /// Create a copy of RecordTrackActions
   /// with the given fields replaced by the non-null parameter values.
@@ -3139,15 +3129,14 @@ class _$ShowMemoryDetailsActionImpl
     required TResult Function(Position position, double zoom)
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
-    required TResult Function(bool ignoreLimit) hideDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
-    required TResult Function() navigateToAddRecordTrack,
-    required TResult Function(Memory memory, bool ignoreLimit)
-        showMemoryDetails,
+    required TResult Function(Track track) navigateToAddRecordTrack,
+    required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
   }) {
-    return showMemoryDetails(memory, ignoreLimit);
+    return showMemoryDetails(memory);
   }
 
   @override
@@ -3158,14 +3147,14 @@ class _$ShowMemoryDetailsActionImpl
         initStreamPositions,
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
-    TResult? Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
-    TResult? Function()? navigateToAddRecordTrack,
-    TResult? Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult? Function(Track track)? navigateToAddRecordTrack,
+    TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
   }) {
-    return showMemoryDetails?.call(memory, ignoreLimit);
+    return showMemoryDetails?.call(memory);
   }
 
   @override
@@ -3176,16 +3165,16 @@ class _$ShowMemoryDetailsActionImpl
         initStreamPositions,
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
-    TResult Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
-    TResult Function()? navigateToAddRecordTrack,
-    TResult Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult Function(Track track)? navigateToAddRecordTrack,
+    TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
     required TResult orElse(),
   }) {
     if (showMemoryDetails != null) {
-      return showMemoryDetails(memory, ignoreLimit);
+      return showMemoryDetails(memory);
     }
     return orElse();
   }
@@ -3256,12 +3245,10 @@ class _$ShowMemoryDetailsActionImpl
 }
 
 abstract class _ShowMemoryDetailsAction implements RecordTrackActions {
-  const factory _ShowMemoryDetailsAction(
-      {required final Memory memory,
-      final bool ignoreLimit}) = _$ShowMemoryDetailsActionImpl;
+  const factory _ShowMemoryDetailsAction({required final Memory memory}) =
+      _$ShowMemoryDetailsActionImpl;
 
   Memory get memory;
-  bool get ignoreLimit;
 
   /// Create a copy of RecordTrackActions
   /// with the given fields replaced by the non-null parameter values.
@@ -3330,12 +3317,11 @@ class _$HideMemoryDetailsActionImpl
     required TResult Function(Position position, double zoom)
         moveToUserPosition,
     required TResult Function() showDetailsRecordingData,
-    required TResult Function(bool ignoreLimit) hideDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
-    required TResult Function() navigateToAddRecordTrack,
-    required TResult Function(Memory memory, bool ignoreLimit)
-        showMemoryDetails,
+    required TResult Function(Track track) navigateToAddRecordTrack,
+    required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
   }) {
     return hideMemoryDetails();
@@ -3349,11 +3335,11 @@ class _$HideMemoryDetailsActionImpl
         initStreamPositions,
     TResult? Function(Position position, double zoom)? moveToUserPosition,
     TResult? Function()? showDetailsRecordingData,
-    TResult? Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
-    TResult? Function()? navigateToAddRecordTrack,
-    TResult? Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult? Function(Track track)? navigateToAddRecordTrack,
+    TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
   }) {
     return hideMemoryDetails?.call();
@@ -3367,11 +3353,11 @@ class _$HideMemoryDetailsActionImpl
         initStreamPositions,
     TResult Function(Position position, double zoom)? moveToUserPosition,
     TResult Function()? showDetailsRecordingData,
-    TResult Function(bool ignoreLimit)? hideDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
-    TResult Function()? navigateToAddRecordTrack,
-    TResult Function(Memory memory, bool ignoreLimit)? showMemoryDetails,
+    TResult Function(Track track)? navigateToAddRecordTrack,
+    TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
     required TResult orElse(),
   }) {

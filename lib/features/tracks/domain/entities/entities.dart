@@ -5,3 +5,4 @@ part 'entities.freezed.dart';
 part 'memory.dart';
 part 'position.dart';
 part 'position_data.dart';
+part 'track.dart';

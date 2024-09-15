@@ -969,6 +969,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Memories`
+  String get memories {
+    return Intl.message(
+      'Memories',
+      name: 'memories',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

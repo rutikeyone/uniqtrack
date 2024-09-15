@@ -3,6 +3,7 @@ part of 'entities.dart';
 @freezed
 class User with _$User {
   const factory User({
+    required String? id,
     required String? name,
     required String? photo,
     required String? email,

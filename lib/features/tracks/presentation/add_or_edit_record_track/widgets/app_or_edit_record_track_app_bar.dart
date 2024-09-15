@@ -22,7 +22,7 @@ class _AddOrEditRecordTrackAppBar extends ConsumerWidget
         ),
       ),
       title: store.modeState.when(
-        add: () => Text(
+        add: (_) => Text(
           S.of(context).addTrack,
           style: textStyle,
         ),

@@ -373,21 +373,29 @@ abstract class _RecordTrackStore with Store {
   void showMemoryDetails(Memory memory) {
     trackRecordStatusState.mapOrNull(
       recording: (state) {
-        final ignoreLimit = bottomSheetState.maybeWhen(
-          memoryDetails: () => true,
-          orElse: () => false,
-        );
-        final duration = Duration(milliseconds: 150);
+        final currentBottomSheetState = bottomSheetState;
+
+        final lessDuration = Duration(milliseconds: 150);
+        final moreDuration = Duration(milliseconds: 300);
 
         final hideDetailsRecordingDataAction =
-            RecordTrackActions.hideDetailsRecordingData(
-                ignoreLimit: ignoreLimit);
+            RecordTrackActions.hideDetailsRecordingData();
         actions = Activity(hideDetailsRecordingDataAction);
         bottomSheetState = RecordTrackBottomSheetState.none();
 
-        Future.delayed(duration, () {
+        currentBottomSheetState.whenOrNull(memoryDetails: () {
+          Future.delayed(lessDuration, () {
+            final hideDetailsRecordingDataAction =
+                RecordTrackActions.hideMemoryDetails();
+            actions = Activity(hideDetailsRecordingDataAction);
+            bottomSheetState = RecordTrackBottomSheetState.none();
+          });
+        });
+
+        Future.delayed(moreDuration, () {
           final showMemoryDetailsAction = RecordTrackActions.showMemoryDetails(
-              memory: memory, ignoreLimit: ignoreLimit);
+            memory: memory,
+          );
 
           actions = Activity(showMemoryDetailsAction);
           bottomSheetState = RecordTrackBottomSheetState.memoryDetails();
@@ -702,14 +710,42 @@ abstract class _RecordTrackStore with Store {
   @action
   Future<void> _saveAndFinishRecordTrack({bool closeDialog = false}) async {
     if (trackRecordStatusState.isWithoutRecording) return;
-    await _finishRecordTrack(closeDialog: closeDialog);
 
-    final navigateToAddRecordTrackAction =
-        RecordTrackActions.navigateToAddRecordTrack();
-    final navigateToAddRecordTrackActivity =
-        Activity(navigateToAddRecordTrackAction);
+    final duration = const Duration(milliseconds: 200);
 
-    actions = navigateToAddRecordTrackActivity;
+    await trackRecordStatusState.maybeMap(
+      recording: (state) async {
+        final finishPosition = state.positions.isNotEmpty
+            ? PositionData(positions: state.positions)
+            : null;
+
+        final positions = switch (finishPosition) {
+          PositionData() => [...state.positionsData, finishPosition],
+          null => state.positionsData,
+        };
+
+        final track = Track(
+          id: null,
+          creatorId: null,
+          positions: positions,
+          distance: state.distance,
+          duration: state.duration,
+          averageSpeed: state.averageSpeed,
+          maxAltitude: state.maxAltitude,
+          memories: state.memories,
+        );
+
+        await _finishRecordTrack(closeDialog: closeDialog);
+
+        final navigateToAddRecordTrackAction =
+            RecordTrackActions.navigateToAddRecordTrack(track: track);
+        final navigateToAddRecordTrackActivity =
+            Activity(navigateToAddRecordTrackAction);
+
+        actions = navigateToAddRecordTrackActivity;
+      },
+      orElse: () async => await _finishRecordTrack(closeDialog: closeDialog),
+    );
   }
 
   @action
