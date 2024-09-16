@@ -120,6 +120,7 @@ class StoreFactoryImpl implements StoreFactory {
       track: track,
       commonUIDelegate: _commonUIDelegate,
       recordTrackRepository: _recordTrackRepository,
+      uuid: _uuid,
     );
   }
 

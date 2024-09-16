@@ -5,7 +5,10 @@ import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/generated/l10n.dart';
 
 class MemoryDetailsDeleteButton extends StatelessWidget {
+  final VoidCallback onDeletePressed;
+
   const MemoryDetailsDeleteButton({
+    required this.onDeletePressed,
     super.key,
   });
 
@@ -21,7 +24,7 @@ class MemoryDetailsDeleteButton extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(AppDiments.dm6),
           text: S.of(context).delete,
-          onPressed: () {},
+          onPressed: onDeletePressed,
           icon: Padding(
             padding: const EdgeInsets.only(left: AppDiments.dm8),
             child: Icon(

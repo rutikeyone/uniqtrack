@@ -8,7 +8,6 @@ import 'package:uniqtrack/app/navigation/paths/photo_viewer_path.dart';
 import 'package:uniqtrack/app/navigation/paths/record_track_path.dart';
 import 'package:uniqtrack/app/navigation/paths/register_path.dart';
 import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
-import 'package:uniqtrack/features/tracks/domain/converters/position_converter.dart';
 
 abstract class NavCallbackStoreBuilder {
   static ForgotPasswordNavCallbackStore createForgotPasswordNavCallbackStore({

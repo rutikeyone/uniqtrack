@@ -9,6 +9,7 @@ import 'package:uniqtrack/core/common/validation/entities/comment.dart';
 import 'package:uniqtrack/core/common/validation/entities/track_name.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/domain/record_track_repository.dart';
+import 'package:uuid/uuid.dart';
 
 import 'states/states.dart';
 
@@ -27,6 +28,8 @@ class AddOrEditRecordTrackStore = _AddOrEditRecordTrackStore
 abstract class _AddOrEditRecordTrackStore with Store {
   final CommonUIDelegate _commonUIDelegate;
   final RecordTrackRepository _recordTrackRepository;
+
+  final Uuid _uuid;
 
   @observable
   AddOrEditRecordTrackModeState modeState;
@@ -73,10 +76,12 @@ abstract class _AddOrEditRecordTrackStore with Store {
     required Track? track,
     required CommonUIDelegate commonUIDelegate,
     required RecordTrackRepository recordTrackRepository,
+    required Uuid uuid,
   })  : _commonUIDelegate = commonUIDelegate,
         _recordTrackRepository = recordTrackRepository,
         modeState = AddOrEditRecordTrackModeState.add(track: track),
-        memories = track?.memories ?? [];
+        memories = track?.memories ?? [],
+        _uuid = uuid;
 
   @action
   void updateComment(String? value) {
@@ -104,6 +109,7 @@ abstract class _AddOrEditRecordTrackStore with Store {
     final track = modeState.when(
       add: (track) {
         return track?.copyWith(
+          id: _uuid.v1(),
           name: nameValue,
           comment: commentValue,
         );
@@ -115,7 +121,7 @@ abstract class _AddOrEditRecordTrackStore with Store {
 
     statusMode = FormzSubmissionStatus.inProgress;
 
-    final result = await _recordTrackRepository.saveRecordTrackData(track);
+    final result = await _recordTrackRepository.addRecordTrackData(track);
 
     result.fold(
       _handleSaveRecordTrackDataFailureResult,

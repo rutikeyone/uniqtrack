@@ -16,12 +16,14 @@ class MemoryDetailsBottomSheet extends StatelessWidget {
   final void Function(Uint8List?) navigateToPhotoViewerByBytes;
   final void Function(String?) navigateToPhotoViewerByLink;
   final VoidCallback navigateBack;
+  final VoidCallback onDeletePressed;
 
   const MemoryDetailsBottomSheet({
     required this.memory,
     required this.navigateToPhotoViewerByBytes,
     required this.navigateToPhotoViewerByLink,
     required this.navigateBack,
+    required this.onDeletePressed,
     super.key,
   });
 
@@ -32,6 +34,7 @@ class MemoryDetailsBottomSheet extends StatelessWidget {
     required void Function(Uint8List?) navigateToPhotoViewerByBytes,
     required void Function(String?) navigateToPhotoViewerByLink,
     required VoidCallback navigateBack,
+    required VoidCallback onDeletePressed,
   }) {
     return scaffoldKey.currentState?.showBottomSheet(
       (context) {
@@ -40,6 +43,7 @@ class MemoryDetailsBottomSheet extends StatelessWidget {
           navigateToPhotoViewerByBytes: navigateToPhotoViewerByBytes,
           navigateToPhotoViewerByLink: navigateToPhotoViewerByLink,
           navigateBack: navigateBack,
+          onDeletePressed: onDeletePressed,
         );
       },
       enableDrag: false,
@@ -84,6 +88,7 @@ class MemoryDetailsBottomSheet extends StatelessWidget {
                 ),
                 MemoryDetailsActionButtons(
                   navigateBack: navigateBack,
+                  onDeletePressed: onDeletePressed,
                 ),
               ],
             ),

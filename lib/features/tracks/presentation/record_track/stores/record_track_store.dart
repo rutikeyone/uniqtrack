@@ -442,6 +442,22 @@ abstract class _RecordTrackStore with Store {
     );
   }
 
+  @action
+  void deleteMemory(Memory memory) {
+    trackRecordStatusState.mapOrNull(recording: (state) {
+      final duration = const Duration(milliseconds: 200);
+
+      final oldMemories = List.of(state.memories, growable: true);
+      final newMemories = oldMemories..remove(memory);
+
+      trackRecordStatusState = state.copyWith(memories: newMemories);
+
+      Future.delayed(duration, () {
+        hideMemoryDetails();
+      });
+    });
+  }
+
   void dispose() {
     _disposeUserPositionChanges();
     _disposeTimer();

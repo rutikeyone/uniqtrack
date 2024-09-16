@@ -1,27 +1,23 @@
-import 'dart:convert';
-
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uniqtrack/data/tracks/converters/position_model_converter.dart';
 import 'package:uniqtrack/data/tracks/models/models.dart';
 
 import 'position_data_model_converter.dart';
 
 class ListPositionDataConverter
-    implements JsonConverter<List<PositionDataModel>?, String?> {
+    implements JsonConverter<List<PositionDataModel>?, List?> {
   const ListPositionDataConverter();
 
   @override
-  List<PositionDataModel>? fromJson(String? json) {
+  List<PositionDataModel>? fromJson(List? data) {
     final positionDataModelConverter = PositionDataModelConverterImpl();
 
     try {
-      if (json == null) {
+      if (data == null) {
         return null;
       }
 
-      final decoded = jsonDecode(json) as List?;
-      final result = decoded
-          ?.map((item) => positionDataModelConverter.fromJson(item))
+      final result = data
+          .map((item) => positionDataModelConverter.fromJson(item))
           .nonNulls
           .toList();
       return result;
@@ -31,7 +27,7 @@ class ListPositionDataConverter
   }
 
   @override
-  String? toJson(List<PositionDataModel>? object) {
+  List? toJson(List<PositionDataModel>? object) {
     final positionDataModelConverter = PositionDataModelConverterImpl();
 
     if (object == null) {
@@ -45,7 +41,6 @@ class ListPositionDataConverter
         .nonNulls
         .toList();
 
-    final jsonResult = jsonEncode(result);
-    return jsonResult;
+    return result;
   }
 }

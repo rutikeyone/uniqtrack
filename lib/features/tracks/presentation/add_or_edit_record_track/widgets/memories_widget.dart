@@ -1,9 +1,7 @@
 part of '../pages/add_or_edit_record_track_page.dart';
 
 class _MemoriesWidget extends StatelessWidget {
-  const _MemoriesWidget({
-    super.key,
-  });
+  const _MemoriesWidget();
 
   @override
   Widget build(BuildContext context) {

@@ -62,20 +62,24 @@ _$TrackModelImpl _$$TrackModelImplFromJson(Map<String, dynamic> json) =>
     _$TrackModelImpl(
       id: json['id'] as String?,
       creatorId: json['creatorId'] as String?,
+      name: json['name'] as String?,
+      comment: json['comment'] as String?,
       positions: const ListPositionDataConverter()
-          .fromJson(json['positions'] as String?),
+          .fromJson(json['positions'] as List?),
       distance: (json['distance'] as num?)?.toDouble(),
       duration: (json['duration'] as num?)?.toInt(),
       averageSpeed: (json['averageSpeed'] as num?)?.toDouble(),
       maxAltitude: (json['maxAltitude'] as num?)?.toDouble(),
-      memories: const ListMemoryModelConverter()
-          .fromJson(json['memories'] as String?),
+      memories:
+          const ListMemoryModelConverter().fromJson(json['memories'] as List?),
     );
 
 Map<String, dynamic> _$$TrackModelImplToJson(_$TrackModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'creatorId': instance.creatorId,
+      'name': instance.name,
+      'comment': instance.comment,
       'positions': const ListPositionDataConverter().toJson(instance.positions),
       'distance': instance.distance,
       'duration': instance.duration,

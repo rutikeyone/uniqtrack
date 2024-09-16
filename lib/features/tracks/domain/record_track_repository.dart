@@ -12,5 +12,7 @@ abstract interface class RecordTrackRepository {
 
   Stream<Position> listenPositions(AppLocationSettings settings);
 
-  Future<Either<AppError, void>> saveRecordTrackData(Track track);
+  Future<Either<AppError, void>> addRecordTrackData(Track track);
+
+  Stream<List<Track>> listenTracks();
 }

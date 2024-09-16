@@ -11,8 +11,11 @@ TracksDataRepository tracksDataRepository(TracksDataRepositoryRef ref) {
   final firebaseFireStore = ref.watch(firebaseFireStoreProvider);
   final appErrorHandler = ref.watch(appErrorHandlerProvider);
 
+  final firebaseAuth = ref.watch(firebaseAuthProvider);
+
   return TracksDataRepositoryImpl(
     firebaseFireStore: firebaseFireStore,
     appErrorHandler: appErrorHandler,
+    firebaseAuth: firebaseAuth,
   );
 }

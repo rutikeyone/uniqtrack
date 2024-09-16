@@ -4,6 +4,8 @@ import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 
 abstract interface class PositionDataMapper {
   PositionDataModel toPositionDataModel(PositionData positionData);
+
+  PositionData toPositionData(PositionDataModel model);
 }
 
 class PositionDataMapperImpl implements PositionDataMapper {
@@ -20,5 +22,14 @@ class PositionDataMapperImpl implements PositionDataMapper {
         .toList();
 
     return PositionDataModel(positions: positions);
+  }
+
+  @override
+  PositionData toPositionData(PositionDataModel model) {
+    final positions = model.positions
+        ?.map((item) => _positionMapper.fromModelToPosition(item))
+        .toList();
+
+    return PositionData(positions: positions);
   }
 }

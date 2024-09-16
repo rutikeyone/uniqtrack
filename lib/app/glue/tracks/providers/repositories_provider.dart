@@ -10,15 +10,12 @@ RecordTrackRepository recordTrackRepository(RecordTrackRepositoryRef ref) {
   final tracksDataRepository = ref.watch(tracksDataRepositoryProvider);
   final accountsDataRepository = ref.watch(accountsDataRepositoryProvider);
 
-  final uuid = ref.watch(uuidProvider);
-
   return RecordTrackAdapterRepository(
     appLocationHandler: appLocationHandler,
     positionMapper: positionMapper,
     trackMapper: trackMapper,
     tracksDataRepository: tracksDataRepository,
     accountsDataRepository: accountsDataRepository,
-    uuid: uuid,
   );
 }
 

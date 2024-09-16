@@ -19,10 +19,9 @@ abstract interface class AccountsDataRepository {
 
   Future<Either<AppError, void>> signOut();
 
-  Future<Either<AppError, void>> saveMyRecordTrackData({
-    required TrackModel track,
-    required String id,
-  });
+  Future<Either<AppError, void>> addMyRecordTrackData(TrackModel track);
 
   Future<UserModel?> fetchCurrentUser();
+
+  Stream<List<TrackModel>?> listenUserTracks(String uid);
 }

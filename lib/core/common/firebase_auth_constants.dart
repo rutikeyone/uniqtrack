@@ -7,10 +7,6 @@ class FirebaseAuthConstants {
   static const userTokenExpired = "user-token-expired";
   static const networkRequestFailed = "network-request-failed";
   static const profilePictures = "profilePictures";
-  static const users = "users";
-  static const recordTracks = "recordTracks";
-  static const userCollections = "userCollections";
-  static const myRecordTracks = "myRecordTracks";
   static const userDisabled = "user-disabled";
   static const userNotFound = "user-not-found";
   static const wrongPassword = "wrong-password";

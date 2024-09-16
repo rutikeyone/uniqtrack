@@ -16,4 +16,5 @@ class IconsAssets {
   final delete = "$dir/ic_delete.svg";
   final memory = "$dir/ic_memory.svg";
   final memoryMap = "$dir/ic_memory.png";
+  final more = "$dir/ic_more.svg";
 }

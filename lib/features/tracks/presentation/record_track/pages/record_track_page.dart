@@ -451,6 +451,7 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
           navigateToPhotoViewerByBytes:
               navCallbackStore.navigateToPhotoViewerByBytes,
           navigateBack: _store.hideMemoryDetails,
+          onDeletePressed: () => _store.deleteMemory(memory),
         );
       });
     }

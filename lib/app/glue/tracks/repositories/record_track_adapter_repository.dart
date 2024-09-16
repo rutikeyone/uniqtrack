@@ -9,7 +9,6 @@ import 'package:uniqtrack/data/accounts/accounts_data_repository.dart';
 import 'package:uniqtrack/data/tracks/tracks_data_repository.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/domain/record_track_repository.dart';
-import 'package:uuid/uuid.dart';
 
 class RecordTrackAdapterRepository implements RecordTrackRepository {
   final AppLocationHandler _appLocationHandler;
@@ -19,21 +18,17 @@ class RecordTrackAdapterRepository implements RecordTrackRepository {
   final AccountsDataRepository _accountsDataRepository;
   final TracksDataRepository _tracksDataRepository;
 
-  final Uuid _uuid;
-
   const RecordTrackAdapterRepository({
     required AppLocationHandler appLocationHandler,
     required PositionMapper positionMapper,
     required TrackMapper trackMapper,
     required AccountsDataRepository accountsDataRepository,
     required TracksDataRepository tracksDataRepository,
-    required Uuid uuid,
   })  : _appLocationHandler = appLocationHandler,
         _positionMapper = positionMapper,
         _trackMapper = trackMapper,
         _accountsDataRepository = accountsDataRepository,
-        _tracksDataRepository = tracksDataRepository,
-        _uuid = uuid;
+        _tracksDataRepository = tracksDataRepository;
 
   @override
   Future<AppLocationPermissionResult> requestLocationPermission() {
@@ -58,48 +53,42 @@ class RecordTrackAdapterRepository implements RecordTrackRepository {
   }
 
   @override
-  Future<Either<AppError, void>> saveRecordTrackData(Track track) async {
-    final currentUser = await _accountsDataRepository.fetchCurrentUser();
-    final user = currentUser?.userId;
+  Future<Either<AppError, void>> addRecordTrackData(Track track) async {
+    final trackModel = _trackMapper.toTrackModel(track);
 
-    if (user == null) {
-      final category = AuthenticationErrorCategory.notAuth();
-      final appError = AppError.authentication(category: category);
-      return Left(appError);
-    }
+    final addRecordTrackDataResult =
+        await _tracksDataRepository.addRecordTrackData(trackModel);
 
-    final trackModel = _trackMapper.toTrackModel(track).copyWith(
-          id: _uuid.v1(),
-          creatorId: user,
-        );
-
-    final saveRecordTrackDataResult =
-        await _tracksDataRepository.saveRecordTrackData(trackModel);
-
-    final saveRecordTrackDataFailureResult = saveRecordTrackDataResult.fold(
+    final addRecordTrackDataFailureResult = addRecordTrackDataResult.fold(
       (value) => value,
       (_) => null,
     );
 
-    if (saveRecordTrackDataFailureResult != null) {
-      return Left(saveRecordTrackDataFailureResult);
+    if (addRecordTrackDataFailureResult != null) {
+      return Left(addRecordTrackDataFailureResult);
     }
 
-    final saveMyRecordTrackDataResult =
-        await _accountsDataRepository.saveMyRecordTrackData(
-      track: trackModel,
-      id: user,
-    );
+    final addMyRecordTrackDataResult =
+        await _accountsDataRepository.addMyRecordTrackData(trackModel);
 
-    final saveMyRecordTrackDataFailureResult = saveMyRecordTrackDataResult.fold(
+    final addMyRecordTrackDataFailureResult = addMyRecordTrackDataResult.fold(
       (value) => value,
       (_) => null,
     );
 
-    if (saveMyRecordTrackDataFailureResult != null) {
-      return Left(saveMyRecordTrackDataFailureResult);
+    if (addMyRecordTrackDataFailureResult != null) {
+      return Left(addMyRecordTrackDataFailureResult);
     }
 
-    return Right(saveMyRecordTrackDataFailureResult);
+    return Right(addMyRecordTrackDataFailureResult);
+  }
+
+  @override
+  Stream<List<Track>> listenTracks() {
+    return _tracksDataRepository.listenTracks().map((list) {
+      return list.map((item) {
+        return _trackMapper.toTrack(item);
+      }).toList();
+    });
   }
 }

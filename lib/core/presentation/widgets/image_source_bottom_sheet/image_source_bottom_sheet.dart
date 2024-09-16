@@ -17,7 +17,6 @@ class ImageSourceModalBottomSheet extends StatelessWidget {
 
   final VoidCallback onClosePressed;
 
-
   const ImageSourceModalBottomSheet({
     super.key,
     required this.onFromGalleryPressed,
@@ -41,11 +40,6 @@ class ImageSourceModalBottomSheet extends StatelessWidget {
             child: Column(
               children: [
                 const _ImageSourceHeaderWidget(),
-                Container(
-                  width: context.fullWidth,
-                  color: context.theme.dividerColor,
-                  height: AppDiments.dm1,
-                ),
                 _ImageSourceChooseFromGalleryTile(
                   onPressed: () {
                     onClosePressed();

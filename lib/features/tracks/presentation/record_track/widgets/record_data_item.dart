@@ -19,7 +19,7 @@ class RecordDataItem extends StatelessWidget {
       children: [
         Text(
           value,
-          style: context.primaryTextTheme.displaySmall?.copyWith(
+          style: context.primaryTextTheme.bodyLarge?.copyWith(
             fontWeight: FontWeight.w600,
           ),
           maxLines: 1,

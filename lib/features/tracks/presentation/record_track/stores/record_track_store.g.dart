@@ -251,6 +251,17 @@ mixin _$RecordTrackStore on _RecordTrackStore, Store {
   }
 
   @override
+  void deleteMemory(Memory memory) {
+    final _$actionInfo = _$_RecordTrackStoreActionController.startAction(
+        name: '_RecordTrackStore.deleteMemory');
+    try {
+      return super.deleteMemory(memory);
+    } finally {
+      _$_RecordTrackStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   void _handleTimeChanged(dynamic _) {
     final _$actionInfo = _$_RecordTrackStoreActionController.startAction(
         name: '_RecordTrackStore._handleTimeChanged');

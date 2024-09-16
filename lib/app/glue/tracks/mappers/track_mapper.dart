@@ -5,6 +5,8 @@ import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 
 abstract interface class TrackMapper {
   TrackModel toTrackModel(Track track);
+
+  Track toTrack(TrackModel trackModel);
 }
 
 class TrackMapperImpl implements TrackMapper {
@@ -29,12 +31,38 @@ class TrackMapperImpl implements TrackMapper {
 
     return TrackModel(
       id: track.id,
+      name: track.name,
+      comment: track.comment,
       creatorId: track.creatorId,
       positions: positionDataModels,
       distance: track.distance,
       duration: track.duration,
       averageSpeed: track.averageSpeed,
       maxAltitude: track.maxAltitude,
+      memories: memoryModels,
+    );
+  }
+
+  @override
+  Track toTrack(TrackModel trackModel) {
+    final positionDataModels = trackModel.positions
+        ?.map((item) => _positionDataMapper.toPositionData(item))
+        .toList();
+
+    final memoryModels = trackModel.memories
+        ?.map((item) => _memoryMapper.toMemory(item))
+        .toList();
+
+    return Track(
+      id: trackModel.id,
+      name: trackModel.name,
+      comment: trackModel.comment,
+      creatorId: trackModel.creatorId,
+      positions: positionDataModels,
+      distance: trackModel.distance,
+      duration: trackModel.duration,
+      averageSpeed: trackModel.averageSpeed,
+      maxAltitude: trackModel.maxAltitude,
       memories: memoryModels,
     );
   }

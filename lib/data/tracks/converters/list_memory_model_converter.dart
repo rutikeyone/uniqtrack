@@ -1,25 +1,22 @@
-import 'dart:convert';
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:uniqtrack/data/tracks/converters/memory_model_converter.dart';
 import 'package:uniqtrack/data/tracks/models/models.dart';
 
 class ListMemoryModelConverter
-    implements JsonConverter<List<MemoryModel>?, String?> {
+    implements JsonConverter<List<MemoryModel>?, List?> {
   const ListMemoryModelConverter();
 
   @override
-  List<MemoryModel>? fromJson(String? json) {
+  List<MemoryModel>? fromJson(List? data) {
     final memoryModelConverter = MemoryModelConverterImpl();
 
     try {
-      if (json == null) {
+      if (data == null) {
         return null;
       }
 
-      final decode = jsonDecode(json) as List?;
-      final result = decode
-          ?.map((item) => memoryModelConverter.fromJson(item))
+      final result = data
+          .map((item) => memoryModelConverter.fromJson(item))
           .nonNulls
           .toList();
       return result;
@@ -29,7 +26,7 @@ class ListMemoryModelConverter
   }
 
   @override
-  String? toJson(List<MemoryModel>? object) {
+  List? toJson(List<MemoryModel>? object) {
     final memoryModelConverter = MemoryModelConverterImpl();
 
     try {
@@ -44,8 +41,7 @@ class ListMemoryModelConverter
           .nonNulls
           .toList();
 
-      final jsonResult = jsonEncode(result);
-      return jsonResult;
+      return result;
     } catch (e) {
       return null;
     }

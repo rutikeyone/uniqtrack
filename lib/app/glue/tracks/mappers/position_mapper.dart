@@ -6,6 +6,8 @@ abstract interface class PositionMapper {
   Position toPosition(AppPosition position);
 
   PositionModel toPositionModel(Position position);
+
+  Position fromModelToPosition(PositionModel position);
 }
 
 class PositionMapperImpl implements PositionMapper {
@@ -21,6 +23,15 @@ class PositionMapperImpl implements PositionMapper {
   @override
   PositionModel toPositionModel(Position position) {
     return PositionModel(
+      latitude: position.latitude,
+      longitude: position.longitude,
+      altitude: position.altitude,
+    );
+  }
+
+  @override
+  Position fromModelToPosition(PositionModel position) {
+    return Position(
       latitude: position.latitude,
       longitude: position.longitude,
       altitude: position.altitude,

@@ -31,7 +31,15 @@ class AddOrEditMemoryArgsConverterImpl implements AddOrEditMemoryArgsConverter {
               final data = json.map((key, item) {
                 return MapEntry(key, item.toString());
               });
-              return _positionConverter.fromJson(data);
+              final jsonItem = data[_positionArgument];
+              final itemData = jsonItem != null
+                  ? jsonDecode(jsonItem) as Map<String, dynamic>?
+                  : null;
+              final finalItemData = itemData
+                      ?.map((key, item) => MapEntry(key, item.toString())) ??
+                  <String, String>{};
+
+              return _positionConverter.fromJson(finalItemData);
             }.call()
           : null;
 

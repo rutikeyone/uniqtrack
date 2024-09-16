@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -17,6 +19,9 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
   final FirebaseFirestore _firebaseFireStore;
   final AppErrorHandler _appErrorHandler;
   final Uuid _uuid;
+
+  static String userTracksPath(String uid) => "users/$uid/tracks";
+  static String usersPath = "users";
 
   const AccountsDataRepositoryImpl({
     required FirebaseAuth firebaseAuth,
@@ -108,12 +113,9 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
   }
 
   @override
-  Future<Either<AppError, void>> saveMyRecordTrackData({
-    required TrackModel track,
-    required String id,
-  }) {
+  Future<Either<AppError, void>> addMyRecordTrackData(TrackModel track) {
     final result = _appErrorHandler.handle(
-      () => _saveMyRecordTrackData(track: track, id: id),
+      () => _saveMyRecordTrackData(track),
     );
 
     return result;
@@ -127,6 +129,9 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
         final uid = currentUser?.uid;
         if (uid == null) return null;
         final user = await _fetchUser(uid);
+
+        listenUserTracks(uid);
+
         return user;
       },
     );
@@ -136,6 +141,26 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
       (user) => user,
     );
   }
+
+  @override
+  Stream<List<TrackModel>?> listenUserTracks(String uid) {
+    return queryTracks(uid).snapshots().map(
+      (snapshot) {
+        final docs = snapshot.docs;
+        final result = docs.map((doc) {
+          return doc.data();
+        }).toList();
+        return result;
+      },
+    );
+  }
+
+  Query<TrackModel> queryTracks(String uid) =>
+      _firebaseFireStore.collection(userTracksPath(uid)).withConverter(
+            fromFirestore: (snapshot, _) =>
+                TrackModel.fromJson(snapshot.data()!),
+            toFirestore: (track, _) => track.toJson(),
+          );
 
   Future<String> _register({
     required String email,
@@ -217,8 +242,7 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
     );
 
     final json = user.toJson();
-    final collection =
-        _firebaseFireStore.collection(FirebaseAuthConstants.users);
+    final collection = _firebaseFireStore.collection(usersPath);
 
     final doc = collection.doc(uid);
 
@@ -226,23 +250,22 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
   }
 
   Future<UserModel> _fetchUser(String uid) async {
-    final collection =
-        _firebaseFireStore.collection(FirebaseAuthConstants.users);
+    final collection = _firebaseFireStore.collection(usersPath);
     final doc = await collection.doc(uid).get();
     final userModel = UserModel.fromJson(doc.data()!);
     return userModel;
   }
 
-  Future<void> _saveMyRecordTrackData({
-    required TrackModel track,
-    required String id,
-  }) async {
-    final json = track.toJson();
-    final collection = _firebaseFireStore
-        .collection(FirebaseAuthConstants.userCollections)
-        .doc(id)
-        .collection(FirebaseAuthConstants.myRecordTracks);
-    final doc = collection.doc(track.id ?? '0');
-    doc.set(json);
+  Future<void> _saveMyRecordTrackData(TrackModel track) async {
+    final userId = _firebaseAuth.currentUser?.uid;
+
+    if (userId == null) {
+      final category = AuthenticationErrorCategory.notAuth();
+      throw AppError.authentication(category: category);
+    }
+
+    final json = track.copyWith(creatorId: userId).toJson();
+    final collection = _firebaseFireStore.collection(userTracksPath(userId));
+    collection.add(json);
   }
 }

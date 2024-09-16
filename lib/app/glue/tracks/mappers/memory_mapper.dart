@@ -4,6 +4,8 @@ import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 
 abstract interface class MemoryMapper {
   MemoryModel toMemoryModel(Memory memory);
+
+  Memory toMemory(MemoryModel model);
 }
 
 class MemoryMapperImpl implements MemoryMapper {
@@ -26,6 +28,23 @@ class MemoryMapperImpl implements MemoryMapper {
       comment: memory.comment,
       uploadedPhotos: memory.uploadedPhotos,
       photos: memory.photos,
+      position: positions,
+    );
+  }
+
+  @override
+  Memory toMemory(MemoryModel model) {
+    final positionEntity = model.position;
+    final positions = positionEntity != null
+        ? _positionMapper.fromModelToPosition(positionEntity)
+        : null;
+
+    return Memory(
+      id: model.id,
+      name: model.name,
+      comment: model.comment,
+      uploadedPhotos: model.uploadedPhotos,
+      photos: model.photos,
       position: positions,
     );
   }

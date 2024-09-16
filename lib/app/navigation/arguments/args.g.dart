@@ -60,7 +60,7 @@ final addOrEditRecordTrackConverterProvider =
 typedef AddOrEditRecordTrackConverterRef
     = AutoDisposeProviderRef<AddOrEditRecordTrackArgsConverter>;
 String _$addOrEditMemoryArgsConverterHash() =>
-    r'1ce4f0b0c5726f645dae5a8e460d73eadfbbc098';
+    r'2e18034dab1838a37af4b6c43a0a390637e576ec';
 
 /// See also [addOrEditMemoryArgsConverter].
 @ProviderFor(addOrEditMemoryArgsConverter)

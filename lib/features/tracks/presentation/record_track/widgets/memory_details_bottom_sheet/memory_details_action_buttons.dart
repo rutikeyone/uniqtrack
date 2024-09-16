@@ -7,9 +7,11 @@ import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/memo
 
 class MemoryDetailsActionButtons extends StatelessWidget {
   final VoidCallback navigateBack;
+  final VoidCallback onDeletePressed;
 
   const MemoryDetailsActionButtons({
     required this.navigateBack,
+    required this.onDeletePressed,
     super.key,
   });
 
@@ -25,7 +27,9 @@ class MemoryDetailsActionButtons extends StatelessWidget {
             children: [
               MemoryDetailsEditButton(),
               Gap(AppDiments.dm8),
-              MemoryDetailsDeleteButton(),
+              MemoryDetailsDeleteButton(
+                onDeletePressed: onDeletePressed,
+              ),
             ],
           ),
           MemoryDetailsBackButton(navigateBack: navigateBack),
