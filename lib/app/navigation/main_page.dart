@@ -17,6 +17,13 @@ class MainPage extends ConsumerWidget {
     super.key,
   });
 
+  void _goBranch(int index) {
+    navigationShell.goBranch(
+      index,
+      initialLocation: index == navigationShell.currentIndex,
+    );
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isFirstSelected = navigationShell.currentIndex == 0;
@@ -39,8 +46,9 @@ class MainPage extends ConsumerWidget {
     return Scaffold(
       body: navigationShell,
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         currentIndex: navigationShell.currentIndex,
-        onTap: navigationShell.goBranch,
+        onTap: _goBranch,
         items: [
           BottomNavigationBarItem(
             label: S.of(context).community,

@@ -7,6 +7,7 @@ import 'package:uniqtrack/app/navigation/paths/forgot_password_path.dart';
 import 'package:uniqtrack/app/navigation/paths/photo_viewer_path.dart';
 import 'package:uniqtrack/app/navigation/paths/record_track_path.dart';
 import 'package:uniqtrack/app/navigation/paths/register_path.dart';
+import 'package:uniqtrack/app/navigation/paths/track_details_path.dart';
 import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
 
 abstract class NavCallbackStoreBuilder {
@@ -118,10 +119,12 @@ abstract class NavCallbackStoreBuilder {
 
   static CommunityNavCallbackStore createCommunityNavCallbackStore({
     required RecordTrackPath recordTrackPath,
+    required TrackDetailsPath trackDetailsPath,
     required BuildContext context,
   }) {
     final navCallbackStore = CommunityNavCallbackStore(
       navigateToTrackTracking: () => context.push(recordTrackPath.path),
+      navigateToTrackDetails: (id) => context.push(trackDetailsPath.path),
       closeDialog: context.pop,
     );
 
@@ -150,5 +153,24 @@ abstract class NavCallbackStoreBuilder {
     );
 
     return navCallbackStore;
+  }
+
+  static MyTracksNavCallbackStore createMyTracksNavCallbackStore({
+    required BuildContext context,
+    required TrackDetailsPath trackDetailsPath,
+  }) {
+    return MyTracksNavCallbackStore(
+      closeDialog: context.pop,
+      navigateToTrackDetails: (id) => context.push(trackDetailsPath.path),
+    );
+  }
+
+  static MyFavouriteTracksNavCallbackStore createMyFavouriteTracksNavCallbackStore({
+    required BuildContext context,
+    required TrackDetailsPath trackDetailsPath,
+}) {
+    return MyFavouriteTracksNavCallbackStore(
+      navigateToTrackDetails: (id) => context.push(trackDetailsPath.path),
+    );
   }
 }

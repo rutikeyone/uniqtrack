@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
-import 'package:uniqtrack/core/common/strings/app_strings.dart';
+import 'package:provider/provider.dart';
+import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
+import 'package:uniqtrack/core/common_impl/app_share_toolkit_impl.dart';
 import 'package:uniqtrack/core/common_impl/common_ui/common_ui_delegate_notifier.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_empty_list_widget.dart';
@@ -43,6 +45,19 @@ class _FavouriteTracksWidgetState extends ConsumerState<FavouriteTracksWidget> {
     ;
   }
 
+  void _shareTrack(Track track) {
+    final id = track.id;
+    if (id == null) return;
+    ref.read(appShareTooKitProvider).shareTrackId(id);
+  }
+
+  void _navigateToTrackDetails(Track track) {
+    final id = track.id;
+    if (id == null) return;
+    final navCallbackStore = context.read<MyFavouriteTracksNavCallbackStore>();
+    navCallbackStore.navigateToTrackDetails(id);
+  }
+
   @override
   Widget build(BuildContext context) {
     final userFavouriteTracks = ref.watch(userFavouriteTracksProvider);
@@ -73,7 +88,8 @@ class _FavouriteTracksWidgetState extends ConsumerState<FavouriteTracksWidget> {
               return TrackTile(
                 track: track,
                 asset: asset,
-                onMorePressed: () {},
+                onPressed: () => _navigateToTrackDetails(track),
+                onSharePressed: () => _shareTrack(track),
                 actionsWidget: Row(
                   children: [
                     isFavouriteTrack != null
@@ -91,7 +107,7 @@ class _FavouriteTracksWidgetState extends ConsumerState<FavouriteTracksWidget> {
                       padding: const EdgeInsets.only(left: AppDiments.dm6),
                       child: TrackActionButton(
                         asset: AppAssets.icons.share,
-                        onPressed: null,
+                        onPressed: () => _shareTrack(track),
                       ),
                     ),
                   ],

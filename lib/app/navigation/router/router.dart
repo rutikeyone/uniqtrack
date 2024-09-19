@@ -24,6 +24,7 @@ import 'package:uniqtrack/features/placeholders/presentation/splash/pages/splash
 import 'package:uniqtrack/features/tracks/presentation/add_or_edit_memory/pages/add_or_edit_memory_page.dart';
 import 'package:uniqtrack/features/tracks/presentation/add_or_edit_record_track/pages/add_or_edit_record_track_page.dart';
 import 'package:uniqtrack/features/tracks/presentation/community/pages/community_page.dart';
+import 'package:uniqtrack/features/tracks/presentation/details/track_details_page.dart';
 import 'package:uniqtrack/features/tracks/presentation/photo_viewer/pages/photo_viewer_page.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/pages/record_track_page.dart';
 
@@ -105,6 +106,7 @@ GoRouter router(RouterRef ref) {
                       NavCallbackStoreBuilder.createCommunityNavCallbackStore(
                     context: context,
                     recordTrackPath: AppPaths.community.tracking,
+                    trackDetailsPath: AppPaths.community.details,
                   );
 
                   return provider.Provider.value(
@@ -113,6 +115,13 @@ GoRouter router(RouterRef ref) {
                   );
                 },
                 routes: [
+                  GoRoute(
+                    parentNavigatorKey: rootNavigatorKey,
+                    path: AppPaths.community.details.goRoute,
+                    builder: (context, state) {
+                      return TrackDetailsPage();
+                    },
+                  ),
                   GoRoute(
                     parentNavigatorKey: rootNavigatorKey,
                     path: AppPaths.community.tracking.goRoute,
@@ -336,14 +345,52 @@ GoRouter router(RouterRef ref) {
                   GoRoute(
                     path: AppPaths.profile.myTracksPath.goRoute,
                     builder: (context, state) {
-                      return MyTracksPage();
+                      final navCallbackStore = NavCallbackStoreBuilder
+                          .createMyTracksNavCallbackStore(
+                        context: context,
+                        trackDetailsPath: AppPaths.profile.myTracksPath.details,
+                      );
+
+                      return provider.Provider.value(
+                        value: navCallbackStore,
+                        child: MyTracksPage(),
+                      );
                     },
+                    routes: [
+                      GoRoute(
+                        parentNavigatorKey: rootNavigatorKey,
+                        path: AppPaths.profile.myTracksPath.details.goRoute,
+                        builder: (context, state) {
+                          return TrackDetailsPage();
+                        },
+                      ),
+                    ],
                   ),
                   GoRoute(
                     path: AppPaths.profile.myFavouriteTracks.goRoute,
                     builder: (context, state) {
-                      return MyFavouriteTracksPage();
+                      final navCallbackStore = NavCallbackStoreBuilder
+                          .createMyFavouriteTracksNavCallbackStore(
+                        context: context,
+                        trackDetailsPath:
+                            AppPaths.profile.myFavouriteTracks.details,
+                      );
+
+                      return provider.Provider.value(
+                        value: navCallbackStore,
+                        child: MyFavouriteTracksPage(),
+                      );
                     },
+                    routes: [
+                      GoRoute(
+                        parentNavigatorKey: rootNavigatorKey,
+                        path:
+                            AppPaths.profile.myFavouriteTracks.details.goRoute,
+                        builder: (context, state) {
+                          return TrackDetailsPage();
+                        },
+                      ),
+                    ],
                   ),
                 ],
               ),

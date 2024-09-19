@@ -55,6 +55,8 @@ dependencies:
   sqlite3_flutter_libs: ^0.5.24
   path_provider: ^2.1.4
   drift_flutter: ^0.2.0
+  share_plus: ^10.0.2
+  sprintf: ^7.0.0
 
 dev_dependencies:
   flutter_test:

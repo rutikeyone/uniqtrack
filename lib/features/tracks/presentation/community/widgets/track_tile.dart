@@ -11,14 +11,18 @@ class TrackTile extends ConsumerWidget {
   final Track track;
   final String asset;
 
-  final VoidCallback onMorePressed;
+  final VoidCallback? onPressed;
+  final VoidCallback? onMorePressed;
+  final VoidCallback? onSharePressed;
 
   final Widget? actionsWidget;
 
   const TrackTile({
     required this.track,
     required this.asset,
-    required this.onMorePressed,
+    this.onPressed,
+    this.onMorePressed,
+    this.onSharePressed,
     this.actionsWidget,
     super.key,
   });
@@ -31,7 +35,7 @@ class TrackTile extends ConsumerWidget {
     final date = track.dateCreated;
 
     return InkWell(
-      onTap: () {},
+      onTap: onPressed,
       child: Ink(
         padding: EdgeInsets.symmetric(
           horizontal: AppDiments.dm16,
@@ -53,6 +57,7 @@ class TrackTile extends ConsumerWidget {
                       name: name,
                       asset: asset,
                       date: date,
+                      onSharePressed: onSharePressed,
                       onMorePressed: onMorePressed,
                       actionsWidget: actionsWidget,
                     ),

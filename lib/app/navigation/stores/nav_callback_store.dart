@@ -36,6 +36,7 @@ class CommunityNavCallbackStore with _$CommunityNavCallbackStore {
   const factory CommunityNavCallbackStore({
     required VoidCallback navigateToTrackTracking,
     required VoidCallback closeDialog,
+    required void Function(String) navigateToTrackDetails,
   }) = _CommunityNavCallbackStore;
 }
 
@@ -44,8 +45,10 @@ class CommunityNavCallbackStore with _$CommunityNavCallbackStore {
 class RecordTrackNavCallbackStore with _$RecordTrackNavCallbackStore {
   const factory RecordTrackNavCallbackStore({
     required VoidCallback navigateBack,
-    required Future<AddOrEditMemoryResult?> Function(Position?) navigateToAddMemory,
-    required Future<AddOrEditMemoryResult?> Function(Memory) navigateToEditMemory,
+    required Future<AddOrEditMemoryResult?> Function(Position?)
+        navigateToAddMemory,
+    required Future<AddOrEditMemoryResult?> Function(Memory)
+        navigateToEditMemory,
     required void Function(Track) navigateToAddRecordTrack,
     required void Function(String?) navigateToPhotoViewer,
   }) = _RecordTrackNavCallbackStore;
@@ -77,4 +80,22 @@ class ProfileNavCallbackStore with _$ProfileNavCallbackStore {
     required VoidCallback navigateToMyTracks,
     required VoidCallback navigateToMyFavouriteTracks,
   }) = _ProfileNavCallbackStore;
+}
+
+@immutable
+@freezed
+class MyTracksNavCallbackStore with _$MyTracksNavCallbackStore {
+  const factory MyTracksNavCallbackStore({
+    required VoidCallback closeDialog,
+    required void Function(String) navigateToTrackDetails,
+  }) = _MyTracksNavCallbackStore;
+}
+
+@immutable
+@freezed
+class MyFavouriteTracksNavCallbackStore
+    with _$MyFavouriteTracksNavCallbackStore {
+  const factory MyFavouriteTracksNavCallbackStore({
+    required void Function(String) navigateToTrackDetails,
+  }) = _MyFavouriteTracksNavCallbackStore;
 }

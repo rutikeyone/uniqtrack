@@ -12,14 +12,16 @@ class TrackUpperPartWidget extends ConsumerWidget {
   final String? name;
   final DateTime? date;
 
-  final VoidCallback onMorePressed;
+  final VoidCallback? onMorePressed;
+  final VoidCallback? onSharePressed;
   final Widget? actionsWidget;
 
   const TrackUpperPartWidget({
     required this.asset,
     required this.name,
     required this.date,
-    required this.onMorePressed,
+    this.onSharePressed,
+    this.onMorePressed,
     this.actionsWidget,
     super.key,
   });
@@ -77,7 +79,7 @@ class TrackUpperPartWidget extends ConsumerWidget {
             children: [
               TrackActionButton(
                 asset: AppAssets.icons.share,
-                onPressed: () {},
+                onPressed: onSharePressed,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: AppDiments.dm6),
