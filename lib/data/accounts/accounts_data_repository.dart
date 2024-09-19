@@ -23,5 +23,13 @@ abstract interface class AccountsDataRepository {
 
   Future<UserModel?> fetchCurrentUser();
 
-  Stream<List<TrackModel>?> listenUserTracks(String uid);
+  Stream<List<TrackModel>> listenUserTracks();
+
+  Stream<List<TrackModel>> listenUserFavouriteTracks();
+
+  Future<Either<AppError, void>> addToFavouriteTracks(TrackModel track);
+
+  Future<Either<AppError, void>> removeFromFavouriteTracks(TrackModel track);
+
+  Future<Either<AppError, void>> removeFromMyTracks(TrackModel track);
 }

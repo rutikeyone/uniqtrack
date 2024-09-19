@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Uniqtrack</string>
+	<string>UniqTrack</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -27,17 +27,17 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>The application requests access to the device's camera. This access is required for the app's features that allow you to take photos and shoot videos.</string>
+	<string>The application requests access to the device&apos;s camera. This access is required for the app&apos;s features that allow you to take photos and shoot videos.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app needs access to location when open.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>The application requires access to your device's microphone to record audio and make voice calls.</string>
+	<string>The application requires access to your device&apos;s microphone to record audio and make voice calls.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>Program requires GPS to track cars and job orders</string>
+	<string>Program requires GPS to track cars and job orders</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>The application requires access to your gallery to be able to view, edit and delete photos. Allow access to use these functions. </string>
 	<key>NSLocationAlwaysUsageDescription</key>
-    <string>This app needs access to location when in the background.</string>
+	<string>This app needs access to location when in the background.</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UIBackgroundModes</key>

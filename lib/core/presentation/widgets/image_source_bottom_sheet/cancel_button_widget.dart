@@ -1,9 +1,13 @@
-part of 'image_source_bottom_sheet.dart';
 
-class _CancelButtonWidget extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/theme/app_diments.dart';
+import 'package:uniqtrack/generated/l10n.dart';
+
+class CancelButtonWidget extends StatelessWidget {
   final VoidCallback onClosePressed;
 
-  const _CancelButtonWidget({
+  const CancelButtonWidget({
     required this.onClosePressed,
   });
 
@@ -13,7 +17,7 @@ class _CancelButtonWidget extends StatelessWidget {
       borderRadius: BorderRadius.circular(AppDiments.dm12),
       child: InkWell(
         borderRadius: BorderRadius.circular(AppDiments.dm12),
-        onTap: () => Navigator.of(context).pop(),
+        onTap: onClosePressed,
         child: Ink(
           width: context.fullWidth,
           height: AppDiments.dm60,

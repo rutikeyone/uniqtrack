@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
+import 'package:rxdart/rxdart.dart';
 import 'package:uniqtrack/core/common/activity.dart';
 import 'package:uniqtrack/core/common/app_location_handler/app_location_handler.dart';
 import 'package:uniqtrack/core/common/app_location_handler/entities/app_position.dart';
@@ -10,9 +11,11 @@ import 'package:uniqtrack/core/common/app_location_handler/entities/location_set
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/common_ui/cupertino_dialog_activity.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
+import 'package:uniqtrack/core/common/iterable_extensions.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
-import 'package:uniqtrack/features/tracks/domain/record_track_repository.dart';
+import 'package:uniqtrack/features/tracks/domain/track_repository.dart';
+import 'package:uniqtrack/features/tracks/presentation/add_or_edit_memory/add_or_edit_memory_result.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/stores/states/record_track_bottom_sheet_state.dart';
 
 import 'states/states.dart';
@@ -26,13 +29,26 @@ abstract interface class RecordTrackStoreBuilder {
 class RecordTrackStore = _RecordTrackStore with _$RecordTrackStore;
 
 abstract class _RecordTrackStore with Store {
-  final RecordTrackRepository _recordTrackRepository;
+  final TrackRepository _recordTrackRepository;
   final CommonUIDelegate _commonUIDelegate;
   final AppLocationHandler _appLocationHandler;
 
   StreamSubscription<Position>? _userPositionChangedSubscription;
 
   Timer? _timer;
+
+  final BehaviorSubject<TrackRecordStatusState>
+      _trackRecordStatusStateBehaviourSubject =
+      BehaviorSubject.seeded(TrackRecordStatusState.withoutRecording());
+
+  ValueStream<TrackRecordStatusState> get trackRecordStatusStateStream =>
+      _trackRecordStatusStateBehaviourSubject.stream;
+
+  BehaviorSubject<Memory?> _memoryDetailsBehaviourSubject =
+      BehaviorSubject.seeded(null);
+
+  ValueStream<Memory?> get memoryDetailsStream =>
+      _memoryDetailsBehaviourSubject.stream;
 
   @observable
   RecordTrackPermissionState recordTrackPermissionState =
@@ -52,12 +68,6 @@ abstract class _RecordTrackStore with Store {
   RecordTrackBottomSheetState bottomSheetState =
       RecordTrackBottomSheetState.none();
 
-  final StreamController<TrackRecordStatusState>
-      _trackRecordStatusStateStreamController = StreamController.broadcast();
-
-  Stream<TrackRecordStatusState> get trackRecordStatusStateStream =>
-      _trackRecordStatusStateStreamController.stream;
-
   @computed
   RecordTrackState get state => RecordTrackState(
         permissionState: recordTrackPermissionState,
@@ -66,13 +76,14 @@ abstract class _RecordTrackStore with Store {
       );
 
   _RecordTrackStore({
-    required RecordTrackRepository recordTrackRepository,
+    required TrackRepository recordTrackRepository,
     required CommonUIDelegate commonUIDelegate,
     required AppLocationHandler appLocationHandler,
   })  : _recordTrackRepository = recordTrackRepository,
         _commonUIDelegate = commonUIDelegate,
         _appLocationHandler = appLocationHandler {
     _checkInitialLocationPermission();
+    _checkPreviousTrack();
   }
 
   @action
@@ -136,7 +147,7 @@ abstract class _RecordTrackStore with Store {
             actions = Activity(showDetailsRecordingDataAction);
 
             trackRecordStatusState = recordingStatusState;
-            _trackRecordStatusStateStreamController.add(recordingStatusState);
+            _trackRecordStatusStateBehaviourSubject.add(recordingStatusState);
 
             _initTimer();
           } else {
@@ -217,7 +228,8 @@ abstract class _RecordTrackStore with Store {
         );
 
         trackRecordStatusState = newState;
-        _trackRecordStatusStateStreamController.add(newState);
+
+        _trackRecordStatusStateBehaviourSubject.add(newState);
 
         _disposeTimer();
       },
@@ -247,7 +259,7 @@ abstract class _RecordTrackStore with Store {
         );
 
         trackRecordStatusState = newState;
-        _trackRecordStatusStateStreamController.add(newState);
+        _trackRecordStatusStateBehaviourSubject.add(newState);
 
         _disposeTimer();
       },
@@ -290,7 +302,7 @@ abstract class _RecordTrackStore with Store {
               );
 
               trackRecordStatusState = newState;
-              _trackRecordStatusStateStreamController.add(newState);
+              _trackRecordStatusStateBehaviourSubject.add(newState);
 
               _initTimer();
             } else {
@@ -321,7 +333,7 @@ abstract class _RecordTrackStore with Store {
               );
 
               trackRecordStatusState = newState;
-              _trackRecordStatusStateStreamController.add(newState);
+              _trackRecordStatusStateBehaviourSubject.add(newState);
 
               _disposeTimer();
             }
@@ -348,15 +360,70 @@ abstract class _RecordTrackStore with Store {
   }
 
   @action
-  void addMemoryWithData(Memory? memory) {
+  void addMemoryWithData(AddOrEditMemoryResult? result) {
+    result?.whenOrNull(
+      add: (memory) {
+        trackRecordStatusState.mapOrNull(
+          recording: (state) {
+            final oldMemories = state.memories;
+            final newMemories = [...oldMemories, memory];
+
+            trackRecordStatusState = state.copyWith(memories: newMemories);
+          },
+        );
+      },
+    );
+  }
+
+  @action
+  void editMemoryWithData(AddOrEditMemoryResult? result) {
+    result?.whenOrNull(
+      edit: (memory) {
+        trackRecordStatusState.mapOrNull(
+          recording: (state) {
+            final newMemories = List.of(state.memories, growable: true);
+            final indexItem =
+                newMemories.indexWhereOrNull((item) => item.id == memory.id);
+            if (indexItem == null) return;
+            newMemories[indexItem] = memory;
+
+            trackRecordStatusState = state.copyWith(memories: newMemories);
+            _memoryDetailsBehaviourSubject.add(memory);
+          },
+        );
+      },
+      remove: (memory) => deleteMemory(memory),
+    );
+  }
+
+  @action
+  Future<void> deleteMemory(Memory? memory) async {
     if (memory == null) return;
 
-    trackRecordStatusState.mapOrNull(recording: (state) {
-      final oldMemories = state.memories;
-      final newMemories = [...oldMemories, memory];
+    trackRecordStatusState.mapOrNull(
+      recording: (state) {
+        final lessDuration = const Duration(milliseconds: 200);
+        final moreDuration = const Duration(milliseconds: 400);
 
-      trackRecordStatusState = state.copyWith(memories: newMemories);
-    });
+        final oldMemories = List.of(state.memories, growable: true);
+        final index =
+            oldMemories.indexWhereOrNull((item) => item.id == memory.id);
+
+        if (index != null) {
+          final newMemories = oldMemories..removeAt(index);
+
+          trackRecordStatusState = state.copyWith(memories: newMemories);
+        }
+
+        Future.delayed(lessDuration, () {
+          hideMemoryDetails();
+        });
+
+        Future.delayed(moreDuration, () {
+          _memoryDetailsBehaviourSubject.add(null);
+        });
+      },
+    );
   }
 
   @action
@@ -391,6 +458,8 @@ abstract class _RecordTrackStore with Store {
             bottomSheetState = RecordTrackBottomSheetState.none();
           });
         });
+
+        _memoryDetailsBehaviourSubject.add(memory);
 
         Future.delayed(moreDuration, () {
           final showMemoryDetailsAction = RecordTrackActions.showMemoryDetails(
@@ -427,14 +496,19 @@ abstract class _RecordTrackStore with Store {
 
         trackRecordStatusState.mapOrNull(
           recording: (state) {
-            final duration = const Duration(milliseconds: 150);
+            final lessDuration = const Duration(milliseconds: 150);
+            final moreDuration = const Duration(milliseconds: 400);
 
-            Future.delayed(duration, () {
+            Future.delayed(lessDuration, () {
               final hideDetailsRecordingDataAction =
                   RecordTrackActions.showDetailsRecordingData();
               actions = Activity(hideDetailsRecordingDataAction);
 
               bottomSheetState = RecordTrackBottomSheetState.recordTrack();
+            });
+
+            Future.delayed(moreDuration, () {
+              _memoryDetailsBehaviourSubject.add(null);
             });
           },
         );
@@ -443,25 +517,25 @@ abstract class _RecordTrackStore with Store {
   }
 
   @action
-  void deleteMemory(Memory memory) {
-    trackRecordStatusState.mapOrNull(recording: (state) {
-      final duration = const Duration(milliseconds: 200);
+  Future<void> editMemory(Memory? memory) async {
+    if (memory == null) return;
 
-      final oldMemories = List.of(state.memories, growable: true);
-      final newMemories = oldMemories..remove(memory);
+    trackRecordStatusState.mapOrNull(
+      recording: (_) {
+        final navigateToEditMemoryAction =
+            RecordTrackActions.navigateToEditMemory(memory: memory);
+        final activity = Activity(navigateToEditMemoryAction);
 
-      trackRecordStatusState = state.copyWith(memories: newMemories);
-
-      Future.delayed(duration, () {
-        hideMemoryDetails();
-      });
-    });
+        actions = activity;
+      },
+    );
   }
 
   void dispose() {
     _disposeUserPositionChanges();
     _disposeTimer();
-    _trackRecordStatusStateStreamController.close();
+    _trackRecordStatusStateBehaviourSubject.close();
+    _memoryDetailsBehaviourSubject.close();
   }
 
   Future<void> _checkInitialLocationPermission() async {
@@ -681,7 +755,42 @@ abstract class _RecordTrackStore with Store {
 
     userLocationState = newLocationState;
     trackRecordStatusState = newTrackRecordStatusState;
-    _trackRecordStatusStateStreamController.add(newTrackRecordStatusState);
+    _trackRecordStatusStateBehaviourSubject.add(newTrackRecordStatusState);
+
+    _saveTrackWhenUserPositionChanges();
+  }
+
+  Future<void> _saveTrackWhenUserPositionChanges() async {
+    trackRecordStatusState.mapOrNull(
+      recording: (state) => state.mapOrNull(
+        recording: (state) {
+          final finishPosition = state.positions.isNotEmpty
+              ? PositionData(positions: state.positions)
+              : null;
+
+          final positions = switch (finishPosition) {
+            PositionData() => [...state.positionsData, finishPosition],
+            null => state.positionsData,
+          };
+
+          final track = Track(
+            id: null,
+            creatorId: null,
+            name: null,
+            comment: null,
+            dateCreated: null,
+            positions: positions,
+            distance: state.distance,
+            duration: state.duration,
+            averageSpeed: state.averageSpeed,
+            maxAltitude: state.maxAltitude,
+            memories: state.memories,
+          );
+
+          _recordTrackRepository.addTrack(track);
+        },
+      ),
+    );
   }
 
   void _disposeUserPositionChanges() {
@@ -720,7 +829,7 @@ abstract class _RecordTrackStore with Store {
     );
 
     trackRecordStatusState = newTrackRecordStatusState;
-    _trackRecordStatusStateStreamController.add(newTrackRecordStatusState);
+    _trackRecordStatusStateBehaviourSubject.add(newTrackRecordStatusState);
   }
 
   @action
@@ -743,6 +852,7 @@ abstract class _RecordTrackStore with Store {
           creatorId: null,
           name: null,
           comment: null,
+          dateCreated: null,
           positions: positions,
           distance: state.distance,
           duration: state.duration,
@@ -767,6 +877,24 @@ abstract class _RecordTrackStore with Store {
   @action
   Future<void> _finishRecordTrack({bool closeDialog = false}) async {
     if (trackRecordStatusState.isWithoutRecording) return;
+
+    final deleteAllTracksResult =
+        await _recordTrackRepository.deleteAllTracks();
+    final error = deleteAllTracksResult.fold(
+      (error) => error,
+      (_) => null,
+    );
+
+    if (error != null) {
+      final header = error.header();
+      final body = error.body();
+
+      _commonUIDelegate.cupertinoDialog(
+        header: header,
+        body: body,
+      );
+    }
+
     final duration = const Duration(milliseconds: 300);
 
     final hideDetailsAction = RecordTrackActions.hideDetailsRecordingData();
@@ -793,5 +921,38 @@ abstract class _RecordTrackStore with Store {
   void _disposeTimer() {
     _timer?.cancel();
     _timer = null;
+  }
+
+  Future<void> _checkPreviousTrack() async {
+    final duration = const Duration(milliseconds: 200);
+    final getTrackResult = await _recordTrackRepository.getTrack();
+
+    if (getTrackResult.isRight()) {
+      final track = getTrackResult.getOrElse(
+        () => null,
+      );
+
+      if (track != null) {
+        final newTrackRecordStatusState = TrackRecordStatusState.recording(
+          positionsData: track.positions ?? List<PositionData>.empty(),
+          positions: List<Position>.empty(),
+          distance: track.distance ?? 0.0,
+          duration: track.duration ?? 0,
+          averageSpeed: track.averageSpeed ?? 0.0,
+          maxAltitude: track.maxAltitude ?? 0.0,
+          mode: RecordTrackModeState.stop(),
+          isRecording: false,
+          memories: track.memories ?? List<Memory>.empty(),
+        );
+
+        trackRecordStatusState = newTrackRecordStatusState;
+        _trackRecordStatusStateBehaviourSubject.add(newTrackRecordStatusState);
+
+        Future.delayed(
+          duration,
+          () => showDetailsRecordingData(),
+        );
+      }
+    }
   }
 }

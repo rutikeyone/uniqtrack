@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:uniqtrack/core/common/context_extension.dart';
 import 'package:uniqtrack/core/common_impl/app_widget_toolkit_impl.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/record_data_item.dart';
 import 'package:uniqtrack/generated/l10n.dart';
-
 
 class RecordDataSectionWidget extends ConsumerWidget {
   final int duration;
@@ -37,6 +37,10 @@ class RecordDataSectionWidget extends ConsumerWidget {
       context: context,
     );
 
+    final labelTextStyle = context.primaryTextTheme.displaySmall?.copyWith(
+      fontWeight: FontWeight.w600,
+    );
+
     return Padding(
       padding: const EdgeInsets.only(top: AppDiments.dm24),
       child: Row(
@@ -46,6 +50,7 @@ class RecordDataSectionWidget extends ConsumerWidget {
                   child: RecordDataItem(
                     label: S.of(context).routeLength,
                     value: distanceFormatted,
+                    labelStyle: labelTextStyle,
                   ),
                 )
               : const SizedBox.shrink(),
@@ -53,12 +58,14 @@ class RecordDataSectionWidget extends ConsumerWidget {
             child: RecordDataItem(
               label: S.of(context).time,
               value: durationFormatted,
+              labelStyle: labelTextStyle,
             ),
           ),
           Expanded(
             child: RecordDataItem(
               label: S.of(context).averageSpeed,
               value: S.of(context).km_per_h(mPerSecInKmPerHr),
+              labelStyle: labelTextStyle,
             ),
           ),
         ],

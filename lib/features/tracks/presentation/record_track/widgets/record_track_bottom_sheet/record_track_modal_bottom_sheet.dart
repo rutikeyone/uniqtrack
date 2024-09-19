@@ -65,8 +65,7 @@ class RecordTrackModalBottomSheet extends StatelessWidget {
                 return const SizedBox.shrink();
               }
 
-              return data.map(
-                withoutRecording: (_) => const SizedBox.shrink(),
+              return data.maybeMap(
                 recording: (state) {
                   final duration = state.duration;
                   final distance = state.distance;
@@ -82,6 +81,7 @@ class RecordTrackModalBottomSheet extends StatelessWidget {
                     argument: argument,
                   );
                 },
+                orElse: () => const SizedBox.shrink(),
               );
             },
           ),

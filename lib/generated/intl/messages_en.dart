@@ -35,10 +35,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "aContinueUrlMustBeProvidedInTheRequest":
             MessageLookupByLibrary.simpleMessage(
                 "A continue URL must be provided in the request"),
+        "actions": MessageLookupByLibrary.simpleMessage("Actions"),
         "addMemory": MessageLookupByLibrary.simpleMessage("Add memory"),
         "addPicture": MessageLookupByLibrary.simpleMessage("Add picture"),
+        "addToFavorites":
+            MessageLookupByLibrary.simpleMessage("Add to Favorites"),
         "addTrack": MessageLookupByLibrary.simpleMessage("Add track"),
         "allow": MessageLookupByLibrary.simpleMessage("Allow"),
+        "alreadyAddedToFavorites":
+            MessageLookupByLibrary.simpleMessage("Already added to favorites"),
         "anAndroidPackageNameMustBeProvidedIfTheAndroid":
             MessageLookupByLibrary.simpleMessage(
                 "An Android package name must be provided if the Android app is required to be installed"),
@@ -77,6 +82,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "editTrack": MessageLookupByLibrary.simpleMessage("Edit track"),
         "emailAlreadyInUse":
             MessageLookupByLibrary.simpleMessage("Email already in use"),
+        "enterMemoryName":
+            MessageLookupByLibrary.simpleMessage("Enter memory name"),
         "enterTrackName":
             MessageLookupByLibrary.simpleMessage("Enter track name"),
         "enterYourComment":
@@ -90,9 +97,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterYourPasswordRecoveryEmail": MessageLookupByLibrary.simpleMessage(
             "Enter your password recovery email"),
         "error": MessageLookupByLibrary.simpleMessage("Error!"),
+        "favouriteTracks":
+            MessageLookupByLibrary.simpleMessage("Favourite tracks"),
         "female": MessageLookupByLibrary.simpleMessage("Female"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "hasNotBeenAddedToFavoritesYet": MessageLookupByLibrary.simpleMessage(
+            "Has not been added to favorites yet"),
         "image": MessageLookupByLibrary.simpleMessage("Image"),
         "invalidComment":
             MessageLookupByLibrary.simpleMessage("Invalid comment"),
@@ -125,6 +136,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("My favourite tracks"),
         "myTracks": MessageLookupByLibrary.simpleMessage("My tracks"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "noRemoveRights":
+            MessageLookupByLibrary.simpleMessage("No remove rights"),
         "notification": MessageLookupByLibrary.simpleMessage("Notification"),
         "okay": MessageLookupByLibrary.simpleMessage("Okay"),
         "operation_not_allowed":
@@ -134,6 +147,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "prohibit": MessageLookupByLibrary.simpleMessage("Prohibit"),
         "receiveTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
             "Receive timeout failure occurred"),
+        "refresh": MessageLookupByLibrary.simpleMessage("Refresh"),
+        "removeFromFavourites":
+            MessageLookupByLibrary.simpleMessage("Remove From Favourites"),
         "routeLength": MessageLookupByLibrary.simpleMessage("Route length"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "sendPassword": MessageLookupByLibrary.simpleMessage("Send password"),
@@ -158,21 +174,32 @@ class MessageLookup extends MessageLookupByLibrary {
                 "The password has been sent to the specified email address."),
         "theRequestWasCanceled":
             MessageLookupByLibrary.simpleMessage("The request was canceled"),
+        "theTrackIsNotInTheListOfUserTracks":
+            MessageLookupByLibrary.simpleMessage(
+                "The track is not in the list of user tracks"),
+        "theTrackWasSuccessfullyDeleted": MessageLookupByLibrary.simpleMessage(
+            "The track was successfully deleted"),
         "theUserHasBeenSuccessfullyRegistered":
             MessageLookupByLibrary.simpleMessage(
                 "The user has been successfully registered"),
         "theUserIsUnauthorized":
             MessageLookupByLibrary.simpleMessage("The user is unauthorized"),
+        "thereAreNoTrackRecordingsHereYet":
+            MessageLookupByLibrary.simpleMessage(
+                "There are no track recordings here yet"),
         "thereIsNoPermissionToDetermineTheUsersLocation":
             MessageLookupByLibrary.simpleMessage(
                 "There is no permission to determine the location."),
         "thereIsNoPermissionToPerformThisAction":
             MessageLookupByLibrary.simpleMessage(
                 "There is no permission to perform this action."),
+        "thereIsNotId": MessageLookupByLibrary.simpleMessage("There is not ID"),
         "time": MessageLookupByLibrary.simpleMessage("Time"),
         "toContinue": MessageLookupByLibrary.simpleMessage("Continue"),
         "tooManyRequests":
             MessageLookupByLibrary.simpleMessage("Too many requests"),
+        "trackAddedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Track added successfully"),
         "trackingRecordNotificationBody": MessageLookupByLibrary.simpleMessage(
             "This is necessary for tracking records"),
         "trackingRecordNotificationTitle": MessageLookupByLibrary.simpleMessage(

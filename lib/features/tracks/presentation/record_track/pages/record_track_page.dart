@@ -96,6 +96,7 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
       hideDetailsRecordingData: _hideDetailsRecordData,
       navigateBack: _navigateBack,
       navigateToAddMemory: _navigateToAddMemory,
+      navigateToEditMemory: _navigateToEditMemory,
       navigateToAddRecordTrack: _navigateToAddRecordTrack,
       showMemoryDetails: _showMemoryDetails,
       hideMemoryDetails: _hideMemoryDetailsData,
@@ -430,6 +431,14 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     _store.addMemoryWithData(result);
   }
 
+  Future<void> _navigateToEditMemory(Memory memory) async {
+    final result = await context
+        .read<RecordTrackNavCallbackStore>()
+        .navigateToEditMemory(memory);
+
+    _store.editMemoryWithData(result);
+  }
+
   void _navigateToAddRecordTrack(Track track) {
     context.read<RecordTrackNavCallbackStore>().navigateToAddRecordTrack(track);
   }
@@ -445,13 +454,11 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
         _bottomSheetMemoryDetailsController = MemoryDetailsBottomSheet.show(
           context: context,
           scaffoldKey: _scaffoldKey,
-          memory: memory,
-          navigateToPhotoViewerByLink:
-              navCallbackStore.navigateToPhotoViewerByLink,
-          navigateToPhotoViewerByBytes:
-              navCallbackStore.navigateToPhotoViewerByBytes,
-          navigateBack: _store.hideMemoryDetails,
-          onDeletePressed: () => _store.deleteMemory(memory),
+          memoryStream: _store.memoryDetailsStream,
+          navigateToPhotoViewer: navCallbackStore.navigateToPhotoViewer,
+          onNavigateBackPressed: _store.hideMemoryDetails,
+          onDeletePressed: () => _store.deleteMemory(_store.memoryDetailsStream.valueOrNull),
+          onEditMemoryPressed: () => _store.editMemory(_store.memoryDetailsStream.valueOrNull),
         );
       });
     }

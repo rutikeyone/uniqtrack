@@ -999,6 +999,146 @@ class S {
       args: [],
     );
   }
+
+  /// `Refresh`
+  String get refresh {
+    return Intl.message(
+      'Refresh',
+      name: 'refresh',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There are no track recordings here yet`
+  String get thereAreNoTrackRecordingsHereYet {
+    return Intl.message(
+      'There are no track recordings here yet',
+      name: 'thereAreNoTrackRecordingsHereYet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter memory name`
+  String get enterMemoryName {
+    return Intl.message(
+      'Enter memory name',
+      name: 'enterMemoryName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Favourite tracks`
+  String get favouriteTracks {
+    return Intl.message(
+      'Favourite tracks',
+      name: 'favouriteTracks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add to Favorites`
+  String get addToFavorites {
+    return Intl.message(
+      'Add to Favorites',
+      name: 'addToFavorites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remove From Favourites`
+  String get removeFromFavourites {
+    return Intl.message(
+      'Remove From Favourites',
+      name: 'removeFromFavourites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Actions`
+  String get actions {
+    return Intl.message(
+      'Actions',
+      name: 'actions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already added to favorites`
+  String get alreadyAddedToFavorites {
+    return Intl.message(
+      'Already added to favorites',
+      name: 'alreadyAddedToFavorites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There is not ID`
+  String get thereIsNotId {
+    return Intl.message(
+      'There is not ID',
+      name: 'thereIsNotId',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Track added successfully`
+  String get trackAddedSuccessfully {
+    return Intl.message(
+      'Track added successfully',
+      name: 'trackAddedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Has not been added to favorites yet`
+  String get hasNotBeenAddedToFavoritesYet {
+    return Intl.message(
+      'Has not been added to favorites yet',
+      name: 'hasNotBeenAddedToFavoritesYet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The track was successfully deleted`
+  String get theTrackWasSuccessfullyDeleted {
+    return Intl.message(
+      'The track was successfully deleted',
+      name: 'theTrackWasSuccessfullyDeleted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The track is not in the list of user tracks`
+  String get theTrackIsNotInTheListOfUserTracks {
+    return Intl.message(
+      'The track is not in the list of user tracks',
+      name: 'theTrackIsNotInTheListOfUserTracks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No remove rights`
+  String get noRemoveRights {
+    return Intl.message(
+      'No remove rights',
+      name: 'noRemoveRights',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

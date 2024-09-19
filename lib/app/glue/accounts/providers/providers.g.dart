@@ -6,6 +6,70 @@ part of 'providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+String _$positionConverterHash() => r'295cce727f6ac205430008006f24d521cd5f99db';
+
+/// See also [positionConverter].
+@ProviderFor(positionConverter)
+final positionConverterProvider =
+    AutoDisposeProvider<PositionConverter>.internal(
+  positionConverter,
+  name: r'positionConverterProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$positionConverterHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef PositionConverterRef = AutoDisposeProviderRef<PositionConverter>;
+String _$positionDataConverterHash() =>
+    r'5524b8e7539cb178402456de62c3efe887173ced';
+
+/// See also [positionDataConverter].
+@ProviderFor(positionDataConverter)
+final positionDataConverterProvider =
+    AutoDisposeProvider<PositionDataConverter>.internal(
+  positionDataConverter,
+  name: r'positionDataConverterProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$positionDataConverterHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef PositionDataConverterRef
+    = AutoDisposeProviderRef<PositionDataConverter>;
+String _$memoryConverterHash() => r'3ae941408dd7b03a908a6289040319865ee3b068';
+
+/// See also [memoryConverter].
+@ProviderFor(memoryConverter)
+final memoryConverterProvider = AutoDisposeProvider<MemoryConverter>.internal(
+  memoryConverter,
+  name: r'memoryConverterProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$memoryConverterHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef MemoryConverterRef = AutoDisposeProviderRef<MemoryConverter>;
+String _$trackConverterHash() => r'04c367f3998e7db175aefaf8e671685c49034f9a';
+
+/// See also [trackConverter].
+@ProviderFor(trackConverter)
+final trackConverterProvider = AutoDisposeProvider<TrackConverter>.internal(
+  trackConverter,
+  name: r'trackConverterProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$trackConverterHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef TrackConverterRef = AutoDisposeProviderRef<TrackConverter>;
 String _$userMapperHash() => r'7cf32933d2f5449fcb6366c727647920f689f0b2';
 
 /// See also [userMapper].
@@ -48,6 +112,26 @@ final genderMapperProvider = AutoDisposeProvider<GenderMapper>.internal(
 );
 
 typedef GenderMapperRef = AutoDisposeProviderRef<GenderMapper>;
+String _$accountsRepositoryHash() =>
+    r'ce09b50fb9787e87d6388263db574dd2af52da8f';
+
+/// See also [accountsRepository].
+@ProviderFor(accountsRepository)
+final accountsRepositoryProvider =
+    AutoDisposeProvider<AccountsRepository>.internal(
+  accountsRepository,
+  name: r'accountsRepositoryProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$accountsRepositoryHash,
+  dependencies: <ProviderOrFamily>[trackMapperProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    trackMapperProvider,
+    ...?trackMapperProvider.allTransitiveDependencies
+  },
+);
+
+typedef AccountsRepositoryRef = AutoDisposeProviderRef<AccountsRepository>;
 String _$registerStoreBuilderHash() =>
     r'a5f2b4198c63e2fc18f045fbbc7079f7cf6fbef9';
 
@@ -108,38 +192,6 @@ final forgotPasswordStoreProvider =
 
 typedef ForgotPasswordStoreRef
     = AutoDisposeProviderRef<ForgotPasswordStoreBuilder>;
-String _$accountsRepositoryHash() =>
-    r'363e7ba6aad3631b4218449ed5404c9fbac63bf1';
-
-/// See also [accountsRepository].
-@ProviderFor(accountsRepository)
-final accountsRepositoryProvider =
-    AutoDisposeProvider<AccountsRepository>.internal(
-  accountsRepository,
-  name: r'accountsRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$accountsRepositoryHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef AccountsRepositoryRef = AutoDisposeProviderRef<AccountsRepository>;
-String _$signOutUseCaseHash() => r'dcc3b3e08e58b468ba0f040809af7d30563221fb';
-
-/// See also [signOutUseCase].
-@ProviderFor(signOutUseCase)
-final signOutUseCaseProvider = AutoDisposeProvider<SignOutUseCase>.internal(
-  signOutUseCase,
-  name: r'signOutUseCaseProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$signOutUseCaseHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef SignOutUseCaseRef = AutoDisposeProviderRef<SignOutUseCase>;
 String _$userChangesUseCaseHash() =>
     r'7f8a12bc3fe51877f3707ae73ad9876c126dd545';
 
@@ -175,69 +227,5 @@ final authStateChangesUseCaseProvider =
 
 typedef AuthStateChangesUseCaseRef
     = AutoDisposeProviderRef<AuthStateChangesUseCase>;
-String _$positionConverterHash() => r'295cce727f6ac205430008006f24d521cd5f99db';
-
-/// See also [positionConverter].
-@ProviderFor(positionConverter)
-final positionConverterProvider =
-    AutoDisposeProvider<PositionConverter>.internal(
-  positionConverter,
-  name: r'positionConverterProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$positionConverterHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef PositionConverterRef = AutoDisposeProviderRef<PositionConverter>;
-String _$positionDataConverterHash() =>
-    r'5524b8e7539cb178402456de62c3efe887173ced';
-
-/// See also [positionDataConverter].
-@ProviderFor(positionDataConverter)
-final positionDataConverterProvider =
-    AutoDisposeProvider<PositionDataConverter>.internal(
-  positionDataConverter,
-  name: r'positionDataConverterProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$positionDataConverterHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef PositionDataConverterRef
-    = AutoDisposeProviderRef<PositionDataConverter>;
-String _$memoryConverterHash() => r'3ae941408dd7b03a908a6289040319865ee3b068';
-
-/// See also [memoryConverter].
-@ProviderFor(memoryConverter)
-final memoryConverterProvider = AutoDisposeProvider<MemoryConverter>.internal(
-  memoryConverter,
-  name: r'memoryConverterProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$memoryConverterHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef MemoryConverterRef = AutoDisposeProviderRef<MemoryConverter>;
-String _$trackConverterHash() => r'b7dbac323643992e1c15bd73193849883f7bafca';
-
-/// See also [trackConverter].
-@ProviderFor(trackConverter)
-final trackConverterProvider = AutoDisposeProvider<TrackConverter>.internal(
-  trackConverter,
-  name: r'trackConverterProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$trackConverterHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef TrackConverterRef = AutoDisposeProviderRef<TrackConverter>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

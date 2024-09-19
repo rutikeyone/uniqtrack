@@ -38,9 +38,13 @@ ImageDataRepository imageDataRepository(
   required ImageDataSource imageSource,
 }) {
   final appErrorHandler = ref.watch(appErrorHandlerProvider);
+  final firebaseStorage = ref.watch(firebaseStorageProvider);
+  final uuid = ref.watch(uuidProvider);
 
   return ImageDataRepositoryImpl(
     imageDataSource: imageSource,
     appErrorHandler: appErrorHandler,
+    uuid: uuid,
+    firebaseStorage: firebaseStorage,
   );
 }

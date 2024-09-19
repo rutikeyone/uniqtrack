@@ -1174,14 +1174,14 @@ PODS:
     - Firebase/Auth (= 11.0.0)
     - firebase_core
     - Flutter
-  - firebase_core (3.4.0):
+  - firebase_core (3.4.1):
     - Firebase/CoreOnly (= 11.0.0)
     - Flutter
   - firebase_storage (12.2.0):
     - Firebase/Storage (= 11.0.0)
     - firebase_core
     - Flutter
-  - FirebaseAppCheckInterop (11.1.0)
+  - FirebaseAppCheckInterop (11.2.0)
   - FirebaseAuth (11.0.0):
     - FirebaseAppCheckInterop (~> 11.0)
     - FirebaseAuthInterop (~> 11.0)
@@ -1191,14 +1191,14 @@ PODS:
     - GoogleUtilities/Environment (~> 8.0)
     - GTMSessionFetcher/Core (~> 3.4)
     - RecaptchaInterop (~> 100.0)
-  - FirebaseAuthInterop (11.1.0)
+  - FirebaseAuthInterop (11.2.0)
   - FirebaseCore (11.0.0):
     - FirebaseCoreInternal (~> 11.0)
     - GoogleUtilities/Environment (~> 8.0)
     - GoogleUtilities/Logger (~> 8.0)
-  - FirebaseCoreExtension (11.1.0):
+  - FirebaseCoreExtension (11.2.0):
     - FirebaseCore (~> 11.0)
-  - FirebaseCoreInternal (11.1.0):
+  - FirebaseCoreInternal (11.2.0):
     - "GoogleUtilities/NSData+zlib (~> 8.0)"
   - FirebaseFirestore (11.0.0):
     - FirebaseCore (~> 11.0)
@@ -1220,7 +1220,7 @@ PODS:
     - gRPC-Core (~> 1.65.0)
     - leveldb-library (~> 1.22)
     - nanopb (~> 3.30910.0)
-  - FirebaseSharedSwift (11.1.0)
+  - FirebaseSharedSwift (11.2.0)
   - FirebaseStorage (11.0.0):
     - FirebaseAppCheckInterop (~> 11.0)
     - FirebaseAuthInterop (~> 11.0)
@@ -1373,6 +1373,24 @@ PODS:
   - sqflite (0.0.3):
     - Flutter
     - FlutterMacOS
+  - "sqlite3 (3.46.1+1)":
+    - "sqlite3/common (= 3.46.1+1)"
+  - "sqlite3/common (3.46.1+1)"
+  - "sqlite3/dbstatvtab (3.46.1+1)":
+    - sqlite3/common
+  - "sqlite3/fts5 (3.46.1+1)":
+    - sqlite3/common
+  - "sqlite3/perf-threadsafe (3.46.1+1)":
+    - sqlite3/common
+  - "sqlite3/rtree (3.46.1+1)":
+    - sqlite3/common
+  - sqlite3_flutter_libs (0.0.1):
+    - Flutter
+    - "sqlite3 (~> 3.46.0+1)"
+    - sqlite3/dbstatvtab
+    - sqlite3/fts5
+    - sqlite3/perf-threadsafe
+    - sqlite3/rtree
 
 DEPENDENCIES:
   - app_settings (from `.symlinks/plugins/app_settings/ios`)
@@ -1389,6 +1407,7 @@ DEPENDENCIES:
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
   - sqflite (from `.symlinks/plugins/sqflite/darwin`)
+  - sqlite3_flutter_libs (from `.symlinks/plugins/sqlite3_flutter_libs/ios`)
 
 SPEC REPOS:
   trunk:
@@ -1414,6 +1433,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - RecaptchaInterop
+    - sqlite3
 
 EXTERNAL SOURCES:
   app_settings:
@@ -1444,6 +1464,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/permission_handler_apple/ios"
   sqflite:
     :path: ".symlinks/plugins/sqflite/darwin"
+  sqlite3_flutter_libs:
+    :path: ".symlinks/plugins/sqlite3_flutter_libs/ios"
 
 SPEC CHECKSUMS:
   abseil: d121da9ef7e2ff4cab7666e76c5a3e0915ae08c3
@@ -1453,17 +1475,17 @@ SPEC CHECKSUMS:
   device_info_plus: 97af1d7e84681a90d0693e63169a5d50e0839a0d
   Firebase: 9f574c08c2396885b5e7e100ed4293d956218af9
   firebase_auth: 16ac5db3d064db837ecd845080d7e18e4be7c66d
-  firebase_core: ceec591a66629daaee82d3321551692c4a871493
+  firebase_core: ba84e940cf5cbbc601095f86556560937419195c
   firebase_storage: 3b166e39a19e95b6a2d1c33b4ebff41e12a7615b
-  FirebaseAppCheckInterop: e59b52f2c0e188e6ba77b9e3f6acead2117f2abf
+  FirebaseAppCheckInterop: ea21450529cf0ebd132788dd8916a0269abc684f
   FirebaseAuth: d5cf28be74d7e82257f6a3f717509eff70d3cf4a
-  FirebaseAuthInterop: 49e8faefaf254ce578e278a84a8fe0aebe23b546
+  FirebaseAuthInterop: 47c09558af5d1b31f16fb352387c72d4804f4a24
   FirebaseCore: 3cf438f431f18c12cdf2aaf64434648b63f7e383
-  FirebaseCoreExtension: aa5c9779c2d0d39d83f1ceb3fdbafe80c4feecfa
-  FirebaseCoreInternal: adefedc9a88dbe393c4884640a73ec9e8e790f8c
+  FirebaseCoreExtension: cda74ddfb001224bd8fd1d6e74698b4ed07803de
+  FirebaseCoreInternal: 0c569513412da9f3b31bd0b340013bbee8f295c5
   FirebaseFirestore: a1758850668dbb503537b7780a2a1fdc5e37c6ce
   FirebaseFirestoreInternal: 9fcc0ccb987ab73163f2249444e4bfd9eac63748
-  FirebaseSharedSwift: 260a35e08943ec810d820a70bc0359136351d0c5
+  FirebaseSharedSwift: 7a0d78d155ede78407f0fdc89fbc914014c7c540
   FirebaseStorage: f9e2bf027d549db18b6195a37b31c85f56e40200
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   flutter_native_splash: edf599c81f74d093a4daf8e17bd7a018854bc778
@@ -1482,7 +1504,9 @@ SPEC CHECKSUMS:
   permission_handler_apple: 9878588469a2b0d0fc1e048d9f43605f92e6cec2
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   sqflite: 673a0e54cc04b7d6dba8d24fb8095b31c3a99eec
+  sqlite3: 0bb0e6389d824e40296f531b858a2a0b71c0d2fb
+  sqlite3_flutter_libs: c00457ebd31e59fa6bb830380ddba24d44fbcd3b
 
-PODFILE CHECKSUM: 0481c6f19c3eb42dc34c02b68ebe984ceb22b8ae
+PODFILE CHECKSUM: 53d1acb66024ed3b743821d9b66e9672ddf7c0c5
 
 COCOAPODS: 1.15.2

@@ -164,18 +164,16 @@ final trackMapperProvider = AutoDisposeProvider<TrackMapper>.internal(
 );
 
 typedef TrackMapperRef = AutoDisposeProviderRef<TrackMapper>;
-String _$recordTrackRepositoryHash() =>
-    r'95e583e134b6e506314c7d72e14909332c3e17ab';
+String _$trackRepositoryHash() => r'45615fedd61fc1b0976aab0a6278adfe2a58ef34';
 
-/// See also [recordTrackRepository].
-@ProviderFor(recordTrackRepository)
-final recordTrackRepositoryProvider =
-    AutoDisposeProvider<RecordTrackRepository>.internal(
-  recordTrackRepository,
-  name: r'recordTrackRepositoryProvider',
+/// See also [trackRepository].
+@ProviderFor(trackRepository)
+final trackRepositoryProvider = AutoDisposeProvider<TrackRepository>.internal(
+  trackRepository,
+  name: r'trackRepositoryProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$recordTrackRepositoryHash,
+      : _$trackRepositoryHash,
   dependencies: <ProviderOrFamily>[
     appLocationHandlerProvider,
     positionMapperProvider,
@@ -191,25 +189,21 @@ final recordTrackRepositoryProvider =
   },
 );
 
-typedef RecordTrackRepositoryRef
-    = AutoDisposeProviderRef<RecordTrackRepository>;
-String _$chooseImageRepositoryHash() =>
-    r'b70445a13b472d2d5305750ecbff64fc8b173240';
+typedef TrackRepositoryRef = AutoDisposeProviderRef<TrackRepository>;
+String _$imageRepositoryHash() => r'6ed3c0439b503e82e65613795f217cb67344f237';
 
-/// See also [chooseImageRepository].
-@ProviderFor(chooseImageRepository)
-final chooseImageRepositoryProvider =
-    AutoDisposeProvider<ChooseImageRepository>.internal(
-  chooseImageRepository,
-  name: r'chooseImageRepositoryProvider',
+/// See also [imageRepository].
+@ProviderFor(imageRepository)
+final imageRepositoryProvider = AutoDisposeProvider<ImageRepository>.internal(
+  imageRepository,
+  name: r'imageRepositoryProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$chooseImageRepositoryHash,
+      : _$imageRepositoryHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef ChooseImageRepositoryRef
-    = AutoDisposeProviderRef<ChooseImageRepository>;
+typedef ImageRepositoryRef = AutoDisposeProviderRef<ImageRepository>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

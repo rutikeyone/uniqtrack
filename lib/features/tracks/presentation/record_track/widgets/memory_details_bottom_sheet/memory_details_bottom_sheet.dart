@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:uniqtrack/core/common/context_extension.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
@@ -11,39 +10,39 @@ import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/memo
 import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/record_track_bottom_sheet/modal_bottom_sheet_divider_widget.dart';
 
 class MemoryDetailsBottomSheet extends StatelessWidget {
-  final Memory memory;
+  final Stream<Memory?> memoryStream;
 
-  final void Function(Uint8List?) navigateToPhotoViewerByBytes;
-  final void Function(String?) navigateToPhotoViewerByLink;
+  final void Function(String?) navigateToPhotoViewer;
   final VoidCallback navigateBack;
   final VoidCallback onDeletePressed;
+  final VoidCallback onEditMemoryPressed;
 
   const MemoryDetailsBottomSheet({
-    required this.memory,
-    required this.navigateToPhotoViewerByBytes,
-    required this.navigateToPhotoViewerByLink,
+    required this.memoryStream,
+    required this.navigateToPhotoViewer,
     required this.navigateBack,
     required this.onDeletePressed,
+    required this.onEditMemoryPressed,
     super.key,
   });
 
   static PersistentBottomSheetController? show({
     required BuildContext context,
     required GlobalKey<ScaffoldState> scaffoldKey,
-    required Memory memory,
-    required void Function(Uint8List?) navigateToPhotoViewerByBytes,
-    required void Function(String?) navigateToPhotoViewerByLink,
-    required VoidCallback navigateBack,
+    required Stream<Memory?> memoryStream,
+    required void Function(String?) navigateToPhotoViewer,
+    required VoidCallback onEditMemoryPressed,
+    required VoidCallback onNavigateBackPressed,
     required VoidCallback onDeletePressed,
   }) {
     return scaffoldKey.currentState?.showBottomSheet(
       (context) {
         return MemoryDetailsBottomSheet(
-          memory: memory,
-          navigateToPhotoViewerByBytes: navigateToPhotoViewerByBytes,
-          navigateToPhotoViewerByLink: navigateToPhotoViewerByLink,
-          navigateBack: navigateBack,
+          memoryStream: memoryStream,
+          navigateToPhotoViewer: navigateToPhotoViewer,
+          navigateBack: onNavigateBackPressed,
           onDeletePressed: onDeletePressed,
+          onEditMemoryPressed: onEditMemoryPressed,
         );
       },
       enableDrag: false,
@@ -58,10 +57,6 @@ class MemoryDetailsBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final name = memory.name;
-    final comment = memory.comment;
-    final photos = memory.photos;
-
     return Wrap(
       children: [
         Container(
@@ -79,16 +74,37 @@ class MemoryDetailsBottomSheet extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ModalBottomSheetDividerWidget(),
-                MemoryDetailsNameWidget(name: name),
-                MemoryDetailsCommentWidget(comment: comment),
-                MemoryDetailsDividerWidget(),
-                MemoryDetailsUint8ListPhotosWidget(
-                  initialPhotos: photos,
-                  navigateToPhotoViewerByBytes: navigateToPhotoViewerByBytes,
+                StreamBuilder(
+                  stream: memoryStream,
+                  builder: (context, snapshot) {
+                    final memory = snapshot.data;
+                    if (memory == null) {
+                      return const SizedBox.shrink();
+                    }
+
+                    final name = memory.name;
+                    final comment = memory.comment;
+                    final photos = memory.photos;
+
+                    return Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        MemoryDetailsNameWidget(name: name),
+                        MemoryDetailsCommentWidget(comment: comment),
+                        MemoryDetailsDividerWidget(),
+                        MemoryDetailsListPhotosWidget(
+                          initialPhotos: photos,
+                          navigateToPhotoViewer: navigateToPhotoViewer,
+                        ),
+                      ],
+                    );
+                  },
                 ),
                 MemoryDetailsActionButtons(
                   navigateBack: navigateBack,
                   onDeletePressed: onDeletePressed,
+                  onEditMemoryPressed: onEditMemoryPressed,
                 ),
               ],
             ),

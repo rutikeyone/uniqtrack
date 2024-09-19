@@ -108,4 +108,18 @@ class AppStrings with _$AppStrings {
   const factory AppStrings.userIsUnauthorized() = _$AppUserNotAuthorizedString;
 
   const factory AppStrings.entryWasSuccessfullyAdded() = _$AppEntryWasSuccessfullyAddedString;
+
+  const factory AppStrings.alreadyAddedToFavourites() = _$AlreadyAddedToFavouritesString;
+
+  const factory AppStrings.noID() = _NoIDString;
+
+  const factory AppStrings.trackAddedSuccessfully() = _TrackAddedSuccessfullyString;
+
+  const factory AppStrings.notAddedToFavorites() = _NotAddedToFavouritesString;
+
+  const factory AppStrings.trackWasSuccessfullyDeleted() = _TrackWasSuccessfullyDeletedString;
+
+  const factory AppStrings.notAddedToUserTracks() = _NotAddedToUserTracksString;
+
+  const factory AppStrings.noRemoveRights() = _NoRemoveRightsString;
 }

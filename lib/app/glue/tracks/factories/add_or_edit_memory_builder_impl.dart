@@ -1,7 +1,7 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:uniqtrack/app/factories/stores/store_factory.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
-import 'package:uniqtrack/features/tracks/presentation/add_or_edit_edit_memory/stores/add_or_edit_memory_store.dart';
+import 'package:uniqtrack/features/tracks/presentation/add_or_edit_memory/stores/add_or_edit_memory_store.dart';
 
 class AddOrEditMemoryBuilderImpl implements AddOrEditMemoryStoreBuilder {
   final StoreFactory _storeFactory;
@@ -14,7 +14,11 @@ class AddOrEditMemoryBuilderImpl implements AddOrEditMemoryStoreBuilder {
   AddOrEditMemoryStore create(
     BuildContext context, {
     required Position? position,
+    required Memory? memory,
   }) {
-    return _storeFactory.createAddOrEditMemoryStore(position: position);
+    return _storeFactory.createAddOrEditMemoryStore(
+      position: position,
+      memory: memory,
+    );
   }
 }

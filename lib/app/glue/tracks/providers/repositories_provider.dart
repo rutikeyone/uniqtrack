@@ -2,7 +2,7 @@
 part of 'providers.dart';
 
 @Riverpod(dependencies: [appLocationHandler, positionMapper, trackMapper])
-RecordTrackRepository recordTrackRepository(RecordTrackRepositoryRef ref) {
+TrackRepository trackRepository(TrackRepositoryRef ref) {
   final appLocationHandler = ref.watch(appLocationHandlerProvider);
   final positionMapper = ref.watch(positionMapperProvider);
   final trackMapper = ref.watch(trackMapperProvider);
@@ -10,7 +10,7 @@ RecordTrackRepository recordTrackRepository(RecordTrackRepositoryRef ref) {
   final tracksDataRepository = ref.watch(tracksDataRepositoryProvider);
   final accountsDataRepository = ref.watch(accountsDataRepositoryProvider);
 
-  return RecordTrackAdapterRepository(
+  return TrackAdapterRepository(
     appLocationHandler: appLocationHandler,
     positionMapper: positionMapper,
     trackMapper: trackMapper,
@@ -20,7 +20,7 @@ RecordTrackRepository recordTrackRepository(RecordTrackRepositoryRef ref) {
 }
 
 @riverpod
-ChooseImageRepository chooseImageRepository(ChooseImageRepositoryRef ref) {
+ImageRepository imageRepository(ImageRepositoryRef ref) {
   final galleryDataSource = ref.watch(galleryDataSourceProvider);
   final cameraDataSource = ref.watch(cameraDataSourceProvider);
 
@@ -32,8 +32,9 @@ ChooseImageRepository chooseImageRepository(ChooseImageRepositoryRef ref) {
     imageDataRepositoryProvider(imageSource: cameraDataSource),
   );
 
-  return ChooseImagesAdapterRepository(
+  return ImagesAdapterRepository(
     chooseImageFromCamera: cameraImageDataRepository.chooseImage,
     chooseImageFromGallery: galleryImageDataRepository.chooseImage,
+    downloadImage: galleryImageDataRepository.downloadImage,
   );
 }

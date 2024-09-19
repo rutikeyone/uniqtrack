@@ -2,13 +2,6 @@
 part of 'providers.dart';
 
 @riverpod
-SignOutUseCase signOutUseCase(SignOutUseCaseRef ref) {
-  final accountsDataRepository = ref.watch(accountsDataRepositoryProvider);
-
-  return SignOutUseCaseImpl(accountsDataRepository: accountsDataRepository);
-}
-
-@riverpod
 UserChangesUseCase userChangesUseCase(UserChangesUseCaseRef ref) {
   final accountsDataRepository = ref.watch(accountsDataRepositoryProvider);
   final userMapper = ref.watch(userMapperProvider);

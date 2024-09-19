@@ -4,12 +4,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:rxdart/rxdart.dart';
 import 'package:uniqtrack/core/common/error_handler/app_error_handler.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
-import 'package:uniqtrack/core/common/firebase_auth_constants.dart';
+import 'package:uniqtrack/core/common/iterable_extensions.dart';
 import 'package:uniqtrack/data/accounts/models/models.dart';
 import 'package:uniqtrack/data/accounts/accounts_data_repository.dart';
 import 'package:uniqtrack/data/accounts/parameters/parameters.dart';
+import 'package:uniqtrack/data/accounts/sorters/sorter.dart';
 import 'package:uniqtrack/data/tracks/models/models.dart';
 import 'package:uuid/uuid.dart';
 
@@ -18,10 +20,22 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
   final FirebaseStorage _firebaseStorage;
   final FirebaseFirestore _firebaseFireStore;
   final AppErrorHandler _appErrorHandler;
+  final Sorter _sorter;
   final Uuid _uuid;
 
-  static String userTracksPath(String uid) => "users/$uid/tracks";
+  static String userTracksPath(String userId) => "users/$userId/tracks";
+
+  static String userTrackPath(String userId, String id) =>
+      "users/$userId/tracks/$id";
+
+  static String userFavouriteTracksPath(String userId) =>
+      "users/$userId/favouriteTracks";
+
+  static String userFavouriteTrackPath(String userId, String trackId) =>
+      "users/$userId/favouriteTracks/$trackId";
+
   static String usersPath = "users";
+  static String profilePicturesPath = "profilePictures";
 
   const AccountsDataRepositoryImpl({
     required FirebaseAuth firebaseAuth,
@@ -29,11 +43,13 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
     required AppErrorHandler appErrorHandler,
     required Uuid uuid,
     required FirebaseFirestore firebaseFireStore,
+    required Sorter sorter,
   })  : _firebaseAuth = firebaseAuth,
         _appErrorHandler = appErrorHandler,
         _firebaseStorage = firebaseStorage,
         _uuid = uuid,
-        _firebaseFireStore = firebaseFireStore;
+        _firebaseFireStore = firebaseFireStore,
+        _sorter = sorter;
 
   @override
   Future<Either<AppError, void>> register(
@@ -129,9 +145,6 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
         final uid = currentUser?.uid;
         if (uid == null) return null;
         final user = await _fetchUser(uid);
-
-        listenUserTracks(uid);
-
         return user;
       },
     );
@@ -143,20 +156,73 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
   }
 
   @override
-  Stream<List<TrackModel>?> listenUserTracks(String uid) {
-    return queryTracks(uid).snapshots().map(
+  Stream<List<TrackModel>> listenUserTracks() {
+    return _firebaseAuth.authStateChanges().exhaustMap(_listenUserTracks);
+  }
+
+  Stream<List<TrackModel>> _listenUserTracks(User? user) {
+    final userId = _firebaseAuth.currentUser?.uid;
+
+    if (userId == null) {
+      final category = AuthenticationErrorCategory.notAuth();
+      final error = AppError.authentication(category: category);
+      throw error;
+    }
+
+    return _queryTracks(userTracksPath(userId)).snapshots().map(
       (snapshot) {
         final docs = snapshot.docs;
         final result = docs.map((doc) {
           return doc.data();
-        }).toList();
+        }).toList()
+          ..sort(
+            (firstItem, secondItem) {
+              final firstDateCreated = firstItem.dateCreated;
+              final secondDateCreated = secondItem.dateCreated;
+              return _sorter.sortByDate(firstDateCreated, secondDateCreated);
+            },
+          );
         return result;
       },
     );
   }
 
-  Query<TrackModel> queryTracks(String uid) =>
-      _firebaseFireStore.collection(userTracksPath(uid)).withConverter(
+  @override
+  Stream<List<TrackModel>> listenUserFavouriteTracks() {
+    return _firebaseAuth
+        .authStateChanges()
+        .exhaustMap(_listenUserFavouriteTracks);
+  }
+
+  Stream<List<TrackModel>> _listenUserFavouriteTracks(User? user) {
+    final userId = _firebaseAuth.currentUser?.uid;
+
+    if (userId == null) {
+      final category = AuthenticationErrorCategory.notAuth();
+      final error = AppError.authentication(category: category);
+      throw error;
+    }
+
+    return _queryTracks(userFavouriteTracksPath(userId)).snapshots().map(
+      (snapshot) {
+        final docs = snapshot.docs;
+        final result = docs.map((doc) {
+          return doc.data();
+        }).toList()
+          ..sort(
+            (firstItem, secondItem) {
+              final firstDateCreated = firstItem.dateCreated;
+              final secondDateCreated = secondItem.dateCreated;
+              return _sorter.sortByDate(firstDateCreated, secondDateCreated);
+            },
+          );
+        return result;
+      },
+    );
+  }
+
+  Query<TrackModel> _queryTracks(String path) =>
+      _firebaseFireStore.collection(path).withConverter(
             fromFirestore: (snapshot, _) =>
                 TrackModel.fromJson(snapshot.data()!),
             toFirestore: (track, _) => track.toJson(),
@@ -205,10 +271,7 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
     if (file != null) {
       final data = file.bytes;
 
-      final ref = _firebaseStorage
-          .ref()
-          .child(FirebaseAuthConstants.profilePictures)
-          .child(uid);
+      final ref = _firebaseStorage.ref().child(profilePicturesPath).child(uid);
       final childRef = ref.child(_uuid.v1());
 
       final uploadTask = childRef.putData(data);
@@ -264,8 +327,152 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
       throw AppError.authentication(category: category);
     }
 
-    final json = track.copyWith(creatorId: userId).toJson();
+    final withCreatorIdTrack = track.copyWith(creatorId: userId);
+    final json = withCreatorIdTrack.toJson();
     final collection = _firebaseFireStore.collection(userTracksPath(userId));
-    collection.add(json);
+    await collection.add(json);
+  }
+
+  @override
+  Future<Either<AppError, void>> addToFavouriteTracks(TrackModel track) {
+    return _appErrorHandler.handle(
+      () async {
+        final userId = _firebaseAuth.currentUser?.uid;
+        final trackId = track.id;
+
+        if (userId == null) {
+          final category = AuthenticationErrorCategory.notAuth();
+          throw AppError.authentication(category: category);
+        }
+
+        final favouriteTracks = await _queryFavouriteTracks(userId);
+        final alreadyAddedInFavourites =
+            favouriteTracks.firstWhereOrNull((item) => item.id == track.id) !=
+                null;
+
+        if (alreadyAddedInFavourites) {
+          final category = AccessErrorCategory.alreadyAddedInFavourite();
+          throw AppError.access(category: category);
+        }
+
+        if (trackId == null) {
+          final category = AccessErrorCategory.noID();
+          throw AppError.access(category: category);
+        }
+
+        final jsonTrack = track.toJson();
+        final doc =
+            _firebaseFireStore.doc(userFavouriteTrackPath(userId, trackId));
+        await doc.set(jsonTrack);
+      },
+    );
+  }
+
+  Future<List<TrackModel>> _queryFavouriteTracks(String userId) async {
+    final query = await _queryTracks(userFavouriteTracksPath(userId)).get();
+
+    return query.docs.map((doc) {
+      return doc.data();
+    }).toList();
+  }
+
+  @override
+  Future<Either<AppError, void>> removeFromFavouriteTracks(TrackModel track) {
+    return _appErrorHandler.handle(
+      () async {
+        final userId = _firebaseAuth.currentUser?.uid;
+        final trackId = track.id;
+
+        if (userId == null) {
+          final category = AuthenticationErrorCategory.notAuth();
+          throw AppError.authentication(category: category);
+        }
+
+        final favouriteTracks = await _queryFavouriteTracks(userId);
+        final alreadyAddedInFavourites =
+            favouriteTracks.firstWhereOrNull((item) => item.id == track.id) !=
+                null;
+
+        if (!alreadyAddedInFavourites) {
+          final category = AccessErrorCategory.notAddedToFavorites();
+          throw AppError.access(category: category);
+        }
+
+        if (trackId == null) {
+          final category = AccessErrorCategory.noID();
+          throw AppError.access(category: category);
+        }
+
+        final collectionRef =
+            _firebaseFireStore.collection(userFavouriteTracksPath(userId));
+        final items = await collectionRef.get();
+
+        await Future.forEach(
+          items.docs,
+          (item) async {
+            final data = item.data();
+            final itemTrack = TrackModel.fromJson(data);
+            if (itemTrack.id == track.id) {
+              await item.reference.delete();
+            }
+          },
+        );
+
+        final trackRef = await _firebaseFireStore
+            .doc(userFavouriteTrackPath(userId, trackId));
+        await trackRef.delete();
+      },
+    );
+  }
+
+  @override
+  Future<Either<AppError, void>> removeFromMyTracks(TrackModel track) {
+    return _appErrorHandler.handle(
+      () async {
+        final userId = _firebaseAuth.currentUser?.uid;
+        final trackId = track.id;
+        final creatorId = track.creatorId;
+
+        if (userId == null) {
+          final category = AuthenticationErrorCategory.notAuth();
+          throw AppError.authentication(category: category);
+        }
+
+        //TODO
+        // if (!alreadyAddedInFavourites) {
+        //   final category = AccessErrorCategory.notAddedToFavorites();
+        //   throw AppError.access(category: category);
+        // }
+
+        if (userId != creatorId) {
+          final category = AccessErrorCategory.noRemoveRights();
+          throw AppError.access(category: category);
+        }
+
+        if (trackId == null) {
+          final category = AccessErrorCategory.noID();
+          throw AppError.access(category: category);
+        }
+
+        final collectionRef =
+            _firebaseFireStore.collection(userTracksPath(userId));
+        final items = await collectionRef.get();
+
+        await Future.forEach(
+          items.docs,
+          (item) async {
+            final data = item.data();
+            final itemTrack = TrackModel.fromJson(data);
+            if (itemTrack.id == track.id) {
+              await item.reference.delete();
+            }
+          },
+        );
+
+        final trackRef =
+            await _firebaseFireStore.doc(userTrackPath(userId, trackId));
+        await trackRef.delete();
+      },
+    );
   }
 }

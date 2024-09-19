@@ -26,7 +26,6 @@ class MemoryMapperImpl implements MemoryMapper {
       id: memory.id,
       name: memory.name,
       comment: memory.comment,
-      uploadedPhotos: memory.uploadedPhotos,
       photos: memory.photos,
       position: positions,
     );
@@ -43,7 +42,6 @@ class MemoryMapperImpl implements MemoryMapper {
       id: model.id,
       name: model.name,
       comment: model.comment,
-      uploadedPhotos: model.uploadedPhotos,
       photos: model.photos,
       position: positions,
     );

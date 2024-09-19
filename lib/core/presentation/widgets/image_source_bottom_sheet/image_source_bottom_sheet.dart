@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/presentation/widgets/image_source_bottom_sheet/cancel_button_widget.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/generated/l10n.dart';
 
@@ -8,8 +9,6 @@ part 'image_source_header_widget.dart';
 part 'image_source_choose_from_gallery_tile.dart';
 
 part 'image_source_take_photo_tile.dart';
-
-part 'cancel_button_widget.dart';
 
 class ImageSourceModalBottomSheet extends StatelessWidget {
   final VoidCallback onFromGalleryPressed;
@@ -62,7 +61,7 @@ class ImageSourceModalBottomSheet extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(top: AppDiments.dm8),
-            child: _CancelButtonWidget(
+            child: CancelButtonWidget(
               onClosePressed: onClosePressed,
             ),
           ),

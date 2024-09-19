@@ -4,11 +4,14 @@ import 'package:uniqtrack/core/theme/app_diments.dart';
 
 class RecordDataItem extends StatelessWidget {
   final String value;
+
   final String label;
+  final TextStyle? labelStyle;
 
   const RecordDataItem({
     required this.label,
     required this.value,
+    this.labelStyle,
     super.key,
   });
 
@@ -19,7 +22,7 @@ class RecordDataItem extends StatelessWidget {
       children: [
         Text(
           value,
-          style: context.primaryTextTheme.bodyLarge?.copyWith(
+          style: labelStyle ?? context.primaryTextTheme.bodyLarge?.copyWith(
             fontWeight: FontWeight.w600,
           ),
           maxLines: 1,

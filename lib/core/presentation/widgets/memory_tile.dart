@@ -33,6 +33,7 @@ class MemoryTile extends StatelessWidget {
               clipBehavior: Clip.none,
               children: [
                 Positioned.fill(
+                  top: 10,
                   child: Container(
                     decoration: BoxDecoration(
                       color: context.colorScheme.secondary,
@@ -52,9 +53,9 @@ class MemoryTile extends StatelessWidget {
                     ),
                   ),
                 ),
-                if(onDeletePressed != null)
+                if (onDeletePressed != null)
                   Positioned(
-                    top: -AppDiments.dm10,
+                    top: AppDiments.dm0,
                     right: -AppDiments.dm10,
                     child: Material(
                       borderRadius: BorderRadius.circular(AppDiments.dm16),
@@ -70,7 +71,8 @@ class MemoryTile extends StatelessWidget {
                                   .withOpacity(.2),
                             ),
                             color: context.colorScheme.secondary,
-                            borderRadius: BorderRadius.circular(AppDiments.dm16),
+                            borderRadius:
+                                BorderRadius.circular(AppDiments.dm16),
                           ),
                           child: Center(
                             child: Icon(
@@ -81,7 +83,6 @@ class MemoryTile extends StatelessWidget {
                           ),
                         ),
                       ),
-                      clipBehavior: Clip.none,
                     ),
                   ),
               ],

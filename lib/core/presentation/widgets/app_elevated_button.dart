@@ -49,9 +49,13 @@ class AppElevatedButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           prefixIcon ?? const SizedBox.shrink(),
-          Text(
-            text,
-            style: textStyle ?? context.primaryTextTheme.labelLarge,
+          Flexible(
+            child: Text(
+              text,
+              style: textStyle ?? context.primaryTextTheme.labelLarge,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
           icon ?? const SizedBox.shrink(),
         ],

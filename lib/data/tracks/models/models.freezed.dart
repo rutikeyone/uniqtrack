@@ -397,9 +397,7 @@ mixin _$MemoryModel {
   String? get id => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
-  List<String>? get uploadedPhotos => throw _privateConstructorUsedError;
-  @UInt8ListConverter()
-  List<Uint8List>? get photos => throw _privateConstructorUsedError;
+  List<String>? get photos => throw _privateConstructorUsedError;
   PositionModel? get position => throw _privateConstructorUsedError;
 
   /// Serializes this MemoryModel to a JSON map.
@@ -422,8 +420,7 @@ abstract class $MemoryModelCopyWith<$Res> {
       {String? id,
       String? name,
       String? comment,
-      List<String>? uploadedPhotos,
-      @UInt8ListConverter() List<Uint8List>? photos,
+      List<String>? photos,
       PositionModel? position});
 
   $PositionModelCopyWith<$Res>? get position;
@@ -447,7 +444,6 @@ class _$MemoryModelCopyWithImpl<$Res, $Val extends MemoryModel>
     Object? id = freezed,
     Object? name = freezed,
     Object? comment = freezed,
-    Object? uploadedPhotos = freezed,
     Object? photos = freezed,
     Object? position = freezed,
   }) {
@@ -464,14 +460,10 @@ class _$MemoryModelCopyWithImpl<$Res, $Val extends MemoryModel>
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
               as String?,
-      uploadedPhotos: freezed == uploadedPhotos
-          ? _value.uploadedPhotos
-          : uploadedPhotos // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
       photos: freezed == photos
           ? _value.photos
           : photos // ignore: cast_nullable_to_non_nullable
-              as List<Uint8List>?,
+              as List<String>?,
       position: freezed == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
@@ -506,8 +498,7 @@ abstract class _$$MemoryModelImplCopyWith<$Res>
       {String? id,
       String? name,
       String? comment,
-      List<String>? uploadedPhotos,
-      @UInt8ListConverter() List<Uint8List>? photos,
+      List<String>? photos,
       PositionModel? position});
 
   @override
@@ -530,7 +521,6 @@ class __$$MemoryModelImplCopyWithImpl<$Res>
     Object? id = freezed,
     Object? name = freezed,
     Object? comment = freezed,
-    Object? uploadedPhotos = freezed,
     Object? photos = freezed,
     Object? position = freezed,
   }) {
@@ -547,14 +537,10 @@ class __$$MemoryModelImplCopyWithImpl<$Res>
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
               as String?,
-      uploadedPhotos: freezed == uploadedPhotos
-          ? _value._uploadedPhotos
-          : uploadedPhotos // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
       photos: freezed == photos
           ? _value._photos
           : photos // ignore: cast_nullable_to_non_nullable
-              as List<Uint8List>?,
+              as List<String>?,
       position: freezed == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
@@ -570,11 +556,9 @@ class _$MemoryModelImpl with DiagnosticableTreeMixin implements _MemoryModel {
       {required this.id,
       required this.name,
       required this.comment,
-      required final List<String>? uploadedPhotos,
-      @UInt8ListConverter() required final List<Uint8List>? photos,
+      required final List<String>? photos,
       required this.position})
-      : _uploadedPhotos = uploadedPhotos,
-        _photos = photos;
+      : _photos = photos;
 
   factory _$MemoryModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$MemoryModelImplFromJson(json);
@@ -585,20 +569,9 @@ class _$MemoryModelImpl with DiagnosticableTreeMixin implements _MemoryModel {
   final String? name;
   @override
   final String? comment;
-  final List<String>? _uploadedPhotos;
+  final List<String>? _photos;
   @override
-  List<String>? get uploadedPhotos {
-    final value = _uploadedPhotos;
-    if (value == null) return null;
-    if (_uploadedPhotos is EqualUnmodifiableListView) return _uploadedPhotos;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Uint8List>? _photos;
-  @override
-  @UInt8ListConverter()
-  List<Uint8List>? get photos {
+  List<String>? get photos {
     final value = _photos;
     if (value == null) return null;
     if (_photos is EqualUnmodifiableListView) return _photos;
@@ -611,7 +584,7 @@ class _$MemoryModelImpl with DiagnosticableTreeMixin implements _MemoryModel {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'MemoryModel(id: $id, name: $name, comment: $comment, uploadedPhotos: $uploadedPhotos, photos: $photos, position: $position)';
+    return 'MemoryModel(id: $id, name: $name, comment: $comment, photos: $photos, position: $position)';
   }
 
   @override
@@ -622,7 +595,6 @@ class _$MemoryModelImpl with DiagnosticableTreeMixin implements _MemoryModel {
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('comment', comment))
-      ..add(DiagnosticsProperty('uploadedPhotos', uploadedPhotos))
       ..add(DiagnosticsProperty('photos', photos))
       ..add(DiagnosticsProperty('position', position));
   }
@@ -635,8 +607,6 @@ class _$MemoryModelImpl with DiagnosticableTreeMixin implements _MemoryModel {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.comment, comment) || other.comment == comment) &&
-            const DeepCollectionEquality()
-                .equals(other._uploadedPhotos, _uploadedPhotos) &&
             const DeepCollectionEquality().equals(other._photos, _photos) &&
             (identical(other.position, position) ||
                 other.position == position));
@@ -644,14 +614,8 @@ class _$MemoryModelImpl with DiagnosticableTreeMixin implements _MemoryModel {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      name,
-      comment,
-      const DeepCollectionEquality().hash(_uploadedPhotos),
-      const DeepCollectionEquality().hash(_photos),
-      position);
+  int get hashCode => Object.hash(runtimeType, id, name, comment,
+      const DeepCollectionEquality().hash(_photos), position);
 
   /// Create a copy of MemoryModel
   /// with the given fields replaced by the non-null parameter values.
@@ -674,8 +638,7 @@ abstract class _MemoryModel implements MemoryModel {
       {required final String? id,
       required final String? name,
       required final String? comment,
-      required final List<String>? uploadedPhotos,
-      @UInt8ListConverter() required final List<Uint8List>? photos,
+      required final List<String>? photos,
       required final PositionModel? position}) = _$MemoryModelImpl;
 
   factory _MemoryModel.fromJson(Map<String, dynamic> json) =
@@ -688,10 +651,7 @@ abstract class _MemoryModel implements MemoryModel {
   @override
   String? get comment;
   @override
-  List<String>? get uploadedPhotos;
-  @override
-  @UInt8ListConverter()
-  List<Uint8List>? get photos;
+  List<String>? get photos;
   @override
   PositionModel? get position;
 
@@ -711,6 +671,8 @@ TrackModel _$TrackModelFromJson(Map<String, dynamic> json) {
 mixin _$TrackModel {
   String? get id => throw _privateConstructorUsedError;
   String? get creatorId => throw _privateConstructorUsedError;
+  @DateConverter()
+  DateTime? get dateCreated => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
   @ListPositionDataConverter()
@@ -741,6 +703,7 @@ abstract class $TrackModelCopyWith<$Res> {
   $Res call(
       {String? id,
       String? creatorId,
+      @DateConverter() DateTime? dateCreated,
       String? name,
       String? comment,
       @ListPositionDataConverter() List<PositionDataModel>? positions,
@@ -768,6 +731,7 @@ class _$TrackModelCopyWithImpl<$Res, $Val extends TrackModel>
   $Res call({
     Object? id = freezed,
     Object? creatorId = freezed,
+    Object? dateCreated = freezed,
     Object? name = freezed,
     Object? comment = freezed,
     Object? positions = freezed,
@@ -786,6 +750,10 @@ class _$TrackModelCopyWithImpl<$Res, $Val extends TrackModel>
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as String?,
+      dateCreated: freezed == dateCreated
+          ? _value.dateCreated
+          : dateCreated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -833,6 +801,7 @@ abstract class _$$TrackModelImplCopyWith<$Res>
   $Res call(
       {String? id,
       String? creatorId,
+      @DateConverter() DateTime? dateCreated,
       String? name,
       String? comment,
       @ListPositionDataConverter() List<PositionDataModel>? positions,
@@ -858,6 +827,7 @@ class __$$TrackModelImplCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? creatorId = freezed,
+    Object? dateCreated = freezed,
     Object? name = freezed,
     Object? comment = freezed,
     Object? positions = freezed,
@@ -876,6 +846,10 @@ class __$$TrackModelImplCopyWithImpl<$Res>
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
               as String?,
+      dateCreated: freezed == dateCreated
+          ? _value.dateCreated
+          : dateCreated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -918,6 +892,7 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
   const _$TrackModelImpl(
       {required this.id,
       required this.creatorId,
+      @DateConverter() required this.dateCreated,
       required this.name,
       required this.comment,
       @ListPositionDataConverter()
@@ -937,6 +912,9 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
   final String? id;
   @override
   final String? creatorId;
+  @override
+  @DateConverter()
+  final DateTime? dateCreated;
   @override
   final String? name;
   @override
@@ -973,7 +951,7 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'TrackModel(id: $id, creatorId: $creatorId, name: $name, comment: $comment, positions: $positions, distance: $distance, duration: $duration, averageSpeed: $averageSpeed, maxAltitude: $maxAltitude, memories: $memories)';
+    return 'TrackModel(id: $id, creatorId: $creatorId, dateCreated: $dateCreated, name: $name, comment: $comment, positions: $positions, distance: $distance, duration: $duration, averageSpeed: $averageSpeed, maxAltitude: $maxAltitude, memories: $memories)';
   }
 
   @override
@@ -983,6 +961,7 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
       ..add(DiagnosticsProperty('type', 'TrackModel'))
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('creatorId', creatorId))
+      ..add(DiagnosticsProperty('dateCreated', dateCreated))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('comment', comment))
       ..add(DiagnosticsProperty('positions', positions))
@@ -1001,6 +980,8 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.creatorId, creatorId) ||
                 other.creatorId == creatorId) &&
+            (identical(other.dateCreated, dateCreated) ||
+                other.dateCreated == dateCreated) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.comment, comment) || other.comment == comment) &&
             const DeepCollectionEquality()
@@ -1022,6 +1003,7 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
       runtimeType,
       id,
       creatorId,
+      dateCreated,
       name,
       comment,
       const DeepCollectionEquality().hash(_positions),
@@ -1051,6 +1033,7 @@ abstract class _TrackModel implements TrackModel {
   const factory _TrackModel(
       {required final String? id,
       required final String? creatorId,
+      @DateConverter() required final DateTime? dateCreated,
       required final String? name,
       required final String? comment,
       @ListPositionDataConverter()
@@ -1069,6 +1052,9 @@ abstract class _TrackModel implements TrackModel {
   String? get id;
   @override
   String? get creatorId;
+  @override
+  @DateConverter()
+  DateTime? get dateCreated;
   @override
   String? get name;
   @override

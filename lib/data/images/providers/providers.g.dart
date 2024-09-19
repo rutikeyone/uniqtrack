@@ -37,7 +37,7 @@ final cameraDataSourceProvider = AutoDisposeProvider<ImageDataSource>.internal(
 
 typedef CameraDataSourceRef = AutoDisposeProviderRef<ImageDataSource>;
 String _$imageDataRepositoryHash() =>
-    r'd74b6cfb0544ee7ac45075d013aaa028825d24ad';
+    r'944390bc3fb4c3e6ebb66fa160572717e9c4ebac';
 
 /// Copied from Dart SDK
 class _SystemHash {

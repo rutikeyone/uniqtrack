@@ -7,8 +7,8 @@ class TrackRecordStatusState with _$TrackRecordStatusState {
   bool get isRecording => this is TrackRecordingStatusState;
 
   bool get isRecordingActive {
-    return this.map(
-      withoutRecording: (_) => false,
+    return this.maybeMap(
+      orElse: () => false,
       recording: (state) {
         final mode = state.mode;
 
@@ -21,8 +21,8 @@ class TrackRecordStatusState with _$TrackRecordStatusState {
   }
 
   bool get isRecordingPause {
-    return this.map(
-      withoutRecording: (_) => false,
+    return this.maybeMap(
+      orElse: () => false,
       recording: (state) {
         final mode = state.mode;
 

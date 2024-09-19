@@ -38,6 +38,10 @@ class AppError with _$AppError {
     required AuthenticationErrorCategory category,
   }) = AppAuthenticationError;
 
+  const factory AppError.access({
+    required AccessErrorCategory category,
+  }) = AppAccessError;
+
   AppStrings header() {
     return const AppStrings.error();
   }
@@ -88,6 +92,15 @@ class AppError with _$AppError {
       authentication: (category) {
         return category.when(
           notAuth: () => AppStrings.userIsUnauthorized(),
+        );
+      },
+      access: (category) {
+        return category.when(
+          alreadyAddedInFavourite: () => AppStrings.alreadyAddedToFavourites(),
+          noID: () => AppStrings.noID(),
+          notAddedToFavorites: () => AppStrings.notAddedToFavorites(),
+          notAddedToUserTracks: () => AppStrings.notAddedToUserTracks(),
+          noRemoveRights: () => AppStrings.noRemoveRights(),
         );
       },
     );

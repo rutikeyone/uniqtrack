@@ -1,8 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:provider/provider.dart';
 import 'package:uniqtrack/app/app_state/auth/auth_notifier.dart';
 import 'package:uniqtrack/app/glue/accounts/providers/providers.dart';
+import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
 import 'package:uniqtrack/core/common/context_extension.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_transparent_button.dart';

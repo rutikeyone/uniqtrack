@@ -39,10 +39,8 @@ _$MemoryModelImpl _$$MemoryModelImplFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
       name: json['name'] as String?,
       comment: json['comment'] as String?,
-      uploadedPhotos: (json['uploadedPhotos'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      photos: const UInt8ListConverter().fromJson(json['photos'] as String?),
+      photos:
+          (json['photos'] as List<dynamic>?)?.map((e) => e as String).toList(),
       position: json['position'] == null
           ? null
           : PositionModel.fromJson(json['position'] as Map<String, dynamic>),
@@ -53,8 +51,7 @@ Map<String, dynamic> _$$MemoryModelImplToJson(_$MemoryModelImpl instance) =>
       'id': instance.id,
       'name': instance.name,
       'comment': instance.comment,
-      'uploadedPhotos': instance.uploadedPhotos,
-      'photos': const UInt8ListConverter().toJson(instance.photos),
+      'photos': instance.photos,
       'position': instance.position,
     };
 
@@ -62,6 +59,8 @@ _$TrackModelImpl _$$TrackModelImplFromJson(Map<String, dynamic> json) =>
     _$TrackModelImpl(
       id: json['id'] as String?,
       creatorId: json['creatorId'] as String?,
+      dateCreated:
+          const DateConverter().fromJson(json['dateCreated'] as String?),
       name: json['name'] as String?,
       comment: json['comment'] as String?,
       positions: const ListPositionDataConverter()
@@ -78,6 +77,7 @@ Map<String, dynamic> _$$TrackModelImplToJson(_$TrackModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'creatorId': instance.creatorId,
+      'dateCreated': const DateConverter().toJson(instance.dateCreated),
       'name': instance.name,
       'comment': instance.comment,
       'positions': const ListPositionDataConverter().toJson(instance.positions),

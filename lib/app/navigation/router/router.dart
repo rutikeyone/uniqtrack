@@ -12,13 +12,16 @@ import 'package:uniqtrack/app/navigation/arguments/args.dart';
 import 'package:uniqtrack/app/navigation/go_router_refresh_stream.dart';
 import 'package:uniqtrack/app/navigation/main_page.dart';
 import 'package:uniqtrack/app/navigation/paths/app_paths.dart';
+import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
 import 'package:uniqtrack/app/navigation/stores/nav_callback_store_builder.dart';
 import 'package:uniqtrack/features/accounts/presentation/forgot_password/pages/forgot_password_page.dart';
 import 'package:uniqtrack/features/accounts/presentation/login/pages/login_page.dart';
+import 'package:uniqtrack/features/accounts/presentation/my_favourite_tracks/pages/my_favourite_tracks_page.dart';
+import 'package:uniqtrack/features/accounts/presentation/my_tracks/pages/my_tracks_page.dart';
 import 'package:uniqtrack/features/accounts/presentation/profile/pages/profile_page.dart';
 import 'package:uniqtrack/features/accounts/presentation/register/pages/register_page.dart';
 import 'package:uniqtrack/features/placeholders/presentation/splash/pages/splash_page.dart';
-import 'package:uniqtrack/features/tracks/presentation/add_or_edit_edit_memory/pages/add_or_edit_memory_page.dart';
+import 'package:uniqtrack/features/tracks/presentation/add_or_edit_memory/pages/add_or_edit_memory_page.dart';
 import 'package:uniqtrack/features/tracks/presentation/add_or_edit_record_track/pages/add_or_edit_record_track_page.dart';
 import 'package:uniqtrack/features/tracks/presentation/community/pages/community_page.dart';
 import 'package:uniqtrack/features/tracks/presentation/photo_viewer/pages/photo_viewer_page.dart';
@@ -193,6 +196,7 @@ GoRouter router(RouterRef ref) {
                                     create: (context) => storeBuilder.create(
                                       context,
                                       position: args?.position,
+                                      memory: args?.memory,
                                     ),
                                   ),
                                 ],
@@ -316,8 +320,32 @@ GoRouter router(RouterRef ref) {
               GoRoute(
                 path: AppPaths.profile.goRoute,
                 builder: (context, state) {
-                  return ProfilePage();
+                  final navCallbackStore = ProfileNavCallbackStore(
+                    navigateToMyTracks: () =>
+                        context.push(AppPaths.profile.myTracksPath.path),
+                    navigateToMyFavouriteTracks: () =>
+                        context.push(AppPaths.profile.myFavouriteTracks.path),
+                  );
+
+                  return provider.Provider.value(
+                    value: navCallbackStore,
+                    child: ProfilePage(),
+                  );
                 },
+                routes: [
+                  GoRoute(
+                    path: AppPaths.profile.myTracksPath.goRoute,
+                    builder: (context, state) {
+                      return MyTracksPage();
+                    },
+                  ),
+                  GoRoute(
+                    path: AppPaths.profile.myFavouriteTracks.goRoute,
+                    builder: (context, state) {
+                      return MyFavouriteTracksPage();
+                    },
+                  ),
+                ],
               ),
             ],
           ),

@@ -24,6 +24,7 @@ mixin _$AppError {
     required TResult Function(NetworkErrorCategory category) network,
     required TResult Function(AuthenticationErrorCategory category)
         authentication,
+    required TResult Function(AccessErrorCategory category) access,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -33,6 +34,7 @@ mixin _$AppError {
     TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
     TResult? Function(AuthenticationErrorCategory category)? authentication,
+    TResult? Function(AccessErrorCategory category)? access,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +44,7 @@ mixin _$AppError {
     TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
     TResult Function(AuthenticationErrorCategory category)? authentication,
+    TResult Function(AccessErrorCategory category)? access,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -52,6 +55,7 @@ mixin _$AppError {
     required TResult Function(AppPermissionError value) permission,
     required TResult Function(AppNetworkError value) network,
     required TResult Function(AppAuthenticationError value) authentication,
+    required TResult Function(AppAccessError value) access,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -61,6 +65,7 @@ mixin _$AppError {
     TResult? Function(AppPermissionError value)? permission,
     TResult? Function(AppNetworkError value)? network,
     TResult? Function(AppAuthenticationError value)? authentication,
+    TResult? Function(AppAccessError value)? access,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +75,7 @@ mixin _$AppError {
     TResult Function(AppPermissionError value)? permission,
     TResult Function(AppNetworkError value)? network,
     TResult Function(AppAuthenticationError value)? authentication,
+    TResult Function(AppAccessError value)? access,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -148,6 +154,7 @@ class _$AppBaseErrorImpl extends AppBaseError with DiagnosticableTreeMixin {
     required TResult Function(NetworkErrorCategory category) network,
     required TResult Function(AuthenticationErrorCategory category)
         authentication,
+    required TResult Function(AccessErrorCategory category) access,
   }) {
     return base();
   }
@@ -160,6 +167,7 @@ class _$AppBaseErrorImpl extends AppBaseError with DiagnosticableTreeMixin {
     TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
     TResult? Function(AuthenticationErrorCategory category)? authentication,
+    TResult? Function(AccessErrorCategory category)? access,
   }) {
     return base?.call();
   }
@@ -172,6 +180,7 @@ class _$AppBaseErrorImpl extends AppBaseError with DiagnosticableTreeMixin {
     TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
     TResult Function(AuthenticationErrorCategory category)? authentication,
+    TResult Function(AccessErrorCategory category)? access,
     required TResult orElse(),
   }) {
     if (base != null) {
@@ -188,6 +197,7 @@ class _$AppBaseErrorImpl extends AppBaseError with DiagnosticableTreeMixin {
     required TResult Function(AppPermissionError value) permission,
     required TResult Function(AppNetworkError value) network,
     required TResult Function(AppAuthenticationError value) authentication,
+    required TResult Function(AppAccessError value) access,
   }) {
     return base(this);
   }
@@ -200,6 +210,7 @@ class _$AppBaseErrorImpl extends AppBaseError with DiagnosticableTreeMixin {
     TResult? Function(AppPermissionError value)? permission,
     TResult? Function(AppNetworkError value)? network,
     TResult? Function(AppAuthenticationError value)? authentication,
+    TResult? Function(AppAccessError value)? access,
   }) {
     return base?.call(this);
   }
@@ -212,6 +223,7 @@ class _$AppBaseErrorImpl extends AppBaseError with DiagnosticableTreeMixin {
     TResult Function(AppPermissionError value)? permission,
     TResult Function(AppNetworkError value)? network,
     TResult Function(AppAuthenticationError value)? authentication,
+    TResult Function(AppAccessError value)? access,
     required TResult orElse(),
   }) {
     if (base != null) {
@@ -323,6 +335,7 @@ class _$AppFirebaseErrorImpl extends AppFirebaseError
     required TResult Function(NetworkErrorCategory category) network,
     required TResult Function(AuthenticationErrorCategory category)
         authentication,
+    required TResult Function(AccessErrorCategory category) access,
   }) {
     return firebase(category);
   }
@@ -335,6 +348,7 @@ class _$AppFirebaseErrorImpl extends AppFirebaseError
     TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
     TResult? Function(AuthenticationErrorCategory category)? authentication,
+    TResult? Function(AccessErrorCategory category)? access,
   }) {
     return firebase?.call(category);
   }
@@ -347,6 +361,7 @@ class _$AppFirebaseErrorImpl extends AppFirebaseError
     TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
     TResult Function(AuthenticationErrorCategory category)? authentication,
+    TResult Function(AccessErrorCategory category)? access,
     required TResult orElse(),
   }) {
     if (firebase != null) {
@@ -363,6 +378,7 @@ class _$AppFirebaseErrorImpl extends AppFirebaseError
     required TResult Function(AppPermissionError value) permission,
     required TResult Function(AppNetworkError value) network,
     required TResult Function(AppAuthenticationError value) authentication,
+    required TResult Function(AppAccessError value) access,
   }) {
     return firebase(this);
   }
@@ -375,6 +391,7 @@ class _$AppFirebaseErrorImpl extends AppFirebaseError
     TResult? Function(AppPermissionError value)? permission,
     TResult? Function(AppNetworkError value)? network,
     TResult? Function(AppAuthenticationError value)? authentication,
+    TResult? Function(AppAccessError value)? access,
   }) {
     return firebase?.call(this);
   }
@@ -387,6 +404,7 @@ class _$AppFirebaseErrorImpl extends AppFirebaseError
     TResult Function(AppPermissionError value)? permission,
     TResult Function(AppNetworkError value)? network,
     TResult Function(AppAuthenticationError value)? authentication,
+    TResult Function(AppAccessError value)? access,
     required TResult orElse(),
   }) {
     if (firebase != null) {
@@ -507,6 +525,7 @@ class _$AppPermissionErrorImpl extends AppPermissionError
     required TResult Function(NetworkErrorCategory category) network,
     required TResult Function(AuthenticationErrorCategory category)
         authentication,
+    required TResult Function(AccessErrorCategory category) access,
   }) {
     return permission(category);
   }
@@ -519,6 +538,7 @@ class _$AppPermissionErrorImpl extends AppPermissionError
     TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
     TResult? Function(AuthenticationErrorCategory category)? authentication,
+    TResult? Function(AccessErrorCategory category)? access,
   }) {
     return permission?.call(category);
   }
@@ -531,6 +551,7 @@ class _$AppPermissionErrorImpl extends AppPermissionError
     TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
     TResult Function(AuthenticationErrorCategory category)? authentication,
+    TResult Function(AccessErrorCategory category)? access,
     required TResult orElse(),
   }) {
     if (permission != null) {
@@ -547,6 +568,7 @@ class _$AppPermissionErrorImpl extends AppPermissionError
     required TResult Function(AppPermissionError value) permission,
     required TResult Function(AppNetworkError value) network,
     required TResult Function(AppAuthenticationError value) authentication,
+    required TResult Function(AppAccessError value) access,
   }) {
     return permission(this);
   }
@@ -559,6 +581,7 @@ class _$AppPermissionErrorImpl extends AppPermissionError
     TResult? Function(AppPermissionError value)? permission,
     TResult? Function(AppNetworkError value)? network,
     TResult? Function(AppAuthenticationError value)? authentication,
+    TResult? Function(AppAccessError value)? access,
   }) {
     return permission?.call(this);
   }
@@ -571,6 +594,7 @@ class _$AppPermissionErrorImpl extends AppPermissionError
     TResult Function(AppPermissionError value)? permission,
     TResult Function(AppNetworkError value)? network,
     TResult Function(AppAuthenticationError value)? authentication,
+    TResult Function(AppAccessError value)? access,
     required TResult orElse(),
   }) {
     if (permission != null) {
@@ -692,6 +716,7 @@ class _$AppNetworkErrorImpl extends AppNetworkError
     required TResult Function(NetworkErrorCategory category) network,
     required TResult Function(AuthenticationErrorCategory category)
         authentication,
+    required TResult Function(AccessErrorCategory category) access,
   }) {
     return network(category);
   }
@@ -704,6 +729,7 @@ class _$AppNetworkErrorImpl extends AppNetworkError
     TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
     TResult? Function(AuthenticationErrorCategory category)? authentication,
+    TResult? Function(AccessErrorCategory category)? access,
   }) {
     return network?.call(category);
   }
@@ -716,6 +742,7 @@ class _$AppNetworkErrorImpl extends AppNetworkError
     TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
     TResult Function(AuthenticationErrorCategory category)? authentication,
+    TResult Function(AccessErrorCategory category)? access,
     required TResult orElse(),
   }) {
     if (network != null) {
@@ -732,6 +759,7 @@ class _$AppNetworkErrorImpl extends AppNetworkError
     required TResult Function(AppPermissionError value) permission,
     required TResult Function(AppNetworkError value) network,
     required TResult Function(AppAuthenticationError value) authentication,
+    required TResult Function(AppAccessError value) access,
   }) {
     return network(this);
   }
@@ -744,6 +772,7 @@ class _$AppNetworkErrorImpl extends AppNetworkError
     TResult? Function(AppPermissionError value)? permission,
     TResult? Function(AppNetworkError value)? network,
     TResult? Function(AppAuthenticationError value)? authentication,
+    TResult? Function(AppAccessError value)? access,
   }) {
     return network?.call(this);
   }
@@ -756,6 +785,7 @@ class _$AppNetworkErrorImpl extends AppNetworkError
     TResult Function(AppPermissionError value)? permission,
     TResult Function(AppNetworkError value)? network,
     TResult Function(AppAuthenticationError value)? authentication,
+    TResult Function(AppAccessError value)? access,
     required TResult orElse(),
   }) {
     if (network != null) {
@@ -878,6 +908,7 @@ class _$AppAuthenticationErrorImpl extends AppAuthenticationError
     required TResult Function(NetworkErrorCategory category) network,
     required TResult Function(AuthenticationErrorCategory category)
         authentication,
+    required TResult Function(AccessErrorCategory category) access,
   }) {
     return authentication(category);
   }
@@ -890,6 +921,7 @@ class _$AppAuthenticationErrorImpl extends AppAuthenticationError
     TResult? Function(PermissionErrorCategory category)? permission,
     TResult? Function(NetworkErrorCategory category)? network,
     TResult? Function(AuthenticationErrorCategory category)? authentication,
+    TResult? Function(AccessErrorCategory category)? access,
   }) {
     return authentication?.call(category);
   }
@@ -902,6 +934,7 @@ class _$AppAuthenticationErrorImpl extends AppAuthenticationError
     TResult Function(PermissionErrorCategory category)? permission,
     TResult Function(NetworkErrorCategory category)? network,
     TResult Function(AuthenticationErrorCategory category)? authentication,
+    TResult Function(AccessErrorCategory category)? access,
     required TResult orElse(),
   }) {
     if (authentication != null) {
@@ -918,6 +951,7 @@ class _$AppAuthenticationErrorImpl extends AppAuthenticationError
     required TResult Function(AppPermissionError value) permission,
     required TResult Function(AppNetworkError value) network,
     required TResult Function(AppAuthenticationError value) authentication,
+    required TResult Function(AppAccessError value) access,
   }) {
     return authentication(this);
   }
@@ -930,6 +964,7 @@ class _$AppAuthenticationErrorImpl extends AppAuthenticationError
     TResult? Function(AppPermissionError value)? permission,
     TResult? Function(AppNetworkError value)? network,
     TResult? Function(AppAuthenticationError value)? authentication,
+    TResult? Function(AppAccessError value)? access,
   }) {
     return authentication?.call(this);
   }
@@ -942,6 +977,7 @@ class _$AppAuthenticationErrorImpl extends AppAuthenticationError
     TResult Function(AppPermissionError value)? permission,
     TResult Function(AppNetworkError value)? network,
     TResult Function(AppAuthenticationError value)? authentication,
+    TResult Function(AppAccessError value)? access,
     required TResult orElse(),
   }) {
     if (authentication != null) {
@@ -964,6 +1000,195 @@ abstract class AppAuthenticationError extends AppError {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppAuthenticationErrorImplCopyWith<_$AppAuthenticationErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AppAccessErrorImplCopyWith<$Res> {
+  factory _$$AppAccessErrorImplCopyWith(_$AppAccessErrorImpl value,
+          $Res Function(_$AppAccessErrorImpl) then) =
+      __$$AppAccessErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({AccessErrorCategory category});
+
+  $AccessErrorCategoryCopyWith<$Res> get category;
+}
+
+/// @nodoc
+class __$$AppAccessErrorImplCopyWithImpl<$Res>
+    extends _$AppErrorCopyWithImpl<$Res, _$AppAccessErrorImpl>
+    implements _$$AppAccessErrorImplCopyWith<$Res> {
+  __$$AppAccessErrorImplCopyWithImpl(
+      _$AppAccessErrorImpl _value, $Res Function(_$AppAccessErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppError
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? category = null,
+  }) {
+    return _then(_$AppAccessErrorImpl(
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as AccessErrorCategory,
+    ));
+  }
+
+  /// Create a copy of AppError
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AccessErrorCategoryCopyWith<$Res> get category {
+    return $AccessErrorCategoryCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AppAccessErrorImpl extends AppAccessError with DiagnosticableTreeMixin {
+  const _$AppAccessErrorImpl({required this.category}) : super._();
+
+  @override
+  final AccessErrorCategory category;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AppError.access(category: $category)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AppError.access'))
+      ..add(DiagnosticsProperty('category', category));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AppAccessErrorImpl &&
+            (identical(other.category, category) ||
+                other.category == category));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, category);
+
+  /// Create a copy of AppError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AppAccessErrorImplCopyWith<_$AppAccessErrorImpl> get copyWith =>
+      __$$AppAccessErrorImplCopyWithImpl<_$AppAccessErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() base,
+    required TResult Function(FirebaseErrorCategory category) firebase,
+    required TResult Function(PermissionErrorCategory category) permission,
+    required TResult Function(NetworkErrorCategory category) network,
+    required TResult Function(AuthenticationErrorCategory category)
+        authentication,
+    required TResult Function(AccessErrorCategory category) access,
+  }) {
+    return access(category);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? base,
+    TResult? Function(FirebaseErrorCategory category)? firebase,
+    TResult? Function(PermissionErrorCategory category)? permission,
+    TResult? Function(NetworkErrorCategory category)? network,
+    TResult? Function(AuthenticationErrorCategory category)? authentication,
+    TResult? Function(AccessErrorCategory category)? access,
+  }) {
+    return access?.call(category);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? base,
+    TResult Function(FirebaseErrorCategory category)? firebase,
+    TResult Function(PermissionErrorCategory category)? permission,
+    TResult Function(NetworkErrorCategory category)? network,
+    TResult Function(AuthenticationErrorCategory category)? authentication,
+    TResult Function(AccessErrorCategory category)? access,
+    required TResult orElse(),
+  }) {
+    if (access != null) {
+      return access(category);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AppBaseError value) base,
+    required TResult Function(AppFirebaseError value) firebase,
+    required TResult Function(AppPermissionError value) permission,
+    required TResult Function(AppNetworkError value) network,
+    required TResult Function(AppAuthenticationError value) authentication,
+    required TResult Function(AppAccessError value) access,
+  }) {
+    return access(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AppBaseError value)? base,
+    TResult? Function(AppFirebaseError value)? firebase,
+    TResult? Function(AppPermissionError value)? permission,
+    TResult? Function(AppNetworkError value)? network,
+    TResult? Function(AppAuthenticationError value)? authentication,
+    TResult? Function(AppAccessError value)? access,
+  }) {
+    return access?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AppBaseError value)? base,
+    TResult Function(AppFirebaseError value)? firebase,
+    TResult Function(AppPermissionError value)? permission,
+    TResult Function(AppNetworkError value)? network,
+    TResult Function(AppAuthenticationError value)? authentication,
+    TResult Function(AppAccessError value)? access,
+    required TResult orElse(),
+  }) {
+    if (access != null) {
+      return access(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AppAccessError extends AppError {
+  const factory AppAccessError({required final AccessErrorCategory category}) =
+      _$AppAccessErrorImpl;
+  const AppAccessError._() : super._();
+
+  AccessErrorCategory get category;
+
+  /// Create a copy of AppError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AppAccessErrorImplCopyWith<_$AppAccessErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7342,4 +7567,800 @@ abstract class _NotAuthenticatedErrorCategory
     implements AuthenticationErrorCategory {
   const factory _NotAuthenticatedErrorCategory() =
       _$NotAuthenticatedErrorCategoryImpl;
+}
+
+/// @nodoc
+mixin _$AccessErrorCategory {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() alreadyAddedInFavourite,
+    required TResult Function() noID,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noRemoveRights,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? alreadyAddedInFavourite,
+    TResult? Function()? noID,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noRemoveRights,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alreadyAddedInFavourite,
+    TResult Function()? noID,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noRemoveRights,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AlreadyAddedInFavourteErrorCategory value)
+        alreadyAddedInFavourite,
+    required TResult Function(_NoIDErrorCategory value) noID,
+    required TResult Function(_NotAddedToFavouritesCategory value)
+        notAddedToFavorites,
+    required TResult Function(_NotAddedToUserTracksCategory value)
+        notAddedToUserTracks,
+    required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult? Function(_NoIDErrorCategory value)? noID,
+    TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult? Function(_NotAddedToUserTracksCategory value)?
+        notAddedToUserTracks,
+    TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult Function(_NoIDErrorCategory value)? noID,
+    TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AccessErrorCategoryCopyWith<$Res> {
+  factory $AccessErrorCategoryCopyWith(
+          AccessErrorCategory value, $Res Function(AccessErrorCategory) then) =
+      _$AccessErrorCategoryCopyWithImpl<$Res, AccessErrorCategory>;
+}
+
+/// @nodoc
+class _$AccessErrorCategoryCopyWithImpl<$Res, $Val extends AccessErrorCategory>
+    implements $AccessErrorCategoryCopyWith<$Res> {
+  _$AccessErrorCategoryCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of AccessErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$AlreadyAddedInFavourteErrorCategoryImplCopyWith<$Res> {
+  factory _$$AlreadyAddedInFavourteErrorCategoryImplCopyWith(
+          _$AlreadyAddedInFavourteErrorCategoryImpl value,
+          $Res Function(_$AlreadyAddedInFavourteErrorCategoryImpl) then) =
+      __$$AlreadyAddedInFavourteErrorCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AlreadyAddedInFavourteErrorCategoryImplCopyWithImpl<$Res>
+    extends _$AccessErrorCategoryCopyWithImpl<$Res,
+        _$AlreadyAddedInFavourteErrorCategoryImpl>
+    implements _$$AlreadyAddedInFavourteErrorCategoryImplCopyWith<$Res> {
+  __$$AlreadyAddedInFavourteErrorCategoryImplCopyWithImpl(
+      _$AlreadyAddedInFavourteErrorCategoryImpl _value,
+      $Res Function(_$AlreadyAddedInFavourteErrorCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AccessErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AlreadyAddedInFavourteErrorCategoryImpl
+    with DiagnosticableTreeMixin
+    implements _AlreadyAddedInFavourteErrorCategory {
+  const _$AlreadyAddedInFavourteErrorCategoryImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AccessErrorCategory.alreadyAddedInFavourite()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'AccessErrorCategory.alreadyAddedInFavourite'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AlreadyAddedInFavourteErrorCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() alreadyAddedInFavourite,
+    required TResult Function() noID,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noRemoveRights,
+  }) {
+    return alreadyAddedInFavourite();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? alreadyAddedInFavourite,
+    TResult? Function()? noID,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noRemoveRights,
+  }) {
+    return alreadyAddedInFavourite?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alreadyAddedInFavourite,
+    TResult Function()? noID,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noRemoveRights,
+    required TResult orElse(),
+  }) {
+    if (alreadyAddedInFavourite != null) {
+      return alreadyAddedInFavourite();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AlreadyAddedInFavourteErrorCategory value)
+        alreadyAddedInFavourite,
+    required TResult Function(_NoIDErrorCategory value) noID,
+    required TResult Function(_NotAddedToFavouritesCategory value)
+        notAddedToFavorites,
+    required TResult Function(_NotAddedToUserTracksCategory value)
+        notAddedToUserTracks,
+    required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+  }) {
+    return alreadyAddedInFavourite(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult? Function(_NoIDErrorCategory value)? noID,
+    TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult? Function(_NotAddedToUserTracksCategory value)?
+        notAddedToUserTracks,
+    TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+  }) {
+    return alreadyAddedInFavourite?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult Function(_NoIDErrorCategory value)? noID,
+    TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    required TResult orElse(),
+  }) {
+    if (alreadyAddedInFavourite != null) {
+      return alreadyAddedInFavourite(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AlreadyAddedInFavourteErrorCategory
+    implements AccessErrorCategory {
+  const factory _AlreadyAddedInFavourteErrorCategory() =
+      _$AlreadyAddedInFavourteErrorCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$NoIDErrorCategoryImplCopyWith<$Res> {
+  factory _$$NoIDErrorCategoryImplCopyWith(_$NoIDErrorCategoryImpl value,
+          $Res Function(_$NoIDErrorCategoryImpl) then) =
+      __$$NoIDErrorCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NoIDErrorCategoryImplCopyWithImpl<$Res>
+    extends _$AccessErrorCategoryCopyWithImpl<$Res, _$NoIDErrorCategoryImpl>
+    implements _$$NoIDErrorCategoryImplCopyWith<$Res> {
+  __$$NoIDErrorCategoryImplCopyWithImpl(_$NoIDErrorCategoryImpl _value,
+      $Res Function(_$NoIDErrorCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AccessErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NoIDErrorCategoryImpl
+    with DiagnosticableTreeMixin
+    implements _NoIDErrorCategory {
+  const _$NoIDErrorCategoryImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AccessErrorCategory.noID()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'AccessErrorCategory.noID'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$NoIDErrorCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() alreadyAddedInFavourite,
+    required TResult Function() noID,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noRemoveRights,
+  }) {
+    return noID();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? alreadyAddedInFavourite,
+    TResult? Function()? noID,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noRemoveRights,
+  }) {
+    return noID?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alreadyAddedInFavourite,
+    TResult Function()? noID,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noRemoveRights,
+    required TResult orElse(),
+  }) {
+    if (noID != null) {
+      return noID();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AlreadyAddedInFavourteErrorCategory value)
+        alreadyAddedInFavourite,
+    required TResult Function(_NoIDErrorCategory value) noID,
+    required TResult Function(_NotAddedToFavouritesCategory value)
+        notAddedToFavorites,
+    required TResult Function(_NotAddedToUserTracksCategory value)
+        notAddedToUserTracks,
+    required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+  }) {
+    return noID(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult? Function(_NoIDErrorCategory value)? noID,
+    TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult? Function(_NotAddedToUserTracksCategory value)?
+        notAddedToUserTracks,
+    TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+  }) {
+    return noID?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult Function(_NoIDErrorCategory value)? noID,
+    TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    required TResult orElse(),
+  }) {
+    if (noID != null) {
+      return noID(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NoIDErrorCategory implements AccessErrorCategory {
+  const factory _NoIDErrorCategory() = _$NoIDErrorCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$NotAddedToFavouritesCategoryImplCopyWith<$Res> {
+  factory _$$NotAddedToFavouritesCategoryImplCopyWith(
+          _$NotAddedToFavouritesCategoryImpl value,
+          $Res Function(_$NotAddedToFavouritesCategoryImpl) then) =
+      __$$NotAddedToFavouritesCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NotAddedToFavouritesCategoryImplCopyWithImpl<$Res>
+    extends _$AccessErrorCategoryCopyWithImpl<$Res,
+        _$NotAddedToFavouritesCategoryImpl>
+    implements _$$NotAddedToFavouritesCategoryImplCopyWith<$Res> {
+  __$$NotAddedToFavouritesCategoryImplCopyWithImpl(
+      _$NotAddedToFavouritesCategoryImpl _value,
+      $Res Function(_$NotAddedToFavouritesCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AccessErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NotAddedToFavouritesCategoryImpl
+    with DiagnosticableTreeMixin
+    implements _NotAddedToFavouritesCategory {
+  const _$NotAddedToFavouritesCategoryImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AccessErrorCategory.notAddedToFavorites()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'AccessErrorCategory.notAddedToFavorites'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NotAddedToFavouritesCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() alreadyAddedInFavourite,
+    required TResult Function() noID,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noRemoveRights,
+  }) {
+    return notAddedToFavorites();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? alreadyAddedInFavourite,
+    TResult? Function()? noID,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noRemoveRights,
+  }) {
+    return notAddedToFavorites?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alreadyAddedInFavourite,
+    TResult Function()? noID,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noRemoveRights,
+    required TResult orElse(),
+  }) {
+    if (notAddedToFavorites != null) {
+      return notAddedToFavorites();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AlreadyAddedInFavourteErrorCategory value)
+        alreadyAddedInFavourite,
+    required TResult Function(_NoIDErrorCategory value) noID,
+    required TResult Function(_NotAddedToFavouritesCategory value)
+        notAddedToFavorites,
+    required TResult Function(_NotAddedToUserTracksCategory value)
+        notAddedToUserTracks,
+    required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+  }) {
+    return notAddedToFavorites(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult? Function(_NoIDErrorCategory value)? noID,
+    TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult? Function(_NotAddedToUserTracksCategory value)?
+        notAddedToUserTracks,
+    TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+  }) {
+    return notAddedToFavorites?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult Function(_NoIDErrorCategory value)? noID,
+    TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    required TResult orElse(),
+  }) {
+    if (notAddedToFavorites != null) {
+      return notAddedToFavorites(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NotAddedToFavouritesCategory implements AccessErrorCategory {
+  const factory _NotAddedToFavouritesCategory() =
+      _$NotAddedToFavouritesCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$NotAddedToUserTracksCategoryImplCopyWith<$Res> {
+  factory _$$NotAddedToUserTracksCategoryImplCopyWith(
+          _$NotAddedToUserTracksCategoryImpl value,
+          $Res Function(_$NotAddedToUserTracksCategoryImpl) then) =
+      __$$NotAddedToUserTracksCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NotAddedToUserTracksCategoryImplCopyWithImpl<$Res>
+    extends _$AccessErrorCategoryCopyWithImpl<$Res,
+        _$NotAddedToUserTracksCategoryImpl>
+    implements _$$NotAddedToUserTracksCategoryImplCopyWith<$Res> {
+  __$$NotAddedToUserTracksCategoryImplCopyWithImpl(
+      _$NotAddedToUserTracksCategoryImpl _value,
+      $Res Function(_$NotAddedToUserTracksCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AccessErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NotAddedToUserTracksCategoryImpl
+    with DiagnosticableTreeMixin
+    implements _NotAddedToUserTracksCategory {
+  const _$NotAddedToUserTracksCategoryImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AccessErrorCategory.notAddedToUserTracks()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'AccessErrorCategory.notAddedToUserTracks'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NotAddedToUserTracksCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() alreadyAddedInFavourite,
+    required TResult Function() noID,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noRemoveRights,
+  }) {
+    return notAddedToUserTracks();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? alreadyAddedInFavourite,
+    TResult? Function()? noID,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noRemoveRights,
+  }) {
+    return notAddedToUserTracks?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alreadyAddedInFavourite,
+    TResult Function()? noID,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noRemoveRights,
+    required TResult orElse(),
+  }) {
+    if (notAddedToUserTracks != null) {
+      return notAddedToUserTracks();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AlreadyAddedInFavourteErrorCategory value)
+        alreadyAddedInFavourite,
+    required TResult Function(_NoIDErrorCategory value) noID,
+    required TResult Function(_NotAddedToFavouritesCategory value)
+        notAddedToFavorites,
+    required TResult Function(_NotAddedToUserTracksCategory value)
+        notAddedToUserTracks,
+    required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+  }) {
+    return notAddedToUserTracks(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult? Function(_NoIDErrorCategory value)? noID,
+    TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult? Function(_NotAddedToUserTracksCategory value)?
+        notAddedToUserTracks,
+    TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+  }) {
+    return notAddedToUserTracks?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult Function(_NoIDErrorCategory value)? noID,
+    TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    required TResult orElse(),
+  }) {
+    if (notAddedToUserTracks != null) {
+      return notAddedToUserTracks(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NotAddedToUserTracksCategory implements AccessErrorCategory {
+  const factory _NotAddedToUserTracksCategory() =
+      _$NotAddedToUserTracksCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$NoRemoveRightsCategoryImplCopyWith<$Res> {
+  factory _$$NoRemoveRightsCategoryImplCopyWith(
+          _$NoRemoveRightsCategoryImpl value,
+          $Res Function(_$NoRemoveRightsCategoryImpl) then) =
+      __$$NoRemoveRightsCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NoRemoveRightsCategoryImplCopyWithImpl<$Res>
+    extends _$AccessErrorCategoryCopyWithImpl<$Res,
+        _$NoRemoveRightsCategoryImpl>
+    implements _$$NoRemoveRightsCategoryImplCopyWith<$Res> {
+  __$$NoRemoveRightsCategoryImplCopyWithImpl(
+      _$NoRemoveRightsCategoryImpl _value,
+      $Res Function(_$NoRemoveRightsCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AccessErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NoRemoveRightsCategoryImpl
+    with DiagnosticableTreeMixin
+    implements _NoRemoveRightsCategory {
+  const _$NoRemoveRightsCategoryImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AccessErrorCategory.noRemoveRights()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'AccessErrorCategory.noRemoveRights'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NoRemoveRightsCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() alreadyAddedInFavourite,
+    required TResult Function() noID,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noRemoveRights,
+  }) {
+    return noRemoveRights();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? alreadyAddedInFavourite,
+    TResult? Function()? noID,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noRemoveRights,
+  }) {
+    return noRemoveRights?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alreadyAddedInFavourite,
+    TResult Function()? noID,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noRemoveRights,
+    required TResult orElse(),
+  }) {
+    if (noRemoveRights != null) {
+      return noRemoveRights();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AlreadyAddedInFavourteErrorCategory value)
+        alreadyAddedInFavourite,
+    required TResult Function(_NoIDErrorCategory value) noID,
+    required TResult Function(_NotAddedToFavouritesCategory value)
+        notAddedToFavorites,
+    required TResult Function(_NotAddedToUserTracksCategory value)
+        notAddedToUserTracks,
+    required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+  }) {
+    return noRemoveRights(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult? Function(_NoIDErrorCategory value)? noID,
+    TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult? Function(_NotAddedToUserTracksCategory value)?
+        notAddedToUserTracks,
+    TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+  }) {
+    return noRemoveRights?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult Function(_NoIDErrorCategory value)? noID,
+    TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    required TResult orElse(),
+  }) {
+    if (noRemoveRights != null) {
+      return noRemoveRights(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NoRemoveRightsCategory implements AccessErrorCategory {
+  const factory _NoRemoveRightsCategory() = _$NoRemoveRightsCategoryImpl;
 }

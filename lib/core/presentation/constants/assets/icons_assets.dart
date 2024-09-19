@@ -17,4 +17,7 @@ class IconsAssets {
   final memory = "$dir/ic_memory.svg";
   final memoryMap = "$dir/ic_memory.png";
   final more = "$dir/ic_more.svg";
+  final share = "$dir/ic_share.svg";
+  final favourite = "$dir/ic_favourite.svg";
+  final favouriteSelected = "$dir/ic_favourite_selected.svg";
 }

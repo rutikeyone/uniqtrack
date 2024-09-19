@@ -24,4 +24,6 @@ abstract interface class AppWidgetToolkit {
     required double distance,
     required BuildContext context,
   });
+
+  String? formatDate(DateTime? date);
 }

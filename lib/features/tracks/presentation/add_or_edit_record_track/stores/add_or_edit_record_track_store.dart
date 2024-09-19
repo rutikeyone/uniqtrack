@@ -8,8 +8,7 @@ import 'package:uniqtrack/core/common/strings/app_strings.dart';
 import 'package:uniqtrack/core/common/validation/entities/comment.dart';
 import 'package:uniqtrack/core/common/validation/entities/track_name.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
-import 'package:uniqtrack/features/tracks/domain/record_track_repository.dart';
-import 'package:uuid/uuid.dart';
+import 'package:uniqtrack/features/tracks/domain/track_repository.dart';
 
 import 'states/states.dart';
 
@@ -27,9 +26,7 @@ class AddOrEditRecordTrackStore = _AddOrEditRecordTrackStore
 
 abstract class _AddOrEditRecordTrackStore with Store {
   final CommonUIDelegate _commonUIDelegate;
-  final RecordTrackRepository _recordTrackRepository;
-
-  final Uuid _uuid;
+  final TrackRepository _recordTrackRepository;
 
   @observable
   AddOrEditRecordTrackModeState modeState;
@@ -51,7 +48,7 @@ abstract class _AddOrEditRecordTrackStore with Store {
 
   @computed
   bool get canSave {
-    final List<FormzInput> allInputs = [trackName, comment];
+    final List<FormzInput> allInputs = [trackName];
     final isAllInputValid = allInputs.every((item) => item.isValid);
     final saveInProgress = statusMode == FormzSubmissionStatus.inProgress;
 
@@ -75,13 +72,11 @@ abstract class _AddOrEditRecordTrackStore with Store {
   _AddOrEditRecordTrackStore({
     required Track? track,
     required CommonUIDelegate commonUIDelegate,
-    required RecordTrackRepository recordTrackRepository,
-    required Uuid uuid,
+    required TrackRepository recordTrackRepository,
   })  : _commonUIDelegate = commonUIDelegate,
         _recordTrackRepository = recordTrackRepository,
         modeState = AddOrEditRecordTrackModeState.add(track: track),
-        memories = track?.memories ?? [],
-        _uuid = uuid;
+        memories = track?.memories ?? [];
 
   @action
   void updateComment(String? value) {
@@ -109,9 +104,9 @@ abstract class _AddOrEditRecordTrackStore with Store {
     final track = modeState.when(
       add: (track) {
         return track?.copyWith(
-          id: _uuid.v1(),
           name: nameValue,
           comment: commentValue,
+          dateCreated: DateTime.now(),
         );
       },
       edit: () => null,
@@ -121,7 +116,7 @@ abstract class _AddOrEditRecordTrackStore with Store {
 
     statusMode = FormzSubmissionStatus.inProgress;
 
-    final result = await _recordTrackRepository.addRecordTrackData(track);
+    final result = await _recordTrackRepository.saveData(track);
 
     result.fold(
       _handleSaveRecordTrackDataFailureResult,

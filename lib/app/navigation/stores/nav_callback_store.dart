@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
+import 'package:uniqtrack/features/tracks/presentation/add_or_edit_memory/add_or_edit_memory_result.dart';
 
 part 'nav_callback_store.freezed.dart';
 
@@ -34,6 +35,7 @@ class RegisterNavCallbackStore with _$RegisterNavCallbackStore {
 class CommunityNavCallbackStore with _$CommunityNavCallbackStore {
   const factory CommunityNavCallbackStore({
     required VoidCallback navigateToTrackTracking,
+    required VoidCallback closeDialog,
   }) = _CommunityNavCallbackStore;
 }
 
@@ -42,10 +44,10 @@ class CommunityNavCallbackStore with _$CommunityNavCallbackStore {
 class RecordTrackNavCallbackStore with _$RecordTrackNavCallbackStore {
   const factory RecordTrackNavCallbackStore({
     required VoidCallback navigateBack,
-    required Future<Memory?> Function(Position?) navigateToAddMemory,
+    required Future<AddOrEditMemoryResult?> Function(Position?) navigateToAddMemory,
+    required Future<AddOrEditMemoryResult?> Function(Memory) navigateToEditMemory,
     required void Function(Track) navigateToAddRecordTrack,
-    required void Function(Uint8List?) navigateToPhotoViewerByBytes,
-    required void Function(String?) navigateToPhotoViewerByLink,
+    required void Function(String?) navigateToPhotoViewer,
   }) = _RecordTrackNavCallbackStore;
 }
 
@@ -63,8 +65,16 @@ class AddOrEditRecordTrackNavCallbackStore
 class AddOrEditMemoryNavCallbackStore with _$AddOrEditMemoryNavCallbackStore {
   const factory AddOrEditMemoryNavCallbackStore({
     required VoidCallback navigateBack,
-    required void Function(Uint8List) navigateToPhotoViewerByBytes,
-    required void Function(String) navigateToPhotoViewerByLink,
-    required void Function(Memory) navigateWithResult,
+    required void Function(String) navigateToPhotoViewer,
+    required void Function(AddOrEditMemoryResult) navigateWithResult,
   }) = _AddOrEditMemoryNavCallbackStore;
+}
+
+@immutable
+@freezed
+class ProfileNavCallbackStore with _$ProfileNavCallbackStore {
+  const factory ProfileNavCallbackStore({
+    required VoidCallback navigateToMyTracks,
+    required VoidCallback navigateToMyFavouriteTracks,
+  }) = _ProfileNavCallbackStore;
 }

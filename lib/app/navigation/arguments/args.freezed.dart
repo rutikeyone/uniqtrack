@@ -475,6 +475,7 @@ abstract class _AddOrEditRecordTrackArgs implements AddOrEditRecordTrackArgs {
 /// @nodoc
 mixin _$AddOrEditMemoryArgs {
   Position? get position => throw _privateConstructorUsedError;
+  Memory? get memory => throw _privateConstructorUsedError;
 
   /// Create a copy of AddOrEditMemoryArgs
   /// with the given fields replaced by the non-null parameter values.
@@ -489,9 +490,10 @@ abstract class $AddOrEditMemoryArgsCopyWith<$Res> {
           AddOrEditMemoryArgs value, $Res Function(AddOrEditMemoryArgs) then) =
       _$AddOrEditMemoryArgsCopyWithImpl<$Res, AddOrEditMemoryArgs>;
   @useResult
-  $Res call({Position? position});
+  $Res call({Position? position, Memory? memory});
 
   $PositionCopyWith<$Res>? get position;
+  $MemoryCopyWith<$Res>? get memory;
 }
 
 /// @nodoc
@@ -510,12 +512,17 @@ class _$AddOrEditMemoryArgsCopyWithImpl<$Res, $Val extends AddOrEditMemoryArgs>
   @override
   $Res call({
     Object? position = freezed,
+    Object? memory = freezed,
   }) {
     return _then(_value.copyWith(
       position: freezed == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
               as Position?,
+      memory: freezed == memory
+          ? _value.memory
+          : memory // ignore: cast_nullable_to_non_nullable
+              as Memory?,
     ) as $Val);
   }
 
@@ -532,6 +539,20 @@ class _$AddOrEditMemoryArgsCopyWithImpl<$Res, $Val extends AddOrEditMemoryArgs>
       return _then(_value.copyWith(position: value) as $Val);
     });
   }
+
+  /// Create a copy of AddOrEditMemoryArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $MemoryCopyWith<$Res>? get memory {
+    if (_value.memory == null) {
+      return null;
+    }
+
+    return $MemoryCopyWith<$Res>(_value.memory!, (value) {
+      return _then(_value.copyWith(memory: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -542,10 +563,12 @@ abstract class _$$AddOrEditMemoryArgsImplCopyWith<$Res>
       __$$AddOrEditMemoryArgsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Position? position});
+  $Res call({Position? position, Memory? memory});
 
   @override
   $PositionCopyWith<$Res>? get position;
+  @override
+  $MemoryCopyWith<$Res>? get memory;
 }
 
 /// @nodoc
@@ -562,12 +585,17 @@ class __$$AddOrEditMemoryArgsImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? position = freezed,
+    Object? memory = freezed,
   }) {
     return _then(_$AddOrEditMemoryArgsImpl(
       position: freezed == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
               as Position?,
+      memory: freezed == memory
+          ? _value.memory
+          : memory // ignore: cast_nullable_to_non_nullable
+              as Memory?,
     ));
   }
 }
@@ -577,14 +605,17 @@ class __$$AddOrEditMemoryArgsImplCopyWithImpl<$Res>
 class _$AddOrEditMemoryArgsImpl
     with DiagnosticableTreeMixin
     implements _AddOrEditMemoryArgs {
-  const _$AddOrEditMemoryArgsImpl({required this.position});
+  const _$AddOrEditMemoryArgsImpl(
+      {required this.position, required this.memory});
 
   @override
   final Position? position;
+  @override
+  final Memory? memory;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AddOrEditMemoryArgs(position: $position)';
+    return 'AddOrEditMemoryArgs(position: $position, memory: $memory)';
   }
 
   @override
@@ -592,7 +623,8 @@ class _$AddOrEditMemoryArgsImpl
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'AddOrEditMemoryArgs'))
-      ..add(DiagnosticsProperty('position', position));
+      ..add(DiagnosticsProperty('position', position))
+      ..add(DiagnosticsProperty('memory', memory));
   }
 
   @override
@@ -601,11 +633,12 @@ class _$AddOrEditMemoryArgsImpl
         (other.runtimeType == runtimeType &&
             other is _$AddOrEditMemoryArgsImpl &&
             (identical(other.position, position) ||
-                other.position == position));
+                other.position == position) &&
+            (identical(other.memory, memory) || other.memory == memory));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, position);
+  int get hashCode => Object.hash(runtimeType, position, memory);
 
   /// Create a copy of AddOrEditMemoryArgs
   /// with the given fields replaced by the non-null parameter values.
@@ -618,11 +651,14 @@ class _$AddOrEditMemoryArgsImpl
 }
 
 abstract class _AddOrEditMemoryArgs implements AddOrEditMemoryArgs {
-  const factory _AddOrEditMemoryArgs({required final Position? position}) =
-      _$AddOrEditMemoryArgsImpl;
+  const factory _AddOrEditMemoryArgs(
+      {required final Position? position,
+      required final Memory? memory}) = _$AddOrEditMemoryArgsImpl;
 
   @override
   Position? get position;
+  @override
+  Memory? get memory;
 
   /// Create a copy of AddOrEditMemoryArgs
   /// with the given fields replaced by the non-null parameter values.

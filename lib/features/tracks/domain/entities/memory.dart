@@ -6,8 +6,7 @@ class Memory with _$Memory {
     required String? id,
     required String? name,
     required String? comment,
-    required List<String>? uploadedPhotos,
-    required List<Uint8List>? photos,
+    required List<String>? photos,
     required Position? position,
   }) = _Memory;
 }

@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:uniqtrack/app/glue/accounts/providers/providers.dart';
+import 'package:uniqtrack/features/tracks/domain/converters/memory_converter.dart';
 import 'package:uniqtrack/features/tracks/domain/converters/position_converter.dart';
 import 'package:uniqtrack/features/tracks/domain/converters/track_converter.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';

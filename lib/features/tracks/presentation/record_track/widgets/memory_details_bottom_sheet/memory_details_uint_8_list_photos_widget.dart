@@ -1,16 +1,16 @@
-import 'package:flutter/foundation.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:uniqtrack/core/common/context_extension.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 
-class MemoryDetailsUint8ListPhotosWidget extends StatelessWidget {
-  final List<Uint8List>? initialPhotos;
-  final void Function(Uint8List?) navigateToPhotoViewerByBytes;
+class MemoryDetailsListPhotosWidget extends StatelessWidget {
+  final List<String>? initialPhotos;
+  final void Function(String?) navigateToPhotoViewer;
 
-  const MemoryDetailsUint8ListPhotosWidget({
+  const MemoryDetailsListPhotosWidget({
     required this.initialPhotos,
-    required this.navigateToPhotoViewerByBytes,
+    required this.navigateToPhotoViewer,
     super.key,
   });
 
@@ -37,12 +37,32 @@ class MemoryDetailsUint8ListPhotosWidget extends StatelessWidget {
                 return ClipRRect(
                   borderRadius: BorderRadius.circular(AppDiments.dm8),
                   child: GestureDetector(
-                    onTap: () => navigateToPhotoViewerByBytes(item),
-                    child: Image.memory(
-                      item,
+                    onTap: () => navigateToPhotoViewer(item),
+                    child: CachedNetworkImage(
+                      imageUrl: item,
                       width: AppDiments.dm96,
                       height: AppDiments.dm96,
                       fit: BoxFit.cover,
+                      placeholder: (context, url) {
+                        return Container(
+                          width: AppDiments.dm96,
+                          height: AppDiments.dm96,
+                          decoration: BoxDecoration(
+                            color: context.colorScheme.secondary,
+                            borderRadius: BorderRadius.circular(AppDiments.dm12),
+                          ),
+                        );
+                      },
+                      errorWidget: (context, _, __) {
+                        return Container(
+                          width: AppDiments.dm96,
+                          height: AppDiments.dm96,
+                          decoration: BoxDecoration(
+                            color: context.colorScheme.secondary,
+                            borderRadius: BorderRadius.circular(AppDiments.dm12),
+                          ),
+                        );
+                      },
                     ),
                   ),
                 );

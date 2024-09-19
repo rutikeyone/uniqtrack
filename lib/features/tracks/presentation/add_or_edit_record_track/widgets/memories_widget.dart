@@ -58,14 +58,13 @@ class _MemoriesWidget extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: AppDiments.dm16),
+                padding: const EdgeInsets.only(top: AppDiments.dm8),
                 child: SizedBox(
                   height: AppDiments.dm133,
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
                     itemCount: memories.length,
                     shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       final item = memories[index];
 

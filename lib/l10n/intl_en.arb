@@ -108,5 +108,19 @@
   "edit": "Edit",
   "memories": "Memories",
   "theUserIsUnauthorized": "The user is unauthorized",
-  "theEntryWasSuccessfullyAdded": "The entry was successfully added"
+  "theEntryWasSuccessfullyAdded": "The entry was successfully added",
+  "refresh": "Refresh",
+  "thereAreNoTrackRecordingsHereYet": "There are no track recordings here yet",
+  "enterMemoryName": "Enter memory name",
+  "favouriteTracks": "Favourite tracks",
+  "addToFavorites": "Add to Favorites",
+  "removeFromFavourites": "Remove From Favourites",
+  "actions": "Actions",
+  "alreadyAddedToFavorites": "Already added to favorites",
+  "thereIsNotId": "There is not ID",
+  "trackAddedSuccessfully": "Track added successfully",
+  "hasNotBeenAddedToFavoritesYet": "Has not been added to favorites yet",
+  "theTrackWasSuccessfullyDeleted": "The track was successfully deleted",
+  "theTrackIsNotInTheListOfUserTracks": "The track is not in the list of user tracks",
+  "noRemoveRights": "No remove rights"
 }

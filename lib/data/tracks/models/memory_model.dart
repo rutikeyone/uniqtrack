@@ -6,8 +6,7 @@ class MemoryModel with _$MemoryModel {
     required String? id,
     required String? name,
     required String? comment,
-    required List<String>? uploadedPhotos,
-    @UInt8ListConverter() required List<Uint8List>? photos,
+    required List<String>? photos,
     required PositionModel? position,
   }) = _MemoryModel;
 

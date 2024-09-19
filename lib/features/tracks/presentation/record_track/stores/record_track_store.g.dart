@@ -107,6 +107,22 @@ mixin _$RecordTrackStore on _RecordTrackStore, Store {
     return _$startTrackingAsyncAction.run(() => super.startTracking());
   }
 
+  late final _$deleteMemoryAsyncAction =
+      AsyncAction('_RecordTrackStore.deleteMemory', context: context);
+
+  @override
+  Future<void> deleteMemory(Memory? memory) {
+    return _$deleteMemoryAsyncAction.run(() => super.deleteMemory(memory));
+  }
+
+  late final _$editMemoryAsyncAction =
+      AsyncAction('_RecordTrackStore.editMemory', context: context);
+
+  @override
+  Future<void> editMemory(Memory? memory) {
+    return _$editMemoryAsyncAction.run(() => super.editMemory(memory));
+  }
+
   late final _$_saveAndFinishRecordTrackAsyncAction = AsyncAction(
       '_RecordTrackStore._saveAndFinishRecordTrack',
       context: context);
@@ -185,11 +201,22 @@ mixin _$RecordTrackStore on _RecordTrackStore, Store {
   }
 
   @override
-  void addMemoryWithData(Memory? memory) {
+  void addMemoryWithData(AddOrEditMemoryResult? result) {
     final _$actionInfo = _$_RecordTrackStoreActionController.startAction(
         name: '_RecordTrackStore.addMemoryWithData');
     try {
-      return super.addMemoryWithData(memory);
+      return super.addMemoryWithData(result);
+    } finally {
+      _$_RecordTrackStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void editMemoryWithData(AddOrEditMemoryResult? result) {
+    final _$actionInfo = _$_RecordTrackStoreActionController.startAction(
+        name: '_RecordTrackStore.editMemoryWithData');
+    try {
+      return super.editMemoryWithData(result);
     } finally {
       _$_RecordTrackStoreActionController.endAction(_$actionInfo);
     }
@@ -245,17 +272,6 @@ mixin _$RecordTrackStore on _RecordTrackStore, Store {
         name: '_RecordTrackStore.hideMemoryDetails');
     try {
       return super.hideMemoryDetails();
-    } finally {
-      _$_RecordTrackStoreActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
-  void deleteMemory(Memory memory) {
-    final _$actionInfo = _$_RecordTrackStoreActionController.startAction(
-        name: '_RecordTrackStore.deleteMemory');
-    try {
-      return super.deleteMemory(memory);
     } finally {
       _$_RecordTrackStoreActionController.endAction(_$actionInfo);
     }

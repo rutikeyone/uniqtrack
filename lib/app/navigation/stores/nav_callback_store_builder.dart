@@ -61,6 +61,18 @@ abstract class NavCallbackStoreBuilder {
       navigateToAddMemory: (data) {
         final queryParameters = addOrEditMemoryPath.queryParameters(
           position: data,
+          memory: null,
+          converter: addOrEditMemoryArgsConverter,
+        );
+
+        final path = addOrEditMemoryPath.query(queryParameters).path;
+
+        return context.push(path);
+      },
+      navigateToEditMemory: (data) {
+        final queryParameters = addOrEditMemoryPath.queryParameters(
+          position: null,
+          memory: data,
           converter: addOrEditMemoryArgsConverter,
         );
 
@@ -77,18 +89,7 @@ abstract class NavCallbackStoreBuilder {
         final path = addOrEditRecordTrackPath.query(queryParameters).path;
         context.push(path);
       },
-      navigateToPhotoViewerByBytes: (data) {
-        final queryParameters = photoViewerPath.queryParameters(
-          bytes: data,
-          link: null,
-          converter: photoViewerConverter,
-        );
-
-        final path = photoViewerPath.query(queryParameters).path;
-
-        context.push(path);
-      },
-      navigateToPhotoViewerByLink: (data) {
+      navigateToPhotoViewer: (data) {
         final queryParameters = photoViewerPath.queryParameters(
           bytes: null,
           link: data,
@@ -121,6 +122,7 @@ abstract class NavCallbackStoreBuilder {
   }) {
     final navCallbackStore = CommunityNavCallbackStore(
       navigateToTrackTracking: () => context.push(recordTrackPath.path),
+      closeDialog: context.pop,
     );
 
     return navCallbackStore;
@@ -133,18 +135,7 @@ abstract class NavCallbackStoreBuilder {
   }) {
     final navCallbackStore = AddOrEditMemoryNavCallbackStore(
       navigateBack: context.pop,
-      navigateToPhotoViewerByBytes: (data) {
-        final queryParameters = photoViewerPath.queryParameters(
-          bytes: data,
-          link: null,
-          converter: photoViewerConverter,
-        );
-
-        final path = photoViewerPath.query(queryParameters).path;
-
-        context.push(path);
-      },
-      navigateToPhotoViewerByLink: (data) {
+      navigateToPhotoViewer: (data) {
         final queryParameters = photoViewerPath.queryParameters(
           bytes: null,
           link: data,

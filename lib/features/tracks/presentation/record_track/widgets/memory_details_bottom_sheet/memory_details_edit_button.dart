@@ -5,7 +5,10 @@ import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/generated/l10n.dart';
 
 class MemoryDetailsEditButton extends StatelessWidget {
+  final VoidCallback onEditMemoryPressed;
+
   const MemoryDetailsEditButton({
+    required this.onEditMemoryPressed,
     super.key,
   });
 
@@ -21,7 +24,7 @@ class MemoryDetailsEditButton extends StatelessWidget {
             color: context.colorScheme.secondary,
             fontWeight: FontWeight.w500,
           ),
-          onPressed: () {},
+          onPressed: onEditMemoryPressed,
           borderRadius: BorderRadius.circular(AppDiments.dm6),
           borderColor: context.appColorsTheme.primaryButtonBorder,
           icon: Padding(

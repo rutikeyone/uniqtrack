@@ -9,7 +9,7 @@ class _MyTracksButton extends StatelessWidget {
       padding: const EdgeInsets.only(top: AppDiments.dm8),
       child: AppTransparentButton(
         label: S.of(context).myTracks,
-        onPressed: () {},
+        onPressed: context.read<ProfileNavCallbackStore>().navigateToMyTracks,
       ),
     );
   }

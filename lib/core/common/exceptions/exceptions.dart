@@ -10,3 +10,4 @@ part 'firebase_error_category.dart';
 part 'permission_error_category.dart';
 part 'network_error_category.dart';
 part 'authentication_error_category.dart';
+part 'access_error_category.dart';

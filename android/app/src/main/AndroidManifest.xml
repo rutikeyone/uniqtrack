@@ -15,7 +15,7 @@
     <application
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:label="uniqtrack">
+        android:label="UniqTrack">
 
         <activity
             android:name=".MainActivity"

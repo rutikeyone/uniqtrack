@@ -1,14 +1,14 @@
-import 'package:flutter/foundation.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:uniqtrack/core/common/context_extension.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 
-class ImageBytesTile extends StatelessWidget {
-  final Uint8List data;
+class ImageTile extends StatelessWidget {
+  final String data;
   final VoidCallback onDeletePressed;
   final VoidCallback onPressed;
 
-  const ImageBytesTile({
+  const ImageTile({
     required this.data,
     required this.onPressed,
     required this.onDeletePressed,
@@ -24,9 +24,25 @@ class ImageBytesTile extends StatelessWidget {
             onTap: onPressed,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(AppDiments.dm12),
-              child: Image.memory(
-                data,
+              child: CachedNetworkImage(
+                imageUrl: data,
                 fit: BoxFit.cover,
+                placeholder: (context, url) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      color: context.colorScheme.secondary,
+                      borderRadius: BorderRadius.circular(AppDiments.dm12),
+                    ),
+                  );
+                },
+                errorWidget: (context, _, __) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      color: context.colorScheme.secondary,
+                      borderRadius: BorderRadius.circular(AppDiments.dm12),
+                    ),
+                  );
+                },
               ),
             ),
           ),

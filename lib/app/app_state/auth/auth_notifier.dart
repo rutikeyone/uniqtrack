@@ -4,9 +4,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:uniqtrack/app/app_state/auth/states/auth_state.dart';
 import 'package:uniqtrack/app/glue/accounts/providers/providers.dart';
-import 'package:uniqtrack/features/accounts/domain/user_changes_use_case.dart';
-import 'package:uniqtrack/features/accounts/domain/sign_out_use_case.dart';
 import 'package:uniqtrack/features/accounts/domain/entities/entities.dart';
+import 'package:uniqtrack/features/accounts/domain/providers/providers.dart';
+import 'package:uniqtrack/features/accounts/domain/sign_out_use_case.dart';
+import 'package:uniqtrack/features/accounts/domain/user_changes_use_case.dart';
 
 final authStateNotifierProvider =
     StateNotifierProvider.autoDispose<AuthStateNotifier, AuthState>(

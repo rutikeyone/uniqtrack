@@ -6,7 +6,23 @@ part of 'app_widget_toolkit_impl.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$appWidgetToolkitHash() => r'53be5dd23050f2709ad623c1763ca0ee6e8e2eef';
+String _$commonUIDateFormatterHash() =>
+    r'7349c1bfe7e02af4f12cca81526c40af6965481b';
+
+/// See also [commonUIDateFormatter].
+@ProviderFor(commonUIDateFormatter)
+final commonUIDateFormatterProvider = AutoDisposeProvider<DateFormat>.internal(
+  commonUIDateFormatter,
+  name: r'commonUIDateFormatterProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$commonUIDateFormatterHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef CommonUIDateFormatterRef = AutoDisposeProviderRef<DateFormat>;
+String _$appWidgetToolkitHash() => r'98c2f52e44b432c479b7c00e484772ff197ab4ad';
 
 /// See also [appWidgetToolkit].
 @ProviderFor(appWidgetToolkit)

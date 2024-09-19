@@ -4,6 +4,7 @@ part of 'entities.dart';
 class Track with _$Track {
   const factory Track({
     required String? id,
+    required DateTime? dateCreated,
     required String? creatorId,
     required String? name,
     required String? comment,

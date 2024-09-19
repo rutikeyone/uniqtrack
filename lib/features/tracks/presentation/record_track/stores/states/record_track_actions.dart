@@ -25,6 +25,10 @@ class RecordTrackActions with _$RecordTrackActions {
     required Position? position,
   }) = _NavigateToAddMemoryAction;
 
+  const factory RecordTrackActions.navigateToEditMemory({
+    required Memory memory,
+  }) = _NavigateToEditMemoryAction;
+
   const factory RecordTrackActions.navigateToAddRecordTrack({
     required Track track,
   }) = _NavigateToAddRecordTrackAction;

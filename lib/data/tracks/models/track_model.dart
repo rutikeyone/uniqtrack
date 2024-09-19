@@ -5,6 +5,7 @@ class TrackModel with _$TrackModel {
   const factory TrackModel({
     required String? id,
     required String? creatorId,
+    @DateConverter() required DateTime? dateCreated,
     required String? name,
     required String? comment,
     @ListPositionDataConverter() required List<PositionDataModel>? positions,

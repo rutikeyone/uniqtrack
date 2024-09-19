@@ -1409,6 +1409,7 @@ mixin _$RecordTrackActions {
     required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
+    required TResult Function(Memory memory) navigateToEditMemory,
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
@@ -1424,6 +1425,7 @@ mixin _$RecordTrackActions {
     TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
+    TResult? Function(Memory memory)? navigateToEditMemory,
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
@@ -1439,6 +1441,7 @@ mixin _$RecordTrackActions {
     TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
+    TResult Function(Memory memory)? navigateToEditMemory,
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
@@ -1458,6 +1461,8 @@ mixin _$RecordTrackActions {
     required TResult Function(_NavigateBackAction value) navigateBack,
     required TResult Function(_NavigateToAddMemoryAction value)
         navigateToAddMemory,
+    required TResult Function(_NavigateToEditMemoryAction value)
+        navigateToEditMemory,
     required TResult Function(_NavigateToAddRecordTrackAction value)
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
@@ -1474,6 +1479,7 @@ mixin _$RecordTrackActions {
         hideDetailsRecordingData,
     TResult? Function(_NavigateBackAction value)? navigateBack,
     TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult? Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -1490,6 +1496,7 @@ mixin _$RecordTrackActions {
         hideDetailsRecordingData,
     TResult Function(_NavigateBackAction value)? navigateBack,
     TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -1658,6 +1665,7 @@ class _$InitStreamPositionsActionImpl
     required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
+    required TResult Function(Memory memory) navigateToEditMemory,
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
@@ -1676,6 +1684,7 @@ class _$InitStreamPositionsActionImpl
     TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
+    TResult? Function(Memory memory)? navigateToEditMemory,
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
@@ -1694,6 +1703,7 @@ class _$InitStreamPositionsActionImpl
     TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
+    TResult Function(Memory memory)? navigateToEditMemory,
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
@@ -1719,6 +1729,8 @@ class _$InitStreamPositionsActionImpl
     required TResult Function(_NavigateBackAction value) navigateBack,
     required TResult Function(_NavigateToAddMemoryAction value)
         navigateToAddMemory,
+    required TResult Function(_NavigateToEditMemoryAction value)
+        navigateToEditMemory,
     required TResult Function(_NavigateToAddRecordTrackAction value)
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
@@ -1738,6 +1750,7 @@ class _$InitStreamPositionsActionImpl
         hideDetailsRecordingData,
     TResult? Function(_NavigateBackAction value)? navigateBack,
     TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult? Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -1757,6 +1770,7 @@ class _$InitStreamPositionsActionImpl
         hideDetailsRecordingData,
     TResult Function(_NavigateBackAction value)? navigateBack,
     TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -1902,6 +1916,7 @@ class _$UserPositionChangesActionImpl
     required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
+    required TResult Function(Memory memory) navigateToEditMemory,
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
@@ -1920,6 +1935,7 @@ class _$UserPositionChangesActionImpl
     TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
+    TResult? Function(Memory memory)? navigateToEditMemory,
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
@@ -1938,6 +1954,7 @@ class _$UserPositionChangesActionImpl
     TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
+    TResult Function(Memory memory)? navigateToEditMemory,
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
@@ -1963,6 +1980,8 @@ class _$UserPositionChangesActionImpl
     required TResult Function(_NavigateBackAction value) navigateBack,
     required TResult Function(_NavigateToAddMemoryAction value)
         navigateToAddMemory,
+    required TResult Function(_NavigateToEditMemoryAction value)
+        navigateToEditMemory,
     required TResult Function(_NavigateToAddRecordTrackAction value)
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
@@ -1982,6 +2001,7 @@ class _$UserPositionChangesActionImpl
         hideDetailsRecordingData,
     TResult? Function(_NavigateBackAction value)? navigateBack,
     TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult? Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -2001,6 +2021,7 @@ class _$UserPositionChangesActionImpl
         hideDetailsRecordingData,
     TResult Function(_NavigateBackAction value)? navigateBack,
     TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -2092,6 +2113,7 @@ class _$ShowDetailsRecordingDataActionImpl
     required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
+    required TResult Function(Memory memory) navigateToEditMemory,
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
@@ -2110,6 +2132,7 @@ class _$ShowDetailsRecordingDataActionImpl
     TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
+    TResult? Function(Memory memory)? navigateToEditMemory,
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
@@ -2128,6 +2151,7 @@ class _$ShowDetailsRecordingDataActionImpl
     TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
+    TResult Function(Memory memory)? navigateToEditMemory,
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
@@ -2153,6 +2177,8 @@ class _$ShowDetailsRecordingDataActionImpl
     required TResult Function(_NavigateBackAction value) navigateBack,
     required TResult Function(_NavigateToAddMemoryAction value)
         navigateToAddMemory,
+    required TResult Function(_NavigateToEditMemoryAction value)
+        navigateToEditMemory,
     required TResult Function(_NavigateToAddRecordTrackAction value)
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
@@ -2172,6 +2198,7 @@ class _$ShowDetailsRecordingDataActionImpl
         hideDetailsRecordingData,
     TResult? Function(_NavigateBackAction value)? navigateBack,
     TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult? Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -2191,6 +2218,7 @@ class _$ShowDetailsRecordingDataActionImpl
         hideDetailsRecordingData,
     TResult Function(_NavigateBackAction value)? navigateBack,
     TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -2272,6 +2300,7 @@ class _$HideDetailsRecordingDataActionImpl
     required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
+    required TResult Function(Memory memory) navigateToEditMemory,
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
@@ -2290,6 +2319,7 @@ class _$HideDetailsRecordingDataActionImpl
     TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
+    TResult? Function(Memory memory)? navigateToEditMemory,
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
@@ -2308,6 +2338,7 @@ class _$HideDetailsRecordingDataActionImpl
     TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
+    TResult Function(Memory memory)? navigateToEditMemory,
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
@@ -2333,6 +2364,8 @@ class _$HideDetailsRecordingDataActionImpl
     required TResult Function(_NavigateBackAction value) navigateBack,
     required TResult Function(_NavigateToAddMemoryAction value)
         navigateToAddMemory,
+    required TResult Function(_NavigateToEditMemoryAction value)
+        navigateToEditMemory,
     required TResult Function(_NavigateToAddRecordTrackAction value)
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
@@ -2352,6 +2385,7 @@ class _$HideDetailsRecordingDataActionImpl
         hideDetailsRecordingData,
     TResult? Function(_NavigateBackAction value)? navigateBack,
     TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult? Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -2371,6 +2405,7 @@ class _$HideDetailsRecordingDataActionImpl
         hideDetailsRecordingData,
     TResult Function(_NavigateBackAction value)? navigateBack,
     TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -2448,6 +2483,7 @@ class _$NavigateBackActionImpl
     required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
+    required TResult Function(Memory memory) navigateToEditMemory,
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
@@ -2466,6 +2502,7 @@ class _$NavigateBackActionImpl
     TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
+    TResult? Function(Memory memory)? navigateToEditMemory,
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
@@ -2484,6 +2521,7 @@ class _$NavigateBackActionImpl
     TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
+    TResult Function(Memory memory)? navigateToEditMemory,
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
@@ -2509,6 +2547,8 @@ class _$NavigateBackActionImpl
     required TResult Function(_NavigateBackAction value) navigateBack,
     required TResult Function(_NavigateToAddMemoryAction value)
         navigateToAddMemory,
+    required TResult Function(_NavigateToEditMemoryAction value)
+        navigateToEditMemory,
     required TResult Function(_NavigateToAddRecordTrackAction value)
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
@@ -2528,6 +2568,7 @@ class _$NavigateBackActionImpl
         hideDetailsRecordingData,
     TResult? Function(_NavigateBackAction value)? navigateBack,
     TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult? Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -2547,6 +2588,7 @@ class _$NavigateBackActionImpl
         hideDetailsRecordingData,
     TResult Function(_NavigateBackAction value)? navigateBack,
     TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -2673,6 +2715,7 @@ class _$NavigateToAddMemoryActionImpl
     required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
+    required TResult Function(Memory memory) navigateToEditMemory,
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
@@ -2691,6 +2734,7 @@ class _$NavigateToAddMemoryActionImpl
     TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
+    TResult? Function(Memory memory)? navigateToEditMemory,
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
@@ -2709,6 +2753,7 @@ class _$NavigateToAddMemoryActionImpl
     TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
+    TResult Function(Memory memory)? navigateToEditMemory,
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
@@ -2734,6 +2779,8 @@ class _$NavigateToAddMemoryActionImpl
     required TResult Function(_NavigateBackAction value) navigateBack,
     required TResult Function(_NavigateToAddMemoryAction value)
         navigateToAddMemory,
+    required TResult Function(_NavigateToEditMemoryAction value)
+        navigateToEditMemory,
     required TResult Function(_NavigateToAddRecordTrackAction value)
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
@@ -2753,6 +2800,7 @@ class _$NavigateToAddMemoryActionImpl
         hideDetailsRecordingData,
     TResult? Function(_NavigateBackAction value)? navigateBack,
     TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult? Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -2772,6 +2820,7 @@ class _$NavigateToAddMemoryActionImpl
         hideDetailsRecordingData,
     TResult Function(_NavigateBackAction value)? navigateBack,
     TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -2795,6 +2844,242 @@ abstract class _NavigateToAddMemoryAction implements RecordTrackActions {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NavigateToAddMemoryActionImplCopyWith<_$NavigateToAddMemoryActionImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$NavigateToEditMemoryActionImplCopyWith<$Res> {
+  factory _$$NavigateToEditMemoryActionImplCopyWith(
+          _$NavigateToEditMemoryActionImpl value,
+          $Res Function(_$NavigateToEditMemoryActionImpl) then) =
+      __$$NavigateToEditMemoryActionImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Memory memory});
+
+  $MemoryCopyWith<$Res> get memory;
+}
+
+/// @nodoc
+class __$$NavigateToEditMemoryActionImplCopyWithImpl<$Res>
+    extends _$RecordTrackActionsCopyWithImpl<$Res,
+        _$NavigateToEditMemoryActionImpl>
+    implements _$$NavigateToEditMemoryActionImplCopyWith<$Res> {
+  __$$NavigateToEditMemoryActionImplCopyWithImpl(
+      _$NavigateToEditMemoryActionImpl _value,
+      $Res Function(_$NavigateToEditMemoryActionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? memory = null,
+  }) {
+    return _then(_$NavigateToEditMemoryActionImpl(
+      memory: null == memory
+          ? _value.memory
+          : memory // ignore: cast_nullable_to_non_nullable
+              as Memory,
+    ));
+  }
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $MemoryCopyWith<$Res> get memory {
+    return $MemoryCopyWith<$Res>(_value.memory, (value) {
+      return _then(_value.copyWith(memory: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$NavigateToEditMemoryActionImpl
+    with DiagnosticableTreeMixin
+    implements _NavigateToEditMemoryAction {
+  const _$NavigateToEditMemoryActionImpl({required this.memory});
+
+  @override
+  final Memory memory;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'RecordTrackActions.navigateToEditMemory(memory: $memory)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'RecordTrackActions.navigateToEditMemory'))
+      ..add(DiagnosticsProperty('memory', memory));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NavigateToEditMemoryActionImpl &&
+            (identical(other.memory, memory) || other.memory == memory));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, memory);
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NavigateToEditMemoryActionImplCopyWith<_$NavigateToEditMemoryActionImpl>
+      get copyWith => __$$NavigateToEditMemoryActionImplCopyWithImpl<
+          _$NavigateToEditMemoryActionImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(void Function(String, String) callback,
+            AppStrings title, AppStrings body)
+        initStreamPositions,
+    required TResult Function(Position position, double zoom)
+        moveToUserPosition,
+    required TResult Function() showDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
+    required TResult Function() navigateBack,
+    required TResult Function(Position? position) navigateToAddMemory,
+    required TResult Function(Memory memory) navigateToEditMemory,
+    required TResult Function(Track track) navigateToAddRecordTrack,
+    required TResult Function(Memory memory) showMemoryDetails,
+    required TResult Function() hideMemoryDetails,
+  }) {
+    return navigateToEditMemory(memory);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult? Function(Position position, double zoom)? moveToUserPosition,
+    TResult? Function()? showDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
+    TResult? Function()? navigateBack,
+    TResult? Function(Position? position)? navigateToAddMemory,
+    TResult? Function(Memory memory)? navigateToEditMemory,
+    TResult? Function(Track track)? navigateToAddRecordTrack,
+    TResult? Function(Memory memory)? showMemoryDetails,
+    TResult? Function()? hideMemoryDetails,
+  }) {
+    return navigateToEditMemory?.call(memory);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult Function(Position position, double zoom)? moveToUserPosition,
+    TResult Function()? showDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
+    TResult Function()? navigateBack,
+    TResult Function(Position? position)? navigateToAddMemory,
+    TResult Function(Memory memory)? navigateToEditMemory,
+    TResult Function(Track track)? navigateToAddRecordTrack,
+    TResult Function(Memory memory)? showMemoryDetails,
+    TResult Function()? hideMemoryDetails,
+    required TResult orElse(),
+  }) {
+    if (navigateToEditMemory != null) {
+      return navigateToEditMemory(memory);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitStreamPositionsAction value)
+        initStreamPositions,
+    required TResult Function(_UserPositionChangesAction value)
+        moveToUserPosition,
+    required TResult Function(_ShowDetailsRecordingDataAction value)
+        showDetailsRecordingData,
+    required TResult Function(_HideDetailsRecordingDataAction value)
+        hideDetailsRecordingData,
+    required TResult Function(_NavigateBackAction value) navigateBack,
+    required TResult Function(_NavigateToAddMemoryAction value)
+        navigateToAddMemory,
+    required TResult Function(_NavigateToEditMemoryAction value)
+        navigateToEditMemory,
+    required TResult Function(_NavigateToAddRecordTrackAction value)
+        navigateToAddRecordTrack,
+    required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
+    required TResult Function(_HideMemoryDetailsAction value) hideMemoryDetails,
+  }) {
+    return navigateToEditMemory(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult? Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult? Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult? Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult? Function(_NavigateBackAction value)? navigateBack,
+    TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
+    TResult? Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
+    TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
+    TResult? Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+  }) {
+    return navigateToEditMemory?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult Function(_NavigateBackAction value)? navigateBack,
+    TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
+    TResult Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
+    TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
+    TResult Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    required TResult orElse(),
+  }) {
+    if (navigateToEditMemory != null) {
+      return navigateToEditMemory(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NavigateToEditMemoryAction implements RecordTrackActions {
+  const factory _NavigateToEditMemoryAction({required final Memory memory}) =
+      _$NavigateToEditMemoryActionImpl;
+
+  Memory get memory;
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$NavigateToEditMemoryActionImplCopyWith<_$NavigateToEditMemoryActionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2903,6 +3188,7 @@ class _$NavigateToAddRecordTrackActionImpl
     required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
+    required TResult Function(Memory memory) navigateToEditMemory,
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
@@ -2921,6 +3207,7 @@ class _$NavigateToAddRecordTrackActionImpl
     TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
+    TResult? Function(Memory memory)? navigateToEditMemory,
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
@@ -2939,6 +3226,7 @@ class _$NavigateToAddRecordTrackActionImpl
     TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
+    TResult Function(Memory memory)? navigateToEditMemory,
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
@@ -2964,6 +3252,8 @@ class _$NavigateToAddRecordTrackActionImpl
     required TResult Function(_NavigateBackAction value) navigateBack,
     required TResult Function(_NavigateToAddMemoryAction value)
         navigateToAddMemory,
+    required TResult Function(_NavigateToEditMemoryAction value)
+        navigateToEditMemory,
     required TResult Function(_NavigateToAddRecordTrackAction value)
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
@@ -2983,6 +3273,7 @@ class _$NavigateToAddRecordTrackActionImpl
         hideDetailsRecordingData,
     TResult? Function(_NavigateBackAction value)? navigateBack,
     TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult? Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -3002,6 +3293,7 @@ class _$NavigateToAddRecordTrackActionImpl
         hideDetailsRecordingData,
     TResult Function(_NavigateBackAction value)? navigateBack,
     TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -3132,6 +3424,7 @@ class _$ShowMemoryDetailsActionImpl
     required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
+    required TResult Function(Memory memory) navigateToEditMemory,
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
@@ -3150,6 +3443,7 @@ class _$ShowMemoryDetailsActionImpl
     TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
+    TResult? Function(Memory memory)? navigateToEditMemory,
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
@@ -3168,6 +3462,7 @@ class _$ShowMemoryDetailsActionImpl
     TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
+    TResult Function(Memory memory)? navigateToEditMemory,
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
@@ -3193,6 +3488,8 @@ class _$ShowMemoryDetailsActionImpl
     required TResult Function(_NavigateBackAction value) navigateBack,
     required TResult Function(_NavigateToAddMemoryAction value)
         navigateToAddMemory,
+    required TResult Function(_NavigateToEditMemoryAction value)
+        navigateToEditMemory,
     required TResult Function(_NavigateToAddRecordTrackAction value)
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
@@ -3212,6 +3509,7 @@ class _$ShowMemoryDetailsActionImpl
         hideDetailsRecordingData,
     TResult? Function(_NavigateBackAction value)? navigateBack,
     TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult? Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -3231,6 +3529,7 @@ class _$ShowMemoryDetailsActionImpl
         hideDetailsRecordingData,
     TResult Function(_NavigateBackAction value)? navigateBack,
     TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -3320,6 +3619,7 @@ class _$HideMemoryDetailsActionImpl
     required TResult Function() hideDetailsRecordingData,
     required TResult Function() navigateBack,
     required TResult Function(Position? position) navigateToAddMemory,
+    required TResult Function(Memory memory) navigateToEditMemory,
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
@@ -3338,6 +3638,7 @@ class _$HideMemoryDetailsActionImpl
     TResult? Function()? hideDetailsRecordingData,
     TResult? Function()? navigateBack,
     TResult? Function(Position? position)? navigateToAddMemory,
+    TResult? Function(Memory memory)? navigateToEditMemory,
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
@@ -3356,6 +3657,7 @@ class _$HideMemoryDetailsActionImpl
     TResult Function()? hideDetailsRecordingData,
     TResult Function()? navigateBack,
     TResult Function(Position? position)? navigateToAddMemory,
+    TResult Function(Memory memory)? navigateToEditMemory,
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
@@ -3381,6 +3683,8 @@ class _$HideMemoryDetailsActionImpl
     required TResult Function(_NavigateBackAction value) navigateBack,
     required TResult Function(_NavigateToAddMemoryAction value)
         navigateToAddMemory,
+    required TResult Function(_NavigateToEditMemoryAction value)
+        navigateToEditMemory,
     required TResult Function(_NavigateToAddRecordTrackAction value)
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
@@ -3400,6 +3704,7 @@ class _$HideMemoryDetailsActionImpl
         hideDetailsRecordingData,
     TResult? Function(_NavigateBackAction value)? navigateBack,
     TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult? Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -3419,6 +3724,7 @@ class _$HideMemoryDetailsActionImpl
         hideDetailsRecordingData,
     TResult Function(_NavigateBackAction value)? navigateBack,
     TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
     TResult Function(_NavigateToAddRecordTrackAction value)?
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
@@ -4525,4 +4831,293 @@ class _$RecordTrackStopModeStateImpl
 
 abstract class _RecordTrackStopModeState implements RecordTrackModeState {
   const factory _RecordTrackStopModeState() = _$RecordTrackStopModeStateImpl;
+}
+
+/// @nodoc
+mixin _$PreviousTrackState {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() empty,
+    required TResult Function() hasData,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? empty,
+    TResult? Function()? hasData,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? empty,
+    TResult Function()? hasData,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_EmptyTrackState value) empty,
+    required TResult Function(_HasDataTrackState value) hasData,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_EmptyTrackState value)? empty,
+    TResult? Function(_HasDataTrackState value)? hasData,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_EmptyTrackState value)? empty,
+    TResult Function(_HasDataTrackState value)? hasData,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PreviousTrackStateCopyWith<$Res> {
+  factory $PreviousTrackStateCopyWith(
+          PreviousTrackState value, $Res Function(PreviousTrackState) then) =
+      _$PreviousTrackStateCopyWithImpl<$Res, PreviousTrackState>;
+}
+
+/// @nodoc
+class _$PreviousTrackStateCopyWithImpl<$Res, $Val extends PreviousTrackState>
+    implements $PreviousTrackStateCopyWith<$Res> {
+  _$PreviousTrackStateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of PreviousTrackState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$EmptyTrackStateImplCopyWith<$Res> {
+  factory _$$EmptyTrackStateImplCopyWith(_$EmptyTrackStateImpl value,
+          $Res Function(_$EmptyTrackStateImpl) then) =
+      __$$EmptyTrackStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$EmptyTrackStateImplCopyWithImpl<$Res>
+    extends _$PreviousTrackStateCopyWithImpl<$Res, _$EmptyTrackStateImpl>
+    implements _$$EmptyTrackStateImplCopyWith<$Res> {
+  __$$EmptyTrackStateImplCopyWithImpl(
+      _$EmptyTrackStateImpl _value, $Res Function(_$EmptyTrackStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PreviousTrackState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$EmptyTrackStateImpl
+    with DiagnosticableTreeMixin
+    implements _EmptyTrackState {
+  const _$EmptyTrackStateImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'PreviousTrackState.empty()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'PreviousTrackState.empty'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$EmptyTrackStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() empty,
+    required TResult Function() hasData,
+  }) {
+    return empty();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? empty,
+    TResult? Function()? hasData,
+  }) {
+    return empty?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? empty,
+    TResult Function()? hasData,
+    required TResult orElse(),
+  }) {
+    if (empty != null) {
+      return empty();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_EmptyTrackState value) empty,
+    required TResult Function(_HasDataTrackState value) hasData,
+  }) {
+    return empty(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_EmptyTrackState value)? empty,
+    TResult? Function(_HasDataTrackState value)? hasData,
+  }) {
+    return empty?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_EmptyTrackState value)? empty,
+    TResult Function(_HasDataTrackState value)? hasData,
+    required TResult orElse(),
+  }) {
+    if (empty != null) {
+      return empty(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _EmptyTrackState implements PreviousTrackState {
+  const factory _EmptyTrackState() = _$EmptyTrackStateImpl;
+}
+
+/// @nodoc
+abstract class _$$HasDataTrackStateImplCopyWith<$Res> {
+  factory _$$HasDataTrackStateImplCopyWith(_$HasDataTrackStateImpl value,
+          $Res Function(_$HasDataTrackStateImpl) then) =
+      __$$HasDataTrackStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$HasDataTrackStateImplCopyWithImpl<$Res>
+    extends _$PreviousTrackStateCopyWithImpl<$Res, _$HasDataTrackStateImpl>
+    implements _$$HasDataTrackStateImplCopyWith<$Res> {
+  __$$HasDataTrackStateImplCopyWithImpl(_$HasDataTrackStateImpl _value,
+      $Res Function(_$HasDataTrackStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PreviousTrackState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$HasDataTrackStateImpl
+    with DiagnosticableTreeMixin
+    implements _HasDataTrackState {
+  const _$HasDataTrackStateImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'PreviousTrackState.hasData()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'PreviousTrackState.hasData'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$HasDataTrackStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() empty,
+    required TResult Function() hasData,
+  }) {
+    return hasData();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? empty,
+    TResult? Function()? hasData,
+  }) {
+    return hasData?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? empty,
+    TResult Function()? hasData,
+    required TResult orElse(),
+  }) {
+    if (hasData != null) {
+      return hasData();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_EmptyTrackState value) empty,
+    required TResult Function(_HasDataTrackState value) hasData,
+  }) {
+    return hasData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_EmptyTrackState value)? empty,
+    TResult? Function(_HasDataTrackState value)? hasData,
+  }) {
+    return hasData?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_EmptyTrackState value)? empty,
+    TResult Function(_HasDataTrackState value)? hasData,
+    required TResult orElse(),
+  }) {
+    if (hasData != null) {
+      return hasData(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _HasDataTrackState implements PreviousTrackState {
+  const factory _HasDataTrackState() = _$HasDataTrackStateImpl;
 }

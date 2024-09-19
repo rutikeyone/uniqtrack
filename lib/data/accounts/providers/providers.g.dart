@@ -36,24 +36,6 @@ final firebaseFireStoreProvider =
 );
 
 typedef FirebaseFireStoreRef = AutoDisposeProviderRef<FirebaseFirestore>;
-String _$accountsDataRepositoryHash() =>
-    r'68dc5cda80a1522cd0b28ce1d9a1b63301635f80';
-
-/// See also [accountsDataRepository].
-@ProviderFor(accountsDataRepository)
-final accountsDataRepositoryProvider =
-    AutoDisposeProvider<AccountsDataRepository>.internal(
-  accountsDataRepository,
-  name: r'accountsDataRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$accountsDataRepositoryHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef AccountsDataRepositoryRef
-    = AutoDisposeProviderRef<AccountsDataRepository>;
 String _$imagePickerHash() => r'4ade97b98e4e2b1423bb08eb64f280b92f8ac945';
 
 /// See also [imagePicker].
@@ -97,5 +79,37 @@ final firebaseStorageProvider = AutoDisposeProvider<FirebaseStorage>.internal(
 );
 
 typedef FirebaseStorageRef = AutoDisposeProviderRef<FirebaseStorage>;
+String _$sorterHash() => r'ee8714af17b632f875347751429f5491998ae65f';
+
+/// See also [sorter].
+@ProviderFor(sorter)
+final sorterProvider = AutoDisposeProvider<Sorter>.internal(
+  sorter,
+  name: r'sorterProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$sorterHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef SorterRef = AutoDisposeProviderRef<Sorter>;
+String _$accountsDataRepositoryHash() =>
+    r'4ac8aa0150fbac85c0cc6610705ce17c3a8e4d41';
+
+/// See also [accountsDataRepository].
+@ProviderFor(accountsDataRepository)
+final accountsDataRepositoryProvider =
+    AutoDisposeProvider<AccountsDataRepository>.internal(
+  accountsDataRepository,
+  name: r'accountsDataRepositoryProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$accountsDataRepositoryHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef AccountsDataRepositoryRef
+    = AutoDisposeProviderRef<AccountsDataRepository>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

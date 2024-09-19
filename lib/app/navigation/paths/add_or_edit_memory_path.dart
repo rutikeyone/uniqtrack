@@ -13,9 +13,13 @@ class AddOrEditMemoryPath extends Path<AddOrEditMemoryPath> {
 
   Map<String, String> queryParameters({
     required Position? position,
+    required Memory? memory,
     required AddOrEditMemoryArgsConverter converter,
   }) {
-    final args = AddOrEditMemoryArgs(position: position);
+    final args = AddOrEditMemoryArgs(
+      position: position,
+      memory: memory,
+    );
 
     return converter.toJson(args);
   }

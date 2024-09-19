@@ -17,9 +17,9 @@ import 'package:uniqtrack/features/accounts/presentation/forgot_password/stores/
 import 'package:uniqtrack/features/accounts/presentation/login/stores/login_store.dart';
 import 'package:uniqtrack/features/accounts/presentation/register/stores/register_store.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
-import 'package:uniqtrack/features/tracks/domain/choose_image_repository.dart';
-import 'package:uniqtrack/features/tracks/domain/record_track_repository.dart';
-import 'package:uniqtrack/features/tracks/presentation/add_or_edit_edit_memory/stores/add_or_edit_memory_store.dart';
+import 'package:uniqtrack/features/tracks/domain/image_repository.dart';
+import 'package:uniqtrack/features/tracks/domain/track_repository.dart';
+import 'package:uniqtrack/features/tracks/presentation/add_or_edit_memory/stores/add_or_edit_memory_store.dart';
 import 'package:uniqtrack/features/tracks/presentation/add_or_edit_record_track/stores/add_or_edit_record_track_store.dart';
 import 'package:uniqtrack/features/tracks/presentation/photo_viewer/stores/photo_viewer_store.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/stores/record_track_store.dart';
@@ -27,14 +27,15 @@ import 'package:uuid/uuid.dart';
 
 part 'store_factory_impl.g.dart';
 
-@Riverpod(dependencies: [recordTrackRepository, appLocationHandler])
+@Riverpod(
+    dependencies: [trackRepository, appLocationHandler, accountsRepository])
 StoreFactory storeFactory(StoreFactoryRef ref) {
   final commonUIDelegate = ref.watch(commonUIDelegateNotifierProvider.notifier);
   final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
   final appPermissionHandler = ref.watch(appPermissionHandlerProvider);
-  final recordTrackRepository = ref.watch(recordTrackRepositoryProvider);
+  final trackRepository = ref.watch(trackRepositoryProvider);
   final appLocationHandler = ref.watch(appLocationHandlerProvider);
-  final chooseImagesRepository = ref.watch(chooseImageRepositoryProvider);
+  final imagesRepository = ref.watch(imageRepositoryProvider);
   final accountsRepository = ref.watch(accountsRepositoryProvider);
   final uuid = ref.watch(uuidProvider);
 
@@ -42,9 +43,9 @@ StoreFactory storeFactory(StoreFactoryRef ref) {
     commonUIDelegate: commonUIDelegate,
     userChangesUseCase: userChangesUseCase,
     appPermissionHandler: appPermissionHandler,
-    recordTrackRepository: recordTrackRepository,
+    recordTrackRepository: trackRepository,
     appLocationHandler: appLocationHandler,
-    chooseImagesRepository: chooseImagesRepository,
+    chooseImagesRepository: imagesRepository,
     accountsRepository: accountsRepository,
     uuid: uuid,
   );
@@ -55,8 +56,8 @@ class StoreFactoryImpl implements StoreFactory {
   final CommonUIDelegate _commonUIDelegate;
   final UserChangesUseCase _authStateChangesUseCase;
   final AppLocationHandler _appLocationHandler;
-  final ChooseImageRepository _addOrEditMemoryRepository;
-  final RecordTrackRepository _recordTrackRepository;
+  final ImageRepository _imagesRepository;
+  final TrackRepository _recordTrackRepository;
   final Uuid _uuid;
 
   const StoreFactoryImpl({
@@ -66,14 +67,14 @@ class StoreFactoryImpl implements StoreFactory {
     required UserChangesUseCase userChangesUseCase,
     required AppPermissionHandler appPermissionHandler,
     required AppLocationHandler appLocationHandler,
-    required ChooseImageRepository chooseImagesRepository,
-    required RecordTrackRepository recordTrackRepository,
+    required ImageRepository chooseImagesRepository,
+    required TrackRepository recordTrackRepository,
   })  : _uuid = uuid,
         _accountsRepository = accountsRepository,
         _commonUIDelegate = commonUIDelegate,
         _authStateChangesUseCase = userChangesUseCase,
         _appLocationHandler = appLocationHandler,
-        _addOrEditMemoryRepository = chooseImagesRepository,
+        _imagesRepository = chooseImagesRepository,
         _recordTrackRepository = recordTrackRepository;
 
   @override
@@ -120,19 +121,20 @@ class StoreFactoryImpl implements StoreFactory {
       track: track,
       commonUIDelegate: _commonUIDelegate,
       recordTrackRepository: _recordTrackRepository,
-      uuid: _uuid,
     );
   }
 
   @override
   AddOrEditMemoryStore createAddOrEditMemoryStore({
     required Position? position,
+    required Memory? memory,
   }) {
     return AddOrEditMemoryStore(
-      addOrEditMemoryRepository: _addOrEditMemoryRepository,
+      imagesRepository: _imagesRepository,
       commonUIDelegate: _commonUIDelegate,
       position: position,
       uuid: _uuid,
+      memory: memory,
     );
   }
 

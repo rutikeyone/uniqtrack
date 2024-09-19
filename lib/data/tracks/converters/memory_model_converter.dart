@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:uniqtrack/data/tracks/converters/position_model_converter.dart';
 import 'package:uniqtrack/data/tracks/models/models.dart';
@@ -10,7 +9,6 @@ class MemoryModelConverterImpl
   final _idArgument = 'id';
   final _nameArgument = 'name';
   final _commentArgument = 'comment';
-  final _uploadedPhotosArgument = 'uploadedPhotos';
   final _photosArgument = 'photos';
   final _positionArgument = 'position';
 
@@ -26,32 +24,14 @@ class MemoryModelConverterImpl
       final id = json[_idArgument];
       final name = json[_nameArgument];
       final comment = json[_commentArgument];
-      final uploadedPhotosData = json[_uploadedPhotosArgument];
       final photosData = json[_photosArgument];
       final positionData = json[_positionArgument];
 
-      final uploadedPhotos = uploadedPhotosData != null
-          ? (jsonDecode(uploadedPhotosData) as List?)
+      final photos = photosData != null
+          ? (jsonDecode(photosData) as List?)
               ?.map((item) => item.toString())
               .toList()
           : null;
-
-      final photos = photosData != null
-          ? () {
-              final jsonPhotosData = jsonDecode(photosData) as List?;
-
-              if (jsonPhotosData != null) {
-                final result = jsonPhotosData.map((item) {
-                  final value = Uint8List.fromList(item.codeUnits);
-                  return value;
-                }).toList();
-                return result;
-              } else {
-                return null;
-              }
-            }.call()
-          : null;
-
       final position = positionData != null
           ? () {
               final jsonDecoded =
@@ -69,7 +49,6 @@ class MemoryModelConverterImpl
         id: id,
         name: name,
         comment: comment,
-        uploadedPhotos: uploadedPhotos,
         photos: photos,
         position: position,
       );
@@ -92,7 +71,6 @@ class MemoryModelConverterImpl
       final id = object.id;
       final name = object.name;
       final comment = object.comment;
-      final uploadedPhotos = object.uploadedPhotos;
       final photos = object.photos;
       final position = object.position;
 
@@ -114,20 +92,8 @@ class MemoryModelConverterImpl
         });
       }
 
-      if (uploadedPhotos != null) {
-        final data = jsonEncode(uploadedPhotos);
-        result.addAll({
-          _uploadedPhotosArgument: data,
-        });
-      }
-
       if (photos != null) {
-        final photoString = photos.map((item) {
-          return String.fromCharCodes(item);
-        }).toList();
-
-        final data = jsonEncode(photoString);
-
+        final data = jsonEncode(photos);
         result.addAll({
           _photosArgument: data,
         });

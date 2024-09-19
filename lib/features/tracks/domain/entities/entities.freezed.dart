@@ -19,8 +19,7 @@ mixin _$Memory {
   String? get id => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
-  List<String>? get uploadedPhotos => throw _privateConstructorUsedError;
-  List<Uint8List>? get photos => throw _privateConstructorUsedError;
+  List<String>? get photos => throw _privateConstructorUsedError;
   Position? get position => throw _privateConstructorUsedError;
 
   /// Create a copy of Memory
@@ -38,8 +37,7 @@ abstract class $MemoryCopyWith<$Res> {
       {String? id,
       String? name,
       String? comment,
-      List<String>? uploadedPhotos,
-      List<Uint8List>? photos,
+      List<String>? photos,
       Position? position});
 
   $PositionCopyWith<$Res>? get position;
@@ -63,7 +61,6 @@ class _$MemoryCopyWithImpl<$Res, $Val extends Memory>
     Object? id = freezed,
     Object? name = freezed,
     Object? comment = freezed,
-    Object? uploadedPhotos = freezed,
     Object? photos = freezed,
     Object? position = freezed,
   }) {
@@ -80,14 +77,10 @@ class _$MemoryCopyWithImpl<$Res, $Val extends Memory>
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
               as String?,
-      uploadedPhotos: freezed == uploadedPhotos
-          ? _value.uploadedPhotos
-          : uploadedPhotos // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
       photos: freezed == photos
           ? _value.photos
           : photos // ignore: cast_nullable_to_non_nullable
-              as List<Uint8List>?,
+              as List<String>?,
       position: freezed == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
@@ -121,8 +114,7 @@ abstract class _$$MemoryImplCopyWith<$Res> implements $MemoryCopyWith<$Res> {
       {String? id,
       String? name,
       String? comment,
-      List<String>? uploadedPhotos,
-      List<Uint8List>? photos,
+      List<String>? photos,
       Position? position});
 
   @override
@@ -145,7 +137,6 @@ class __$$MemoryImplCopyWithImpl<$Res>
     Object? id = freezed,
     Object? name = freezed,
     Object? comment = freezed,
-    Object? uploadedPhotos = freezed,
     Object? photos = freezed,
     Object? position = freezed,
   }) {
@@ -162,14 +153,10 @@ class __$$MemoryImplCopyWithImpl<$Res>
           ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
               as String?,
-      uploadedPhotos: freezed == uploadedPhotos
-          ? _value._uploadedPhotos
-          : uploadedPhotos // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
       photos: freezed == photos
           ? _value._photos
           : photos // ignore: cast_nullable_to_non_nullable
-              as List<Uint8List>?,
+              as List<String>?,
       position: freezed == position
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
@@ -185,11 +172,9 @@ class _$MemoryImpl with DiagnosticableTreeMixin implements _Memory {
       {required this.id,
       required this.name,
       required this.comment,
-      required final List<String>? uploadedPhotos,
-      required final List<Uint8List>? photos,
+      required final List<String>? photos,
       required this.position})
-      : _uploadedPhotos = uploadedPhotos,
-        _photos = photos;
+      : _photos = photos;
 
   @override
   final String? id;
@@ -197,19 +182,9 @@ class _$MemoryImpl with DiagnosticableTreeMixin implements _Memory {
   final String? name;
   @override
   final String? comment;
-  final List<String>? _uploadedPhotos;
+  final List<String>? _photos;
   @override
-  List<String>? get uploadedPhotos {
-    final value = _uploadedPhotos;
-    if (value == null) return null;
-    if (_uploadedPhotos is EqualUnmodifiableListView) return _uploadedPhotos;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Uint8List>? _photos;
-  @override
-  List<Uint8List>? get photos {
+  List<String>? get photos {
     final value = _photos;
     if (value == null) return null;
     if (_photos is EqualUnmodifiableListView) return _photos;
@@ -222,7 +197,7 @@ class _$MemoryImpl with DiagnosticableTreeMixin implements _Memory {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Memory(id: $id, name: $name, comment: $comment, uploadedPhotos: $uploadedPhotos, photos: $photos, position: $position)';
+    return 'Memory(id: $id, name: $name, comment: $comment, photos: $photos, position: $position)';
   }
 
   @override
@@ -233,7 +208,6 @@ class _$MemoryImpl with DiagnosticableTreeMixin implements _Memory {
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('comment', comment))
-      ..add(DiagnosticsProperty('uploadedPhotos', uploadedPhotos))
       ..add(DiagnosticsProperty('photos', photos))
       ..add(DiagnosticsProperty('position', position));
   }
@@ -246,22 +220,14 @@ class _$MemoryImpl with DiagnosticableTreeMixin implements _Memory {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.comment, comment) || other.comment == comment) &&
-            const DeepCollectionEquality()
-                .equals(other._uploadedPhotos, _uploadedPhotos) &&
             const DeepCollectionEquality().equals(other._photos, _photos) &&
             (identical(other.position, position) ||
                 other.position == position));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      name,
-      comment,
-      const DeepCollectionEquality().hash(_uploadedPhotos),
-      const DeepCollectionEquality().hash(_photos),
-      position);
+  int get hashCode => Object.hash(runtimeType, id, name, comment,
+      const DeepCollectionEquality().hash(_photos), position);
 
   /// Create a copy of Memory
   /// with the given fields replaced by the non-null parameter values.
@@ -277,8 +243,7 @@ abstract class _Memory implements Memory {
       {required final String? id,
       required final String? name,
       required final String? comment,
-      required final List<String>? uploadedPhotos,
-      required final List<Uint8List>? photos,
+      required final List<String>? photos,
       required final Position? position}) = _$MemoryImpl;
 
   @override
@@ -288,9 +253,7 @@ abstract class _Memory implements Memory {
   @override
   String? get comment;
   @override
-  List<String>? get uploadedPhotos;
-  @override
-  List<Uint8List>? get photos;
+  List<String>? get photos;
   @override
   Position? get position;
 
@@ -630,6 +593,7 @@ abstract class _PositionData implements PositionData {
 /// @nodoc
 mixin _$Track {
   String? get id => throw _privateConstructorUsedError;
+  DateTime? get dateCreated => throw _privateConstructorUsedError;
   String? get creatorId => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
@@ -653,6 +617,7 @@ abstract class $TrackCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
+      DateTime? dateCreated,
       String? creatorId,
       String? name,
       String? comment,
@@ -680,6 +645,7 @@ class _$TrackCopyWithImpl<$Res, $Val extends Track>
   @override
   $Res call({
     Object? id = freezed,
+    Object? dateCreated = freezed,
     Object? creatorId = freezed,
     Object? name = freezed,
     Object? comment = freezed,
@@ -695,6 +661,10 @@ class _$TrackCopyWithImpl<$Res, $Val extends Track>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
+      dateCreated: freezed == dateCreated
+          ? _value.dateCreated
+          : dateCreated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       creatorId: freezed == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
@@ -744,6 +714,7 @@ abstract class _$$TrackImplCopyWith<$Res> implements $TrackCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
+      DateTime? dateCreated,
       String? creatorId,
       String? name,
       String? comment,
@@ -769,6 +740,7 @@ class __$$TrackImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
+    Object? dateCreated = freezed,
     Object? creatorId = freezed,
     Object? name = freezed,
     Object? comment = freezed,
@@ -784,6 +756,10 @@ class __$$TrackImplCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
+      dateCreated: freezed == dateCreated
+          ? _value.dateCreated
+          : dateCreated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       creatorId: freezed == creatorId
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
@@ -829,6 +805,7 @@ class __$$TrackImplCopyWithImpl<$Res>
 class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
   const _$TrackImpl(
       {required this.id,
+      required this.dateCreated,
       required this.creatorId,
       required this.name,
       required this.comment,
@@ -843,6 +820,8 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
 
   @override
   final String? id;
+  @override
+  final DateTime? dateCreated;
   @override
   final String? creatorId;
   @override
@@ -879,7 +858,7 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Track(id: $id, creatorId: $creatorId, name: $name, comment: $comment, positions: $positions, distance: $distance, duration: $duration, averageSpeed: $averageSpeed, maxAltitude: $maxAltitude, memories: $memories)';
+    return 'Track(id: $id, dateCreated: $dateCreated, creatorId: $creatorId, name: $name, comment: $comment, positions: $positions, distance: $distance, duration: $duration, averageSpeed: $averageSpeed, maxAltitude: $maxAltitude, memories: $memories)';
   }
 
   @override
@@ -888,6 +867,7 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
     properties
       ..add(DiagnosticsProperty('type', 'Track'))
       ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('dateCreated', dateCreated))
       ..add(DiagnosticsProperty('creatorId', creatorId))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('comment', comment))
@@ -905,6 +885,8 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
         (other.runtimeType == runtimeType &&
             other is _$TrackImpl &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.dateCreated, dateCreated) ||
+                other.dateCreated == dateCreated) &&
             (identical(other.creatorId, creatorId) ||
                 other.creatorId == creatorId) &&
             (identical(other.name, name) || other.name == name) &&
@@ -926,6 +908,7 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
   int get hashCode => Object.hash(
       runtimeType,
       id,
+      dateCreated,
       creatorId,
       name,
       comment,
@@ -948,6 +931,7 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
 abstract class _Track implements Track {
   const factory _Track(
       {required final String? id,
+      required final DateTime? dateCreated,
       required final String? creatorId,
       required final String? name,
       required final String? comment,
@@ -960,6 +944,8 @@ abstract class _Track implements Track {
 
   @override
   String? get id;
+  @override
+  DateTime? get dateCreated;
   @override
   String? get creatorId;
   @override
@@ -984,5 +970,200 @@ abstract class _Track implements Track {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrackImplCopyWith<_$TrackImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$TrackUI {
+  Track? get track => throw _privateConstructorUsedError;
+  bool? get isCurrentUserCreator => throw _privateConstructorUsedError;
+  bool? get isFavouriteTrack => throw _privateConstructorUsedError;
+
+  /// Create a copy of TrackUI
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $TrackUICopyWith<TrackUI> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TrackUICopyWith<$Res> {
+  factory $TrackUICopyWith(TrackUI value, $Res Function(TrackUI) then) =
+      _$TrackUICopyWithImpl<$Res, TrackUI>;
+  @useResult
+  $Res call({Track? track, bool? isCurrentUserCreator, bool? isFavouriteTrack});
+
+  $TrackCopyWith<$Res>? get track;
+}
+
+/// @nodoc
+class _$TrackUICopyWithImpl<$Res, $Val extends TrackUI>
+    implements $TrackUICopyWith<$Res> {
+  _$TrackUICopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of TrackUI
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? track = freezed,
+    Object? isCurrentUserCreator = freezed,
+    Object? isFavouriteTrack = freezed,
+  }) {
+    return _then(_value.copyWith(
+      track: freezed == track
+          ? _value.track
+          : track // ignore: cast_nullable_to_non_nullable
+              as Track?,
+      isCurrentUserCreator: freezed == isCurrentUserCreator
+          ? _value.isCurrentUserCreator
+          : isCurrentUserCreator // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isFavouriteTrack: freezed == isFavouriteTrack
+          ? _value.isFavouriteTrack
+          : isFavouriteTrack // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ) as $Val);
+  }
+
+  /// Create a copy of TrackUI
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TrackCopyWith<$Res>? get track {
+    if (_value.track == null) {
+      return null;
+    }
+
+    return $TrackCopyWith<$Res>(_value.track!, (value) {
+      return _then(_value.copyWith(track: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$TrackUIImplCopyWith<$Res> implements $TrackUICopyWith<$Res> {
+  factory _$$TrackUIImplCopyWith(
+          _$TrackUIImpl value, $Res Function(_$TrackUIImpl) then) =
+      __$$TrackUIImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Track? track, bool? isCurrentUserCreator, bool? isFavouriteTrack});
+
+  @override
+  $TrackCopyWith<$Res>? get track;
+}
+
+/// @nodoc
+class __$$TrackUIImplCopyWithImpl<$Res>
+    extends _$TrackUICopyWithImpl<$Res, _$TrackUIImpl>
+    implements _$$TrackUIImplCopyWith<$Res> {
+  __$$TrackUIImplCopyWithImpl(
+      _$TrackUIImpl _value, $Res Function(_$TrackUIImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of TrackUI
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? track = freezed,
+    Object? isCurrentUserCreator = freezed,
+    Object? isFavouriteTrack = freezed,
+  }) {
+    return _then(_$TrackUIImpl(
+      track: freezed == track
+          ? _value.track
+          : track // ignore: cast_nullable_to_non_nullable
+              as Track?,
+      isCurrentUserCreator: freezed == isCurrentUserCreator
+          ? _value.isCurrentUserCreator
+          : isCurrentUserCreator // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      isFavouriteTrack: freezed == isFavouriteTrack
+          ? _value.isFavouriteTrack
+          : isFavouriteTrack // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$TrackUIImpl with DiagnosticableTreeMixin implements _TrackUI {
+  const _$TrackUIImpl(
+      {required this.track,
+      required this.isCurrentUserCreator,
+      required this.isFavouriteTrack});
+
+  @override
+  final Track? track;
+  @override
+  final bool? isCurrentUserCreator;
+  @override
+  final bool? isFavouriteTrack;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'TrackUI(track: $track, isCurrentUserCreator: $isCurrentUserCreator, isFavouriteTrack: $isFavouriteTrack)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'TrackUI'))
+      ..add(DiagnosticsProperty('track', track))
+      ..add(DiagnosticsProperty('isCurrentUserCreator', isCurrentUserCreator))
+      ..add(DiagnosticsProperty('isFavouriteTrack', isFavouriteTrack));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TrackUIImpl &&
+            (identical(other.track, track) || other.track == track) &&
+            (identical(other.isCurrentUserCreator, isCurrentUserCreator) ||
+                other.isCurrentUserCreator == isCurrentUserCreator) &&
+            (identical(other.isFavouriteTrack, isFavouriteTrack) ||
+                other.isFavouriteTrack == isFavouriteTrack));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, track, isCurrentUserCreator, isFavouriteTrack);
+
+  /// Create a copy of TrackUI
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TrackUIImplCopyWith<_$TrackUIImpl> get copyWith =>
+      __$$TrackUIImplCopyWithImpl<_$TrackUIImpl>(this, _$identity);
+}
+
+abstract class _TrackUI implements TrackUI {
+  const factory _TrackUI(
+      {required final Track? track,
+      required final bool? isCurrentUserCreator,
+      required final bool? isFavouriteTrack}) = _$TrackUIImpl;
+
+  @override
+  Track? get track;
+  @override
+  bool? get isCurrentUserCreator;
+  @override
+  bool? get isFavouriteTrack;
+
+  /// Create a copy of TrackUI
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TrackUIImplCopyWith<_$TrackUIImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

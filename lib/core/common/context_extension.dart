@@ -33,6 +33,8 @@ extension ContextExtension on BuildContext {
 
   double get fullWidth => size.width;
 
+  double get fullHeight => size.height;
+
   double get bottomSheetWidth => fullWidth - AppDiments.dm16;
 
   AppMapTheme get appMapTheme =>
@@ -118,7 +120,8 @@ extension ContextExtension on BuildContext {
           S.of(this).trackingRecordNotificationTitle,
       trackingRecordNotificationBody: () =>
           S.of(this).trackingRecordNotificationBody,
-      doYouWantToFinishRecordingTheTrackQuestion: () => S.of(this).doYouWantToFinishRecordingTheTrack,
+      doYouWantToFinishRecordingTheTrackQuestion: () =>
+          S.of(this).doYouWantToFinishRecordingTheTrack,
       attention: () => S.of(this).attention,
       save: () => S.of(this).save,
       delete: () => S.of(this).delete,
@@ -126,6 +129,13 @@ extension ContextExtension on BuildContext {
       deleteAndExit: () => S.of(this).deleteAndExit,
       userIsUnauthorized: () => S.of(this).theUserIsUnauthorized,
       entryWasSuccessfullyAdded: () => S.of(this).theEntryWasSuccessfullyAdded,
+      alreadyAddedToFavourites: () => S.of(this).alreadyAddedToFavorites,
+      noID: () => S.of(this).thereIsNotId,
+      trackAddedSuccessfully: () => S.of(this).trackAddedSuccessfully,
+      notAddedToFavorites: () => S.of(this).hasNotBeenAddedToFavoritesYet,
+      trackWasSuccessfullyDeleted: () => S.of(this).theTrackWasSuccessfullyDeleted,
+      notAddedToUserTracks: () => S.of(this).theTrackIsNotInTheListOfUserTracks,
+      noRemoveRights: () => S.of(this).noRemoveRights,
     );
   }
 }

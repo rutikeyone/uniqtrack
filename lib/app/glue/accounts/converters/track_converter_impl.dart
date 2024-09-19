@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:uniqtrack/features/tracks/domain/converters/memory_converter.dart';
 import 'package:uniqtrack/features/tracks/domain/converters/position_data_converter.dart';
 import 'package:uniqtrack/features/tracks/domain/converters/track_converter.dart';
@@ -8,6 +9,7 @@ import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 class TrackConverterImpl implements TrackConverter {
   final PositionDataConverter _positionDataConverter;
   final MemoryConverter _memoryConverter;
+  final JsonConverter<DateTime?, String?> _dateConverter;
 
   final _idArgument = 'id';
   final _creatorIdArgument = 'creatorId';
@@ -19,12 +21,15 @@ class TrackConverterImpl implements TrackConverter {
   final _memoriesArgument = 'memories';
   final _nameArgument = "name";
   final _commentArgument = "comment";
+  final _dateCreatedArgument = "dateCreated";
 
   const TrackConverterImpl({
     required PositionDataConverter positionDataConverter,
     required MemoryConverter memoryConverter,
+    required JsonConverter<DateTime?, String?> dateConverter,
   })  : _positionDataConverter = positionDataConverter,
-        _memoryConverter = memoryConverter;
+        _memoryConverter = memoryConverter,
+        _dateConverter = dateConverter;
 
   @override
   Track? fromJson(Map<String, String> json) {
@@ -39,6 +44,7 @@ class TrackConverterImpl implements TrackConverter {
       final jsonMemories = json[_memoriesArgument];
       final name = json[_nameArgument];
       final comment = json[_commentArgument];
+      final jsonDateCreated = json[_dateCreatedArgument];
 
       final positionsDataDecode = jsonPositionsData != null
           ? jsonDecode(jsonPositionsData) as List
@@ -80,9 +86,14 @@ class TrackConverterImpl implements TrackConverter {
       final maxAltitude =
           jsonMaxAltitude != null ? double.tryParse(jsonMaxAltitude) : null;
 
+      final dateCreated = jsonDateCreated != null
+          ? _dateConverter.fromJson(jsonDateCreated)
+          : null;
+
       return Track(
         id: id,
         name: name,
+        dateCreated: dateCreated,
         comment: comment,
         creatorId: creatorId,
         positions: positions,
@@ -116,6 +127,7 @@ class TrackConverterImpl implements TrackConverter {
       final averageSpeed = object.averageSpeed;
       final maxAltitude = object.maxAltitude;
       final memories = object.memories;
+      final dateCreated = object.dateCreated;
 
       if (id != null) {
         result.addAll({
@@ -139,6 +151,16 @@ class TrackConverterImpl implements TrackConverter {
         result.addAll({
           _commentArgument: comment,
         });
+      }
+
+      if (dateCreated != null) {
+        final jsonDateCreated = _dateConverter.toJson(dateCreated);
+
+        if (jsonDateCreated != null) {
+          result.addAll({
+            _dateCreatedArgument: jsonDateCreated,
+          });
+        }
       }
 
       if (positions != null) {

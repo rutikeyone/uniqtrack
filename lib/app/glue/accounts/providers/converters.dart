@@ -23,9 +23,11 @@ MemoryConverter memoryConverter(MemoryConverterRef ref) {
 TrackConverter trackConverter(TrackConverterRef ref) {
   final positionDataConverter = ref.watch(positionDataConverterProvider);
   final memoryConverter = ref.watch(memoryConverterProvider);
+  final dateConverter = ref.watch(dateConverterProvider);
 
   return TrackConverterImpl(
     positionDataConverter: positionDataConverter,
     memoryConverter: memoryConverter,
+    dateConverter: dateConverter,
   );
 }

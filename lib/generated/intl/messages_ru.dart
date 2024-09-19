@@ -35,11 +35,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "aContinueUrlMustBeProvidedInTheRequest":
             MessageLookupByLibrary.simpleMessage(
                 "В запросе должен быть указан URL-адрес продолжения"),
-        "addMemory": MessageLookupByLibrary.simpleMessage("Add memory"),
+        "actions": MessageLookupByLibrary.simpleMessage("Действия"),
+        "addMemory":
+            MessageLookupByLibrary.simpleMessage("Добавить воспоминание"),
         "addPicture":
             MessageLookupByLibrary.simpleMessage("Добавить фотографию"),
+        "addToFavorites":
+            MessageLookupByLibrary.simpleMessage("Добавить в избранные"),
         "addTrack": MessageLookupByLibrary.simpleMessage("Добавить трек"),
         "allow": MessageLookupByLibrary.simpleMessage("Разрешить"),
+        "alreadyAddedToFavorites":
+            MessageLookupByLibrary.simpleMessage("Уже добавлен в избранное"),
         "anAndroidPackageNameMustBeProvidedIfTheAndroid":
             MessageLookupByLibrary.simpleMessage(
                 "Если требуется установить приложение для Android, необходимо указать название пакета Android"),
@@ -79,8 +85,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "editTrack": MessageLookupByLibrary.simpleMessage("Редактировать трек"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "Электронная почта уже используется"),
+        "enterMemoryName": MessageLookupByLibrary.simpleMessage(
+            "Введите имя для воспоминания"),
         "enterTrackName":
-            MessageLookupByLibrary.simpleMessage("Введите название трека"),
+            MessageLookupByLibrary.simpleMessage("Введите название для трека"),
         "enterYourComment":
             MessageLookupByLibrary.simpleMessage("Введите ваш комментарий"),
         "enterYourEmail":
@@ -92,9 +100,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterYourPasswordRecoveryEmail": MessageLookupByLibrary.simpleMessage(
             "Введите свой адрес электронной почты для восстановления пароля"),
         "error": MessageLookupByLibrary.simpleMessage("Ошибка!"),
+        "favouriteTracks":
+            MessageLookupByLibrary.simpleMessage("Избранные треки"),
         "female": MessageLookupByLibrary.simpleMessage("Женский"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Забыли пароль?"),
+        "hasNotBeenAddedToFavoritesYet": MessageLookupByLibrary.simpleMessage(
+            "Еще не был добавлен в избранное"),
         "image": MessageLookupByLibrary.simpleMessage("Изображение"),
         "invalidComment":
             MessageLookupByLibrary.simpleMessage("Некорректный комментарий"),
@@ -127,6 +139,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Мои избранные треки"),
         "myTracks": MessageLookupByLibrary.simpleMessage("Мои треки"),
         "name": MessageLookupByLibrary.simpleMessage("Имя"),
+        "noRemoveRights":
+            MessageLookupByLibrary.simpleMessage("Нет прав на удаление"),
         "notification": MessageLookupByLibrary.simpleMessage("Уведомление"),
         "okay": MessageLookupByLibrary.simpleMessage("Хорошо"),
         "operation_not_allowed":
@@ -136,6 +150,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "prohibit": MessageLookupByLibrary.simpleMessage("Запретить"),
         "receiveTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
             "Произошел сбой тайм-аута приема"),
+        "refresh": MessageLookupByLibrary.simpleMessage("Обновить"),
+        "removeFromFavourites":
+            MessageLookupByLibrary.simpleMessage("Удалить из избранных"),
         "routeLength": MessageLookupByLibrary.simpleMessage("Расстояние"),
         "save": MessageLookupByLibrary.simpleMessage("Сохранить"),
         "sendPassword":
@@ -161,21 +178,33 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Пароль был отправлен на указанный адрес электронной почты."),
         "theRequestWasCanceled":
             MessageLookupByLibrary.simpleMessage("Запрос был отменен"),
+        "theTrackIsNotInTheListOfUserTracks":
+            MessageLookupByLibrary.simpleMessage(
+                "Трека нет в списке пользовательских треков"),
+        "theTrackWasSuccessfullyDeleted":
+            MessageLookupByLibrary.simpleMessage("Трек был успешно удален"),
         "theUserHasBeenSuccessfullyRegistered":
             MessageLookupByLibrary.simpleMessage(
                 "Пользователь успешно зарегистрирован"),
         "theUserIsUnauthorized":
             MessageLookupByLibrary.simpleMessage("Пользователь неавторизован"),
+        "thereAreNoTrackRecordingsHereYet":
+            MessageLookupByLibrary.simpleMessage(
+                "Пока здесь нет записей треков"),
         "thereIsNoPermissionToDetermineTheUsersLocation":
             MessageLookupByLibrary.simpleMessage(
                 "Нет разрешения на определение местоположения."),
         "thereIsNoPermissionToPerformThisAction":
             MessageLookupByLibrary.simpleMessage(
                 "Нет разрешения для выполнения этого действия."),
+        "thereIsNotId": MessageLookupByLibrary.simpleMessage(
+            "Нет необходимого идентификатора"),
         "time": MessageLookupByLibrary.simpleMessage("Время"),
-        "toContinue": MessageLookupByLibrary.simpleMessage("Continue"),
+        "toContinue": MessageLookupByLibrary.simpleMessage("Продолжить"),
         "tooManyRequests":
             MessageLookupByLibrary.simpleMessage("Слишком много запросов"),
+        "trackAddedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Трек успешно добавлен"),
         "trackingRecordNotificationBody": MessageLookupByLibrary.simpleMessage(
             "Это необходимо для записи трекинга."),
         "trackingRecordNotificationTitle": MessageLookupByLibrary.simpleMessage(

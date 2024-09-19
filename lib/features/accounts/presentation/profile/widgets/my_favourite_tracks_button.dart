@@ -9,7 +9,7 @@ class _MyFavouriteTracksButton extends StatelessWidget {
       padding: const EdgeInsets.only(top: AppDiments.dm24),
       child: AppTransparentButton(
         label: S.of(context).myFavouriteTracks,
-        onPressed: () {},
+        onPressed: context.read<ProfileNavCallbackStore>().navigateToMyFavouriteTracks,
       ),
     );
   }

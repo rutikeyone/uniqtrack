@@ -13,7 +13,7 @@ class _RecordTrackButton extends StatelessWidget {
       right: AppDiments.dm16,
       child: Observer(
         builder: (context) {
-          return store.trackRecordStatusState.map(
+          return store.trackRecordStatusState.maybeMap(
             withoutRecording: (_) {
               return SizedBox(
                 height: AppDiments.dm48,
@@ -32,7 +32,7 @@ class _RecordTrackButton extends StatelessWidget {
                 ),
               );
             },
-            recording: (_) {
+            orElse: () {
               return const SizedBox.shrink();
             },
           );

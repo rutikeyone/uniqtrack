@@ -3,6 +3,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:intl/src/intl/date_format.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:uniqtrack/core/common/app_widget_toolkit.dart';
 import 'package:uniqtrack/data/accounts/providers/providers.dart';
@@ -12,18 +13,30 @@ import 'package:uuid/uuid.dart';
 part 'app_widget_toolkit_impl.g.dart';
 
 @riverpod
+DateFormat commonUIDateFormatter(CommonUIDateFormatterRef ref) {
+  return DateFormat("MMMM dd, yyyy");
+}
+
+@riverpod
 AppWidgetToolkit appWidgetToolkit(AppWidgetToolkitRef ref) {
   final uuid = ref.watch(uuidProvider);
+  final dateFormat = ref.watch(commonUIDateFormatterProvider);
 
-  return AppWidgetToolkitImpl(uuid: uuid);
+  return AppWidgetToolkitImpl(
+    uuid: uuid,
+    dateFormat: dateFormat,
+  );
 }
 
 class AppWidgetToolkitImpl implements AppWidgetToolkit {
   final Uuid _uuid;
+  final DateFormat _dateFormat;
 
   const AppWidgetToolkitImpl({
     required Uuid uuid,
-  }) : _uuid = uuid;
+    required DateFormat dateFormat,
+  })  : _uuid = uuid,
+        _dateFormat = dateFormat;
 
   @override
   Future<BitmapDescriptor?> bytesFromAsset(String path, int width) async {
@@ -85,5 +98,10 @@ class AppWidgetToolkitImpl implements AppWidgetToolkit {
     } else {
       return 0.toStringAsFixed(1);
     }
+  }
+
+  @override
+  String? formatDate(DateTime? date) {
+    return date == null ? null : _dateFormat.format(date);
   }
 }
