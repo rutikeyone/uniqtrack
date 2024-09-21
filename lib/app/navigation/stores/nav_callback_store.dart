@@ -5,7 +5,6 @@ import 'package:uniqtrack/features/tracks/presentation/add_or_edit_memory/add_or
 
 part 'nav_callback_store.freezed.dart';
 
-@immutable
 @freezed
 class ForgotPasswordNavCallbackStore with _$ForgotPasswordNavCallbackStore {
   const factory ForgotPasswordNavCallbackStore({
@@ -13,7 +12,6 @@ class ForgotPasswordNavCallbackStore with _$ForgotPasswordNavCallbackStore {
   }) = _ForgotPasswordNavCallbackStore;
 }
 
-@immutable
 @freezed
 class LoginNavCallbackStore with _$LoginNavCallbackStore {
   const factory LoginNavCallbackStore({
@@ -22,7 +20,6 @@ class LoginNavCallbackStore with _$LoginNavCallbackStore {
   }) = _LoginNavCallbackStore;
 }
 
-@immutable
 @freezed
 class RegisterNavCallbackStore with _$RegisterNavCallbackStore {
   const factory RegisterNavCallbackStore({
@@ -30,17 +27,15 @@ class RegisterNavCallbackStore with _$RegisterNavCallbackStore {
   }) = _RegisterNavCallbackStore;
 }
 
-@immutable
 @freezed
 class CommunityNavCallbackStore with _$CommunityNavCallbackStore {
   const factory CommunityNavCallbackStore({
     required VoidCallback navigateToTrackTracking,
     required VoidCallback closeDialog,
-    required void Function(String) navigateToTrackDetails,
+    required void Function(Track) navigateToTrackDetails,
   }) = _CommunityNavCallbackStore;
 }
 
-@immutable
 @freezed
 class RecordTrackNavCallbackStore with _$RecordTrackNavCallbackStore {
   const factory RecordTrackNavCallbackStore({
@@ -54,7 +49,6 @@ class RecordTrackNavCallbackStore with _$RecordTrackNavCallbackStore {
   }) = _RecordTrackNavCallbackStore;
 }
 
-@immutable
 @freezed
 class AddOrEditRecordTrackNavCallbackStore
     with _$AddOrEditRecordTrackNavCallbackStore {
@@ -63,7 +57,6 @@ class AddOrEditRecordTrackNavCallbackStore
   }) = _AddOrEditRecordTrackNavCallbackStore;
 }
 
-@immutable
 @freezed
 class AddOrEditMemoryNavCallbackStore with _$AddOrEditMemoryNavCallbackStore {
   const factory AddOrEditMemoryNavCallbackStore({
@@ -73,7 +66,6 @@ class AddOrEditMemoryNavCallbackStore with _$AddOrEditMemoryNavCallbackStore {
   }) = _AddOrEditMemoryNavCallbackStore;
 }
 
-@immutable
 @freezed
 class ProfileNavCallbackStore with _$ProfileNavCallbackStore {
   const factory ProfileNavCallbackStore({
@@ -82,20 +74,25 @@ class ProfileNavCallbackStore with _$ProfileNavCallbackStore {
   }) = _ProfileNavCallbackStore;
 }
 
-@immutable
 @freezed
 class MyTracksNavCallbackStore with _$MyTracksNavCallbackStore {
   const factory MyTracksNavCallbackStore({
     required VoidCallback closeDialog,
-    required void Function(String) navigateToTrackDetails,
+    required void Function(Track) navigateToTrackDetails,
   }) = _MyTracksNavCallbackStore;
 }
 
-@immutable
 @freezed
 class MyFavouriteTracksNavCallbackStore
     with _$MyFavouriteTracksNavCallbackStore {
   const factory MyFavouriteTracksNavCallbackStore({
-    required void Function(String) navigateToTrackDetails,
+    required void Function(Track track) navigateToTrackDetails,
   }) = _MyFavouriteTracksNavCallbackStore;
+}
+
+@freezed
+class TrackDetailsNavCallbackStore with _$TrackDetailsNavCallbackStore {
+  const factory TrackDetailsNavCallbackStore({
+    required VoidCallback navigateBack,
+  }) = _TrackDetailsNavCallbackStore;
 }

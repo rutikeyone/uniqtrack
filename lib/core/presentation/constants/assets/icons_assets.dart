@@ -20,4 +20,6 @@ class IconsAssets {
   final share = "$dir/ic_share.svg";
   final favourite = "$dir/ic_favourite.svg";
   final favouriteSelected = "$dir/ic_favourite_selected.svg";
+  final edit = "$dir/ic_edit.svg";
+  final track = "$dir/ic_track.svg";
 }

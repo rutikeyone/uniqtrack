@@ -13,5 +13,6 @@ part 'forgot_password_args.dart';
 part 'photo_viewer_args.dart';
 part 'add_or_edit_record_track_args.dart';
 part 'add_or_edit_memory_path_args.dart';
+part 'details_args.dart';
 part 'args.freezed.dart';
 part 'args.g.dart';

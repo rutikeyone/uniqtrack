@@ -58,6 +58,7 @@ Map<String, dynamic> _$$MemoryModelImplToJson(_$MemoryModelImpl instance) =>
 _$TrackModelImpl _$$TrackModelImplFromJson(Map<String, dynamic> json) =>
     _$TrackModelImpl(
       id: json['id'] as String?,
+      trackId: json['trackId'] as String?,
       creatorId: json['creatorId'] as String?,
       dateCreated:
           const DateConverter().fromJson(json['dateCreated'] as String?),
@@ -76,6 +77,7 @@ _$TrackModelImpl _$$TrackModelImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$TrackModelImplToJson(_$TrackModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'trackId': instance.trackId,
       'creatorId': instance.creatorId,
       'dateCreated': const DateConverter().toJson(instance.dateCreated),
       'name': instance.name,

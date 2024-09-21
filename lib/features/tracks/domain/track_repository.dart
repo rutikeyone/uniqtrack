@@ -9,7 +9,7 @@ abstract interface class TrackRepository {
 
   Future<Position?> getCurrentPosition();
 
-  Stream<Position> listenPositions(AppLocationSettings settings);
+  Stream<Position> watchPositions(AppLocationSettings settings);
 
   Future<Either<AppError, void>> saveData(Track track);
 
@@ -19,7 +19,7 @@ abstract interface class TrackRepository {
 
   Future<Either<AppError, void>> deleteAllTracks();
 
-  Stream<List<Track>> listenTracks();
+  Stream<List<Track>> watchTracks();
 
-  Stream<Track?> listenTrack(String id);
+  Stream<Track?> watchTrack(String id);
 }

@@ -90,6 +90,23 @@ final recordTrackStoreBuilderProvider =
 
 typedef RecordTrackStoreBuilderRef
     = AutoDisposeProviderRef<RecordTrackStoreBuilder>;
+String _$detailsStoreHash() => r'adc117654125292ead2774b9ca679b5af5482fa5';
+
+/// See also [detailsStore].
+@ProviderFor(detailsStore)
+final detailsStoreProvider = AutoDisposeProvider<DetailsStoreBuilder>.internal(
+  detailsStore,
+  name: r'detailsStoreProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$detailsStoreHash,
+  dependencies: <ProviderOrFamily>[storeFactoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    storeFactoryProvider,
+    ...?storeFactoryProvider.allTransitiveDependencies
+  },
+);
+
+typedef DetailsStoreRef = AutoDisposeProviderRef<DetailsStoreBuilder>;
 String _$positionMapperHash() => r'82554729c37203f0c96ce55538e067a5ad9fb14d';
 
 /// See also [positionMapper].

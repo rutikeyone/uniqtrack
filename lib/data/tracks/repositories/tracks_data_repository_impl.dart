@@ -38,42 +38,39 @@ class TracksDataRepositoryImpl implements TracksDataRepository {
   @override
   Future<Either<AppError, String>> saveTrack(TrackModel track) {
     final result = _appErrorHandler.handle(
-      () => _addRecordTrackData(track),
+      call: () => _saveRecordTrackData(track),
     );
 
     return result;
   }
 
   @override
-  Stream<List<TrackModel>> listenTracks() {
+  Stream<List<TrackModel>> watchTracks() {
     return queryTracks().snapshots().map(
       (snapshot) {
         final docs = snapshot.docs;
         final result = docs.map((doc) {
           return doc.data();
         }).toList()
-          ..sort(
-            (firstItem, secondItem) {
-              final firstDateCreated = firstItem.dateCreated;
-              final secondDateCreated = secondItem.dateCreated;
-              return _sorter.sortByDate(firstDateCreated, secondDateCreated);
-            },
-          );
-        ;
-        return result;
+          ..sort(_sortTracks);
+
+        return result.nonNulls.toList();
       },
     );
   }
 
-  Query<TrackModel> queryTracks() =>
-      _firebaseFireStore.collection(tracksPath).withConverter(
-            fromFirestore: (snapshot, _) {
-              return TrackModel.fromJson(snapshot.data()!);
-            },
-            toFirestore: (track, _) => track.toJson(),
-          );
+  Query<TrackModel?> queryTracks() {
+    return _firebaseFireStore.collection(tracksPath).withConverter<TrackModel?>(
+          fromFirestore: (snapshot, _) {
+            final data = snapshot.data();
+            if (data == null) return null;
+            return TrackModel.fromJson(data);
+          },
+          toFirestore: (track, _) => track?.toJson() ?? {},
+        );
+  }
 
-  Future<String> _addRecordTrackData(TrackModel track) async {
+  Future<String> _saveRecordTrackData(TrackModel track) async {
     final userId = _firebaseAuth.currentUser?.uid;
 
     if (userId == null) {
@@ -85,7 +82,7 @@ class TracksDataRepositoryImpl implements TracksDataRepository {
     final withoutJson = withCreatorIdTrack.toJson();
     final collection = _firebaseFireStore.collection(tracksPath);
     final doc = await collection.add(withoutJson);
-    final newTrack = withCreatorIdTrack.copyWith(id: doc.id);
+    final newTrack = withCreatorIdTrack.copyWith(id: doc.id, trackId: doc.id);
     final withIdTrackJson = newTrack.toJson();
     await doc.set(withIdTrackJson);
     return doc.id;
@@ -93,38 +90,41 @@ class TracksDataRepositoryImpl implements TracksDataRepository {
 
   @override
   Future<Either<AppError, int>> addTrack(TrackModel track) {
-    final insertTrackResult = _appErrorHandler.handle(() {
-      final trackCompanion = _trackMapper.toCompanion(track);
-      return _appDatabase.tracksDao.insertTrack(trackCompanion);
-    });
+    final insertTrackResult = _appErrorHandler.handle(
+      call: () {
+        final trackCompanion = _trackMapper.toCompanion(track);
+        return _appDatabase.tracksDao.insertTrack(trackCompanion);
+      },
+    );
 
     return insertTrackResult;
   }
 
   @override
   Future<Either<AppError, void>> deleteAllTracks() {
-    final deleteAllTracksResult = _appErrorHandler.handle(() {
-      return _appDatabase.tracksDao.deleteAllTracks();
-    });
+    final deleteAllTracksResult = _appErrorHandler.handle(
+      call: () {
+        return _appDatabase.tracksDao.deleteAllTracks();
+      },
+    );
 
     return deleteAllTracksResult;
   }
 
   @override
   Future<Either<AppError, TrackModel?>> getTrack() async {
-    final getTrackResult = await _appErrorHandler.handle(() async {
-      final track = await _appDatabase.tracksDao.getTrack();
-      if (track == null) {
-        return null;
-      }
-      return _trackMapper.toModel(track);
-    });
+    final getTrackResult = await _appErrorHandler.handle(
+      call: () async {
+        final track = await _appDatabase.tracksDao.getTrack();
+        return track != null ? _trackMapper.toModel(track) : null;
+      },
+    );
 
     return getTrackResult;
   }
 
   @override
-  Stream<TrackModel?> listenTrack(String id) {
+  Stream<TrackModel?> watchTrack(String id) {
     return _firebaseFireStore
         .doc(trackPath(id))
         .withConverter<TrackModel?>(
@@ -142,9 +142,9 @@ class TracksDataRepositoryImpl implements TracksDataRepository {
   @override
   Future<Either<AppError, void>> removeTrack(TrackModel track) {
     return _appErrorHandler.handle(
-      () async {
+      call: () async {
         final userId = _firebaseAuth.currentUser?.uid;
-        final trackId = track.id;
+        final trackId = track.trackId;
         final creatorId = track.creatorId;
 
         if (userId == null) {
@@ -170,7 +170,10 @@ class TracksDataRepositoryImpl implements TracksDataRepository {
           (item) async {
             final data = item.data();
             final itemTrack = TrackModel.fromJson(data);
-            if (itemTrack.id == track.id) {
+            final trackId = track.trackId;
+            final itemTrackId = itemTrack.trackId;
+
+            if (trackId == itemTrackId) {
               await item.reference.delete();
             }
           },
@@ -180,5 +183,11 @@ class TracksDataRepositoryImpl implements TracksDataRepository {
         await trackRef.delete();
       },
     );
+  }
+
+  int _sortTracks(TrackModel? firstItem, TrackModel? secondItem) {
+    final firstDateCreated = firstItem?.dateCreated;
+    final secondDateCreated = secondItem?.dateCreated;
+    return _sorter.sortByDate(firstDateCreated, secondDateCreated);
   }
 }

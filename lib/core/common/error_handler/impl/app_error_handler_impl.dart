@@ -22,7 +22,9 @@ class AppErrorHandlerImpl implements AppErrorHandler {
   const AppErrorHandlerImpl({Logger? logger}) : _logger = logger;
 
   @override
-  Future<Either<AppError, T>> handle<T>(Future<T> Function() call) async {
+  Future<Either<AppError, T>> handle<T>({
+    required Future<T> Function() call,
+  }) async {
     try {
       final result = await call();
       return Right(result);

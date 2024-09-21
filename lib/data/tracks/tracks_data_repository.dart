@@ -7,9 +7,9 @@ abstract interface class TracksDataRepository {
 
   Future<Either<AppError, void>> removeTrack(TrackModel track);
 
-  Stream<List<TrackModel>> listenTracks();
+  Stream<List<TrackModel>> watchTracks();
 
-  Stream<TrackModel?> listenTrack(String id);
+  Stream<TrackModel?> watchTrack(String id);
 
   Future<Either<AppError, int>> addTrack(TrackModel track);
 

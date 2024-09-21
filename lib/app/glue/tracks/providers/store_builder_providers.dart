@@ -31,3 +31,10 @@ RecordTrackStoreBuilder recordTrackStoreBuilder(
 
   return RecordTrackStoreBuilderImpl(storeFactory: storeFactory);
 }
+
+@Riverpod(dependencies: [storeFactory])
+DetailsStoreBuilder detailsStore(DetailsStoreRef ref) {
+  final storeFactory = ref.watch(storeFactoryProvider);
+
+  return DetailsStoreBuilderImpl(storeFactory: storeFactory);
+}

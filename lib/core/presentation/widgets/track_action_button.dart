@@ -7,29 +7,34 @@ class TrackActionButton extends StatelessWidget {
   final String asset;
   final VoidCallback? onPressed;
 
+  final double iconSize;
   final double? size;
+
+  final BorderRadius? borderRadius;
 
   const TrackActionButton({
     required this.asset,
     required this.onPressed,
+    this.iconSize = AppDiments.dm36,
     this.size,
+    this.borderRadius,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      borderRadius: BorderRadius.circular(AppDiments.dm8),
+      borderRadius: borderRadius ?? BorderRadius.circular(AppDiments.dm8),
       onTap: onPressed,
       child: Ink(
-        width: AppDiments.dm36,
-        height: AppDiments.dm36,
+        width: iconSize,
+        height: iconSize,
         decoration: BoxDecoration(
           border: Border.all(
             width: AppDiments.dm1,
             color: context.colorScheme.onSecondary,
           ),
-          borderRadius: BorderRadius.circular(AppDiments.dm8),
+          borderRadius: borderRadius ?? BorderRadius.circular(AppDiments.dm8),
         ),
         child: UnconstrainedBox(
           child: SvgPicture.asset(

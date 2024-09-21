@@ -77,5 +77,22 @@ final addOrEditMemoryArgsConverterProvider =
 
 typedef AddOrEditMemoryArgsConverterRef
     = AutoDisposeProviderRef<AddOrEditMemoryArgsConverter>;
+String _$detailsArgsConverterHash() =>
+    r'0268732aeddde752ea8a457ed40c33b830d7425e';
+
+/// See also [detailsArgsConverter].
+@ProviderFor(detailsArgsConverter)
+final detailsArgsConverterProvider =
+    AutoDisposeProvider<DetailsArgsConverter>.internal(
+  detailsArgsConverter,
+  name: r'detailsArgsConverterProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$detailsArgsConverterHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef DetailsArgsConverterRef = AutoDisposeProviderRef<DetailsArgsConverter>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

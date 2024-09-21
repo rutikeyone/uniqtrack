@@ -11,8 +11,8 @@ class FavouriteTrackIdsChangesUseCase
 
   @override
   Stream<List<String>> execute() {
-    return _accountsRepository.listenUserFavouriteTracks().map((list) {
-      return list.map((item) => item.id).nonNulls.toList();
+    return _accountsRepository.watchUserFavouriteTracks().map((list) {
+      return list.map((item) => item.trackId).nonNulls.toList();
     });
   }
 }

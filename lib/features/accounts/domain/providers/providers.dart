@@ -6,6 +6,8 @@ import 'package:uniqtrack/features/accounts/domain/favourite_track_ids_changes_u
 import 'package:uniqtrack/features/accounts/domain/remove_from_favourite_tracks_use_case.dart';
 import 'package:uniqtrack/features/accounts/domain/remove_track_use_case.dart';
 import 'package:uniqtrack/features/accounts/domain/sign_out_use_case.dart';
+import 'package:uniqtrack/features/accounts/domain/watch_favourite_track_details_use_case.dart';
+import 'package:uniqtrack/features/accounts/domain/watch_my_track_use_case.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 
 part 'providers.g.dart';
@@ -14,7 +16,7 @@ part 'providers.g.dart';
 Stream<List<Track>> userTracks(UserTracksRef ref) {
   final accountsRepository = ref.watch(accountsRepositoryProvider);
 
-  return accountsRepository.listenUserTracks();
+  return accountsRepository.watchUserTracks();
 }
 
 @Riverpod(dependencies: [accountsRepository])
@@ -66,14 +68,14 @@ Stream<List<TrackUI>> userFavouriteTracks(UserFavouriteTracksRef ref) {
       ref.watch(favouriteTrackIdsChangesUseCaseProvider);
 
   return Rx.combineLatest3(
-    accountsRepository.listenUserFavouriteTracks(),
+    accountsRepository.watchUserFavouriteTracks(),
     userChangesUseCase.call(),
     favouriteTrackIdsChangesUseCase.call(),
     (tracks, user, favouriteIds) {
       return tracks.map(
         (item) {
           final creatorId = item.creatorId;
-          final trackId = item.id;
+          final trackId = item.trackId;
           final userId = user?.userId;
 
           final isCurrentUserCreator = creatorId == userId;
@@ -81,11 +83,43 @@ Stream<List<TrackUI>> userFavouriteTracks(UserFavouriteTracksRef ref) {
 
           return TrackUI(
             track: item,
-            isCurrentUserCreator: isCurrentUserCreator,
-            isFavouriteTrack: isFavouriteTrack,
+            currentUserCreator: isCurrentUserCreator,
+            favouriteTrack: isFavouriteTrack,
+            favouriteEnabled: false,
+            deleteEnabled: false,
           );
         },
       ).toList();
     },
+  );
+}
+
+@Riverpod(dependencies: [favouriteTrackIdsChangesUseCase, accountsRepository])
+WatchFavouriteTrackDetailsUseCase watchFavouriteTrackDetailsUseCase(
+    WatchFavouriteTrackDetailsUseCaseRef ref, String id) {
+  final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
+  final favouriteTrackIdsChangesUseCase =
+      ref.watch(favouriteTrackIdsChangesUseCaseProvider);
+  final accountRepository = ref.watch(accountsRepositoryProvider);
+
+  return WatchFavouriteTrackDetailsUseCase(
+    accountRepository: accountRepository,
+    userChangesUseCase: userChangesUseCase,
+    favouriteTrackIdsChangesUseCase: favouriteTrackIdsChangesUseCase,
+  );
+}
+
+@Riverpod(dependencies: [favouriteTrackIdsChangesUseCase, accountsRepository])
+WatchMyTrackUseCase watchMyTrackUseCase(
+    WatchMyTrackUseCaseRef ref, String id) {
+  final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
+  final favouriteTrackIdsChangesUseCase =
+  ref.watch(favouriteTrackIdsChangesUseCaseProvider);
+  final accountRepository = ref.watch(accountsRepositoryProvider);
+
+  return WatchMyTrackUseCase(
+    accountRepository: accountRepository,
+    userChangesUseCase: userChangesUseCase,
+    favouriteTrackIdsChangesUseCase: favouriteTrackIdsChangesUseCase,
   );
 }

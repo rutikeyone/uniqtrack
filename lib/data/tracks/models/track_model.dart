@@ -4,6 +4,7 @@ part of 'models.dart';
 class TrackModel with _$TrackModel {
   const factory TrackModel({
     required String? id,
+    required String? trackId,
     required String? creatorId,
     @DateConverter() required DateTime? dateCreated,
     required String? name,

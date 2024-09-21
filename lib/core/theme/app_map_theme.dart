@@ -4,25 +4,31 @@ import 'package:uniqtrack/core/theme/app_colors.dart';
 class AppMapTheme extends ThemeExtension<AppMapTheme> {
   static final light = AppMapTheme(
     trackLineColor: AppColors.brightCyan,
-    userLineColor: AppColors.crimsonRed,
+    primaryUserLineColor: AppColors.crimsonRed,
+    secondaryUserLineColor: AppColors.brightCyan,
   );
 
-  final Color userLineColor;
+  final Color primaryUserLineColor;
+  final Color secondaryUserLineColor;
   final Color trackLineColor;
 
   const AppMapTheme({
     required this.trackLineColor,
-    required this.userLineColor,
+    required this.secondaryUserLineColor,
+    required this.primaryUserLineColor,
   });
 
   @override
   ThemeExtension<AppMapTheme> copyWith({
     Color? trackLineColor,
-    Color? userLineColor,
+    Color? primaryUserLineColor,
+    Color? secondaryUserLineColor,
   }) {
     return AppMapTheme(
       trackLineColor: trackLineColor ?? this.trackLineColor,
-      userLineColor: userLineColor ?? this.userLineColor,
+      primaryUserLineColor: primaryUserLineColor ?? this.primaryUserLineColor,
+      secondaryUserLineColor:
+          secondaryUserLineColor ?? this.secondaryUserLineColor,
     );
   }
 
@@ -35,8 +41,12 @@ class AppMapTheme extends ThemeExtension<AppMapTheme> {
     return AppMapTheme(
       trackLineColor: Color.lerp(trackLineColor, other.trackLineColor, t) ??
           this.trackLineColor,
-      userLineColor: Color.lerp(userLineColor, other.userLineColor, t) ??
-          this.userLineColor,
+      primaryUserLineColor:
+          Color.lerp(primaryUserLineColor, other.primaryUserLineColor, t) ??
+              this.primaryUserLineColor,
+      secondaryUserLineColor:
+          Color.lerp(secondaryUserLineColor, other.secondaryUserLineColor, t) ??
+              this.secondaryUserLineColor,
     );
   }
 }

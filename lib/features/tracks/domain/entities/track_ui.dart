@@ -4,7 +4,10 @@ part of 'entities.dart';
 class TrackUI with _$TrackUI {
   const factory TrackUI({
     required Track? track,
-    required bool? isCurrentUserCreator,
-    required bool? isFavouriteTrack,
+    @Default(false) bool currentUserCreator,
+    @Default(false) bool favouriteTrack,
+    @Default(true) bool deleteEnabled,
+    @Default(true) bool favouriteEnabled,
+    @Default(true) bool canDelete,
   }) = _TrackUI;
 }

@@ -34,4 +34,6 @@ class AppColors {
   static const sliverGray = Color(0xffC1C1C1);
 
   static const lightSlateGray = Color(0xffA1A2A5);
+
+  static const vibrantBlue = Color(0xff2977C5);
 }

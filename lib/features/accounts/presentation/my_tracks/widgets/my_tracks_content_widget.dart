@@ -28,7 +28,7 @@ class MyTracksContentWidget extends ConsumerStatefulWidget {
 
 class _MyTracksContentWidgetState extends ConsumerState<MyTracksContentWidget> {
   void _shareTrack(Track track) {
-    final id = track.id;
+    final id = track.trackId;
     if (id == null) return;
     ref.read(appShareTooKitProvider).shareTrackId(id);
   }
@@ -39,7 +39,7 @@ class _MyTracksContentWidgetState extends ConsumerState<MyTracksContentWidget> {
   }) {
     final navCallbackStore = context.read<MyTracksNavCallbackStore>();
 
-    final id = track.id;
+    final id = track.trackId;
     if (id == null) return;
 
     TrackActionsModalBottomSheet.show(
@@ -131,10 +131,8 @@ class _MyTracksContentWidgetState extends ConsumerState<MyTracksContentWidget> {
   }
 
   void _navigateToTrackDetails(Track track) {
-    final id = track.id;
-    if (id == null) return;
     final navCallbackStore = context.read<MyTracksNavCallbackStore>();
-    navCallbackStore.navigateToTrackDetails(id);
+    navCallbackStore.navigateToTrackDetails(track);
   }
 
   @override

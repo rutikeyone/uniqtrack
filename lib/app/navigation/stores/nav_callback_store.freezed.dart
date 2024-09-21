@@ -490,7 +490,7 @@ mixin _$CommunityNavCallbackStore {
   VoidCallback get navigateToTrackTracking =>
       throw _privateConstructorUsedError;
   VoidCallback get closeDialog => throw _privateConstructorUsedError;
-  void Function(String) get navigateToTrackDetails =>
+  void Function(Track) get navigateToTrackDetails =>
       throw _privateConstructorUsedError;
 
   /// Create a copy of CommunityNavCallbackStore
@@ -509,7 +509,7 @@ abstract class $CommunityNavCallbackStoreCopyWith<$Res> {
   $Res call(
       {VoidCallback navigateToTrackTracking,
       VoidCallback closeDialog,
-      void Function(String) navigateToTrackDetails});
+      void Function(Track) navigateToTrackDetails});
 }
 
 /// @nodoc
@@ -544,7 +544,7 @@ class _$CommunityNavCallbackStoreCopyWithImpl<$Res,
       navigateToTrackDetails: null == navigateToTrackDetails
           ? _value.navigateToTrackDetails
           : navigateToTrackDetails // ignore: cast_nullable_to_non_nullable
-              as void Function(String),
+              as void Function(Track),
     ) as $Val);
   }
 }
@@ -561,7 +561,7 @@ abstract class _$$CommunityNavCallbackStoreImplCopyWith<$Res>
   $Res call(
       {VoidCallback navigateToTrackTracking,
       VoidCallback closeDialog,
-      void Function(String) navigateToTrackDetails});
+      void Function(Track) navigateToTrackDetails});
 }
 
 /// @nodoc
@@ -595,7 +595,7 @@ class __$$CommunityNavCallbackStoreImplCopyWithImpl<$Res>
       navigateToTrackDetails: null == navigateToTrackDetails
           ? _value.navigateToTrackDetails
           : navigateToTrackDetails // ignore: cast_nullable_to_non_nullable
-              as void Function(String),
+              as void Function(Track),
     ));
   }
 }
@@ -615,7 +615,7 @@ class _$CommunityNavCallbackStoreImpl
   @override
   final VoidCallback closeDialog;
   @override
-  final void Function(String) navigateToTrackDetails;
+  final void Function(Track) navigateToTrackDetails;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -666,7 +666,7 @@ abstract class _CommunityNavCallbackStore implements CommunityNavCallbackStore {
   const factory _CommunityNavCallbackStore(
           {required final VoidCallback navigateToTrackTracking,
           required final VoidCallback closeDialog,
-          required final void Function(String) navigateToTrackDetails}) =
+          required final void Function(Track) navigateToTrackDetails}) =
       _$CommunityNavCallbackStoreImpl;
 
   @override
@@ -674,7 +674,7 @@ abstract class _CommunityNavCallbackStore implements CommunityNavCallbackStore {
   @override
   VoidCallback get closeDialog;
   @override
-  void Function(String) get navigateToTrackDetails;
+  void Function(Track) get navigateToTrackDetails;
 
   /// Create a copy of CommunityNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.
@@ -1472,7 +1472,7 @@ abstract class _ProfileNavCallbackStore implements ProfileNavCallbackStore {
 /// @nodoc
 mixin _$MyTracksNavCallbackStore {
   VoidCallback get closeDialog => throw _privateConstructorUsedError;
-  void Function(String) get navigateToTrackDetails =>
+  void Function(Track) get navigateToTrackDetails =>
       throw _privateConstructorUsedError;
 
   /// Create a copy of MyTracksNavCallbackStore
@@ -1489,7 +1489,7 @@ abstract class $MyTracksNavCallbackStoreCopyWith<$Res> {
       _$MyTracksNavCallbackStoreCopyWithImpl<$Res, MyTracksNavCallbackStore>;
   @useResult
   $Res call(
-      {VoidCallback closeDialog, void Function(String) navigateToTrackDetails});
+      {VoidCallback closeDialog, void Function(Track) navigateToTrackDetails});
 }
 
 /// @nodoc
@@ -1519,7 +1519,7 @@ class _$MyTracksNavCallbackStoreCopyWithImpl<$Res,
       navigateToTrackDetails: null == navigateToTrackDetails
           ? _value.navigateToTrackDetails
           : navigateToTrackDetails // ignore: cast_nullable_to_non_nullable
-              as void Function(String),
+              as void Function(Track),
     ) as $Val);
   }
 }
@@ -1534,7 +1534,7 @@ abstract class _$$MyTracksNavCallbackStoreImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {VoidCallback closeDialog, void Function(String) navigateToTrackDetails});
+      {VoidCallback closeDialog, void Function(Track) navigateToTrackDetails});
 }
 
 /// @nodoc
@@ -1563,7 +1563,7 @@ class __$$MyTracksNavCallbackStoreImplCopyWithImpl<$Res>
       navigateToTrackDetails: null == navigateToTrackDetails
           ? _value.navigateToTrackDetails
           : navigateToTrackDetails // ignore: cast_nullable_to_non_nullable
-              as void Function(String),
+              as void Function(Track),
     ));
   }
 }
@@ -1579,7 +1579,7 @@ class _$MyTracksNavCallbackStoreImpl
   @override
   final VoidCallback closeDialog;
   @override
-  final void Function(String) navigateToTrackDetails;
+  final void Function(Track) navigateToTrackDetails;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -1624,13 +1624,13 @@ class _$MyTracksNavCallbackStoreImpl
 abstract class _MyTracksNavCallbackStore implements MyTracksNavCallbackStore {
   const factory _MyTracksNavCallbackStore(
           {required final VoidCallback closeDialog,
-          required final void Function(String) navigateToTrackDetails}) =
+          required final void Function(Track) navigateToTrackDetails}) =
       _$MyTracksNavCallbackStoreImpl;
 
   @override
   VoidCallback get closeDialog;
   @override
-  void Function(String) get navigateToTrackDetails;
+  void Function(Track) get navigateToTrackDetails;
 
   /// Create a copy of MyTracksNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.
@@ -1642,7 +1642,7 @@ abstract class _MyTracksNavCallbackStore implements MyTracksNavCallbackStore {
 
 /// @nodoc
 mixin _$MyFavouriteTracksNavCallbackStore {
-  void Function(String) get navigateToTrackDetails =>
+  void Function(Track) get navigateToTrackDetails =>
       throw _privateConstructorUsedError;
 
   /// Create a copy of MyFavouriteTracksNavCallbackStore
@@ -1660,7 +1660,7 @@ abstract class $MyFavouriteTracksNavCallbackStoreCopyWith<$Res> {
       _$MyFavouriteTracksNavCallbackStoreCopyWithImpl<$Res,
           MyFavouriteTracksNavCallbackStore>;
   @useResult
-  $Res call({void Function(String) navigateToTrackDetails});
+  $Res call({void Function(Track) navigateToTrackDetails});
 }
 
 /// @nodoc
@@ -1685,7 +1685,7 @@ class _$MyFavouriteTracksNavCallbackStoreCopyWithImpl<$Res,
       navigateToTrackDetails: null == navigateToTrackDetails
           ? _value.navigateToTrackDetails
           : navigateToTrackDetails // ignore: cast_nullable_to_non_nullable
-              as void Function(String),
+              as void Function(Track),
     ) as $Val);
   }
 }
@@ -1699,7 +1699,7 @@ abstract class _$$MyFavouriteTracksNavCallbackStoreImplCopyWith<$Res>
       __$$MyFavouriteTracksNavCallbackStoreImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({void Function(String) navigateToTrackDetails});
+  $Res call({void Function(Track) navigateToTrackDetails});
 }
 
 /// @nodoc
@@ -1723,7 +1723,7 @@ class __$$MyFavouriteTracksNavCallbackStoreImplCopyWithImpl<$Res>
       navigateToTrackDetails: null == navigateToTrackDetails
           ? _value.navigateToTrackDetails
           : navigateToTrackDetails // ignore: cast_nullable_to_non_nullable
-              as void Function(String),
+              as void Function(Track),
     ));
   }
 }
@@ -1737,7 +1737,7 @@ class _$MyFavouriteTracksNavCallbackStoreImpl
       {required this.navigateToTrackDetails});
 
   @override
-  final void Function(String) navigateToTrackDetails;
+  final void Function(Track) navigateToTrackDetails;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -1779,11 +1779,11 @@ class _$MyFavouriteTracksNavCallbackStoreImpl
 abstract class _MyFavouriteTracksNavCallbackStore
     implements MyFavouriteTracksNavCallbackStore {
   const factory _MyFavouriteTracksNavCallbackStore(
-          {required final void Function(String) navigateToTrackDetails}) =
+          {required final void Function(Track) navigateToTrackDetails}) =
       _$MyFavouriteTracksNavCallbackStoreImpl;
 
   @override
-  void Function(String) get navigateToTrackDetails;
+  void Function(Track) get navigateToTrackDetails;
 
   /// Create a copy of MyFavouriteTracksNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.
@@ -1791,5 +1791,156 @@ abstract class _MyFavouriteTracksNavCallbackStore
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MyFavouriteTracksNavCallbackStoreImplCopyWith<
           _$MyFavouriteTracksNavCallbackStoreImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$TrackDetailsNavCallbackStore {
+  VoidCallback get navigateBack => throw _privateConstructorUsedError;
+
+  /// Create a copy of TrackDetailsNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $TrackDetailsNavCallbackStoreCopyWith<TrackDetailsNavCallbackStore>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TrackDetailsNavCallbackStoreCopyWith<$Res> {
+  factory $TrackDetailsNavCallbackStoreCopyWith(
+          TrackDetailsNavCallbackStore value,
+          $Res Function(TrackDetailsNavCallbackStore) then) =
+      _$TrackDetailsNavCallbackStoreCopyWithImpl<$Res,
+          TrackDetailsNavCallbackStore>;
+  @useResult
+  $Res call({VoidCallback navigateBack});
+}
+
+/// @nodoc
+class _$TrackDetailsNavCallbackStoreCopyWithImpl<$Res,
+        $Val extends TrackDetailsNavCallbackStore>
+    implements $TrackDetailsNavCallbackStoreCopyWith<$Res> {
+  _$TrackDetailsNavCallbackStoreCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of TrackDetailsNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? navigateBack = null,
+  }) {
+    return _then(_value.copyWith(
+      navigateBack: null == navigateBack
+          ? _value.navigateBack
+          : navigateBack // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$TrackDetailsNavCallbackStoreImplCopyWith<$Res>
+    implements $TrackDetailsNavCallbackStoreCopyWith<$Res> {
+  factory _$$TrackDetailsNavCallbackStoreImplCopyWith(
+          _$TrackDetailsNavCallbackStoreImpl value,
+          $Res Function(_$TrackDetailsNavCallbackStoreImpl) then) =
+      __$$TrackDetailsNavCallbackStoreImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({VoidCallback navigateBack});
+}
+
+/// @nodoc
+class __$$TrackDetailsNavCallbackStoreImplCopyWithImpl<$Res>
+    extends _$TrackDetailsNavCallbackStoreCopyWithImpl<$Res,
+        _$TrackDetailsNavCallbackStoreImpl>
+    implements _$$TrackDetailsNavCallbackStoreImplCopyWith<$Res> {
+  __$$TrackDetailsNavCallbackStoreImplCopyWithImpl(
+      _$TrackDetailsNavCallbackStoreImpl _value,
+      $Res Function(_$TrackDetailsNavCallbackStoreImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of TrackDetailsNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? navigateBack = null,
+  }) {
+    return _then(_$TrackDetailsNavCallbackStoreImpl(
+      navigateBack: null == navigateBack
+          ? _value.navigateBack
+          : navigateBack // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$TrackDetailsNavCallbackStoreImpl
+    with DiagnosticableTreeMixin
+    implements _TrackDetailsNavCallbackStore {
+  const _$TrackDetailsNavCallbackStoreImpl({required this.navigateBack});
+
+  @override
+  final VoidCallback navigateBack;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'TrackDetailsNavCallbackStore(navigateBack: $navigateBack)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'TrackDetailsNavCallbackStore'))
+      ..add(DiagnosticsProperty('navigateBack', navigateBack));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TrackDetailsNavCallbackStoreImpl &&
+            (identical(other.navigateBack, navigateBack) ||
+                other.navigateBack == navigateBack));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, navigateBack);
+
+  /// Create a copy of TrackDetailsNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TrackDetailsNavCallbackStoreImplCopyWith<
+          _$TrackDetailsNavCallbackStoreImpl>
+      get copyWith => __$$TrackDetailsNavCallbackStoreImplCopyWithImpl<
+          _$TrackDetailsNavCallbackStoreImpl>(this, _$identity);
+}
+
+abstract class _TrackDetailsNavCallbackStore
+    implements TrackDetailsNavCallbackStore {
+  const factory _TrackDetailsNavCallbackStore(
+          {required final VoidCallback navigateBack}) =
+      _$TrackDetailsNavCallbackStoreImpl;
+
+  @override
+  VoidCallback get navigateBack;
+
+  /// Create a copy of TrackDetailsNavCallbackStore
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TrackDetailsNavCallbackStoreImplCopyWith<
+          _$TrackDetailsNavCallbackStoreImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

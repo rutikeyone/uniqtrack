@@ -240,7 +240,7 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
       points: points,
       width: 3,
       consumeTapEvents: true,
-      color: context.appMapTheme.userLineColor,
+      color: context.appMapTheme.primaryUserLineColor,
       onTap: () {},
       zIndex: 2,
     );
@@ -326,8 +326,8 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
           circleId: CircleId(firstId),
           center: latLng,
           strokeWidth: AppDiments.dm4.toInt(),
-          fillColor: context.appMapTheme.userLineColor,
-          strokeColor: context.appMapTheme.userLineColor,
+          fillColor: context.appMapTheme.primaryUserLineColor,
+          strokeColor: context.appMapTheme.primaryUserLineColor,
           radius: AppDiments.dm1,
           zIndex: 1,
         );
@@ -347,8 +347,8 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
           circleId: CircleId(lastId),
           center: latLng,
           strokeWidth: AppDiments.dm4.toInt(),
-          fillColor: context.appMapTheme.userLineColor,
-          strokeColor: context.appMapTheme.userLineColor,
+          fillColor: context.appMapTheme.primaryUserLineColor,
+          strokeColor: context.appMapTheme.primaryUserLineColor,
           radius: AppDiments.dm1,
           zIndex: 1,
         );
@@ -408,7 +408,7 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
   Future<void> _animateCamera(CameraUpdate cameraUpdate) async {
     final GoogleMapController controller = await _controller.future;
     _forceReRender(controller);
-    await controller.moveCamera(cameraUpdate);
+    await controller.animateCamera(cameraUpdate);
   }
 
   void _forceReRender(GoogleMapController controller) {

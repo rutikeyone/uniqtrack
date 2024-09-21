@@ -12,7 +12,7 @@ import 'package:uniqtrack/core/theme/app_circle_progress_indicator.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/features/accounts/domain/providers/providers.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
-import 'package:uniqtrack/features/tracks/presentation/community/widgets/track_action_button.dart';
+import 'package:uniqtrack/core/presentation/widgets/track_action_button.dart';
 import 'package:uniqtrack/features/tracks/presentation/community/widgets/track_tile.dart';
 
 class FavouriteTracksWidget extends ConsumerStatefulWidget {
@@ -46,16 +46,14 @@ class _FavouriteTracksWidgetState extends ConsumerState<FavouriteTracksWidget> {
   }
 
   void _shareTrack(Track track) {
-    final id = track.id;
+    final id = track.trackId;
     if (id == null) return;
     ref.read(appShareTooKitProvider).shareTrackId(id);
   }
 
   void _navigateToTrackDetails(Track track) {
-    final id = track.id;
-    if (id == null) return;
     final navCallbackStore = context.read<MyFavouriteTracksNavCallbackStore>();
-    navCallbackStore.navigateToTrackDetails(id);
+    navCallbackStore.navigateToTrackDetails(track);
   }
 
   @override
@@ -72,7 +70,7 @@ class _FavouriteTracksWidgetState extends ConsumerState<FavouriteTracksWidget> {
               final data = value[index];
               final track = data.track;
 
-              final isFavouriteTrack = data.isFavouriteTrack;
+              final isFavouriteTrack = data.favouriteTrack;
 
               if (track == null) {
                 return SizedBox.shrink();
@@ -92,17 +90,14 @@ class _FavouriteTracksWidgetState extends ConsumerState<FavouriteTracksWidget> {
                 onSharePressed: () => _shareTrack(track),
                 actionsWidget: Row(
                   children: [
-                    isFavouriteTrack != null
-                        ? TrackActionButton(
-                            asset: isFavouriteTrack
-                                ? AppAssets.icons.favouriteSelected
-                                : AppAssets.icons.favourite,
-                            size: isFavouriteTrack
-                                ? AppDiments.dm28
-                                : AppDiments.dm24,
-                            onPressed: () => _removeFromFavouriteTracks(track),
-                          )
-                        : const SizedBox.shrink(),
+                    TrackActionButton(
+                      asset: isFavouriteTrack
+                          ? AppAssets.icons.favouriteSelected
+                          : AppAssets.icons.favourite,
+                      size:
+                          isFavouriteTrack ? AppDiments.dm28 : AppDiments.dm24,
+                      onPressed: () => _removeFromFavouriteTracks(track),
+                    ),
                     Padding(
                       padding: const EdgeInsets.only(left: AppDiments.dm6),
                       child: TrackActionButton(

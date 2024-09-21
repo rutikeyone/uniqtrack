@@ -118,8 +118,8 @@ class AccountsAdapterRepository implements AccountsRepository {
   }
 
   @override
-  Stream<List<Track>> listenUserTracks() {
-    return _accountsDataRepository.listenUserTracks().map((list) {
+  Stream<List<Track>> watchUserTracks() {
+    return _accountsDataRepository.watchUserTracks().map((list) {
       return list.map((item) {
         return _trackMapper.toTrack(item);
       }).toList();
@@ -127,8 +127,8 @@ class AccountsAdapterRepository implements AccountsRepository {
   }
 
   @override
-  Stream<List<Track>> listenUserFavouriteTracks() {
-    return _accountsDataRepository.listenUserFavouriteTracks().map((list) {
+  Stream<List<Track>> watchUserFavouriteTracks() {
+    return _accountsDataRepository.watchUserFavouriteTracks().map((list) {
       return list.map((item) {
         return _trackMapper.toTrack(item);
       }).toList();
@@ -188,5 +188,25 @@ class AccountsAdapterRepository implements AccountsRepository {
     }
 
     return Right(removeFromMyTracksFailureResult);
+  }
+
+  @override
+  Stream<Track?> watchFavouriteTrack(String id) {
+    return _accountsDataRepository.watchFavouriteTrack(id).map(
+      (item) {
+        if (item == null) return null;
+        return _trackMapper.toTrack(item);
+      },
+    );
+  }
+
+  @override
+  Stream<Track?> watchMyTrack(String id) {
+    return _accountsDataRepository.watchMyTrack(id).map(
+      (item) {
+        if (item == null) return null;
+        return _trackMapper.toTrack(item);
+      },
+    );
   }
 }

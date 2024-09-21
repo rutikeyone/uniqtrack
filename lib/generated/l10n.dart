@@ -1139,6 +1139,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Repeat`
+  String get repeat {
+    return Intl.message(
+      'Repeat',
+      name: 'repeat',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -28,22 +28,26 @@ class ImageDataRepositoryImpl implements ImageDataRepository {
 
   @override
   Future<Either<AppError, PermissionResult<FileModel?>>> chooseImage() async {
-    final result = await _appErrorHandler.handle(() {
-      return _imageDataSource.chooseImage();
-    });
+    final result = await _appErrorHandler.handle(
+      call: () {
+        return _imageDataSource.chooseImage();
+      },
+    );
     return result;
   }
 
   @override
   Future<Either<AppError, String>> downloadImage(Uint8List bytes) {
-    return _appErrorHandler.handle(() async {
-      final ref = _firebaseStorage.ref().child(_picturesPath);
-      final childRef = ref.child(_uuid.v1());
+    return _appErrorHandler.handle(
+      call: () async {
+        final ref = _firebaseStorage.ref().child(_picturesPath);
+        final childRef = ref.child(_uuid.v1());
 
-      final uploadTask = childRef.putData(bytes);
-      final snapshot = await uploadTask;
-      final downloadUrl = await snapshot.ref.getDownloadURL();
-      return downloadUrl;
-    });
+        final uploadTask = childRef.putData(bytes);
+        final snapshot = await uploadTask;
+        final downloadUrl = await snapshot.ref.getDownloadURL();
+        return downloadUrl;
+      },
+    );
   }
 }

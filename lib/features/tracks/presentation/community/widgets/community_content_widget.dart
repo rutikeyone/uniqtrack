@@ -126,16 +126,14 @@ class _CommunityContentWidgetState
   }
 
   void _shareTrack(Track track) {
-    final id = track.id;
+    final id = track.trackId;
     if (id == null) return;
     ref.read(appShareTooKitProvider).shareTrackId(id);
   }
 
   void _navigateToTrackDetails(Track track) {
-    final id = track.id;
-    if (id == null) return;
     final navCallbackStore = context.read<CommunityNavCallbackStore>();
-    navCallbackStore.navigateToTrackDetails(id);
+    navCallbackStore.navigateToTrackDetails(track);
   }
 
   @override

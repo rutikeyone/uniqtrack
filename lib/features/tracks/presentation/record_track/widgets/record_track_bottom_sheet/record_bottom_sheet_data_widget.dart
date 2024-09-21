@@ -3,7 +3,7 @@ import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/stores/states/states.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/record_track_bottom_sheet/modal_bottom_sheet_divider_widget.dart';
 import 'record_bottom_sheet_action_buttons.dart';
-import 'record_data_section_widget.dart';
+import '../../../../../../core/presentation/widgets/track_data_section_widget.dart';
 import 'record_track_modal_bottom_sheet.dart';
 
 class RecordBottomSheetDataWidget extends StatelessWidget {
@@ -39,7 +39,7 @@ class RecordBottomSheetDataWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ModalBottomSheetDividerWidget(),
-            RecordDataSectionWidget(
+            TrackDataSectionWidget(
               distance: distance,
               duration: duration,
               averageSpeed: averageSpeed,

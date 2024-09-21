@@ -150,6 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "refresh": MessageLookupByLibrary.simpleMessage("Refresh"),
         "removeFromFavourites":
             MessageLookupByLibrary.simpleMessage("Remove From Favourites"),
+        "repeat": MessageLookupByLibrary.simpleMessage("Repeat"),
         "routeLength": MessageLookupByLibrary.simpleMessage("Route length"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "sendPassword": MessageLookupByLibrary.simpleMessage("Send password"),

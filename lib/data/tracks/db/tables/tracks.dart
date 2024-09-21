@@ -2,6 +2,7 @@ import 'package:drift/drift.dart';
 
 class Tracks extends Table {
   IntColumn get id => integer().autoIncrement()();
+  TextColumn get trackId => text().nullable()();
   TextColumn get creatorId => text().nullable()();
   DateTimeColumn get dateCreated => dateTime().nullable()();
   TextColumn get name => text().nullable()();

@@ -12,6 +12,7 @@ class TrackConverterImpl implements TrackConverter {
   final JsonConverter<DateTime?, String?> _dateConverter;
 
   final _idArgument = 'id';
+  final _trackId = "trackId";
   final _creatorIdArgument = 'creatorId';
   final _positionsArgument = 'positions';
   final _distanceArgument = 'distance';
@@ -35,6 +36,7 @@ class TrackConverterImpl implements TrackConverter {
   Track? fromJson(Map<String, String> json) {
     try {
       final id = json[_idArgument];
+      final trackId = json[_trackId];
       final creatorId = json[_creatorIdArgument];
       final jsonPositionsData = json[_positionsArgument];
       final jsonDistance = json[_distanceArgument];
@@ -92,6 +94,7 @@ class TrackConverterImpl implements TrackConverter {
 
       return Track(
         id: id,
+        trackId: trackId,
         name: name,
         dateCreated: dateCreated,
         comment: comment,
@@ -118,6 +121,7 @@ class TrackConverterImpl implements TrackConverter {
       Map<String, String> result = {};
 
       final id = object.id;
+      final trackId = object.trackId;
       final creatorId = object.creatorId;
       final name = object.name;
       final comment = object.comment;
@@ -132,6 +136,12 @@ class TrackConverterImpl implements TrackConverter {
       if (id != null) {
         result.addAll({
           _idArgument: id,
+        });
+      }
+
+      if (trackId != null) {
+        result.addAll({
+          _trackId: trackId,
         });
       }
 

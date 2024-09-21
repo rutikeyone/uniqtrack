@@ -82,26 +82,26 @@ class TrackActionsModalBottomSheet extends ConsumerWidget {
                 child: Column(
                   children: [
                     _TrackActionsHeaderWidget(),
-                    value.isCurrentUserCreator == true
+                    value.currentUserCreator == true
                         ? _EditTrackActionButton(
                             onPressed: () {},
                             onCloseDialog: onClosePressed,
                             borderRadius: BorderRadius.zero,
                           )
                         : const SizedBox.shrink(),
-                    value.isFavouriteTrack == false
+                    value.favouriteTrack == false
                         ? _AddToFavouritesTrackAction(
                             onPressed: onAddToFavouriteTracksPressed,
                             onCloseDialog: onClosePressed,
                           )
                         : const SizedBox.shrink(),
-                    value.isFavouriteTrack == true
+                    value.favouriteTrack == true
                         ? _RemoveFromFavouritesTrackAction(
                             onClosePressed: onClosePressed,
                             onPressed: onDeleteToFavouriteTrackPressed,
                           )
                         : const SizedBox.shrink(),
-                    value.isCurrentUserCreator == true
+                    value.currentUserCreator == true
                         ? _DeleteTrackActionButton(
                             onPressed: onDeletePressed,
                             onClosePressed: onClosePressed,

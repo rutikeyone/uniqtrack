@@ -17,6 +17,12 @@ class $TracksTable extends Tracks with TableInfo<$TracksTable, Track> {
       requiredDuringInsert: false,
       defaultConstraints:
           GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
+  static const VerificationMeta _trackIdMeta =
+      const VerificationMeta('trackId');
+  @override
+  late final GeneratedColumn<String> trackId = GeneratedColumn<String>(
+      'track_id', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
   static const VerificationMeta _creatorIdMeta =
       const VerificationMeta('creatorId');
   @override
@@ -79,6 +85,7 @@ class $TracksTable extends Tracks with TableInfo<$TracksTable, Track> {
   @override
   List<GeneratedColumn> get $columns => [
         id,
+        trackId,
         creatorId,
         dateCreated,
         name,
@@ -102,6 +109,10 @@ class $TracksTable extends Tracks with TableInfo<$TracksTable, Track> {
     final data = instance.toColumns(true);
     if (data.containsKey('id')) {
       context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('track_id')) {
+      context.handle(_trackIdMeta,
+          trackId.isAcceptableOrUnknown(data['track_id']!, _trackIdMeta));
     }
     if (data.containsKey('creator_id')) {
       context.handle(_creatorIdMeta,
@@ -160,6 +171,8 @@ class $TracksTable extends Tracks with TableInfo<$TracksTable, Track> {
     return Track(
       id: attachedDatabase.typeMapping
           .read(DriftSqlType.int, data['${effectivePrefix}id'])!,
+      trackId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}track_id']),
       creatorId: attachedDatabase.typeMapping
           .read(DriftSqlType.string, data['${effectivePrefix}creator_id']),
       dateCreated: attachedDatabase.typeMapping
@@ -191,6 +204,7 @@ class $TracksTable extends Tracks with TableInfo<$TracksTable, Track> {
 
 class Track extends DataClass implements Insertable<Track> {
   final int id;
+  final String? trackId;
   final String? creatorId;
   final DateTime? dateCreated;
   final String? name;
@@ -203,6 +217,7 @@ class Track extends DataClass implements Insertable<Track> {
   final String? memories;
   const Track(
       {required this.id,
+      this.trackId,
       this.creatorId,
       this.dateCreated,
       this.name,
@@ -217,6 +232,9 @@ class Track extends DataClass implements Insertable<Track> {
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
     map['id'] = Variable<int>(id);
+    if (!nullToAbsent || trackId != null) {
+      map['track_id'] = Variable<String>(trackId);
+    }
     if (!nullToAbsent || creatorId != null) {
       map['creator_id'] = Variable<String>(creatorId);
     }
@@ -253,6 +271,9 @@ class Track extends DataClass implements Insertable<Track> {
   TracksCompanion toCompanion(bool nullToAbsent) {
     return TracksCompanion(
       id: Value(id),
+      trackId: trackId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(trackId),
       creatorId: creatorId == null && nullToAbsent
           ? const Value.absent()
           : Value(creatorId),
@@ -289,6 +310,7 @@ class Track extends DataClass implements Insertable<Track> {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return Track(
       id: serializer.fromJson<int>(json['id']),
+      trackId: serializer.fromJson<String?>(json['trackId']),
       creatorId: serializer.fromJson<String?>(json['creatorId']),
       dateCreated: serializer.fromJson<DateTime?>(json['dateCreated']),
       name: serializer.fromJson<String?>(json['name']),
@@ -306,6 +328,7 @@ class Track extends DataClass implements Insertable<Track> {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return <String, dynamic>{
       'id': serializer.toJson<int>(id),
+      'trackId': serializer.toJson<String?>(trackId),
       'creatorId': serializer.toJson<String?>(creatorId),
       'dateCreated': serializer.toJson<DateTime?>(dateCreated),
       'name': serializer.toJson<String?>(name),
@@ -321,6 +344,7 @@ class Track extends DataClass implements Insertable<Track> {
 
   Track copyWith(
           {int? id,
+          Value<String?> trackId = const Value.absent(),
           Value<String?> creatorId = const Value.absent(),
           Value<DateTime?> dateCreated = const Value.absent(),
           Value<String?> name = const Value.absent(),
@@ -333,6 +357,7 @@ class Track extends DataClass implements Insertable<Track> {
           Value<String?> memories = const Value.absent()}) =>
       Track(
         id: id ?? this.id,
+        trackId: trackId.present ? trackId.value : this.trackId,
         creatorId: creatorId.present ? creatorId.value : this.creatorId,
         dateCreated: dateCreated.present ? dateCreated.value : this.dateCreated,
         name: name.present ? name.value : this.name,
@@ -348,6 +373,7 @@ class Track extends DataClass implements Insertable<Track> {
   Track copyWithCompanion(TracksCompanion data) {
     return Track(
       id: data.id.present ? data.id.value : this.id,
+      trackId: data.trackId.present ? data.trackId.value : this.trackId,
       creatorId: data.creatorId.present ? data.creatorId.value : this.creatorId,
       dateCreated:
           data.dateCreated.present ? data.dateCreated.value : this.dateCreated,
@@ -369,6 +395,7 @@ class Track extends DataClass implements Insertable<Track> {
   String toString() {
     return (StringBuffer('Track(')
           ..write('id: $id, ')
+          ..write('trackId: $trackId, ')
           ..write('creatorId: $creatorId, ')
           ..write('dateCreated: $dateCreated, ')
           ..write('name: $name, ')
@@ -384,13 +411,25 @@ class Track extends DataClass implements Insertable<Track> {
   }
 
   @override
-  int get hashCode => Object.hash(id, creatorId, dateCreated, name, comment,
-      distance, duration, averageSpeed, maxAltitude, positions, memories);
+  int get hashCode => Object.hash(
+      id,
+      trackId,
+      creatorId,
+      dateCreated,
+      name,
+      comment,
+      distance,
+      duration,
+      averageSpeed,
+      maxAltitude,
+      positions,
+      memories);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
       (other is Track &&
           other.id == this.id &&
+          other.trackId == this.trackId &&
           other.creatorId == this.creatorId &&
           other.dateCreated == this.dateCreated &&
           other.name == this.name &&
@@ -405,6 +444,7 @@ class Track extends DataClass implements Insertable<Track> {
 
 class TracksCompanion extends UpdateCompanion<Track> {
   final Value<int> id;
+  final Value<String?> trackId;
   final Value<String?> creatorId;
   final Value<DateTime?> dateCreated;
   final Value<String?> name;
@@ -417,6 +457,7 @@ class TracksCompanion extends UpdateCompanion<Track> {
   final Value<String?> memories;
   const TracksCompanion({
     this.id = const Value.absent(),
+    this.trackId = const Value.absent(),
     this.creatorId = const Value.absent(),
     this.dateCreated = const Value.absent(),
     this.name = const Value.absent(),
@@ -430,6 +471,7 @@ class TracksCompanion extends UpdateCompanion<Track> {
   });
   TracksCompanion.insert({
     this.id = const Value.absent(),
+    this.trackId = const Value.absent(),
     this.creatorId = const Value.absent(),
     this.dateCreated = const Value.absent(),
     this.name = const Value.absent(),
@@ -443,6 +485,7 @@ class TracksCompanion extends UpdateCompanion<Track> {
   });
   static Insertable<Track> custom({
     Expression<int>? id,
+    Expression<String>? trackId,
     Expression<String>? creatorId,
     Expression<DateTime>? dateCreated,
     Expression<String>? name,
@@ -456,6 +499,7 @@ class TracksCompanion extends UpdateCompanion<Track> {
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
+      if (trackId != null) 'track_id': trackId,
       if (creatorId != null) 'creator_id': creatorId,
       if (dateCreated != null) 'date_created': dateCreated,
       if (name != null) 'name': name,
@@ -471,6 +515,7 @@ class TracksCompanion extends UpdateCompanion<Track> {
 
   TracksCompanion copyWith(
       {Value<int>? id,
+      Value<String?>? trackId,
       Value<String?>? creatorId,
       Value<DateTime?>? dateCreated,
       Value<String?>? name,
@@ -483,6 +528,7 @@ class TracksCompanion extends UpdateCompanion<Track> {
       Value<String?>? memories}) {
     return TracksCompanion(
       id: id ?? this.id,
+      trackId: trackId ?? this.trackId,
       creatorId: creatorId ?? this.creatorId,
       dateCreated: dateCreated ?? this.dateCreated,
       name: name ?? this.name,
@@ -501,6 +547,9 @@ class TracksCompanion extends UpdateCompanion<Track> {
     final map = <String, Expression>{};
     if (id.present) {
       map['id'] = Variable<int>(id.value);
+    }
+    if (trackId.present) {
+      map['track_id'] = Variable<String>(trackId.value);
     }
     if (creatorId.present) {
       map['creator_id'] = Variable<String>(creatorId.value);
@@ -539,6 +588,7 @@ class TracksCompanion extends UpdateCompanion<Track> {
   String toString() {
     return (StringBuffer('TracksCompanion(')
           ..write('id: $id, ')
+          ..write('trackId: $trackId, ')
           ..write('creatorId: $creatorId, ')
           ..write('dateCreated: $dateCreated, ')
           ..write('name: $name, ')
@@ -568,6 +618,7 @@ abstract class _$AppDatabase extends GeneratedDatabase {
 
 typedef $$TracksTableCreateCompanionBuilder = TracksCompanion Function({
   Value<int> id,
+  Value<String?> trackId,
   Value<String?> creatorId,
   Value<DateTime?> dateCreated,
   Value<String?> name,
@@ -581,6 +632,7 @@ typedef $$TracksTableCreateCompanionBuilder = TracksCompanion Function({
 });
 typedef $$TracksTableUpdateCompanionBuilder = TracksCompanion Function({
   Value<int> id,
+  Value<String?> trackId,
   Value<String?> creatorId,
   Value<DateTime?> dateCreated,
   Value<String?> name,
@@ -598,6 +650,11 @@ class $$TracksTableFilterComposer
   $$TracksTableFilterComposer(super.$state);
   ColumnFilters<int> get id => $state.composableBuilder(
       column: $state.table.id,
+      builder: (column, joinBuilders) =>
+          ColumnFilters(column, joinBuilders: joinBuilders));
+
+  ColumnFilters<String> get trackId => $state.composableBuilder(
+      column: $state.table.trackId,
       builder: (column, joinBuilders) =>
           ColumnFilters(column, joinBuilders: joinBuilders));
 
@@ -657,6 +714,11 @@ class $$TracksTableOrderingComposer
   $$TracksTableOrderingComposer(super.$state);
   ColumnOrderings<int> get id => $state.composableBuilder(
       column: $state.table.id,
+      builder: (column, joinBuilders) =>
+          ColumnOrderings(column, joinBuilders: joinBuilders));
+
+  ColumnOrderings<String> get trackId => $state.composableBuilder(
+      column: $state.table.trackId,
       builder: (column, joinBuilders) =>
           ColumnOrderings(column, joinBuilders: joinBuilders));
 
@@ -732,6 +794,7 @@ class $$TracksTableTableManager extends RootTableManager<
               $$TracksTableOrderingComposer(ComposerState(db, table)),
           updateCompanionCallback: ({
             Value<int> id = const Value.absent(),
+            Value<String?> trackId = const Value.absent(),
             Value<String?> creatorId = const Value.absent(),
             Value<DateTime?> dateCreated = const Value.absent(),
             Value<String?> name = const Value.absent(),
@@ -745,6 +808,7 @@ class $$TracksTableTableManager extends RootTableManager<
           }) =>
               TracksCompanion(
             id: id,
+            trackId: trackId,
             creatorId: creatorId,
             dateCreated: dateCreated,
             name: name,
@@ -758,6 +822,7 @@ class $$TracksTableTableManager extends RootTableManager<
           ),
           createCompanionCallback: ({
             Value<int> id = const Value.absent(),
+            Value<String?> trackId = const Value.absent(),
             Value<String?> creatorId = const Value.absent(),
             Value<DateTime?> dateCreated = const Value.absent(),
             Value<String?> name = const Value.absent(),
@@ -771,6 +836,7 @@ class $$TracksTableTableManager extends RootTableManager<
           }) =>
               TracksCompanion.insert(
             id: id,
+            trackId: trackId,
             creatorId: creatorId,
             dateCreated: dateCreated,
             name: name,

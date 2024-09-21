@@ -122,5 +122,6 @@
   "hasNotBeenAddedToFavoritesYet": "Has not been added to favorites yet",
   "theTrackWasSuccessfullyDeleted": "The track was successfully deleted",
   "theTrackIsNotInTheListOfUserTracks": "The track is not in the list of user tracks",
-  "noRemoveRights": "No remove rights"
+  "noRemoveRights": "No remove rights",
+  "repeat": "Repeat"
 }

@@ -68,6 +68,7 @@ class TrackDbMapperImpl implements TrackDbMapper {
 
     return TrackModel(
       id: null,
+      trackId: companion.trackId,
       creatorId: companion.creatorId,
       dateCreated: companion.dateCreated,
       name: companion.name,

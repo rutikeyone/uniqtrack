@@ -15,21 +15,28 @@ abstract interface class AccountsDataRepository {
     required String email,
   });
 
-  Future<Either<AppError, UserModel>> fetchUserByUid(String uid);
+  Future<Either<AppError, UserModel?>> fetchUserByUid(String uid);
 
   Future<Either<AppError, void>> signOut();
 
-  Future<Either<AppError, void>> addMyRecordTrackData(TrackModel track);
+  Future<Either<AppError, void>> addMyRecordTrackData({
+    required TrackModel track,
+    required String trackId,
+  });
 
   Future<UserModel?> fetchCurrentUser();
 
-  Stream<List<TrackModel>> listenUserTracks();
+  Stream<List<TrackModel>> watchUserTracks();
 
-  Stream<List<TrackModel>> listenUserFavouriteTracks();
+  Stream<List<TrackModel>> watchUserFavouriteTracks();
 
   Future<Either<AppError, void>> addToFavouriteTracks(TrackModel track);
 
   Future<Either<AppError, void>> removeFromFavouriteTracks(TrackModel track);
 
   Future<Either<AppError, void>> removeFromMyTracks(TrackModel track);
+
+  Stream<TrackModel?> watchFavouriteTrack(String id);
+
+  Stream<TrackModel?> watchMyTrack(String id);
 }

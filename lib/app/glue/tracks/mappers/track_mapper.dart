@@ -31,6 +31,7 @@ class TrackMapperImpl implements TrackMapper {
 
     return TrackModel(
       id: track.id,
+      trackId: track.trackId,
       name: track.name,
       dateCreated: track.dateCreated,
       comment: track.comment,
@@ -56,6 +57,7 @@ class TrackMapperImpl implements TrackMapper {
 
     return Track(
       id: trackModel.id,
+      trackId: trackModel.trackId,
       name: trackModel.name,
       dateCreated: trackModel.dateCreated,
       comment: trackModel.comment,

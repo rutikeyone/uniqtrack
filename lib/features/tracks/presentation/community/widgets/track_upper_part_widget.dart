@@ -5,7 +5,7 @@ import 'package:uniqtrack/core/common_impl/app_widget_toolkit_impl.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 
-import 'track_action_button.dart';
+import '../../../../../core/presentation/widgets/track_action_button.dart';
 
 class TrackUpperPartWidget extends ConsumerWidget {
   final String asset;

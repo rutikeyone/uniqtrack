@@ -122,5 +122,6 @@
   "hasNotBeenAddedToFavoritesYet": "Еще не был добавлен в избранное",
   "theTrackWasSuccessfullyDeleted": "Трек был успешно удален",
   "theTrackIsNotInTheListOfUserTracks": "Трека нет в списке пользовательских треков",
-  "noRemoveRights": "Нет прав на удаление"
+  "noRemoveRights": "Нет прав на удаление",
+  "repeat": "Повторить"
 }

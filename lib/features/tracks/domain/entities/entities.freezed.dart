@@ -593,6 +593,7 @@ abstract class _PositionData implements PositionData {
 /// @nodoc
 mixin _$Track {
   String? get id => throw _privateConstructorUsedError;
+  String? get trackId => throw _privateConstructorUsedError;
   DateTime? get dateCreated => throw _privateConstructorUsedError;
   String? get creatorId => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
@@ -617,6 +618,7 @@ abstract class $TrackCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
+      String? trackId,
       DateTime? dateCreated,
       String? creatorId,
       String? name,
@@ -645,6 +647,7 @@ class _$TrackCopyWithImpl<$Res, $Val extends Track>
   @override
   $Res call({
     Object? id = freezed,
+    Object? trackId = freezed,
     Object? dateCreated = freezed,
     Object? creatorId = freezed,
     Object? name = freezed,
@@ -660,6 +663,10 @@ class _$TrackCopyWithImpl<$Res, $Val extends Track>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      trackId: freezed == trackId
+          ? _value.trackId
+          : trackId // ignore: cast_nullable_to_non_nullable
               as String?,
       dateCreated: freezed == dateCreated
           ? _value.dateCreated
@@ -714,6 +721,7 @@ abstract class _$$TrackImplCopyWith<$Res> implements $TrackCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
+      String? trackId,
       DateTime? dateCreated,
       String? creatorId,
       String? name,
@@ -740,6 +748,7 @@ class __$$TrackImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
+    Object? trackId = freezed,
     Object? dateCreated = freezed,
     Object? creatorId = freezed,
     Object? name = freezed,
@@ -755,6 +764,10 @@ class __$$TrackImplCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      trackId: freezed == trackId
+          ? _value.trackId
+          : trackId // ignore: cast_nullable_to_non_nullable
               as String?,
       dateCreated: freezed == dateCreated
           ? _value.dateCreated
@@ -805,6 +818,7 @@ class __$$TrackImplCopyWithImpl<$Res>
 class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
   const _$TrackImpl(
       {required this.id,
+      required this.trackId,
       required this.dateCreated,
       required this.creatorId,
       required this.name,
@@ -820,6 +834,8 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
 
   @override
   final String? id;
+  @override
+  final String? trackId;
   @override
   final DateTime? dateCreated;
   @override
@@ -858,7 +874,7 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Track(id: $id, dateCreated: $dateCreated, creatorId: $creatorId, name: $name, comment: $comment, positions: $positions, distance: $distance, duration: $duration, averageSpeed: $averageSpeed, maxAltitude: $maxAltitude, memories: $memories)';
+    return 'Track(id: $id, trackId: $trackId, dateCreated: $dateCreated, creatorId: $creatorId, name: $name, comment: $comment, positions: $positions, distance: $distance, duration: $duration, averageSpeed: $averageSpeed, maxAltitude: $maxAltitude, memories: $memories)';
   }
 
   @override
@@ -867,6 +883,7 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
     properties
       ..add(DiagnosticsProperty('type', 'Track'))
       ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('trackId', trackId))
       ..add(DiagnosticsProperty('dateCreated', dateCreated))
       ..add(DiagnosticsProperty('creatorId', creatorId))
       ..add(DiagnosticsProperty('name', name))
@@ -885,6 +902,7 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
         (other.runtimeType == runtimeType &&
             other is _$TrackImpl &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.trackId, trackId) || other.trackId == trackId) &&
             (identical(other.dateCreated, dateCreated) ||
                 other.dateCreated == dateCreated) &&
             (identical(other.creatorId, creatorId) ||
@@ -908,6 +926,7 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
   int get hashCode => Object.hash(
       runtimeType,
       id,
+      trackId,
       dateCreated,
       creatorId,
       name,
@@ -931,6 +950,7 @@ class _$TrackImpl with DiagnosticableTreeMixin implements _Track {
 abstract class _Track implements Track {
   const factory _Track(
       {required final String? id,
+      required final String? trackId,
       required final DateTime? dateCreated,
       required final String? creatorId,
       required final String? name,
@@ -944,6 +964,8 @@ abstract class _Track implements Track {
 
   @override
   String? get id;
+  @override
+  String? get trackId;
   @override
   DateTime? get dateCreated;
   @override
@@ -976,8 +998,11 @@ abstract class _Track implements Track {
 /// @nodoc
 mixin _$TrackUI {
   Track? get track => throw _privateConstructorUsedError;
-  bool? get isCurrentUserCreator => throw _privateConstructorUsedError;
-  bool? get isFavouriteTrack => throw _privateConstructorUsedError;
+  bool get currentUserCreator => throw _privateConstructorUsedError;
+  bool get favouriteTrack => throw _privateConstructorUsedError;
+  bool get deleteEnabled => throw _privateConstructorUsedError;
+  bool get favouriteEnabled => throw _privateConstructorUsedError;
+  bool get canDelete => throw _privateConstructorUsedError;
 
   /// Create a copy of TrackUI
   /// with the given fields replaced by the non-null parameter values.
@@ -990,7 +1015,13 @@ abstract class $TrackUICopyWith<$Res> {
   factory $TrackUICopyWith(TrackUI value, $Res Function(TrackUI) then) =
       _$TrackUICopyWithImpl<$Res, TrackUI>;
   @useResult
-  $Res call({Track? track, bool? isCurrentUserCreator, bool? isFavouriteTrack});
+  $Res call(
+      {Track? track,
+      bool currentUserCreator,
+      bool favouriteTrack,
+      bool deleteEnabled,
+      bool favouriteEnabled,
+      bool canDelete});
 
   $TrackCopyWith<$Res>? get track;
 }
@@ -1011,22 +1042,37 @@ class _$TrackUICopyWithImpl<$Res, $Val extends TrackUI>
   @override
   $Res call({
     Object? track = freezed,
-    Object? isCurrentUserCreator = freezed,
-    Object? isFavouriteTrack = freezed,
+    Object? currentUserCreator = null,
+    Object? favouriteTrack = null,
+    Object? deleteEnabled = null,
+    Object? favouriteEnabled = null,
+    Object? canDelete = null,
   }) {
     return _then(_value.copyWith(
       track: freezed == track
           ? _value.track
           : track // ignore: cast_nullable_to_non_nullable
               as Track?,
-      isCurrentUserCreator: freezed == isCurrentUserCreator
-          ? _value.isCurrentUserCreator
-          : isCurrentUserCreator // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isFavouriteTrack: freezed == isFavouriteTrack
-          ? _value.isFavouriteTrack
-          : isFavouriteTrack // ignore: cast_nullable_to_non_nullable
-              as bool?,
+      currentUserCreator: null == currentUserCreator
+          ? _value.currentUserCreator
+          : currentUserCreator // ignore: cast_nullable_to_non_nullable
+              as bool,
+      favouriteTrack: null == favouriteTrack
+          ? _value.favouriteTrack
+          : favouriteTrack // ignore: cast_nullable_to_non_nullable
+              as bool,
+      deleteEnabled: null == deleteEnabled
+          ? _value.deleteEnabled
+          : deleteEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      favouriteEnabled: null == favouriteEnabled
+          ? _value.favouriteEnabled
+          : favouriteEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      canDelete: null == canDelete
+          ? _value.canDelete
+          : canDelete // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 
@@ -1052,7 +1098,13 @@ abstract class _$$TrackUIImplCopyWith<$Res> implements $TrackUICopyWith<$Res> {
       __$$TrackUIImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Track? track, bool? isCurrentUserCreator, bool? isFavouriteTrack});
+  $Res call(
+      {Track? track,
+      bool currentUserCreator,
+      bool favouriteTrack,
+      bool deleteEnabled,
+      bool favouriteEnabled,
+      bool canDelete});
 
   @override
   $TrackCopyWith<$Res>? get track;
@@ -1072,22 +1124,37 @@ class __$$TrackUIImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? track = freezed,
-    Object? isCurrentUserCreator = freezed,
-    Object? isFavouriteTrack = freezed,
+    Object? currentUserCreator = null,
+    Object? favouriteTrack = null,
+    Object? deleteEnabled = null,
+    Object? favouriteEnabled = null,
+    Object? canDelete = null,
   }) {
     return _then(_$TrackUIImpl(
       track: freezed == track
           ? _value.track
           : track // ignore: cast_nullable_to_non_nullable
               as Track?,
-      isCurrentUserCreator: freezed == isCurrentUserCreator
-          ? _value.isCurrentUserCreator
-          : isCurrentUserCreator // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      isFavouriteTrack: freezed == isFavouriteTrack
-          ? _value.isFavouriteTrack
-          : isFavouriteTrack // ignore: cast_nullable_to_non_nullable
-              as bool?,
+      currentUserCreator: null == currentUserCreator
+          ? _value.currentUserCreator
+          : currentUserCreator // ignore: cast_nullable_to_non_nullable
+              as bool,
+      favouriteTrack: null == favouriteTrack
+          ? _value.favouriteTrack
+          : favouriteTrack // ignore: cast_nullable_to_non_nullable
+              as bool,
+      deleteEnabled: null == deleteEnabled
+          ? _value.deleteEnabled
+          : deleteEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      favouriteEnabled: null == favouriteEnabled
+          ? _value.favouriteEnabled
+          : favouriteEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
+      canDelete: null == canDelete
+          ? _value.canDelete
+          : canDelete // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -1097,19 +1164,33 @@ class __$$TrackUIImplCopyWithImpl<$Res>
 class _$TrackUIImpl with DiagnosticableTreeMixin implements _TrackUI {
   const _$TrackUIImpl(
       {required this.track,
-      required this.isCurrentUserCreator,
-      required this.isFavouriteTrack});
+      this.currentUserCreator = false,
+      this.favouriteTrack = false,
+      this.deleteEnabled = true,
+      this.favouriteEnabled = true,
+      this.canDelete = true});
 
   @override
   final Track? track;
   @override
-  final bool? isCurrentUserCreator;
+  @JsonKey()
+  final bool currentUserCreator;
   @override
-  final bool? isFavouriteTrack;
+  @JsonKey()
+  final bool favouriteTrack;
+  @override
+  @JsonKey()
+  final bool deleteEnabled;
+  @override
+  @JsonKey()
+  final bool favouriteEnabled;
+  @override
+  @JsonKey()
+  final bool canDelete;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'TrackUI(track: $track, isCurrentUserCreator: $isCurrentUserCreator, isFavouriteTrack: $isFavouriteTrack)';
+    return 'TrackUI(track: $track, currentUserCreator: $currentUserCreator, favouriteTrack: $favouriteTrack, deleteEnabled: $deleteEnabled, favouriteEnabled: $favouriteEnabled, canDelete: $canDelete)';
   }
 
   @override
@@ -1118,8 +1199,11 @@ class _$TrackUIImpl with DiagnosticableTreeMixin implements _TrackUI {
     properties
       ..add(DiagnosticsProperty('type', 'TrackUI'))
       ..add(DiagnosticsProperty('track', track))
-      ..add(DiagnosticsProperty('isCurrentUserCreator', isCurrentUserCreator))
-      ..add(DiagnosticsProperty('isFavouriteTrack', isFavouriteTrack));
+      ..add(DiagnosticsProperty('currentUserCreator', currentUserCreator))
+      ..add(DiagnosticsProperty('favouriteTrack', favouriteTrack))
+      ..add(DiagnosticsProperty('deleteEnabled', deleteEnabled))
+      ..add(DiagnosticsProperty('favouriteEnabled', favouriteEnabled))
+      ..add(DiagnosticsProperty('canDelete', canDelete));
   }
 
   @override
@@ -1128,15 +1212,21 @@ class _$TrackUIImpl with DiagnosticableTreeMixin implements _TrackUI {
         (other.runtimeType == runtimeType &&
             other is _$TrackUIImpl &&
             (identical(other.track, track) || other.track == track) &&
-            (identical(other.isCurrentUserCreator, isCurrentUserCreator) ||
-                other.isCurrentUserCreator == isCurrentUserCreator) &&
-            (identical(other.isFavouriteTrack, isFavouriteTrack) ||
-                other.isFavouriteTrack == isFavouriteTrack));
+            (identical(other.currentUserCreator, currentUserCreator) ||
+                other.currentUserCreator == currentUserCreator) &&
+            (identical(other.favouriteTrack, favouriteTrack) ||
+                other.favouriteTrack == favouriteTrack) &&
+            (identical(other.deleteEnabled, deleteEnabled) ||
+                other.deleteEnabled == deleteEnabled) &&
+            (identical(other.favouriteEnabled, favouriteEnabled) ||
+                other.favouriteEnabled == favouriteEnabled) &&
+            (identical(other.canDelete, canDelete) ||
+                other.canDelete == canDelete));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, track, isCurrentUserCreator, isFavouriteTrack);
+  int get hashCode => Object.hash(runtimeType, track, currentUserCreator,
+      favouriteTrack, deleteEnabled, favouriteEnabled, canDelete);
 
   /// Create a copy of TrackUI
   /// with the given fields replaced by the non-null parameter values.
@@ -1150,15 +1240,24 @@ class _$TrackUIImpl with DiagnosticableTreeMixin implements _TrackUI {
 abstract class _TrackUI implements TrackUI {
   const factory _TrackUI(
       {required final Track? track,
-      required final bool? isCurrentUserCreator,
-      required final bool? isFavouriteTrack}) = _$TrackUIImpl;
+      final bool currentUserCreator,
+      final bool favouriteTrack,
+      final bool deleteEnabled,
+      final bool favouriteEnabled,
+      final bool canDelete}) = _$TrackUIImpl;
 
   @override
   Track? get track;
   @override
-  bool? get isCurrentUserCreator;
+  bool get currentUserCreator;
   @override
-  bool? get isFavouriteTrack;
+  bool get favouriteTrack;
+  @override
+  bool get deleteEnabled;
+  @override
+  bool get favouriteEnabled;
+  @override
+  bool get canDelete;
 
   /// Create a copy of TrackUI
   /// with the given fields replaced by the non-null parameter values.

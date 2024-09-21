@@ -672,7 +672,7 @@ abstract class _RecordTrackStore with Store {
   void _initialTrackPositionSubscription(AppLocationSettings locationSettings) {
     _userPositionChangedSubscription = _userPositionChangedSubscription ??
         _recordTrackRepository
-            .listenPositions(locationSettings)
+            .watchPositions(locationSettings)
             .listen(_userPositionChanges);
   }
 
@@ -779,6 +779,7 @@ abstract class _RecordTrackStore with Store {
             name: null,
             comment: null,
             dateCreated: null,
+            trackId: null,
             positions: positions,
             distance: state.distance,
             duration: state.duration,
@@ -853,6 +854,7 @@ abstract class _RecordTrackStore with Store {
           name: null,
           comment: null,
           dateCreated: null,
+          trackId: null,
           positions: positions,
           distance: state.distance,
           duration: state.duration,

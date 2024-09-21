@@ -15,7 +15,7 @@ class RemoveFromFavouriteTracksUseCase
   }) : _accountsRepository = accountsRepository;
 
   @override
-  FutureOr<Either<AppError, void>> execute(Track track) {
+  Future<Either<AppError, void>> execute(Track track) {
     return _accountsRepository.removeFromFavouriteTracks(track);
   }
 }

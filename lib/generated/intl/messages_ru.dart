@@ -153,6 +153,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "refresh": MessageLookupByLibrary.simpleMessage("Обновить"),
         "removeFromFavourites":
             MessageLookupByLibrary.simpleMessage("Удалить из избранных"),
+        "repeat": MessageLookupByLibrary.simpleMessage("Повторить"),
         "routeLength": MessageLookupByLibrary.simpleMessage("Расстояние"),
         "save": MessageLookupByLibrary.simpleMessage("Сохранить"),
         "sendPassword":

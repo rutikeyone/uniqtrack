@@ -118,13 +118,27 @@ abstract class NavCallbackStoreBuilder {
   }
 
   static CommunityNavCallbackStore createCommunityNavCallbackStore({
+    required BuildContext context,
     required RecordTrackPath recordTrackPath,
     required TrackDetailsPath trackDetailsPath,
-    required BuildContext context,
+    required DetailsArgsConverter detailsArgsConverter,
   }) {
     final navCallbackStore = CommunityNavCallbackStore(
       navigateToTrackTracking: () => context.push(recordTrackPath.path),
-      navigateToTrackDetails: (id) => context.push(trackDetailsPath.path),
+      navigateToTrackDetails: (track) {
+        final id = track.id;
+        if (id == null) return;
+
+        final queryParameters = trackDetailsPath.queryParameters(
+          id: id,
+          mode: DetailsMode.tracks(),
+          detailsConverter: detailsArgsConverter,
+        );
+
+        final path = trackDetailsPath.query(queryParameters).path;
+
+        context.push(path);
+      },
       closeDialog: context.pop,
     );
 
@@ -158,19 +172,56 @@ abstract class NavCallbackStoreBuilder {
   static MyTracksNavCallbackStore createMyTracksNavCallbackStore({
     required BuildContext context,
     required TrackDetailsPath trackDetailsPath,
+    required DetailsArgsConverter detailsArgsConverter,
   }) {
     return MyTracksNavCallbackStore(
       closeDialog: context.pop,
-      navigateToTrackDetails: (id) => context.push(trackDetailsPath.path),
+      navigateToTrackDetails: (track) {
+        final id = track.id;
+        if (id == null) return;
+
+        final queryParameters = trackDetailsPath.queryParameters(
+          id: id,
+          mode: DetailsMode.myTracks(),
+          detailsConverter: detailsArgsConverter,
+        );
+
+        final path = trackDetailsPath.query(queryParameters).path;
+
+        context.push(path);
+      },
     );
   }
 
-  static MyFavouriteTracksNavCallbackStore createMyFavouriteTracksNavCallbackStore({
+  static MyFavouriteTracksNavCallbackStore
+      createMyFavouriteTracksNavCallbackStore({
     required BuildContext context,
     required TrackDetailsPath trackDetailsPath,
-}) {
+    required DetailsArgsConverter detailsArgsConverter,
+  }) {
     return MyFavouriteTracksNavCallbackStore(
-      navigateToTrackDetails: (id) => context.push(trackDetailsPath.path),
+      navigateToTrackDetails: (track) {
+        final id = track.id;
+        if (id == null) return;
+
+        final queryParameters = trackDetailsPath.queryParameters(
+          id: id,
+          mode: DetailsMode.myFavouriteTracks(),
+          detailsConverter: detailsArgsConverter,
+        );
+
+        final path = trackDetailsPath.query(queryParameters).path;
+
+        context.push(path);
+      },
+    );
+  }
+
+  static TrackDetailsNavCallbackStore createTrackDetailsNavCallbackStore({
+    required BuildContext context,
+  }) {
+    return TrackDetailsNavCallbackStore(
+      navigateBack: context.pop,
     );
   }
 }

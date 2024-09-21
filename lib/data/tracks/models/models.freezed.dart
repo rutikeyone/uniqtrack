@@ -670,6 +670,7 @@ TrackModel _$TrackModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$TrackModel {
   String? get id => throw _privateConstructorUsedError;
+  String? get trackId => throw _privateConstructorUsedError;
   String? get creatorId => throw _privateConstructorUsedError;
   @DateConverter()
   DateTime? get dateCreated => throw _privateConstructorUsedError;
@@ -702,6 +703,7 @@ abstract class $TrackModelCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
+      String? trackId,
       String? creatorId,
       @DateConverter() DateTime? dateCreated,
       String? name,
@@ -730,6 +732,7 @@ class _$TrackModelCopyWithImpl<$Res, $Val extends TrackModel>
   @override
   $Res call({
     Object? id = freezed,
+    Object? trackId = freezed,
     Object? creatorId = freezed,
     Object? dateCreated = freezed,
     Object? name = freezed,
@@ -745,6 +748,10 @@ class _$TrackModelCopyWithImpl<$Res, $Val extends TrackModel>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      trackId: freezed == trackId
+          ? _value.trackId
+          : trackId // ignore: cast_nullable_to_non_nullable
               as String?,
       creatorId: freezed == creatorId
           ? _value.creatorId
@@ -800,6 +807,7 @@ abstract class _$$TrackModelImplCopyWith<$Res>
   @useResult
   $Res call(
       {String? id,
+      String? trackId,
       String? creatorId,
       @DateConverter() DateTime? dateCreated,
       String? name,
@@ -826,6 +834,7 @@ class __$$TrackModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
+    Object? trackId = freezed,
     Object? creatorId = freezed,
     Object? dateCreated = freezed,
     Object? name = freezed,
@@ -841,6 +850,10 @@ class __$$TrackModelImplCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      trackId: freezed == trackId
+          ? _value.trackId
+          : trackId // ignore: cast_nullable_to_non_nullable
               as String?,
       creatorId: freezed == creatorId
           ? _value.creatorId
@@ -891,6 +904,7 @@ class __$$TrackModelImplCopyWithImpl<$Res>
 class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
   const _$TrackModelImpl(
       {required this.id,
+      required this.trackId,
       required this.creatorId,
       @DateConverter() required this.dateCreated,
       required this.name,
@@ -910,6 +924,8 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
 
   @override
   final String? id;
+  @override
+  final String? trackId;
   @override
   final String? creatorId;
   @override
@@ -951,7 +967,7 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'TrackModel(id: $id, creatorId: $creatorId, dateCreated: $dateCreated, name: $name, comment: $comment, positions: $positions, distance: $distance, duration: $duration, averageSpeed: $averageSpeed, maxAltitude: $maxAltitude, memories: $memories)';
+    return 'TrackModel(id: $id, trackId: $trackId, creatorId: $creatorId, dateCreated: $dateCreated, name: $name, comment: $comment, positions: $positions, distance: $distance, duration: $duration, averageSpeed: $averageSpeed, maxAltitude: $maxAltitude, memories: $memories)';
   }
 
   @override
@@ -960,6 +976,7 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
     properties
       ..add(DiagnosticsProperty('type', 'TrackModel'))
       ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('trackId', trackId))
       ..add(DiagnosticsProperty('creatorId', creatorId))
       ..add(DiagnosticsProperty('dateCreated', dateCreated))
       ..add(DiagnosticsProperty('name', name))
@@ -978,6 +995,7 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
         (other.runtimeType == runtimeType &&
             other is _$TrackModelImpl &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.trackId, trackId) || other.trackId == trackId) &&
             (identical(other.creatorId, creatorId) ||
                 other.creatorId == creatorId) &&
             (identical(other.dateCreated, dateCreated) ||
@@ -1002,6 +1020,7 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
   int get hashCode => Object.hash(
       runtimeType,
       id,
+      trackId,
       creatorId,
       dateCreated,
       name,
@@ -1032,6 +1051,7 @@ class _$TrackModelImpl with DiagnosticableTreeMixin implements _TrackModel {
 abstract class _TrackModel implements TrackModel {
   const factory _TrackModel(
       {required final String? id,
+      required final String? trackId,
       required final String? creatorId,
       @DateConverter() required final DateTime? dateCreated,
       required final String? name,
@@ -1050,6 +1070,8 @@ abstract class _TrackModel implements TrackModel {
 
   @override
   String? get id;
+  @override
+  String? get trackId;
   @override
   String? get creatorId;
   @override

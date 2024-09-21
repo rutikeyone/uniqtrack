@@ -44,7 +44,7 @@ class TrackAdapterRepository implements TrackRepository {
   }
 
   @override
-  Stream<Position> listenPositions(AppLocationSettings settings) {
+  Stream<Position> watchPositions(AppLocationSettings settings) {
     return _appLocationHandler.listenPositions(settings).map(
       (event) {
         return _positionMapper.toPosition(event);
@@ -79,10 +79,11 @@ class TrackAdapterRepository implements TrackRepository {
       return Left(error);
     }
 
-    final trackWithId = trackModel.copyWith(id: trackId);
-
     final addMyRecordTrackDataResult =
-        await _accountsDataRepository.addMyRecordTrackData(trackWithId);
+        await _accountsDataRepository.addMyRecordTrackData(
+      track: trackModel,
+      trackId: trackId,
+    );
 
     final addMyRecordTrackDataFailureResult = addMyRecordTrackDataResult.fold(
       (value) => value,
@@ -99,8 +100,8 @@ class TrackAdapterRepository implements TrackRepository {
   }
 
   @override
-  Stream<List<Track>> listenTracks() {
-    return _tracksDataRepository.listenTracks().map((list) {
+  Stream<List<Track>> watchTracks() {
+    return _tracksDataRepository.watchTracks().map((list) {
       return list.map((item) {
         return _trackMapper.toTrack(item);
       }).toList();
@@ -133,8 +134,8 @@ class TrackAdapterRepository implements TrackRepository {
   }
 
   @override
-  Stream<Track?> listenTrack(String id) {
-    return _tracksDataRepository.listenTrack(id).map((item) {
+  Stream<Track?> watchTrack(String id) {
+    return _tracksDataRepository.watchTrack(id).map((item) {
       if (item == null) return null;
       final track = _trackMapper.toTrack(item);
       return track;

@@ -27,9 +27,9 @@ abstract interface class AccountsRepository {
     required File? file,
   });
 
-  Stream<List<Track>> listenUserTracks();
+  Stream<List<Track>> watchUserTracks();
 
-  Stream<List<Track>> listenUserFavouriteTracks();
+  Stream<List<Track>> watchUserFavouriteTracks();
 
   Future<Either<AppError, void>> addToFavouriteTracks(Track track);
 
@@ -40,4 +40,8 @@ abstract interface class AccountsRepository {
   Future<Either<AppError, void>> removeFromFavouriteTracks(Track track);
 
   Future<Either<AppError, void>> removeTrack(Track track);
+
+  Stream<Track?> watchFavouriteTrack(String id);
+
+  Stream<Track?> watchMyTrack(String id);
 }

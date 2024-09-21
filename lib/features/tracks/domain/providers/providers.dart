@@ -4,6 +4,7 @@ import 'package:uniqtrack/app/glue/accounts/providers/providers.dart';
 import 'package:uniqtrack/app/glue/tracks/providers/providers.dart';
 import 'package:uniqtrack/features/accounts/domain/providers/providers.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
+import 'package:uniqtrack/features/tracks/domain/watch_track_details_use_case.dart';
 
 part 'providers.g.dart';
 
@@ -11,11 +12,10 @@ part 'providers.g.dart';
 Stream<List<Track>> tracks(TracksRef ref) {
   final repository = ref.watch(trackRepositoryProvider);
 
-  return repository.listenTracks();
+  return repository.watchTracks();
 }
 
-@Riverpod(
-    dependencies: [trackRepository, favouriteTrackIdsChangesUseCase])
+@Riverpod(dependencies: [trackRepository, favouriteTrackIdsChangesUseCase])
 Stream<TrackUI> trackDetails(TrackDetailsRef ref, String id) {
   final trackRepository = ref.watch(trackRepositoryProvider);
   final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
@@ -23,7 +23,7 @@ Stream<TrackUI> trackDetails(TrackDetailsRef ref, String id) {
       ref.watch(favouriteTrackIdsChangesUseCaseProvider);
 
   return Rx.combineLatest3(
-    trackRepository.listenTrack(id),
+    trackRepository.watchTrack(id),
     userChangesUseCase.call(),
     favouriteTrackIdsChangesUseCase.call(),
     (track, user, favouriteIds) {
@@ -36,9 +36,26 @@ Stream<TrackUI> trackDetails(TrackDetailsRef ref, String id) {
 
       return TrackUI(
         track: track,
-        isCurrentUserCreator: track != null ? isCurrentUserCreator : null,
-        isFavouriteTrack: track != null ? isFavouriteTrack : null,
+        currentUserCreator: track != null ? isCurrentUserCreator : false,
+        favouriteTrack: track != null ? isFavouriteTrack : false,
+        favouriteEnabled: false,
+        deleteEnabled: false,
       );
     },
+  );
+}
+
+@Riverpod(dependencies: [trackRepository, favouriteTrackIdsChangesUseCase])
+WatchTrackDetailsUseCase watchTrackDetailsUseCase(
+    WatchTrackDetailsUseCaseRef ref, String id) {
+  final trackRepository = ref.watch(trackRepositoryProvider);
+  final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
+  final favouriteTrackIdsChangesUseCase =
+      ref.watch(favouriteTrackIdsChangesUseCaseProvider);
+
+  return WatchTrackDetailsUseCase(
+    trackRepository: trackRepository,
+    userChangesUseCase: userChangesUseCase,
+    favouriteTrackIdsChangesUseCase: favouriteTrackIdsChangesUseCase,
   );
 }

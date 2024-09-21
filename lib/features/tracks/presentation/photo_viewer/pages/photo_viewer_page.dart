@@ -3,6 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:provider/provider.dart';
 import 'package:uniqtrack/core/presentation/widgets/common_app_bar.dart';
+import 'package:uniqtrack/core/theme/app_circle_progress_indicator.dart';
 import 'package:uniqtrack/features/tracks/presentation/photo_viewer/stores/photo_viewer_store.dart';
 
 class PhotoViewerPage extends StatelessWidget {
@@ -22,12 +23,22 @@ class PhotoViewerPage extends StatelessWidget {
               bytes: (data) {
                 return PhotoView(
                   imageProvider: MemoryImage(data),
+                  loadingBuilder: (context, child) {
+                    return Center(
+                      child: AppCircleProgressIndicator(),
+                    );
+                  },
                 );
               },
               link: (data) {
                 return data != null
                     ? PhotoView(
                         imageProvider: NetworkImage(data),
+                        loadingBuilder: (context, child) {
+                          return Center(
+                            child: AppCircleProgressIndicator(),
+                          );
+                        },
                       )
                     : const SizedBox.shrink();
               },

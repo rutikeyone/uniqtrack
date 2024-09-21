@@ -6,7 +6,7 @@ part of 'store_factory_impl.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$storeFactoryHash() => r'be9fa6126eed728ad82489b8d2a00d05dab7faa4';
+String _$storeFactoryHash() => r'f5c3ead10e3a4ef2396fc3bae9365dd9db7468b1';
 
 /// See also [storeFactory].
 @ProviderFor(storeFactory)
@@ -15,18 +15,36 @@ final storeFactoryProvider = AutoDisposeProvider<StoreFactory>.internal(
   name: r'storeFactoryProvider',
   debugGetCreateSourceHash:
       const bool.fromEnvironment('dart.vm.product') ? null : _$storeFactoryHash,
-  dependencies: <ProviderOrFamily>[
-    trackRepositoryProvider,
+  dependencies: <ProviderOrFamily>{
     appLocationHandlerProvider,
-    accountsRepositoryProvider
-  ],
-  allTransitiveDependencies: <ProviderOrFamily>{
     trackRepositoryProvider,
-    ...?trackRepositoryProvider.allTransitiveDependencies,
+    accountsRepositoryProvider,
+    watchTrackDetailsUseCaseProvider,
+    watchFavouriteTrackDetailsUseCaseProvider,
+    watchMyTrackUseCaseProvider,
+    addToFavouriteTracksUseCaseProvider,
+    removeFromFavouriteTracksUseCaseProvider,
+    removeTrackUseCaseProvider
+  },
+  allTransitiveDependencies: <ProviderOrFamily>{
     appLocationHandlerProvider,
     ...?appLocationHandlerProvider.allTransitiveDependencies,
+    trackRepositoryProvider,
+    ...?trackRepositoryProvider.allTransitiveDependencies,
     accountsRepositoryProvider,
-    ...?accountsRepositoryProvider.allTransitiveDependencies
+    ...?accountsRepositoryProvider.allTransitiveDependencies,
+    watchTrackDetailsUseCaseProvider,
+    ...?watchTrackDetailsUseCaseProvider.allTransitiveDependencies,
+    watchFavouriteTrackDetailsUseCaseProvider,
+    ...?watchFavouriteTrackDetailsUseCaseProvider.allTransitiveDependencies,
+    watchMyTrackUseCaseProvider,
+    ...?watchMyTrackUseCaseProvider.allTransitiveDependencies,
+    addToFavouriteTracksUseCaseProvider,
+    ...?addToFavouriteTracksUseCaseProvider.allTransitiveDependencies,
+    removeFromFavouriteTracksUseCaseProvider,
+    ...?removeFromFavouriteTracksUseCaseProvider.allTransitiveDependencies,
+    removeTrackUseCaseProvider,
+    ...?removeTrackUseCaseProvider.allTransitiveDependencies
   },
 );
 
