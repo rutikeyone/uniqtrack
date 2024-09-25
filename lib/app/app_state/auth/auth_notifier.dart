@@ -41,7 +41,9 @@ class AuthStateNotifier extends StateNotifier<AuthState> {
   })  : _signOutUseCase = signOutUseCase,
         _authStateBehaviourSubject = BehaviorSubject(),
         super(_initialState) {
-    _authStateBehaviourSubject.add(_initialState);
+    if(!_authStateBehaviourSubject.isClosed) {
+      _authStateBehaviourSubject.add(_initialState);
+    }
     _authStateChangesSubscription =
         userChangesUseCase.call().listen(_authStateChanged);
   }

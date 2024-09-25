@@ -92,7 +92,6 @@ class _RegisterPageState extends ConsumerState<RegisterPage> {
   @override
   void dispose() {
     _actionsReactionDisposer();
-    _store.dispose();
     super.dispose();
   }
 

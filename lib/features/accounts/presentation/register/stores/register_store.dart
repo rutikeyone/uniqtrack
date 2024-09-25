@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:formz/formz.dart';
 import 'package:mobx/mobx.dart';
-import 'package:uniqtrack/features/accounts/domain/user_changes_use_case.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
@@ -27,16 +26,11 @@ abstract class _RegisterStore with Store {
   final AccountsRepository _accountsRepository;
   final CommonUIDelegate _commonUIDelegate;
 
-  final UserChangesUseCase _authStateChangesUseCase;
-  StreamSubscription<User?>? _authStateChangesStreamSubscription;
-
   _RegisterStore({
     required AccountsRepository accountsRepository,
     required CommonUIDelegate commonUIDelegate,
-    required UserChangesUseCase authStateChangesUseCase,
   })  : _accountsRepository = accountsRepository,
-        _commonUIDelegate = commonUIDelegate,
-        _authStateChangesUseCase = authStateChangesUseCase;
+        _commonUIDelegate = commonUIDelegate;
 
   @observable
   ImagePickerModeState pickerModeState =
@@ -244,20 +238,10 @@ abstract class _RegisterStore with Store {
   }
 
   void _handleRegisterSuccessResult(_) {
-    registerStatusState = const RegisterStatusState.success();
+    final duration = const Duration(milliseconds: 200);
 
-    _authStateChangesStreamSubscription?.cancel();
-    _authStateChangesStreamSubscription = null;
-    _authStateChangesStreamSubscription =
-        _authStateChangesUseCase.call().listen(_onAuthStateChanges);
-  }
-
-  void _onAuthStateChanges(User? event) {
     _commonUIDelegate.hideLoader();
-    _authStateChangesStreamSubscription?.cancel();
-    _authStateChangesStreamSubscription = null;
-
-    const duration = Duration(milliseconds: 200);
+    registerStatusState = const RegisterStatusState.success();
 
     Future.delayed(duration, () {
       const header = AppStrings.notification();
@@ -268,10 +252,5 @@ abstract class _RegisterStore with Store {
         body: body,
       );
     });
-  }
-
-  void dispose() {
-    _authStateChangesStreamSubscription?.cancel();
-    _authStateChangesStreamSubscription = null;
   }
 }

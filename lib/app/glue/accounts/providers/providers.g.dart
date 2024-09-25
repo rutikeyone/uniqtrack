@@ -224,5 +224,23 @@ final authStateChangesUseCaseProvider =
 
 typedef AuthStateChangesUseCaseRef
     = AutoDisposeProviderRef<AuthStateChangesUseCase>;
+String _$hasAuthenticationUseCaseHash() =>
+    r'fcfce2379cddc6603f69f692e7cb3b46825a0065';
+
+/// See also [hasAuthenticationUseCase].
+@ProviderFor(hasAuthenticationUseCase)
+final hasAuthenticationUseCaseProvider =
+    AutoDisposeProvider<HasAuthenticationUseCase>.internal(
+  hasAuthenticationUseCase,
+  name: r'hasAuthenticationUseCaseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$hasAuthenticationUseCaseHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef HasAuthenticationUseCaseRef
+    = AutoDisposeProviderRef<HasAuthenticationUseCase>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

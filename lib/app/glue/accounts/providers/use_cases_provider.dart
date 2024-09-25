@@ -19,3 +19,12 @@ AuthStateChangesUseCase authStateChangesUseCase(
 
   return AuthStateChangesUseCaseImpl(authStateNotifier: authStateNotifier);
 }
+
+@riverpod
+HasAuthenticationUseCase hasAuthenticationUseCase(
+    HasAuthenticationUseCaseRef ref) {
+  final accountsDataRepository = ref.watch(accountsDataRepositoryProvider);
+
+  return HasAuthenticationUseCase(
+      accountsDataRepository: accountsDataRepository);
+}

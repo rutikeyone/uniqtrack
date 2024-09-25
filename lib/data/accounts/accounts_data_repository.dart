@@ -21,4 +21,6 @@ abstract interface class AccountsDataRepository {
   Future<Either<AppError, void>> signOut();
 
   Future<UserModel?> fetchCurrentUser();
+
+  bool hasAuthentication();
 }

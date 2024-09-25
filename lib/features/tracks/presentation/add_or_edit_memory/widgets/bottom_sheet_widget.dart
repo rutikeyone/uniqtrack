@@ -19,7 +19,7 @@ class _BottomSheetWidget extends ConsumerWidget {
             child: Observer(builder: (context) {
               return AppElevatedButton(
                 text: S.of(context).addPicture,
-                onPressed: store.addPicture,
+                onPressed: store.canAddPhoto ? store.addPicture : null,
                 textStyle: context.primaryTextTheme.labelLarge?.copyWith(
                   color: context.colorScheme.secondary,
                 ),

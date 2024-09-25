@@ -162,7 +162,6 @@ class StoreFactoryImpl implements StoreFactory {
     return RegisterStore(
       accountsRepository: _accountsRepository,
       commonUIDelegate: _commonUIDelegate,
-      authStateChangesUseCase: _authStateChangesUseCase,
     );
   }
 

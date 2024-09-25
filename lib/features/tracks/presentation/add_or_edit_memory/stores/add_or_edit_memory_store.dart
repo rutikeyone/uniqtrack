@@ -56,6 +56,12 @@ abstract class _AddOrEditMemoryStore with Store {
   @observable
   FormzSubmissionStatus deleteStatusState = FormzSubmissionStatus.initial;
 
+  @observable
+  FormzSubmissionStatus downloadImageStatus = FormzSubmissionStatus.initial;
+
+  @computed
+  bool get canAddPhoto => !downloadImageStatus.isInProgress;
+
   @MakeObservable(useDeepEquality: true)
   List<String> photos;
 
@@ -408,6 +414,8 @@ abstract class _AddOrEditMemoryStore with Store {
 
     _commonUIDelegate.showLoader();
 
+    downloadImageStatus = FormzSubmissionStatus.inProgress;
+
     final downloadImageResult = await _imagesRepository.downloadImage(file);
 
     downloadImageResult.fold(
@@ -417,6 +425,7 @@ abstract class _AddOrEditMemoryStore with Store {
   }
 
   void _handleDownloadImageFailureResult(AppError error) {
+    downloadImageStatus = FormzSubmissionStatus.failure;
     _commonUIDelegate.hideLoader();
 
     if (error.isCancelError) return;
@@ -431,6 +440,7 @@ abstract class _AddOrEditMemoryStore with Store {
   }
 
   void _handleDownloadImageSuccessResult(String url) {
+    downloadImageStatus = FormzSubmissionStatus.success;
     _commonUIDelegate.hideLoader();
 
     final newPhotos = [...photos, url];

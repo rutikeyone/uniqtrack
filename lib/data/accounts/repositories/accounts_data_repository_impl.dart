@@ -214,4 +214,9 @@ class AccountsDataRepositoryImpl implements AccountsDataRepository {
     final userModel = data != null ? UserModel.fromJson(data) : null;
     return userModel;
   }
+
+  @override
+  bool hasAuthentication() {
+    return _firebaseAuth.currentUser != null;
+  }
 }

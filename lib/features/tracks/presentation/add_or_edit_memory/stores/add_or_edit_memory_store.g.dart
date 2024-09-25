@@ -9,6 +9,13 @@ part of 'add_or_edit_memory_store.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$AddOrEditMemoryStore on _AddOrEditMemoryStore, Store {
+  Computed<bool>? _$canAddPhotoComputed;
+
+  @override
+  bool get canAddPhoto =>
+      (_$canAddPhotoComputed ??= Computed<bool>(() => super.canAddPhoto,
+              name: '_AddOrEditMemoryStore.canAddPhoto'))
+          .value;
   Computed<bool>? _$canSaveChangesComputed;
 
   @override
@@ -94,6 +101,22 @@ mixin _$AddOrEditMemoryStore on _AddOrEditMemoryStore, Store {
   set deleteStatusState(FormzSubmissionStatus value) {
     _$deleteStatusStateAtom.reportWrite(value, super.deleteStatusState, () {
       super.deleteStatusState = value;
+    });
+  }
+
+  late final _$downloadImageStatusAtom =
+      Atom(name: '_AddOrEditMemoryStore.downloadImageStatus', context: context);
+
+  @override
+  FormzSubmissionStatus get downloadImageStatus {
+    _$downloadImageStatusAtom.reportRead();
+    return super.downloadImageStatus;
+  }
+
+  @override
+  set downloadImageStatus(FormzSubmissionStatus value) {
+    _$downloadImageStatusAtom.reportWrite(value, super.downloadImageStatus, () {
+      super.downloadImageStatus = value;
     });
   }
 
@@ -236,8 +259,10 @@ comment: ${comment},
 memoryName: ${memoryName},
 saveStatusState: ${saveStatusState},
 deleteStatusState: ${deleteStatusState},
+downloadImageStatus: ${downloadImageStatus},
 photos: ${photos},
 actions: ${actions},
+canAddPhoto: ${canAddPhoto},
 canSaveChanges: ${canSaveChanges}
     ''';
   }

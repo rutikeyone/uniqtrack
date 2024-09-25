@@ -52,9 +52,6 @@ GoRouter router(RouterRef ref) {
   final authState = ref.watch(authStateNotifierProvider);
   final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
 
-  final trackIdArg = "trackId";
-  final trackDetailsPath = '/community/track_details/:$trackIdArg';
-
   return GoRouter(
     navigatorKey: rootNavigatorKey,
     initialLocation: AppPaths.splash.goRoute,
@@ -62,57 +59,27 @@ GoRouter router(RouterRef ref) {
     redirect: (context, state) {
       final uri = state.uri.path;
 
+      if (authState.firstTime) {
+        FlutterNativeSplash.remove();
+      }
+
       return authState.authStatus.when(
         pending: () => null,
         authenticated: (_) {
-          if (authState.firstTime) {
-            FlutterNativeSplash.remove();
-          }
-
           if (uri == AppPaths.splash.path) {
-            return AppPaths.community.goRoute;
+            return AppPaths.community.path;
           }
-
           return null;
         },
         notAuth: () {
-          if (authState.firstTime) {
-            FlutterNativeSplash.remove();
-          }
-
           if (uri == AppPaths.splash.path) {
-            return AppPaths.login.goRoute;
+            return AppPaths.login.path;
           }
-
           return null;
         },
       );
     },
     routes: [
-      GoRoute(
-        path: trackDetailsPath,
-        redirect: (context, state) {
-          final detailsConverter = ref.watch(detailsArgsConverterProvider);
-
-          final id = state.pathParameters[trackIdArg]!;
-
-          return authState.authStatus.when(
-            pending: () => null,
-            authenticated: (_) {
-              final detailsPath = AppPaths.community.details;
-
-              final queryParameters = detailsPath.queryParameters(
-                id: id,
-                mode: DetailsMode.tracks(),
-                detailsConverter: detailsConverter,
-              );
-
-              return AppPaths.community.details.query(queryParameters).goRoute;
-            },
-            notAuth: () => AppPaths.login.goRoute,
-          );
-        },
-      ),
       StatefulShellRoute.indexedStack(
         parentNavigatorKey: rootNavigatorKey,
         builder: (context, state, navigationShell) {
