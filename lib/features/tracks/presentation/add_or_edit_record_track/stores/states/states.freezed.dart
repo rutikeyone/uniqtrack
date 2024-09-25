@@ -16,22 +16,23 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$AddOrEditRecordTrackModeState {
+  Track? get track => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Track? track) add,
-    required TResult Function() edit,
+    required TResult Function(Track track) edit,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Track? track)? add,
-    TResult? Function()? edit,
+    TResult? Function(Track track)? edit,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Track? track)? add,
-    TResult Function()? edit,
+    TResult Function(Track track)? edit,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -54,6 +55,12 @@ mixin _$AddOrEditRecordTrackModeState {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Create a copy of AddOrEditRecordTrackModeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $AddOrEditRecordTrackModeStateCopyWith<AddOrEditRecordTrackModeState>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -63,6 +70,10 @@ abstract class $AddOrEditRecordTrackModeStateCopyWith<$Res> {
           $Res Function(AddOrEditRecordTrackModeState) then) =
       _$AddOrEditRecordTrackModeStateCopyWithImpl<$Res,
           AddOrEditRecordTrackModeState>;
+  @useResult
+  $Res call({Track track});
+
+  $TrackCopyWith<$Res>? get track;
 }
 
 /// @nodoc
@@ -78,17 +89,46 @@ class _$AddOrEditRecordTrackModeStateCopyWithImpl<$Res,
 
   /// Create a copy of AddOrEditRecordTrackModeState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? track = null,
+  }) {
+    return _then(_value.copyWith(
+      track: null == track
+          ? _value.track!
+          : track // ignore: cast_nullable_to_non_nullable
+              as Track,
+    ) as $Val);
+  }
+
+  /// Create a copy of AddOrEditRecordTrackModeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TrackCopyWith<$Res>? get track {
+    if (_value.track == null) {
+      return null;
+    }
+
+    return $TrackCopyWith<$Res>(_value.track!, (value) {
+      return _then(_value.copyWith(track: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
-abstract class _$$AddRecordTrackModeStateImplCopyWith<$Res> {
+abstract class _$$AddRecordTrackModeStateImplCopyWith<$Res>
+    implements $AddOrEditRecordTrackModeStateCopyWith<$Res> {
   factory _$$AddRecordTrackModeStateImplCopyWith(
           _$AddRecordTrackModeStateImpl value,
           $Res Function(_$AddRecordTrackModeStateImpl) then) =
       __$$AddRecordTrackModeStateImplCopyWithImpl<$Res>;
+  @override
   @useResult
   $Res call({Track? track});
 
+  @override
   $TrackCopyWith<$Res>? get track;
 }
 
@@ -115,20 +155,6 @@ class __$$AddRecordTrackModeStateImplCopyWithImpl<$Res>
           : track // ignore: cast_nullable_to_non_nullable
               as Track?,
     ));
-  }
-
-  /// Create a copy of AddOrEditRecordTrackModeState
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $TrackCopyWith<$Res>? get track {
-    if (_value.track == null) {
-      return null;
-    }
-
-    return $TrackCopyWith<$Res>(_value.track!, (value) {
-      return _then(_value.copyWith(track: value));
-    });
   }
 }
 
@@ -169,7 +195,7 @@ class _$AddRecordTrackModeStateImpl implements _AddRecordTrackModeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Track? track) add,
-    required TResult Function() edit,
+    required TResult Function(Track track) edit,
   }) {
     return add(track);
   }
@@ -178,7 +204,7 @@ class _$AddRecordTrackModeStateImpl implements _AddRecordTrackModeState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Track? track)? add,
-    TResult? Function()? edit,
+    TResult? Function(Track track)? edit,
   }) {
     return add?.call(track);
   }
@@ -187,7 +213,7 @@ class _$AddRecordTrackModeStateImpl implements _AddRecordTrackModeState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Track? track)? add,
-    TResult Function()? edit,
+    TResult Function(Track track)? edit,
     required TResult orElse(),
   }) {
     if (add != null) {
@@ -233,21 +259,30 @@ abstract class _AddRecordTrackModeState
   const factory _AddRecordTrackModeState({required final Track? track}) =
       _$AddRecordTrackModeStateImpl;
 
+  @override
   Track? get track;
 
   /// Create a copy of AddOrEditRecordTrackModeState
   /// with the given fields replaced by the non-null parameter values.
+  @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddRecordTrackModeStateImplCopyWith<_$AddRecordTrackModeStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$EditRecordTrackModeStateImplCopyWith<$Res> {
+abstract class _$$EditRecordTrackModeStateImplCopyWith<$Res>
+    implements $AddOrEditRecordTrackModeStateCopyWith<$Res> {
   factory _$$EditRecordTrackModeStateImplCopyWith(
           _$EditRecordTrackModeStateImpl value,
           $Res Function(_$EditRecordTrackModeStateImpl) then) =
       __$$EditRecordTrackModeStateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Track track});
+
+  @override
+  $TrackCopyWith<$Res> get track;
 }
 
 /// @nodoc
@@ -262,55 +297,90 @@ class __$$EditRecordTrackModeStateImplCopyWithImpl<$Res>
 
   /// Create a copy of AddOrEditRecordTrackModeState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? track = null,
+  }) {
+    return _then(_$EditRecordTrackModeStateImpl(
+      track: null == track
+          ? _value.track
+          : track // ignore: cast_nullable_to_non_nullable
+              as Track,
+    ));
+  }
+
+  /// Create a copy of AddOrEditRecordTrackModeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TrackCopyWith<$Res> get track {
+    return $TrackCopyWith<$Res>(_value.track, (value) {
+      return _then(_value.copyWith(track: value));
+    });
+  }
 }
 
 /// @nodoc
 
 class _$EditRecordTrackModeStateImpl implements _EditRecordTrackModeState {
-  const _$EditRecordTrackModeStateImpl();
+  const _$EditRecordTrackModeStateImpl({required this.track});
+
+  @override
+  final Track track;
 
   @override
   String toString() {
-    return 'AddOrEditRecordTrackModeState.edit()';
+    return 'AddOrEditRecordTrackModeState.edit(track: $track)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$EditRecordTrackModeStateImpl);
+            other is _$EditRecordTrackModeStateImpl &&
+            (identical(other.track, track) || other.track == track));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, track);
+
+  /// Create a copy of AddOrEditRecordTrackModeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditRecordTrackModeStateImplCopyWith<_$EditRecordTrackModeStateImpl>
+      get copyWith => __$$EditRecordTrackModeStateImplCopyWithImpl<
+          _$EditRecordTrackModeStateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Track? track) add,
-    required TResult Function() edit,
+    required TResult Function(Track track) edit,
   }) {
-    return edit();
+    return edit(track);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Track? track)? add,
-    TResult? Function()? edit,
+    TResult? Function(Track track)? edit,
   }) {
-    return edit?.call();
+    return edit?.call(track);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Track? track)? add,
-    TResult Function()? edit,
+    TResult Function(Track track)? edit,
     required TResult orElse(),
   }) {
     if (edit != null) {
-      return edit();
+      return edit(track);
     }
     return orElse();
   }
@@ -349,7 +419,18 @@ class _$EditRecordTrackModeStateImpl implements _EditRecordTrackModeState {
 
 abstract class _EditRecordTrackModeState
     implements AddOrEditRecordTrackModeState {
-  const factory _EditRecordTrackModeState() = _$EditRecordTrackModeStateImpl;
+  const factory _EditRecordTrackModeState({required final Track track}) =
+      _$EditRecordTrackModeStateImpl;
+
+  @override
+  Track get track;
+
+  /// Create a copy of AddOrEditRecordTrackModeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$EditRecordTrackModeStateImplCopyWith<_$EditRecordTrackModeStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc

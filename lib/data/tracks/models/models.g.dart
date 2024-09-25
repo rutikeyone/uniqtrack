@@ -37,6 +37,7 @@ Map<String, dynamic> _$$PositionDataModelImplToJson(
 _$MemoryModelImpl _$$MemoryModelImplFromJson(Map<String, dynamic> json) =>
     _$MemoryModelImpl(
       id: json['id'] as String?,
+      creatorId: json['creatorId'] as String?,
       name: json['name'] as String?,
       comment: json['comment'] as String?,
       photos:
@@ -49,6 +50,7 @@ _$MemoryModelImpl _$$MemoryModelImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$MemoryModelImplToJson(_$MemoryModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'creatorId': instance.creatorId,
       'name': instance.name,
       'comment': instance.comment,
       'photos': instance.photos,
@@ -88,4 +90,20 @@ Map<String, dynamic> _$$TrackModelImplToJson(_$TrackModelImpl instance) =>
       'averageSpeed': instance.averageSpeed,
       'maxAltitude': instance.maxAltitude,
       'memories': const ListMemoryModelConverter().toJson(instance.memories),
+    };
+
+_$FavouriteTrackDataModelImpl _$$FavouriteTrackDataModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$FavouriteTrackDataModelImpl(
+      id: json['id'] as String,
+      userId: json['userId'] as String,
+      favouriteTrackId: json['favouriteTrackId'] as String,
+    );
+
+Map<String, dynamic> _$$FavouriteTrackDataModelImplToJson(
+        _$FavouriteTrackDataModelImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'userId': instance.userId,
+      'favouriteTrackId': instance.favouriteTrackId,
     };

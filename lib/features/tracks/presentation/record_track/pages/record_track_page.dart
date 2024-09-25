@@ -11,7 +11,7 @@ import 'package:mobx/mobx.dart';
 import 'package:provider/provider.dart';
 import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
 import 'package:uniqtrack/core/common/activity.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
 import 'package:uniqtrack/core/common_impl/app_widget_toolkit_impl.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
@@ -43,6 +43,8 @@ class RecordTrackPage extends ConsumerStatefulWidget {
 class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
   late final RecordTrackStore _store;
 
+  StreamSubscription<TrackUI?>? _repeatTrackSubscription;
+
   late final ReactionDisposer _reactionActionsDisposer;
   late final ReactionDisposer _reactionUserLocationDisposer;
   late final ReactionDisposer _trackRecordStatusStateDisposer;
@@ -55,6 +57,16 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
   final Set<Polyline> _polylines = {};
   final Set<Circle> _circles = {};
 
+  final Set<Polyline> _repeatPolylines = {};
+  final Set<Circle> _repeatCircles = {};
+
+  Set<Polyline> get _allPolylines =>
+      Set.from([..._polylines, ..._repeatPolylines]);
+
+  Set<Marker> get _markers => Set.from([..._userMarkers, ..._memoriesMarkers]);
+
+  Set<Circle> get _allCircles => Set.from([..._circles, ..._repeatCircles]);
+
   late final GlobalKey<ScaffoldState> _scaffoldKey;
   PersistentBottomSheetController? _bottomSheetRecordTrackController;
   PersistentBottomSheetController? _bottomSheetMemoryDetailsController;
@@ -66,6 +78,9 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
   void initState() {
     _store = context.read<RecordTrackStore>();
     _scaffoldKey = GlobalKey<ScaffoldState>();
+
+    _repeatTrackSubscription =
+        _store.previousTrackStream?.listen(_handleRepeatTrack);
 
     _reactionActionsDisposer = reaction(
       (_) => _store.actions,
@@ -85,6 +100,47 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     super.initState();
   }
 
+  void _handleRepeatTrack(TrackUI? track) {
+    final data = track?.track;
+    if (data == null) return;
+    final positionsData = data.positions ?? List.empty();
+
+    _updateRepeatPolylines(positionsData);
+    _updateRepeatCircles(positionsData);
+
+    setState(() {});
+  }
+
+  void _updateRepeatPolylines(List<PositionData> positionsData) {
+    _repeatPolylines.clear();
+
+    positionsData.forEach(
+      (positionDataItem) {
+        final positions = positionDataItem.positions ?? [];
+        final polyline = _createPolyline(
+          positions,
+          color: context.appMapTheme.secondaryUserLineColor,
+          zIndex: 1,
+        );
+        _repeatPolylines.add(polyline);
+      },
+    );
+  }
+
+  void _updateRepeatCircles(List<PositionData> positionsData) {
+    _repeatCircles.clear();
+
+    positionsData.forEach(
+      (item) {
+        final positions = item.positions ?? [];
+
+        _addMapRepeatCircles(
+          positions: positions,
+        );
+      },
+    );
+  }
+
   void _handleReactionActionChanges(Activity<RecordTrackActions>? activity) {
     final action = activity?.get();
     if (action == null) return;
@@ -100,7 +156,14 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
       navigateToAddRecordTrack: _navigateToAddRecordTrack,
       showMemoryDetails: _showMemoryDetails,
       hideMemoryDetails: _hideMemoryDetailsData,
+      animateCamera: _animateCamera,
     );
+  }
+
+  Future<void> _animateCamera(CameraUpdate cameraUpdate) async {
+    final GoogleMapController controller = await _controller.future;
+    _forceReRender(controller);
+    await controller.animateCamera(cameraUpdate);
   }
 
   void _handleInitStreamPositionsAction(
@@ -115,7 +178,9 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
   }
 
   void _handleUserLocationChanges(UserLocationState state) {
-    state.whenOrNull(mark: _handleUserLocationMarkStateChanged);
+    state.whenOrNull(
+      mark: _handleUserLocationMarkStateChanged,
+    );
   }
 
   void _handleUserLocationMarkStateChanged(Position currentPosition) {
@@ -225,7 +290,11 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     _polylines.add(polyline);
   }
 
-  Polyline _createPolyline(List<Position> positions) {
+  Polyline _createPolyline(
+    List<Position> positions, {
+    Color? color,
+    int? zIndex,
+  }) {
     final id = ref.read(appWidgetToolkitProvider).uid();
 
     final points = positions.map((item) {
@@ -240,9 +309,9 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
       points: points,
       width: 3,
       consumeTapEvents: true,
-      color: context.appMapTheme.primaryUserLineColor,
+      color: color ?? context.appMapTheme.primaryUserLineColor,
       onTap: () {},
-      zIndex: 2,
+      zIndex: zIndex ?? 2,
     );
 
     return polyline;
@@ -358,6 +427,58 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     }
   }
 
+  void _addMapRepeatCircles({
+    required List<Position> positions,
+  }) {
+    final firstCoordinate = positions.firstOrNull;
+    final lastCoordinate = positions.lastOrNull;
+
+    final firstId = ref.read(appWidgetToolkitProvider).uid();
+    final lastId = ref.read(appWidgetToolkitProvider).uid();
+
+    if (firstCoordinate != null && positions.length > 1) {
+      final latitude = firstCoordinate.latitude;
+      final longitude = firstCoordinate.longitude;
+
+      if (latitude != null && longitude != null) {
+        final latLng = LatLng(latitude, longitude);
+
+        final firstCircle = Circle(
+          circleId: CircleId(firstId),
+          center: latLng,
+          strokeWidth: AppDiments.dm4.toInt(),
+          fillColor: context.appMapTheme.secondaryUserLineColor,
+          strokeColor: context.appMapTheme.secondaryUserLineColor,
+          radius: AppDiments.dm1,
+          zIndex: 1,
+        );
+
+        _repeatCircles.add(firstCircle);
+      }
+    }
+
+    if (lastCoordinate != null) {
+      final latitude = lastCoordinate.latitude;
+      final longitude = lastCoordinate.longitude;
+
+      if (latitude != null && longitude != null) {
+        final latLng = LatLng(latitude, longitude);
+
+        final lastCircle = Circle(
+          circleId: CircleId(lastId),
+          center: latLng,
+          strokeWidth: AppDiments.dm4.toInt(),
+          fillColor: context.appMapTheme.secondaryUserLineColor,
+          strokeColor: context.appMapTheme.secondaryUserLineColor,
+          radius: AppDiments.dm1,
+          zIndex: 1,
+        );
+
+        _repeatCircles.add(lastCircle);
+      }
+    }
+  }
+
   void _showDetailsRecordData() {
     final store = context.read<RecordTrackStore>();
     final duration = const Duration(milliseconds: 300);
@@ -405,12 +526,6 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     }
   }
 
-  Future<void> _animateCamera(CameraUpdate cameraUpdate) async {
-    final GoogleMapController controller = await _controller.future;
-    _forceReRender(controller);
-    await controller.animateCamera(cameraUpdate);
-  }
-
   void _forceReRender(GoogleMapController controller) {
     if (Platform.isAndroid) {
       setState(() {
@@ -454,11 +569,13 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
         _bottomSheetMemoryDetailsController = MemoryDetailsBottomSheet.show(
           context: context,
           scaffoldKey: _scaffoldKey,
+          initialData: _store.memoryDetailsStream.valueOrNull,
           memoryStream: _store.memoryDetailsStream,
           navigateToPhotoViewer: navCallbackStore.navigateToPhotoViewer,
           onNavigateBackPressed: _store.hideMemoryDetails,
-          onDeletePressed: () => _store.deleteMemory(_store.memoryDetailsStream.valueOrNull),
-          onEditMemoryPressed: () => _store.editMemory(_store.memoryDetailsStream.valueOrNull),
+          onDeletePressed: _store.deleteMemory,
+          onEditMemoryPressed: _store.editMemory,
+          initialUserCreatorData: true,
         );
       });
     }
@@ -475,6 +592,8 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
 
   @override
   void dispose() {
+    _repeatTrackSubscription?.cancel();
+    _repeatTrackSubscription = null;
     _reactionActionsDisposer();
     _reactionUserLocationDisposer();
     _trackRecordStatusStateDisposer();
@@ -499,9 +618,9 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
           children: [
             Positioned.fill(
               child: GoogleMap(
-                circles: _circles,
-                polylines: _polylines,
-                markers: Set.from([..._userMarkers, ..._memoriesMarkers]),
+                circles: _allCircles,
+                polylines: _allPolylines,
+                markers: _markers,
                 mapType: MapType.hybrid,
                 zoomControlsEnabled: false,
                 myLocationButtonEnabled: false,

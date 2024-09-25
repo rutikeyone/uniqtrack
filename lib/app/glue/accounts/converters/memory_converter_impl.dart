@@ -12,6 +12,7 @@ class MemoryConverterImpl implements MemoryConverter {
   final _commentArgument = 'comment';
   final _photosArgument = 'photos';
   final _positionArgument = 'position';
+  final _creatorIdArguments = "creatorId";
 
   const MemoryConverterImpl({
     required PositionConverter positionConverter,
@@ -25,6 +26,7 @@ class MemoryConverterImpl implements MemoryConverter {
       final comment = json[_commentArgument];
       final jsonPhotos = json[_photosArgument];
       final positionData = json[_positionArgument];
+      final creatorId = json[_creatorIdArguments];
 
       final photos = jsonPhotos != null
           ? (jsonDecode(jsonPhotos) as List?)
@@ -53,6 +55,7 @@ class MemoryConverterImpl implements MemoryConverter {
 
       return Memory(
         id: id,
+        creatorId: creatorId,
         name: name,
         comment: comment,
         photos: photos,
@@ -73,6 +76,7 @@ class MemoryConverterImpl implements MemoryConverter {
       Map<String, String> result = {};
 
       final id = object.id;
+      final creatorId = object.creatorId;
       final name = object.name;
       final comment = object.comment;
       final photos = object.photos;
@@ -81,6 +85,12 @@ class MemoryConverterImpl implements MemoryConverter {
       if (id != null) {
         result.addAll({
           _idArgument: id,
+        });
+      }
+
+      if (creatorId != null) {
+        result.addAll({
+          _creatorIdArguments: creatorId,
         });
       }
 

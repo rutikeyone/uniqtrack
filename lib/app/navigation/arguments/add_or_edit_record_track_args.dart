@@ -44,9 +44,7 @@ class AddOrEditRecordTrackArgsConverterImpl
         return null;
       }
 
-      return AddOrEditRecordTrackArgs(
-        track: track,
-      );
+      return AddOrEditRecordTrackArgs(track: track);
     } catch (e) {
       return null;
     }
@@ -63,9 +61,11 @@ class AddOrEditRecordTrackArgsConverterImpl
         _trackConverter.toJson(object.track),
       );
 
-      return {
+      final result = {
         _trackArgument: jsonTrack,
       };
+
+      return result;
     } catch (e) {
       return {};
     }

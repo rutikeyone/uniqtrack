@@ -1,5 +1,7 @@
+import 'package:dartz/dartz.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:formz/formz.dart';
+import 'package:generic_usecase/generic_usecase.dart';
 import 'package:mobx/mobx.dart';
 import 'package:uniqtrack/core/common/activity.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
@@ -28,17 +30,26 @@ abstract class _AddOrEditRecordTrackStore with Store {
   final CommonUIDelegate _commonUIDelegate;
   final TrackRepository _recordTrackRepository;
 
+  final Usecase<Track, Either<AppError, void>>? _updateTrackUseCase;
+  final Usecase<Track, Either<AppError, void>>? _deleteTrackUseCase;
+
   @observable
   AddOrEditRecordTrackModeState modeState;
 
   @observable
-  Comment comment = Comment.pure();
+  Comment comment;
 
   @observable
-  TrackName trackName = TrackName.pure();
+  TrackName trackName;
 
   @observable
-  FormzSubmissionStatus statusMode = FormzSubmissionStatus.initial;
+  FormzSubmissionStatus saveStatusMode = FormzSubmissionStatus.initial;
+
+  @observable
+  FormzSubmissionStatus editStatusMode = FormzSubmissionStatus.initial;
+
+  @observable
+  FormzSubmissionStatus deleteStatusMode = FormzSubmissionStatus.initial;
 
   @observable
   Activity<AddOrEditRecordTrackActions>? actions;
@@ -50,14 +61,23 @@ abstract class _AddOrEditRecordTrackStore with Store {
   bool get canSave {
     final List<FormzInput> allInputs = [trackName];
     final isAllInputValid = allInputs.every((item) => item.isValid);
-    final saveInProgress = statusMode == FormzSubmissionStatus.inProgress;
+    final saveInProgress = saveStatusMode == FormzSubmissionStatus.inProgress;
 
     final isNotNullTrack = modeState.when(
       add: (track) => track != null,
-      edit: () => false,
+      edit: (_) => false,
     );
 
     return isAllInputValid && !saveInProgress && isNotNullTrack;
+  }
+
+  @computed
+  bool get canEdit {
+    final List<FormzInput> allInputs = [trackName];
+    final isAllInputValid = allInputs.every((item) => item.isValid);
+    final editInProgress = editStatusMode == FormzSubmissionStatus.inProgress;
+
+    return isAllInputValid && !editInProgress;
   }
 
   @computed
@@ -65,7 +85,7 @@ abstract class _AddOrEditRecordTrackStore with Store {
         comment: comment,
         trackName: trackName,
         modeState: modeState,
-        statusState: statusMode,
+        statusState: saveStatusMode,
         canSave: canSave,
       );
 
@@ -73,10 +93,16 @@ abstract class _AddOrEditRecordTrackStore with Store {
     required Track? track,
     required CommonUIDelegate commonUIDelegate,
     required TrackRepository recordTrackRepository,
+    required Usecase<Track, Either<AppError, void>>? updateTrackUseCase,
+    required Usecase<Track, Either<AppError, void>>? deleteTrackUseCase,
   })  : _commonUIDelegate = commonUIDelegate,
         _recordTrackRepository = recordTrackRepository,
-        modeState = AddOrEditRecordTrackModeState.add(track: track),
-        memories = track?.memories ?? [];
+        modeState = _initialAddOrEditRecordTrackModeState(track),
+        _updateTrackUseCase = updateTrackUseCase,
+        _deleteTrackUseCase = deleteTrackUseCase,
+        memories = track?.memories ?? [],
+        trackName = _initialTrackNameState(track),
+        comment = _initialCommentState(track);
 
   @action
   void updateComment(String? value) {
@@ -107,23 +133,76 @@ abstract class _AddOrEditRecordTrackStore with Store {
           name: nameValue,
           comment: commentValue,
           dateCreated: DateTime.now(),
+          memories: memories,
         );
       },
-      edit: () => null,
+      edit: (_) => null,
     );
 
     if (track == null) return;
 
-    statusMode = FormzSubmissionStatus.inProgress;
+    saveStatusMode = FormzSubmissionStatus.inProgress;
 
-    final result = await _recordTrackRepository.saveData(track);
+    final result = await _recordTrackRepository.addTrack(track);
 
     result.fold(
       _handleSaveRecordTrackDataFailureResult,
       _handleSaveRecordTrackDataSuccessResult,
     );
+  }
 
-    _commonUIDelegate.hideLoader();
+  @action
+  Future<void> edit() async {
+    final track = modeState.whenOrNull(
+      edit: (data) => data,
+    );
+
+    if (!canEdit || track == null || _updateTrackUseCase == null) return;
+
+    final nameValue = trackName.value;
+    final commentValue = comment.value;
+
+    final newTrack = track.copyWith(
+      name: nameValue,
+      comment: commentValue,
+      memories: memories,
+    );
+
+    editStatusMode = FormzSubmissionStatus.inProgress;
+
+    final updateTrackResult = await _updateTrackUseCase.call(newTrack);
+
+    updateTrackResult.fold(
+      (error) {
+        editStatusMode = FormzSubmissionStatus.failure;
+
+        final header = error.header();
+        final body = error.body();
+
+        _commonUIDelegate.cupertinoDialog(
+          header: header,
+          body: body,
+        );
+      },
+      (_) {
+        final duration = Duration(milliseconds: 300);
+
+        editStatusMode = FormzSubmissionStatus.success;
+
+        final action = AddOrEditRecordTrackActions.navigateBack();
+        actions = Activity(action);
+
+        Future.delayed(duration, () {
+          final header = AppStrings.notification();
+          final body = AppStrings.dataHasBeenSuccessfullyUpdated();
+
+          _commonUIDelegate.cupertinoDialog(
+            header: header,
+            body: body,
+          );
+        });
+      },
+    );
   }
 
   @action
@@ -133,10 +212,28 @@ abstract class _AddOrEditRecordTrackStore with Store {
   }
 
   @action
-  void deleteRecordTrack() {}
+  Future<void> deleteRecordTrack() async {
+    final track = modeState.whenOrNull(
+      edit: (data) => data,
+    );
+
+    if (track == null || _deleteTrackUseCase == null) {
+      return null;
+    }
+
+    _commonUIDelegate.showLoader();
+    deleteStatusMode = FormzSubmissionStatus.inProgress;
+
+    final deleteTrackResult = await _deleteTrackUseCase.call(track);
+
+    deleteTrackResult.fold(
+      _handleDeleteTrackFailureResult,
+      _handleDeleteTrackSuccessResult,
+    );
+  }
 
   void _handleSaveRecordTrackDataFailureResult(AppError l) {
-    statusMode = FormzSubmissionStatus.failure;
+    saveStatusMode = FormzSubmissionStatus.failure;
     if (l.isCancelError) return;
 
     final header = l.header();
@@ -151,7 +248,7 @@ abstract class _AddOrEditRecordTrackStore with Store {
   void _handleSaveRecordTrackDataSuccessResult(_) {
     final duration = const Duration(milliseconds: 300);
 
-    statusMode = FormzSubmissionStatus.success;
+    saveStatusMode = FormzSubmissionStatus.success;
 
     final navigateBackAction = AddOrEditRecordTrackActions.navigateBack();
     actions = Activity(navigateBackAction);
@@ -162,5 +259,56 @@ abstract class _AddOrEditRecordTrackStore with Store {
 
       _commonUIDelegate.cupertinoDialog(header: header, body: body);
     });
+  }
+
+  void _handleDeleteTrackFailureResult(AppError error) {
+    _commonUIDelegate.hideLoader();
+    deleteStatusMode = FormzSubmissionStatus.failure;
+
+    final header = error.header();
+    final body = error.body();
+
+    _commonUIDelegate.cupertinoDialog(
+      header: header,
+      body: body,
+    );
+  }
+
+  void _handleDeleteTrackSuccessResult(_) {
+    final duration = const Duration(milliseconds: 200);
+
+    _commonUIDelegate.hideLoader();
+    deleteStatusMode = FormzSubmissionStatus.success;
+
+    final navigateBackAction = AddOrEditRecordTrackActions.navigateBack();
+    actions = Activity(navigateBackAction);
+
+    Future.delayed(duration, () {
+      final header = AppStrings.notification();
+      final body = AppStrings.trackWasSuccessfullyDeleted();
+
+      _commonUIDelegate.cupertinoDialog(header: header, body: body);
+    });
+  }
+
+  static Comment _initialCommentState(Track? track) {
+    return track != null &&
+            track.comment != null &&
+            track.comment?.isNotEmpty == true
+        ? Comment.dirty(track.comment ?? '')
+        : Comment.pure();
+  }
+
+  static TrackName _initialTrackNameState(Track? track) {
+    return track != null && track.name != null && track.name?.isNotEmpty == true
+        ? TrackName.dirty(track.name ?? '')
+        : TrackName.pure();
+  }
+
+  static AddOrEditRecordTrackModeState _initialAddOrEditRecordTrackModeState(
+      Track? track) {
+    return track != null && track.id != null
+        ? AddOrEditRecordTrackModeState.edit(track: track)
+        : AddOrEditRecordTrackModeState.add(track: track);
   }
 }

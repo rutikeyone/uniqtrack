@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 
 class CupertinoDialog extends StatelessWidget {

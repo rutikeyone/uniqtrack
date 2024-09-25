@@ -123,5 +123,11 @@
   "theTrackWasSuccessfullyDeleted": "The track was successfully deleted",
   "theTrackIsNotInTheListOfUserTracks": "The track is not in the list of user tracks",
   "noRemoveRights": "No remove rights",
-  "repeat": "Repeat"
+  "repeat": "Repeat",
+  "theCollectionDoesNotContainTheRequiredElement": "The collection does not contain the required element",
+  "noUpdateRights": "No update rights",
+  "theDataHasBeenSuccessfullyUpdated": "The data has been successfully updated",
+  "theMemoryHasBeenSuccessfullyDeleted": "The memory has been successfully deleted",
+  "theUserIsTheCreatorOfTheTrack": "The user is the creator of the track",
+  "alreadyContainsElement": "Already contains element"
 }

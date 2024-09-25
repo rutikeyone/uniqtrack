@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 
 class AppCircleProgressIndicator extends StatefulWidget {
   final Color? loadingIndicatorColor;

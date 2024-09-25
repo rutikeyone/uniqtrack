@@ -395,6 +395,7 @@ MemoryModel _$MemoryModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MemoryModel {
   String? get id => throw _privateConstructorUsedError;
+  String? get creatorId => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
   List<String>? get photos => throw _privateConstructorUsedError;
@@ -418,6 +419,7 @@ abstract class $MemoryModelCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
+      String? creatorId,
       String? name,
       String? comment,
       List<String>? photos,
@@ -442,6 +444,7 @@ class _$MemoryModelCopyWithImpl<$Res, $Val extends MemoryModel>
   @override
   $Res call({
     Object? id = freezed,
+    Object? creatorId = freezed,
     Object? name = freezed,
     Object? comment = freezed,
     Object? photos = freezed,
@@ -451,6 +454,10 @@ class _$MemoryModelCopyWithImpl<$Res, $Val extends MemoryModel>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      creatorId: freezed == creatorId
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
               as String?,
       name: freezed == name
           ? _value.name
@@ -496,6 +503,7 @@ abstract class _$$MemoryModelImplCopyWith<$Res>
   @useResult
   $Res call(
       {String? id,
+      String? creatorId,
       String? name,
       String? comment,
       List<String>? photos,
@@ -519,6 +527,7 @@ class __$$MemoryModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
+    Object? creatorId = freezed,
     Object? name = freezed,
     Object? comment = freezed,
     Object? photos = freezed,
@@ -528,6 +537,10 @@ class __$$MemoryModelImplCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      creatorId: freezed == creatorId
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
               as String?,
       name: freezed == name
           ? _value.name
@@ -554,6 +567,7 @@ class __$$MemoryModelImplCopyWithImpl<$Res>
 class _$MemoryModelImpl with DiagnosticableTreeMixin implements _MemoryModel {
   const _$MemoryModelImpl(
       {required this.id,
+      required this.creatorId,
       required this.name,
       required this.comment,
       required final List<String>? photos,
@@ -565,6 +579,8 @@ class _$MemoryModelImpl with DiagnosticableTreeMixin implements _MemoryModel {
 
   @override
   final String? id;
+  @override
+  final String? creatorId;
   @override
   final String? name;
   @override
@@ -584,7 +600,7 @@ class _$MemoryModelImpl with DiagnosticableTreeMixin implements _MemoryModel {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'MemoryModel(id: $id, name: $name, comment: $comment, photos: $photos, position: $position)';
+    return 'MemoryModel(id: $id, creatorId: $creatorId, name: $name, comment: $comment, photos: $photos, position: $position)';
   }
 
   @override
@@ -593,6 +609,7 @@ class _$MemoryModelImpl with DiagnosticableTreeMixin implements _MemoryModel {
     properties
       ..add(DiagnosticsProperty('type', 'MemoryModel'))
       ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('creatorId', creatorId))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('comment', comment))
       ..add(DiagnosticsProperty('photos', photos))
@@ -605,6 +622,8 @@ class _$MemoryModelImpl with DiagnosticableTreeMixin implements _MemoryModel {
         (other.runtimeType == runtimeType &&
             other is _$MemoryModelImpl &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.creatorId, creatorId) ||
+                other.creatorId == creatorId) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.comment, comment) || other.comment == comment) &&
             const DeepCollectionEquality().equals(other._photos, _photos) &&
@@ -614,7 +633,7 @@ class _$MemoryModelImpl with DiagnosticableTreeMixin implements _MemoryModel {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, comment,
+  int get hashCode => Object.hash(runtimeType, id, creatorId, name, comment,
       const DeepCollectionEquality().hash(_photos), position);
 
   /// Create a copy of MemoryModel
@@ -636,6 +655,7 @@ class _$MemoryModelImpl with DiagnosticableTreeMixin implements _MemoryModel {
 abstract class _MemoryModel implements MemoryModel {
   const factory _MemoryModel(
       {required final String? id,
+      required final String? creatorId,
       required final String? name,
       required final String? comment,
       required final List<String>? photos,
@@ -646,6 +666,8 @@ abstract class _MemoryModel implements MemoryModel {
 
   @override
   String? get id;
+  @override
+  String? get creatorId;
   @override
   String? get name;
   @override
@@ -1102,4 +1124,208 @@ abstract class _TrackModel implements TrackModel {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrackModelImplCopyWith<_$TrackModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+FavouriteTrackDataModel _$FavouriteTrackDataModelFromJson(
+    Map<String, dynamic> json) {
+  return _FavouriteTrackDataModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$FavouriteTrackDataModel {
+  String get id => throw _privateConstructorUsedError;
+  String get userId => throw _privateConstructorUsedError;
+  String get favouriteTrackId => throw _privateConstructorUsedError;
+
+  /// Serializes this FavouriteTrackDataModel to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of FavouriteTrackDataModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $FavouriteTrackDataModelCopyWith<FavouriteTrackDataModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $FavouriteTrackDataModelCopyWith<$Res> {
+  factory $FavouriteTrackDataModelCopyWith(FavouriteTrackDataModel value,
+          $Res Function(FavouriteTrackDataModel) then) =
+      _$FavouriteTrackDataModelCopyWithImpl<$Res, FavouriteTrackDataModel>;
+  @useResult
+  $Res call({String id, String userId, String favouriteTrackId});
+}
+
+/// @nodoc
+class _$FavouriteTrackDataModelCopyWithImpl<$Res,
+        $Val extends FavouriteTrackDataModel>
+    implements $FavouriteTrackDataModelCopyWith<$Res> {
+  _$FavouriteTrackDataModelCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of FavouriteTrackDataModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? userId = null,
+    Object? favouriteTrackId = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      userId: null == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String,
+      favouriteTrackId: null == favouriteTrackId
+          ? _value.favouriteTrackId
+          : favouriteTrackId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$FavouriteTrackDataModelImplCopyWith<$Res>
+    implements $FavouriteTrackDataModelCopyWith<$Res> {
+  factory _$$FavouriteTrackDataModelImplCopyWith(
+          _$FavouriteTrackDataModelImpl value,
+          $Res Function(_$FavouriteTrackDataModelImpl) then) =
+      __$$FavouriteTrackDataModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String id, String userId, String favouriteTrackId});
+}
+
+/// @nodoc
+class __$$FavouriteTrackDataModelImplCopyWithImpl<$Res>
+    extends _$FavouriteTrackDataModelCopyWithImpl<$Res,
+        _$FavouriteTrackDataModelImpl>
+    implements _$$FavouriteTrackDataModelImplCopyWith<$Res> {
+  __$$FavouriteTrackDataModelImplCopyWithImpl(
+      _$FavouriteTrackDataModelImpl _value,
+      $Res Function(_$FavouriteTrackDataModelImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FavouriteTrackDataModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? userId = null,
+    Object? favouriteTrackId = null,
+  }) {
+    return _then(_$FavouriteTrackDataModelImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      userId: null == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as String,
+      favouriteTrackId: null == favouriteTrackId
+          ? _value.favouriteTrackId
+          : favouriteTrackId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$FavouriteTrackDataModelImpl
+    with DiagnosticableTreeMixin
+    implements _FavouriteTrackDataModel {
+  const _$FavouriteTrackDataModelImpl(
+      {required this.id, required this.userId, required this.favouriteTrackId});
+
+  factory _$FavouriteTrackDataModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FavouriteTrackDataModelImplFromJson(json);
+
+  @override
+  final String id;
+  @override
+  final String userId;
+  @override
+  final String favouriteTrackId;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'FavouriteTrackDataModel(id: $id, userId: $userId, favouriteTrackId: $favouriteTrackId)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'FavouriteTrackDataModel'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('userId', userId))
+      ..add(DiagnosticsProperty('favouriteTrackId', favouriteTrackId));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FavouriteTrackDataModelImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.userId, userId) || other.userId == userId) &&
+            (identical(other.favouriteTrackId, favouriteTrackId) ||
+                other.favouriteTrackId == favouriteTrackId));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, userId, favouriteTrackId);
+
+  /// Create a copy of FavouriteTrackDataModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FavouriteTrackDataModelImplCopyWith<_$FavouriteTrackDataModelImpl>
+      get copyWith => __$$FavouriteTrackDataModelImplCopyWithImpl<
+          _$FavouriteTrackDataModelImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FavouriteTrackDataModelImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _FavouriteTrackDataModel implements FavouriteTrackDataModel {
+  const factory _FavouriteTrackDataModel(
+      {required final String id,
+      required final String userId,
+      required final String favouriteTrackId}) = _$FavouriteTrackDataModelImpl;
+
+  factory _FavouriteTrackDataModel.fromJson(Map<String, dynamic> json) =
+      _$FavouriteTrackDataModelImpl.fromJson;
+
+  @override
+  String get id;
+  @override
+  String get userId;
+  @override
+  String get favouriteTrackId;
+
+  /// Create a copy of FavouriteTrackDataModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FavouriteTrackDataModelImplCopyWith<_$FavouriteTrackDataModelImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

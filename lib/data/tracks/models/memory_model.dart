@@ -4,6 +4,7 @@ part of 'models.dart';
 class MemoryModel with _$MemoryModel {
   const factory MemoryModel({
     required String? id,
+    required String? creatorId,
     required String? name,
     required String? comment,
     required List<String>? photos,

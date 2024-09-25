@@ -15,6 +15,12 @@ mixin _$AddOrEditRecordTrackStore on _AddOrEditRecordTrackStore, Store {
   bool get canSave => (_$canSaveComputed ??= Computed<bool>(() => super.canSave,
           name: '_AddOrEditRecordTrackStore.canSave'))
       .value;
+  Computed<bool>? _$canEditComputed;
+
+  @override
+  bool get canEdit => (_$canEditComputed ??= Computed<bool>(() => super.canEdit,
+          name: '_AddOrEditRecordTrackStore.canEdit'))
+      .value;
   Computed<AddOrEditRecordTrackState>? _$stateComputed;
 
   @override
@@ -71,19 +77,51 @@ mixin _$AddOrEditRecordTrackStore on _AddOrEditRecordTrackStore, Store {
     });
   }
 
-  late final _$statusModeAtom =
-      Atom(name: '_AddOrEditRecordTrackStore.statusMode', context: context);
+  late final _$saveStatusModeAtom =
+      Atom(name: '_AddOrEditRecordTrackStore.saveStatusMode', context: context);
 
   @override
-  FormzSubmissionStatus get statusMode {
-    _$statusModeAtom.reportRead();
-    return super.statusMode;
+  FormzSubmissionStatus get saveStatusMode {
+    _$saveStatusModeAtom.reportRead();
+    return super.saveStatusMode;
   }
 
   @override
-  set statusMode(FormzSubmissionStatus value) {
-    _$statusModeAtom.reportWrite(value, super.statusMode, () {
-      super.statusMode = value;
+  set saveStatusMode(FormzSubmissionStatus value) {
+    _$saveStatusModeAtom.reportWrite(value, super.saveStatusMode, () {
+      super.saveStatusMode = value;
+    });
+  }
+
+  late final _$editStatusModeAtom =
+      Atom(name: '_AddOrEditRecordTrackStore.editStatusMode', context: context);
+
+  @override
+  FormzSubmissionStatus get editStatusMode {
+    _$editStatusModeAtom.reportRead();
+    return super.editStatusMode;
+  }
+
+  @override
+  set editStatusMode(FormzSubmissionStatus value) {
+    _$editStatusModeAtom.reportWrite(value, super.editStatusMode, () {
+      super.editStatusMode = value;
+    });
+  }
+
+  late final _$deleteStatusModeAtom = Atom(
+      name: '_AddOrEditRecordTrackStore.deleteStatusMode', context: context);
+
+  @override
+  FormzSubmissionStatus get deleteStatusMode {
+    _$deleteStatusModeAtom.reportRead();
+    return super.deleteStatusMode;
+  }
+
+  @override
+  set deleteStatusMode(FormzSubmissionStatus value) {
+    _$deleteStatusModeAtom.reportWrite(value, super.deleteStatusMode, () {
+      super.deleteStatusMode = value;
     });
   }
 
@@ -127,6 +165,23 @@ mixin _$AddOrEditRecordTrackStore on _AddOrEditRecordTrackStore, Store {
     return _$saveAsyncAction.run(() => super.save());
   }
 
+  late final _$editAsyncAction =
+      AsyncAction('_AddOrEditRecordTrackStore.edit', context: context);
+
+  @override
+  Future<void> edit() {
+    return _$editAsyncAction.run(() => super.edit());
+  }
+
+  late final _$deleteRecordTrackAsyncAction = AsyncAction(
+      '_AddOrEditRecordTrackStore.deleteRecordTrack',
+      context: context);
+
+  @override
+  Future<void> deleteRecordTrack() {
+    return _$deleteRecordTrackAsyncAction.run(() => super.deleteRecordTrack());
+  }
+
   late final _$_AddOrEditRecordTrackStoreActionController =
       ActionController(name: '_AddOrEditRecordTrackStore', context: context);
 
@@ -164,26 +219,18 @@ mixin _$AddOrEditRecordTrackStore on _AddOrEditRecordTrackStore, Store {
   }
 
   @override
-  void deleteRecordTrack() {
-    final _$actionInfo = _$_AddOrEditRecordTrackStoreActionController
-        .startAction(name: '_AddOrEditRecordTrackStore.deleteRecordTrack');
-    try {
-      return super.deleteRecordTrack();
-    } finally {
-      _$_AddOrEditRecordTrackStoreActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
   String toString() {
     return '''
 modeState: ${modeState},
 comment: ${comment},
 trackName: ${trackName},
-statusMode: ${statusMode},
+saveStatusMode: ${saveStatusMode},
+editStatusMode: ${editStatusMode},
+deleteStatusMode: ${deleteStatusMode},
 actions: ${actions},
 memories: ${memories},
 canSave: ${canSave},
+canEdit: ${canEdit},
 state: ${state}
     ''';
   }

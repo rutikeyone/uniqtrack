@@ -7,12 +7,21 @@ class _NameTextFieldWidget extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = context.read<AddOrEditMemoryStore>();
 
-    final initialName = useMemoized(
-      () => store.modeState.when(
+    String? _initialName() {
+      return store.modeState.when(
         pure: () => null,
         add: (_) => null,
-        edit: (memory) => memory.name,
-      ),
+        edit: (source) {
+          return source.when(
+            online: (_, memory) => memory.name,
+            local: (memory) => memory.name,
+          );
+        },
+      );
+    }
+
+    final initialName = useMemoized(
+      _initialName,
       [store.modeState],
     );
 

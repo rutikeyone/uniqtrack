@@ -33,6 +33,7 @@ class CommunityNavCallbackStore with _$CommunityNavCallbackStore {
     required VoidCallback navigateToTrackTracking,
     required VoidCallback closeDialog,
     required void Function(Track) navigateToTrackDetails,
+    required void Function(Track?) navigateToEditTrack,
   }) = _CommunityNavCallbackStore;
 }
 
@@ -79,6 +80,7 @@ class MyTracksNavCallbackStore with _$MyTracksNavCallbackStore {
   const factory MyTracksNavCallbackStore({
     required VoidCallback closeDialog,
     required void Function(Track) navigateToTrackDetails,
+    required void Function(Track?) navigateToEditTrack,
   }) = _MyTracksNavCallbackStore;
 }
 
@@ -91,8 +93,12 @@ class MyFavouriteTracksNavCallbackStore
 }
 
 @freezed
-class TrackDetailsNavCallbackStore with _$TrackDetailsNavCallbackStore {
-  const factory TrackDetailsNavCallbackStore({
+class DetailsNavCallbackStore with _$DetailsNavCallbackStore {
+  const factory DetailsNavCallbackStore({
     required VoidCallback navigateBack,
+    required void Function(String?) navigateToPhotoViewer,
+    required void Function(Track?) navigateToRecordTrack,
+    void Function(Track?)? navigateToEditTrack,
+    void Function(Track?, Memory?)? navigateToEditMemory,
   }) = _TrackDetailsNavCallbackStore;
 }

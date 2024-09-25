@@ -7,4 +7,8 @@ class DetailsSheetState with _$DetailsSheetState {
   const factory DetailsSheetState.details({
     required TrackUI track,
   }) = _DetailsSheetState;
+
+  const factory DetailsSheetState.memory({
+    required Memory memory,
+  }) = _MemoryState;
 }

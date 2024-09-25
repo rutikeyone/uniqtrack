@@ -81,6 +81,22 @@ mixin _$AddOrEditMemoryStore on _AddOrEditMemoryStore, Store {
     });
   }
 
+  late final _$deleteStatusStateAtom =
+      Atom(name: '_AddOrEditMemoryStore.deleteStatusState', context: context);
+
+  @override
+  FormzSubmissionStatus get deleteStatusState {
+    _$deleteStatusStateAtom.reportRead();
+    return super.deleteStatusState;
+  }
+
+  @override
+  set deleteStatusState(FormzSubmissionStatus value) {
+    _$deleteStatusStateAtom.reportWrite(value, super.deleteStatusState, () {
+      super.deleteStatusState = value;
+    });
+  }
+
   late final _$photosAtom =
       Atom(name: '_AddOrEditMemoryStore.photos', context: context);
 
@@ -131,6 +147,16 @@ mixin _$AddOrEditMemoryStore on _AddOrEditMemoryStore, Store {
   Future<void> _chooseImageFromCamera() {
     return _$_chooseImageFromCameraAsyncAction
         .run(() => super._chooseImageFromCamera());
+  }
+
+  late final _$_deleteMemoryWhenEditOnlineModeAsyncAction = AsyncAction(
+      '_AddOrEditMemoryStore._deleteMemoryWhenEditOnlineMode',
+      context: context);
+
+  @override
+  Future<void> _deleteMemoryWhenEditOnlineMode(Track track, Memory memory) {
+    return _$_deleteMemoryWhenEditOnlineModeAsyncAction
+        .run(() => super._deleteMemoryWhenEditOnlineMode(track, memory));
   }
 
   late final _$_AddOrEditMemoryStoreActionController =
@@ -209,6 +235,7 @@ modeState: ${modeState},
 comment: ${comment},
 memoryName: ${memoryName},
 saveStatusState: ${saveStatusState},
+deleteStatusState: ${deleteStatusState},
 photos: ${photos},
 actions: ${actions},
 canSaveChanges: ${canSaveChanges}

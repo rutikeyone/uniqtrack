@@ -10,33 +10,49 @@ class MemoryDetailsActionButtons extends StatelessWidget {
   final VoidCallback onDeletePressed;
   final VoidCallback onEditMemoryPressed;
 
+  final Stream<bool?>? userCreatorStream;
+  final bool? initialUserCreator;
+
   const MemoryDetailsActionButtons({
     required this.navigateBack,
     required this.onDeletePressed,
     required this.onEditMemoryPressed,
+    this.userCreatorStream,
+    this.initialUserCreator,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: AppDiments.dm12),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
+    return StreamBuilder(
+      initialData: initialUserCreator,
+      stream: userCreatorStream,
+      builder: (context, data) {
+        final value = (data.data ?? initialUserCreator) ?? false;
+
+        return Padding(
+          padding: value ? const EdgeInsets.only(top: AppDiments.dm12) : EdgeInsets.only(top: AppDiments.dm4),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              MemoryDetailsEditButton(onEditMemoryPressed: onEditMemoryPressed),
-              Gap(AppDiments.dm8),
-              MemoryDetailsDeleteButton(
-                onDeletePressed: onDeletePressed,
-              ),
+              value
+                  ? Row(
+                      children: [
+                        MemoryDetailsEditButton(
+                            onEditMemoryPressed: onEditMemoryPressed),
+                        Gap(AppDiments.dm8),
+                        MemoryDetailsDeleteButton(
+                          onDeletePressed: onDeletePressed,
+                        ),
+                      ],
+                    )
+                  : const SizedBox.shrink(),
+              MemoryDetailsBackButton(navigateBack: navigateBack),
             ],
           ),
-          MemoryDetailsBackButton(navigateBack: navigateBack),
-        ],
-      ),
+        );
+      },
     );
   }
 }

@@ -44,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "allow": MessageLookupByLibrary.simpleMessage("Allow"),
         "alreadyAddedToFavorites":
             MessageLookupByLibrary.simpleMessage("Already added to favorites"),
+        "alreadyContainsElement":
+            MessageLookupByLibrary.simpleMessage("Already contains element"),
         "anAndroidPackageNameMustBeProvidedIfTheAndroid":
             MessageLookupByLibrary.simpleMessage(
                 "An Android package name must be provided if the Android app is required to be installed"),
@@ -138,6 +140,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "noRemoveRights":
             MessageLookupByLibrary.simpleMessage("No remove rights"),
+        "noUpdateRights":
+            MessageLookupByLibrary.simpleMessage("No update rights"),
         "notification": MessageLookupByLibrary.simpleMessage("Notification"),
         "okay": MessageLookupByLibrary.simpleMessage("Okay"),
         "operation_not_allowed":
@@ -162,14 +166,23 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Start recording"),
         "stop": MessageLookupByLibrary.simpleMessage("Stop"),
         "takeAPhoto": MessageLookupByLibrary.simpleMessage("Take a photo"),
+        "theCollectionDoesNotContainTheRequiredElement":
+            MessageLookupByLibrary.simpleMessage(
+                "The collection does not contain the required element"),
         "theContinuationUrlIsNotWhitelisted":
             MessageLookupByLibrary.simpleMessage(
                 "The continuation URL is not whitelisted"),
         "theContinueUrlProvidedInTheRequestIsInvalid":
             MessageLookupByLibrary.simpleMessage(
                 "The continue URL provided in the request is invalid"),
+        "theDataHasBeenSuccessfullyUpdated":
+            MessageLookupByLibrary.simpleMessage(
+                "The data has been successfully updated"),
         "theEntryWasSuccessfullyAdded": MessageLookupByLibrary.simpleMessage(
             "The entry was successfully added"),
+        "theMemoryHasBeenSuccessfullyDeleted":
+            MessageLookupByLibrary.simpleMessage(
+                "The memory has been successfully deleted"),
         "thePasswordHasBeenSentToTheSpecifiedEmailAddress":
             MessageLookupByLibrary.simpleMessage(
                 "The password has been sent to the specified email address."),
@@ -183,6 +196,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "theUserHasBeenSuccessfullyRegistered":
             MessageLookupByLibrary.simpleMessage(
                 "The user has been successfully registered"),
+        "theUserIsTheCreatorOfTheTrack": MessageLookupByLibrary.simpleMessage(
+            "The user is the creator of the track"),
         "theUserIsUnauthorized":
             MessageLookupByLibrary.simpleMessage("The user is unauthorized"),
         "thereAreNoTrackRecordingsHereYet":

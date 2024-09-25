@@ -46,6 +46,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "allow": MessageLookupByLibrary.simpleMessage("Разрешить"),
         "alreadyAddedToFavorites":
             MessageLookupByLibrary.simpleMessage("Уже добавлен в избранное"),
+        "alreadyContainsElement":
+            MessageLookupByLibrary.simpleMessage("Уже содержит элемент"),
         "anAndroidPackageNameMustBeProvidedIfTheAndroid":
             MessageLookupByLibrary.simpleMessage(
                 "Если требуется установить приложение для Android, необходимо указать название пакета Android"),
@@ -141,6 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("Имя"),
         "noRemoveRights":
             MessageLookupByLibrary.simpleMessage("Нет прав на удаление"),
+        "noUpdateRights":
+            MessageLookupByLibrary.simpleMessage("Нет прав на обновление"),
         "notification": MessageLookupByLibrary.simpleMessage("Уведомление"),
         "okay": MessageLookupByLibrary.simpleMessage("Хорошо"),
         "operation_not_allowed":
@@ -166,14 +170,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "stop": MessageLookupByLibrary.simpleMessage(" Остановить"),
         "takeAPhoto":
             MessageLookupByLibrary.simpleMessage("Сделать фотографию"),
+        "theCollectionDoesNotContainTheRequiredElement":
+            MessageLookupByLibrary.simpleMessage(
+                "Коллекция не содержит необходимого элемента"),
         "theContinuationUrlIsNotWhitelisted":
             MessageLookupByLibrary.simpleMessage(
                 "URL-адрес продолжения не занесен в белый список"),
         "theContinueUrlProvidedInTheRequestIsInvalid":
             MessageLookupByLibrary.simpleMessage(
                 "URL-адрес продолжения, указанный в запросе, является недопустимым"),
+        "theDataHasBeenSuccessfullyUpdated":
+            MessageLookupByLibrary.simpleMessage("Данные успешно обновлены"),
         "theEntryWasSuccessfullyAdded": MessageLookupByLibrary.simpleMessage(
             "Запись была успешно добавлена"),
+        "theMemoryHasBeenSuccessfullyDeleted":
+            MessageLookupByLibrary.simpleMessage(
+                "Воспоминание успешно удалено"),
         "thePasswordHasBeenSentToTheSpecifiedEmailAddress":
             MessageLookupByLibrary.simpleMessage(
                 "Пароль был отправлен на указанный адрес электронной почты."),
@@ -187,6 +199,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "theUserHasBeenSuccessfullyRegistered":
             MessageLookupByLibrary.simpleMessage(
                 "Пользователь успешно зарегистрирован"),
+        "theUserIsTheCreatorOfTheTrack": MessageLookupByLibrary.simpleMessage(
+            "Пользователь является создателем трека"),
         "theUserIsUnauthorized":
             MessageLookupByLibrary.simpleMessage("Пользователь неавторизован"),
         "thereAreNoTrackRecordingsHereYet":

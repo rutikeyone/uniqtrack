@@ -5,21 +5,44 @@ import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 
 abstract interface class TrackRepository {
-  Future<AppLocationPermissionResult> requestLocationPermission();
+  Future<Either<AppError, void>> addTrack(Track track);
 
-  Future<Position?> getCurrentPosition();
+  Future<Either<AppError, void>> addFavouriteTrack(Track track);
+
+  Future<Either<AppError, void>> updateTrack(Track track);
+
+  Future<Either<AppError, void>> updateMemory(Track track, Memory memory);
+
+  Future<Either<AppError, void>> removeFavouriteTrack(Track track);
+
+  Future<Either<AppError, void>> removeTrack(Track track);
+
+  Future<Either<AppError, void>> removeMemory({
+    required Track track,
+    required Memory memory,
+  });
 
   Stream<Position> watchPositions(AppLocationSettings settings);
-
-  Future<Either<AppError, void>> saveData(Track track);
-
-  Future<Either<AppError, int>> addTrack(Track track);
-
-  Future<Either<AppError, Track?>> getTrack();
-
-  Future<Either<AppError, void>> deleteAllTracks();
 
   Stream<List<Track>> watchTracks();
 
   Stream<Track?> watchTrack(String id);
+
+  Stream<List<Track>> watchUserTracks();
+
+  Stream<List<Track>> watchFavouriteTracks();
+
+  Stream<Track?> watchFavouriteTrack(String id);
+
+  Stream<Track?> watchMyTrack(String id);
+
+  Future<AppLocationPermissionResult> requestLocationPermission();
+
+  Future<Position?> getCurrentPosition();
+
+  Future<Either<AppError, int>> addLastTrack(Track track);
+
+  Future<Either<AppError, Track?>> getLastTrack();
+
+  Future<Either<AppError, void>> removeLastTracks();
 }

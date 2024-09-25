@@ -20,21 +20,21 @@ mixin _$AddOrEditMemoryModeState {
   TResult when<TResult extends Object?>({
     required TResult Function() pure,
     required TResult Function(Position position) add,
-    required TResult Function(Memory memory) edit,
+    required TResult Function(EditMemorySource source) edit,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? pure,
     TResult? Function(Position position)? add,
-    TResult? Function(Memory memory)? edit,
+    TResult? Function(EditMemorySource source)? edit,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? pure,
     TResult Function(Position position)? add,
-    TResult Function(Memory memory)? edit,
+    TResult Function(EditMemorySource source)? edit,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -129,7 +129,7 @@ class _$PureMemoryModeStateImpl extends _PureMemoryModeState {
   TResult when<TResult extends Object?>({
     required TResult Function() pure,
     required TResult Function(Position position) add,
-    required TResult Function(Memory memory) edit,
+    required TResult Function(EditMemorySource source) edit,
   }) {
     return pure();
   }
@@ -139,7 +139,7 @@ class _$PureMemoryModeStateImpl extends _PureMemoryModeState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? pure,
     TResult? Function(Position position)? add,
-    TResult? Function(Memory memory)? edit,
+    TResult? Function(EditMemorySource source)? edit,
   }) {
     return pure?.call();
   }
@@ -149,7 +149,7 @@ class _$PureMemoryModeStateImpl extends _PureMemoryModeState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? pure,
     TResult Function(Position position)? add,
-    TResult Function(Memory memory)? edit,
+    TResult Function(EditMemorySource source)? edit,
     required TResult orElse(),
   }) {
     if (pure != null) {
@@ -283,7 +283,7 @@ class _$AddMemoryModeStateImpl extends _AddMemoryModeState {
   TResult when<TResult extends Object?>({
     required TResult Function() pure,
     required TResult Function(Position position) add,
-    required TResult Function(Memory memory) edit,
+    required TResult Function(EditMemorySource source) edit,
   }) {
     return add(position);
   }
@@ -293,7 +293,7 @@ class _$AddMemoryModeStateImpl extends _AddMemoryModeState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? pure,
     TResult? Function(Position position)? add,
-    TResult? Function(Memory memory)? edit,
+    TResult? Function(EditMemorySource source)? edit,
   }) {
     return add?.call(position);
   }
@@ -303,7 +303,7 @@ class _$AddMemoryModeStateImpl extends _AddMemoryModeState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? pure,
     TResult Function(Position position)? add,
-    TResult Function(Memory memory)? edit,
+    TResult Function(EditMemorySource source)? edit,
     required TResult orElse(),
   }) {
     if (add != null) {
@@ -367,9 +367,9 @@ abstract class _$$EditMemoryModeStateImplCopyWith<$Res> {
           $Res Function(_$EditMemoryModeStateImpl) then) =
       __$$EditMemoryModeStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({Memory memory});
+  $Res call({EditMemorySource source});
 
-  $MemoryCopyWith<$Res> get memory;
+  $EditMemorySourceCopyWith<$Res> get source;
 }
 
 /// @nodoc
@@ -386,13 +386,13 @@ class __$$EditMemoryModeStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? memory = null,
+    Object? source = null,
   }) {
     return _then(_$EditMemoryModeStateImpl(
-      memory: null == memory
-          ? _value.memory
-          : memory // ignore: cast_nullable_to_non_nullable
-              as Memory,
+      source: null == source
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as EditMemorySource,
     ));
   }
 
@@ -400,9 +400,9 @@ class __$$EditMemoryModeStateImplCopyWithImpl<$Res>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $MemoryCopyWith<$Res> get memory {
-    return $MemoryCopyWith<$Res>(_value.memory, (value) {
-      return _then(_value.copyWith(memory: value));
+  $EditMemorySourceCopyWith<$Res> get source {
+    return $EditMemorySourceCopyWith<$Res>(_value.source, (value) {
+      return _then(_value.copyWith(source: value));
     });
   }
 }
@@ -410,14 +410,14 @@ class __$$EditMemoryModeStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$EditMemoryModeStateImpl extends _EditMemoryModeState {
-  const _$EditMemoryModeStateImpl({required this.memory}) : super._();
+  const _$EditMemoryModeStateImpl({required this.source}) : super._();
 
   @override
-  final Memory memory;
+  final EditMemorySource source;
 
   @override
   String toString() {
-    return 'AddOrEditMemoryModeState.edit(memory: $memory)';
+    return 'AddOrEditMemoryModeState.edit(source: $source)';
   }
 
   @override
@@ -425,11 +425,11 @@ class _$EditMemoryModeStateImpl extends _EditMemoryModeState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EditMemoryModeStateImpl &&
-            (identical(other.memory, memory) || other.memory == memory));
+            (identical(other.source, source) || other.source == source));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, memory);
+  int get hashCode => Object.hash(runtimeType, source);
 
   /// Create a copy of AddOrEditMemoryModeState
   /// with the given fields replaced by the non-null parameter values.
@@ -445,9 +445,9 @@ class _$EditMemoryModeStateImpl extends _EditMemoryModeState {
   TResult when<TResult extends Object?>({
     required TResult Function() pure,
     required TResult Function(Position position) add,
-    required TResult Function(Memory memory) edit,
+    required TResult Function(EditMemorySource source) edit,
   }) {
-    return edit(memory);
+    return edit(source);
   }
 
   @override
@@ -455,9 +455,9 @@ class _$EditMemoryModeStateImpl extends _EditMemoryModeState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? pure,
     TResult? Function(Position position)? add,
-    TResult? Function(Memory memory)? edit,
+    TResult? Function(EditMemorySource source)? edit,
   }) {
-    return edit?.call(memory);
+    return edit?.call(source);
   }
 
   @override
@@ -465,11 +465,11 @@ class _$EditMemoryModeStateImpl extends _EditMemoryModeState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? pure,
     TResult Function(Position position)? add,
-    TResult Function(Memory memory)? edit,
+    TResult Function(EditMemorySource source)? edit,
     required TResult orElse(),
   }) {
     if (edit != null) {
-      return edit(memory);
+      return edit(source);
     }
     return orElse();
   }
@@ -510,15 +510,430 @@ class _$EditMemoryModeStateImpl extends _EditMemoryModeState {
 }
 
 abstract class _EditMemoryModeState extends AddOrEditMemoryModeState {
-  const factory _EditMemoryModeState({required final Memory memory}) =
+  const factory _EditMemoryModeState({required final EditMemorySource source}) =
       _$EditMemoryModeStateImpl;
   const _EditMemoryModeState._() : super._();
 
-  Memory get memory;
+  EditMemorySource get source;
 
   /// Create a copy of AddOrEditMemoryModeState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EditMemoryModeStateImplCopyWith<_$EditMemoryModeStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$EditMemorySource {
+  Memory get memory => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Track track, Memory memory) online,
+    required TResult Function(Memory memory) local,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Track track, Memory memory)? online,
+    TResult? Function(Memory memory)? local,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Track track, Memory memory)? online,
+    TResult Function(Memory memory)? local,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnlineEditSource value) online,
+    required TResult Function(_LocalEditSource value) local,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnlineEditSource value)? online,
+    TResult? Function(_LocalEditSource value)? local,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnlineEditSource value)? online,
+    TResult Function(_LocalEditSource value)? local,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+
+  /// Create a copy of EditMemorySource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $EditMemorySourceCopyWith<EditMemorySource> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EditMemorySourceCopyWith<$Res> {
+  factory $EditMemorySourceCopyWith(
+          EditMemorySource value, $Res Function(EditMemorySource) then) =
+      _$EditMemorySourceCopyWithImpl<$Res, EditMemorySource>;
+  @useResult
+  $Res call({Memory memory});
+
+  $MemoryCopyWith<$Res> get memory;
+}
+
+/// @nodoc
+class _$EditMemorySourceCopyWithImpl<$Res, $Val extends EditMemorySource>
+    implements $EditMemorySourceCopyWith<$Res> {
+  _$EditMemorySourceCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of EditMemorySource
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? memory = null,
+  }) {
+    return _then(_value.copyWith(
+      memory: null == memory
+          ? _value.memory
+          : memory // ignore: cast_nullable_to_non_nullable
+              as Memory,
+    ) as $Val);
+  }
+
+  /// Create a copy of EditMemorySource
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $MemoryCopyWith<$Res> get memory {
+    return $MemoryCopyWith<$Res>(_value.memory, (value) {
+      return _then(_value.copyWith(memory: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$OnlineEditSourceImplCopyWith<$Res>
+    implements $EditMemorySourceCopyWith<$Res> {
+  factory _$$OnlineEditSourceImplCopyWith(_$OnlineEditSourceImpl value,
+          $Res Function(_$OnlineEditSourceImpl) then) =
+      __$$OnlineEditSourceImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Track track, Memory memory});
+
+  $TrackCopyWith<$Res> get track;
+  @override
+  $MemoryCopyWith<$Res> get memory;
+}
+
+/// @nodoc
+class __$$OnlineEditSourceImplCopyWithImpl<$Res>
+    extends _$EditMemorySourceCopyWithImpl<$Res, _$OnlineEditSourceImpl>
+    implements _$$OnlineEditSourceImplCopyWith<$Res> {
+  __$$OnlineEditSourceImplCopyWithImpl(_$OnlineEditSourceImpl _value,
+      $Res Function(_$OnlineEditSourceImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of EditMemorySource
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? track = null,
+    Object? memory = null,
+  }) {
+    return _then(_$OnlineEditSourceImpl(
+      track: null == track
+          ? _value.track
+          : track // ignore: cast_nullable_to_non_nullable
+              as Track,
+      memory: null == memory
+          ? _value.memory
+          : memory // ignore: cast_nullable_to_non_nullable
+              as Memory,
+    ));
+  }
+
+  /// Create a copy of EditMemorySource
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TrackCopyWith<$Res> get track {
+    return $TrackCopyWith<$Res>(_value.track, (value) {
+      return _then(_value.copyWith(track: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$OnlineEditSourceImpl implements _OnlineEditSource {
+  const _$OnlineEditSourceImpl({required this.track, required this.memory});
+
+  @override
+  final Track track;
+  @override
+  final Memory memory;
+
+  @override
+  String toString() {
+    return 'EditMemorySource.online(track: $track, memory: $memory)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnlineEditSourceImpl &&
+            (identical(other.track, track) || other.track == track) &&
+            (identical(other.memory, memory) || other.memory == memory));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, track, memory);
+
+  /// Create a copy of EditMemorySource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$OnlineEditSourceImplCopyWith<_$OnlineEditSourceImpl> get copyWith =>
+      __$$OnlineEditSourceImplCopyWithImpl<_$OnlineEditSourceImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Track track, Memory memory) online,
+    required TResult Function(Memory memory) local,
+  }) {
+    return online(track, memory);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Track track, Memory memory)? online,
+    TResult? Function(Memory memory)? local,
+  }) {
+    return online?.call(track, memory);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Track track, Memory memory)? online,
+    TResult Function(Memory memory)? local,
+    required TResult orElse(),
+  }) {
+    if (online != null) {
+      return online(track, memory);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnlineEditSource value) online,
+    required TResult Function(_LocalEditSource value) local,
+  }) {
+    return online(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnlineEditSource value)? online,
+    TResult? Function(_LocalEditSource value)? local,
+  }) {
+    return online?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnlineEditSource value)? online,
+    TResult Function(_LocalEditSource value)? local,
+    required TResult orElse(),
+  }) {
+    if (online != null) {
+      return online(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OnlineEditSource implements EditMemorySource {
+  const factory _OnlineEditSource(
+      {required final Track track,
+      required final Memory memory}) = _$OnlineEditSourceImpl;
+
+  Track get track;
+  @override
+  Memory get memory;
+
+  /// Create a copy of EditMemorySource
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$OnlineEditSourceImplCopyWith<_$OnlineEditSourceImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LocalEditSourceImplCopyWith<$Res>
+    implements $EditMemorySourceCopyWith<$Res> {
+  factory _$$LocalEditSourceImplCopyWith(_$LocalEditSourceImpl value,
+          $Res Function(_$LocalEditSourceImpl) then) =
+      __$$LocalEditSourceImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Memory memory});
+
+  @override
+  $MemoryCopyWith<$Res> get memory;
+}
+
+/// @nodoc
+class __$$LocalEditSourceImplCopyWithImpl<$Res>
+    extends _$EditMemorySourceCopyWithImpl<$Res, _$LocalEditSourceImpl>
+    implements _$$LocalEditSourceImplCopyWith<$Res> {
+  __$$LocalEditSourceImplCopyWithImpl(
+      _$LocalEditSourceImpl _value, $Res Function(_$LocalEditSourceImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of EditMemorySource
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? memory = null,
+  }) {
+    return _then(_$LocalEditSourceImpl(
+      memory: null == memory
+          ? _value.memory
+          : memory // ignore: cast_nullable_to_non_nullable
+              as Memory,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LocalEditSourceImpl implements _LocalEditSource {
+  const _$LocalEditSourceImpl({required this.memory});
+
+  @override
+  final Memory memory;
+
+  @override
+  String toString() {
+    return 'EditMemorySource.local(memory: $memory)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LocalEditSourceImpl &&
+            (identical(other.memory, memory) || other.memory == memory));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, memory);
+
+  /// Create a copy of EditMemorySource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LocalEditSourceImplCopyWith<_$LocalEditSourceImpl> get copyWith =>
+      __$$LocalEditSourceImplCopyWithImpl<_$LocalEditSourceImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Track track, Memory memory) online,
+    required TResult Function(Memory memory) local,
+  }) {
+    return local(memory);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Track track, Memory memory)? online,
+    TResult? Function(Memory memory)? local,
+  }) {
+    return local?.call(memory);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Track track, Memory memory)? online,
+    TResult Function(Memory memory)? local,
+    required TResult orElse(),
+  }) {
+    if (local != null) {
+      return local(memory);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_OnlineEditSource value) online,
+    required TResult Function(_LocalEditSource value) local,
+  }) {
+    return local(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_OnlineEditSource value)? online,
+    TResult? Function(_LocalEditSource value)? local,
+  }) {
+    return local?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_OnlineEditSource value)? online,
+    TResult Function(_LocalEditSource value)? local,
+    required TResult orElse(),
+  }) {
+    if (local != null) {
+      return local(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LocalEditSource implements EditMemorySource {
+  const factory _LocalEditSource({required final Memory memory}) =
+      _$LocalEditSourceImpl;
+
+  @override
+  Memory get memory;
+
+  /// Create a copy of EditMemorySource
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LocalEditSourceImplCopyWith<_$LocalEditSourceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

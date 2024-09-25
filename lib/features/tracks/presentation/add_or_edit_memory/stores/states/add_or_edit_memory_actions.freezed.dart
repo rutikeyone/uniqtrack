@@ -22,6 +22,7 @@ mixin _$AddOrEditMemoryActions {
             VoidCallback chooseImageFromCamera)
         showImageSourceChooser,
     required TResult Function(AddOrEditMemoryResult result) navigateWithResult,
+    required TResult Function() navigateBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$AddOrEditMemoryActions {
             VoidCallback chooseImageFromCamera)?
         showImageSourceChooser,
     TResult? Function(AddOrEditMemoryResult result)? navigateWithResult,
+    TResult? Function()? navigateBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$AddOrEditMemoryActions {
             VoidCallback chooseImageFromCamera)?
         showImageSourceChooser,
     TResult Function(AddOrEditMemoryResult result)? navigateWithResult,
+    TResult Function()? navigateBack,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -48,6 +51,8 @@ mixin _$AddOrEditMemoryActions {
         showImageSourceChooser,
     required TResult Function(_AddOrEditNavigateWithResultAction value)
         navigateWithResult,
+    required TResult Function(_AddOrEditNavigateBackResultAction value)
+        navigateBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +61,7 @@ mixin _$AddOrEditMemoryActions {
         showImageSourceChooser,
     TResult? Function(_AddOrEditNavigateWithResultAction value)?
         navigateWithResult,
+    TResult? Function(_AddOrEditNavigateBackResultAction value)? navigateBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -64,6 +70,7 @@ mixin _$AddOrEditMemoryActions {
         showImageSourceChooser,
     TResult Function(_AddOrEditNavigateWithResultAction value)?
         navigateWithResult,
+    TResult Function(_AddOrEditNavigateBackResultAction value)? navigateBack,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -188,6 +195,7 @@ class _$AddOrEditMemoryShowImageSourceChooserActionImpl
             VoidCallback chooseImageFromCamera)
         showImageSourceChooser,
     required TResult Function(AddOrEditMemoryResult result) navigateWithResult,
+    required TResult Function() navigateBack,
   }) {
     return showImageSourceChooser(
         chooseImageFromGallery, chooseImageFromCamera);
@@ -200,6 +208,7 @@ class _$AddOrEditMemoryShowImageSourceChooserActionImpl
             VoidCallback chooseImageFromCamera)?
         showImageSourceChooser,
     TResult? Function(AddOrEditMemoryResult result)? navigateWithResult,
+    TResult? Function()? navigateBack,
   }) {
     return showImageSourceChooser?.call(
         chooseImageFromGallery, chooseImageFromCamera);
@@ -212,6 +221,7 @@ class _$AddOrEditMemoryShowImageSourceChooserActionImpl
             VoidCallback chooseImageFromCamera)?
         showImageSourceChooser,
     TResult Function(AddOrEditMemoryResult result)? navigateWithResult,
+    TResult Function()? navigateBack,
     required TResult orElse(),
   }) {
     if (showImageSourceChooser != null) {
@@ -229,6 +239,8 @@ class _$AddOrEditMemoryShowImageSourceChooserActionImpl
         showImageSourceChooser,
     required TResult Function(_AddOrEditNavigateWithResultAction value)
         navigateWithResult,
+    required TResult Function(_AddOrEditNavigateBackResultAction value)
+        navigateBack,
   }) {
     return showImageSourceChooser(this);
   }
@@ -240,6 +252,7 @@ class _$AddOrEditMemoryShowImageSourceChooserActionImpl
         showImageSourceChooser,
     TResult? Function(_AddOrEditNavigateWithResultAction value)?
         navigateWithResult,
+    TResult? Function(_AddOrEditNavigateBackResultAction value)? navigateBack,
   }) {
     return showImageSourceChooser?.call(this);
   }
@@ -251,6 +264,7 @@ class _$AddOrEditMemoryShowImageSourceChooserActionImpl
         showImageSourceChooser,
     TResult Function(_AddOrEditNavigateWithResultAction value)?
         navigateWithResult,
+    TResult Function(_AddOrEditNavigateBackResultAction value)? navigateBack,
     required TResult orElse(),
   }) {
     if (showImageSourceChooser != null) {
@@ -368,6 +382,7 @@ class _$AddOrEditNavigateWithResultActionImpl
             VoidCallback chooseImageFromCamera)
         showImageSourceChooser,
     required TResult Function(AddOrEditMemoryResult result) navigateWithResult,
+    required TResult Function() navigateBack,
   }) {
     return navigateWithResult(result);
   }
@@ -379,6 +394,7 @@ class _$AddOrEditNavigateWithResultActionImpl
             VoidCallback chooseImageFromCamera)?
         showImageSourceChooser,
     TResult? Function(AddOrEditMemoryResult result)? navigateWithResult,
+    TResult? Function()? navigateBack,
   }) {
     return navigateWithResult?.call(result);
   }
@@ -390,6 +406,7 @@ class _$AddOrEditNavigateWithResultActionImpl
             VoidCallback chooseImageFromCamera)?
         showImageSourceChooser,
     TResult Function(AddOrEditMemoryResult result)? navigateWithResult,
+    TResult Function()? navigateBack,
     required TResult orElse(),
   }) {
     if (navigateWithResult != null) {
@@ -406,6 +423,8 @@ class _$AddOrEditNavigateWithResultActionImpl
         showImageSourceChooser,
     required TResult Function(_AddOrEditNavigateWithResultAction value)
         navigateWithResult,
+    required TResult Function(_AddOrEditNavigateBackResultAction value)
+        navigateBack,
   }) {
     return navigateWithResult(this);
   }
@@ -417,6 +436,7 @@ class _$AddOrEditNavigateWithResultActionImpl
         showImageSourceChooser,
     TResult? Function(_AddOrEditNavigateWithResultAction value)?
         navigateWithResult,
+    TResult? Function(_AddOrEditNavigateBackResultAction value)? navigateBack,
   }) {
     return navigateWithResult?.call(this);
   }
@@ -428,6 +448,7 @@ class _$AddOrEditNavigateWithResultActionImpl
         showImageSourceChooser,
     TResult Function(_AddOrEditNavigateWithResultAction value)?
         navigateWithResult,
+    TResult Function(_AddOrEditNavigateBackResultAction value)? navigateBack,
     required TResult orElse(),
   }) {
     if (navigateWithResult != null) {
@@ -452,4 +473,134 @@ abstract class _AddOrEditNavigateWithResultAction
   _$$AddOrEditNavigateWithResultActionImplCopyWith<
           _$AddOrEditNavigateWithResultActionImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddOrEditNavigateBackResultActionImplCopyWith<$Res> {
+  factory _$$AddOrEditNavigateBackResultActionImplCopyWith(
+          _$AddOrEditNavigateBackResultActionImpl value,
+          $Res Function(_$AddOrEditNavigateBackResultActionImpl) then) =
+      __$$AddOrEditNavigateBackResultActionImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddOrEditNavigateBackResultActionImplCopyWithImpl<$Res>
+    extends _$AddOrEditMemoryActionsCopyWithImpl<$Res,
+        _$AddOrEditNavigateBackResultActionImpl>
+    implements _$$AddOrEditNavigateBackResultActionImplCopyWith<$Res> {
+  __$$AddOrEditNavigateBackResultActionImplCopyWithImpl(
+      _$AddOrEditNavigateBackResultActionImpl _value,
+      $Res Function(_$AddOrEditNavigateBackResultActionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddOrEditMemoryActions
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AddOrEditNavigateBackResultActionImpl
+    extends _AddOrEditNavigateBackResultAction with DiagnosticableTreeMixin {
+  const _$AddOrEditNavigateBackResultActionImpl() : super._();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AddOrEditMemoryActions.navigateBack()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'AddOrEditMemoryActions.navigateBack'));
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(VoidCallback chooseImageFromGallery,
+            VoidCallback chooseImageFromCamera)
+        showImageSourceChooser,
+    required TResult Function(AddOrEditMemoryResult result) navigateWithResult,
+    required TResult Function() navigateBack,
+  }) {
+    return navigateBack();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(VoidCallback chooseImageFromGallery,
+            VoidCallback chooseImageFromCamera)?
+        showImageSourceChooser,
+    TResult? Function(AddOrEditMemoryResult result)? navigateWithResult,
+    TResult? Function()? navigateBack,
+  }) {
+    return navigateBack?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(VoidCallback chooseImageFromGallery,
+            VoidCallback chooseImageFromCamera)?
+        showImageSourceChooser,
+    TResult Function(AddOrEditMemoryResult result)? navigateWithResult,
+    TResult Function()? navigateBack,
+    required TResult orElse(),
+  }) {
+    if (navigateBack != null) {
+      return navigateBack();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(
+            _AddOrEditMemoryShowImageSourceChooserAction value)
+        showImageSourceChooser,
+    required TResult Function(_AddOrEditNavigateWithResultAction value)
+        navigateWithResult,
+    required TResult Function(_AddOrEditNavigateBackResultAction value)
+        navigateBack,
+  }) {
+    return navigateBack(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AddOrEditMemoryShowImageSourceChooserAction value)?
+        showImageSourceChooser,
+    TResult? Function(_AddOrEditNavigateWithResultAction value)?
+        navigateWithResult,
+    TResult? Function(_AddOrEditNavigateBackResultAction value)? navigateBack,
+  }) {
+    return navigateBack?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AddOrEditMemoryShowImageSourceChooserAction value)?
+        showImageSourceChooser,
+    TResult Function(_AddOrEditNavigateWithResultAction value)?
+        navigateWithResult,
+    TResult Function(_AddOrEditNavigateBackResultAction value)? navigateBack,
+    required TResult orElse(),
+  }) {
+    if (navigateBack != null) {
+      return navigateBack(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddOrEditNavigateBackResultAction
+    extends AddOrEditMemoryActions {
+  const factory _AddOrEditNavigateBackResultAction() =
+      _$AddOrEditNavigateBackResultActionImpl;
+  const _AddOrEditNavigateBackResultAction._() : super._();
 }

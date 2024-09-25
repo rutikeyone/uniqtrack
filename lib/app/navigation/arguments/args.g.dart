@@ -60,7 +60,7 @@ final addOrEditRecordTrackConverterProvider =
 typedef AddOrEditRecordTrackConverterRef
     = AutoDisposeProviderRef<AddOrEditRecordTrackArgsConverter>;
 String _$addOrEditMemoryArgsConverterHash() =>
-    r'12f5075c86dc7388329a3334a199c13bb3f96eae';
+    r'fffe9d25ee2db0d40f3fbf4ffbbff59fcf5f91a0';
 
 /// See also [addOrEditMemoryArgsConverter].
 @ProviderFor(addOrEditMemoryArgsConverter)
@@ -77,6 +77,24 @@ final addOrEditMemoryArgsConverterProvider =
 
 typedef AddOrEditMemoryArgsConverterRef
     = AutoDisposeProviderRef<AddOrEditMemoryArgsConverter>;
+String _$recordTrackArgsConverterHash() =>
+    r'09a044f5cfbec5dafc8d273b7301b18d3a4934d3';
+
+/// See also [recordTrackArgsConverter].
+@ProviderFor(recordTrackArgsConverter)
+final recordTrackArgsConverterProvider =
+    AutoDisposeProvider<RecordTrackArgsConverter>.internal(
+  recordTrackArgsConverter,
+  name: r'recordTrackArgsConverterProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$recordTrackArgsConverterHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef RecordTrackArgsConverterRef
+    = AutoDisposeProviderRef<RecordTrackArgsConverter>;
 String _$detailsArgsConverterHash() =>
     r'0268732aeddde752ea8a457ed40c33b830d7425e';
 

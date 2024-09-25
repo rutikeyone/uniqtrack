@@ -72,6 +72,12 @@ mixin _$AppStrings {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -129,6 +135,12 @@ mixin _$AppStrings {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -186,6 +198,12 @@ mixin _$AppStrings {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -277,6 +295,17 @@ mixin _$AppStrings {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -353,6 +382,16 @@ mixin _$AppStrings {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -428,6 +467,16 @@ mixin _$AppStrings {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -549,6 +598,12 @@ class _$AppErrorStringImpl implements _AppErrorString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return error();
   }
@@ -609,6 +664,12 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return error?.call();
   }
@@ -669,6 +730,12 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -766,6 +833,17 @@ class _$AppErrorStringImpl implements _AppErrorString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return error(this);
   }
@@ -845,6 +923,16 @@ class _$AppErrorStringImpl implements _AppErrorString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return error?.call(this);
   }
@@ -923,6 +1011,16 @@ class _$AppErrorStringImpl implements _AppErrorString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1031,6 +1129,12 @@ class _$AppOkayStringImpl implements _AppOkayString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return okay();
   }
@@ -1091,6 +1195,12 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return okay?.call();
   }
@@ -1151,6 +1261,12 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -1248,6 +1364,17 @@ class _$AppOkayStringImpl implements _AppOkayString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return okay(this);
   }
@@ -1327,6 +1454,16 @@ class _$AppOkayStringImpl implements _AppOkayString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return okay?.call(this);
   }
@@ -1405,6 +1542,16 @@ class _$AppOkayStringImpl implements _AppOkayString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -1516,6 +1663,12 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return errorHasOccurred();
   }
@@ -1576,6 +1729,12 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return errorHasOccurred?.call();
   }
@@ -1636,6 +1795,12 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -1733,6 +1898,17 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return errorHasOccurred(this);
   }
@@ -1812,6 +1988,16 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return errorHasOccurred?.call(this);
   }
@@ -1890,6 +2076,16 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -2001,6 +2197,12 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return invalidEmail();
   }
@@ -2061,6 +2263,12 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return invalidEmail?.call();
   }
@@ -2121,6 +2329,12 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -2218,6 +2432,17 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return invalidEmail(this);
   }
@@ -2297,6 +2522,16 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return invalidEmail?.call(this);
   }
@@ -2375,6 +2610,16 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -2487,6 +2732,12 @@ class _$$AppEmailAlreadyInUseStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return emailAlreadyInUse();
   }
@@ -2547,6 +2798,12 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -2607,6 +2864,12 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -2704,6 +2967,17 @@ class _$$AppEmailAlreadyInUseStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return emailAlreadyInUse(this);
   }
@@ -2783,6 +3057,16 @@ class _$$AppEmailAlreadyInUseStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -2861,6 +3145,16 @@ class _$$AppEmailAlreadyInUseStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -2974,6 +3268,12 @@ class _$$AppOperationNotAllowedStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return operationNotAllowed();
   }
@@ -3034,6 +3334,12 @@ class _$$AppOperationNotAllowedStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return operationNotAllowed?.call();
   }
@@ -3094,6 +3400,12 @@ class _$$AppOperationNotAllowedStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -3191,6 +3503,17 @@ class _$$AppOperationNotAllowedStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return operationNotAllowed(this);
   }
@@ -3270,6 +3593,16 @@ class _$$AppOperationNotAllowedStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return operationNotAllowed?.call(this);
   }
@@ -3348,6 +3681,16 @@ class _$$AppOperationNotAllowedStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -3460,6 +3803,12 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return weakPassword();
   }
@@ -3520,6 +3869,12 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return weakPassword?.call();
   }
@@ -3580,6 +3935,12 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -3677,6 +4038,17 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return weakPassword(this);
   }
@@ -3756,6 +4128,16 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return weakPassword?.call(this);
   }
@@ -3834,6 +4216,16 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -3945,6 +4337,12 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return tooManyRequests();
   }
@@ -4005,6 +4403,12 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return tooManyRequests?.call();
   }
@@ -4065,6 +4469,12 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -4162,6 +4572,17 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return tooManyRequests(this);
   }
@@ -4241,6 +4662,16 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return tooManyRequests?.call(this);
   }
@@ -4319,6 +4750,16 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -4430,6 +4871,12 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return userTokenExpired();
   }
@@ -4490,6 +4937,12 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return userTokenExpired?.call();
   }
@@ -4550,6 +5003,12 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -4647,6 +5106,17 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return userTokenExpired(this);
   }
@@ -4726,6 +5196,16 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return userTokenExpired?.call(this);
   }
@@ -4804,6 +5284,16 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -4918,6 +5408,12 @@ class _$$AppNetworkRequestsFailedStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return networkRequestFailed();
   }
@@ -4978,6 +5474,12 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return networkRequestFailed?.call();
   }
@@ -5038,6 +5540,12 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -5135,6 +5643,17 @@ class _$$AppNetworkRequestsFailedStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return networkRequestFailed(this);
   }
@@ -5214,6 +5733,16 @@ class _$$AppNetworkRequestsFailedStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return networkRequestFailed?.call(this);
   }
@@ -5292,6 +5821,16 @@ class _$$AppNetworkRequestsFailedStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -5406,6 +5945,12 @@ class _$$AppNotInternetConnectionStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return notInternetConnection();
   }
@@ -5466,6 +6011,12 @@ class _$$AppNotInternetConnectionStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return notInternetConnection?.call();
   }
@@ -5526,6 +6077,12 @@ class _$$AppNotInternetConnectionStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (notInternetConnection != null) {
@@ -5623,6 +6180,17 @@ class _$$AppNotInternetConnectionStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return notInternetConnection(this);
   }
@@ -5702,6 +6270,16 @@ class _$$AppNotInternetConnectionStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return notInternetConnection?.call(this);
   }
@@ -5780,6 +6358,16 @@ class _$$AppNotInternetConnectionStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (notInternetConnection != null) {
@@ -5892,6 +6480,12 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return connectTimeout();
   }
@@ -5952,6 +6546,12 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return connectTimeout?.call();
   }
@@ -6012,6 +6612,12 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -6109,6 +6715,17 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return connectTimeout(this);
   }
@@ -6188,6 +6805,16 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return connectTimeout?.call(this);
   }
@@ -6266,6 +6893,16 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -6376,6 +7013,12 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return sendTimeout();
   }
@@ -6436,6 +7079,12 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return sendTimeout?.call();
   }
@@ -6496,6 +7145,12 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -6593,6 +7248,17 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return sendTimeout(this);
   }
@@ -6672,6 +7338,16 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return sendTimeout?.call(this);
   }
@@ -6750,6 +7426,16 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -6861,6 +7547,12 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return receiveTimeout();
   }
@@ -6921,6 +7613,12 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return receiveTimeout?.call();
   }
@@ -6981,6 +7679,12 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -7078,6 +7782,17 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return receiveTimeout(this);
   }
@@ -7157,6 +7872,16 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return receiveTimeout?.call(this);
   }
@@ -7235,6 +7960,16 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -7346,6 +8081,12 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return requestCancelled();
   }
@@ -7406,6 +8147,12 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return requestCancelled?.call();
   }
@@ -7466,6 +8213,12 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (requestCancelled != null) {
@@ -7563,6 +8316,17 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return requestCancelled(this);
   }
@@ -7642,6 +8406,16 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return requestCancelled?.call(this);
   }
@@ -7720,6 +8494,16 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (requestCancelled != null) {
@@ -7832,6 +8616,12 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return badCertificate();
   }
@@ -7892,6 +8682,12 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return badCertificate?.call();
   }
@@ -7952,6 +8748,12 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (badCertificate != null) {
@@ -8049,6 +8851,17 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return badCertificate(this);
   }
@@ -8128,6 +8941,16 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return badCertificate?.call(this);
   }
@@ -8206,6 +9029,16 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (badCertificate != null) {
@@ -8316,6 +9149,12 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return badResponse();
   }
@@ -8376,6 +9215,12 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return badResponse?.call();
   }
@@ -8436,6 +9281,12 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (badResponse != null) {
@@ -8533,6 +9384,17 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return badResponse(this);
   }
@@ -8612,6 +9474,16 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return badResponse?.call(this);
   }
@@ -8690,6 +9562,16 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (badResponse != null) {
@@ -8801,6 +9683,12 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return notification();
   }
@@ -8861,6 +9749,12 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return notification?.call();
   }
@@ -8921,6 +9815,12 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (notification != null) {
@@ -9018,6 +9918,17 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return notification(this);
   }
@@ -9097,6 +10008,16 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return notification?.call(this);
   }
@@ -9175,6 +10096,16 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (notification != null) {
@@ -9291,6 +10222,12 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return theUserHasBeenSuccessfullyRegistered();
   }
@@ -9351,6 +10288,12 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return theUserHasBeenSuccessfullyRegistered?.call();
   }
@@ -9411,6 +10354,12 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (theUserHasBeenSuccessfullyRegistered != null) {
@@ -9508,6 +10457,17 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return theUserHasBeenSuccessfullyRegistered(this);
   }
@@ -9587,6 +10547,16 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return theUserHasBeenSuccessfullyRegistered?.call(this);
   }
@@ -9665,6 +10635,16 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (theUserHasBeenSuccessfullyRegistered != null) {
@@ -9778,6 +10758,12 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return userDisabled();
   }
@@ -9838,6 +10824,12 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return userDisabled?.call();
   }
@@ -9898,6 +10890,12 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -9995,6 +10993,17 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return userDisabled(this);
   }
@@ -10074,6 +11083,16 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return userDisabled?.call(this);
   }
@@ -10152,6 +11171,16 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -10263,6 +11292,12 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return userNotFound();
   }
@@ -10323,6 +11358,12 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return userNotFound?.call();
   }
@@ -10383,6 +11424,12 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -10480,6 +11527,17 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return userNotFound(this);
   }
@@ -10559,6 +11617,16 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return userNotFound?.call(this);
   }
@@ -10637,6 +11705,16 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -10748,6 +11826,12 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return wrongPassword();
   }
@@ -10808,6 +11892,12 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return wrongPassword?.call();
   }
@@ -10868,6 +11958,12 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -10965,6 +12061,17 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return wrongPassword(this);
   }
@@ -11044,6 +12151,16 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return wrongPassword?.call(this);
   }
@@ -11122,6 +12239,16 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -11234,6 +12361,12 @@ class _$$AppInvalidCredentialStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return invalidCredential();
   }
@@ -11294,6 +12427,12 @@ class _$$AppInvalidCredentialStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return invalidCredential?.call();
   }
@@ -11354,6 +12493,12 @@ class _$$AppInvalidCredentialStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -11451,6 +12596,17 @@ class _$$AppInvalidCredentialStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return invalidCredential(this);
   }
@@ -11530,6 +12686,16 @@ class _$$AppInvalidCredentialStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return invalidCredential?.call(this);
   }
@@ -11608,6 +12774,16 @@ class _$$AppInvalidCredentialStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -11722,6 +12898,12 @@ class _$$AppUnathorizedContinueUriStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return unauthorizedContinueUri();
   }
@@ -11782,6 +12964,12 @@ class _$$AppUnathorizedContinueUriStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return unauthorizedContinueUri?.call();
   }
@@ -11842,6 +13030,12 @@ class _$$AppUnathorizedContinueUriStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (unauthorizedContinueUri != null) {
@@ -11939,6 +13133,17 @@ class _$$AppUnathorizedContinueUriStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return unauthorizedContinueUri(this);
   }
@@ -12018,6 +13223,16 @@ class _$$AppUnathorizedContinueUriStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return unauthorizedContinueUri?.call(this);
   }
@@ -12096,6 +13311,16 @@ class _$$AppUnathorizedContinueUriStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (unauthorizedContinueUri != null) {
@@ -12209,6 +13434,12 @@ class _$$AppInvalidContinueUriStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return invalidContinueUri();
   }
@@ -12269,6 +13500,12 @@ class _$$AppInvalidContinueUriStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return invalidContinueUri?.call();
   }
@@ -12329,6 +13566,12 @@ class _$$AppInvalidContinueUriStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (invalidContinueUri != null) {
@@ -12426,6 +13669,17 @@ class _$$AppInvalidContinueUriStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return invalidContinueUri(this);
   }
@@ -12505,6 +13759,16 @@ class _$$AppInvalidContinueUriStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return invalidContinueUri?.call(this);
   }
@@ -12583,6 +13847,16 @@ class _$$AppInvalidContinueUriStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (invalidContinueUri != null) {
@@ -12696,6 +13970,12 @@ class _$$AppMissingIOSBundleIdStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return missingIOSBundleId();
   }
@@ -12756,6 +14036,12 @@ class _$$AppMissingIOSBundleIdStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return missingIOSBundleId?.call();
   }
@@ -12816,6 +14102,12 @@ class _$$AppMissingIOSBundleIdStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (missingIOSBundleId != null) {
@@ -12913,6 +14205,17 @@ class _$$AppMissingIOSBundleIdStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return missingIOSBundleId(this);
   }
@@ -12992,6 +14295,16 @@ class _$$AppMissingIOSBundleIdStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return missingIOSBundleId?.call(this);
   }
@@ -13070,6 +14383,16 @@ class _$$AppMissingIOSBundleIdStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (missingIOSBundleId != null) {
@@ -13183,6 +14506,12 @@ class _$$AppMissingContinueUriStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return missingContinueUri();
   }
@@ -13243,6 +14572,12 @@ class _$$AppMissingContinueUriStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return missingContinueUri?.call();
   }
@@ -13303,6 +14638,12 @@ class _$$AppMissingContinueUriStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (missingContinueUri != null) {
@@ -13400,6 +14741,17 @@ class _$$AppMissingContinueUriStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return missingContinueUri(this);
   }
@@ -13479,6 +14831,16 @@ class _$$AppMissingContinueUriStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return missingContinueUri?.call(this);
   }
@@ -13557,6 +14919,16 @@ class _$$AppMissingContinueUriStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (missingContinueUri != null) {
@@ -13671,6 +15043,12 @@ class _$$AppMissingAndroidPkgNameStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return missingAndroidPkgName();
   }
@@ -13731,6 +15109,12 @@ class _$$AppMissingAndroidPkgNameStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return missingAndroidPkgName?.call();
   }
@@ -13791,6 +15175,12 @@ class _$$AppMissingAndroidPkgNameStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (missingAndroidPkgName != null) {
@@ -13888,6 +15278,17 @@ class _$$AppMissingAndroidPkgNameStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return missingAndroidPkgName(this);
   }
@@ -13967,6 +15368,16 @@ class _$$AppMissingAndroidPkgNameStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return missingAndroidPkgName?.call(this);
   }
@@ -14045,6 +15456,16 @@ class _$$AppMissingAndroidPkgNameStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (missingAndroidPkgName != null) {
@@ -14169,6 +15590,12 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress();
   }
@@ -14229,6 +15656,12 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress?.call();
   }
@@ -14289,6 +15722,12 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (thePasswordHasBeenSentToTheSpecifiedEmailAddress != null) {
@@ -14386,6 +15825,17 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress(this);
   }
@@ -14465,6 +15915,16 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress?.call(this);
   }
@@ -14543,6 +16003,16 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (thePasswordHasBeenSentToTheSpecifiedEmailAddress != null) {
@@ -14658,6 +16128,12 @@ class _$$AppNoPermissionToPerformStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return noPermissionToPerform();
   }
@@ -14718,6 +16194,12 @@ class _$$AppNoPermissionToPerformStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return noPermissionToPerform?.call();
   }
@@ -14778,6 +16260,12 @@ class _$$AppNoPermissionToPerformStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (noPermissionToPerform != null) {
@@ -14875,6 +16363,17 @@ class _$$AppNoPermissionToPerformStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return noPermissionToPerform(this);
   }
@@ -14954,6 +16453,16 @@ class _$$AppNoPermissionToPerformStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return noPermissionToPerform?.call(this);
   }
@@ -15032,6 +16541,16 @@ class _$$AppNoPermissionToPerformStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (noPermissionToPerform != null) {
@@ -15141,6 +16660,12 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return prohibit();
   }
@@ -15201,6 +16726,12 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return prohibit?.call();
   }
@@ -15261,6 +16792,12 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (prohibit != null) {
@@ -15358,6 +16895,17 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return prohibit(this);
   }
@@ -15437,6 +16985,16 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return prohibit?.call(this);
   }
@@ -15515,6 +17073,16 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (prohibit != null) {
@@ -15623,6 +17191,12 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return allow();
   }
@@ -15683,6 +17257,12 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return allow?.call();
   }
@@ -15743,6 +17323,12 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (allow != null) {
@@ -15840,6 +17426,17 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return allow(this);
   }
@@ -15919,6 +17516,16 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return allow?.call(this);
   }
@@ -15997,6 +17604,16 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (allow != null) {
@@ -16108,6 +17725,12 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return serviceDenied();
   }
@@ -16168,6 +17791,12 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return serviceDenied?.call();
   }
@@ -16228,6 +17857,12 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (serviceDenied != null) {
@@ -16325,6 +17960,17 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return serviceDenied(this);
   }
@@ -16404,6 +18050,16 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return serviceDenied?.call(this);
   }
@@ -16482,6 +18138,16 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (serviceDenied != null) {
@@ -16598,6 +18264,12 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return noPermissionDetermineUserLocation();
   }
@@ -16658,6 +18330,12 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return noPermissionDetermineUserLocation?.call();
   }
@@ -16718,6 +18396,12 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (noPermissionDetermineUserLocation != null) {
@@ -16815,6 +18499,17 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return noPermissionDetermineUserLocation(this);
   }
@@ -16894,6 +18589,16 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return noPermissionDetermineUserLocation?.call(this);
   }
@@ -16972,6 +18677,16 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (noPermissionDetermineUserLocation != null) {
@@ -17086,6 +18801,12 @@ class _$$AppCantStartRecordingStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return cantStartRecording();
   }
@@ -17146,6 +18867,12 @@ class _$$AppCantStartRecordingStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return cantStartRecording?.call();
   }
@@ -17206,6 +18933,12 @@ class _$$AppCantStartRecordingStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (cantStartRecording != null) {
@@ -17303,6 +19036,17 @@ class _$$AppCantStartRecordingStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return cantStartRecording(this);
   }
@@ -17382,6 +19126,16 @@ class _$$AppCantStartRecordingStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return cantStartRecording?.call(this);
   }
@@ -17460,6 +19214,16 @@ class _$$AppCantStartRecordingStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (cantStartRecording != null) {
@@ -17577,6 +19341,12 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return cantGetYourCurrentLocation();
   }
@@ -17637,6 +19407,12 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return cantGetYourCurrentLocation?.call();
   }
@@ -17697,6 +19473,12 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (cantGetYourCurrentLocation != null) {
@@ -17794,6 +19576,17 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return cantGetYourCurrentLocation(this);
   }
@@ -17873,6 +19666,16 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return cantGetYourCurrentLocation?.call(this);
   }
@@ -17951,6 +19754,16 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (cantGetYourCurrentLocation != null) {
@@ -18066,6 +19879,12 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return trackingRecordNotificationTitle();
   }
@@ -18126,6 +19945,12 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return trackingRecordNotificationTitle?.call();
   }
@@ -18186,6 +20011,12 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationTitle != null) {
@@ -18283,6 +20114,17 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return trackingRecordNotificationTitle(this);
   }
@@ -18362,6 +20204,16 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return trackingRecordNotificationTitle?.call(this);
   }
@@ -18440,6 +20292,16 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationTitle != null) {
@@ -18555,6 +20417,12 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return trackingRecordNotificationBody();
   }
@@ -18615,6 +20483,12 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return trackingRecordNotificationBody?.call();
   }
@@ -18675,6 +20549,12 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationBody != null) {
@@ -18772,6 +20652,17 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return trackingRecordNotificationBody(this);
   }
@@ -18851,6 +20742,16 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return trackingRecordNotificationBody?.call(this);
   }
@@ -18929,6 +20830,16 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationBody != null) {
@@ -19052,6 +20963,12 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion();
   }
@@ -19112,6 +21029,12 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion?.call();
   }
@@ -19172,6 +21095,12 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (doYouWantToFinishRecordingTheTrackQuestion != null) {
@@ -19269,6 +21198,17 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion(this);
   }
@@ -19348,6 +21288,16 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion?.call(this);
   }
@@ -19426,6 +21376,16 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (doYouWantToFinishRecordingTheTrackQuestion != null) {
@@ -19536,6 +21496,12 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return attention();
   }
@@ -19596,6 +21562,12 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return attention?.call();
   }
@@ -19656,6 +21628,12 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (attention != null) {
@@ -19753,6 +21731,17 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return attention(this);
   }
@@ -19832,6 +21821,16 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return attention?.call(this);
   }
@@ -19910,6 +21909,16 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (attention != null) {
@@ -20018,6 +22027,12 @@ class _$AppSaveStringImpl implements _AppSaveString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return save();
   }
@@ -20078,6 +22093,12 @@ class _$AppSaveStringImpl implements _AppSaveString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return save?.call();
   }
@@ -20138,6 +22159,12 @@ class _$AppSaveStringImpl implements _AppSaveString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (save != null) {
@@ -20235,6 +22262,17 @@ class _$AppSaveStringImpl implements _AppSaveString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return save(this);
   }
@@ -20314,6 +22352,16 @@ class _$AppSaveStringImpl implements _AppSaveString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return save?.call(this);
   }
@@ -20392,6 +22440,16 @@ class _$AppSaveStringImpl implements _AppSaveString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (save != null) {
@@ -20500,6 +22558,12 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return delete();
   }
@@ -20560,6 +22624,12 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return delete?.call();
   }
@@ -20620,6 +22690,12 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -20717,6 +22793,17 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return delete(this);
   }
@@ -20796,6 +22883,16 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return delete?.call(this);
   }
@@ -20874,6 +22971,16 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -20985,6 +23092,12 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return deleteAndExit();
   }
@@ -21045,6 +23158,12 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return deleteAndExit?.call();
   }
@@ -21105,6 +23224,12 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (deleteAndExit != null) {
@@ -21202,6 +23327,17 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return deleteAndExit(this);
   }
@@ -21281,6 +23417,16 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return deleteAndExit?.call(this);
   }
@@ -21359,6 +23505,16 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (deleteAndExit != null) {
@@ -21468,6 +23624,12 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return toContinue();
   }
@@ -21528,6 +23690,12 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return toContinue?.call();
   }
@@ -21588,6 +23756,12 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (toContinue != null) {
@@ -21685,6 +23859,17 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return toContinue(this);
   }
@@ -21764,6 +23949,16 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return toContinue?.call(this);
   }
@@ -21842,6 +24037,16 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (toContinue != null) {
@@ -21954,6 +24159,12 @@ class _$$AppUserNotAuthorizedStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return userIsUnauthorized();
   }
@@ -22014,6 +24225,12 @@ class _$$AppUserNotAuthorizedStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return userIsUnauthorized?.call();
   }
@@ -22074,6 +24291,12 @@ class _$$AppUserNotAuthorizedStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (userIsUnauthorized != null) {
@@ -22171,6 +24394,17 @@ class _$$AppUserNotAuthorizedStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return userIsUnauthorized(this);
   }
@@ -22250,6 +24484,16 @@ class _$$AppUserNotAuthorizedStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return userIsUnauthorized?.call(this);
   }
@@ -22328,6 +24572,16 @@ class _$$AppUserNotAuthorizedStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (userIsUnauthorized != null) {
@@ -22442,6 +24696,12 @@ class _$$AppEntryWasSuccessfullyAddedStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return entryWasSuccessfullyAdded();
   }
@@ -22502,6 +24762,12 @@ class _$$AppEntryWasSuccessfullyAddedStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return entryWasSuccessfullyAdded?.call();
   }
@@ -22562,6 +24828,12 @@ class _$$AppEntryWasSuccessfullyAddedStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (entryWasSuccessfullyAdded != null) {
@@ -22659,6 +24931,17 @@ class _$$AppEntryWasSuccessfullyAddedStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return entryWasSuccessfullyAdded(this);
   }
@@ -22738,6 +25021,16 @@ class _$$AppEntryWasSuccessfullyAddedStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return entryWasSuccessfullyAdded?.call(this);
   }
@@ -22816,6 +25109,16 @@ class _$$AppEntryWasSuccessfullyAddedStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (entryWasSuccessfullyAdded != null) {
@@ -22930,6 +25233,12 @@ class _$$AlreadyAddedToFavouritesStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return alreadyAddedToFavourites();
   }
@@ -22990,6 +25299,12 @@ class _$$AlreadyAddedToFavouritesStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return alreadyAddedToFavourites?.call();
   }
@@ -23050,6 +25365,12 @@ class _$$AlreadyAddedToFavouritesStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (alreadyAddedToFavourites != null) {
@@ -23147,6 +25468,17 @@ class _$$AlreadyAddedToFavouritesStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return alreadyAddedToFavourites(this);
   }
@@ -23226,6 +25558,16 @@ class _$$AlreadyAddedToFavouritesStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return alreadyAddedToFavourites?.call(this);
   }
@@ -23304,6 +25646,16 @@ class _$$AlreadyAddedToFavouritesStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (alreadyAddedToFavourites != null) {
@@ -23413,6 +25765,12 @@ class _$NoIDStringImpl implements _NoIDString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return noID();
   }
@@ -23473,6 +25831,12 @@ class _$NoIDStringImpl implements _NoIDString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return noID?.call();
   }
@@ -23533,6 +25897,12 @@ class _$NoIDStringImpl implements _NoIDString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (noID != null) {
@@ -23630,6 +26000,17 @@ class _$NoIDStringImpl implements _NoIDString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return noID(this);
   }
@@ -23709,6 +26090,16 @@ class _$NoIDStringImpl implements _NoIDString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return noID?.call(this);
   }
@@ -23787,6 +26178,16 @@ class _$NoIDStringImpl implements _NoIDString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (noID != null) {
@@ -23899,6 +26300,12 @@ class _$TrackAddedSuccessfullyStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return trackAddedSuccessfully();
   }
@@ -23959,6 +26366,12 @@ class _$TrackAddedSuccessfullyStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return trackAddedSuccessfully?.call();
   }
@@ -24019,6 +26432,12 @@ class _$TrackAddedSuccessfullyStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (trackAddedSuccessfully != null) {
@@ -24116,6 +26535,17 @@ class _$TrackAddedSuccessfullyStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return trackAddedSuccessfully(this);
   }
@@ -24195,6 +26625,16 @@ class _$TrackAddedSuccessfullyStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return trackAddedSuccessfully?.call(this);
   }
@@ -24273,6 +26713,16 @@ class _$TrackAddedSuccessfullyStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (trackAddedSuccessfully != null) {
@@ -24385,6 +26835,12 @@ class _$NotAddedToFavouritesStringImpl implements _NotAddedToFavouritesString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return notAddedToFavorites();
   }
@@ -24445,6 +26901,12 @@ class _$NotAddedToFavouritesStringImpl implements _NotAddedToFavouritesString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return notAddedToFavorites?.call();
   }
@@ -24505,6 +26967,12 @@ class _$NotAddedToFavouritesStringImpl implements _NotAddedToFavouritesString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (notAddedToFavorites != null) {
@@ -24602,6 +27070,17 @@ class _$NotAddedToFavouritesStringImpl implements _NotAddedToFavouritesString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return notAddedToFavorites(this);
   }
@@ -24681,6 +27160,16 @@ class _$NotAddedToFavouritesStringImpl implements _NotAddedToFavouritesString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return notAddedToFavorites?.call(this);
   }
@@ -24759,6 +27248,16 @@ class _$NotAddedToFavouritesStringImpl implements _NotAddedToFavouritesString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (notAddedToFavorites != null) {
@@ -24873,6 +27372,12 @@ class _$TrackWasSuccessfullyDeletedStringImpl
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return trackWasSuccessfullyDeleted();
   }
@@ -24933,6 +27438,12 @@ class _$TrackWasSuccessfullyDeletedStringImpl
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return trackWasSuccessfullyDeleted?.call();
   }
@@ -24993,6 +27504,12 @@ class _$TrackWasSuccessfullyDeletedStringImpl
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (trackWasSuccessfullyDeleted != null) {
@@ -25090,6 +27607,17 @@ class _$TrackWasSuccessfullyDeletedStringImpl
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return trackWasSuccessfullyDeleted(this);
   }
@@ -25169,6 +27697,16 @@ class _$TrackWasSuccessfullyDeletedStringImpl
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return trackWasSuccessfullyDeleted?.call(this);
   }
@@ -25247,6 +27785,16 @@ class _$TrackWasSuccessfullyDeletedStringImpl
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (trackWasSuccessfullyDeleted != null) {
@@ -25359,6 +27907,12 @@ class _$NotAddedToUserTracksStringImpl implements _NotAddedToUserTracksString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return notAddedToUserTracks();
   }
@@ -25419,6 +27973,12 @@ class _$NotAddedToUserTracksStringImpl implements _NotAddedToUserTracksString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return notAddedToUserTracks?.call();
   }
@@ -25479,6 +28039,12 @@ class _$NotAddedToUserTracksStringImpl implements _NotAddedToUserTracksString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (notAddedToUserTracks != null) {
@@ -25576,6 +28142,17 @@ class _$NotAddedToUserTracksStringImpl implements _NotAddedToUserTracksString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return notAddedToUserTracks(this);
   }
@@ -25655,6 +28232,16 @@ class _$NotAddedToUserTracksStringImpl implements _NotAddedToUserTracksString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return notAddedToUserTracks?.call(this);
   }
@@ -25733,6 +28320,16 @@ class _$NotAddedToUserTracksStringImpl implements _NotAddedToUserTracksString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (notAddedToUserTracks != null) {
@@ -25843,6 +28440,12 @@ class _$NoRemoveRightsStringImpl implements _NoRemoveRightsString {
     required TResult Function() trackWasSuccessfullyDeleted,
     required TResult Function() notAddedToUserTracks,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return noRemoveRights();
   }
@@ -25903,6 +28506,12 @@ class _$NoRemoveRightsStringImpl implements _NoRemoveRightsString {
     TResult? Function()? trackWasSuccessfullyDeleted,
     TResult? Function()? notAddedToUserTracks,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return noRemoveRights?.call();
   }
@@ -25963,6 +28572,12 @@ class _$NoRemoveRightsStringImpl implements _NoRemoveRightsString {
     TResult Function()? trackWasSuccessfullyDeleted,
     TResult Function()? notAddedToUserTracks,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (noRemoveRights != null) {
@@ -26060,6 +28675,17 @@ class _$NoRemoveRightsStringImpl implements _NoRemoveRightsString {
     required TResult Function(_NotAddedToUserTracksString value)
         notAddedToUserTracks,
     required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
   }) {
     return noRemoveRights(this);
   }
@@ -26139,6 +28765,16 @@ class _$NoRemoveRightsStringImpl implements _NoRemoveRightsString {
         trackWasSuccessfullyDeleted,
     TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
   }) {
     return noRemoveRights?.call(this);
   }
@@ -26217,6 +28853,16 @@ class _$NoRemoveRightsStringImpl implements _NoRemoveRightsString {
         trackWasSuccessfullyDeleted,
     TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
     TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (noRemoveRights != null) {
@@ -26228,4 +28874,3216 @@ class _$NoRemoveRightsStringImpl implements _NoRemoveRightsString {
 
 abstract class _NoRemoveRightsString implements AppStrings {
   const factory _NoRemoveRightsString() = _$NoRemoveRightsStringImpl;
+}
+
+/// @nodoc
+abstract class _$$NoContainsElementStringImplCopyWith<$Res> {
+  factory _$$NoContainsElementStringImplCopyWith(
+          _$NoContainsElementStringImpl value,
+          $Res Function(_$NoContainsElementStringImpl) then) =
+      __$$NoContainsElementStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NoContainsElementStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$NoContainsElementStringImpl>
+    implements _$$NoContainsElementStringImplCopyWith<$Res> {
+  __$$NoContainsElementStringImplCopyWithImpl(
+      _$NoContainsElementStringImpl _value,
+      $Res Function(_$NoContainsElementStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NoContainsElementStringImpl implements _NoContainsElementString {
+  const _$NoContainsElementStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.notContainsElement()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NoContainsElementStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+    required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
+    required TResult Function() deleteAndExit,
+    required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
+    required TResult Function() alreadyAddedToFavourites,
+    required TResult Function() noID,
+    required TResult Function() trackAddedSuccessfully,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() trackWasSuccessfullyDeleted,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
+  }) {
+    return notContainsElement();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+    TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
+    TResult? Function()? deleteAndExit,
+    TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
+    TResult? Function()? alreadyAddedToFavourites,
+    TResult? Function()? noID,
+    TResult? Function()? trackAddedSuccessfully,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? trackWasSuccessfullyDeleted,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
+  }) {
+    return notContainsElement?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
+    TResult Function()? deleteAndExit,
+    TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
+    TResult Function()? alreadyAddedToFavourites,
+    TResult Function()? noID,
+    TResult Function()? trackAddedSuccessfully,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? trackWasSuccessfullyDeleted,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (notContainsElement != null) {
+      return notContainsElement();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+    required TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
+        doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
+    required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
+    required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
+    required TResult Function(_$AlreadyAddedToFavouritesString value)
+        alreadyAddedToFavourites,
+    required TResult Function(_NoIDString value) noID,
+    required TResult Function(_TrackAddedSuccessfullyString value)
+        trackAddedSuccessfully,
+    required TResult Function(_NotAddedToFavouritesString value)
+        notAddedToFavorites,
+    required TResult Function(_TrackWasSuccessfullyDeletedString value)
+        trackWasSuccessfullyDeleted,
+    required TResult Function(_NotAddedToUserTracksString value)
+        notAddedToUserTracks,
+    required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
+  }) {
+    return notContainsElement(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
+    TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult? Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult? Function(_NoIDString value)? noID,
+    TResult? Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult? Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult? Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+  }) {
+    return notContainsElement?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
+    TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult Function(_NoIDString value)? noID,
+    TResult Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (notContainsElement != null) {
+      return notContainsElement(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NoContainsElementString implements AppStrings {
+  const factory _NoContainsElementString() = _$NoContainsElementStringImpl;
+}
+
+/// @nodoc
+abstract class _$$NoUpdateRightsStringImplCopyWith<$Res> {
+  factory _$$NoUpdateRightsStringImplCopyWith(_$NoUpdateRightsStringImpl value,
+          $Res Function(_$NoUpdateRightsStringImpl) then) =
+      __$$NoUpdateRightsStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NoUpdateRightsStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$NoUpdateRightsStringImpl>
+    implements _$$NoUpdateRightsStringImplCopyWith<$Res> {
+  __$$NoUpdateRightsStringImplCopyWithImpl(_$NoUpdateRightsStringImpl _value,
+      $Res Function(_$NoUpdateRightsStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NoUpdateRightsStringImpl implements _NoUpdateRightsString {
+  const _$NoUpdateRightsStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.noUpdateRights()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NoUpdateRightsStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+    required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
+    required TResult Function() deleteAndExit,
+    required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
+    required TResult Function() alreadyAddedToFavourites,
+    required TResult Function() noID,
+    required TResult Function() trackAddedSuccessfully,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() trackWasSuccessfullyDeleted,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
+  }) {
+    return noUpdateRights();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+    TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
+    TResult? Function()? deleteAndExit,
+    TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
+    TResult? Function()? alreadyAddedToFavourites,
+    TResult? Function()? noID,
+    TResult? Function()? trackAddedSuccessfully,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? trackWasSuccessfullyDeleted,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
+  }) {
+    return noUpdateRights?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
+    TResult Function()? deleteAndExit,
+    TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
+    TResult Function()? alreadyAddedToFavourites,
+    TResult Function()? noID,
+    TResult Function()? trackAddedSuccessfully,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? trackWasSuccessfullyDeleted,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (noUpdateRights != null) {
+      return noUpdateRights();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+    required TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
+        doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
+    required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
+    required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
+    required TResult Function(_$AlreadyAddedToFavouritesString value)
+        alreadyAddedToFavourites,
+    required TResult Function(_NoIDString value) noID,
+    required TResult Function(_TrackAddedSuccessfullyString value)
+        trackAddedSuccessfully,
+    required TResult Function(_NotAddedToFavouritesString value)
+        notAddedToFavorites,
+    required TResult Function(_TrackWasSuccessfullyDeletedString value)
+        trackWasSuccessfullyDeleted,
+    required TResult Function(_NotAddedToUserTracksString value)
+        notAddedToUserTracks,
+    required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
+  }) {
+    return noUpdateRights(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
+    TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult? Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult? Function(_NoIDString value)? noID,
+    TResult? Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult? Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult? Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+  }) {
+    return noUpdateRights?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
+    TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult Function(_NoIDString value)? noID,
+    TResult Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (noUpdateRights != null) {
+      return noUpdateRights(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NoUpdateRightsString implements AppStrings {
+  const factory _NoUpdateRightsString() = _$NoUpdateRightsStringImpl;
+}
+
+/// @nodoc
+abstract class _$$DataHasBeenSuccessfullyUpdatedStringImplCopyWith<$Res> {
+  factory _$$DataHasBeenSuccessfullyUpdatedStringImplCopyWith(
+          _$DataHasBeenSuccessfullyUpdatedStringImpl value,
+          $Res Function(_$DataHasBeenSuccessfullyUpdatedStringImpl) then) =
+      __$$DataHasBeenSuccessfullyUpdatedStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DataHasBeenSuccessfullyUpdatedStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res,
+        _$DataHasBeenSuccessfullyUpdatedStringImpl>
+    implements _$$DataHasBeenSuccessfullyUpdatedStringImplCopyWith<$Res> {
+  __$$DataHasBeenSuccessfullyUpdatedStringImplCopyWithImpl(
+      _$DataHasBeenSuccessfullyUpdatedStringImpl _value,
+      $Res Function(_$DataHasBeenSuccessfullyUpdatedStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$DataHasBeenSuccessfullyUpdatedStringImpl
+    implements _DataHasBeenSuccessfullyUpdatedString {
+  const _$DataHasBeenSuccessfullyUpdatedStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.dataHasBeenSuccessfullyUpdated()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DataHasBeenSuccessfullyUpdatedStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+    required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
+    required TResult Function() deleteAndExit,
+    required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
+    required TResult Function() alreadyAddedToFavourites,
+    required TResult Function() noID,
+    required TResult Function() trackAddedSuccessfully,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() trackWasSuccessfullyDeleted,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
+  }) {
+    return dataHasBeenSuccessfullyUpdated();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+    TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
+    TResult? Function()? deleteAndExit,
+    TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
+    TResult? Function()? alreadyAddedToFavourites,
+    TResult? Function()? noID,
+    TResult? Function()? trackAddedSuccessfully,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? trackWasSuccessfullyDeleted,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
+  }) {
+    return dataHasBeenSuccessfullyUpdated?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
+    TResult Function()? deleteAndExit,
+    TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
+    TResult Function()? alreadyAddedToFavourites,
+    TResult Function()? noID,
+    TResult Function()? trackAddedSuccessfully,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? trackWasSuccessfullyDeleted,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (dataHasBeenSuccessfullyUpdated != null) {
+      return dataHasBeenSuccessfullyUpdated();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+    required TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
+        doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
+    required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
+    required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
+    required TResult Function(_$AlreadyAddedToFavouritesString value)
+        alreadyAddedToFavourites,
+    required TResult Function(_NoIDString value) noID,
+    required TResult Function(_TrackAddedSuccessfullyString value)
+        trackAddedSuccessfully,
+    required TResult Function(_NotAddedToFavouritesString value)
+        notAddedToFavorites,
+    required TResult Function(_TrackWasSuccessfullyDeletedString value)
+        trackWasSuccessfullyDeleted,
+    required TResult Function(_NotAddedToUserTracksString value)
+        notAddedToUserTracks,
+    required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
+  }) {
+    return dataHasBeenSuccessfullyUpdated(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
+    TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult? Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult? Function(_NoIDString value)? noID,
+    TResult? Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult? Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult? Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+  }) {
+    return dataHasBeenSuccessfullyUpdated?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
+    TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult Function(_NoIDString value)? noID,
+    TResult Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (dataHasBeenSuccessfullyUpdated != null) {
+      return dataHasBeenSuccessfullyUpdated(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DataHasBeenSuccessfullyUpdatedString implements AppStrings {
+  const factory _DataHasBeenSuccessfullyUpdatedString() =
+      _$DataHasBeenSuccessfullyUpdatedStringImpl;
+}
+
+/// @nodoc
+abstract class _$$MemoryHasBeenSuccessfullyDeletedStringImplCopyWith<$Res> {
+  factory _$$MemoryHasBeenSuccessfullyDeletedStringImplCopyWith(
+          _$MemoryHasBeenSuccessfullyDeletedStringImpl value,
+          $Res Function(_$MemoryHasBeenSuccessfullyDeletedStringImpl) then) =
+      __$$MemoryHasBeenSuccessfullyDeletedStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$MemoryHasBeenSuccessfullyDeletedStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res,
+        _$MemoryHasBeenSuccessfullyDeletedStringImpl>
+    implements _$$MemoryHasBeenSuccessfullyDeletedStringImplCopyWith<$Res> {
+  __$$MemoryHasBeenSuccessfullyDeletedStringImplCopyWithImpl(
+      _$MemoryHasBeenSuccessfullyDeletedStringImpl _value,
+      $Res Function(_$MemoryHasBeenSuccessfullyDeletedStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$MemoryHasBeenSuccessfullyDeletedStringImpl
+    implements _MemoryHasBeenSuccessfullyDeletedString {
+  const _$MemoryHasBeenSuccessfullyDeletedStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.memoryHasBeenSuccessfullyDeleted()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MemoryHasBeenSuccessfullyDeletedStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+    required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
+    required TResult Function() deleteAndExit,
+    required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
+    required TResult Function() alreadyAddedToFavourites,
+    required TResult Function() noID,
+    required TResult Function() trackAddedSuccessfully,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() trackWasSuccessfullyDeleted,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
+  }) {
+    return memoryHasBeenSuccessfullyDeleted();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+    TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
+    TResult? Function()? deleteAndExit,
+    TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
+    TResult? Function()? alreadyAddedToFavourites,
+    TResult? Function()? noID,
+    TResult? Function()? trackAddedSuccessfully,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? trackWasSuccessfullyDeleted,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
+  }) {
+    return memoryHasBeenSuccessfullyDeleted?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
+    TResult Function()? deleteAndExit,
+    TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
+    TResult Function()? alreadyAddedToFavourites,
+    TResult Function()? noID,
+    TResult Function()? trackAddedSuccessfully,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? trackWasSuccessfullyDeleted,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (memoryHasBeenSuccessfullyDeleted != null) {
+      return memoryHasBeenSuccessfullyDeleted();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+    required TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
+        doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
+    required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
+    required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
+    required TResult Function(_$AlreadyAddedToFavouritesString value)
+        alreadyAddedToFavourites,
+    required TResult Function(_NoIDString value) noID,
+    required TResult Function(_TrackAddedSuccessfullyString value)
+        trackAddedSuccessfully,
+    required TResult Function(_NotAddedToFavouritesString value)
+        notAddedToFavorites,
+    required TResult Function(_TrackWasSuccessfullyDeletedString value)
+        trackWasSuccessfullyDeleted,
+    required TResult Function(_NotAddedToUserTracksString value)
+        notAddedToUserTracks,
+    required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
+  }) {
+    return memoryHasBeenSuccessfullyDeleted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
+    TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult? Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult? Function(_NoIDString value)? noID,
+    TResult? Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult? Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult? Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+  }) {
+    return memoryHasBeenSuccessfullyDeleted?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
+    TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult Function(_NoIDString value)? noID,
+    TResult Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (memoryHasBeenSuccessfullyDeleted != null) {
+      return memoryHasBeenSuccessfullyDeleted(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _MemoryHasBeenSuccessfullyDeletedString implements AppStrings {
+  const factory _MemoryHasBeenSuccessfullyDeletedString() =
+      _$MemoryHasBeenSuccessfullyDeletedStringImpl;
+}
+
+/// @nodoc
+abstract class _$$UserIsCreatorOfTheTrackStringImplCopyWith<$Res> {
+  factory _$$UserIsCreatorOfTheTrackStringImplCopyWith(
+          _$UserIsCreatorOfTheTrackStringImpl value,
+          $Res Function(_$UserIsCreatorOfTheTrackStringImpl) then) =
+      __$$UserIsCreatorOfTheTrackStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UserIsCreatorOfTheTrackStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$UserIsCreatorOfTheTrackStringImpl>
+    implements _$$UserIsCreatorOfTheTrackStringImplCopyWith<$Res> {
+  __$$UserIsCreatorOfTheTrackStringImplCopyWithImpl(
+      _$UserIsCreatorOfTheTrackStringImpl _value,
+      $Res Function(_$UserIsCreatorOfTheTrackStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$UserIsCreatorOfTheTrackStringImpl
+    implements _UserIsCreatorOfTheTrackString {
+  const _$UserIsCreatorOfTheTrackStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.userIsTheCreatorOfTheTrack()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UserIsCreatorOfTheTrackStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+    required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
+    required TResult Function() deleteAndExit,
+    required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
+    required TResult Function() alreadyAddedToFavourites,
+    required TResult Function() noID,
+    required TResult Function() trackAddedSuccessfully,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() trackWasSuccessfullyDeleted,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
+  }) {
+    return userIsTheCreatorOfTheTrack();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+    TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
+    TResult? Function()? deleteAndExit,
+    TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
+    TResult? Function()? alreadyAddedToFavourites,
+    TResult? Function()? noID,
+    TResult? Function()? trackAddedSuccessfully,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? trackWasSuccessfullyDeleted,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
+  }) {
+    return userIsTheCreatorOfTheTrack?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
+    TResult Function()? deleteAndExit,
+    TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
+    TResult Function()? alreadyAddedToFavourites,
+    TResult Function()? noID,
+    TResult Function()? trackAddedSuccessfully,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? trackWasSuccessfullyDeleted,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (userIsTheCreatorOfTheTrack != null) {
+      return userIsTheCreatorOfTheTrack();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+    required TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
+        doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
+    required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
+    required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
+    required TResult Function(_$AlreadyAddedToFavouritesString value)
+        alreadyAddedToFavourites,
+    required TResult Function(_NoIDString value) noID,
+    required TResult Function(_TrackAddedSuccessfullyString value)
+        trackAddedSuccessfully,
+    required TResult Function(_NotAddedToFavouritesString value)
+        notAddedToFavorites,
+    required TResult Function(_TrackWasSuccessfullyDeletedString value)
+        trackWasSuccessfullyDeleted,
+    required TResult Function(_NotAddedToUserTracksString value)
+        notAddedToUserTracks,
+    required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
+  }) {
+    return userIsTheCreatorOfTheTrack(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
+    TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult? Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult? Function(_NoIDString value)? noID,
+    TResult? Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult? Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult? Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+  }) {
+    return userIsTheCreatorOfTheTrack?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
+    TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult Function(_NoIDString value)? noID,
+    TResult Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (userIsTheCreatorOfTheTrack != null) {
+      return userIsTheCreatorOfTheTrack(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UserIsCreatorOfTheTrackString implements AppStrings {
+  const factory _UserIsCreatorOfTheTrackString() =
+      _$UserIsCreatorOfTheTrackStringImpl;
+}
+
+/// @nodoc
+abstract class _$$AlreadyContainsElementStringImplCopyWith<$Res> {
+  factory _$$AlreadyContainsElementStringImplCopyWith(
+          _$AlreadyContainsElementStringImpl value,
+          $Res Function(_$AlreadyContainsElementStringImpl) then) =
+      __$$AlreadyContainsElementStringImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AlreadyContainsElementStringImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$AlreadyContainsElementStringImpl>
+    implements _$$AlreadyContainsElementStringImplCopyWith<$Res> {
+  __$$AlreadyContainsElementStringImplCopyWithImpl(
+      _$AlreadyContainsElementStringImpl _value,
+      $Res Function(_$AlreadyContainsElementStringImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AlreadyContainsElementStringImpl
+    implements _AlreadyContainsElementString {
+  const _$AlreadyContainsElementStringImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.alreadyContainsElement()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AlreadyContainsElementStringImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+    required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
+    required TResult Function() deleteAndExit,
+    required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
+    required TResult Function() alreadyAddedToFavourites,
+    required TResult Function() noID,
+    required TResult Function() trackAddedSuccessfully,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() trackWasSuccessfullyDeleted,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
+  }) {
+    return alreadyContainsElement();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+    TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
+    TResult? Function()? deleteAndExit,
+    TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
+    TResult? Function()? alreadyAddedToFavourites,
+    TResult? Function()? noID,
+    TResult? Function()? trackAddedSuccessfully,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? trackWasSuccessfullyDeleted,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
+  }) {
+    return alreadyContainsElement?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
+    TResult Function()? deleteAndExit,
+    TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
+    TResult Function()? alreadyAddedToFavourites,
+    TResult Function()? noID,
+    TResult Function()? trackAddedSuccessfully,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? trackWasSuccessfullyDeleted,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (alreadyContainsElement != null) {
+      return alreadyContainsElement();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+    required TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
+        doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
+    required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
+    required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
+    required TResult Function(_$AlreadyAddedToFavouritesString value)
+        alreadyAddedToFavourites,
+    required TResult Function(_NoIDString value) noID,
+    required TResult Function(_TrackAddedSuccessfullyString value)
+        trackAddedSuccessfully,
+    required TResult Function(_NotAddedToFavouritesString value)
+        notAddedToFavorites,
+    required TResult Function(_TrackWasSuccessfullyDeletedString value)
+        trackWasSuccessfullyDeleted,
+    required TResult Function(_NotAddedToUserTracksString value)
+        notAddedToUserTracks,
+    required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
+  }) {
+    return alreadyContainsElement(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
+    TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult? Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult? Function(_NoIDString value)? noID,
+    TResult? Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult? Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult? Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+  }) {
+    return alreadyContainsElement?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
+    TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult Function(_NoIDString value)? noID,
+    TResult Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (alreadyContainsElement != null) {
+      return alreadyContainsElement(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AlreadyContainsElementString implements AppStrings {
+  const factory _AlreadyContainsElementString() =
+      _$AlreadyContainsElementStringImpl;
 }

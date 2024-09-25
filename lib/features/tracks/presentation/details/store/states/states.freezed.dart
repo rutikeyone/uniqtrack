@@ -20,18 +20,21 @@ mixin _$DetailsSheetState {
   TResult when<TResult extends Object?>({
     required TResult Function() pure,
     required TResult Function(TrackUI track) details,
+    required TResult Function(Memory memory) memory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? pure,
     TResult? Function(TrackUI track)? details,
+    TResult? Function(Memory memory)? memory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? pure,
     TResult Function(TrackUI track)? details,
+    TResult Function(Memory memory)? memory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$DetailsSheetState {
   TResult map<TResult extends Object?>({
     required TResult Function(_PureDetailsSheetState value) pure,
     required TResult Function(_DetailsSheetState value) details,
+    required TResult Function(_MemoryState value) memory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_PureDetailsSheetState value)? pure,
     TResult? Function(_DetailsSheetState value)? details,
+    TResult? Function(_MemoryState value)? memory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PureDetailsSheetState value)? pure,
     TResult Function(_DetailsSheetState value)? details,
+    TResult Function(_MemoryState value)? memory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -122,6 +128,7 @@ class _$PureDetailsSheetStateImpl implements _PureDetailsSheetState {
   TResult when<TResult extends Object?>({
     required TResult Function() pure,
     required TResult Function(TrackUI track) details,
+    required TResult Function(Memory memory) memory,
   }) {
     return pure();
   }
@@ -131,6 +138,7 @@ class _$PureDetailsSheetStateImpl implements _PureDetailsSheetState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? pure,
     TResult? Function(TrackUI track)? details,
+    TResult? Function(Memory memory)? memory,
   }) {
     return pure?.call();
   }
@@ -140,6 +148,7 @@ class _$PureDetailsSheetStateImpl implements _PureDetailsSheetState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? pure,
     TResult Function(TrackUI track)? details,
+    TResult Function(Memory memory)? memory,
     required TResult orElse(),
   }) {
     if (pure != null) {
@@ -153,6 +162,7 @@ class _$PureDetailsSheetStateImpl implements _PureDetailsSheetState {
   TResult map<TResult extends Object?>({
     required TResult Function(_PureDetailsSheetState value) pure,
     required TResult Function(_DetailsSheetState value) details,
+    required TResult Function(_MemoryState value) memory,
   }) {
     return pure(this);
   }
@@ -162,6 +172,7 @@ class _$PureDetailsSheetStateImpl implements _PureDetailsSheetState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_PureDetailsSheetState value)? pure,
     TResult? Function(_DetailsSheetState value)? details,
+    TResult? Function(_MemoryState value)? memory,
   }) {
     return pure?.call(this);
   }
@@ -171,6 +182,7 @@ class _$PureDetailsSheetStateImpl implements _PureDetailsSheetState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PureDetailsSheetState value)? pure,
     TResult Function(_DetailsSheetState value)? details,
+    TResult Function(_MemoryState value)? memory,
     required TResult orElse(),
   }) {
     if (pure != null) {
@@ -267,6 +279,7 @@ class _$DetailsSheetStateImpl implements _DetailsSheetState {
   TResult when<TResult extends Object?>({
     required TResult Function() pure,
     required TResult Function(TrackUI track) details,
+    required TResult Function(Memory memory) memory,
   }) {
     return details(track);
   }
@@ -276,6 +289,7 @@ class _$DetailsSheetStateImpl implements _DetailsSheetState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? pure,
     TResult? Function(TrackUI track)? details,
+    TResult? Function(Memory memory)? memory,
   }) {
     return details?.call(track);
   }
@@ -285,6 +299,7 @@ class _$DetailsSheetStateImpl implements _DetailsSheetState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? pure,
     TResult Function(TrackUI track)? details,
+    TResult Function(Memory memory)? memory,
     required TResult orElse(),
   }) {
     if (details != null) {
@@ -298,6 +313,7 @@ class _$DetailsSheetStateImpl implements _DetailsSheetState {
   TResult map<TResult extends Object?>({
     required TResult Function(_PureDetailsSheetState value) pure,
     required TResult Function(_DetailsSheetState value) details,
+    required TResult Function(_MemoryState value) memory,
   }) {
     return details(this);
   }
@@ -307,6 +323,7 @@ class _$DetailsSheetStateImpl implements _DetailsSheetState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_PureDetailsSheetState value)? pure,
     TResult? Function(_DetailsSheetState value)? details,
+    TResult? Function(_MemoryState value)? memory,
   }) {
     return details?.call(this);
   }
@@ -316,6 +333,7 @@ class _$DetailsSheetStateImpl implements _DetailsSheetState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PureDetailsSheetState value)? pure,
     TResult Function(_DetailsSheetState value)? details,
+    TResult Function(_MemoryState value)? memory,
     required TResult orElse(),
   }) {
     if (details != null) {
@@ -339,25 +357,181 @@ abstract class _DetailsSheetState implements DetailsSheetState {
 }
 
 /// @nodoc
+abstract class _$$MemoryStateImplCopyWith<$Res> {
+  factory _$$MemoryStateImplCopyWith(
+          _$MemoryStateImpl value, $Res Function(_$MemoryStateImpl) then) =
+      __$$MemoryStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Memory memory});
+
+  $MemoryCopyWith<$Res> get memory;
+}
+
+/// @nodoc
+class __$$MemoryStateImplCopyWithImpl<$Res>
+    extends _$DetailsSheetStateCopyWithImpl<$Res, _$MemoryStateImpl>
+    implements _$$MemoryStateImplCopyWith<$Res> {
+  __$$MemoryStateImplCopyWithImpl(
+      _$MemoryStateImpl _value, $Res Function(_$MemoryStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DetailsSheetState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? memory = null,
+  }) {
+    return _then(_$MemoryStateImpl(
+      memory: null == memory
+          ? _value.memory
+          : memory // ignore: cast_nullable_to_non_nullable
+              as Memory,
+    ));
+  }
+
+  /// Create a copy of DetailsSheetState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $MemoryCopyWith<$Res> get memory {
+    return $MemoryCopyWith<$Res>(_value.memory, (value) {
+      return _then(_value.copyWith(memory: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$MemoryStateImpl implements _MemoryState {
+  const _$MemoryStateImpl({required this.memory});
+
+  @override
+  final Memory memory;
+
+  @override
+  String toString() {
+    return 'DetailsSheetState.memory(memory: $memory)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MemoryStateImpl &&
+            (identical(other.memory, memory) || other.memory == memory));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, memory);
+
+  /// Create a copy of DetailsSheetState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MemoryStateImplCopyWith<_$MemoryStateImpl> get copyWith =>
+      __$$MemoryStateImplCopyWithImpl<_$MemoryStateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() pure,
+    required TResult Function(TrackUI track) details,
+    required TResult Function(Memory memory) memory,
+  }) {
+    return memory(this.memory);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? pure,
+    TResult? Function(TrackUI track)? details,
+    TResult? Function(Memory memory)? memory,
+  }) {
+    return memory?.call(this.memory);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? pure,
+    TResult Function(TrackUI track)? details,
+    TResult Function(Memory memory)? memory,
+    required TResult orElse(),
+  }) {
+    if (memory != null) {
+      return memory(this.memory);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PureDetailsSheetState value) pure,
+    required TResult Function(_DetailsSheetState value) details,
+    required TResult Function(_MemoryState value) memory,
+  }) {
+    return memory(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_PureDetailsSheetState value)? pure,
+    TResult? Function(_DetailsSheetState value)? details,
+    TResult? Function(_MemoryState value)? memory,
+  }) {
+    return memory?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PureDetailsSheetState value)? pure,
+    TResult Function(_DetailsSheetState value)? details,
+    TResult Function(_MemoryState value)? memory,
+    required TResult orElse(),
+  }) {
+    if (memory != null) {
+      return memory(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _MemoryState implements DetailsSheetState {
+  const factory _MemoryState({required final Memory memory}) =
+      _$MemoryStateImpl;
+
+  Memory get memory;
+
+  /// Create a copy of DetailsSheetState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MemoryStateImplCopyWith<_$MemoryStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$DetailsActions {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() navigateBack,
-    required TResult Function() closeTrackDetailsDialog,
     required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? navigateBack,
-    TResult? Function()? closeTrackDetailsDialog,
     TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? navigateBack,
-    TResult Function()? closeTrackDetailsDialog,
     TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) =>
@@ -365,24 +539,18 @@ mixin _$DetailsActions {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_NavigateBackDetailsAction value) navigateBack,
-    required TResult Function(_CloseTrackDetailsDialogAction value)
-        closeTrackDetailsDialog,
     required TResult Function(_CameraUpdateAction value) animateCamera,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_NavigateBackDetailsAction value)? navigateBack,
-    TResult? Function(_CloseTrackDetailsDialogAction value)?
-        closeTrackDetailsDialog,
     TResult? Function(_CameraUpdateAction value)? animateCamera,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NavigateBackDetailsAction value)? navigateBack,
-    TResult Function(_CloseTrackDetailsDialogAction value)?
-        closeTrackDetailsDialog,
     TResult Function(_CameraUpdateAction value)? animateCamera,
     required TResult orElse(),
   }) =>
@@ -455,7 +623,6 @@ class _$NavigateBackDetailsActionImpl implements _NavigateBackDetailsAction {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() navigateBack,
-    required TResult Function() closeTrackDetailsDialog,
     required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) {
     return navigateBack();
@@ -465,7 +632,6 @@ class _$NavigateBackDetailsActionImpl implements _NavigateBackDetailsAction {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? navigateBack,
-    TResult? Function()? closeTrackDetailsDialog,
     TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) {
     return navigateBack?.call();
@@ -475,7 +641,6 @@ class _$NavigateBackDetailsActionImpl implements _NavigateBackDetailsAction {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? navigateBack,
-    TResult Function()? closeTrackDetailsDialog,
     TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) {
@@ -489,8 +654,6 @@ class _$NavigateBackDetailsActionImpl implements _NavigateBackDetailsAction {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_NavigateBackDetailsAction value) navigateBack,
-    required TResult Function(_CloseTrackDetailsDialogAction value)
-        closeTrackDetailsDialog,
     required TResult Function(_CameraUpdateAction value) animateCamera,
   }) {
     return navigateBack(this);
@@ -500,8 +663,6 @@ class _$NavigateBackDetailsActionImpl implements _NavigateBackDetailsAction {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_NavigateBackDetailsAction value)? navigateBack,
-    TResult? Function(_CloseTrackDetailsDialogAction value)?
-        closeTrackDetailsDialog,
     TResult? Function(_CameraUpdateAction value)? animateCamera,
   }) {
     return navigateBack?.call(this);
@@ -511,8 +672,6 @@ class _$NavigateBackDetailsActionImpl implements _NavigateBackDetailsAction {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NavigateBackDetailsAction value)? navigateBack,
-    TResult Function(_CloseTrackDetailsDialogAction value)?
-        closeTrackDetailsDialog,
     TResult Function(_CameraUpdateAction value)? animateCamera,
     required TResult orElse(),
   }) {
@@ -525,126 +684,6 @@ class _$NavigateBackDetailsActionImpl implements _NavigateBackDetailsAction {
 
 abstract class _NavigateBackDetailsAction implements DetailsActions {
   const factory _NavigateBackDetailsAction() = _$NavigateBackDetailsActionImpl;
-}
-
-/// @nodoc
-abstract class _$$CloseTrackDetailsDialogActionImplCopyWith<$Res> {
-  factory _$$CloseTrackDetailsDialogActionImplCopyWith(
-          _$CloseTrackDetailsDialogActionImpl value,
-          $Res Function(_$CloseTrackDetailsDialogActionImpl) then) =
-      __$$CloseTrackDetailsDialogActionImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$CloseTrackDetailsDialogActionImplCopyWithImpl<$Res>
-    extends _$DetailsActionsCopyWithImpl<$Res,
-        _$CloseTrackDetailsDialogActionImpl>
-    implements _$$CloseTrackDetailsDialogActionImplCopyWith<$Res> {
-  __$$CloseTrackDetailsDialogActionImplCopyWithImpl(
-      _$CloseTrackDetailsDialogActionImpl _value,
-      $Res Function(_$CloseTrackDetailsDialogActionImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of DetailsActions
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$CloseTrackDetailsDialogActionImpl
-    implements _CloseTrackDetailsDialogAction {
-  const _$CloseTrackDetailsDialogActionImpl();
-
-  @override
-  String toString() {
-    return 'DetailsActions.closeTrackDetailsDialog()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CloseTrackDetailsDialogActionImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() navigateBack,
-    required TResult Function() closeTrackDetailsDialog,
-    required TResult Function(CameraUpdate cameraUpdate) animateCamera,
-  }) {
-    return closeTrackDetailsDialog();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? navigateBack,
-    TResult? Function()? closeTrackDetailsDialog,
-    TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
-  }) {
-    return closeTrackDetailsDialog?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? navigateBack,
-    TResult Function()? closeTrackDetailsDialog,
-    TResult Function(CameraUpdate cameraUpdate)? animateCamera,
-    required TResult orElse(),
-  }) {
-    if (closeTrackDetailsDialog != null) {
-      return closeTrackDetailsDialog();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_NavigateBackDetailsAction value) navigateBack,
-    required TResult Function(_CloseTrackDetailsDialogAction value)
-        closeTrackDetailsDialog,
-    required TResult Function(_CameraUpdateAction value) animateCamera,
-  }) {
-    return closeTrackDetailsDialog(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_NavigateBackDetailsAction value)? navigateBack,
-    TResult? Function(_CloseTrackDetailsDialogAction value)?
-        closeTrackDetailsDialog,
-    TResult? Function(_CameraUpdateAction value)? animateCamera,
-  }) {
-    return closeTrackDetailsDialog?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_NavigateBackDetailsAction value)? navigateBack,
-    TResult Function(_CloseTrackDetailsDialogAction value)?
-        closeTrackDetailsDialog,
-    TResult Function(_CameraUpdateAction value)? animateCamera,
-    required TResult orElse(),
-  }) {
-    if (closeTrackDetailsDialog != null) {
-      return closeTrackDetailsDialog(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _CloseTrackDetailsDialogAction implements DetailsActions {
-  const factory _CloseTrackDetailsDialogAction() =
-      _$CloseTrackDetailsDialogActionImpl;
 }
 
 /// @nodoc
@@ -718,7 +757,6 @@ class _$CameraUpdateActionImpl implements _CameraUpdateAction {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() navigateBack,
-    required TResult Function() closeTrackDetailsDialog,
     required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) {
     return animateCamera(cameraUpdate);
@@ -728,7 +766,6 @@ class _$CameraUpdateActionImpl implements _CameraUpdateAction {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? navigateBack,
-    TResult? Function()? closeTrackDetailsDialog,
     TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) {
     return animateCamera?.call(cameraUpdate);
@@ -738,7 +775,6 @@ class _$CameraUpdateActionImpl implements _CameraUpdateAction {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? navigateBack,
-    TResult Function()? closeTrackDetailsDialog,
     TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) {
@@ -752,8 +788,6 @@ class _$CameraUpdateActionImpl implements _CameraUpdateAction {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_NavigateBackDetailsAction value) navigateBack,
-    required TResult Function(_CloseTrackDetailsDialogAction value)
-        closeTrackDetailsDialog,
     required TResult Function(_CameraUpdateAction value) animateCamera,
   }) {
     return animateCamera(this);
@@ -763,8 +797,6 @@ class _$CameraUpdateActionImpl implements _CameraUpdateAction {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_NavigateBackDetailsAction value)? navigateBack,
-    TResult? Function(_CloseTrackDetailsDialogAction value)?
-        closeTrackDetailsDialog,
     TResult? Function(_CameraUpdateAction value)? animateCamera,
   }) {
     return animateCamera?.call(this);
@@ -774,8 +806,6 @@ class _$CameraUpdateActionImpl implements _CameraUpdateAction {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NavigateBackDetailsAction value)? navigateBack,
-    TResult Function(_CloseTrackDetailsDialogAction value)?
-        closeTrackDetailsDialog,
     TResult Function(_CameraUpdateAction value)? animateCamera,
     required TResult orElse(),
   }) {

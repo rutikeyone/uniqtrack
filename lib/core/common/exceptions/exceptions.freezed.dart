@@ -7577,7 +7577,11 @@ mixin _$AccessErrorCategory {
     required TResult Function() noID,
     required TResult Function() notAddedToFavorites,
     required TResult Function() notAddedToUserTracks,
+    required TResult Function() noUpdateRights,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -7586,7 +7590,11 @@ mixin _$AccessErrorCategory {
     TResult? Function()? noID,
     TResult? Function()? notAddedToFavorites,
     TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noUpdateRights,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -7595,7 +7603,11 @@ mixin _$AccessErrorCategory {
     TResult Function()? noID,
     TResult Function()? notAddedToFavorites,
     TResult Function()? notAddedToUserTracks,
+    TResult Function()? noUpdateRights,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -7608,7 +7620,14 @@ mixin _$AccessErrorCategory {
         notAddedToFavorites,
     required TResult Function(_NotAddedToUserTracksCategory value)
         notAddedToUserTracks,
+    required TResult Function(_NoUpdateRightsCategory value) noUpdateRights,
     required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+    required TResult Function(_NoContainsElementCategory value)
+        notContainsElement,
+    required TResult Function(_UserTheCreatorOfTheTrackCategory value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementCategory value)
+        alreadyContainsElement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -7619,7 +7638,13 @@ mixin _$AccessErrorCategory {
     TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
     TResult? Function(_NotAddedToUserTracksCategory value)?
         notAddedToUserTracks,
+    TResult? Function(_NoUpdateRightsCategory value)? noUpdateRights,
     TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult? Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult? Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -7629,7 +7654,13 @@ mixin _$AccessErrorCategory {
     TResult Function(_NoIDErrorCategory value)? noID,
     TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
     TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoUpdateRightsCategory value)? noUpdateRights,
     TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -7714,7 +7745,11 @@ class _$AlreadyAddedInFavourteErrorCategoryImpl
     required TResult Function() noID,
     required TResult Function() notAddedToFavorites,
     required TResult Function() notAddedToUserTracks,
+    required TResult Function() noUpdateRights,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return alreadyAddedInFavourite();
   }
@@ -7726,7 +7761,11 @@ class _$AlreadyAddedInFavourteErrorCategoryImpl
     TResult? Function()? noID,
     TResult? Function()? notAddedToFavorites,
     TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noUpdateRights,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return alreadyAddedInFavourite?.call();
   }
@@ -7738,7 +7777,11 @@ class _$AlreadyAddedInFavourteErrorCategoryImpl
     TResult Function()? noID,
     TResult Function()? notAddedToFavorites,
     TResult Function()? notAddedToUserTracks,
+    TResult Function()? noUpdateRights,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (alreadyAddedInFavourite != null) {
@@ -7757,7 +7800,14 @@ class _$AlreadyAddedInFavourteErrorCategoryImpl
         notAddedToFavorites,
     required TResult Function(_NotAddedToUserTracksCategory value)
         notAddedToUserTracks,
+    required TResult Function(_NoUpdateRightsCategory value) noUpdateRights,
     required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+    required TResult Function(_NoContainsElementCategory value)
+        notContainsElement,
+    required TResult Function(_UserTheCreatorOfTheTrackCategory value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementCategory value)
+        alreadyContainsElement,
   }) {
     return alreadyAddedInFavourite(this);
   }
@@ -7771,7 +7821,13 @@ class _$AlreadyAddedInFavourteErrorCategoryImpl
     TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
     TResult? Function(_NotAddedToUserTracksCategory value)?
         notAddedToUserTracks,
+    TResult? Function(_NoUpdateRightsCategory value)? noUpdateRights,
     TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult? Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult? Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
   }) {
     return alreadyAddedInFavourite?.call(this);
   }
@@ -7784,7 +7840,13 @@ class _$AlreadyAddedInFavourteErrorCategoryImpl
     TResult Function(_NoIDErrorCategory value)? noID,
     TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
     TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoUpdateRightsCategory value)? noUpdateRights,
     TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (alreadyAddedInFavourite != null) {
@@ -7853,7 +7915,11 @@ class _$NoIDErrorCategoryImpl
     required TResult Function() noID,
     required TResult Function() notAddedToFavorites,
     required TResult Function() notAddedToUserTracks,
+    required TResult Function() noUpdateRights,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return noID();
   }
@@ -7865,7 +7931,11 @@ class _$NoIDErrorCategoryImpl
     TResult? Function()? noID,
     TResult? Function()? notAddedToFavorites,
     TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noUpdateRights,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return noID?.call();
   }
@@ -7877,7 +7947,11 @@ class _$NoIDErrorCategoryImpl
     TResult Function()? noID,
     TResult Function()? notAddedToFavorites,
     TResult Function()? notAddedToUserTracks,
+    TResult Function()? noUpdateRights,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (noID != null) {
@@ -7896,7 +7970,14 @@ class _$NoIDErrorCategoryImpl
         notAddedToFavorites,
     required TResult Function(_NotAddedToUserTracksCategory value)
         notAddedToUserTracks,
+    required TResult Function(_NoUpdateRightsCategory value) noUpdateRights,
     required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+    required TResult Function(_NoContainsElementCategory value)
+        notContainsElement,
+    required TResult Function(_UserTheCreatorOfTheTrackCategory value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementCategory value)
+        alreadyContainsElement,
   }) {
     return noID(this);
   }
@@ -7910,7 +7991,13 @@ class _$NoIDErrorCategoryImpl
     TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
     TResult? Function(_NotAddedToUserTracksCategory value)?
         notAddedToUserTracks,
+    TResult? Function(_NoUpdateRightsCategory value)? noUpdateRights,
     TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult? Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult? Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
   }) {
     return noID?.call(this);
   }
@@ -7923,7 +8010,13 @@ class _$NoIDErrorCategoryImpl
     TResult Function(_NoIDErrorCategory value)? noID,
     TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
     TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoUpdateRightsCategory value)? noUpdateRights,
     TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (noID != null) {
@@ -7995,7 +8088,11 @@ class _$NotAddedToFavouritesCategoryImpl
     required TResult Function() noID,
     required TResult Function() notAddedToFavorites,
     required TResult Function() notAddedToUserTracks,
+    required TResult Function() noUpdateRights,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return notAddedToFavorites();
   }
@@ -8007,7 +8104,11 @@ class _$NotAddedToFavouritesCategoryImpl
     TResult? Function()? noID,
     TResult? Function()? notAddedToFavorites,
     TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noUpdateRights,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return notAddedToFavorites?.call();
   }
@@ -8019,7 +8120,11 @@ class _$NotAddedToFavouritesCategoryImpl
     TResult Function()? noID,
     TResult Function()? notAddedToFavorites,
     TResult Function()? notAddedToUserTracks,
+    TResult Function()? noUpdateRights,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (notAddedToFavorites != null) {
@@ -8038,7 +8143,14 @@ class _$NotAddedToFavouritesCategoryImpl
         notAddedToFavorites,
     required TResult Function(_NotAddedToUserTracksCategory value)
         notAddedToUserTracks,
+    required TResult Function(_NoUpdateRightsCategory value) noUpdateRights,
     required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+    required TResult Function(_NoContainsElementCategory value)
+        notContainsElement,
+    required TResult Function(_UserTheCreatorOfTheTrackCategory value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementCategory value)
+        alreadyContainsElement,
   }) {
     return notAddedToFavorites(this);
   }
@@ -8052,7 +8164,13 @@ class _$NotAddedToFavouritesCategoryImpl
     TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
     TResult? Function(_NotAddedToUserTracksCategory value)?
         notAddedToUserTracks,
+    TResult? Function(_NoUpdateRightsCategory value)? noUpdateRights,
     TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult? Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult? Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
   }) {
     return notAddedToFavorites?.call(this);
   }
@@ -8065,7 +8183,13 @@ class _$NotAddedToFavouritesCategoryImpl
     TResult Function(_NoIDErrorCategory value)? noID,
     TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
     TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoUpdateRightsCategory value)? noUpdateRights,
     TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (notAddedToFavorites != null) {
@@ -8138,7 +8262,11 @@ class _$NotAddedToUserTracksCategoryImpl
     required TResult Function() noID,
     required TResult Function() notAddedToFavorites,
     required TResult Function() notAddedToUserTracks,
+    required TResult Function() noUpdateRights,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return notAddedToUserTracks();
   }
@@ -8150,7 +8278,11 @@ class _$NotAddedToUserTracksCategoryImpl
     TResult? Function()? noID,
     TResult? Function()? notAddedToFavorites,
     TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noUpdateRights,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return notAddedToUserTracks?.call();
   }
@@ -8162,7 +8294,11 @@ class _$NotAddedToUserTracksCategoryImpl
     TResult Function()? noID,
     TResult Function()? notAddedToFavorites,
     TResult Function()? notAddedToUserTracks,
+    TResult Function()? noUpdateRights,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (notAddedToUserTracks != null) {
@@ -8181,7 +8317,14 @@ class _$NotAddedToUserTracksCategoryImpl
         notAddedToFavorites,
     required TResult Function(_NotAddedToUserTracksCategory value)
         notAddedToUserTracks,
+    required TResult Function(_NoUpdateRightsCategory value) noUpdateRights,
     required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+    required TResult Function(_NoContainsElementCategory value)
+        notContainsElement,
+    required TResult Function(_UserTheCreatorOfTheTrackCategory value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementCategory value)
+        alreadyContainsElement,
   }) {
     return notAddedToUserTracks(this);
   }
@@ -8195,7 +8338,13 @@ class _$NotAddedToUserTracksCategoryImpl
     TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
     TResult? Function(_NotAddedToUserTracksCategory value)?
         notAddedToUserTracks,
+    TResult? Function(_NoUpdateRightsCategory value)? noUpdateRights,
     TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult? Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult? Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
   }) {
     return notAddedToUserTracks?.call(this);
   }
@@ -8208,7 +8357,13 @@ class _$NotAddedToUserTracksCategoryImpl
     TResult Function(_NoIDErrorCategory value)? noID,
     TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
     TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoUpdateRightsCategory value)? noUpdateRights,
     TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (notAddedToUserTracks != null) {
@@ -8221,6 +8376,179 @@ class _$NotAddedToUserTracksCategoryImpl
 abstract class _NotAddedToUserTracksCategory implements AccessErrorCategory {
   const factory _NotAddedToUserTracksCategory() =
       _$NotAddedToUserTracksCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$NoUpdateRightsCategoryImplCopyWith<$Res> {
+  factory _$$NoUpdateRightsCategoryImplCopyWith(
+          _$NoUpdateRightsCategoryImpl value,
+          $Res Function(_$NoUpdateRightsCategoryImpl) then) =
+      __$$NoUpdateRightsCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NoUpdateRightsCategoryImplCopyWithImpl<$Res>
+    extends _$AccessErrorCategoryCopyWithImpl<$Res,
+        _$NoUpdateRightsCategoryImpl>
+    implements _$$NoUpdateRightsCategoryImplCopyWith<$Res> {
+  __$$NoUpdateRightsCategoryImplCopyWithImpl(
+      _$NoUpdateRightsCategoryImpl _value,
+      $Res Function(_$NoUpdateRightsCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AccessErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NoUpdateRightsCategoryImpl
+    with DiagnosticableTreeMixin
+    implements _NoUpdateRightsCategory {
+  const _$NoUpdateRightsCategoryImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AccessErrorCategory.noUpdateRights()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'AccessErrorCategory.noUpdateRights'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NoUpdateRightsCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() alreadyAddedInFavourite,
+    required TResult Function() noID,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noUpdateRights,
+    required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
+  }) {
+    return noUpdateRights();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? alreadyAddedInFavourite,
+    TResult? Function()? noID,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
+  }) {
+    return noUpdateRights?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alreadyAddedInFavourite,
+    TResult Function()? noID,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noUpdateRights,
+    TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (noUpdateRights != null) {
+      return noUpdateRights();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AlreadyAddedInFavourteErrorCategory value)
+        alreadyAddedInFavourite,
+    required TResult Function(_NoIDErrorCategory value) noID,
+    required TResult Function(_NotAddedToFavouritesCategory value)
+        notAddedToFavorites,
+    required TResult Function(_NotAddedToUserTracksCategory value)
+        notAddedToUserTracks,
+    required TResult Function(_NoUpdateRightsCategory value) noUpdateRights,
+    required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+    required TResult Function(_NoContainsElementCategory value)
+        notContainsElement,
+    required TResult Function(_UserTheCreatorOfTheTrackCategory value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementCategory value)
+        alreadyContainsElement,
+  }) {
+    return noUpdateRights(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult? Function(_NoIDErrorCategory value)? noID,
+    TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult? Function(_NotAddedToUserTracksCategory value)?
+        notAddedToUserTracks,
+    TResult? Function(_NoUpdateRightsCategory value)? noUpdateRights,
+    TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult? Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult? Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
+  }) {
+    return noUpdateRights?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult Function(_NoIDErrorCategory value)? noID,
+    TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoUpdateRightsCategory value)? noUpdateRights,
+    TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (noUpdateRights != null) {
+      return noUpdateRights(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NoUpdateRightsCategory implements AccessErrorCategory {
+  const factory _NoUpdateRightsCategory() = _$NoUpdateRightsCategoryImpl;
 }
 
 /// @nodoc
@@ -8281,7 +8609,11 @@ class _$NoRemoveRightsCategoryImpl
     required TResult Function() noID,
     required TResult Function() notAddedToFavorites,
     required TResult Function() notAddedToUserTracks,
+    required TResult Function() noUpdateRights,
     required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
   }) {
     return noRemoveRights();
   }
@@ -8293,7 +8625,11 @@ class _$NoRemoveRightsCategoryImpl
     TResult? Function()? noID,
     TResult? Function()? notAddedToFavorites,
     TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noUpdateRights,
     TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
   }) {
     return noRemoveRights?.call();
   }
@@ -8305,7 +8641,11 @@ class _$NoRemoveRightsCategoryImpl
     TResult Function()? noID,
     TResult Function()? notAddedToFavorites,
     TResult Function()? notAddedToUserTracks,
+    TResult Function()? noUpdateRights,
     TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (noRemoveRights != null) {
@@ -8324,7 +8664,14 @@ class _$NoRemoveRightsCategoryImpl
         notAddedToFavorites,
     required TResult Function(_NotAddedToUserTracksCategory value)
         notAddedToUserTracks,
+    required TResult Function(_NoUpdateRightsCategory value) noUpdateRights,
     required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+    required TResult Function(_NoContainsElementCategory value)
+        notContainsElement,
+    required TResult Function(_UserTheCreatorOfTheTrackCategory value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementCategory value)
+        alreadyContainsElement,
   }) {
     return noRemoveRights(this);
   }
@@ -8338,7 +8685,13 @@ class _$NoRemoveRightsCategoryImpl
     TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
     TResult? Function(_NotAddedToUserTracksCategory value)?
         notAddedToUserTracks,
+    TResult? Function(_NoUpdateRightsCategory value)? noUpdateRights,
     TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult? Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult? Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
   }) {
     return noRemoveRights?.call(this);
   }
@@ -8351,7 +8704,13 @@ class _$NoRemoveRightsCategoryImpl
     TResult Function(_NoIDErrorCategory value)? noID,
     TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
     TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoUpdateRightsCategory value)? noUpdateRights,
     TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
     required TResult orElse(),
   }) {
     if (noRemoveRights != null) {
@@ -8363,4 +8722,526 @@ class _$NoRemoveRightsCategoryImpl
 
 abstract class _NoRemoveRightsCategory implements AccessErrorCategory {
   const factory _NoRemoveRightsCategory() = _$NoRemoveRightsCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$NoContainsElementCategoryImplCopyWith<$Res> {
+  factory _$$NoContainsElementCategoryImplCopyWith(
+          _$NoContainsElementCategoryImpl value,
+          $Res Function(_$NoContainsElementCategoryImpl) then) =
+      __$$NoContainsElementCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NoContainsElementCategoryImplCopyWithImpl<$Res>
+    extends _$AccessErrorCategoryCopyWithImpl<$Res,
+        _$NoContainsElementCategoryImpl>
+    implements _$$NoContainsElementCategoryImplCopyWith<$Res> {
+  __$$NoContainsElementCategoryImplCopyWithImpl(
+      _$NoContainsElementCategoryImpl _value,
+      $Res Function(_$NoContainsElementCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AccessErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$NoContainsElementCategoryImpl
+    with DiagnosticableTreeMixin
+    implements _NoContainsElementCategory {
+  const _$NoContainsElementCategoryImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AccessErrorCategory.notContainsElement()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'AccessErrorCategory.notContainsElement'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NoContainsElementCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() alreadyAddedInFavourite,
+    required TResult Function() noID,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noUpdateRights,
+    required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
+  }) {
+    return notContainsElement();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? alreadyAddedInFavourite,
+    TResult? Function()? noID,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
+  }) {
+    return notContainsElement?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alreadyAddedInFavourite,
+    TResult Function()? noID,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noUpdateRights,
+    TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (notContainsElement != null) {
+      return notContainsElement();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AlreadyAddedInFavourteErrorCategory value)
+        alreadyAddedInFavourite,
+    required TResult Function(_NoIDErrorCategory value) noID,
+    required TResult Function(_NotAddedToFavouritesCategory value)
+        notAddedToFavorites,
+    required TResult Function(_NotAddedToUserTracksCategory value)
+        notAddedToUserTracks,
+    required TResult Function(_NoUpdateRightsCategory value) noUpdateRights,
+    required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+    required TResult Function(_NoContainsElementCategory value)
+        notContainsElement,
+    required TResult Function(_UserTheCreatorOfTheTrackCategory value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementCategory value)
+        alreadyContainsElement,
+  }) {
+    return notContainsElement(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult? Function(_NoIDErrorCategory value)? noID,
+    TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult? Function(_NotAddedToUserTracksCategory value)?
+        notAddedToUserTracks,
+    TResult? Function(_NoUpdateRightsCategory value)? noUpdateRights,
+    TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult? Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult? Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
+  }) {
+    return notContainsElement?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult Function(_NoIDErrorCategory value)? noID,
+    TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoUpdateRightsCategory value)? noUpdateRights,
+    TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (notContainsElement != null) {
+      return notContainsElement(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NoContainsElementCategory implements AccessErrorCategory {
+  const factory _NoContainsElementCategory() = _$NoContainsElementCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$UserTheCreatorOfTheTrackCategoryImplCopyWith<$Res> {
+  factory _$$UserTheCreatorOfTheTrackCategoryImplCopyWith(
+          _$UserTheCreatorOfTheTrackCategoryImpl value,
+          $Res Function(_$UserTheCreatorOfTheTrackCategoryImpl) then) =
+      __$$UserTheCreatorOfTheTrackCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UserTheCreatorOfTheTrackCategoryImplCopyWithImpl<$Res>
+    extends _$AccessErrorCategoryCopyWithImpl<$Res,
+        _$UserTheCreatorOfTheTrackCategoryImpl>
+    implements _$$UserTheCreatorOfTheTrackCategoryImplCopyWith<$Res> {
+  __$$UserTheCreatorOfTheTrackCategoryImplCopyWithImpl(
+      _$UserTheCreatorOfTheTrackCategoryImpl _value,
+      $Res Function(_$UserTheCreatorOfTheTrackCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AccessErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$UserTheCreatorOfTheTrackCategoryImpl
+    with DiagnosticableTreeMixin
+    implements _UserTheCreatorOfTheTrackCategory {
+  const _$UserTheCreatorOfTheTrackCategoryImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AccessErrorCategory.userIsTheCreatorOfTheTrack()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'AccessErrorCategory.userIsTheCreatorOfTheTrack'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UserTheCreatorOfTheTrackCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() alreadyAddedInFavourite,
+    required TResult Function() noID,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noUpdateRights,
+    required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
+  }) {
+    return userIsTheCreatorOfTheTrack();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? alreadyAddedInFavourite,
+    TResult? Function()? noID,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
+  }) {
+    return userIsTheCreatorOfTheTrack?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alreadyAddedInFavourite,
+    TResult Function()? noID,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noUpdateRights,
+    TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (userIsTheCreatorOfTheTrack != null) {
+      return userIsTheCreatorOfTheTrack();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AlreadyAddedInFavourteErrorCategory value)
+        alreadyAddedInFavourite,
+    required TResult Function(_NoIDErrorCategory value) noID,
+    required TResult Function(_NotAddedToFavouritesCategory value)
+        notAddedToFavorites,
+    required TResult Function(_NotAddedToUserTracksCategory value)
+        notAddedToUserTracks,
+    required TResult Function(_NoUpdateRightsCategory value) noUpdateRights,
+    required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+    required TResult Function(_NoContainsElementCategory value)
+        notContainsElement,
+    required TResult Function(_UserTheCreatorOfTheTrackCategory value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementCategory value)
+        alreadyContainsElement,
+  }) {
+    return userIsTheCreatorOfTheTrack(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult? Function(_NoIDErrorCategory value)? noID,
+    TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult? Function(_NotAddedToUserTracksCategory value)?
+        notAddedToUserTracks,
+    TResult? Function(_NoUpdateRightsCategory value)? noUpdateRights,
+    TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult? Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult? Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
+  }) {
+    return userIsTheCreatorOfTheTrack?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult Function(_NoIDErrorCategory value)? noID,
+    TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoUpdateRightsCategory value)? noUpdateRights,
+    TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (userIsTheCreatorOfTheTrack != null) {
+      return userIsTheCreatorOfTheTrack(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UserTheCreatorOfTheTrackCategory
+    implements AccessErrorCategory {
+  const factory _UserTheCreatorOfTheTrackCategory() =
+      _$UserTheCreatorOfTheTrackCategoryImpl;
+}
+
+/// @nodoc
+abstract class _$$AlreadyContainsElementCategoryImplCopyWith<$Res> {
+  factory _$$AlreadyContainsElementCategoryImplCopyWith(
+          _$AlreadyContainsElementCategoryImpl value,
+          $Res Function(_$AlreadyContainsElementCategoryImpl) then) =
+      __$$AlreadyContainsElementCategoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AlreadyContainsElementCategoryImplCopyWithImpl<$Res>
+    extends _$AccessErrorCategoryCopyWithImpl<$Res,
+        _$AlreadyContainsElementCategoryImpl>
+    implements _$$AlreadyContainsElementCategoryImplCopyWith<$Res> {
+  __$$AlreadyContainsElementCategoryImplCopyWithImpl(
+      _$AlreadyContainsElementCategoryImpl _value,
+      $Res Function(_$AlreadyContainsElementCategoryImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AccessErrorCategory
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AlreadyContainsElementCategoryImpl
+    with DiagnosticableTreeMixin
+    implements _AlreadyContainsElementCategory {
+  const _$AlreadyContainsElementCategoryImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AccessErrorCategory.alreadyContainsElement()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'AccessErrorCategory.alreadyContainsElement'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AlreadyContainsElementCategoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() alreadyAddedInFavourite,
+    required TResult Function() noID,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noUpdateRights,
+    required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
+  }) {
+    return alreadyContainsElement();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? alreadyAddedInFavourite,
+    TResult? Function()? noID,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
+  }) {
+    return alreadyContainsElement?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? alreadyAddedInFavourite,
+    TResult Function()? noID,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noUpdateRights,
+    TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (alreadyContainsElement != null) {
+      return alreadyContainsElement();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AlreadyAddedInFavourteErrorCategory value)
+        alreadyAddedInFavourite,
+    required TResult Function(_NoIDErrorCategory value) noID,
+    required TResult Function(_NotAddedToFavouritesCategory value)
+        notAddedToFavorites,
+    required TResult Function(_NotAddedToUserTracksCategory value)
+        notAddedToUserTracks,
+    required TResult Function(_NoUpdateRightsCategory value) noUpdateRights,
+    required TResult Function(_NoRemoveRightsCategory value) noRemoveRights,
+    required TResult Function(_NoContainsElementCategory value)
+        notContainsElement,
+    required TResult Function(_UserTheCreatorOfTheTrackCategory value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementCategory value)
+        alreadyContainsElement,
+  }) {
+    return alreadyContainsElement(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult? Function(_NoIDErrorCategory value)? noID,
+    TResult? Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult? Function(_NotAddedToUserTracksCategory value)?
+        notAddedToUserTracks,
+    TResult? Function(_NoUpdateRightsCategory value)? noUpdateRights,
+    TResult? Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult? Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult? Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
+  }) {
+    return alreadyContainsElement?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AlreadyAddedInFavourteErrorCategory value)?
+        alreadyAddedInFavourite,
+    TResult Function(_NoIDErrorCategory value)? noID,
+    TResult Function(_NotAddedToFavouritesCategory value)? notAddedToFavorites,
+    TResult Function(_NotAddedToUserTracksCategory value)? notAddedToUserTracks,
+    TResult Function(_NoUpdateRightsCategory value)? noUpdateRights,
+    TResult Function(_NoRemoveRightsCategory value)? noRemoveRights,
+    TResult Function(_NoContainsElementCategory value)? notContainsElement,
+    TResult Function(_UserTheCreatorOfTheTrackCategory value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementCategory value)?
+        alreadyContainsElement,
+    required TResult orElse(),
+  }) {
+    if (alreadyContainsElement != null) {
+      return alreadyContainsElement(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AlreadyContainsElementCategory implements AccessErrorCategory {
+  const factory _AlreadyContainsElementCategory() =
+      _$AlreadyContainsElementCategoryImpl;
 }

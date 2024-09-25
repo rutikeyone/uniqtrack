@@ -60,7 +60,7 @@ class _MemoriesWidget extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: AppDiments.dm8),
                 child: SizedBox(
-                  height: AppDiments.dm133,
+                  height: AppDiments.dm135,
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
                     itemCount: memories.length,

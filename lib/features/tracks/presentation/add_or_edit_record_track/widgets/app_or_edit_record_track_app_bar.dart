@@ -16,7 +16,7 @@ class _AddOrEditRecordTrackAppBar extends ConsumerWidget
         onPressed:
             context.read<AddOrEditRecordTrackNavCallbackStore>().navigateBack,
         icon: Icon(
-          Icons.arrow_back,
+          Icons.arrow_back_ios,
           size: AppDiments.dm24,
           color: context.appColorsTheme.secondaryIconColor,
         ),
@@ -26,14 +26,14 @@ class _AddOrEditRecordTrackAppBar extends ConsumerWidget
           S.of(context).addTrack,
           style: textStyle,
         ),
-        edit: () => Text(
+        edit: (_) => Text(
           S.of(context).editTrack,
           style: textStyle,
         ),
       ),
       actions: [
         store.modeState.maybeWhen(
-          edit: () {
+          edit: (_) {
             return IconButton(
               onPressed: store.deleteRecordTrack,
               icon: SvgPicture.asset(

@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mobx/mobx.dart';
 import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/common_impl/app_validate_toolkit_impl.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_elevated_button.dart';

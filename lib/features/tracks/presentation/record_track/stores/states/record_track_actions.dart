@@ -39,4 +39,7 @@ class RecordTrackActions with _$RecordTrackActions {
 
   const factory RecordTrackActions.hideMemoryDetails() =
       _HideMemoryDetailsAction;
+
+  const factory RecordTrackActions.animateCamera(CameraUpdate cameraUpdate) =
+      _AnimateCameraAction;
 }

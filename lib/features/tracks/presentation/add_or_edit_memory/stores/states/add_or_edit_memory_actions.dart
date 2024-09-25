@@ -18,6 +18,9 @@ class AddOrEditMemoryActions with _$AddOrEditMemoryActions {
     required AddOrEditMemoryResult result,
   }) = _AddOrEditNavigateWithResultAction;
 
+  const factory AddOrEditMemoryActions.navigateBack() =
+      _AddOrEditNavigateBackResultAction;
+
   @override
   bool operator ==(Object other) => false;
 

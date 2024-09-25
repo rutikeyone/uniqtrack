@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/presentation/widgets/image_source_bottom_sheet/cancel_button_widget.dart';
 import 'package:uniqtrack/core/theme/app_circle_progress_indicator.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
+import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/domain/providers/providers.dart';
 import 'package:uniqtrack/generated/l10n.dart';
 
@@ -20,6 +21,7 @@ part 'track_actions_header_widget.dart';
 class TrackActionsModalBottomSheet extends ConsumerWidget {
   final String id;
   final VoidCallback onAddToFavouriteTracksPressed;
+  final void Function(Track?) onEditPressed;
   final VoidCallback onDeletePressed;
   final VoidCallback onDeleteToFavouriteTrackPressed;
   final VoidCallback onClosePressed;
@@ -27,6 +29,7 @@ class TrackActionsModalBottomSheet extends ConsumerWidget {
   const TrackActionsModalBottomSheet({
     required this.id,
     required this.onAddToFavouriteTracksPressed,
+    required this.onEditPressed,
     required this.onDeletePressed,
     required this.onDeleteToFavouriteTrackPressed,
     required this.onClosePressed,
@@ -37,6 +40,7 @@ class TrackActionsModalBottomSheet extends ConsumerWidget {
     required BuildContext context,
     required String id,
     required VoidCallback onAddToFavouriteTracksPressed,
+    required void Function(Track?) onEditPressed,
     required VoidCallback onDeletePressed,
     required VoidCallback onDeleteToFavouriteTrackPressed,
     required VoidCallback onClosePressed,
@@ -53,6 +57,7 @@ class TrackActionsModalBottomSheet extends ConsumerWidget {
         return TrackActionsModalBottomSheet(
           id: id,
           onAddToFavouriteTracksPressed: onAddToFavouriteTracksPressed,
+          onEditPressed: onEditPressed,
           onDeletePressed: onDeletePressed,
           onDeleteToFavouriteTrackPressed: onDeleteToFavouriteTrackPressed,
           onClosePressed: onClosePressed,
@@ -84,18 +89,18 @@ class TrackActionsModalBottomSheet extends ConsumerWidget {
                     _TrackActionsHeaderWidget(),
                     value.currentUserCreator == true
                         ? _EditTrackActionButton(
-                            onPressed: () {},
+                            onPressed: () => onEditPressed(value.track),
                             onCloseDialog: onClosePressed,
                             borderRadius: BorderRadius.zero,
                           )
                         : const SizedBox.shrink(),
-                    value.favouriteTrack == false
+                    value.favouriteTrack == false && !value.currentUserCreator
                         ? _AddToFavouritesTrackAction(
                             onPressed: onAddToFavouriteTracksPressed,
                             onCloseDialog: onClosePressed,
                           )
                         : const SizedBox.shrink(),
-                    value.favouriteTrack == true
+                    value.favouriteTrack == true && !value.currentUserCreator
                         ? _RemoveFromFavouritesTrackAction(
                             onClosePressed: onClosePressed,
                             onPressed: onDeleteToFavouriteTrackPressed,

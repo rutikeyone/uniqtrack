@@ -16,6 +16,8 @@ class AddOrEditRecordTrackStoreBuilderImpl
     required BuildContext context,
     required Track? track,
   }) {
-    return _storeFactory.createAddOrEditRecordTrackStore(track: track);
+    return _storeFactory.createAddOrEditRecordTrackStore(
+      track: track,
+    );
   }
 }

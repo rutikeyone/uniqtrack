@@ -2,8 +2,11 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:generic_usecase/generic_usecase.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:mobx/mobx.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:uniqtrack/app/navigation/arguments/args.dart';
 import 'package:uniqtrack/core/common/activity.dart';
 import 'package:uniqtrack/core/common/app_location_handler/app_location_handler.dart';
 import 'package:uniqtrack/core/common/app_location_handler/entities/app_position.dart';
@@ -11,7 +14,8 @@ import 'package:uniqtrack/core/common/app_location_handler/entities/location_set
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/common_ui/cupertino_dialog_activity.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
-import 'package:uniqtrack/core/common/iterable_extensions.dart';
+import 'package:uniqtrack/core/common/extensions/iterable_extensions.dart';
+import 'package:uniqtrack/core/common/extensions/iterable_position_data_extensions.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/domain/track_repository.dart';
@@ -23,12 +27,20 @@ import 'states/states.dart';
 part 'record_track_store.g.dart';
 
 abstract interface class RecordTrackStoreBuilder {
-  RecordTrackStore create(BuildContext context);
+  RecordTrackStore create({
+    required BuildContext context,
+    required Track? track,
+    required DetailsMode? mode,
+  });
 }
 
 class RecordTrackStore = _RecordTrackStore with _$RecordTrackStore;
 
 abstract class _RecordTrackStore with Store {
+  final StreamUsecase<String, TrackUI>? _watchTrackUseCase;
+
+  final Track? _previousTrack;
+
   final TrackRepository _recordTrackRepository;
   final CommonUIDelegate _commonUIDelegate;
   final AppLocationHandler _appLocationHandler;
@@ -49,6 +61,15 @@ abstract class _RecordTrackStore with Store {
 
   ValueStream<Memory?> get memoryDetailsStream =>
       _memoryDetailsBehaviourSubject.stream;
+
+  @observable
+  late ObservableStream<TrackUI>? previousTrackStream =
+      _previousTrack != null &&
+              _previousTrack.id != null &&
+              _watchTrackUseCase != null
+          ? ObservableStream(_watchTrackUseCase.call(_previousTrack.id!))
+              .asBroadcastStream()
+          : null;
 
   @observable
   RecordTrackPermissionState recordTrackPermissionState =
@@ -79,9 +100,13 @@ abstract class _RecordTrackStore with Store {
     required TrackRepository recordTrackRepository,
     required CommonUIDelegate commonUIDelegate,
     required AppLocationHandler appLocationHandler,
+    required Track? previousTrack,
+    required StreamUsecase<String, TrackUI>? watchTrackUseCase,
   })  : _recordTrackRepository = recordTrackRepository,
         _commonUIDelegate = commonUIDelegate,
-        _appLocationHandler = appLocationHandler {
+        _appLocationHandler = appLocationHandler,
+        _watchTrackUseCase = watchTrackUseCase,
+        _previousTrack = previousTrack {
     _checkInitialLocationPermission();
     _checkPreviousTrack();
   }
@@ -173,6 +198,10 @@ abstract class _RecordTrackStore with Store {
     bool? didPop,
     dynamic result,
   }) {
+    if (didPop == true) {
+      return;
+    }
+
     trackRecordStatusState.map(
       withoutRecording: (_) {
         final action = RecordTrackActions.navigateBack();
@@ -438,6 +467,9 @@ abstract class _RecordTrackStore with Store {
 
   @action
   void showMemoryDetails(Memory memory) {
+    final _memoryDetails = _memoryDetailsBehaviourSubject.value;
+    if(_memoryDetails?.id == memory.id) return;
+
     trackRecordStatusState.mapOrNull(
       recording: (state) {
         final currentBottomSheetState = bottomSheetState;
@@ -450,18 +482,21 @@ abstract class _RecordTrackStore with Store {
         actions = Activity(hideDetailsRecordingDataAction);
         bottomSheetState = RecordTrackBottomSheetState.none();
 
-        currentBottomSheetState.whenOrNull(memoryDetails: () {
-          Future.delayed(lessDuration, () {
-            final hideDetailsRecordingDataAction =
-                RecordTrackActions.hideMemoryDetails();
-            actions = Activity(hideDetailsRecordingDataAction);
-            bottomSheetState = RecordTrackBottomSheetState.none();
-          });
-        });
+        currentBottomSheetState.whenOrNull(
+          memoryDetails: () {
+            Future.delayed(lessDuration, () {
+              final hideDetailsRecordingDataAction =
+                  RecordTrackActions.hideMemoryDetails();
+              actions = Activity(hideDetailsRecordingDataAction);
+              bottomSheetState = RecordTrackBottomSheetState.none();
+            });
+          },
+        );
 
-        _memoryDetailsBehaviourSubject.add(memory);
 
         Future.delayed(moreDuration, () {
+          _memoryDetailsBehaviourSubject.add(memory);
+
           final showMemoryDetailsAction = RecordTrackActions.showMemoryDetails(
             memory: memory,
           );
@@ -646,20 +681,15 @@ abstract class _RecordTrackStore with Store {
     );
   }
 
+  @action
   void _initStreamPositions({
     required String title,
     required String body,
     required Position position,
   }) {
-    final zoom = 18.0;
-    final moveToUserPositionAction = RecordTrackActions.moveToUserPosition(
-      position: position,
-      zoom: zoom,
-    );
-    final newActivity = Activity(moveToUserPositionAction);
-
     userLocationState = UserLocationState.mark(currentPosition: position);
-    actions = newActivity;
+
+    _moveToUserPosition(position);
 
     final appLocationSettings = AppLocationSettings(
       notificationTitle: title,
@@ -667,6 +697,55 @@ abstract class _RecordTrackStore with Store {
     );
 
     _initialTrackPositionSubscription(appLocationSettings);
+  }
+
+  @action
+  void _moveToUserPosition(Position position) {
+    final zoom = 18.0;
+    final moveToUserPositionAction = RecordTrackActions.moveToUserPosition(
+      position: position,
+      zoom: zoom,
+    );
+    final newActivity = Activity(moveToUserPositionAction);
+
+    actions = newActivity;
+  }
+
+  void moveToUserPosition() {
+    final position = userLocationState.whenOrNull(
+      mark: (position) => position,
+    );
+    if (position == null) return;
+
+    _moveToUserPosition(position);
+  }
+
+  @action
+  void animateCameraToRepeatTrack() {
+    final track = previousTrackStream?.value?.track;
+    if (track == null) return;
+    final positions = track.positions ?? List.empty();
+    _animateCameraByPositions(positions);
+  }
+
+  @action
+  void _animateCameraByPositions(List<PositionData>? positions) {
+    if (positions == null || positions.isEmpty) return;
+
+    final points = positions.calculateSouthWestAndNortheastPoints();
+
+    final bounds = LatLngBounds(
+      southwest: points.value1,
+      northeast: points.value2,
+    );
+
+    final cameraUpdate = CameraUpdate.newLatLngBounds(
+      bounds,
+      0,
+    );
+
+    final action = RecordTrackActions.animateCamera(cameraUpdate);
+    actions = Activity(action);
   }
 
   void _initialTrackPositionSubscription(AppLocationSettings locationSettings) {
@@ -788,7 +867,7 @@ abstract class _RecordTrackStore with Store {
             memories: state.memories,
           );
 
-          _recordTrackRepository.addTrack(track);
+          _recordTrackRepository.addLastTrack(track);
         },
       ),
     );
@@ -881,7 +960,7 @@ abstract class _RecordTrackStore with Store {
     if (trackRecordStatusState.isWithoutRecording) return;
 
     final deleteAllTracksResult =
-        await _recordTrackRepository.deleteAllTracks();
+        await _recordTrackRepository.removeLastTracks();
     final error = deleteAllTracksResult.fold(
       (error) => error,
       (_) => null,
@@ -927,7 +1006,7 @@ abstract class _RecordTrackStore with Store {
 
   Future<void> _checkPreviousTrack() async {
     final duration = const Duration(milliseconds: 200);
-    final getTrackResult = await _recordTrackRepository.getTrack();
+    final getTrackResult = await _recordTrackRepository.getLastTrack();
 
     if (getTrackResult.isRight()) {
       final track = getTrackResult.getOrElse(

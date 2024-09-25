@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
 import 'package:uniqtrack/core/theme/app_colors.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';

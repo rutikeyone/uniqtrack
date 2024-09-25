@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 
 class ModalBottomSheetDividerWidget extends StatelessWidget {
   const ModalBottomSheetDividerWidget({super.key});

@@ -17,7 +17,7 @@ class _EditActionButtons extends ConsumerWidget {
           child: Observer(builder: (context) {
             return AppElevatedButton(
               text: S.of(context).save,
-              onPressed: store.canSave ? store.save : null,
+              onPressed: store.canEdit ? store.edit : null,
               textStyle: context.primaryTextTheme.labelLarge?.copyWith(
                 color: context.colorScheme.secondary,
               ),

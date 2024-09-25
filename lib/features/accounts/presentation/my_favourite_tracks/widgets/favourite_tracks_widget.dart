@@ -10,9 +10,9 @@ import 'package:uniqtrack/core/presentation/widgets/app_empty_list_widget.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_error_widget.dart';
 import 'package:uniqtrack/core/theme/app_circle_progress_indicator.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
-import 'package:uniqtrack/features/accounts/domain/providers/providers.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/core/presentation/widgets/track_action_button.dart';
+import 'package:uniqtrack/features/tracks/domain/providers/providers.dart';
 import 'package:uniqtrack/features/tracks/presentation/community/widgets/track_tile.dart';
 
 class FavouriteTracksWidget extends ConsumerStatefulWidget {

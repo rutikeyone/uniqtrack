@@ -94,7 +94,7 @@ final sorterProvider = AutoDisposeProvider<Sorter>.internal(
 
 typedef SorterRef = AutoDisposeProviderRef<Sorter>;
 String _$accountsDataRepositoryHash() =>
-    r'4ac8aa0150fbac85c0cc6610705ce17c3a8e4d41';
+    r'68dc5cda80a1522cd0b28ce1d9a1b63301635f80';
 
 /// See also [accountsDataRepository].
 @ProviderFor(accountsDataRepository)

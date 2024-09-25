@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
@@ -9,9 +9,11 @@ class MemoryTile extends StatelessWidget {
   final Memory memory;
 
   final VoidCallback? onDeletePressed;
+  final VoidCallback? onTilePressed;
 
   const MemoryTile({
     required this.memory,
+    this.onTilePressed,
     this.onDeletePressed,
     super.key,
   });
@@ -34,20 +36,23 @@ class MemoryTile extends StatelessWidget {
               children: [
                 Positioned.fill(
                   top: 10,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: context.colorScheme.secondary,
-                      borderRadius: BorderRadius.circular(AppDiments.dm14),
-                    ),
-                    child: UnconstrainedBox(
-                      child: SvgPicture.asset(
-                        AppAssets.icons.memory,
-                        width: AppDiments.dm36,
-                        height: AppDiments.dm64,
-                        fit: BoxFit.cover,
-                        colorFilter: ColorFilter.mode(
-                          context.colorScheme.onSecondary,
-                          BlendMode.srcIn,
+                  child: GestureDetector(
+                    onTap: onTilePressed,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: context.colorScheme.secondary,
+                        borderRadius: BorderRadius.circular(AppDiments.dm14),
+                      ),
+                      child: UnconstrainedBox(
+                        child: SvgPicture.asset(
+                          AppAssets.icons.memory,
+                          width: AppDiments.dm36,
+                          height: AppDiments.dm64,
+                          fit: BoxFit.cover,
+                          colorFilter: ColorFilter.mode(
+                            context.colorScheme.onSecondary,
+                            BlendMode.srcIn,
+                          ),
                         ),
                       ),
                     ),

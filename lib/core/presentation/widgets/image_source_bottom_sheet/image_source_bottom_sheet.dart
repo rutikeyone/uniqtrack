@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/presentation/widgets/image_source_bottom_sheet/cancel_button_widget.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/generated/l10n.dart';

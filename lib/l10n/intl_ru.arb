@@ -123,5 +123,11 @@
   "theTrackWasSuccessfullyDeleted": "Трек был успешно удален",
   "theTrackIsNotInTheListOfUserTracks": "Трека нет в списке пользовательских треков",
   "noRemoveRights": "Нет прав на удаление",
-  "repeat": "Повторить"
+  "repeat": "Повторить",
+  "theCollectionDoesNotContainTheRequiredElement": "Коллекция не содержит необходимого элемента",
+  "noUpdateRights": "Нет прав на обновление",
+  "theDataHasBeenSuccessfullyUpdated": "Данные успешно обновлены",
+  "theMemoryHasBeenSuccessfullyDeleted": "Воспоминание успешно удалено",
+  "theUserIsTheCreatorOfTheTrack": "Пользователь является создателем трека",
+  "alreadyContainsElement": "Уже содержит элемент"
 }

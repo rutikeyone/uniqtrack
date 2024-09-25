@@ -1413,6 +1413,7 @@ mixin _$RecordTrackActions {
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
+    required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1429,6 +1430,7 @@ mixin _$RecordTrackActions {
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
+    TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1445,6 +1447,7 @@ mixin _$RecordTrackActions {
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
+    TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1467,6 +1470,7 @@ mixin _$RecordTrackActions {
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
     required TResult Function(_HideMemoryDetailsAction value) hideMemoryDetails,
+    required TResult Function(_AnimateCameraAction value) animateCamera,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1484,6 +1488,7 @@ mixin _$RecordTrackActions {
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult? Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult? Function(_AnimateCameraAction value)? animateCamera,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1501,6 +1506,7 @@ mixin _$RecordTrackActions {
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult Function(_AnimateCameraAction value)? animateCamera,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1669,6 +1675,7 @@ class _$InitStreamPositionsActionImpl
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
+    required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) {
     return initStreamPositions(callback, title, body);
   }
@@ -1688,6 +1695,7 @@ class _$InitStreamPositionsActionImpl
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
+    TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) {
     return initStreamPositions?.call(callback, title, body);
   }
@@ -1707,6 +1715,7 @@ class _$InitStreamPositionsActionImpl
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
+    TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) {
     if (initStreamPositions != null) {
@@ -1735,6 +1744,7 @@ class _$InitStreamPositionsActionImpl
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
     required TResult Function(_HideMemoryDetailsAction value) hideMemoryDetails,
+    required TResult Function(_AnimateCameraAction value) animateCamera,
   }) {
     return initStreamPositions(this);
   }
@@ -1755,6 +1765,7 @@ class _$InitStreamPositionsActionImpl
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult? Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult? Function(_AnimateCameraAction value)? animateCamera,
   }) {
     return initStreamPositions?.call(this);
   }
@@ -1775,6 +1786,7 @@ class _$InitStreamPositionsActionImpl
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult Function(_AnimateCameraAction value)? animateCamera,
     required TResult orElse(),
   }) {
     if (initStreamPositions != null) {
@@ -1920,6 +1932,7 @@ class _$UserPositionChangesActionImpl
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
+    required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) {
     return moveToUserPosition(position, zoom);
   }
@@ -1939,6 +1952,7 @@ class _$UserPositionChangesActionImpl
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
+    TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) {
     return moveToUserPosition?.call(position, zoom);
   }
@@ -1958,6 +1972,7 @@ class _$UserPositionChangesActionImpl
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
+    TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) {
     if (moveToUserPosition != null) {
@@ -1986,6 +2001,7 @@ class _$UserPositionChangesActionImpl
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
     required TResult Function(_HideMemoryDetailsAction value) hideMemoryDetails,
+    required TResult Function(_AnimateCameraAction value) animateCamera,
   }) {
     return moveToUserPosition(this);
   }
@@ -2006,6 +2022,7 @@ class _$UserPositionChangesActionImpl
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult? Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult? Function(_AnimateCameraAction value)? animateCamera,
   }) {
     return moveToUserPosition?.call(this);
   }
@@ -2026,6 +2043,7 @@ class _$UserPositionChangesActionImpl
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult Function(_AnimateCameraAction value)? animateCamera,
     required TResult orElse(),
   }) {
     if (moveToUserPosition != null) {
@@ -2117,6 +2135,7 @@ class _$ShowDetailsRecordingDataActionImpl
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
+    required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) {
     return showDetailsRecordingData();
   }
@@ -2136,6 +2155,7 @@ class _$ShowDetailsRecordingDataActionImpl
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
+    TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) {
     return showDetailsRecordingData?.call();
   }
@@ -2155,6 +2175,7 @@ class _$ShowDetailsRecordingDataActionImpl
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
+    TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) {
     if (showDetailsRecordingData != null) {
@@ -2183,6 +2204,7 @@ class _$ShowDetailsRecordingDataActionImpl
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
     required TResult Function(_HideMemoryDetailsAction value) hideMemoryDetails,
+    required TResult Function(_AnimateCameraAction value) animateCamera,
   }) {
     return showDetailsRecordingData(this);
   }
@@ -2203,6 +2225,7 @@ class _$ShowDetailsRecordingDataActionImpl
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult? Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult? Function(_AnimateCameraAction value)? animateCamera,
   }) {
     return showDetailsRecordingData?.call(this);
   }
@@ -2223,6 +2246,7 @@ class _$ShowDetailsRecordingDataActionImpl
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult Function(_AnimateCameraAction value)? animateCamera,
     required TResult orElse(),
   }) {
     if (showDetailsRecordingData != null) {
@@ -2304,6 +2328,7 @@ class _$HideDetailsRecordingDataActionImpl
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
+    required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) {
     return hideDetailsRecordingData();
   }
@@ -2323,6 +2348,7 @@ class _$HideDetailsRecordingDataActionImpl
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
+    TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) {
     return hideDetailsRecordingData?.call();
   }
@@ -2342,6 +2368,7 @@ class _$HideDetailsRecordingDataActionImpl
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
+    TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) {
     if (hideDetailsRecordingData != null) {
@@ -2370,6 +2397,7 @@ class _$HideDetailsRecordingDataActionImpl
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
     required TResult Function(_HideMemoryDetailsAction value) hideMemoryDetails,
+    required TResult Function(_AnimateCameraAction value) animateCamera,
   }) {
     return hideDetailsRecordingData(this);
   }
@@ -2390,6 +2418,7 @@ class _$HideDetailsRecordingDataActionImpl
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult? Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult? Function(_AnimateCameraAction value)? animateCamera,
   }) {
     return hideDetailsRecordingData?.call(this);
   }
@@ -2410,6 +2439,7 @@ class _$HideDetailsRecordingDataActionImpl
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult Function(_AnimateCameraAction value)? animateCamera,
     required TResult orElse(),
   }) {
     if (hideDetailsRecordingData != null) {
@@ -2487,6 +2517,7 @@ class _$NavigateBackActionImpl
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
+    required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) {
     return navigateBack();
   }
@@ -2506,6 +2537,7 @@ class _$NavigateBackActionImpl
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
+    TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) {
     return navigateBack?.call();
   }
@@ -2525,6 +2557,7 @@ class _$NavigateBackActionImpl
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
+    TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) {
     if (navigateBack != null) {
@@ -2553,6 +2586,7 @@ class _$NavigateBackActionImpl
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
     required TResult Function(_HideMemoryDetailsAction value) hideMemoryDetails,
+    required TResult Function(_AnimateCameraAction value) animateCamera,
   }) {
     return navigateBack(this);
   }
@@ -2573,6 +2607,7 @@ class _$NavigateBackActionImpl
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult? Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult? Function(_AnimateCameraAction value)? animateCamera,
   }) {
     return navigateBack?.call(this);
   }
@@ -2593,6 +2628,7 @@ class _$NavigateBackActionImpl
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult Function(_AnimateCameraAction value)? animateCamera,
     required TResult orElse(),
   }) {
     if (navigateBack != null) {
@@ -2719,6 +2755,7 @@ class _$NavigateToAddMemoryActionImpl
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
+    required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) {
     return navigateToAddMemory(position);
   }
@@ -2738,6 +2775,7 @@ class _$NavigateToAddMemoryActionImpl
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
+    TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) {
     return navigateToAddMemory?.call(position);
   }
@@ -2757,6 +2795,7 @@ class _$NavigateToAddMemoryActionImpl
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
+    TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) {
     if (navigateToAddMemory != null) {
@@ -2785,6 +2824,7 @@ class _$NavigateToAddMemoryActionImpl
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
     required TResult Function(_HideMemoryDetailsAction value) hideMemoryDetails,
+    required TResult Function(_AnimateCameraAction value) animateCamera,
   }) {
     return navigateToAddMemory(this);
   }
@@ -2805,6 +2845,7 @@ class _$NavigateToAddMemoryActionImpl
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult? Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult? Function(_AnimateCameraAction value)? animateCamera,
   }) {
     return navigateToAddMemory?.call(this);
   }
@@ -2825,6 +2866,7 @@ class _$NavigateToAddMemoryActionImpl
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult Function(_AnimateCameraAction value)? animateCamera,
     required TResult orElse(),
   }) {
     if (navigateToAddMemory != null) {
@@ -2955,6 +2997,7 @@ class _$NavigateToEditMemoryActionImpl
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
+    required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) {
     return navigateToEditMemory(memory);
   }
@@ -2974,6 +3017,7 @@ class _$NavigateToEditMemoryActionImpl
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
+    TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) {
     return navigateToEditMemory?.call(memory);
   }
@@ -2993,6 +3037,7 @@ class _$NavigateToEditMemoryActionImpl
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
+    TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) {
     if (navigateToEditMemory != null) {
@@ -3021,6 +3066,7 @@ class _$NavigateToEditMemoryActionImpl
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
     required TResult Function(_HideMemoryDetailsAction value) hideMemoryDetails,
+    required TResult Function(_AnimateCameraAction value) animateCamera,
   }) {
     return navigateToEditMemory(this);
   }
@@ -3041,6 +3087,7 @@ class _$NavigateToEditMemoryActionImpl
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult? Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult? Function(_AnimateCameraAction value)? animateCamera,
   }) {
     return navigateToEditMemory?.call(this);
   }
@@ -3061,6 +3108,7 @@ class _$NavigateToEditMemoryActionImpl
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult Function(_AnimateCameraAction value)? animateCamera,
     required TResult orElse(),
   }) {
     if (navigateToEditMemory != null) {
@@ -3192,6 +3240,7 @@ class _$NavigateToAddRecordTrackActionImpl
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
+    required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) {
     return navigateToAddRecordTrack(track);
   }
@@ -3211,6 +3260,7 @@ class _$NavigateToAddRecordTrackActionImpl
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
+    TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) {
     return navigateToAddRecordTrack?.call(track);
   }
@@ -3230,6 +3280,7 @@ class _$NavigateToAddRecordTrackActionImpl
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
+    TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) {
     if (navigateToAddRecordTrack != null) {
@@ -3258,6 +3309,7 @@ class _$NavigateToAddRecordTrackActionImpl
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
     required TResult Function(_HideMemoryDetailsAction value) hideMemoryDetails,
+    required TResult Function(_AnimateCameraAction value) animateCamera,
   }) {
     return navigateToAddRecordTrack(this);
   }
@@ -3278,6 +3330,7 @@ class _$NavigateToAddRecordTrackActionImpl
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult? Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult? Function(_AnimateCameraAction value)? animateCamera,
   }) {
     return navigateToAddRecordTrack?.call(this);
   }
@@ -3298,6 +3351,7 @@ class _$NavigateToAddRecordTrackActionImpl
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult Function(_AnimateCameraAction value)? animateCamera,
     required TResult orElse(),
   }) {
     if (navigateToAddRecordTrack != null) {
@@ -3428,6 +3482,7 @@ class _$ShowMemoryDetailsActionImpl
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
+    required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) {
     return showMemoryDetails(memory);
   }
@@ -3447,6 +3502,7 @@ class _$ShowMemoryDetailsActionImpl
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
+    TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) {
     return showMemoryDetails?.call(memory);
   }
@@ -3466,6 +3522,7 @@ class _$ShowMemoryDetailsActionImpl
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
+    TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) {
     if (showMemoryDetails != null) {
@@ -3494,6 +3551,7 @@ class _$ShowMemoryDetailsActionImpl
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
     required TResult Function(_HideMemoryDetailsAction value) hideMemoryDetails,
+    required TResult Function(_AnimateCameraAction value) animateCamera,
   }) {
     return showMemoryDetails(this);
   }
@@ -3514,6 +3572,7 @@ class _$ShowMemoryDetailsActionImpl
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult? Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult? Function(_AnimateCameraAction value)? animateCamera,
   }) {
     return showMemoryDetails?.call(this);
   }
@@ -3534,6 +3593,7 @@ class _$ShowMemoryDetailsActionImpl
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult Function(_AnimateCameraAction value)? animateCamera,
     required TResult orElse(),
   }) {
     if (showMemoryDetails != null) {
@@ -3623,6 +3683,7 @@ class _$HideMemoryDetailsActionImpl
     required TResult Function(Track track) navigateToAddRecordTrack,
     required TResult Function(Memory memory) showMemoryDetails,
     required TResult Function() hideMemoryDetails,
+    required TResult Function(CameraUpdate cameraUpdate) animateCamera,
   }) {
     return hideMemoryDetails();
   }
@@ -3642,6 +3703,7 @@ class _$HideMemoryDetailsActionImpl
     TResult? Function(Track track)? navigateToAddRecordTrack,
     TResult? Function(Memory memory)? showMemoryDetails,
     TResult? Function()? hideMemoryDetails,
+    TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
   }) {
     return hideMemoryDetails?.call();
   }
@@ -3661,6 +3723,7 @@ class _$HideMemoryDetailsActionImpl
     TResult Function(Track track)? navigateToAddRecordTrack,
     TResult Function(Memory memory)? showMemoryDetails,
     TResult Function()? hideMemoryDetails,
+    TResult Function(CameraUpdate cameraUpdate)? animateCamera,
     required TResult orElse(),
   }) {
     if (hideMemoryDetails != null) {
@@ -3689,6 +3752,7 @@ class _$HideMemoryDetailsActionImpl
         navigateToAddRecordTrack,
     required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
     required TResult Function(_HideMemoryDetailsAction value) hideMemoryDetails,
+    required TResult Function(_AnimateCameraAction value) animateCamera,
   }) {
     return hideMemoryDetails(this);
   }
@@ -3709,6 +3773,7 @@ class _$HideMemoryDetailsActionImpl
         navigateToAddRecordTrack,
     TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult? Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult? Function(_AnimateCameraAction value)? animateCamera,
   }) {
     return hideMemoryDetails?.call(this);
   }
@@ -3729,6 +3794,7 @@ class _$HideMemoryDetailsActionImpl
         navigateToAddRecordTrack,
     TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
     TResult Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult Function(_AnimateCameraAction value)? animateCamera,
     required TResult orElse(),
   }) {
     if (hideMemoryDetails != null) {
@@ -3740,6 +3806,233 @@ class _$HideMemoryDetailsActionImpl
 
 abstract class _HideMemoryDetailsAction implements RecordTrackActions {
   const factory _HideMemoryDetailsAction() = _$HideMemoryDetailsActionImpl;
+}
+
+/// @nodoc
+abstract class _$$AnimateCameraActionImplCopyWith<$Res> {
+  factory _$$AnimateCameraActionImplCopyWith(_$AnimateCameraActionImpl value,
+          $Res Function(_$AnimateCameraActionImpl) then) =
+      __$$AnimateCameraActionImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({CameraUpdate cameraUpdate});
+}
+
+/// @nodoc
+class __$$AnimateCameraActionImplCopyWithImpl<$Res>
+    extends _$RecordTrackActionsCopyWithImpl<$Res, _$AnimateCameraActionImpl>
+    implements _$$AnimateCameraActionImplCopyWith<$Res> {
+  __$$AnimateCameraActionImplCopyWithImpl(_$AnimateCameraActionImpl _value,
+      $Res Function(_$AnimateCameraActionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? cameraUpdate = null,
+  }) {
+    return _then(_$AnimateCameraActionImpl(
+      null == cameraUpdate
+          ? _value.cameraUpdate
+          : cameraUpdate // ignore: cast_nullable_to_non_nullable
+              as CameraUpdate,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AnimateCameraActionImpl
+    with DiagnosticableTreeMixin
+    implements _AnimateCameraAction {
+  const _$AnimateCameraActionImpl(this.cameraUpdate);
+
+  @override
+  final CameraUpdate cameraUpdate;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'RecordTrackActions.animateCamera(cameraUpdate: $cameraUpdate)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'RecordTrackActions.animateCamera'))
+      ..add(DiagnosticsProperty('cameraUpdate', cameraUpdate));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AnimateCameraActionImpl &&
+            (identical(other.cameraUpdate, cameraUpdate) ||
+                other.cameraUpdate == cameraUpdate));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, cameraUpdate);
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AnimateCameraActionImplCopyWith<_$AnimateCameraActionImpl> get copyWith =>
+      __$$AnimateCameraActionImplCopyWithImpl<_$AnimateCameraActionImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(void Function(String, String) callback,
+            AppStrings title, AppStrings body)
+        initStreamPositions,
+    required TResult Function(Position position, double zoom)
+        moveToUserPosition,
+    required TResult Function() showDetailsRecordingData,
+    required TResult Function() hideDetailsRecordingData,
+    required TResult Function() navigateBack,
+    required TResult Function(Position? position) navigateToAddMemory,
+    required TResult Function(Memory memory) navigateToEditMemory,
+    required TResult Function(Track track) navigateToAddRecordTrack,
+    required TResult Function(Memory memory) showMemoryDetails,
+    required TResult Function() hideMemoryDetails,
+    required TResult Function(CameraUpdate cameraUpdate) animateCamera,
+  }) {
+    return animateCamera(cameraUpdate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult? Function(Position position, double zoom)? moveToUserPosition,
+    TResult? Function()? showDetailsRecordingData,
+    TResult? Function()? hideDetailsRecordingData,
+    TResult? Function()? navigateBack,
+    TResult? Function(Position? position)? navigateToAddMemory,
+    TResult? Function(Memory memory)? navigateToEditMemory,
+    TResult? Function(Track track)? navigateToAddRecordTrack,
+    TResult? Function(Memory memory)? showMemoryDetails,
+    TResult? Function()? hideMemoryDetails,
+    TResult? Function(CameraUpdate cameraUpdate)? animateCamera,
+  }) {
+    return animateCamera?.call(cameraUpdate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(void Function(String, String) callback, AppStrings title,
+            AppStrings body)?
+        initStreamPositions,
+    TResult Function(Position position, double zoom)? moveToUserPosition,
+    TResult Function()? showDetailsRecordingData,
+    TResult Function()? hideDetailsRecordingData,
+    TResult Function()? navigateBack,
+    TResult Function(Position? position)? navigateToAddMemory,
+    TResult Function(Memory memory)? navigateToEditMemory,
+    TResult Function(Track track)? navigateToAddRecordTrack,
+    TResult Function(Memory memory)? showMemoryDetails,
+    TResult Function()? hideMemoryDetails,
+    TResult Function(CameraUpdate cameraUpdate)? animateCamera,
+    required TResult orElse(),
+  }) {
+    if (animateCamera != null) {
+      return animateCamera(cameraUpdate);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitStreamPositionsAction value)
+        initStreamPositions,
+    required TResult Function(_UserPositionChangesAction value)
+        moveToUserPosition,
+    required TResult Function(_ShowDetailsRecordingDataAction value)
+        showDetailsRecordingData,
+    required TResult Function(_HideDetailsRecordingDataAction value)
+        hideDetailsRecordingData,
+    required TResult Function(_NavigateBackAction value) navigateBack,
+    required TResult Function(_NavigateToAddMemoryAction value)
+        navigateToAddMemory,
+    required TResult Function(_NavigateToEditMemoryAction value)
+        navigateToEditMemory,
+    required TResult Function(_NavigateToAddRecordTrackAction value)
+        navigateToAddRecordTrack,
+    required TResult Function(_ShowMemoryDetailsAction value) showMemoryDetails,
+    required TResult Function(_HideMemoryDetailsAction value) hideMemoryDetails,
+    required TResult Function(_AnimateCameraAction value) animateCamera,
+  }) {
+    return animateCamera(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult? Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult? Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult? Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult? Function(_NavigateBackAction value)? navigateBack,
+    TResult? Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult? Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
+    TResult? Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
+    TResult? Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
+    TResult? Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult? Function(_AnimateCameraAction value)? animateCamera,
+  }) {
+    return animateCamera?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitStreamPositionsAction value)? initStreamPositions,
+    TResult Function(_UserPositionChangesAction value)? moveToUserPosition,
+    TResult Function(_ShowDetailsRecordingDataAction value)?
+        showDetailsRecordingData,
+    TResult Function(_HideDetailsRecordingDataAction value)?
+        hideDetailsRecordingData,
+    TResult Function(_NavigateBackAction value)? navigateBack,
+    TResult Function(_NavigateToAddMemoryAction value)? navigateToAddMemory,
+    TResult Function(_NavigateToEditMemoryAction value)? navigateToEditMemory,
+    TResult Function(_NavigateToAddRecordTrackAction value)?
+        navigateToAddRecordTrack,
+    TResult Function(_ShowMemoryDetailsAction value)? showMemoryDetails,
+    TResult Function(_HideMemoryDetailsAction value)? hideMemoryDetails,
+    TResult Function(_AnimateCameraAction value)? animateCamera,
+    required TResult orElse(),
+  }) {
+    if (animateCamera != null) {
+      return animateCamera(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AnimateCameraAction implements RecordTrackActions {
+  const factory _AnimateCameraAction(final CameraUpdate cameraUpdate) =
+      _$AnimateCameraActionImpl;
+
+  CameraUpdate get cameraUpdate;
+
+  /// Create a copy of RecordTrackActions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AnimateCameraActionImplCopyWith<_$AnimateCameraActionImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5120,4 +5413,345 @@ class _$HasDataTrackStateImpl
 
 abstract class _HasDataTrackState implements PreviousTrackState {
   const factory _HasDataTrackState() = _$HasDataTrackStateImpl;
+}
+
+/// @nodoc
+mixin _$RepeatTrackState {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() noRepeat,
+    required TResult Function(Track track) repeat,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? noRepeat,
+    TResult? Function(Track track)? repeat,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? noRepeat,
+    TResult Function(Track track)? repeat,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_$NoRepeatTrackState value) noRepeat,
+    required TResult Function(_RepeatTrackState value) repeat,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_$NoRepeatTrackState value)? noRepeat,
+    TResult? Function(_RepeatTrackState value)? repeat,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_$NoRepeatTrackState value)? noRepeat,
+    TResult Function(_RepeatTrackState value)? repeat,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $RepeatTrackStateCopyWith<$Res> {
+  factory $RepeatTrackStateCopyWith(
+          RepeatTrackState value, $Res Function(RepeatTrackState) then) =
+      _$RepeatTrackStateCopyWithImpl<$Res, RepeatTrackState>;
+}
+
+/// @nodoc
+class _$RepeatTrackStateCopyWithImpl<$Res, $Val extends RepeatTrackState>
+    implements $RepeatTrackStateCopyWith<$Res> {
+  _$RepeatTrackStateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of RepeatTrackState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$$NoRepeatTrackStateImplCopyWith<$Res> {
+  factory _$$$NoRepeatTrackStateImplCopyWith(_$$NoRepeatTrackStateImpl value,
+          $Res Function(_$$NoRepeatTrackStateImpl) then) =
+      __$$$NoRepeatTrackStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$$NoRepeatTrackStateImplCopyWithImpl<$Res>
+    extends _$RepeatTrackStateCopyWithImpl<$Res, _$$NoRepeatTrackStateImpl>
+    implements _$$$NoRepeatTrackStateImplCopyWith<$Res> {
+  __$$$NoRepeatTrackStateImplCopyWithImpl(_$$NoRepeatTrackStateImpl _value,
+      $Res Function(_$$NoRepeatTrackStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RepeatTrackState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$$NoRepeatTrackStateImpl
+    with DiagnosticableTreeMixin
+    implements _$NoRepeatTrackState {
+  const _$$NoRepeatTrackStateImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'RepeatTrackState.noRepeat()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'RepeatTrackState.noRepeat'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$$NoRepeatTrackStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() noRepeat,
+    required TResult Function(Track track) repeat,
+  }) {
+    return noRepeat();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? noRepeat,
+    TResult? Function(Track track)? repeat,
+  }) {
+    return noRepeat?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? noRepeat,
+    TResult Function(Track track)? repeat,
+    required TResult orElse(),
+  }) {
+    if (noRepeat != null) {
+      return noRepeat();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_$NoRepeatTrackState value) noRepeat,
+    required TResult Function(_RepeatTrackState value) repeat,
+  }) {
+    return noRepeat(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_$NoRepeatTrackState value)? noRepeat,
+    TResult? Function(_RepeatTrackState value)? repeat,
+  }) {
+    return noRepeat?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_$NoRepeatTrackState value)? noRepeat,
+    TResult Function(_RepeatTrackState value)? repeat,
+    required TResult orElse(),
+  }) {
+    if (noRepeat != null) {
+      return noRepeat(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _$NoRepeatTrackState implements RepeatTrackState {
+  const factory _$NoRepeatTrackState() = _$$NoRepeatTrackStateImpl;
+}
+
+/// @nodoc
+abstract class _$$RepeatTrackStateImplCopyWith<$Res> {
+  factory _$$RepeatTrackStateImplCopyWith(_$RepeatTrackStateImpl value,
+          $Res Function(_$RepeatTrackStateImpl) then) =
+      __$$RepeatTrackStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Track track});
+
+  $TrackCopyWith<$Res> get track;
+}
+
+/// @nodoc
+class __$$RepeatTrackStateImplCopyWithImpl<$Res>
+    extends _$RepeatTrackStateCopyWithImpl<$Res, _$RepeatTrackStateImpl>
+    implements _$$RepeatTrackStateImplCopyWith<$Res> {
+  __$$RepeatTrackStateImplCopyWithImpl(_$RepeatTrackStateImpl _value,
+      $Res Function(_$RepeatTrackStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RepeatTrackState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? track = null,
+  }) {
+    return _then(_$RepeatTrackStateImpl(
+      track: null == track
+          ? _value.track
+          : track // ignore: cast_nullable_to_non_nullable
+              as Track,
+    ));
+  }
+
+  /// Create a copy of RepeatTrackState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TrackCopyWith<$Res> get track {
+    return $TrackCopyWith<$Res>(_value.track, (value) {
+      return _then(_value.copyWith(track: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$RepeatTrackStateImpl
+    with DiagnosticableTreeMixin
+    implements _RepeatTrackState {
+  const _$RepeatTrackStateImpl({required this.track});
+
+  @override
+  final Track track;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'RepeatTrackState.repeat(track: $track)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'RepeatTrackState.repeat'))
+      ..add(DiagnosticsProperty('track', track));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RepeatTrackStateImpl &&
+            (identical(other.track, track) || other.track == track));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, track);
+
+  /// Create a copy of RepeatTrackState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RepeatTrackStateImplCopyWith<_$RepeatTrackStateImpl> get copyWith =>
+      __$$RepeatTrackStateImplCopyWithImpl<_$RepeatTrackStateImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() noRepeat,
+    required TResult Function(Track track) repeat,
+  }) {
+    return repeat(track);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? noRepeat,
+    TResult? Function(Track track)? repeat,
+  }) {
+    return repeat?.call(track);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? noRepeat,
+    TResult Function(Track track)? repeat,
+    required TResult orElse(),
+  }) {
+    if (repeat != null) {
+      return repeat(track);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_$NoRepeatTrackState value) noRepeat,
+    required TResult Function(_RepeatTrackState value) repeat,
+  }) {
+    return repeat(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_$NoRepeatTrackState value)? noRepeat,
+    TResult? Function(_RepeatTrackState value)? repeat,
+  }) {
+    return repeat?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_$NoRepeatTrackState value)? noRepeat,
+    TResult Function(_RepeatTrackState value)? repeat,
+    required TResult orElse(),
+  }) {
+    if (repeat != null) {
+      return repeat(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RepeatTrackState implements RepeatTrackState {
+  const factory _RepeatTrackState({required final Track track}) =
+      _$RepeatTrackStateImpl;
+
+  Track get track;
+
+  /// Create a copy of RepeatTrackState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RepeatTrackStateImplCopyWith<_$RepeatTrackStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

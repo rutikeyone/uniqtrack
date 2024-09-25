@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/presentation/widgets/memory_tile.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
@@ -8,9 +8,13 @@ import 'package:uniqtrack/generated/l10n.dart';
 
 class MemoryWidget extends StatelessWidget {
   final List<Memory>? memories;
+  final void Function(Memory) onMemoryPressed;
+  final void Function(Memory)? onDeletePressed;
 
   const MemoryWidget({
     required this.memories,
+    required this.onMemoryPressed,
+    this.onDeletePressed,
     super.key,
   });
 
@@ -37,7 +41,7 @@ class MemoryWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: AppDiments.dm8),
             child: SizedBox(
-              height: AppDiments.dm133,
+              height: AppDiments.dm135,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 itemCount: data.length,
@@ -47,7 +51,8 @@ class MemoryWidget extends StatelessWidget {
 
                   return MemoryTile(
                     memory: item,
-                    onDeletePressed: () {},
+                    onTilePressed: () => onMemoryPressed(item),
+                    onDeletePressed: onDeletePressed != null ? () => onDeletePressed?.call(item) : null,
                   );
                 },
                 separatorBuilder: (context, index) {

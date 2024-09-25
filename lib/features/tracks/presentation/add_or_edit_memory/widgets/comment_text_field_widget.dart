@@ -7,12 +7,21 @@ class _CommentTextFieldWidget extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = context.read<AddOrEditMemoryStore>();
 
-    final initialComment = useMemoized(
-          () => store.modeState.when(
+    String? _initialComment() {
+      return store.modeState.when(
         pure: () => null,
         add: (_) => null,
-        edit: (memory) => memory.comment,
-      ),
+        edit: (source) {
+          return source.when(
+            online: (_, memory) => memory.comment,
+            local: (memory) => memory.comment,
+          );
+        },
+      );
+    }
+
+    final initialComment = useMemoized(
+      _initialComment,
       [store.modeState],
     );
 

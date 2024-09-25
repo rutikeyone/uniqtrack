@@ -122,4 +122,16 @@ class AppStrings with _$AppStrings {
   const factory AppStrings.notAddedToUserTracks() = _NotAddedToUserTracksString;
 
   const factory AppStrings.noRemoveRights() = _NoRemoveRightsString;
+
+  const factory AppStrings.notContainsElement() = _NoContainsElementString;
+
+  const factory AppStrings.noUpdateRights() = _NoUpdateRightsString;
+
+  const factory AppStrings.dataHasBeenSuccessfullyUpdated() = _DataHasBeenSuccessfullyUpdatedString;
+
+  const factory AppStrings.memoryHasBeenSuccessfullyDeleted() = _MemoryHasBeenSuccessfullyDeletedString;
+
+  const factory AppStrings.userIsTheCreatorOfTheTrack() = _UserIsCreatorOfTheTrackString;
+
+  const factory AppStrings.alreadyContainsElement() = _AlreadyContainsElementString;
 }

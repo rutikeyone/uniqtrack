@@ -10,3 +10,4 @@ part 'position_model.dart';
 part 'position_data_model.dart';
 part 'memory_model.dart';
 part 'track_model.dart';
+part 'favourite_track_data_model.dart';

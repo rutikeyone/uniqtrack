@@ -475,6 +475,7 @@ abstract class _AddOrEditRecordTrackArgs implements AddOrEditRecordTrackArgs {
 /// @nodoc
 mixin _$AddOrEditMemoryArgs {
   Position? get position => throw _privateConstructorUsedError;
+  Track? get track => throw _privateConstructorUsedError;
   Memory? get memory => throw _privateConstructorUsedError;
 
   /// Create a copy of AddOrEditMemoryArgs
@@ -490,9 +491,10 @@ abstract class $AddOrEditMemoryArgsCopyWith<$Res> {
           AddOrEditMemoryArgs value, $Res Function(AddOrEditMemoryArgs) then) =
       _$AddOrEditMemoryArgsCopyWithImpl<$Res, AddOrEditMemoryArgs>;
   @useResult
-  $Res call({Position? position, Memory? memory});
+  $Res call({Position? position, Track? track, Memory? memory});
 
   $PositionCopyWith<$Res>? get position;
+  $TrackCopyWith<$Res>? get track;
   $MemoryCopyWith<$Res>? get memory;
 }
 
@@ -512,6 +514,7 @@ class _$AddOrEditMemoryArgsCopyWithImpl<$Res, $Val extends AddOrEditMemoryArgs>
   @override
   $Res call({
     Object? position = freezed,
+    Object? track = freezed,
     Object? memory = freezed,
   }) {
     return _then(_value.copyWith(
@@ -519,6 +522,10 @@ class _$AddOrEditMemoryArgsCopyWithImpl<$Res, $Val extends AddOrEditMemoryArgs>
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
               as Position?,
+      track: freezed == track
+          ? _value.track
+          : track // ignore: cast_nullable_to_non_nullable
+              as Track?,
       memory: freezed == memory
           ? _value.memory
           : memory // ignore: cast_nullable_to_non_nullable
@@ -537,6 +544,20 @@ class _$AddOrEditMemoryArgsCopyWithImpl<$Res, $Val extends AddOrEditMemoryArgs>
 
     return $PositionCopyWith<$Res>(_value.position!, (value) {
       return _then(_value.copyWith(position: value) as $Val);
+    });
+  }
+
+  /// Create a copy of AddOrEditMemoryArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TrackCopyWith<$Res>? get track {
+    if (_value.track == null) {
+      return null;
+    }
+
+    return $TrackCopyWith<$Res>(_value.track!, (value) {
+      return _then(_value.copyWith(track: value) as $Val);
     });
   }
 
@@ -563,10 +584,12 @@ abstract class _$$AddOrEditMemoryArgsImplCopyWith<$Res>
       __$$AddOrEditMemoryArgsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Position? position, Memory? memory});
+  $Res call({Position? position, Track? track, Memory? memory});
 
   @override
   $PositionCopyWith<$Res>? get position;
+  @override
+  $TrackCopyWith<$Res>? get track;
   @override
   $MemoryCopyWith<$Res>? get memory;
 }
@@ -585,6 +608,7 @@ class __$$AddOrEditMemoryArgsImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? position = freezed,
+    Object? track = freezed,
     Object? memory = freezed,
   }) {
     return _then(_$AddOrEditMemoryArgsImpl(
@@ -592,6 +616,10 @@ class __$$AddOrEditMemoryArgsImplCopyWithImpl<$Res>
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
               as Position?,
+      track: freezed == track
+          ? _value.track
+          : track // ignore: cast_nullable_to_non_nullable
+              as Track?,
       memory: freezed == memory
           ? _value.memory
           : memory // ignore: cast_nullable_to_non_nullable
@@ -606,16 +634,18 @@ class _$AddOrEditMemoryArgsImpl
     with DiagnosticableTreeMixin
     implements _AddOrEditMemoryArgs {
   const _$AddOrEditMemoryArgsImpl(
-      {required this.position, required this.memory});
+      {required this.position, required this.track, required this.memory});
 
   @override
   final Position? position;
+  @override
+  final Track? track;
   @override
   final Memory? memory;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AddOrEditMemoryArgs(position: $position, memory: $memory)';
+    return 'AddOrEditMemoryArgs(position: $position, track: $track, memory: $memory)';
   }
 
   @override
@@ -624,6 +654,7 @@ class _$AddOrEditMemoryArgsImpl
     properties
       ..add(DiagnosticsProperty('type', 'AddOrEditMemoryArgs'))
       ..add(DiagnosticsProperty('position', position))
+      ..add(DiagnosticsProperty('track', track))
       ..add(DiagnosticsProperty('memory', memory));
   }
 
@@ -634,11 +665,12 @@ class _$AddOrEditMemoryArgsImpl
             other is _$AddOrEditMemoryArgsImpl &&
             (identical(other.position, position) ||
                 other.position == position) &&
+            (identical(other.track, track) || other.track == track) &&
             (identical(other.memory, memory) || other.memory == memory));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, position, memory);
+  int get hashCode => Object.hash(runtimeType, position, track, memory);
 
   /// Create a copy of AddOrEditMemoryArgs
   /// with the given fields replaced by the non-null parameter values.
@@ -653,10 +685,13 @@ class _$AddOrEditMemoryArgsImpl
 abstract class _AddOrEditMemoryArgs implements AddOrEditMemoryArgs {
   const factory _AddOrEditMemoryArgs(
       {required final Position? position,
+      required final Track? track,
       required final Memory? memory}) = _$AddOrEditMemoryArgsImpl;
 
   @override
   Position? get position;
+  @override
+  Track? get track;
   @override
   Memory? get memory;
 
@@ -665,6 +700,200 @@ abstract class _AddOrEditMemoryArgs implements AddOrEditMemoryArgs {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddOrEditMemoryArgsImplCopyWith<_$AddOrEditMemoryArgsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$RecordTrackArgs {
+  Track? get track => throw _privateConstructorUsedError;
+  DetailsMode? get mode => throw _privateConstructorUsedError;
+
+  /// Create a copy of RecordTrackArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $RecordTrackArgsCopyWith<RecordTrackArgs> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $RecordTrackArgsCopyWith<$Res> {
+  factory $RecordTrackArgsCopyWith(
+          RecordTrackArgs value, $Res Function(RecordTrackArgs) then) =
+      _$RecordTrackArgsCopyWithImpl<$Res, RecordTrackArgs>;
+  @useResult
+  $Res call({Track? track, DetailsMode? mode});
+
+  $TrackCopyWith<$Res>? get track;
+  $DetailsModeCopyWith<$Res>? get mode;
+}
+
+/// @nodoc
+class _$RecordTrackArgsCopyWithImpl<$Res, $Val extends RecordTrackArgs>
+    implements $RecordTrackArgsCopyWith<$Res> {
+  _$RecordTrackArgsCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of RecordTrackArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? track = freezed,
+    Object? mode = freezed,
+  }) {
+    return _then(_value.copyWith(
+      track: freezed == track
+          ? _value.track
+          : track // ignore: cast_nullable_to_non_nullable
+              as Track?,
+      mode: freezed == mode
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as DetailsMode?,
+    ) as $Val);
+  }
+
+  /// Create a copy of RecordTrackArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TrackCopyWith<$Res>? get track {
+    if (_value.track == null) {
+      return null;
+    }
+
+    return $TrackCopyWith<$Res>(_value.track!, (value) {
+      return _then(_value.copyWith(track: value) as $Val);
+    });
+  }
+
+  /// Create a copy of RecordTrackArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $DetailsModeCopyWith<$Res>? get mode {
+    if (_value.mode == null) {
+      return null;
+    }
+
+    return $DetailsModeCopyWith<$Res>(_value.mode!, (value) {
+      return _then(_value.copyWith(mode: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$RecordTrackArgsImplCopyWith<$Res>
+    implements $RecordTrackArgsCopyWith<$Res> {
+  factory _$$RecordTrackArgsImplCopyWith(_$RecordTrackArgsImpl value,
+          $Res Function(_$RecordTrackArgsImpl) then) =
+      __$$RecordTrackArgsImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Track? track, DetailsMode? mode});
+
+  @override
+  $TrackCopyWith<$Res>? get track;
+  @override
+  $DetailsModeCopyWith<$Res>? get mode;
+}
+
+/// @nodoc
+class __$$RecordTrackArgsImplCopyWithImpl<$Res>
+    extends _$RecordTrackArgsCopyWithImpl<$Res, _$RecordTrackArgsImpl>
+    implements _$$RecordTrackArgsImplCopyWith<$Res> {
+  __$$RecordTrackArgsImplCopyWithImpl(
+      _$RecordTrackArgsImpl _value, $Res Function(_$RecordTrackArgsImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of RecordTrackArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? track = freezed,
+    Object? mode = freezed,
+  }) {
+    return _then(_$RecordTrackArgsImpl(
+      track: freezed == track
+          ? _value.track
+          : track // ignore: cast_nullable_to_non_nullable
+              as Track?,
+      mode: freezed == mode
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as DetailsMode?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$RecordTrackArgsImpl
+    with DiagnosticableTreeMixin
+    implements _RecordTrackArgs {
+  const _$RecordTrackArgsImpl({required this.track, required this.mode});
+
+  @override
+  final Track? track;
+  @override
+  final DetailsMode? mode;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'RecordTrackArgs(track: $track, mode: $mode)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'RecordTrackArgs'))
+      ..add(DiagnosticsProperty('track', track))
+      ..add(DiagnosticsProperty('mode', mode));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RecordTrackArgsImpl &&
+            (identical(other.track, track) || other.track == track) &&
+            (identical(other.mode, mode) || other.mode == mode));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, track, mode);
+
+  /// Create a copy of RecordTrackArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RecordTrackArgsImplCopyWith<_$RecordTrackArgsImpl> get copyWith =>
+      __$$RecordTrackArgsImplCopyWithImpl<_$RecordTrackArgsImpl>(
+          this, _$identity);
+}
+
+abstract class _RecordTrackArgs implements RecordTrackArgs {
+  const factory _RecordTrackArgs(
+      {required final Track? track,
+      required final DetailsMode? mode}) = _$RecordTrackArgsImpl;
+
+  @override
+  Track? get track;
+  @override
+  DetailsMode? get mode;
+
+  /// Create a copy of RecordTrackArgs
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RecordTrackArgsImplCopyWith<_$RecordTrackArgsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

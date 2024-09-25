@@ -113,7 +113,7 @@ final genderMapperProvider = AutoDisposeProvider<GenderMapper>.internal(
 
 typedef GenderMapperRef = AutoDisposeProviderRef<GenderMapper>;
 String _$accountsRepositoryHash() =>
-    r'ce09b50fb9787e87d6388263db574dd2af52da8f';
+    r'363e7ba6aad3631b4218449ed5404c9fbac63bf1';
 
 /// See also [accountsRepository].
 @ProviderFor(accountsRepository)
@@ -124,11 +124,8 @@ final accountsRepositoryProvider =
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : _$accountsRepositoryHash,
-  dependencies: <ProviderOrFamily>[trackMapperProvider],
-  allTransitiveDependencies: <ProviderOrFamily>{
-    trackMapperProvider,
-    ...?trackMapperProvider.allTransitiveDependencies
-  },
+  dependencies: null,
+  allTransitiveDependencies: null,
 );
 
 typedef AccountsRepositoryRef = AutoDisposeProviderRef<AccountsRepository>;

@@ -7,8 +7,8 @@ import 'package:mobx/mobx.dart';
 import 'package:provider/provider.dart';
 import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
 import 'package:uniqtrack/core/common/activity.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
-import 'package:uniqtrack/core/common/iterable_extensions.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/iterable_extensions.dart';
 import 'package:uniqtrack/core/common_impl/app_validate_toolkit_impl.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_elevated_button.dart';
@@ -62,6 +62,7 @@ class _AddOrEditMemoryPageState extends State<AddOrEditMemoryPage> {
       action?.get()?.when(
             showImageSourceChooser: _showImageSourceChooser,
             navigateWithResult: _navigateWithResult,
+            navigateBack: _navigateBack,
           );
 
   void _showImageSourceChooser(
@@ -75,7 +76,13 @@ class _AddOrEditMemoryPageState extends State<AddOrEditMemoryPage> {
   }
 
   void _navigateWithResult(AddOrEditMemoryResult result) {
-    context.read<AddOrEditMemoryNavCallbackStore>().navigateWithResult(result);
+    final navStore = context.read<AddOrEditMemoryNavCallbackStore>();
+    navStore.navigateWithResult(result);
+  }
+
+  void _navigateBack() {
+    final navStore = context.read<AddOrEditMemoryNavCallbackStore>();
+    navStore.navigateBack();
   }
 
   @override

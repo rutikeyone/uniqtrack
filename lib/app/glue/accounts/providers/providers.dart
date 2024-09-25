@@ -14,7 +14,6 @@ import 'package:uniqtrack/app/glue/accounts/mappers/user_mapper.dart';
 import 'package:uniqtrack/app/glue/accounts/repositories/accounts_adapter_repository.dart';
 import 'package:uniqtrack/app/glue/accounts/use_cases/auth_state_changes_use_case_impl.dart';
 import 'package:uniqtrack/app/glue/accounts/use_cases/user_changes_use_case_impl.dart';
-import 'package:uniqtrack/app/glue/tracks/providers/providers.dart';
 import 'package:uniqtrack/data/accounts/providers/providers.dart';
 import 'package:uniqtrack/data/images/providers/providers.dart';
 import 'package:uniqtrack/data/tracks/providers/providers.dart';

@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$Memory {
   String? get id => throw _privateConstructorUsedError;
+  String? get creatorId => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get comment => throw _privateConstructorUsedError;
   List<String>? get photos => throw _privateConstructorUsedError;
@@ -35,6 +36,7 @@ abstract class $MemoryCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
+      String? creatorId,
       String? name,
       String? comment,
       List<String>? photos,
@@ -59,6 +61,7 @@ class _$MemoryCopyWithImpl<$Res, $Val extends Memory>
   @override
   $Res call({
     Object? id = freezed,
+    Object? creatorId = freezed,
     Object? name = freezed,
     Object? comment = freezed,
     Object? photos = freezed,
@@ -68,6 +71,10 @@ class _$MemoryCopyWithImpl<$Res, $Val extends Memory>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      creatorId: freezed == creatorId
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
               as String?,
       name: freezed == name
           ? _value.name
@@ -112,6 +119,7 @@ abstract class _$$MemoryImplCopyWith<$Res> implements $MemoryCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
+      String? creatorId,
       String? name,
       String? comment,
       List<String>? photos,
@@ -135,6 +143,7 @@ class __$$MemoryImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
+    Object? creatorId = freezed,
     Object? name = freezed,
     Object? comment = freezed,
     Object? photos = freezed,
@@ -144,6 +153,10 @@ class __$$MemoryImplCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      creatorId: freezed == creatorId
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
               as String?,
       name: freezed == name
           ? _value.name
@@ -170,6 +183,7 @@ class __$$MemoryImplCopyWithImpl<$Res>
 class _$MemoryImpl with DiagnosticableTreeMixin implements _Memory {
   const _$MemoryImpl(
       {required this.id,
+      required this.creatorId,
       required this.name,
       required this.comment,
       required final List<String>? photos,
@@ -178,6 +192,8 @@ class _$MemoryImpl with DiagnosticableTreeMixin implements _Memory {
 
   @override
   final String? id;
+  @override
+  final String? creatorId;
   @override
   final String? name;
   @override
@@ -197,7 +213,7 @@ class _$MemoryImpl with DiagnosticableTreeMixin implements _Memory {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Memory(id: $id, name: $name, comment: $comment, photos: $photos, position: $position)';
+    return 'Memory(id: $id, creatorId: $creatorId, name: $name, comment: $comment, photos: $photos, position: $position)';
   }
 
   @override
@@ -206,6 +222,7 @@ class _$MemoryImpl with DiagnosticableTreeMixin implements _Memory {
     properties
       ..add(DiagnosticsProperty('type', 'Memory'))
       ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('creatorId', creatorId))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('comment', comment))
       ..add(DiagnosticsProperty('photos', photos))
@@ -218,6 +235,8 @@ class _$MemoryImpl with DiagnosticableTreeMixin implements _Memory {
         (other.runtimeType == runtimeType &&
             other is _$MemoryImpl &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.creatorId, creatorId) ||
+                other.creatorId == creatorId) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.comment, comment) || other.comment == comment) &&
             const DeepCollectionEquality().equals(other._photos, _photos) &&
@@ -226,7 +245,7 @@ class _$MemoryImpl with DiagnosticableTreeMixin implements _Memory {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, comment,
+  int get hashCode => Object.hash(runtimeType, id, creatorId, name, comment,
       const DeepCollectionEquality().hash(_photos), position);
 
   /// Create a copy of Memory
@@ -241,6 +260,7 @@ class _$MemoryImpl with DiagnosticableTreeMixin implements _Memory {
 abstract class _Memory implements Memory {
   const factory _Memory(
       {required final String? id,
+      required final String? creatorId,
       required final String? name,
       required final String? comment,
       required final List<String>? photos,
@@ -248,6 +268,8 @@ abstract class _Memory implements Memory {
 
   @override
   String? get id;
+  @override
+  String? get creatorId;
   @override
   String? get name;
   @override
@@ -526,9 +548,10 @@ class __$$PositionDataImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PositionDataImpl with DiagnosticableTreeMixin implements _PositionData {
+class _$PositionDataImpl extends _PositionData with DiagnosticableTreeMixin {
   const _$PositionDataImpl({required final List<Position>? positions})
-      : _positions = positions;
+      : _positions = positions,
+        super._();
 
   final List<Position>? _positions;
   @override
@@ -575,9 +598,10 @@ class _$PositionDataImpl with DiagnosticableTreeMixin implements _PositionData {
       __$$PositionDataImplCopyWithImpl<_$PositionDataImpl>(this, _$identity);
 }
 
-abstract class _PositionData implements PositionData {
+abstract class _PositionData extends PositionData {
   const factory _PositionData({required final List<Position>? positions}) =
       _$PositionDataImpl;
+  const _PositionData._() : super._();
 
   @override
   List<Position>? get positions;
@@ -996,6 +1020,166 @@ abstract class _Track implements Track {
 }
 
 /// @nodoc
+mixin _$MapDataUI {
+  bool get animatedToTrackShowed => throw _privateConstructorUsedError;
+  bool get animatedToMemoryShowed => throw _privateConstructorUsedError;
+
+  /// Create a copy of MapDataUI
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $MapDataUICopyWith<MapDataUI> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MapDataUICopyWith<$Res> {
+  factory $MapDataUICopyWith(MapDataUI value, $Res Function(MapDataUI) then) =
+      _$MapDataUICopyWithImpl<$Res, MapDataUI>;
+  @useResult
+  $Res call({bool animatedToTrackShowed, bool animatedToMemoryShowed});
+}
+
+/// @nodoc
+class _$MapDataUICopyWithImpl<$Res, $Val extends MapDataUI>
+    implements $MapDataUICopyWith<$Res> {
+  _$MapDataUICopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of MapDataUI
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? animatedToTrackShowed = null,
+    Object? animatedToMemoryShowed = null,
+  }) {
+    return _then(_value.copyWith(
+      animatedToTrackShowed: null == animatedToTrackShowed
+          ? _value.animatedToTrackShowed
+          : animatedToTrackShowed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      animatedToMemoryShowed: null == animatedToMemoryShowed
+          ? _value.animatedToMemoryShowed
+          : animatedToMemoryShowed // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$MapDataUIImplCopyWith<$Res>
+    implements $MapDataUICopyWith<$Res> {
+  factory _$$MapDataUIImplCopyWith(
+          _$MapDataUIImpl value, $Res Function(_$MapDataUIImpl) then) =
+      __$$MapDataUIImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({bool animatedToTrackShowed, bool animatedToMemoryShowed});
+}
+
+/// @nodoc
+class __$$MapDataUIImplCopyWithImpl<$Res>
+    extends _$MapDataUICopyWithImpl<$Res, _$MapDataUIImpl>
+    implements _$$MapDataUIImplCopyWith<$Res> {
+  __$$MapDataUIImplCopyWithImpl(
+      _$MapDataUIImpl _value, $Res Function(_$MapDataUIImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MapDataUI
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? animatedToTrackShowed = null,
+    Object? animatedToMemoryShowed = null,
+  }) {
+    return _then(_$MapDataUIImpl(
+      animatedToTrackShowed: null == animatedToTrackShowed
+          ? _value.animatedToTrackShowed
+          : animatedToTrackShowed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      animatedToMemoryShowed: null == animatedToMemoryShowed
+          ? _value.animatedToMemoryShowed
+          : animatedToMemoryShowed // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$MapDataUIImpl with DiagnosticableTreeMixin implements _MapDataUI {
+  const _$MapDataUIImpl(
+      {required this.animatedToTrackShowed,
+      required this.animatedToMemoryShowed});
+
+  @override
+  final bool animatedToTrackShowed;
+  @override
+  final bool animatedToMemoryShowed;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'MapDataUI(animatedToTrackShowed: $animatedToTrackShowed, animatedToMemoryShowed: $animatedToMemoryShowed)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'MapDataUI'))
+      ..add(DiagnosticsProperty('animatedToTrackShowed', animatedToTrackShowed))
+      ..add(DiagnosticsProperty(
+          'animatedToMemoryShowed', animatedToMemoryShowed));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MapDataUIImpl &&
+            (identical(other.animatedToTrackShowed, animatedToTrackShowed) ||
+                other.animatedToTrackShowed == animatedToTrackShowed) &&
+            (identical(other.animatedToMemoryShowed, animatedToMemoryShowed) ||
+                other.animatedToMemoryShowed == animatedToMemoryShowed));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, animatedToTrackShowed, animatedToMemoryShowed);
+
+  /// Create a copy of MapDataUI
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MapDataUIImplCopyWith<_$MapDataUIImpl> get copyWith =>
+      __$$MapDataUIImplCopyWithImpl<_$MapDataUIImpl>(this, _$identity);
+}
+
+abstract class _MapDataUI implements MapDataUI {
+  const factory _MapDataUI(
+      {required final bool animatedToTrackShowed,
+      required final bool animatedToMemoryShowed}) = _$MapDataUIImpl;
+
+  @override
+  bool get animatedToTrackShowed;
+  @override
+  bool get animatedToMemoryShowed;
+
+  /// Create a copy of MapDataUI
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MapDataUIImplCopyWith<_$MapDataUIImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$TrackUI {
   Track? get track => throw _privateConstructorUsedError;
   bool get currentUserCreator => throw _privateConstructorUsedError;
@@ -1161,14 +1345,15 @@ class __$$TrackUIImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackUIImpl with DiagnosticableTreeMixin implements _TrackUI {
+class _$TrackUIImpl extends _TrackUI with DiagnosticableTreeMixin {
   const _$TrackUIImpl(
       {required this.track,
       this.currentUserCreator = false,
       this.favouriteTrack = false,
       this.deleteEnabled = true,
       this.favouriteEnabled = true,
-      this.canDelete = true});
+      this.canDelete = true})
+      : super._();
 
   @override
   final Track? track;
@@ -1237,7 +1422,7 @@ class _$TrackUIImpl with DiagnosticableTreeMixin implements _TrackUI {
       __$$TrackUIImplCopyWithImpl<_$TrackUIImpl>(this, _$identity);
 }
 
-abstract class _TrackUI implements TrackUI {
+abstract class _TrackUI extends TrackUI {
   const factory _TrackUI(
       {required final Track? track,
       final bool currentUserCreator,
@@ -1245,6 +1430,7 @@ abstract class _TrackUI implements TrackUI {
       final bool deleteEnabled,
       final bool favouriteEnabled,
       final bool canDelete}) = _$TrackUIImpl;
+  const _TrackUI._() : super._();
 
   @override
   Track? get track;
@@ -1264,5 +1450,176 @@ abstract class _TrackUI implements TrackUI {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrackUIImplCopyWith<_$TrackUIImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$MemoryUI {
+  Memory get memory => throw _privateConstructorUsedError;
+  bool get currentUserCreator => throw _privateConstructorUsedError;
+
+  /// Create a copy of MemoryUI
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $MemoryUICopyWith<MemoryUI> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MemoryUICopyWith<$Res> {
+  factory $MemoryUICopyWith(MemoryUI value, $Res Function(MemoryUI) then) =
+      _$MemoryUICopyWithImpl<$Res, MemoryUI>;
+  @useResult
+  $Res call({Memory memory, bool currentUserCreator});
+
+  $MemoryCopyWith<$Res> get memory;
+}
+
+/// @nodoc
+class _$MemoryUICopyWithImpl<$Res, $Val extends MemoryUI>
+    implements $MemoryUICopyWith<$Res> {
+  _$MemoryUICopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of MemoryUI
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? memory = null,
+    Object? currentUserCreator = null,
+  }) {
+    return _then(_value.copyWith(
+      memory: null == memory
+          ? _value.memory
+          : memory // ignore: cast_nullable_to_non_nullable
+              as Memory,
+      currentUserCreator: null == currentUserCreator
+          ? _value.currentUserCreator
+          : currentUserCreator // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ) as $Val);
+  }
+
+  /// Create a copy of MemoryUI
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $MemoryCopyWith<$Res> get memory {
+    return $MemoryCopyWith<$Res>(_value.memory, (value) {
+      return _then(_value.copyWith(memory: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$MemoryUIImplCopyWith<$Res>
+    implements $MemoryUICopyWith<$Res> {
+  factory _$$MemoryUIImplCopyWith(
+          _$MemoryUIImpl value, $Res Function(_$MemoryUIImpl) then) =
+      __$$MemoryUIImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Memory memory, bool currentUserCreator});
+
+  @override
+  $MemoryCopyWith<$Res> get memory;
+}
+
+/// @nodoc
+class __$$MemoryUIImplCopyWithImpl<$Res>
+    extends _$MemoryUICopyWithImpl<$Res, _$MemoryUIImpl>
+    implements _$$MemoryUIImplCopyWith<$Res> {
+  __$$MemoryUIImplCopyWithImpl(
+      _$MemoryUIImpl _value, $Res Function(_$MemoryUIImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MemoryUI
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? memory = null,
+    Object? currentUserCreator = null,
+  }) {
+    return _then(_$MemoryUIImpl(
+      memory: null == memory
+          ? _value.memory
+          : memory // ignore: cast_nullable_to_non_nullable
+              as Memory,
+      currentUserCreator: null == currentUserCreator
+          ? _value.currentUserCreator
+          : currentUserCreator // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$MemoryUIImpl with DiagnosticableTreeMixin implements _MemoryUI {
+  const _$MemoryUIImpl(
+      {required this.memory, required this.currentUserCreator});
+
+  @override
+  final Memory memory;
+  @override
+  final bool currentUserCreator;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'MemoryUI(memory: $memory, currentUserCreator: $currentUserCreator)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'MemoryUI'))
+      ..add(DiagnosticsProperty('memory', memory))
+      ..add(DiagnosticsProperty('currentUserCreator', currentUserCreator));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MemoryUIImpl &&
+            (identical(other.memory, memory) || other.memory == memory) &&
+            (identical(other.currentUserCreator, currentUserCreator) ||
+                other.currentUserCreator == currentUserCreator));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, memory, currentUserCreator);
+
+  /// Create a copy of MemoryUI
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MemoryUIImplCopyWith<_$MemoryUIImpl> get copyWith =>
+      __$$MemoryUIImplCopyWithImpl<_$MemoryUIImpl>(this, _$identity);
+}
+
+abstract class _MemoryUI implements MemoryUI {
+  const factory _MemoryUI(
+      {required final Memory memory,
+      required final bool currentUserCreator}) = _$MemoryUIImpl;
+
+  @override
+  Memory get memory;
+  @override
+  bool get currentUserCreator;
+
+  /// Create a copy of MemoryUI
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MemoryUIImplCopyWith<_$MemoryUIImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

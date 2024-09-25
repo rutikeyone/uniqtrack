@@ -22,26 +22,6 @@ class _RecordMapButtonsState extends State<_RecordMapButtons> {
     _controller.animateCamera(CameraUpdate.zoomOut());
   }
 
-  Future<void> _animateCameraToCurrentPosition() async {
-    final store = context.read<RecordTrackStore>();
-    final position = store.userLocationState.whenOrNull(
-      mark: (position) => position,
-    );
-
-    final latitude = position?.latitude;
-    final longitude = position?.longitude;
-
-    if (latitude != null && longitude != null) {
-      final lngLat = LatLng(latitude, longitude);
-      final _controller = await widget.controller.future;
-
-      final zoom = 18.0;
-      final cameraUpdate = CameraUpdate.newLatLngZoom(lngLat, zoom);
-
-      _controller.animateCamera(cameraUpdate);
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     final store = context.read<RecordTrackStore>();
@@ -77,11 +57,49 @@ class _RecordMapButtonsState extends State<_RecordMapButtons> {
                     )
                   : null,
             ),
+            StreamBuilder(
+              initialData: store.previousTrackStream?.value,
+              stream: store.previousTrackStream,
+              builder: (context, snapshot) {
+                final data = snapshot.data;
+
+                if (data == null) return const SizedBox.shrink();
+
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Gap(AppDiments.dm1),
+                    MapControllerButton(
+                      iconWidget: UnconstrainedBox(
+                        child: SvgPicture.asset(
+                          AppAssets.icons.track,
+                          width: AppDiments.dm28,
+                          height: AppDiments.dm28,
+                          colorFilter: ColorFilter.mode(
+                              context.appColorsTheme.secondaryIconColor,
+                              BlendMode.srcIn),
+                        ),
+                      ),
+                      onPressed: store.animateCameraToRepeatTrack,
+                      sizeIcon: AppDiments.dm24,
+                      borderRadius: isMarkState
+                          ? BorderRadius.zero
+                          : BorderRadius.only(
+                              bottomLeft: Radius.circular(AppDiments.dm4),
+                              bottomRight: Radius.circular(AppDiments.dm4),
+                            ),
+                    ),
+                  ],
+                );
+              },
+            ),
             isMarkState ? Gap(AppDiments.dm1) : const SizedBox.shrink(),
             isMarkState
                 ? MapControllerButton(
                     icon: Icons.location_on,
-                    onPressed: _animateCameraToCurrentPosition,
+                    onPressed:
+                        context.read<RecordTrackStore>().moveToUserPosition,
                     sizeIcon: AppDiments.dm24,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(AppDiments.dm4),

@@ -11,8 +11,8 @@ import 'package:uniqtrack/core/presentation/widgets/app_empty_list_widget.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_error_widget.dart';
 import 'package:uniqtrack/core/theme/app_circle_progress_indicator.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
-import 'package:uniqtrack/features/accounts/domain/providers/providers.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
+import 'package:uniqtrack/features/tracks/domain/providers/providers.dart';
 import 'package:uniqtrack/features/tracks/presentation/community/widgets/track_actions/track_actions_modal_bottom_sheet.dart';
 import 'package:uniqtrack/features/tracks/presentation/community/widgets/track_tile.dart';
 
@@ -46,6 +46,7 @@ class _MyTracksContentWidgetState extends ConsumerState<MyTracksContentWidget> {
       context: context,
       id: id,
       onAddToFavouriteTracksPressed: () => _addToFavouritesTracks(track),
+      onEditPressed: navCallbackStore.navigateToEditTrack,
       onDeletePressed: () => _removeTrack(track),
       onDeleteToFavouriteTrackPressed: () => _removeFromFavouritesTrack(track),
       onClosePressed: navCallbackStore.closeDialog,

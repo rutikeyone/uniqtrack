@@ -15,10 +15,12 @@ class AddOrEditMemoryBuilderImpl implements AddOrEditMemoryStoreBuilder {
     BuildContext context, {
     required Position? position,
     required Memory? memory,
+    required Track? track,
   }) {
     return _storeFactory.createAddOrEditMemoryStore(
       position: position,
       memory: memory,
+      track: track,
     );
   }
 }

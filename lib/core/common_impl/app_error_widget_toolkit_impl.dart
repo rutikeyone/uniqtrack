@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:uniqtrack/core/common/app_error_widget_toolkit.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/firebase_auth_constants.dart';
 

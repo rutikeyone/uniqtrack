@@ -136,6 +136,12 @@ extension ContextExtension on BuildContext {
       trackWasSuccessfullyDeleted: () => S.of(this).theTrackWasSuccessfullyDeleted,
       notAddedToUserTracks: () => S.of(this).theTrackIsNotInTheListOfUserTracks,
       noRemoveRights: () => S.of(this).noRemoveRights,
+      notContainsElement: () => S.of(this).theCollectionDoesNotContainTheRequiredElement,
+      noUpdateRights: () => S.of(this).noUpdateRights,
+      dataHasBeenSuccessfullyUpdated: () => S.of(this).theDataHasBeenSuccessfullyUpdated,
+      memoryHasBeenSuccessfullyDeleted: () => S.of(this).theMemoryHasBeenSuccessfullyDeleted,
+      userIsTheCreatorOfTheTrack: () => S.of(this).theUserIsTheCreatorOfTheTrack,
+      alreadyContainsElement: () => S.of(this).alreadyContainsElement,
     );
   }
 }

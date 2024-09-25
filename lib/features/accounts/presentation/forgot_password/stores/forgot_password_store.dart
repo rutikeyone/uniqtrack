@@ -81,7 +81,7 @@ abstract class _ForgotPasswordStore with Store {
     _commonUIDelegate.showLoader();
 
     final forgotPasswordResult =
-        await _accountsRepository.sendPasswordResetEmail(email: email);
+        await _accountsRepository.sendPasswordResetEmail(email);
 
     forgotPasswordResult.fold(
       _handleForgotPasswordFailureResult,

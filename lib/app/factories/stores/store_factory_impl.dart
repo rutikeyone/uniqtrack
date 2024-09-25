@@ -1,33 +1,37 @@
+import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
+import 'package:generic_usecase/generic_usecase.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:uniqtrack/app/navigation/arguments/args.dart';
-import 'package:uniqtrack/data/accounts/providers/providers.dart';
-import 'package:uniqtrack/features/accounts/domain/add_to_favourite_tracks_use_case.dart';
-import 'package:uniqtrack/features/accounts/domain/providers/providers.dart';
-import 'package:uniqtrack/features/accounts/domain/remove_from_favourite_tracks_use_case.dart';
-import 'package:uniqtrack/features/accounts/domain/remove_track_use_case.dart';
-import 'package:uniqtrack/features/accounts/domain/user_changes_use_case.dart';
 import 'package:uniqtrack/app/factories/stores/store_factory.dart';
 import 'package:uniqtrack/app/glue/accounts/providers/providers.dart';
-
 import 'package:uniqtrack/app/glue/tracks/providers/providers.dart';
+import 'package:uniqtrack/app/navigation/arguments/args.dart';
 import 'package:uniqtrack/core/common/app_location_handler/app_location_handler.dart';
 import 'package:uniqtrack/core/common/app_permission_handler/app_permission_handler.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
+import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common_impl/app_location_handler_impl.dart';
 import 'package:uniqtrack/core/common_impl/app_permission_handler_impl.dart';
 import 'package:uniqtrack/core/common_impl/common_ui/common_ui_delegate_notifier.dart';
+import 'package:uniqtrack/data/accounts/providers/providers.dart';
 import 'package:uniqtrack/features/accounts/domain/accounts_repository.dart';
-import 'package:uniqtrack/features/accounts/domain/watch_favourite_track_details_use_case.dart';
-import 'package:uniqtrack/features/accounts/domain/watch_my_track_use_case.dart';
+import 'package:uniqtrack/features/accounts/domain/user_changes_use_case.dart';
 import 'package:uniqtrack/features/accounts/presentation/forgot_password/stores/forgot_password_store.dart';
 import 'package:uniqtrack/features/accounts/presentation/login/stores/login_store.dart';
 import 'package:uniqtrack/features/accounts/presentation/register/stores/register_store.dart';
+import 'package:uniqtrack/features/tracks/domain/add_favourite_track_use_case.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/domain/image_repository.dart';
 import 'package:uniqtrack/features/tracks/domain/providers/providers.dart';
+import 'package:uniqtrack/features/tracks/domain/remove_favourite_track_use_case.dart';
+import 'package:uniqtrack/features/tracks/domain/remove_memory_use_case.dart';
+import 'package:uniqtrack/features/tracks/domain/remove_track_use_case.dart';
 import 'package:uniqtrack/features/tracks/domain/track_repository.dart';
-import 'package:uniqtrack/features/tracks/domain/watch_track_details_use_case.dart';
+import 'package:uniqtrack/features/tracks/domain/update_memory_use_case.dart';
+import 'package:uniqtrack/features/tracks/domain/update_track_use_case.dart';
+import 'package:uniqtrack/features/tracks/domain/watch_favourite_track_use_case.dart';
+import 'package:uniqtrack/features/tracks/domain/watch_my_track_use_case.dart';
+import 'package:uniqtrack/features/tracks/domain/watch_track_use_case.dart';
 import 'package:uniqtrack/features/tracks/presentation/add_or_edit_memory/stores/add_or_edit_memory_store.dart';
 import 'package:uniqtrack/features/tracks/presentation/add_or_edit_record_track/stores/add_or_edit_record_track_store.dart';
 import 'package:uniqtrack/features/tracks/presentation/details/store/details_store.dart';
@@ -38,20 +42,34 @@ import 'package:uuid/uuid.dart';
 part 'store_factory_impl.g.dart';
 
 @Riverpod(dependencies: [
-  appLocationHandler,
-  trackRepository,
-  accountsRepository,
   watchTrackDetailsUseCase,
   watchFavouriteTrackDetailsUseCase,
   watchMyTrackUseCase,
   addToFavouriteTracksUseCase,
   removeFromFavouriteTracksUseCase,
   removeTrackUseCase,
+  removeMemoryUseCase,
+  updateTrackUseCase,
+  updateMemoryUseCase,
+  appLocationHandler,
+  trackRepository,
 ])
 StoreFactory storeFactory(StoreFactoryRef ref) {
   final commonUIDelegate = ref.watch(commonUIDelegateNotifierProvider.notifier);
 
   final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
+  final watchTrackDetailsUseCase = ref.watch(watchTrackDetailsUseCaseProvider);
+  final watchFavouriteTrackDetailsUseCase =
+      ref.watch(watchFavouriteTrackDetailsUseCaseProvider);
+  final watchMyTrackDetailsUseCase = ref.watch(watchMyTrackUseCaseProvider);
+  final addToFavouritesTracksUseCase =
+      ref.watch(addToFavouriteTracksUseCaseProvider);
+  final removeFromFavouriteTracksUseCase =
+      ref.watch(removeFromFavouriteTracksUseCaseProvider);
+  final removeTrackUseCase = ref.watch(removeTrackUseCaseProvider);
+  final removeMemoryUseCase = ref.watch(removeMemoryUseCaseProvider);
+  final updateTrackUseCase = ref.watch(updateTrackUseCaseProvider);
+  final updateMemoryUseCase = ref.watch(updateMemoryUseCaseProvider);
 
   final appPermissionHandler = ref.watch(appPermissionHandlerProvider);
   final appLocationHandler = ref.watch(appLocationHandlerProvider);
@@ -62,20 +80,6 @@ StoreFactory storeFactory(StoreFactoryRef ref) {
 
   final uuid = ref.watch(uuidProvider);
 
-  final watchTrackDetailsUseCaseBuilder =
-      (String id) => ref.watch(watchTrackDetailsUseCaseProvider(id));
-  final watchFavouriteTrackDetailsUseCaseBuilder =
-      (String id) => ref.watch(watchFavouriteTrackDetailsUseCaseProvider(id));
-  final watchMyTrackDetailsUseCaseBuilder =
-      (String id) => ref.watch(watchMyTrackUseCaseProvider(id));
-
-  final addToFavouritesTracksUseCase =
-      ref.watch(addToFavouriteTracksUseCaseProvider);
-
-  final removeFromFavouriteTracksUseCase =
-      ref.watch(removeFromFavouriteTracksUseCaseProvider);
-  final removeTrackUseCase = ref.watch(removeTrackUseCaseProvider);
-
   return StoreFactoryImpl(
     commonUIDelegate: commonUIDelegate,
     userChangesUseCase: userChangesUseCase,
@@ -85,33 +89,38 @@ StoreFactory storeFactory(StoreFactoryRef ref) {
     chooseImagesRepository: imagesRepository,
     accountsRepository: accountsRepository,
     uuid: uuid,
-    watchTrackDetailsUseCaseBuilder: watchTrackDetailsUseCaseBuilder,
-    watchFavouriteTrackDetailsUseCaseBuilder:
-        watchFavouriteTrackDetailsUseCaseBuilder,
-    watchMyTrackUseCaseBuilder: watchMyTrackDetailsUseCaseBuilder,
+    watchFavouriteTrackDetailsUseCase: watchFavouriteTrackDetailsUseCase,
+    watchMyTrackUseCase: watchMyTrackDetailsUseCase,
     addToFavouritesTracksUseCase: addToFavouritesTracksUseCase,
     removeFromFavouriteTracksUseCase: removeFromFavouriteTracksUseCase,
     removeTrackUseCase: removeTrackUseCase,
+    watchTrackDetailsUseCase: watchTrackDetailsUseCase,
+    removeMemoryUseCase: removeMemoryUseCase,
+    updateTrackUseCase: updateTrackUseCase,
+    updateMemoryUseCase: updateMemoryUseCase,
   );
 }
 
 class StoreFactoryImpl implements StoreFactory {
   final AccountsRepository _accountsRepository;
-  final CommonUIDelegate _commonUIDelegate;
-  final UserChangesUseCase _authStateChangesUseCase;
-  final AppLocationHandler _appLocationHandler;
   final ImageRepository _imagesRepository;
   final TrackRepository _recordTrackRepository;
-  final Uuid _uuid;
-  final AddToFavouriteTracksUseCase _addToFavouriteTracksUseCase;
-  final RemoveFromFavouriteTracksUseCase _removeFromFavouriteTracksUseCase;
-  final RemoveTrackUseCase _removeTrackUseCase;
 
-  final WatchTrackDetailsUseCase Function(String)
-      _watchTrackDetailsUseCaseBuilder;
-  final WatchFavouriteTrackDetailsUseCase Function(String)
-      _watchFavouriteDetailsUseCaseBuilder;
-  final WatchMyTrackUseCase Function(String) _watchMyTrackUseCaseBuilder;
+  final Uuid _uuid;
+
+  final CommonUIDelegate _commonUIDelegate;
+  final AppLocationHandler _appLocationHandler;
+
+  final UserChangesUseCase _authStateChangesUseCase;
+  final AddFavouriteTrackUseCase _addToFavouriteTracksUseCase;
+  final RemoveFavouriteTracksUseCase _removeFavouriteTrackUseCase;
+  final RemoveTrackUseCase _removeTrackUseCase;
+  final WatchTrackDetailsUseCase _watchTrackDetailsUseCase;
+  final WatchMyTrackUseCase _watchMyTrackUseCase;
+  final WatchFavouriteTrackUseCase _watchFavouriteDetailsUseCase;
+  final RemoveMemoryUseCase _removeMemoryUseCase;
+  final UpdateTrackUseCase _updateTrackUseCase;
+  final UpdateMemoryUseCase _updateMemoryUseCase;
 
   const StoreFactoryImpl({
     required Uuid uuid,
@@ -122,28 +131,31 @@ class StoreFactoryImpl implements StoreFactory {
     required AppLocationHandler appLocationHandler,
     required ImageRepository chooseImagesRepository,
     required TrackRepository recordTrackRepository,
-    required WatchTrackDetailsUseCase Function(String)
-        watchTrackDetailsUseCaseBuilder,
-    required WatchFavouriteTrackDetailsUseCase Function(String)
-        watchFavouriteTrackDetailsUseCaseBuilder,
-    required WatchMyTrackUseCase Function(String) watchMyTrackUseCaseBuilder,
-    required AddToFavouriteTracksUseCase addToFavouritesTracksUseCase,
-    required RemoveFromFavouriteTracksUseCase removeFromFavouriteTracksUseCase,
+    required WatchFavouriteTrackUseCase watchFavouriteTrackDetailsUseCase,
+    required AddFavouriteTrackUseCase addToFavouritesTracksUseCase,
+    required RemoveFavouriteTracksUseCase removeFromFavouriteTracksUseCase,
     required RemoveTrackUseCase removeTrackUseCase,
+    required WatchTrackDetailsUseCase watchTrackDetailsUseCase,
+    required WatchMyTrackUseCase watchMyTrackUseCase,
+    required RemoveMemoryUseCase removeMemoryUseCase,
+    required UpdateTrackUseCase updateTrackUseCase,
+    required UpdateMemoryUseCase updateMemoryUseCase,
   })  : _uuid = uuid,
         _accountsRepository = accountsRepository,
-        _commonUIDelegate = commonUIDelegate,
-        _authStateChangesUseCase = userChangesUseCase,
-        _appLocationHandler = appLocationHandler,
-        _imagesRepository = chooseImagesRepository,
         _recordTrackRepository = recordTrackRepository,
-        _watchTrackDetailsUseCaseBuilder = watchTrackDetailsUseCaseBuilder,
-        _watchFavouriteDetailsUseCaseBuilder =
-            watchFavouriteTrackDetailsUseCaseBuilder,
+        _imagesRepository = chooseImagesRepository,
+        _commonUIDelegate = commonUIDelegate,
+        _appLocationHandler = appLocationHandler,
+        _authStateChangesUseCase = userChangesUseCase,
+        _watchMyTrackUseCase = watchMyTrackUseCase,
+        _watchTrackDetailsUseCase = watchTrackDetailsUseCase,
+        _watchFavouriteDetailsUseCase = watchFavouriteTrackDetailsUseCase,
         _addToFavouriteTracksUseCase = addToFavouritesTracksUseCase,
-        _removeFromFavouriteTracksUseCase = removeFromFavouriteTracksUseCase,
+        _removeFavouriteTrackUseCase = removeFromFavouriteTracksUseCase,
         _removeTrackUseCase = removeTrackUseCase,
-        _watchMyTrackUseCaseBuilder = watchMyTrackUseCaseBuilder;
+        _removeMemoryUseCase = removeMemoryUseCase,
+        _updateTrackUseCase = updateTrackUseCase,
+        _updateMemoryUseCase = updateMemoryUseCase;
 
   @override
   RegisterStore createRegisterStore() {
@@ -173,11 +185,20 @@ class StoreFactoryImpl implements StoreFactory {
   }
 
   @override
-  RecordTrackStore createRecordTrackStore() {
+  RecordTrackStore createRecordTrackStore({
+    required Track? track,
+    required DetailsMode? mode,
+  }) {
     return RecordTrackStore(
       recordTrackRepository: _recordTrackRepository,
       commonUIDelegate: _commonUIDelegate,
       appLocationHandler: _appLocationHandler,
+      watchTrackUseCase: mode?.when(
+        tracks: () => _watchTrackDetailsUseCase,
+        myTracks: () => _watchMyTrackUseCase,
+        myFavouriteTracks: () => _watchFavouriteDetailsUseCase,
+      ),
+      previousTrack: track,
     );
   }
 
@@ -189,6 +210,8 @@ class StoreFactoryImpl implements StoreFactory {
       track: track,
       commonUIDelegate: _commonUIDelegate,
       recordTrackRepository: _recordTrackRepository,
+      updateTrackUseCase: _updateTrackUseCase,
+      deleteTrackUseCase: _removeTrackUseCase,
     );
   }
 
@@ -196,13 +219,17 @@ class StoreFactoryImpl implements StoreFactory {
   AddOrEditMemoryStore createAddOrEditMemoryStore({
     required Position? position,
     required Memory? memory,
+    required Track? track,
   }) {
     return AddOrEditMemoryStore(
       imagesRepository: _imagesRepository,
       commonUIDelegate: _commonUIDelegate,
-      position: position,
       uuid: _uuid,
+      updateMemoryUseCase: _updateMemoryUseCase,
+      removeMemoryUseCase: _removeMemoryUseCase,
+      position: position,
       memory: memory,
+      track: track,
     );
   }
 
@@ -219,23 +246,32 @@ class StoreFactoryImpl implements StoreFactory {
 
   @override
   DetailsStore createDetailsStore({
-    required String id,
+    required String? id,
     required bool canDelete,
     required bool closeWhenRemoveFromFavourites,
     required DetailsMode mode,
   }) {
+    final watchTrackDetailsUseCase = mode.when(
+      tracks: () => _watchTrackDetailsUseCase,
+      myTracks: () => _watchMyTrackUseCase,
+      myFavouriteTracks: () => _watchFavouriteDetailsUseCase,
+    );
+
+    final Usecase<Track, Either<AppError, void>>? removeTrackUseCase =
+        mode.maybeWhen(
+      myFavouriteTracks: () => null,
+      orElse: () => _removeTrackUseCase,
+    );
+
     return DetailsStore(
       id: id,
       canDelete: canDelete,
       closeWhenRemoveFromFavourites: closeWhenRemoveFromFavourites,
-      watchTrackDetailsUseCase: mode.when(
-        tracks: () => _watchTrackDetailsUseCaseBuilder(id),
-        myTracks: () => _watchMyTrackUseCaseBuilder(id),
-        myFavouriteTracks: () => _watchFavouriteDetailsUseCaseBuilder(id),
-      ),
+      watchTrackDetailsUseCase: watchTrackDetailsUseCase,
+      removeMemoryUseCase: _removeMemoryUseCase,
       addToFavouriteTracksUseCase: _addToFavouriteTracksUseCase,
-      removeFromFavouriteTracksUseCase: _removeFromFavouriteTracksUseCase,
-      removeTrackUseCase: _removeTrackUseCase,
+      removeTrackUseCase: removeTrackUseCase,
+      removeFavouriteTrackUseCase: _removeFavouriteTrackUseCase,
       commonUIDelegate: _commonUIDelegate,
     );
   }

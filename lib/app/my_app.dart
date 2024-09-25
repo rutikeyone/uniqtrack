@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 import 'package:uniqtrack/app/common_uI_container.dart';
 import 'package:uniqtrack/app/navigation/router/router.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/common_impl/common_ui/common_ui_delegate_notifier.dart';
 import 'package:uniqtrack/core/theme/app_circle_progress_indicator.dart';
 import 'package:uniqtrack/core/theme/app_themes.dart';

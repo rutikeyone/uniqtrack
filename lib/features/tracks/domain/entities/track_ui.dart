@@ -2,6 +2,11 @@ part of 'entities.dart';
 
 @freezed
 class TrackUI with _$TrackUI {
+  bool get hasMemories =>
+      track?.memories != null && track?.memories?.isNotEmpty == true;
+
+  const TrackUI._();
+
   const factory TrackUI({
     required Track? track,
     @Default(false) bool currentUserCreator,

@@ -24,6 +24,7 @@ class MemoryMapperImpl implements MemoryMapper {
 
     return MemoryModel(
       id: memory.id,
+      creatorId: memory.creatorId,
       name: memory.name,
       comment: memory.comment,
       photos: memory.photos,
@@ -40,6 +41,7 @@ class MemoryMapperImpl implements MemoryMapper {
 
     return Memory(
       id: model.id,
+      creatorId: model.creatorId,
       name: model.name,
       comment: model.comment,
       photos: model.photos,

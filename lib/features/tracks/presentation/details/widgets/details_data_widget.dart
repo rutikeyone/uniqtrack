@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_elevated_button.dart';
 import 'package:uniqtrack/core/presentation/widgets/name_widget.dart';
 import 'package:uniqtrack/core/presentation/widgets/track_data_section_widget.dart';
@@ -14,22 +14,29 @@ import 'package:uniqtrack/generated/l10n.dart';
 
 class DetailsDataWidget extends StatelessWidget {
   final TrackUI track;
-  final bool? favouriteTrack;
-  final bool? userCreator;
   final bool canDelete;
+  final bool favouriteEnabled;
 
   final VoidCallback? onAddToFavouritesPressed;
   final VoidCallback? onRemoveFromFavouritesPressed;
   final VoidCallback? onDeletePressed;
+  final VoidCallback? onRepeatPressed;
+
+  final void Function(Memory) onMemoryPressed;
+  final void Function(Memory) onDeleteMemoryPressed;
+  final void Function(Track?)? onEditPressed;
 
   const DetailsDataWidget({
     required this.track,
-    required this.favouriteTrack,
-    required this.userCreator,
     required this.canDelete,
+    required this.favouriteEnabled,
     required this.onAddToFavouritesPressed,
     required this.onRemoveFromFavouritesPressed,
     required this.onDeletePressed,
+    required this.onMemoryPressed,
+    required this.onRepeatPressed,
+    required this.onDeleteMemoryPressed,
+    required this.onEditPressed,
     super.key,
   });
 
@@ -37,8 +44,8 @@ class DetailsDataWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final trackData = track.track;
 
-    final _isFavouriteTrack = favouriteTrack;
-    final _isUserCreator = userCreator;
+    final _isFavouriteTrack = track.favouriteTrack;
+    final _isUserCreator = track.currentUserCreator;
 
     return Padding(
       padding: const EdgeInsets.all(AppDiments.dm16),
@@ -73,15 +80,20 @@ class DetailsDataWidget extends StatelessWidget {
           ),
           MemoryWidget(
             memories: trackData?.memories,
+            onMemoryPressed: onMemoryPressed,
+            onDeletePressed:
+                track.currentUserCreator ? onDeleteMemoryPressed : null,
           ),
           DetailsModalBottomActionsWidget(
             id: track.track?.id,
             userCreator: _isUserCreator,
             favouriteTrack: _isFavouriteTrack,
             canDelete: canDelete,
+            favouriteEnabled: favouriteEnabled,
             onAddToFavouritesPressed: onAddToFavouritesPressed,
             onRemoveFromFavouritesPressed: onRemoveFromFavouritesPressed,
             onDeletePressed: onDeletePressed,
+            onEditPressed: onEditPressed != null ? () => onEditPressed?.call(trackData) : null,
           ),
           Padding(
             padding: const EdgeInsets.only(top: AppDiments.dm12),
@@ -97,7 +109,7 @@ class DetailsDataWidget extends StatelessWidget {
               height: AppDiments.dm48,
               child: AppElevatedButton(
                 text: S.of(context).repeat,
-                onPressed: () {},
+                onPressed: onRepeatPressed,
                 textStyle: context.primaryTextTheme.labelLarge?.copyWith(
                   color: context.colorScheme.secondary,
                 ),

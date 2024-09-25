@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/memory_details_bottom_sheet/memory_details_action_buttons.dart';
@@ -9,13 +9,19 @@ import 'package:uniqtrack/core/presentation/widgets/name_widget.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/memory_details_bottom_sheet/memory_details_uint_8_list_photos_widget.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/record_track_bottom_sheet/modal_bottom_sheet_divider_widget.dart';
 
-class MemoryDetailsBottomSheet extends StatelessWidget {
+class MemoryDetailsBottomSheet extends StatefulWidget {
   final Stream<Memory?> memoryStream;
+  final Memory? initialData;
+
+  final Stream<bool?>? userCreatorStream;
+  final bool? initialUserCreator;
 
   final void Function(String?) navigateToPhotoViewer;
   final VoidCallback navigateBack;
-  final VoidCallback onDeletePressed;
-  final VoidCallback onEditMemoryPressed;
+  final void Function(Memory) onDeletePressed;
+  final void Function(Memory) onEditMemoryPressed;
+
+  final void Function(double)? onHeightDefined;
 
   const MemoryDetailsBottomSheet({
     required this.memoryStream,
@@ -23,6 +29,10 @@ class MemoryDetailsBottomSheet extends StatelessWidget {
     required this.navigateBack,
     required this.onDeletePressed,
     required this.onEditMemoryPressed,
+    this.onHeightDefined,
+    this.initialData,
+    this.userCreatorStream,
+    this.initialUserCreator,
     super.key,
   });
 
@@ -31,9 +41,13 @@ class MemoryDetailsBottomSheet extends StatelessWidget {
     required GlobalKey<ScaffoldState> scaffoldKey,
     required Stream<Memory?> memoryStream,
     required void Function(String?) navigateToPhotoViewer,
-    required VoidCallback onEditMemoryPressed,
+    required void Function(Memory) onEditMemoryPressed,
     required VoidCallback onNavigateBackPressed,
-    required VoidCallback onDeletePressed,
+    required void Function(Memory) onDeletePressed,
+    void Function(double)? onHeightDefined,
+    Memory? initialData,
+    Stream<bool?>? userCreatorStream,
+    bool? initialUserCreatorData,
   }) {
     return scaffoldKey.currentState?.showBottomSheet(
       (context) {
@@ -43,6 +57,10 @@ class MemoryDetailsBottomSheet extends StatelessWidget {
           navigateBack: onNavigateBackPressed,
           onDeletePressed: onDeletePressed,
           onEditMemoryPressed: onEditMemoryPressed,
+          initialData: initialData,
+          userCreatorStream: userCreatorStream,
+          initialUserCreator: initialUserCreatorData,
+          onHeightDefined: onHeightDefined,
         );
       },
       enableDrag: false,
@@ -56,26 +74,40 @@ class MemoryDetailsBottomSheet extends StatelessWidget {
   }
 
   @override
+  State<MemoryDetailsBottomSheet> createState() => _MemoryDetailsBottomSheetState();
+}
+
+class _MemoryDetailsBottomSheetState extends State<MemoryDetailsBottomSheet> {
+  @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final renderObject = context.findRenderObject();
+      if (renderObject != null && renderObject is RenderBox) {
+        final size = renderObject.size.height;
+        widget.onHeightDefined?.call(size);
+      }
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Wrap(
+      alignment: WrapAlignment.end,
       children: [
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(AppDiments.dm12),
           ),
           child: Padding(
-            padding: const EdgeInsets.only(
-              top: AppDiments.dm12,
-              left: AppDiments.dm16,
-              right: AppDiments.dm16,
-              bottom: AppDiments.dm16,
-            ),
+            padding: const EdgeInsets.all(AppDiments.dm16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ModalBottomSheetDividerWidget(),
                 StreamBuilder(
-                  stream: memoryStream,
+                  initialData: widget.initialData,
+                  stream: widget.memoryStream,
                   builder: (context, snapshot) {
                     final memory = snapshot.data;
                     if (memory == null) {
@@ -95,16 +127,18 @@ class MemoryDetailsBottomSheet extends StatelessWidget {
                         MemoryDetailsDividerWidget(),
                         MemoryDetailsListPhotosWidget(
                           initialPhotos: photos,
-                          navigateToPhotoViewer: navigateToPhotoViewer,
+                          navigateToPhotoViewer: widget.navigateToPhotoViewer,
+                        ),
+                        MemoryDetailsActionButtons(
+                          navigateBack: widget.navigateBack,
+                          onDeletePressed: () => widget.onDeletePressed(memory),
+                          onEditMemoryPressed: () => widget.onEditMemoryPressed(memory),
+                          userCreatorStream: widget.userCreatorStream,
+                          initialUserCreator: widget.initialUserCreator,
                         ),
                       ],
                     );
                   },
-                ),
-                MemoryDetailsActionButtons(
-                  navigateBack: navigateBack,
-                  onDeletePressed: onDeletePressed,
-                  onEditMemoryPressed: onEditMemoryPressed,
                 ),
               ],
             ),

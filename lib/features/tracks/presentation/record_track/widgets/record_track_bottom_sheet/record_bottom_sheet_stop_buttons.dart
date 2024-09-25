@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_elevated_button.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_outlined_button.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';

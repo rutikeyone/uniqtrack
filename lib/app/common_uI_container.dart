@@ -6,7 +6,7 @@ import 'package:uniqtrack/app/navigation/router/router.dart';
 import 'package:uniqtrack/core/common/activity.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_actions.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/common_impl/common_ui/common_ui_delegate_notifier.dart';
 import 'package:uniqtrack/core/presentation/widgets/cupertino_dialog.dart';
 

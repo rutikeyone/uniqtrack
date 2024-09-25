@@ -13,7 +13,7 @@ class DetailsStoreBuilderImpl implements DetailsStoreBuilder {
   @override
   DetailsStore create({
     required BuildContext context,
-    required String id,
+    required String? id,
     required bool canDelete,
     required bool closeWhenRemoveFromFavourites,
     required DetailsMode mode,

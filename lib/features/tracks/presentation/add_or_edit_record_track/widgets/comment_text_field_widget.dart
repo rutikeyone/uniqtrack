@@ -6,7 +6,7 @@ class _CommentTextFieldWidget extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = context.read<AddOrEditRecordTrackStore>();
-    final controller = useTextEditingController();
+    final controller = useTextEditingController(text: store.comment.value);
 
     final appValidationToolkit = ref.watch(appValidationToolkitProvider);
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/stores/states/states.dart';
 
 import 'record_bottom_sheet_data_widget.dart';
@@ -54,6 +54,7 @@ class RecordTrackModalBottomSheet extends StatelessWidget {
     return AnimatedSize(
       duration: const Duration(milliseconds: 200),
       child: Wrap(
+        alignment: WrapAlignment.end,
         children: [
           StreamBuilder(
             initialData: argument.initialData,

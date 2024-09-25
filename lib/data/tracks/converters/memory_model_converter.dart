@@ -11,6 +11,7 @@ class MemoryModelConverterImpl
   final _commentArgument = 'comment';
   final _photosArgument = 'photos';
   final _positionArgument = 'position';
+  final _creatorIdArgument = "creatorId";
 
   @override
   MemoryModel? fromJson(Map<String, dynamic>? json) {
@@ -26,6 +27,7 @@ class MemoryModelConverterImpl
       final comment = json[_commentArgument];
       final photosData = json[_photosArgument];
       final positionData = json[_positionArgument];
+      final creatorId = json[_creatorIdArgument];
 
       final photos = photosData != null
           ? (jsonDecode(photosData) as List?)
@@ -48,6 +50,7 @@ class MemoryModelConverterImpl
       return MemoryModel(
         id: id,
         name: name,
+        creatorId: creatorId,
         comment: comment,
         photos: photos,
         position: position,
@@ -73,10 +76,17 @@ class MemoryModelConverterImpl
       final comment = object.comment;
       final photos = object.photos;
       final position = object.position;
+      final creatorId = object.creatorId;
 
       if (id != null) {
         result.addAll({
           _idArgument: id,
+        });
+      }
+
+      if (creatorId != null) {
+        result.addAll({
+          _creatorIdArgument: creatorId,
         });
       }
 

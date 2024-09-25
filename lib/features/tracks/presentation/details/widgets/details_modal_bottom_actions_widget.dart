@@ -10,19 +10,23 @@ class DetailsModalBottomActionsWidget extends ConsumerWidget {
   final bool? userCreator;
   final String? id;
   final bool canDelete;
+  final bool favouriteEnabled;
 
   final VoidCallback? onAddToFavouritesPressed;
   final VoidCallback? onRemoveFromFavouritesPressed;
   final VoidCallback? onDeletePressed;
+  final VoidCallback? onEditPressed;
 
   const DetailsModalBottomActionsWidget({
     required this.userCreator,
     required this.favouriteTrack,
     required this.id,
     required this.canDelete,
+    required this.favouriteEnabled,
     required this.onAddToFavouritesPressed,
     required this.onRemoveFromFavouritesPressed,
     required this.onDeletePressed,
+    required this.onEditPressed,
     super.key,
   });
 
@@ -37,7 +41,7 @@ class DetailsModalBottomActionsWidget extends ConsumerWidget {
       padding: const EdgeInsets.only(top: AppDiments.dm12),
       child: Row(
         children: [
-          favouriteTrack != null
+          favouriteTrack != null && userCreator != null && userCreator == false
               ? TrackActionButton(
                   iconSize: AppDiments.dm48,
                   asset: favouriteTrack ?? false
@@ -46,9 +50,9 @@ class DetailsModalBottomActionsWidget extends ConsumerWidget {
                   size: favouriteTrack ?? false
                       ? AppDiments.dm32
                       : AppDiments.dm28,
-                  onPressed: favouriteTrack ?? false
+                  onPressed: favouriteEnabled ? favouriteTrack ?? false
                       ? onRemoveFromFavouritesPressed
-                      : onAddToFavouritesPressed,
+                      : onAddToFavouritesPressed : null,
                   borderRadius: BorderRadius.circular(AppDiments.dm16),
                 )
               : const SizedBox.shrink(),
@@ -71,7 +75,7 @@ class DetailsModalBottomActionsWidget extends ConsumerWidget {
                     iconSize: AppDiments.dm48,
                     asset: AppAssets.icons.edit,
                     size: AppDiments.dm24,
-                    onPressed: () {},
+                    onPressed: onEditPressed,
                     borderRadius: BorderRadius.circular(AppDiments.dm16),
                   ),
                 )

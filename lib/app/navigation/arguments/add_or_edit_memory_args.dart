@@ -5,10 +5,12 @@ AddOrEditMemoryArgsConverter addOrEditMemoryArgsConverter(
     AddOrEditMemoryArgsConverterRef ref) {
   final positionConverter = ref.watch(positionConverterProvider);
   final memoryConverter = ref.watch(memoryConverterProvider);
+  final trackConverter = ref.watch(trackConverterProvider);
 
   return AddOrEditMemoryArgsConverterImpl(
     positionConverter: positionConverter,
     memoryConverter: memoryConverter,
+    trackConverter: trackConverter,
   );
 }
 
@@ -18,15 +20,19 @@ abstract interface class AddOrEditMemoryArgsConverter
 class AddOrEditMemoryArgsConverterImpl implements AddOrEditMemoryArgsConverter {
   final PositionConverter _positionConverter;
   final MemoryConverter _memoryConverter;
+  final TrackConverter _trackConverter;
 
   final _positionArgument = "position";
   final _memoryArgument = "memory";
+  final _trackArguments = "track";
 
   const AddOrEditMemoryArgsConverterImpl({
     required PositionConverter positionConverter,
     required MemoryConverter memoryConverter,
+    required TrackConverter trackConverter,
   })  : _positionConverter = positionConverter,
-        _memoryConverter = memoryConverter;
+        _memoryConverter = memoryConverter,
+        _trackConverter = trackConverter;
 
   @override
   AddOrEditMemoryArgs? fromJson(Map<String, String> json) {
@@ -63,6 +69,23 @@ class AddOrEditMemoryArgsConverterImpl implements AddOrEditMemoryArgsConverter {
         return _memoryConverter.fromJson(data);
       }.call();
 
+      final track = () {
+        final jsonTrack = json[_trackArguments];
+        if (jsonTrack == null || jsonTrack.isEmpty) {
+          return null;
+        }
+
+        final jsonTrackDecoded = jsonDecode(jsonTrack) as Map<String, dynamic>?;
+        if (jsonTrackDecoded == null) {
+          return null;
+        }
+
+        final data =
+            jsonTrackDecoded.map((key, item) => MapEntry(key, item.toString()));
+
+        return _trackConverter.fromJson(data);
+      }.call();
+
       if (position == null && memory == null) {
         return null;
       }
@@ -70,6 +93,7 @@ class AddOrEditMemoryArgsConverterImpl implements AddOrEditMemoryArgsConverter {
       return AddOrEditMemoryArgs(
         position: position,
         memory: memory,
+        track: track,
       );
     } catch (e) {
       return null;
@@ -81,6 +105,7 @@ class AddOrEditMemoryArgsConverterImpl implements AddOrEditMemoryArgsConverter {
     try {
       final position = object?.position;
       final memory = object?.memory;
+      final track = object?.track;
 
       if (position == null && memory == null) {
         return {};
@@ -94,10 +119,20 @@ class AddOrEditMemoryArgsConverterImpl implements AddOrEditMemoryArgsConverter {
         _memoryConverter.toJson(memory),
       );
 
-      return {
+      final result = {
         _positionArgument: jsonPosition,
         _memoryArgument: jsonMemory,
       };
+
+      if (track != null) {
+        final jsonTrack = jsonEncode(_trackConverter.toJson(track));
+
+        result.addAll({
+          _trackArguments: jsonTrack,
+        });
+      }
+
+      return result;
     } catch (e) {
       return {};
     }
@@ -108,6 +143,7 @@ class AddOrEditMemoryArgsConverterImpl implements AddOrEditMemoryArgsConverter {
 class AddOrEditMemoryArgs with _$AddOrEditMemoryArgs {
   const factory AddOrEditMemoryArgs({
     required Position? position,
+    required Track? track,
     required Memory? memory,
   }) = _AddOrEditMemoryArgs;
 }

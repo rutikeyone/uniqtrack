@@ -4,23 +4,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:uniqtrack/core/common/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
 import 'package:uniqtrack/core/presentation/widgets/map_controller_button.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
+import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 
 class MapButtons extends StatefulWidget {
   final Completer<GoogleMapController> controller;
-  final VoidCallback onAnimateShowPressed;
+  final VoidCallback onAnimateToTrackShowPressed;
+  final VoidCallback onAnimateToMemoryPressed;
 
-  final Stream<bool> animateShowEnabled;
-  final bool? initialData;
+  final Stream<MapDataUI> mapDataStream;
+  final MapDataUI? initialData;
 
   const MapButtons({
     required this.controller,
-    required this.onAnimateShowPressed,
+    required this.onAnimateToTrackShowPressed,
+    required this.onAnimateToMemoryPressed,
     required this.initialData,
-    required this.animateShowEnabled,
+    required this.mapDataStream,
   });
 
   @override
@@ -43,11 +46,14 @@ class _RecordMapButtonsState extends State<MapButtons> {
     return Positioned(
       top: AppDiments.dm42,
       right: AppDiments.dm16,
-      child: StreamBuilder<bool>(
+      child: StreamBuilder<MapDataUI>(
           initialData: widget.initialData,
-          stream: widget.animateShowEnabled,
+          stream: widget.mapDataStream,
           builder: (context, snapshot) {
-            final animateShowEnabled = snapshot.data ?? false;
+            final animatedToTrackShowed =
+                snapshot.data?.animatedToTrackShowed ?? false;
+            final animatedToMemoryShowed =
+                snapshot.data?.animatedToMemoryShowed ?? false;
 
             return Column(
               children: [
@@ -63,17 +69,17 @@ class _RecordMapButtonsState extends State<MapButtons> {
                 MapControllerButton(
                   icon: Icons.remove,
                   onPressed: _zoomOut,
-                  borderRadius: animateShowEnabled
+                  borderRadius: animatedToTrackShowed
                       ? null
                       : BorderRadius.only(
                           bottomRight: Radius.circular(AppDiments.dm4),
                           bottomLeft: Radius.circular(AppDiments.dm4),
                         ),
                 ),
-                animateShowEnabled
+                animatedToTrackShowed
                     ? Gap(AppDiments.dm1)
                     : const SizedBox.shrink(),
-                animateShowEnabled
+                animatedToTrackShowed
                     ? MapControllerButton(
                         iconWidget: UnconstrainedBox(
                           child: SvgPicture.asset(
@@ -85,7 +91,31 @@ class _RecordMapButtonsState extends State<MapButtons> {
                                 BlendMode.srcIn),
                           ),
                         ),
-                        onPressed: widget.onAnimateShowPressed,
+                        onPressed: widget.onAnimateToTrackShowPressed,
+                        sizeIcon: AppDiments.dm24,
+                        borderRadius: animatedToMemoryShowed ? BorderRadius.zero : BorderRadius.only(
+                          bottomLeft: Radius.circular(AppDiments.dm4),
+                          bottomRight: Radius.circular(AppDiments.dm4),
+                        ),
+                      )
+                    : const SizedBox.shrink(),
+                animatedToMemoryShowed
+                    ? Gap(AppDiments.dm1)
+                    : const SizedBox.shrink(),
+                animatedToMemoryShowed
+                    ? MapControllerButton(
+                        iconWidget: UnconstrainedBox(
+                          child: SvgPicture.asset(
+                            AppAssets.icons.memory,
+                            width: AppDiments.dm28,
+                            height: AppDiments.dm28,
+                            colorFilter: ColorFilter.mode(
+                              context.appColorsTheme.secondaryIconColor,
+                              BlendMode.srcIn,
+                            ),
+                          ),
+                        ),
+                        onPressed: widget.onAnimateToMemoryPressed,
                         sizeIcon: AppDiments.dm24,
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(AppDiments.dm4),

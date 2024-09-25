@@ -1,7 +1,6 @@
 // ignore_for_file: avoid_manual_providers_as_generated_provider_dependency
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart' as provider;
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -12,7 +11,6 @@ import 'package:uniqtrack/app/navigation/arguments/args.dart';
 import 'package:uniqtrack/app/navigation/go_router_refresh_stream.dart';
 import 'package:uniqtrack/app/navigation/main_page.dart';
 import 'package:uniqtrack/app/navigation/paths/app_paths.dart';
-import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
 import 'package:uniqtrack/app/navigation/stores/nav_callback_store_builder.dart';
 import 'package:uniqtrack/features/accounts/presentation/forgot_password/pages/forgot_password_page.dart';
 import 'package:uniqtrack/features/accounts/presentation/login/pages/login_page.dart';
@@ -54,6 +52,9 @@ GoRouter router(RouterRef ref) {
   final authState = ref.watch(authStateNotifierProvider);
   final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
 
+  final trackIdArg = "trackId";
+  final trackDetailsPath = '/community/track_details/:$trackIdArg';
+
   return GoRouter(
     navigatorKey: rootNavigatorKey,
     initialLocation: AppPaths.splash.goRoute,
@@ -88,6 +89,30 @@ GoRouter router(RouterRef ref) {
       );
     },
     routes: [
+      GoRoute(
+        path: trackDetailsPath,
+        redirect: (context, state) {
+          final detailsConverter = ref.watch(detailsArgsConverterProvider);
+
+          final id = state.pathParameters[trackIdArg]!;
+
+          return authState.authStatus.when(
+            pending: () => null,
+            authenticated: (_) {
+              final detailsPath = AppPaths.community.details;
+
+              final queryParameters = detailsPath.queryParameters(
+                id: id,
+                mode: DetailsMode.tracks(),
+                detailsConverter: detailsConverter,
+              );
+
+              return AppPaths.community.details.query(queryParameters).goRoute;
+            },
+            notAuth: () => AppPaths.login.goRoute,
+          );
+        },
+      ),
       StatefulShellRoute.indexedStack(
         parentNavigatorKey: rootNavigatorKey,
         builder: (context, state, navigationShell) {
@@ -102,88 +127,197 @@ GoRouter router(RouterRef ref) {
               GoRoute(
                 path: AppPaths.community.goRoute,
                 builder: (context, state) {
-                  return Consumer(
-                    builder: (context, ref, child) {
-                      final detailsArgsConverter =
-                          ref.watch(detailsArgsConverterProvider);
+                  final detailsArgsConverter =
+                      ref.watch(detailsArgsConverterProvider);
 
-                      final navCallbackStore = NavCallbackStoreBuilder
-                          .createCommunityNavCallbackStore(
-                        context: context,
-                        recordTrackPath: AppPaths.community.tracking,
-                        trackDetailsPath: AppPaths.community.details,
-                        detailsArgsConverter: detailsArgsConverter,
-                      );
+                  final addOrEditRecordTrackConverter =
+                      ref.watch(addOrEditRecordTrackConverterProvider);
 
-                      return provider.Provider.value(
-                        value: navCallbackStore,
-                        child: CommunityPage(),
-                      );
-                    },
+                  final communityPath = AppPaths.community;
+                  final recordTrackPath = communityPath.tracking;
+                  final trackDetailsPath = communityPath.details;
+                  final editTrackPath = communityPath.editRecord;
+
+                  final navCallbackStore =
+                      NavCallbackStoreBuilder.createCommunityNavCallbackStore(
+                    context: context,
+                    recordTrackPath: recordTrackPath,
+                    trackDetailsPath: trackDetailsPath,
+                    editRecordTrackPath: editTrackPath,
+                    detailsArgsConverter: detailsArgsConverter,
+                    editRecordTrackArgsConverter: addOrEditRecordTrackConverter,
+                  );
+
+                  return provider.Provider.value(
+                    value: navCallbackStore,
+                    child: CommunityPage(),
                   );
                 },
                 routes: [
                   GoRoute(
                     parentNavigatorKey: rootNavigatorKey,
-                    path: AppPaths.community.details.goRoute,
+                    path: AppPaths.community.editRecord.goRoute,
                     builder: (context, state) {
                       final navCallbackStore = NavCallbackStoreBuilder
-                          .createTrackDetailsNavCallbackStore(
-                        context: context,
+                          .createAddOrEditRecordTrackNavCallbackStore(
+                              context: context);
+
+                      final addOrEditRecordTrackConverter =
+                          ref.watch(addOrEditRecordTrackConverterProvider);
+
+                      final args = addOrEditRecordTrackConverter
+                          .fromJson(state.uri.queryParameters);
+
+                      final storeBuilder =
+                          ref.watch(addOrEditRecordStoreBuilderProvider);
+
+                      return provider.MultiProvider(
+                        providers: [
+                          provider.Provider.value(value: navCallbackStore),
+                          provider.Provider(
+                            create: (context) {
+                              return storeBuilder.create(
+                                context: context,
+                                track: args?.track,
+                              );
+                            },
+                          ),
+                        ],
+                        child: AddOrEditRecordTrackPage(),
                       );
+                    },
+                  ),
+                  GoRoute(
+                    parentNavigatorKey: rootNavigatorKey,
+                    path: AppPaths.community.details.goRoute,
+                    builder: (context, state) {
+                      final photoViewerConverter =
+                          ref.watch(photoViewerConverterProvider);
+
+                      final recordTrackArgsConverter =
+                          ref.watch(recordTrackArgsConverterProvider);
+
+                      final addOrEditRecordTrackArgsConverter =
+                          ref.watch(addOrEditRecordTrackConverterProvider);
+
+                      final detailsPath = AppPaths.community.details;
+                      final photoViewerPath = detailsPath.photoViewer;
+                      final trackingPath = detailsPath.tracking;
+                      final editRecordTrackPath = detailsPath.editRecordTrack;
+                      final editMemoryPath = detailsPath.editMemoryPath;
 
                       final _storeBuilder = ref.watch(detailsStoreProvider);
 
                       final detailsArgsConverter =
                           ref.watch(detailsArgsConverterProvider);
-                      final args = AppPaths.community.details.arguments(
+
+                      final addOrEditMemoryArgsConverter =
+                          ref.watch(addOrEditMemoryArgsConverterProvider);
+
+                      final args = detailsPath.arguments(
                         parameters: state.uri.queryParameters,
                         detailsConverter: detailsArgsConverter,
+                      );
+
+                      final navCallbackStore =
+                          NavCallbackStoreBuilder.createDetailsNavCallbackStore(
+                        context: context,
+                        photoViewerPath: photoViewerPath,
+                        trackingPath: trackingPath,
+                        editRecordTrackPath: editRecordTrackPath,
+                        editMemoryPath: editMemoryPath,
+                        addOrEditRecordTrackArgsConverter:
+                            addOrEditRecordTrackArgsConverter,
+                        photoViewerConverter: photoViewerConverter,
+                        recordTrackConverter: recordTrackArgsConverter,
+                        addOrEditMemoryArgsConverter:
+                            addOrEditMemoryArgsConverter,
+                        mode: args.mode,
                       );
 
                       return provider.MultiProvider(
                         providers: [
                           provider.Provider.value(value: navCallbackStore),
                           provider.Provider(
-                            create: (context) => _storeBuilder.create(
-                              context: context,
-                              canDelete: true,
-                              closeWhenRemoveFromFavourites: false,
-                              id: args.id,
-                              mode: args.mode,
-                            ),
+                            create: (context) {
+                              return _storeBuilder.create(
+                                context: context,
+                                canDelete: true,
+                                closeWhenRemoveFromFavourites: false,
+                                id: args.id,
+                                mode: args.mode,
+                              );
+                            },
                             dispose: (context, store) => store.dispose(),
                           ),
                         ],
                         child: TrackDetailsPage(),
                       );
                     },
-                  ),
-                  GoRoute(
-                    parentNavigatorKey: rootNavigatorKey,
-                    path: AppPaths.community.tracking.goRoute,
-                    builder: (context, state) {
-                      return Consumer(
-                        builder: (context, ref, child) {
+                    routes: [
+                      GoRoute(
+                        parentNavigatorKey: rootNavigatorKey,
+                        path: AppPaths.community.details.photoViewer.goRoute,
+                        builder: (context, state) {
+                          final storeBuilder =
+                              ref.watch(photoViewerStoreBuilderProvider);
+
+                          final photoViewerConverter =
+                              ref.watch(photoViewerConverterProvider);
+
+                          final photoViewerPath =
+                              AppPaths.community.details.photoViewer;
+
+                          final args = photoViewerPath.arguments(
+                            queryParameters: state.uri.queryParameters,
+                            converter: photoViewerConverter,
+                          );
+
+                          return provider.Provider(
+                            create: (context) {
+                              return storeBuilder.create(
+                                context,
+                                bytes: args?.bytes,
+                                link: args?.link,
+                              );
+                            },
+                            child: PhotoViewerPage(),
+                          );
+                        },
+                      ),
+                      GoRoute(
+                        parentNavigatorKey: rootNavigatorKey,
+                        path: AppPaths.community.details.tracking.goRoute,
+                        builder: (context, state) {
                           final storeBuilder =
                               ref.watch(recordTrackStoreBuilderProvider);
 
                           final addOrEditMemoryArgsConverter =
                               ref.watch(addOrEditMemoryArgsConverterProvider);
+
                           final photoViewerConverter =
                               ref.watch(photoViewerConverterProvider);
+
                           final addOrEditRecordTrackConverter =
                               ref.watch(addOrEditRecordTrackConverterProvider);
+
+                          final recordTrackArgsConverter =
+                              ref.watch(recordTrackArgsConverterProvider);
+
+                          final trackingPath =
+                              AppPaths.community.details.tracking;
+                          final addOrEditMemoryPath =
+                              trackingPath.addOrEditMemoryPath;
+                          final addOrEditRecordTrackPath =
+                              trackingPath.addOrEditRecordTrack;
+                          final photoViewerPath = trackingPath.photoViewer;
 
                           final navCallbackStore = NavCallbackStoreBuilder
                               .createRecordTrackNavCallbackStore(
                             context: context,
-                            addOrEditMemoryPath:
-                                AppPaths.community.tracking.addOrEditMemoryPath,
-                            addOrEditRecordTrackPath: AppPaths
-                                .community.tracking.addOrEditRecordTrack,
-                            photoViewerPath:
-                                AppPaths.community.tracking.photoViewer,
+                            addOrEditMemoryPath: addOrEditMemoryPath,
+                            addOrEditRecordTrackPath: addOrEditRecordTrackPath,
+                            photoViewerPath: photoViewerPath,
                             photoViewerConverter: photoViewerConverter,
                             addOrEditRecordTrackConverter:
                                 addOrEditRecordTrackConverter,
@@ -191,24 +325,33 @@ GoRouter router(RouterRef ref) {
                                 addOrEditMemoryArgsConverter,
                           );
 
+                          final args = trackingPath.arguments(
+                            parameters: state.uri.queryParameters,
+                            converter: recordTrackArgsConverter,
+                          );
+
                           return provider.MultiProvider(
                             providers: [
-                              provider.Provider(create: storeBuilder.create),
+                              provider.Provider(
+                                create: (context) {
+                                  return storeBuilder.create(
+                                    context: context,
+                                    track: args?.track,
+                                    mode: args?.mode,
+                                  );
+                                },
+                              ),
                               provider.Provider.value(value: navCallbackStore),
                             ],
                             child: RecordTrackPage(),
                           );
                         },
-                      );
-                    },
-                    routes: [
-                      GoRoute(
-                        parentNavigatorKey: rootNavigatorKey,
-                        path: AppPaths
-                            .community.tracking.addOrEditMemoryPath.goRoute,
-                        builder: (context, state) {
-                          return Consumer(
-                            builder: (context, ref, child) {
+                        routes: [
+                          GoRoute(
+                            parentNavigatorKey: rootNavigatorKey,
+                            path: AppPaths.community.details.tracking
+                                .addOrEditMemoryPath.goRoute,
+                            builder: (context, state) {
                               final storeBuilder = ref
                                   .watch(addOrEditMemoryStoreBuilderProvider);
 
@@ -218,19 +361,21 @@ GoRouter router(RouterRef ref) {
                               final photoViewerConverter =
                                   ref.watch(photoViewerConverterProvider);
 
-                              final path = AppPaths
-                                  .community.tracking.addOrEditMemoryPath;
+                              final addOrEditMemoryPath = AppPaths.community
+                                  .details.tracking.addOrEditMemoryPath;
 
-                              final args = path.arguments(
+                              final args = addOrEditMemoryPath.arguments(
                                 parameters: state.uri.queryParameters,
                                 converter: addOrEditMemoryArgsConverter,
                               );
 
+                              final photoViewerPath =
+                                  addOrEditMemoryPath.photoViewerPath;
+
                               final navCallbackStore = NavCallbackStoreBuilder
                                   .createAddOrEditMemoryNavCallbackStore(
                                 context: context,
-                                photoViewerPath: AppPaths.community.tracking
-                                    .addOrEditMemoryPath.photoViewerPath,
+                                photoViewerPath: photoViewerPath,
                                 photoViewerConverter: photoViewerConverter,
                               );
 
@@ -238,17 +383,344 @@ GoRouter router(RouterRef ref) {
                                 providers: [
                                   provider.Provider.value(
                                       value: navCallbackStore),
-                                  provider.Provider(
-                                    create: (context) => storeBuilder.create(
+                                  provider.Provider(create: (context) {
+                                    return storeBuilder.create(
                                       context,
                                       position: args?.position,
                                       memory: args?.memory,
-                                    ),
-                                  ),
+                                      track: args?.track,
+                                    );
+                                  }),
                                 ],
                                 child: AddOrEditMemoryPage(),
                               );
                             },
+                            routes: [
+                              GoRoute(
+                                parentNavigatorKey: rootNavigatorKey,
+                                path: AppPaths
+                                    .community
+                                    .details
+                                    .tracking
+                                    .addOrEditMemoryPath
+                                    .photoViewerPath
+                                    .goRoute,
+                                builder: (context, state) {
+                                  final storeBuilder = ref
+                                      .watch(photoViewerStoreBuilderProvider);
+
+                                  final photoViewerConverter =
+                                      ref.watch(photoViewerConverterProvider);
+
+                                  final photoViewerPath = AppPaths
+                                      .community
+                                      .details
+                                      .tracking
+                                      .addOrEditMemoryPath
+                                      .photoViewerPath;
+
+                                  final args = photoViewerPath.arguments(
+                                    queryParameters: state.uri.queryParameters,
+                                    converter: photoViewerConverter,
+                                  );
+
+                                  return provider.Provider(
+                                    create: (context) {
+                                      return storeBuilder.create(
+                                        context,
+                                        bytes: args?.bytes,
+                                        link: args?.link,
+                                      );
+                                    },
+                                    child: PhotoViewerPage(),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                          GoRoute(
+                            parentNavigatorKey: rootNavigatorKey,
+                            path: AppPaths.community.details.tracking
+                                .addOrEditRecordTrack.goRoute,
+                            builder: (context, state) {
+                              final navCallbackStore = NavCallbackStoreBuilder
+                                  .createAddOrEditRecordTrackNavCallbackStore(
+                                      context: context);
+
+                              final addOrEditRecordTrackConverter = ref
+                                  .watch(addOrEditRecordTrackConverterProvider);
+
+                              final args = addOrEditRecordTrackConverter
+                                  .fromJson(state.uri.queryParameters);
+
+                              final storeBuilder = ref
+                                  .watch(addOrEditRecordStoreBuilderProvider);
+
+                              return provider.MultiProvider(
+                                providers: [
+                                  provider.Provider.value(
+                                      value: navCallbackStore),
+                                  provider.Provider(
+                                    create: (context) {
+                                      return storeBuilder.create(
+                                        context: context,
+                                        track: args?.track,
+                                      );
+                                    },
+                                  ),
+                                ],
+                                child: AddOrEditRecordTrackPage(),
+                              );
+                            },
+                          ),
+                          GoRoute(
+                            parentNavigatorKey: rootNavigatorKey,
+                            path: AppPaths
+                                .community.details.tracking.photoViewer.goRoute,
+                            builder: (context, state) {
+                              final storeBuilder =
+                                  ref.watch(photoViewerStoreBuilderProvider);
+                              final photoViewerConverter =
+                                  ref.watch(photoViewerConverterProvider);
+
+                              final photoViewerPath = AppPaths
+                                  .community.details.tracking.photoViewer;
+
+                              final args = photoViewerPath.arguments(
+                                queryParameters: state.uri.queryParameters,
+                                converter: photoViewerConverter,
+                              );
+
+                              return provider.Provider(
+                                create: (context) {
+                                  return storeBuilder.create(
+                                    context,
+                                    bytes: args?.bytes,
+                                    link: args?.link,
+                                  );
+                                },
+                                child: PhotoViewerPage(),
+                              );
+                            },
+                          ),
+                        ],
+                      ),
+                      GoRoute(
+                        parentNavigatorKey: rootNavigatorKey,
+                        path:
+                            AppPaths.community.details.editRecordTrack.goRoute,
+                        builder: (context, state) {
+                          final navCallbackStore = NavCallbackStoreBuilder
+                              .createAddOrEditRecordTrackNavCallbackStore(
+                                  context: context);
+
+                          final addOrEditRecordTrackConverter =
+                              ref.watch(addOrEditRecordTrackConverterProvider);
+
+                          final args = addOrEditRecordTrackConverter
+                              .fromJson(state.uri.queryParameters);
+                          final storeBuilder =
+                              ref.watch(addOrEditRecordStoreBuilderProvider);
+
+                          return provider.MultiProvider(
+                            providers: [
+                              provider.Provider.value(value: navCallbackStore),
+                              provider.Provider(
+                                create: (context) {
+                                  return storeBuilder.create(
+                                    context: context,
+                                    track: args?.track,
+                                  );
+                                },
+                              ),
+                            ],
+                            child: AddOrEditRecordTrackPage(),
+                          );
+                        },
+                      ),
+                      GoRoute(
+                        parentNavigatorKey: rootNavigatorKey,
+                        path: AppPaths.community.details.editMemoryPath.goRoute,
+                        builder: (context, state) {
+                          final storeBuilder =
+                              ref.watch(addOrEditMemoryStoreBuilderProvider);
+
+                          final addOrEditMemoryArgsConverter =
+                              ref.watch(addOrEditMemoryArgsConverterProvider);
+
+                          final photoViewerConverter =
+                              ref.watch(photoViewerConverterProvider);
+
+                          final addOrEditMemoryPath =
+                              AppPaths.community.details.editMemoryPath;
+
+                          final photoViewerPath =
+                              addOrEditMemoryPath.photoViewerPath;
+
+                          final args = addOrEditMemoryPath.arguments(
+                            parameters: state.uri.queryParameters,
+                            converter: addOrEditMemoryArgsConverter,
+                          );
+
+                          final navCallbackStore = NavCallbackStoreBuilder
+                              .createAddOrEditMemoryNavCallbackStore(
+                            context: context,
+                            photoViewerPath: photoViewerPath,
+                            photoViewerConverter: photoViewerConverter,
+                          );
+
+                          return provider.MultiProvider(
+                            providers: [
+                              provider.Provider.value(value: navCallbackStore),
+                              provider.Provider(
+                                create: (context) {
+                                  return storeBuilder.create(
+                                    context,
+                                    position: args?.position,
+                                    memory: args?.memory,
+                                    track: args?.track,
+                                  );
+                                },
+                              ),
+                            ],
+                            child: AddOrEditMemoryPage(),
+                          );
+                        },
+                        routes: [
+                          GoRoute(
+                            parentNavigatorKey: rootNavigatorKey,
+                            path: AppPaths.community.details.editMemoryPath
+                                .photoViewerPath.goRoute,
+                            builder: (context, state) {
+                              final storeBuilder =
+                                  ref.watch(photoViewerStoreBuilderProvider);
+
+                              final photoViewerConverter =
+                                  ref.watch(photoViewerConverterProvider);
+
+                              final photoViewerPath = AppPaths.community.details
+                                  .editMemoryPath.photoViewerPath;
+
+                              final args = photoViewerPath.arguments(
+                                queryParameters: state.uri.queryParameters,
+                                converter: photoViewerConverter,
+                              );
+
+                              return provider.Provider(
+                                create: (context) {
+                                  return storeBuilder.create(
+                                    context,
+                                    bytes: args?.bytes,
+                                    link: args?.link,
+                                  );
+                                },
+                                child: PhotoViewerPage(),
+                              );
+                            },
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  GoRoute(
+                    parentNavigatorKey: rootNavigatorKey,
+                    path: AppPaths.community.tracking.goRoute,
+                    builder: (context, state) {
+                      final storeBuilder =
+                          ref.watch(recordTrackStoreBuilderProvider);
+
+                      final addOrEditMemoryArgsConverter =
+                          ref.watch(addOrEditMemoryArgsConverterProvider);
+
+                      final photoViewerConverter =
+                          ref.watch(photoViewerConverterProvider);
+
+                      final addOrEditRecordTrackConverter =
+                          ref.watch(addOrEditRecordTrackConverterProvider);
+
+                      final tracking = AppPaths.community.tracking;
+                      final addOrEditMemoryPath = tracking.addOrEditMemoryPath;
+                      final addOrEditRecordTrack =
+                          tracking.addOrEditRecordTrack;
+                      final photoViewer = tracking.photoViewer;
+
+                      final navCallbackStore = NavCallbackStoreBuilder
+                          .createRecordTrackNavCallbackStore(
+                        context: context,
+                        addOrEditMemoryPath: addOrEditMemoryPath,
+                        addOrEditRecordTrackPath: addOrEditRecordTrack,
+                        photoViewerPath: photoViewer,
+                        photoViewerConverter: photoViewerConverter,
+                        addOrEditRecordTrackConverter:
+                            addOrEditRecordTrackConverter,
+                        addOrEditMemoryArgsConverter:
+                            addOrEditMemoryArgsConverter,
+                      );
+
+                      return provider.MultiProvider(
+                        providers: [
+                          provider.Provider(
+                            create: (context) {
+                              return storeBuilder.create(
+                                context: context,
+                                track: null,
+                                mode: null,
+                              );
+                            },
+                          ),
+                          provider.Provider.value(value: navCallbackStore),
+                        ],
+                        child: RecordTrackPage(),
+                      );
+                    },
+                    routes: [
+                      GoRoute(
+                        parentNavigatorKey: rootNavigatorKey,
+                        path: AppPaths
+                            .community.tracking.addOrEditMemoryPath.goRoute,
+                        builder: (context, state) {
+                          final storeBuilder =
+                              ref.watch(addOrEditMemoryStoreBuilderProvider);
+
+                          final addOrEditMemoryArgsConverter =
+                              ref.watch(addOrEditMemoryArgsConverterProvider);
+
+                          final photoViewerConverter =
+                              ref.watch(photoViewerConverterProvider);
+
+                          final addOrEditMemoryPath =
+                              AppPaths.community.tracking.addOrEditMemoryPath;
+
+                          final photoViewerPath =
+                              addOrEditMemoryPath.photoViewerPath;
+
+                          final args = addOrEditMemoryPath.arguments(
+                            parameters: state.uri.queryParameters,
+                            converter: addOrEditMemoryArgsConverter,
+                          );
+
+                          final navCallbackStore = NavCallbackStoreBuilder
+                              .createAddOrEditMemoryNavCallbackStore(
+                            context: context,
+                            photoViewerPath: photoViewerPath,
+                            photoViewerConverter: photoViewerConverter,
+                          );
+
+                          return provider.MultiProvider(
+                            providers: [
+                              provider.Provider.value(value: navCallbackStore),
+                              provider.Provider(
+                                create: (context) {
+                                  return storeBuilder.create(
+                                    context,
+                                    position: args?.position,
+                                    memory: args?.memory,
+                                    track: args?.track,
+                                  );
+                                },
+                              ),
+                            ],
+                            child: AddOrEditMemoryPage(),
                           );
                         },
                         routes: [
@@ -257,35 +729,30 @@ GoRouter router(RouterRef ref) {
                             path: AppPaths.community.tracking
                                 .addOrEditMemoryPath.photoViewerPath.goRoute,
                             builder: (context, state) {
-                              return Consumer(builder: (context, ref, child) {
-                                final storeBuilder =
-                                    ref.watch(photoViewerStoreBuilderProvider);
+                              final storeBuilder =
+                                  ref.watch(photoViewerStoreBuilderProvider);
 
-                                final photoViewerConverter =
-                                    ref.watch(photoViewerConverterProvider);
+                              final photoViewerConverter =
+                                  ref.watch(photoViewerConverterProvider);
 
-                                final photoViewerPath = AppPaths
-                                    .community
-                                    .tracking
-                                    .addOrEditMemoryPath
-                                    .photoViewerPath;
+                              final photoViewerPath = AppPaths.community
+                                  .tracking.addOrEditMemoryPath.photoViewerPath;
 
-                                final args = photoViewerPath.arguments(
-                                  queryParameters: state.uri.queryParameters,
-                                  converter: photoViewerConverter,
-                                );
+                              final args = photoViewerPath.arguments(
+                                queryParameters: state.uri.queryParameters,
+                                converter: photoViewerConverter,
+                              );
 
-                                return provider.Provider(
-                                  create: (context) {
-                                    return storeBuilder.create(
-                                      context,
-                                      bytes: args?.bytes,
-                                      link: args?.link,
-                                    );
-                                  },
-                                  child: PhotoViewerPage(),
-                                );
-                              });
+                              return provider.Provider(
+                                create: (context) {
+                                  return storeBuilder.create(
+                                    context,
+                                    bytes: args?.bytes,
+                                    link: args?.link,
+                                  );
+                                },
+                                child: PhotoViewerPage(),
+                              );
                             },
                           ),
                         ],
@@ -304,54 +771,53 @@ GoRouter router(RouterRef ref) {
 
                           final args = addOrEditRecordTrackConverter
                               .fromJson(state.uri.queryParameters);
+                          final storeBuilder =
+                              ref.watch(addOrEditRecordStoreBuilderProvider);
 
-                          return Consumer(builder: (context, ref, child) {
-                            final storeBuilder =
-                                ref.watch(addOrEditRecordStoreBuilderProvider);
-
-                            return provider.MultiProvider(
-                              providers: [
-                                provider.Provider.value(
-                                    value: navCallbackStore),
-                                provider.Provider(
-                                  create: (context) => storeBuilder.create(
-                                      context: context, track: args?.track),
-                                ),
-                              ],
-                              child: AddOrEditRecordTrackPage(),
-                            );
-                          });
+                          return provider.MultiProvider(
+                            providers: [
+                              provider.Provider.value(value: navCallbackStore),
+                              provider.Provider(
+                                create: (context) {
+                                  return storeBuilder.create(
+                                    context: context,
+                                    track: args?.track,
+                                  );
+                                },
+                              ),
+                            ],
+                            child: AddOrEditRecordTrackPage(),
+                          );
                         },
                       ),
                       GoRoute(
                         parentNavigatorKey: rootNavigatorKey,
                         path: AppPaths.community.tracking.photoViewer.goRoute,
                         builder: (context, state) {
-                          return Consumer(builder: (context, ref, child) {
-                            final storeBuilder =
-                                ref.watch(photoViewerStoreBuilderProvider);
-                            final photoViewerConverter =
-                                ref.watch(photoViewerConverterProvider);
+                          final storeBuilder =
+                              ref.watch(photoViewerStoreBuilderProvider);
 
-                            final photoViewerPath =
-                                AppPaths.community.tracking.photoViewer;
+                          final photoViewerConverter =
+                              ref.watch(photoViewerConverterProvider);
 
-                            final args = photoViewerPath.arguments(
-                              queryParameters: state.uri.queryParameters,
-                              converter: photoViewerConverter,
-                            );
+                          final photoViewerPath =
+                              AppPaths.community.tracking.photoViewer;
 
-                            return provider.Provider(
-                              create: (context) {
-                                return storeBuilder.create(
-                                  context,
-                                  bytes: args?.bytes,
-                                  link: args?.link,
-                                );
-                              },
-                              child: PhotoViewerPage(),
-                            );
-                          });
+                          final args = photoViewerPath.arguments(
+                            queryParameters: state.uri.queryParameters,
+                            converter: photoViewerConverter,
+                          );
+
+                          return provider.Provider(
+                            create: (context) {
+                              return storeBuilder.create(
+                                context,
+                                bytes: args?.bytes,
+                                link: args?.link,
+                              );
+                            },
+                            child: PhotoViewerPage(),
+                          );
                         },
                       ),
                     ],
@@ -366,11 +832,11 @@ GoRouter router(RouterRef ref) {
               GoRoute(
                 path: AppPaths.profile.goRoute,
                 builder: (context, state) {
-                  final navCallbackStore = ProfileNavCallbackStore(
-                    navigateToMyTracks: () =>
-                        context.push(AppPaths.profile.myTracksPath.path),
-                    navigateToMyFavouriteTracks: () =>
-                        context.push(AppPaths.profile.myFavouriteTracks.path),
+                  final navCallbackStore =
+                      NavCallbackStoreBuilder.createProfileNavCallbackStore(
+                    context: context,
+                    myTracksPath: AppPaths.profile.myTracksPath,
+                    myFavouriteTracksPath: AppPaths.profile.myFavouriteTracks,
                   );
 
                   return provider.Provider.value(
@@ -382,88 +848,551 @@ GoRouter router(RouterRef ref) {
                   GoRoute(
                     path: AppPaths.profile.myTracksPath.goRoute,
                     builder: (context, state) {
-                      return Consumer(
-                        builder: (context, ref, child) {
-                          final detailsArgsConverter =
-                              ref.watch(detailsArgsConverterProvider);
+                      final detailsArgsConverter =
+                          ref.watch(detailsArgsConverterProvider);
 
-                          final navCallbackStore = NavCallbackStoreBuilder
-                              .createMyTracksNavCallbackStore(
-                            context: context,
-                            trackDetailsPath:
-                                AppPaths.profile.myTracksPath.details,
-                            detailsArgsConverter: detailsArgsConverter,
-                          );
+                      final editRecordTrackArgsConverter =
+                          ref.watch(addOrEditRecordTrackConverterProvider);
 
-                          return provider.Provider.value(
-                            value: navCallbackStore,
-                            child: MyTracksPage(),
-                          );
-                        },
+                      final myTracksPath = AppPaths.profile.myTracksPath;
+                      final detailsPath = myTracksPath.details;
+                      final editTrackPath = myTracksPath.editTrack;
+
+                      final navCallbackStore = NavCallbackStoreBuilder
+                          .createMyTracksNavCallbackStore(
+                        context: context,
+                        detailsPath: detailsPath,
+                        editTrackPath: editTrackPath,
+                        detailsArgsConverter: detailsArgsConverter,
+                        editRecordTrackArgsConverter:
+                            editRecordTrackArgsConverter,
+                      );
+
+                      return provider.Provider.value(
+                        value: navCallbackStore,
+                        child: MyTracksPage(),
                       );
                     },
                     routes: [
                       GoRoute(
                         parentNavigatorKey: rootNavigatorKey,
-                        path: AppPaths.profile.myTracksPath.details.goRoute,
+                        path: AppPaths.profile.myTracksPath.editTrack.goRoute,
                         builder: (context, state) {
                           final navCallbackStore = NavCallbackStoreBuilder
-                              .createTrackDetailsNavCallbackStore(
-                            context: context,
-                          );
+                              .createAddOrEditRecordTrackNavCallbackStore(
+                                  context: context);
 
-                          final _storeBuilder = ref.watch(detailsStoreProvider);
+                          final addOrEditRecordTrackConverter =
+                              ref.watch(addOrEditRecordTrackConverterProvider);
+
+                          final args = addOrEditRecordTrackConverter
+                              .fromJson(state.uri.queryParameters);
+
+                          final storeBuilder =
+                              ref.watch(addOrEditRecordStoreBuilderProvider);
+
+                          return provider.MultiProvider(
+                            providers: [
+                              provider.Provider.value(value: navCallbackStore),
+                              provider.Provider(
+                                create: (context) {
+                                  return storeBuilder.create(
+                                    context: context,
+                                    track: args?.track,
+                                  );
+                                },
+                              ),
+                            ],
+                            child: AddOrEditRecordTrackPage(),
+                          );
+                        },
+                      ),
+                      GoRoute(
+                        parentNavigatorKey: rootNavigatorKey,
+                        path: AppPaths.profile.myTracksPath.details.goRoute,
+                        builder: (context, state) {
+                          final photoViewerConverter =
+                              ref.watch(photoViewerConverterProvider);
+
+                          final recordTrackConverter =
+                              ref.watch(recordTrackArgsConverterProvider);
+
+                          final addOrEditRecordTrackArgsConverter =
+                              ref.watch(addOrEditRecordTrackConverterProvider);
+
+                          final addOrEditMemoryArgsConverter =
+                              ref.watch(addOrEditMemoryArgsConverterProvider);
 
                           final detailsArgsConverter =
                               ref.watch(detailsArgsConverterProvider);
 
-                          final args =
-                              AppPaths.profile.myTracksPath.details.arguments(
+                          final detailsPath =
+                              AppPaths.profile.myTracksPath.details;
+                          final photoViewerPath = detailsPath.photoViewer;
+                          final trackingPath = detailsPath.tracking;
+                          final editRecordTrackPath =
+                              detailsPath.editRecordTrack;
+                          final editMemoryPath = detailsPath.editMemoryPath;
+
+                          final _storeBuilder = ref.watch(detailsStoreProvider);
+
+                          final args = detailsPath.arguments(
                             parameters: state.uri.queryParameters,
                             detailsConverter: detailsArgsConverter,
+                          );
+
+                          final navCallbackStore = NavCallbackStoreBuilder
+                              .createDetailsNavCallbackStore(
+                            context: context,
+                            photoViewerPath: photoViewerPath,
+                            trackingPath: trackingPath,
+                            editRecordTrackPath: editRecordTrackPath,
+                            editMemoryPath: editMemoryPath,
+                            addOrEditRecordTrackArgsConverter:
+                                addOrEditRecordTrackArgsConverter,
+                            photoViewerConverter: photoViewerConverter,
+                            recordTrackConverter: recordTrackConverter,
+                            addOrEditMemoryArgsConverter:
+                                addOrEditMemoryArgsConverter,
+                            mode: args.mode,
                           );
 
                           return provider.MultiProvider(
                             providers: [
                               provider.Provider.value(value: navCallbackStore),
                               provider.Provider(
-                                create: (context) => _storeBuilder.create(
-                                  context: context,
-                                  canDelete: true,
-                                  closeWhenRemoveFromFavourites: false,
-                                  id: args.id,
-                                  mode: args.mode,
-                                ),
+                                create: (context) {
+                                  return _storeBuilder.create(
+                                    context: context,
+                                    canDelete: true,
+                                    closeWhenRemoveFromFavourites: false,
+                                    id: args.id,
+                                    mode: args.mode,
+                                  );
+                                },
                                 dispose: (context, store) => store.dispose(),
                               ),
                             ],
                             child: TrackDetailsPage(),
                           );
                         },
+                        routes: [
+                          GoRoute(
+                            parentNavigatorKey: rootNavigatorKey,
+                            path: AppPaths.profile.myTracksPath.details
+                                .photoViewer.goRoute,
+                            builder: (context, state) {
+                              final storeBuilder =
+                                  ref.watch(photoViewerStoreBuilderProvider);
+
+                              final photoViewerConverter =
+                                  ref.watch(photoViewerConverterProvider);
+
+                              final photoViewerPath = AppPaths
+                                  .profile.myTracksPath.details.photoViewer;
+
+                              final args = photoViewerPath.arguments(
+                                queryParameters: state.uri.queryParameters,
+                                converter: photoViewerConverter,
+                              );
+
+                              return provider.Provider(
+                                create: (context) {
+                                  return storeBuilder.create(
+                                    context,
+                                    bytes: args?.bytes,
+                                    link: args?.link,
+                                  );
+                                },
+                                child: PhotoViewerPage(),
+                              );
+                            },
+                          ),
+                          GoRoute(
+                            parentNavigatorKey: rootNavigatorKey,
+                            path: AppPaths
+                                .profile.myTracksPath.details.tracking.goRoute,
+                            builder: (context, state) {
+                              final storeBuilder =
+                                  ref.watch(recordTrackStoreBuilderProvider);
+
+                              final addOrEditMemoryArgsConverter = ref
+                                  .watch(addOrEditMemoryArgsConverterProvider);
+
+                              final photoViewerConverter =
+                                  ref.watch(photoViewerConverterProvider);
+
+                              final addOrEditRecordTrackConverter = ref
+                                  .watch(addOrEditRecordTrackConverterProvider);
+
+                              final recordTrackArgsConverter =
+                                  ref.watch(recordTrackArgsConverterProvider);
+
+                              final trackingPath = AppPaths
+                                  .profile.myTracksPath.details.tracking;
+                              final addOrEditMemoryPath =
+                                  trackingPath.addOrEditMemoryPath;
+                              final addOrEditRecordTrack =
+                                  trackingPath.addOrEditRecordTrack;
+                              final photoViewerPath = trackingPath.photoViewer;
+
+                              final navCallbackStore = NavCallbackStoreBuilder
+                                  .createRecordTrackNavCallbackStore(
+                                context: context,
+                                addOrEditMemoryPath: addOrEditMemoryPath,
+                                addOrEditRecordTrackPath: addOrEditRecordTrack,
+                                photoViewerPath: photoViewerPath,
+                                photoViewerConverter: photoViewerConverter,
+                                addOrEditRecordTrackConverter:
+                                    addOrEditRecordTrackConverter,
+                                addOrEditMemoryArgsConverter:
+                                    addOrEditMemoryArgsConverter,
+                              );
+
+                              final args = trackingPath.arguments(
+                                parameters: state.uri.queryParameters,
+                                converter: recordTrackArgsConverter,
+                              );
+
+                              return provider.MultiProvider(
+                                providers: [
+                                  provider.Provider(
+                                    create: (context) {
+                                      return storeBuilder.create(
+                                        context: context,
+                                        track: args?.track,
+                                        mode: args?.mode,
+                                      );
+                                    },
+                                  ),
+                                  provider.Provider.value(
+                                      value: navCallbackStore),
+                                ],
+                                child: RecordTrackPage(),
+                              );
+                            },
+                            routes: [
+                              GoRoute(
+                                parentNavigatorKey: rootNavigatorKey,
+                                path: AppPaths.profile.myTracksPath.details
+                                    .tracking.addOrEditMemoryPath.goRoute,
+                                builder: (context, state) {
+                                  final storeBuilder = ref.watch(
+                                      addOrEditMemoryStoreBuilderProvider);
+
+                                  final addOrEditMemoryArgsConverter =
+                                      ref.watch(
+                                          addOrEditMemoryArgsConverterProvider);
+
+                                  final photoViewerConverter =
+                                      ref.watch(photoViewerConverterProvider);
+
+                                  final addOrEditMemoryPath = AppPaths
+                                      .profile
+                                      .myTracksPath
+                                      .details
+                                      .tracking
+                                      .addOrEditMemoryPath;
+
+                                  final photoViewerPath =
+                                      addOrEditMemoryPath.photoViewerPath;
+
+                                  final args = addOrEditMemoryPath.arguments(
+                                    parameters: state.uri.queryParameters,
+                                    converter: addOrEditMemoryArgsConverter,
+                                  );
+
+                                  final navCallbackStore =
+                                      NavCallbackStoreBuilder
+                                          .createAddOrEditMemoryNavCallbackStore(
+                                    context: context,
+                                    photoViewerPath: photoViewerPath,
+                                    photoViewerConverter: photoViewerConverter,
+                                  );
+
+                                  return provider.MultiProvider(
+                                    providers: [
+                                      provider.Provider.value(
+                                          value: navCallbackStore),
+                                      provider.Provider(
+                                        create: (context) {
+                                          return storeBuilder.create(
+                                            context,
+                                            position: args?.position,
+                                            memory: args?.memory,
+                                            track: args?.track,
+                                          );
+                                        },
+                                      ),
+                                    ],
+                                    child: AddOrEditMemoryPage(),
+                                  );
+                                },
+                                routes: [
+                                  GoRoute(
+                                    parentNavigatorKey: rootNavigatorKey,
+                                    path: AppPaths
+                                        .profile
+                                        .myTracksPath
+                                        .details
+                                        .tracking
+                                        .addOrEditMemoryPath
+                                        .photoViewerPath
+                                        .goRoute,
+                                    builder: (context, state) {
+                                      final storeBuilder = ref.watch(
+                                          photoViewerStoreBuilderProvider);
+
+                                      final photoViewerConverter = ref
+                                          .watch(photoViewerConverterProvider);
+
+                                      final photoViewerPath = AppPaths
+                                          .profile
+                                          .myTracksPath
+                                          .details
+                                          .tracking
+                                          .addOrEditMemoryPath
+                                          .photoViewerPath;
+
+                                      final args = photoViewerPath.arguments(
+                                        queryParameters:
+                                            state.uri.queryParameters,
+                                        converter: photoViewerConverter,
+                                      );
+
+                                      return provider.Provider(
+                                        create: (context) {
+                                          return storeBuilder.create(
+                                            context,
+                                            bytes: args?.bytes,
+                                            link: args?.link,
+                                          );
+                                        },
+                                        child: PhotoViewerPage(),
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
+                              GoRoute(
+                                parentNavigatorKey: rootNavigatorKey,
+                                path: AppPaths.profile.myTracksPath.details
+                                    .tracking.addOrEditRecordTrack.goRoute,
+                                builder: (context, state) {
+                                  final navCallbackStore = NavCallbackStoreBuilder
+                                      .createAddOrEditRecordTrackNavCallbackStore(
+                                          context: context);
+
+                                  final addOrEditRecordTrackConverter =
+                                      ref.watch(
+                                          addOrEditRecordTrackConverterProvider);
+
+                                  final args = addOrEditRecordTrackConverter
+                                      .fromJson(state.uri.queryParameters);
+
+                                  final storeBuilder = ref.watch(
+                                      addOrEditRecordStoreBuilderProvider);
+
+                                  return provider.MultiProvider(
+                                    providers: [
+                                      provider.Provider.value(
+                                          value: navCallbackStore),
+                                      provider.Provider(
+                                        create: (context) {
+                                          return storeBuilder.create(
+                                            context: context,
+                                            track: args?.track,
+                                          );
+                                        },
+                                      ),
+                                    ],
+                                    child: AddOrEditRecordTrackPage(),
+                                  );
+                                },
+                              ),
+                              GoRoute(
+                                parentNavigatorKey: rootNavigatorKey,
+                                path: AppPaths.profile.myTracksPath.details
+                                    .tracking.photoViewer.goRoute,
+                                builder: (context, state) {
+                                  final storeBuilder = ref
+                                      .watch(photoViewerStoreBuilderProvider);
+
+                                  final photoViewerConverter =
+                                      ref.watch(photoViewerConverterProvider);
+
+                                  final photoViewerPath = AppPaths
+                                      .profile
+                                      .myTracksPath
+                                      .details
+                                      .tracking
+                                      .photoViewer;
+
+                                  final args = photoViewerPath.arguments(
+                                    queryParameters: state.uri.queryParameters,
+                                    converter: photoViewerConverter,
+                                  );
+
+                                  return provider.Provider(
+                                    create: (context) {
+                                      return storeBuilder.create(
+                                        context,
+                                        bytes: args?.bytes,
+                                        link: args?.link,
+                                      );
+                                    },
+                                    child: PhotoViewerPage(),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                          GoRoute(
+                            parentNavigatorKey: rootNavigatorKey,
+                            path: AppPaths.profile.myTracksPath.details
+                                .editRecordTrack.goRoute,
+                            builder: (context, state) {
+                              final navCallbackStore = NavCallbackStoreBuilder
+                                  .createAddOrEditRecordTrackNavCallbackStore(
+                                      context: context);
+
+                              final addOrEditRecordTrackConverter = ref
+                                  .watch(addOrEditRecordTrackConverterProvider);
+
+                              final args = addOrEditRecordTrackConverter
+                                  .fromJson(state.uri.queryParameters);
+
+                              final storeBuilder = ref
+                                  .watch(addOrEditRecordStoreBuilderProvider);
+
+                              return provider.MultiProvider(
+                                providers: [
+                                  provider.Provider.value(
+                                      value: navCallbackStore),
+                                  provider.Provider(
+                                    create: (context) {
+                                      return storeBuilder.create(
+                                        context: context,
+                                        track: args?.track,
+                                      );
+                                    },
+                                  ),
+                                ],
+                                child: AddOrEditRecordTrackPage(),
+                              );
+                            },
+                          ),
+                          GoRoute(
+                            parentNavigatorKey: rootNavigatorKey,
+                            path: AppPaths.profile.myTracksPath.details
+                                .editMemoryPath.goRoute,
+                            builder: (context, state) {
+                              final storeBuilder = ref
+                                  .watch(addOrEditMemoryStoreBuilderProvider);
+
+                              final addOrEditMemoryArgsConverter = ref
+                                  .watch(addOrEditMemoryArgsConverterProvider);
+
+                              final photoViewerConverter =
+                                  ref.watch(photoViewerConverterProvider);
+
+                              final addOrEditMemoryPath = AppPaths
+                                  .profile.myTracksPath.details.editMemoryPath;
+
+                              final photoViewerPath =
+                                  addOrEditMemoryPath.photoViewerPath;
+
+                              final args = addOrEditMemoryPath.arguments(
+                                parameters: state.uri.queryParameters,
+                                converter: addOrEditMemoryArgsConverter,
+                              );
+
+                              final navCallbackStore = NavCallbackStoreBuilder
+                                  .createAddOrEditMemoryNavCallbackStore(
+                                context: context,
+                                photoViewerPath: photoViewerPath,
+                                photoViewerConverter: photoViewerConverter,
+                              );
+
+                              return provider.MultiProvider(
+                                providers: [
+                                  provider.Provider.value(
+                                      value: navCallbackStore),
+                                  provider.Provider(
+                                    create: (context) {
+                                      return storeBuilder.create(
+                                        context,
+                                        position: args?.position,
+                                        memory: args?.memory,
+                                        track: args?.track,
+                                      );
+                                    },
+                                  ),
+                                ],
+                                child: AddOrEditMemoryPage(),
+                              );
+                            },
+                            routes: [
+                              GoRoute(
+                                parentNavigatorKey: rootNavigatorKey,
+                                path: AppPaths.profile.myTracksPath.details
+                                    .editMemoryPath.photoViewerPath.goRoute,
+                                builder: (context, state) {
+                                  final storeBuilder = ref
+                                      .watch(photoViewerStoreBuilderProvider);
+
+                                  final photoViewerConverter =
+                                      ref.watch(photoViewerConverterProvider);
+
+                                  final photoViewerPath = AppPaths
+                                      .profile
+                                      .myTracksPath
+                                      .details
+                                      .editMemoryPath
+                                      .photoViewerPath;
+
+                                  final args = photoViewerPath.arguments(
+                                    queryParameters: state.uri.queryParameters,
+                                    converter: photoViewerConverter,
+                                  );
+
+                                  return provider.Provider(
+                                    create: (context) {
+                                      return storeBuilder.create(
+                                        context,
+                                        bytes: args?.bytes,
+                                        link: args?.link,
+                                      );
+                                    },
+                                    child: PhotoViewerPage(),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ],
                   ),
                   GoRoute(
                     path: AppPaths.profile.myFavouriteTracks.goRoute,
                     builder: (context, state) {
-                      return Consumer(
-                        builder: (context, ref, child) {
-                          final detailsArgsConverter =
-                              ref.watch(detailsArgsConverterProvider);
+                      final detailsArgsConverter =
+                          ref.watch(detailsArgsConverterProvider);
 
-                          final navCallbackStore = NavCallbackStoreBuilder
-                              .createMyFavouriteTracksNavCallbackStore(
-                            context: context,
-                            trackDetailsPath:
-                                AppPaths.profile.myFavouriteTracks.details,
-                            detailsArgsConverter: detailsArgsConverter,
-                          );
+                      final trackDetailsPath =
+                          AppPaths.profile.myFavouriteTracks.details;
 
-                          return provider.Provider.value(
-                            value: navCallbackStore,
-                            child: MyFavouriteTracksPage(),
-                          );
-                        },
+                      final navCallbackStore = NavCallbackStoreBuilder
+                          .createMyFavouriteTracksNavCallbackStore(
+                        context: context,
+                        trackDetailsPath: trackDetailsPath,
+                        detailsArgsConverter: detailsArgsConverter,
+                      );
+
+                      return provider.Provider.value(
+                        value: navCallbackStore,
+                        child: MyFavouriteTracksPage(),
                       );
                     },
                     routes: [
@@ -472,37 +1401,332 @@ GoRouter router(RouterRef ref) {
                         path:
                             AppPaths.profile.myFavouriteTracks.details.goRoute,
                         builder: (context, state) {
-                          final navCallbackStore = NavCallbackStoreBuilder
-                              .createTrackDetailsNavCallbackStore(
-                            context: context,
-                          );
+                          final photoViewerConverter =
+                              ref.watch(photoViewerConverterProvider);
 
-                          final _storeBuilder = ref.watch(detailsStoreProvider);
+                          final recordTrackConverter =
+                              ref.watch(recordTrackArgsConverterProvider);
+
+                          final addOrEditRecordTrackArgsConverter =
+                              ref.watch(addOrEditRecordTrackConverterProvider);
+
+                          final addOrEditMemoryArgsConverter =
+                              ref.watch(addOrEditMemoryArgsConverterProvider);
+
                           final detailsArgsConverter =
                               ref.watch(detailsArgsConverterProvider);
 
-                          final args = AppPaths.community.details.arguments(
+                          final detailsPath =
+                              AppPaths.profile.myFavouriteTracks.details;
+                          final photoViewerPath = detailsPath.photoViewer;
+                          final trackingPath = detailsPath.tracking;
+
+                          final _storeBuilder = ref.watch(detailsStoreProvider);
+
+                          final args = detailsPath.arguments(
                             parameters: state.uri.queryParameters,
                             detailsConverter: detailsArgsConverter,
+                          );
+
+                          final navCallbackStore = NavCallbackStoreBuilder
+                              .createDetailsNavCallbackStore(
+                            context: context,
+                            photoViewerPath: photoViewerPath,
+                            trackingPath: trackingPath,
+                            addOrEditRecordTrackArgsConverter:
+                                addOrEditRecordTrackArgsConverter,
+                            photoViewerConverter: photoViewerConverter,
+                            recordTrackConverter: recordTrackConverter,
+                            addOrEditMemoryArgsConverter:
+                                addOrEditMemoryArgsConverter,
+                            mode: args.mode,
                           );
 
                           return provider.MultiProvider(
                             providers: [
                               provider.Provider.value(value: navCallbackStore),
                               provider.Provider(
-                                create: (context) => _storeBuilder.create(
-                                  context: context,
-                                  canDelete: false,
-                                  closeWhenRemoveFromFavourites: true,
-                                  id: args.id,
-                                  mode: args.mode,
-                                ),
+                                create: (context) {
+                                  return _storeBuilder.create(
+                                    context: context,
+                                    canDelete: false,
+                                    closeWhenRemoveFromFavourites: true,
+                                    id: args.id,
+                                    mode: args.mode,
+                                  );
+                                },
                                 dispose: (context, store) => store.dispose(),
                               ),
                             ],
                             child: TrackDetailsPage(),
                           );
                         },
+                        routes: [
+                          GoRoute(
+                            parentNavigatorKey: rootNavigatorKey,
+                            path: AppPaths.profile.myFavouriteTracks.details
+                                .photoViewer.goRoute,
+                            builder: (context, state) {
+                              final storeBuilder =
+                                  ref.watch(photoViewerStoreBuilderProvider);
+
+                              final photoViewerConverter =
+                                  ref.watch(photoViewerConverterProvider);
+
+                              final photoViewerPath = AppPaths.profile
+                                  .myFavouriteTracks.details.photoViewer;
+
+                              final args = photoViewerPath.arguments(
+                                queryParameters: state.uri.queryParameters,
+                                converter: photoViewerConverter,
+                              );
+
+                              return provider.Provider(
+                                create: (context) {
+                                  return storeBuilder.create(
+                                    context,
+                                    bytes: args?.bytes,
+                                    link: args?.link,
+                                  );
+                                },
+                                child: PhotoViewerPage(),
+                              );
+                            },
+                          ),
+                          GoRoute(
+                            parentNavigatorKey: rootNavigatorKey,
+                            path: AppPaths.profile.myFavouriteTracks.details
+                                .tracking.goRoute,
+                            builder: (context, state) {
+                              final storeBuilder =
+                                  ref.watch(recordTrackStoreBuilderProvider);
+
+                              final addOrEditMemoryArgsConverter = ref
+                                  .watch(addOrEditMemoryArgsConverterProvider);
+
+                              final photoViewerConverter =
+                                  ref.watch(photoViewerConverterProvider);
+
+                              final addOrEditRecordTrackConverter = ref
+                                  .watch(addOrEditRecordTrackConverterProvider);
+
+                              final recordTrackArgsConverter =
+                                  ref.watch(recordTrackArgsConverterProvider);
+
+                              final trackingPath = AppPaths
+                                  .profile.myFavouriteTracks.details.tracking;
+                              final addOrEditMemoryPath =
+                                  trackingPath.addOrEditMemoryPath;
+                              final addOrEditRecordTrackPath =
+                                  trackingPath.addOrEditRecordTrack;
+                              final photoViewerPath = trackingPath.photoViewer;
+
+                              final navCallbackStore = NavCallbackStoreBuilder
+                                  .createRecordTrackNavCallbackStore(
+                                context: context,
+                                addOrEditMemoryPath: addOrEditMemoryPath,
+                                addOrEditRecordTrackPath:
+                                    addOrEditRecordTrackPath,
+                                photoViewerPath: photoViewerPath,
+                                photoViewerConverter: photoViewerConverter,
+                                addOrEditRecordTrackConverter:
+                                    addOrEditRecordTrackConverter,
+                                addOrEditMemoryArgsConverter:
+                                    addOrEditMemoryArgsConverter,
+                              );
+
+                              final args = trackingPath.arguments(
+                                parameters: state.uri.queryParameters,
+                                converter: recordTrackArgsConverter,
+                              );
+
+                              return provider.MultiProvider(
+                                providers: [
+                                  provider.Provider(
+                                    create: (context) {
+                                      return storeBuilder.create(
+                                        context: context,
+                                        track: args?.track,
+                                        mode: args?.mode,
+                                      );
+                                    },
+                                  ),
+                                  provider.Provider.value(
+                                      value: navCallbackStore),
+                                ],
+                                child: RecordTrackPage(),
+                              );
+                            },
+                            routes: [
+                              GoRoute(
+                                parentNavigatorKey: rootNavigatorKey,
+                                path: AppPaths.profile.myFavouriteTracks.details
+                                    .tracking.addOrEditMemoryPath.goRoute,
+                                builder: (context, state) {
+                                  final storeBuilder = ref.watch(
+                                      addOrEditMemoryStoreBuilderProvider);
+
+                                  final addOrEditMemoryArgsConverter =
+                                      ref.watch(
+                                          addOrEditMemoryArgsConverterProvider);
+
+                                  final photoViewerConverter =
+                                      ref.watch(photoViewerConverterProvider);
+
+                                  final trackingPath = AppPaths.profile
+                                      .myFavouriteTracks.details.tracking;
+
+                                  final addOrEditMemoryPath =
+                                      trackingPath.addOrEditMemoryPath;
+
+                                  final photoViewerPathPath =
+                                      addOrEditMemoryPath.photoViewerPath;
+
+                                  final args = addOrEditMemoryPath.arguments(
+                                    parameters: state.uri.queryParameters,
+                                    converter: addOrEditMemoryArgsConverter,
+                                  );
+
+                                  final navCallbackStore =
+                                      NavCallbackStoreBuilder
+                                          .createAddOrEditMemoryNavCallbackStore(
+                                    context: context,
+                                    photoViewerPath: photoViewerPathPath,
+                                    photoViewerConverter: photoViewerConverter,
+                                  );
+
+                                  return provider.MultiProvider(
+                                    providers: [
+                                      provider.Provider.value(
+                                          value: navCallbackStore),
+                                      provider.Provider(
+                                        create: (context) {
+                                          return storeBuilder.create(
+                                            context,
+                                            position: args?.position,
+                                            memory: args?.memory,
+                                            track: args?.track,
+                                          );
+                                        },
+                                      ),
+                                    ],
+                                    child: AddOrEditMemoryPage(),
+                                  );
+                                },
+                                routes: [
+                                  GoRoute(
+                                    parentNavigatorKey: rootNavigatorKey,
+                                    path: AppPaths
+                                        .profile
+                                        .myFavouriteTracks
+                                        .details
+                                        .tracking
+                                        .addOrEditMemoryPath
+                                        .photoViewerPath
+                                        .goRoute,
+                                    builder: (context, state) {
+                                      final storeBuilder = ref.watch(
+                                          photoViewerStoreBuilderProvider);
+
+                                      final photoViewerConverter = ref
+                                          .watch(photoViewerConverterProvider);
+
+                                      final trackingPath = AppPaths.profile
+                                          .myFavouriteTracks.details.tracking;
+                                      final photoViewerPath = trackingPath
+                                          .addOrEditMemoryPath.photoViewerPath;
+
+                                      final args = photoViewerPath.arguments(
+                                        queryParameters:
+                                            state.uri.queryParameters,
+                                        converter: photoViewerConverter,
+                                      );
+
+                                      return provider.Provider(
+                                        create: (context) {
+                                          return storeBuilder.create(
+                                            context,
+                                            bytes: args?.bytes,
+                                            link: args?.link,
+                                          );
+                                        },
+                                        child: PhotoViewerPage(),
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
+                              GoRoute(
+                                parentNavigatorKey: rootNavigatorKey,
+                                path: AppPaths.profile.myFavouriteTracks.details
+                                    .tracking.addOrEditRecordTrack.goRoute,
+                                builder: (context, state) {
+                                  final navCallbackStore = NavCallbackStoreBuilder
+                                      .createAddOrEditRecordTrackNavCallbackStore(
+                                          context: context);
+
+                                  final addOrEditRecordTrackConverter =
+                                      ref.watch(
+                                          addOrEditRecordTrackConverterProvider);
+
+                                  final args = addOrEditRecordTrackConverter
+                                      .fromJson(state.uri.queryParameters);
+
+                                  final storeBuilder = ref.watch(
+                                      addOrEditRecordStoreBuilderProvider);
+
+                                  return provider.MultiProvider(
+                                    providers: [
+                                      provider.Provider.value(
+                                          value: navCallbackStore),
+                                      provider.Provider(
+                                        create: (context) {
+                                          return storeBuilder.create(
+                                            context: context,
+                                            track: args?.track,
+                                          );
+                                        },
+                                      ),
+                                    ],
+                                    child: AddOrEditRecordTrackPage(),
+                                  );
+                                },
+                              ),
+                              GoRoute(
+                                parentNavigatorKey: rootNavigatorKey,
+                                path: AppPaths.profile.myFavouriteTracks.details
+                                    .tracking.photoViewer.goRoute,
+                                builder: (context, state) {
+                                  final storeBuilder = ref
+                                      .watch(photoViewerStoreBuilderProvider);
+                                  final photoViewerConverter =
+                                      ref.watch(photoViewerConverterProvider);
+
+                                  final trackingPath = AppPaths.profile
+                                      .myFavouriteTracks.details.tracking;
+                                  final photoViewerPath =
+                                      trackingPath.photoViewer;
+
+                                  final args = photoViewerPath.arguments(
+                                    queryParameters: state.uri.queryParameters,
+                                    converter: photoViewerConverter,
+                                  );
+
+                                  return provider.Provider(
+                                    create: (context) {
+                                      return storeBuilder.create(
+                                        context,
+                                        bytes: args?.bytes,
+                                        link: args?.link,
+                                      );
+                                    },
+                                    child: PhotoViewerPage(),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -523,28 +1747,29 @@ GoRouter router(RouterRef ref) {
         parentNavigatorKey: rootNavigatorKey,
         path: AppPaths.login.goRoute,
         builder: (context, state) {
-          return Consumer(
-            builder: (context, ref, child) {
-              final storeBuilder = ref.watch(loginStoreBuilderProvider);
-              final converter = ref.watch(forgotPasswordArgsConverterProvider);
+          final storeBuilder = ref.watch(loginStoreBuilderProvider);
 
-              final navCallbackStore =
-                  NavCallbackStoreBuilder.createLoginNavCallbackStore(
-                context: context,
-                registerPath: AppPaths.login.register,
-                forgotPasswordPath: AppPaths.login.forgotPassword,
-                converter: converter,
-              );
+          final converter = ref.watch(forgotPasswordArgsConverterProvider);
 
-              return provider.MultiProvider(
-                providers: [
-                  provider.Provider.value(value: navCallbackStore),
-                  provider.Provider(create: storeBuilder.create),
-                ],
-                builder: (context, child) {
-                  return const LoginPage();
-                },
-              );
+          final loginPath = AppPaths.login;
+          final registerPath = loginPath.register;
+          final forgotPasswordPath = loginPath.forgotPassword;
+
+          final navCallbackStore =
+              NavCallbackStoreBuilder.createLoginNavCallbackStore(
+            context: context,
+            registerPath: registerPath,
+            forgotPasswordPath: forgotPasswordPath,
+            converter: converter,
+          );
+
+          return provider.MultiProvider(
+            providers: [
+              provider.Provider.value(value: navCallbackStore),
+              provider.Provider(create: storeBuilder.create),
+            ],
+            builder: (context, child) {
+              return const LoginPage();
             },
           );
         },
@@ -557,19 +1782,15 @@ GoRouter router(RouterRef ref) {
                   NavCallbackStoreBuilder.createRegisterNavCallbackStore(
                       context);
 
-              return Consumer(
-                builder: (context, ref, child) {
-                  final registerStoreBuilder =
-                      ref.watch(registerStoreBuilderProvider);
+              final registerStoreBuilder =
+                  ref.watch(registerStoreBuilderProvider);
 
-                  return provider.MultiProvider(
-                    providers: [
-                      provider.Provider.value(value: navCallbackStore),
-                      provider.Provider(create: registerStoreBuilder.create),
-                    ],
-                    child: const RegisterPage(),
-                  );
-                },
+              return provider.MultiProvider(
+                providers: [
+                  provider.Provider.value(value: navCallbackStore),
+                  provider.Provider(create: registerStoreBuilder.create),
+                ],
+                child: const RegisterPage(),
               );
             },
           ),
@@ -578,37 +1799,37 @@ GoRouter router(RouterRef ref) {
             path: AppPaths.login.forgotPassword.goRoute,
             builder: (context, state) {
               final path = AppPaths.login.forgotPassword;
+
               final navCallbackStore =
                   NavCallbackStoreBuilder.createForgotPasswordNavCallbackStore(
                 path: path,
                 context: context,
               );
 
-              return Consumer(
-                builder: (context, WidgetRef ref, child) {
-                  final forgotPasswordStoreBuilder =
-                      ref.watch(forgotPasswordStoreProvider);
+              final forgotPasswordStoreBuilder =
+                  ref.watch(forgotPasswordStoreProvider);
 
-                  final forgotPasswordArgsConverter =
-                      ref.watch(forgotPasswordArgsConverterProvider);
+              final forgotPasswordArgsConverter =
+                  ref.watch(forgotPasswordArgsConverterProvider);
 
-                  final queryParameters = state.uri.queryParameters;
-                  final args = path.arguments(
-                    queryParameters: queryParameters,
-                    converter: forgotPasswordArgsConverter,
-                  );
+              final queryParameters = state.uri.queryParameters;
+              final args = path.arguments(
+                queryParameters: queryParameters,
+                converter: forgotPasswordArgsConverter,
+              );
 
-                  return provider.MultiProvider(
-                    providers: [
-                      provider.Provider.value(value: navCallbackStore),
-                      provider.Provider(
-                        create: (context) =>
-                            forgotPasswordStoreBuilder.create(args?.email),
-                      ),
-                    ],
-                    child: ForgotPasswordPage(),
-                  );
-                },
+              return provider.MultiProvider(
+                providers: [
+                  provider.Provider.value(value: navCallbackStore),
+                  provider.Provider(
+                    create: (context) {
+                      return forgotPasswordStoreBuilder.create(
+                        args?.email,
+                      );
+                    },
+                  ),
+                ],
+                child: ForgotPasswordPage(),
               );
             },
           ),

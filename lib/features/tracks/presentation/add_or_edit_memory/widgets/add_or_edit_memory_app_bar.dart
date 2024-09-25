@@ -21,7 +21,7 @@ class _AddOrEditMemoryAppBar extends ConsumerWidget
             onPressed:
                 context.read<AddOrEditMemoryNavCallbackStore>().navigateBack,
             icon: Icon(
-              Icons.arrow_back,
+              Icons.arrow_back_ios,
               size: AppDiments.dm24,
               color: context.appColorsTheme.secondaryIconColor,
             ),

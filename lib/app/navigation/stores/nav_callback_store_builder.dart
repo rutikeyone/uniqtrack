@@ -4,10 +4,12 @@ import 'package:uniqtrack/app/navigation/arguments/args.dart';
 import 'package:uniqtrack/app/navigation/paths/add_or_edit_memory_path.dart';
 import 'package:uniqtrack/app/navigation/paths/add_or_edit_record_track_path.dart';
 import 'package:uniqtrack/app/navigation/paths/forgot_password_path.dart';
+import 'package:uniqtrack/app/navigation/paths/my_favourite_tracks_path.dart';
+import 'package:uniqtrack/app/navigation/paths/my_tracks_path.dart';
 import 'package:uniqtrack/app/navigation/paths/photo_viewer_path.dart';
 import 'package:uniqtrack/app/navigation/paths/record_track_path.dart';
 import 'package:uniqtrack/app/navigation/paths/register_path.dart';
-import 'package:uniqtrack/app/navigation/paths/track_details_path.dart';
+import 'package:uniqtrack/app/navigation/paths/details_path.dart';
 import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
 
 abstract class NavCallbackStoreBuilder {
@@ -63,6 +65,7 @@ abstract class NavCallbackStoreBuilder {
         final queryParameters = addOrEditMemoryPath.queryParameters(
           position: data,
           memory: null,
+          track: null,
           converter: addOrEditMemoryArgsConverter,
         );
 
@@ -73,6 +76,7 @@ abstract class NavCallbackStoreBuilder {
       navigateToEditMemory: (data) {
         final queryParameters = addOrEditMemoryPath.queryParameters(
           position: null,
+          track: null,
           memory: data,
           converter: addOrEditMemoryArgsConverter,
         );
@@ -88,6 +92,7 @@ abstract class NavCallbackStoreBuilder {
         );
 
         final path = addOrEditRecordTrackPath.query(queryParameters).path;
+
         context.push(path);
       },
       navigateToPhotoViewer: (data) {
@@ -120,10 +125,13 @@ abstract class NavCallbackStoreBuilder {
   static CommunityNavCallbackStore createCommunityNavCallbackStore({
     required BuildContext context,
     required RecordTrackPath recordTrackPath,
-    required TrackDetailsPath trackDetailsPath,
+    required DetailsPath trackDetailsPath,
+    required AddOrEditRecordTrackPath editRecordTrackPath,
     required DetailsArgsConverter detailsArgsConverter,
+    required AddOrEditRecordTrackArgsConverter editRecordTrackArgsConverter,
   }) {
     final navCallbackStore = CommunityNavCallbackStore(
+      closeDialog: context.pop,
       navigateToTrackTracking: () => context.push(recordTrackPath.path),
       navigateToTrackDetails: (track) {
         final id = track.id;
@@ -139,7 +147,18 @@ abstract class NavCallbackStoreBuilder {
 
         context.push(path);
       },
-      closeDialog: context.pop,
+      navigateToEditTrack: (track) {
+        if (track == null) return;
+
+        final queryParameters = editRecordTrackPath.queryParameters(
+          track: track,
+          converter: editRecordTrackArgsConverter,
+        );
+
+        final path = editRecordTrackPath.query(queryParameters).path;
+
+        context.push(path);
+      },
     );
 
     return navCallbackStore;
@@ -171,8 +190,10 @@ abstract class NavCallbackStoreBuilder {
 
   static MyTracksNavCallbackStore createMyTracksNavCallbackStore({
     required BuildContext context,
-    required TrackDetailsPath trackDetailsPath,
+    required DetailsPath detailsPath,
+    required AddOrEditRecordTrackPath editTrackPath,
     required DetailsArgsConverter detailsArgsConverter,
+    required AddOrEditRecordTrackArgsConverter editRecordTrackArgsConverter,
   }) {
     return MyTracksNavCallbackStore(
       closeDialog: context.pop,
@@ -180,13 +201,25 @@ abstract class NavCallbackStoreBuilder {
         final id = track.id;
         if (id == null) return;
 
-        final queryParameters = trackDetailsPath.queryParameters(
+        final queryParameters = detailsPath.queryParameters(
           id: id,
           mode: DetailsMode.myTracks(),
           detailsConverter: detailsArgsConverter,
         );
 
-        final path = trackDetailsPath.query(queryParameters).path;
+        final path = detailsPath.query(queryParameters).path;
+
+        context.push(path);
+      },
+      navigateToEditTrack: (track) {
+        if (track == null) return;
+
+        final queryParameters = editTrackPath.queryParameters(
+          track: track,
+          converter: editRecordTrackArgsConverter,
+        );
+
+        final path = editTrackPath.query(queryParameters).path;
 
         context.push(path);
       },
@@ -196,7 +229,7 @@ abstract class NavCallbackStoreBuilder {
   static MyFavouriteTracksNavCallbackStore
       createMyFavouriteTracksNavCallbackStore({
     required BuildContext context,
-    required TrackDetailsPath trackDetailsPath,
+    required DetailsPath trackDetailsPath,
     required DetailsArgsConverter detailsArgsConverter,
   }) {
     return MyFavouriteTracksNavCallbackStore(
@@ -217,11 +250,85 @@ abstract class NavCallbackStoreBuilder {
     );
   }
 
-  static TrackDetailsNavCallbackStore createTrackDetailsNavCallbackStore({
+  static DetailsNavCallbackStore createDetailsNavCallbackStore({
     required BuildContext context,
+    required PhotoViewerPath photoViewerPath,
+    required RecordTrackPath trackingPath,
+    required RecordTrackArgsConverter recordTrackConverter,
+    required PhotoViewerConverter photoViewerConverter,
+    required AddOrEditRecordTrackArgsConverter
+        addOrEditRecordTrackArgsConverter,
+    required AddOrEditMemoryArgsConverter addOrEditMemoryArgsConverter,
+    required DetailsMode? mode,
+    AddOrEditRecordTrackPath? editRecordTrackPath,
+    AddOrEditMemoryPath? editMemoryPath,
   }) {
-    return TrackDetailsNavCallbackStore(
+    return DetailsNavCallbackStore(
       navigateBack: context.pop,
+      navigateToPhotoViewer: (value) {
+        final args = PhotoViewerArgs(
+          bytes: null,
+          link: value,
+        );
+
+        final queryParameters = photoViewerConverter.toJson(args);
+        final path = photoViewerPath.query(queryParameters).path;
+
+        context.push(path);
+      },
+      navigateToRecordTrack: (track) {
+        final args = RecordTrackArgs(
+          track: track,
+          mode: mode,
+        );
+
+        final queryParameters = recordTrackConverter.toJson(args);
+        final path = trackingPath.query(queryParameters).path;
+
+        context.push(path);
+      },
+      navigateToEditTrack: editRecordTrackPath != null
+          ? (track) {
+              if (track == null) return;
+
+              final queryParameters = editRecordTrackPath.queryParameters(
+                track: track,
+                converter: addOrEditRecordTrackArgsConverter,
+              );
+
+              final path = editRecordTrackPath.query(queryParameters).path;
+
+              context.push(path);
+            }
+          : null,
+      navigateToEditMemory: editMemoryPath != null
+          ? (track, memory) {
+              if (track == null || memory == null) return;
+
+              final queryParameters = editMemoryPath.queryParameters(
+                position: null,
+                track: track,
+                memory: memory,
+                converter: addOrEditMemoryArgsConverter,
+              );
+
+              final path = editMemoryPath.query(queryParameters).path;
+
+              context.push(path);
+            }
+          : null,
+    );
+  }
+
+  static ProfileNavCallbackStore createProfileNavCallbackStore({
+    required BuildContext context,
+    required MyTracksPath myTracksPath,
+    required MyFavouriteTracksPath myFavouriteTracksPath,
+  }) {
+    return ProfileNavCallbackStore(
+      navigateToMyTracks: () => context.push(myTracksPath.path),
+      navigateToMyFavouriteTracks: () =>
+          context.push(myFavouriteTracksPath.path),
     );
   }
 }

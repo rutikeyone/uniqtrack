@@ -4,6 +4,7 @@ part of 'entities.dart';
 class Memory with _$Memory {
   const factory Memory({
     required String? id,
+    required String? creatorId,
     required String? name,
     required String? comment,
     required List<String>? photos,

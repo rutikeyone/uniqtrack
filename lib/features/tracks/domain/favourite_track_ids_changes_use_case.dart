@@ -1,17 +1,17 @@
 import 'package:generic_usecase/generic_usecase.dart';
-import 'package:uniqtrack/features/accounts/domain/accounts_repository.dart';
+import 'package:uniqtrack/features/tracks/domain/track_repository.dart';
 
 class FavouriteTrackIdsChangesUseCase
     extends NoParamsStreamUsecase<List<String>> {
-  final AccountsRepository _accountsRepository;
+  final TrackRepository _trackRepository;
 
   FavouriteTrackIdsChangesUseCase({
-    required AccountsRepository accountsRepository,
-  }) : _accountsRepository = accountsRepository;
+    required TrackRepository trackRepository,
+  }) : _trackRepository = trackRepository;
 
   @override
   Stream<List<String>> execute() {
-    return _accountsRepository.watchUserFavouriteTracks().map((list) {
+    return _trackRepository.watchFavouriteTracks().map((list) {
       return list.map((item) => item.trackId).nonNulls.toList();
     });
   }

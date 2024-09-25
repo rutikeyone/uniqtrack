@@ -14,6 +14,18 @@ class AddOrEditMemoryModeState with _$AddOrEditMemoryModeState {
   }) = _AddMemoryModeState;
 
   const factory AddOrEditMemoryModeState.edit({
-    required Memory memory,
+    required EditMemorySource source,
   }) = _EditMemoryModeState;
+}
+
+@freezed
+class EditMemorySource with _$EditMemorySource {
+  const factory EditMemorySource.online({
+    required Track track,
+    required Memory memory,
+  }) = _OnlineEditSource;
+
+  const factory EditMemorySource.local({
+    required Memory memory,
+  }) = _LocalEditSource;
 }

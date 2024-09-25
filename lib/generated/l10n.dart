@@ -1149,6 +1149,66 @@ class S {
       args: [],
     );
   }
+
+  /// `The collection does not contain the required element`
+  String get theCollectionDoesNotContainTheRequiredElement {
+    return Intl.message(
+      'The collection does not contain the required element',
+      name: 'theCollectionDoesNotContainTheRequiredElement',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No update rights`
+  String get noUpdateRights {
+    return Intl.message(
+      'No update rights',
+      name: 'noUpdateRights',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The data has been successfully updated`
+  String get theDataHasBeenSuccessfullyUpdated {
+    return Intl.message(
+      'The data has been successfully updated',
+      name: 'theDataHasBeenSuccessfullyUpdated',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The memory has been successfully deleted`
+  String get theMemoryHasBeenSuccessfullyDeleted {
+    return Intl.message(
+      'The memory has been successfully deleted',
+      name: 'theMemoryHasBeenSuccessfullyDeleted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The user is the creator of the track`
+  String get theUserIsTheCreatorOfTheTrack {
+    return Intl.message(
+      'The user is the creator of the track',
+      name: 'theUserIsTheCreatorOfTheTrack',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already contains element`
+  String get alreadyContainsElement {
+    return Intl.message(
+      'Already contains element',
+      name: 'alreadyContainsElement',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

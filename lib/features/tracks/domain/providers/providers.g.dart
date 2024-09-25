@@ -181,146 +181,267 @@ class _TrackDetailsProviderElement
   String get id => (origin as TrackDetailsProvider).id;
 }
 
-String _$watchTrackDetailsUseCaseHash() =>
-    r'9d0d97ae5399cac5ddec85c9ab8cb607fd577855';
+String _$userFavouriteTracksHash() =>
+    r'051f009d1ae50bbf26c842a9c15b0024ca2b8ba3';
 
-/// See also [watchTrackDetailsUseCase].
-@ProviderFor(watchTrackDetailsUseCase)
-const watchTrackDetailsUseCaseProvider = WatchTrackDetailsUseCaseFamily();
-
-/// See also [watchTrackDetailsUseCase].
-class WatchTrackDetailsUseCaseFamily extends Family<WatchTrackDetailsUseCase> {
-  /// See also [watchTrackDetailsUseCase].
-  const WatchTrackDetailsUseCaseFamily();
-
-  /// See also [watchTrackDetailsUseCase].
-  WatchTrackDetailsUseCaseProvider call(
-    String id,
-  ) {
-    return WatchTrackDetailsUseCaseProvider(
-      id,
-    );
-  }
-
-  @override
-  WatchTrackDetailsUseCaseProvider getProviderOverride(
-    covariant WatchTrackDetailsUseCaseProvider provider,
-  ) {
-    return call(
-      provider.id,
-    );
-  }
-
-  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
+/// See also [userFavouriteTracks].
+@ProviderFor(userFavouriteTracks)
+final userFavouriteTracksProvider =
+    AutoDisposeStreamProvider<List<TrackUI>>.internal(
+  userFavouriteTracks,
+  name: r'userFavouriteTracksProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$userFavouriteTracksHash,
+  dependencies: <ProviderOrFamily>[
     trackRepositoryProvider,
     favouriteTrackIdsChangesUseCaseProvider
-  ];
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
-      <ProviderOrFamily>{
+  ],
+  allTransitiveDependencies: <ProviderOrFamily>{
     trackRepositoryProvider,
     ...?trackRepositoryProvider.allTransitiveDependencies,
     favouriteTrackIdsChangesUseCaseProvider,
     ...?favouriteTrackIdsChangesUseCaseProvider.allTransitiveDependencies
-  };
+  },
+);
 
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
+typedef UserFavouriteTracksRef = AutoDisposeStreamProviderRef<List<TrackUI>>;
+String _$userTracksHash() => r'7ff44f6c4c30a6c2b54476b252fbcf365c0bc46b';
 
-  @override
-  String? get name => r'watchTrackDetailsUseCaseProvider';
-}
+/// See also [userTracks].
+@ProviderFor(userTracks)
+final userTracksProvider = AutoDisposeStreamProvider<List<Track>>.internal(
+  userTracks,
+  name: r'userTracksProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$userTracksHash,
+  dependencies: <ProviderOrFamily>[trackRepositoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    trackRepositoryProvider,
+    ...?trackRepositoryProvider.allTransitiveDependencies
+  },
+);
+
+typedef UserTracksRef = AutoDisposeStreamProviderRef<List<Track>>;
+String _$watchTrackDetailsUseCaseHash() =>
+    r'6fd015537de29eb7278515581de680ab1a3abb86';
 
 /// See also [watchTrackDetailsUseCase].
-class WatchTrackDetailsUseCaseProvider
-    extends AutoDisposeProvider<WatchTrackDetailsUseCase> {
-  /// See also [watchTrackDetailsUseCase].
-  WatchTrackDetailsUseCaseProvider(
-    String id,
-  ) : this._internal(
-          (ref) => watchTrackDetailsUseCase(
-            ref as WatchTrackDetailsUseCaseRef,
-            id,
-          ),
-          from: watchTrackDetailsUseCaseProvider,
-          name: r'watchTrackDetailsUseCaseProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$watchTrackDetailsUseCaseHash,
-          dependencies: WatchTrackDetailsUseCaseFamily._dependencies,
-          allTransitiveDependencies:
-              WatchTrackDetailsUseCaseFamily._allTransitiveDependencies,
-          id: id,
-        );
+@ProviderFor(watchTrackDetailsUseCase)
+final watchTrackDetailsUseCaseProvider =
+    AutoDisposeProvider<WatchTrackDetailsUseCase>.internal(
+  watchTrackDetailsUseCase,
+  name: r'watchTrackDetailsUseCaseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$watchTrackDetailsUseCaseHash,
+  dependencies: <ProviderOrFamily>[
+    trackRepositoryProvider,
+    favouriteTrackIdsChangesUseCaseProvider
+  ],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    trackRepositoryProvider,
+    ...?trackRepositoryProvider.allTransitiveDependencies,
+    favouriteTrackIdsChangesUseCaseProvider,
+    ...?favouriteTrackIdsChangesUseCaseProvider.allTransitiveDependencies
+  },
+);
 
-  WatchTrackDetailsUseCaseProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.id,
-  }) : super.internal();
+typedef WatchTrackDetailsUseCaseRef
+    = AutoDisposeProviderRef<WatchTrackDetailsUseCase>;
+String _$watchMyTrackUseCaseHash() =>
+    r'6d34c95a61e12db4cec2ad9bd0918b77a46e59e1';
 
-  final String id;
+/// See also [watchMyTrackUseCase].
+@ProviderFor(watchMyTrackUseCase)
+final watchMyTrackUseCaseProvider =
+    AutoDisposeProvider<WatchMyTrackUseCase>.internal(
+  watchMyTrackUseCase,
+  name: r'watchMyTrackUseCaseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$watchMyTrackUseCaseHash,
+  dependencies: <ProviderOrFamily>[
+    favouriteTrackIdsChangesUseCaseProvider,
+    trackRepositoryProvider
+  ],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    favouriteTrackIdsChangesUseCaseProvider,
+    ...?favouriteTrackIdsChangesUseCaseProvider.allTransitiveDependencies,
+    trackRepositoryProvider,
+    ...?trackRepositoryProvider.allTransitiveDependencies
+  },
+);
 
-  @override
-  Override overrideWith(
-    WatchTrackDetailsUseCase Function(WatchTrackDetailsUseCaseRef provider)
-        create,
-  ) {
-    return ProviderOverride(
-      origin: this,
-      override: WatchTrackDetailsUseCaseProvider._internal(
-        (ref) => create(ref as WatchTrackDetailsUseCaseRef),
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        id: id,
-      ),
-    );
-  }
+typedef WatchMyTrackUseCaseRef = AutoDisposeProviderRef<WatchMyTrackUseCase>;
+String _$addToFavouriteTracksUseCaseHash() =>
+    r'e3a0ed925492a590dd18dbbb214b8ddb63409dbb';
 
-  @override
-  AutoDisposeProviderElement<WatchTrackDetailsUseCase> createElement() {
-    return _WatchTrackDetailsUseCaseProviderElement(this);
-  }
+/// See also [addToFavouriteTracksUseCase].
+@ProviderFor(addToFavouriteTracksUseCase)
+final addToFavouriteTracksUseCaseProvider =
+    AutoDisposeProvider<AddFavouriteTrackUseCase>.internal(
+  addToFavouriteTracksUseCase,
+  name: r'addToFavouriteTracksUseCaseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$addToFavouriteTracksUseCaseHash,
+  dependencies: <ProviderOrFamily>[trackRepositoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    trackRepositoryProvider,
+    ...?trackRepositoryProvider.allTransitiveDependencies
+  },
+);
 
-  @override
-  bool operator ==(Object other) {
-    return other is WatchTrackDetailsUseCaseProvider && other.id == id;
-  }
+typedef AddToFavouriteTracksUseCaseRef
+    = AutoDisposeProviderRef<AddFavouriteTrackUseCase>;
+String _$favouriteTrackIdsChangesUseCaseHash() =>
+    r'18190001c186023975fd5a4d02b30cefd2c3d97f';
 
-  @override
-  int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, id.hashCode);
+/// See also [favouriteTrackIdsChangesUseCase].
+@ProviderFor(favouriteTrackIdsChangesUseCase)
+final favouriteTrackIdsChangesUseCaseProvider =
+    AutoDisposeProvider<FavouriteTrackIdsChangesUseCase>.internal(
+  favouriteTrackIdsChangesUseCase,
+  name: r'favouriteTrackIdsChangesUseCaseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$favouriteTrackIdsChangesUseCaseHash,
+  dependencies: <ProviderOrFamily>[trackRepositoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    trackRepositoryProvider,
+    ...?trackRepositoryProvider.allTransitiveDependencies
+  },
+);
 
-    return _SystemHash.finish(hash);
-  }
-}
+typedef FavouriteTrackIdsChangesUseCaseRef
+    = AutoDisposeProviderRef<FavouriteTrackIdsChangesUseCase>;
+String _$removeFromFavouriteTracksUseCaseHash() =>
+    r'a837611df4bf77639340ffbd448d5bd76fe8b05c';
 
-mixin WatchTrackDetailsUseCaseRef
-    on AutoDisposeProviderRef<WatchTrackDetailsUseCase> {
-  /// The parameter `id` of this provider.
-  String get id;
-}
+/// See also [removeFromFavouriteTracksUseCase].
+@ProviderFor(removeFromFavouriteTracksUseCase)
+final removeFromFavouriteTracksUseCaseProvider =
+    AutoDisposeProvider<RemoveFavouriteTracksUseCase>.internal(
+  removeFromFavouriteTracksUseCase,
+  name: r'removeFromFavouriteTracksUseCaseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$removeFromFavouriteTracksUseCaseHash,
+  dependencies: <ProviderOrFamily>[trackRepositoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    trackRepositoryProvider,
+    ...?trackRepositoryProvider.allTransitiveDependencies
+  },
+);
 
-class _WatchTrackDetailsUseCaseProviderElement
-    extends AutoDisposeProviderElement<WatchTrackDetailsUseCase>
-    with WatchTrackDetailsUseCaseRef {
-  _WatchTrackDetailsUseCaseProviderElement(super.provider);
+typedef RemoveFromFavouriteTracksUseCaseRef
+    = AutoDisposeProviderRef<RemoveFavouriteTracksUseCase>;
+String _$removeMemoryUseCaseHash() =>
+    r'c880727f4aba169f4bb19fa85cff53fc7fdaa5a3';
 
-  @override
-  String get id => (origin as WatchTrackDetailsUseCaseProvider).id;
-}
+/// See also [removeMemoryUseCase].
+@ProviderFor(removeMemoryUseCase)
+final removeMemoryUseCaseProvider =
+    AutoDisposeProvider<RemoveMemoryUseCase>.internal(
+  removeMemoryUseCase,
+  name: r'removeMemoryUseCaseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$removeMemoryUseCaseHash,
+  dependencies: <ProviderOrFamily>[trackRepositoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    trackRepositoryProvider,
+    ...?trackRepositoryProvider.allTransitiveDependencies
+  },
+);
+
+typedef RemoveMemoryUseCaseRef = AutoDisposeProviderRef<RemoveMemoryUseCase>;
+String _$removeTrackUseCaseHash() =>
+    r'c0836b233f3d5812b7c04ab732bf1e9aadbb0009';
+
+/// See also [removeTrackUseCase].
+@ProviderFor(removeTrackUseCase)
+final removeTrackUseCaseProvider =
+    AutoDisposeProvider<RemoveTrackUseCase>.internal(
+  removeTrackUseCase,
+  name: r'removeTrackUseCaseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$removeTrackUseCaseHash,
+  dependencies: <ProviderOrFamily>[trackRepositoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    trackRepositoryProvider,
+    ...?trackRepositoryProvider.allTransitiveDependencies
+  },
+);
+
+typedef RemoveTrackUseCaseRef = AutoDisposeProviderRef<RemoveTrackUseCase>;
+String _$watchFavouriteTrackDetailsUseCaseHash() =>
+    r'c6aaa0c311610ffdcf90aa4684ccc804eae51a2c';
+
+/// See also [watchFavouriteTrackDetailsUseCase].
+@ProviderFor(watchFavouriteTrackDetailsUseCase)
+final watchFavouriteTrackDetailsUseCaseProvider =
+    AutoDisposeProvider<WatchFavouriteTrackUseCase>.internal(
+  watchFavouriteTrackDetailsUseCase,
+  name: r'watchFavouriteTrackDetailsUseCaseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$watchFavouriteTrackDetailsUseCaseHash,
+  dependencies: <ProviderOrFamily>[
+    favouriteTrackIdsChangesUseCaseProvider,
+    trackRepositoryProvider
+  ],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    favouriteTrackIdsChangesUseCaseProvider,
+    ...?favouriteTrackIdsChangesUseCaseProvider.allTransitiveDependencies,
+    trackRepositoryProvider,
+    ...?trackRepositoryProvider.allTransitiveDependencies
+  },
+);
+
+typedef WatchFavouriteTrackDetailsUseCaseRef
+    = AutoDisposeProviderRef<WatchFavouriteTrackUseCase>;
+String _$updateTrackUseCaseHash() =>
+    r'5010237dbad2ab3287b86a8349122c101abfd700';
+
+/// See also [updateTrackUseCase].
+@ProviderFor(updateTrackUseCase)
+final updateTrackUseCaseProvider =
+    AutoDisposeProvider<UpdateTrackUseCase>.internal(
+  updateTrackUseCase,
+  name: r'updateTrackUseCaseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$updateTrackUseCaseHash,
+  dependencies: <ProviderOrFamily>[trackRepositoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    trackRepositoryProvider,
+    ...?trackRepositoryProvider.allTransitiveDependencies
+  },
+);
+
+typedef UpdateTrackUseCaseRef = AutoDisposeProviderRef<UpdateTrackUseCase>;
+String _$updateMemoryUseCaseHash() =>
+    r'740c662e520beeb41d5a5ec0be74c700ae19d70e';
+
+/// See also [updateMemoryUseCase].
+@ProviderFor(updateMemoryUseCase)
+final updateMemoryUseCaseProvider =
+    AutoDisposeProvider<UpdateMemoryUseCase>.internal(
+  updateMemoryUseCase,
+  name: r'updateMemoryUseCaseProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$updateMemoryUseCaseHash,
+  dependencies: <ProviderOrFamily>[trackRepositoryProvider],
+  allTransitiveDependencies: <ProviderOrFamily>{
+    trackRepositoryProvider,
+    ...?trackRepositoryProvider.allTransitiveDependencies
+  },
+);
+
+typedef UpdateMemoryUseCaseRef = AutoDisposeProviderRef<UpdateMemoryUseCase>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

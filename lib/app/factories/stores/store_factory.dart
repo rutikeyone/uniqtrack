@@ -17,7 +17,10 @@ abstract interface class StoreFactory {
 
   ForgotPasswordStore createForgotPasswordStore(String? email);
 
-  RecordTrackStore createRecordTrackStore();
+  RecordTrackStore createRecordTrackStore({
+    required Track? track,
+    required DetailsMode? mode,
+  });
 
   AddOrEditRecordTrackStore createAddOrEditRecordTrackStore({
     required Track? track,
@@ -26,6 +29,7 @@ abstract interface class StoreFactory {
   AddOrEditMemoryStore createAddOrEditMemoryStore({
     required Position? position,
     required Memory? memory,
+    required Track? track,
   });
 
   PhotoViewerStore createPhotoViewerStore({
@@ -34,7 +38,7 @@ abstract interface class StoreFactory {
   });
 
   DetailsStore createDetailsStore({
-    required String id,
+    required String? id,
     required bool canDelete,
     required bool closeWhenRemoveFromFavourites,
     required DetailsMode mode,

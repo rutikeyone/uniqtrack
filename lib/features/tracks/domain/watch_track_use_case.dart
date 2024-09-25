@@ -1,6 +1,6 @@
 import 'package:generic_usecase/generic_usecase.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:uniqtrack/features/accounts/domain/favourite_track_ids_changes_use_case.dart';
+import 'package:uniqtrack/features/tracks/domain/favourite_track_ids_changes_use_case.dart';
 import 'package:uniqtrack/features/accounts/domain/user_changes_use_case.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/domain/track_repository.dart';

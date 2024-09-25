@@ -49,8 +49,6 @@ AccountsDataRepository accountsDataRepository(AccountsDataRepositoryRef ref) {
   final uuid = ref.watch(uuidProvider);
   final firebaseFireStore = ref.watch(firebaseFireStoreProvider);
 
-  final sorter = ref.watch(sorterProvider);
-
   ref.keepAlive();
 
   return AccountsDataRepositoryImpl(
@@ -59,6 +57,5 @@ AccountsDataRepository accountsDataRepository(AccountsDataRepositoryRef ref) {
     appErrorHandler: appErrorHandler,
     uuid: uuid,
     firebaseFireStore: firebaseFireStore,
-    sorter: sorter,
   );
 }

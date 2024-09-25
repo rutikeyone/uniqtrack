@@ -6,7 +6,7 @@ part of 'store_factory_impl.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$storeFactoryHash() => r'f5c3ead10e3a4ef2396fc3bae9365dd9db7468b1';
+String _$storeFactoryHash() => r'dffb6064a5c4cc3888fb6ed727af3528bf978b21';
 
 /// See also [storeFactory].
 @ProviderFor(storeFactory)
@@ -16,23 +16,19 @@ final storeFactoryProvider = AutoDisposeProvider<StoreFactory>.internal(
   debugGetCreateSourceHash:
       const bool.fromEnvironment('dart.vm.product') ? null : _$storeFactoryHash,
   dependencies: <ProviderOrFamily>{
-    appLocationHandlerProvider,
-    trackRepositoryProvider,
-    accountsRepositoryProvider,
     watchTrackDetailsUseCaseProvider,
     watchFavouriteTrackDetailsUseCaseProvider,
     watchMyTrackUseCaseProvider,
     addToFavouriteTracksUseCaseProvider,
     removeFromFavouriteTracksUseCaseProvider,
-    removeTrackUseCaseProvider
+    removeTrackUseCaseProvider,
+    removeMemoryUseCaseProvider,
+    updateTrackUseCaseProvider,
+    updateMemoryUseCaseProvider,
+    appLocationHandlerProvider,
+    trackRepositoryProvider
   },
   allTransitiveDependencies: <ProviderOrFamily>{
-    appLocationHandlerProvider,
-    ...?appLocationHandlerProvider.allTransitiveDependencies,
-    trackRepositoryProvider,
-    ...?trackRepositoryProvider.allTransitiveDependencies,
-    accountsRepositoryProvider,
-    ...?accountsRepositoryProvider.allTransitiveDependencies,
     watchTrackDetailsUseCaseProvider,
     ...?watchTrackDetailsUseCaseProvider.allTransitiveDependencies,
     watchFavouriteTrackDetailsUseCaseProvider,
@@ -44,7 +40,17 @@ final storeFactoryProvider = AutoDisposeProvider<StoreFactory>.internal(
     removeFromFavouriteTracksUseCaseProvider,
     ...?removeFromFavouriteTracksUseCaseProvider.allTransitiveDependencies,
     removeTrackUseCaseProvider,
-    ...?removeTrackUseCaseProvider.allTransitiveDependencies
+    ...?removeTrackUseCaseProvider.allTransitiveDependencies,
+    removeMemoryUseCaseProvider,
+    ...?removeMemoryUseCaseProvider.allTransitiveDependencies,
+    updateTrackUseCaseProvider,
+    ...?updateTrackUseCaseProvider.allTransitiveDependencies,
+    updateMemoryUseCaseProvider,
+    ...?updateMemoryUseCaseProvider.allTransitiveDependencies,
+    appLocationHandlerProvider,
+    ...?appLocationHandlerProvider.allTransitiveDependencies,
+    trackRepositoryProvider,
+    ...?trackRepositoryProvider.allTransitiveDependencies
   },
 );
 

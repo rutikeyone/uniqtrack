@@ -101,6 +101,11 @@ class AppError with _$AppError {
           notAddedToFavorites: () => AppStrings.notAddedToFavorites(),
           notAddedToUserTracks: () => AppStrings.notAddedToUserTracks(),
           noRemoveRights: () => AppStrings.noRemoveRights(),
+          notContainsElement: () => AppStrings.notContainsElement(),
+          noUpdateRights: () => AppStrings.noUpdateRights(),
+          userIsTheCreatorOfTheTrack: () =>
+              AppStrings.userIsTheCreatorOfTheTrack(),
+          alreadyContainsElement: () => AppStrings.alreadyContainsElement(),
         );
       },
     );

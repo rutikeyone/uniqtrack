@@ -17,6 +17,27 @@ mixin _$RecordTrackStore on _RecordTrackStore, Store {
               name: '_RecordTrackStore.state'))
           .value;
 
+  late final _$previousTrackStreamAtom =
+      Atom(name: '_RecordTrackStore.previousTrackStream', context: context);
+
+  @override
+  ObservableStream<TrackUI>? get previousTrackStream {
+    _$previousTrackStreamAtom.reportRead();
+    return super.previousTrackStream;
+  }
+
+  bool _previousTrackStreamIsInitialized = false;
+
+  @override
+  set previousTrackStream(ObservableStream<TrackUI>? value) {
+    _$previousTrackStreamAtom.reportWrite(value,
+        _previousTrackStreamIsInitialized ? super.previousTrackStream : null,
+        () {
+      super.previousTrackStream = value;
+      _previousTrackStreamIsInitialized = true;
+    });
+  }
+
   late final _$recordTrackPermissionStateAtom = Atom(
       name: '_RecordTrackStore.recordTrackPermissionState', context: context);
 
@@ -278,6 +299,54 @@ mixin _$RecordTrackStore on _RecordTrackStore, Store {
   }
 
   @override
+  void _initStreamPositions(
+      {required String title,
+      required String body,
+      required Position position}) {
+    final _$actionInfo = _$_RecordTrackStoreActionController.startAction(
+        name: '_RecordTrackStore._initStreamPositions');
+    try {
+      return super
+          ._initStreamPositions(title: title, body: body, position: position);
+    } finally {
+      _$_RecordTrackStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void _moveToUserPosition(Position position) {
+    final _$actionInfo = _$_RecordTrackStoreActionController.startAction(
+        name: '_RecordTrackStore._moveToUserPosition');
+    try {
+      return super._moveToUserPosition(position);
+    } finally {
+      _$_RecordTrackStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void animateCameraToRepeatTrack() {
+    final _$actionInfo = _$_RecordTrackStoreActionController.startAction(
+        name: '_RecordTrackStore.animateCameraToRepeatTrack');
+    try {
+      return super.animateCameraToRepeatTrack();
+    } finally {
+      _$_RecordTrackStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void _animateCameraByPositions(List<PositionData>? positions) {
+    final _$actionInfo = _$_RecordTrackStoreActionController.startAction(
+        name: '_RecordTrackStore._animateCameraByPositions');
+    try {
+      return super._animateCameraByPositions(positions);
+    } finally {
+      _$_RecordTrackStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   void _handleTimeChanged(dynamic _) {
     final _$actionInfo = _$_RecordTrackStoreActionController.startAction(
         name: '_RecordTrackStore._handleTimeChanged');
@@ -291,6 +360,7 @@ mixin _$RecordTrackStore on _RecordTrackStore, Store {
   @override
   String toString() {
     return '''
+previousTrackStream: ${previousTrackStream},
 recordTrackPermissionState: ${recordTrackPermissionState},
 userLocationState: ${userLocationState},
 actions: ${actions},

@@ -1,6 +1,6 @@
 part of 'providers.dart';
 
-@Riverpod(dependencies: [trackMapper])
+@riverpod
 AccountsRepository accountsRepository(AccountsRepositoryRef ref) {
   final galleryDataSource = ref.watch(galleryDataSourceProvider);
   final cameraDataSource = ref.watch(cameraDataSourceProvider);
@@ -19,18 +19,13 @@ AccountsRepository accountsRepository(AccountsRepositoryRef ref) {
     accountsDataRepositoryProvider,
   );
 
-  final tracksDataRepository = ref.watch(tracksDataRepositoryProvider);
-
   final genderMapper = ref.watch(genderMapperProvider);
-  final trackMapper = ref.watch(trackMapperProvider);
 
   return AccountsAdapterRepository(
     chooseImageFromCamera: cameraImageDataRepository.chooseImage,
     chooseImageFromGallery: galleryImageDataRepository.chooseImage,
     fileMapper: fileMapper,
     accountsDataRepository: accountsDataRepository,
-    tracksDataRepository: tracksDataRepository,
     genderMapper: genderMapper,
-    trackMapper: trackMapper,
   );
 }
