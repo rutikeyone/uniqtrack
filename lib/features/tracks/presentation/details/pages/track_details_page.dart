@@ -111,6 +111,8 @@ class _TrackDetailsPageState extends ConsumerState<TrackDetailsPage> {
   }
 
   Future<void> _updateMap(Track track, bool firstTime) async {
+    if (!mounted) return;
+
     final positions = track.positions ?? List<PositionData>.empty();
     final memories = track.memories ?? List<Memory>.empty();
 

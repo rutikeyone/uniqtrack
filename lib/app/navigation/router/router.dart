@@ -18,7 +18,6 @@ import 'package:uniqtrack/features/accounts/presentation/my_favourite_tracks/pag
 import 'package:uniqtrack/features/accounts/presentation/my_tracks/pages/my_tracks_page.dart';
 import 'package:uniqtrack/features/accounts/presentation/profile/pages/profile_page.dart';
 import 'package:uniqtrack/features/accounts/presentation/register/pages/register_page.dart';
-import 'package:uniqtrack/features/placeholders/presentation/splash/pages/splash_page.dart';
 import 'package:uniqtrack/features/tracks/presentation/add_or_edit_memory/pages/add_or_edit_memory_page.dart';
 import 'package:uniqtrack/features/tracks/presentation/add_or_edit_record_track/pages/add_or_edit_record_track_page.dart';
 import 'package:uniqtrack/features/tracks/presentation/community/pages/community_page.dart';
@@ -46,54 +45,67 @@ GlobalKey<NavigatorState> profileNavigatorKey(ProfileNavigatorKeyRef ref) {
 @riverpod
 GoRouter router(RouterRef ref) {
   final rootNavigatorKey = ref.watch(rootNavigatorKeyProvider);
-  final mainNavigatorKey = ref.watch(mainNavigatorKeyProvider);
-  final profileNavigatorKey = ref.watch(profileNavigatorKeyProvider);
 
   final authState = ref.watch(authStateNotifierProvider);
+  final authStatus = authState.authStatus;
+
   final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
+  final hasAuthenticationUseCase = ref.watch(hasAuthenticationUseCaseProvider);
 
   return GoRouter(
     navigatorKey: rootNavigatorKey,
-    initialLocation: AppPaths.splash.goRoute,
+    initialLocation: AppPaths.community.path,
     refreshListenable: GoRouterRefreshStream(userChangesUseCase.call()),
     redirect: (context, state) {
-      final uri = state.uri.path;
-
       if (authState.firstTime) {
         FlutterNativeSplash.remove();
       }
 
-      return authState.authStatus.when(
+      final stateChanged = authState.stateChanged.get();
+
+      return authStatus.maybeWhen(
         pending: () => null,
-        authenticated: (_) {
-          if (uri == AppPaths.splash.path) {
+        orElse: () {
+          final canNavigate = stateChanged == true && !authState.firstTime;
+
+          if (canNavigate) {
             return AppPaths.community.path;
-          }
-          return null;
-        },
-        notAuth: () {
-          if (uri == AppPaths.splash.path) {
-            return AppPaths.login.path;
           }
           return null;
         },
       );
     },
     routes: [
+      GoRoute(
+        path: "/tracks/:id",
+        redirect: (context, state) {
+          final id = state.pathParameters["id"]!;
+          final detailsArgsConverter = ref.watch(detailsArgsConverterProvider);
+
+          final args = DetailsArgs(
+            id: id,
+            mode: DetailsMode.tracks(),
+          );
+
+          final params = detailsArgsConverter.toJson(args);
+          return AppPaths.community.details.query(params).path;
+        },
+      ),
       StatefulShellRoute.indexedStack(
         parentNavigatorKey: rootNavigatorKey,
-        builder: (context, state, navigationShell) {
-          return MainPage(
-            navigationShell: navigationShell,
+        pageBuilder: (context, state, navigationShell) {
+          return NoTransitionPage(
+            child: MainPage(
+              navigationShell: navigationShell,
+            ),
           );
         },
         branches: [
           StatefulShellBranch(
-            navigatorKey: mainNavigatorKey,
             routes: [
               GoRoute(
                 path: AppPaths.community.goRoute,
-                builder: (context, state) {
+                pageBuilder: (context, state) {
                   final detailsArgsConverter =
                       ref.watch(detailsArgsConverterProvider);
 
@@ -115,9 +127,11 @@ GoRouter router(RouterRef ref) {
                     editRecordTrackArgsConverter: addOrEditRecordTrackConverter,
                   );
 
-                  return provider.Provider.value(
-                    value: navCallbackStore,
-                    child: CommunityPage(),
+                  return NoTransitionPage(
+                    child: provider.Provider.value(
+                      value: navCallbackStore,
+                      child: CommunityPage(),
+                    ),
                   );
                 },
                 routes: [
@@ -255,6 +269,14 @@ GoRouter router(RouterRef ref) {
                       GoRoute(
                         parentNavigatorKey: rootNavigatorKey,
                         path: AppPaths.community.details.tracking.goRoute,
+                        redirect: (context, state) async {
+                          final hasAuthentication =
+                              await hasAuthenticationUseCase.call();
+                          if (!hasAuthentication) {
+                            return AppPaths.profile.login.path;
+                          }
+                          return null;
+                        },
                         builder: (context, state) {
                           final storeBuilder =
                               ref.watch(recordTrackStoreBuilderProvider);
@@ -592,6 +614,14 @@ GoRouter router(RouterRef ref) {
                   GoRoute(
                     parentNavigatorKey: rootNavigatorKey,
                     path: AppPaths.community.tracking.goRoute,
+                    redirect: (context, state) async {
+                      final hasAuthentication =
+                          await hasAuthenticationUseCase.call();
+                      if (!hasAuthentication) {
+                        return AppPaths.profile.login.path;
+                      }
+                      return null;
+                    },
                     builder: (context, state) {
                       final storeBuilder =
                           ref.watch(recordTrackStoreBuilderProvider);
@@ -794,24 +824,119 @@ GoRouter router(RouterRef ref) {
             ],
           ),
           StatefulShellBranch(
-            navigatorKey: profileNavigatorKey,
             routes: [
               GoRoute(
                 path: AppPaths.profile.goRoute,
-                builder: (context, state) {
+                pageBuilder: (context, state) {
                   final navCallbackStore =
                       NavCallbackStoreBuilder.createProfileNavCallbackStore(
                     context: context,
                     myTracksPath: AppPaths.profile.myTracksPath,
                     myFavouriteTracksPath: AppPaths.profile.myFavouriteTracks,
+                    loginPath: AppPaths.profile.login,
                   );
 
-                  return provider.Provider.value(
-                    value: navCallbackStore,
-                    child: ProfilePage(),
+                  return NoTransitionPage(
+                    child: provider.Provider.value(
+                      value: navCallbackStore,
+                      child: ProfilePage(),
+                    ),
                   );
                 },
                 routes: [
+                  GoRoute(
+                    parentNavigatorKey: rootNavigatorKey,
+                    path: AppPaths.community.login.goRoute,
+                    builder: (context, state) {
+                      final storeBuilder = ref.watch(loginStoreBuilderProvider);
+
+                      final converter =
+                          ref.watch(forgotPasswordArgsConverterProvider);
+
+                      final loginPath = AppPaths.community.login;
+                      final registerPath = loginPath.register;
+                      final forgotPasswordPath = loginPath.forgotPassword;
+
+                      final navCallbackStore =
+                          NavCallbackStoreBuilder.createLoginNavCallbackStore(
+                        context: context,
+                        registerPath: registerPath,
+                        forgotPasswordPath: forgotPasswordPath,
+                        converter: converter,
+                      );
+
+                      return provider.MultiProvider(
+                        providers: [
+                          provider.Provider.value(value: navCallbackStore),
+                          provider.Provider(create: storeBuilder.create),
+                        ],
+                        builder: (context, child) {
+                          return const LoginPage();
+                        },
+                      );
+                    },
+                    routes: [
+                      GoRoute(
+                        parentNavigatorKey: rootNavigatorKey,
+                        path: AppPaths.community.login.register.goRoute,
+                        builder: (context, state) {
+                          final navCallbackStore = NavCallbackStoreBuilder
+                              .createRegisterNavCallbackStore(context);
+
+                          final registerStoreBuilder =
+                              ref.watch(registerStoreBuilderProvider);
+
+                          return provider.MultiProvider(
+                            providers: [
+                              provider.Provider.value(value: navCallbackStore),
+                              provider.Provider(
+                                  create: registerStoreBuilder.create),
+                            ],
+                            child: const RegisterPage(),
+                          );
+                        },
+                      ),
+                      GoRoute(
+                        parentNavigatorKey: rootNavigatorKey,
+                        path: AppPaths.community.login.forgotPassword.goRoute,
+                        builder: (context, state) {
+                          final path = AppPaths.community.login.forgotPassword;
+
+                          final navCallbackStore = NavCallbackStoreBuilder
+                              .createForgotPasswordNavCallbackStore(
+                            path: path,
+                            context: context,
+                          );
+
+                          final forgotPasswordStoreBuilder =
+                              ref.watch(forgotPasswordStoreProvider);
+
+                          final forgotPasswordArgsConverter =
+                              ref.watch(forgotPasswordArgsConverterProvider);
+
+                          final queryParameters = state.uri.queryParameters;
+                          final args = path.arguments(
+                            queryParameters: queryParameters,
+                            converter: forgotPasswordArgsConverter,
+                          );
+
+                          return provider.MultiProvider(
+                            providers: [
+                              provider.Provider.value(value: navCallbackStore),
+                              provider.Provider(
+                                create: (context) {
+                                  return forgotPasswordStoreBuilder.create(
+                                    args?.email,
+                                  );
+                                },
+                              ),
+                            ],
+                            child: ForgotPasswordPage(),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
                   GoRoute(
                     path: AppPaths.profile.myTracksPath.goRoute,
                     builder: (context, state) {
@@ -1703,105 +1828,6 @@ GoRouter router(RouterRef ref) {
           ),
         ],
       ),
-      GoRoute(
-        parentNavigatorKey: rootNavigatorKey,
-        path: AppPaths.splash.goRoute,
-        builder: (context, state) {
-          return const SplashPage();
-        },
-      ),
-      GoRoute(
-        parentNavigatorKey: rootNavigatorKey,
-        path: AppPaths.login.goRoute,
-        builder: (context, state) {
-          final storeBuilder = ref.watch(loginStoreBuilderProvider);
-
-          final converter = ref.watch(forgotPasswordArgsConverterProvider);
-
-          final loginPath = AppPaths.login;
-          final registerPath = loginPath.register;
-          final forgotPasswordPath = loginPath.forgotPassword;
-
-          final navCallbackStore =
-              NavCallbackStoreBuilder.createLoginNavCallbackStore(
-            context: context,
-            registerPath: registerPath,
-            forgotPasswordPath: forgotPasswordPath,
-            converter: converter,
-          );
-
-          return provider.MultiProvider(
-            providers: [
-              provider.Provider.value(value: navCallbackStore),
-              provider.Provider(create: storeBuilder.create),
-            ],
-            builder: (context, child) {
-              return const LoginPage();
-            },
-          );
-        },
-        routes: [
-          GoRoute(
-            parentNavigatorKey: rootNavigatorKey,
-            path: AppPaths.login.register.goRoute,
-            builder: (context, state) {
-              final navCallbackStore =
-                  NavCallbackStoreBuilder.createRegisterNavCallbackStore(
-                      context);
-
-              final registerStoreBuilder =
-                  ref.watch(registerStoreBuilderProvider);
-
-              return provider.MultiProvider(
-                providers: [
-                  provider.Provider.value(value: navCallbackStore),
-                  provider.Provider(create: registerStoreBuilder.create),
-                ],
-                child: const RegisterPage(),
-              );
-            },
-          ),
-          GoRoute(
-            parentNavigatorKey: rootNavigatorKey,
-            path: AppPaths.login.forgotPassword.goRoute,
-            builder: (context, state) {
-              final path = AppPaths.login.forgotPassword;
-
-              final navCallbackStore =
-                  NavCallbackStoreBuilder.createForgotPasswordNavCallbackStore(
-                path: path,
-                context: context,
-              );
-
-              final forgotPasswordStoreBuilder =
-                  ref.watch(forgotPasswordStoreProvider);
-
-              final forgotPasswordArgsConverter =
-                  ref.watch(forgotPasswordArgsConverterProvider);
-
-              final queryParameters = state.uri.queryParameters;
-              final args = path.arguments(
-                queryParameters: queryParameters,
-                converter: forgotPasswordArgsConverter,
-              );
-
-              return provider.MultiProvider(
-                providers: [
-                  provider.Provider.value(value: navCallbackStore),
-                  provider.Provider(
-                    create: (context) {
-                      return forgotPasswordStoreBuilder.create(
-                        args?.email,
-                      );
-                    },
-                  ),
-                ],
-                child: ForgotPasswordPage(),
-              );
-            },
-          ),
-        ],
-      )
     ],
   );
 }

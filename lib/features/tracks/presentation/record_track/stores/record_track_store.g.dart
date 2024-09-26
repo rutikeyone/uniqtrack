@@ -21,7 +21,7 @@ mixin _$RecordTrackStore on _RecordTrackStore, Store {
       Atom(name: '_RecordTrackStore.previousTrackStream', context: context);
 
   @override
-  ObservableStream<TrackUI>? get previousTrackStream {
+  ObservableStream<TrackUI?>? get previousTrackStream {
     _$previousTrackStreamAtom.reportRead();
     return super.previousTrackStream;
   }
@@ -29,7 +29,7 @@ mixin _$RecordTrackStore on _RecordTrackStore, Store {
   bool _previousTrackStreamIsInitialized = false;
 
   @override
-  set previousTrackStream(ObservableStream<TrackUI>? value) {
+  set previousTrackStream(ObservableStream<TrackUI?>? value) {
     _$previousTrackStreamAtom.reportWrite(value,
         _previousTrackStreamIsInitialized ? super.previousTrackStream : null,
         () {

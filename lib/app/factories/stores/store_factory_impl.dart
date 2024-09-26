@@ -250,7 +250,7 @@ class StoreFactoryImpl implements StoreFactory {
     required bool closeWhenRemoveFromFavourites,
     required DetailsMode mode,
   }) {
-    final watchTrackDetailsUseCase = mode.when(
+    final StreamUsecase<String, TrackUI?> watchTrackDetailsUseCase = mode.when(
       tracks: () => _watchTrackDetailsUseCase,
       myTracks: () => _watchMyTrackUseCase,
       myFavouriteTracks: () => _watchFavouriteDetailsUseCase,

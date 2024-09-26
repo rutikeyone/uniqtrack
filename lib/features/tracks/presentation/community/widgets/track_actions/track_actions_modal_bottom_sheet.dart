@@ -78,43 +78,47 @@ class TrackActionsModalBottomSheet extends ConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           switch (trackDetails) {
-            AsyncData(:final value) => Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(AppDiments.dm12),
-                  color: context.bottomSheetTheme.backgroundColor,
-                ),
-                width: context.bottomSheetWidth,
-                child: Column(
-                  children: [
-                    _TrackActionsHeaderWidget(),
-                    value.currentUserCreator == true
-                        ? _EditTrackActionButton(
-                            onPressed: () => onEditPressed(value.track),
-                            onCloseDialog: onClosePressed,
-                            borderRadius: BorderRadius.zero,
-                          )
-                        : const SizedBox.shrink(),
-                    value.favouriteTrack == false && !value.currentUserCreator
-                        ? _AddToFavouritesTrackAction(
-                            onPressed: onAddToFavouriteTracksPressed,
-                            onCloseDialog: onClosePressed,
-                          )
-                        : const SizedBox.shrink(),
-                    value.favouriteTrack == true && !value.currentUserCreator
-                        ? _RemoveFromFavouritesTrackAction(
-                            onClosePressed: onClosePressed,
-                            onPressed: onDeleteToFavouriteTrackPressed,
-                          )
-                        : const SizedBox.shrink(),
-                    value.currentUserCreator == true
-                        ? _DeleteTrackActionButton(
-                            onPressed: onDeletePressed,
-                            onClosePressed: onClosePressed,
-                          )
-                        : const SizedBox.shrink(),
-                  ],
-                ),
-              ),
+            AsyncData(:final value) => value == null
+                ? const SizedBox.shrink()
+                : Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(AppDiments.dm12),
+                      color: context.bottomSheetTheme.backgroundColor,
+                    ),
+                    width: context.bottomSheetWidth,
+                    child: Column(
+                      children: [
+                        _TrackActionsHeaderWidget(),
+                        value.currentUserCreator == true
+                            ? _EditTrackActionButton(
+                                onPressed: () => onEditPressed(value.track),
+                                onCloseDialog: onClosePressed,
+                                borderRadius: BorderRadius.zero,
+                              )
+                            : const SizedBox.shrink(),
+                        value.favouriteTrack == false &&
+                                !value.currentUserCreator
+                            ? _AddToFavouritesTrackAction(
+                                onPressed: onAddToFavouriteTracksPressed,
+                                onCloseDialog: onClosePressed,
+                              )
+                            : const SizedBox.shrink(),
+                        value.favouriteTrack == true &&
+                                !value.currentUserCreator
+                            ? _RemoveFromFavouritesTrackAction(
+                                onClosePressed: onClosePressed,
+                                onPressed: onDeleteToFavouriteTrackPressed,
+                              )
+                            : const SizedBox.shrink(),
+                        value.currentUserCreator == true
+                            ? _DeleteTrackActionButton(
+                                onPressed: onDeletePressed,
+                                onClosePressed: onClosePressed,
+                              )
+                            : const SizedBox.shrink(),
+                      ],
+                    ),
+                  ),
             AsyncError() => const SizedBox.shrink(),
             _ => Container(
                 width: context.bottomSheetWidth,

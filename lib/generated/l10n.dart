@@ -1209,6 +1209,16 @@ class S {
       args: [],
     );
   }
+
+  /// `In order to view user information, you need to log in`
+  String get inOrderToViewUserInformationYouNeedToLog {
+    return Intl.message(
+      'In order to view user information, you need to log in',
+      name: 'inOrderToViewUserInformationYouNeedToLog',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

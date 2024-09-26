@@ -4,14 +4,15 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:uniqtrack/app/app_state/auth/states/auth_state.dart';
 import 'package:uniqtrack/app/glue/accounts/providers/providers.dart';
+import 'package:uniqtrack/core/common/activity.dart';
 import 'package:uniqtrack/features/accounts/domain/entities/entities.dart';
 import 'package:uniqtrack/features/accounts/domain/providers/providers.dart';
 import 'package:uniqtrack/features/accounts/domain/sign_out_use_case.dart';
 import 'package:uniqtrack/features/accounts/domain/user_changes_use_case.dart';
 
 final authStateNotifierProvider =
-    StateNotifierProvider.autoDispose<AuthStateNotifier, AuthState>(
-  (ref) {
+StateNotifierProvider.autoDispose<AuthStateNotifier, AuthState>(
+      (ref) {
     final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
     final signOutUseCase = ref.watch(signOutUseCaseProvider);
 
@@ -24,9 +25,10 @@ final authStateNotifierProvider =
   },
 );
 
-final _initialState = const AuthState(
+final _initialState = AuthState(
   firstTime: true,
   authStatus: AuthStatus.pending(),
+  stateChanged: Activity(false),
 );
 
 class AuthStateNotifier extends StateNotifier<AuthState> {
@@ -38,10 +40,11 @@ class AuthStateNotifier extends StateNotifier<AuthState> {
   AuthStateNotifier({
     required UserChangesUseCase userChangesUseCase,
     required SignOutUseCase signOutUseCase,
-  })  : _signOutUseCase = signOutUseCase,
+  })
+      : _signOutUseCase = signOutUseCase,
         _authStateBehaviourSubject = BehaviorSubject(),
         super(_initialState) {
-    if(!_authStateBehaviourSubject.isClosed) {
+    if (!_authStateBehaviourSubject.isClosed) {
       _authStateBehaviourSubject.add(_initialState);
     }
     _authStateChangesSubscription =
@@ -49,11 +52,16 @@ class AuthStateNotifier extends StateNotifier<AuthState> {
   }
 
   void _authStateChanged(User? user) {
-    final previousState = state;
+    final prevState = state;
+    final prevStatus = state.authStatus;
 
     final newStatus = _convertToAuthStatus(user);
+    final stateChanged = Activity(
+        prevStatus.runtimeType != newStatus.runtimeType);
+
     final newState = state.copyWith(
-      firstTime: previousState.isPending,
+      firstTime: prevState.isPending,
+      stateChanged: stateChanged,
       authStatus: newStatus,
     );
 

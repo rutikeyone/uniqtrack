@@ -4,6 +4,7 @@ import 'package:uniqtrack/app/navigation/arguments/args.dart';
 import 'package:uniqtrack/app/navigation/paths/add_or_edit_memory_path.dart';
 import 'package:uniqtrack/app/navigation/paths/add_or_edit_record_track_path.dart';
 import 'package:uniqtrack/app/navigation/paths/forgot_password_path.dart';
+import 'package:uniqtrack/app/navigation/paths/login_path.dart';
 import 'package:uniqtrack/app/navigation/paths/my_favourite_tracks_path.dart';
 import 'package:uniqtrack/app/navigation/paths/my_tracks_path.dart';
 import 'package:uniqtrack/app/navigation/paths/photo_viewer_path.dart';
@@ -324,11 +325,13 @@ abstract class NavCallbackStoreBuilder {
     required BuildContext context,
     required MyTracksPath myTracksPath,
     required MyFavouriteTracksPath myFavouriteTracksPath,
+    required LoginPath loginPath,
   }) {
     return ProfileNavCallbackStore(
       navigateToMyTracks: () => context.push(myTracksPath.path),
       navigateToMyFavouriteTracks: () =>
           context.push(myFavouriteTracksPath.path),
+      navigateToLogin: () => context.push(loginPath.path),
     );
   }
 }

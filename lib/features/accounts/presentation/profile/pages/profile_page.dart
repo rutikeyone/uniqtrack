@@ -7,6 +7,7 @@ import 'package:uniqtrack/app/glue/accounts/providers/providers.dart';
 import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
 import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
+import 'package:uniqtrack/core/presentation/widgets/app_elevated_button.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_transparent_button.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/features/accounts/domain/entities/entities.dart';
@@ -21,6 +22,10 @@ part '../widgets/sign_out_button.dart';
 part '../widgets/my_tracks_button.dart';
 
 part '../widgets/my_favourite_tracks_button.dart';
+
+part '../widgets/authenticated_profile_widget.dart';
+
+part '../widgets/not_authenticated_profile_widget.dart';
 
 class ProfilePage extends ConsumerWidget {
   const ProfilePage({super.key});
@@ -43,30 +48,8 @@ class ProfilePage extends ConsumerWidget {
             final authStatus = state.authStatus;
 
             return authStatus.maybeWhen(
-              authenticated: (user) {
-                return SingleChildScrollView(
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: AppDiments.dm16),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        _ProfileAvatarImageWidget(
-                          photo: user.photo,
-                          gender: user.gender,
-                        ),
-                        _ProfileEmailWidget(
-                          email: user.email,
-                        ),
-                        _MyFavouriteTracksButton(),
-                        _MyTracksButton(),
-                        _SignOutButton(),
-                      ],
-                    ),
-                  ),
-                );
-              },
+              authenticated: (user) => _AuthenticatedProfileWidget(user: user),
+              notAuth: () => _NotAuthenticatedProfileWidget(),
               orElse: () => const SizedBox.shrink(),
             );
           },
@@ -75,3 +58,4 @@ class ProfilePage extends ConsumerWidget {
     );
   }
 }
+

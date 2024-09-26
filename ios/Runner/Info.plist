@@ -69,7 +69,7 @@
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
         <key>CFBundleURLName</key>
-        <string>com.uniqtrack.uniqtrack</string>
+        <string>uniqtrack.com</string>
         <key>CFBundleURLSchemes</key>
         <array>
         <string>appscheme</string>

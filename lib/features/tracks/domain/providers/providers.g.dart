@@ -6,11 +6,11 @@ part of 'providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$tracksHash() => r'156ec422c23ca05355c18efa5992d5df452d92fc';
+String _$tracksHash() => r'38c0482c46b31ac893e537b5f5f39fba03699b8a';
 
 /// See also [tracks].
 @ProviderFor(tracks)
-final tracksProvider = AutoDisposeStreamProvider<List<Track>>.internal(
+final tracksProvider = AutoDisposeStreamProvider<List<TrackUI>>.internal(
   tracks,
   name: r'tracksProvider',
   debugGetCreateSourceHash:
@@ -22,8 +22,8 @@ final tracksProvider = AutoDisposeStreamProvider<List<Track>>.internal(
   },
 );
 
-typedef TracksRef = AutoDisposeStreamProviderRef<List<Track>>;
-String _$trackDetailsHash() => r'4fd166ba904f338db18f90cd4a92808f206fafd4';
+typedef TracksRef = AutoDisposeStreamProviderRef<List<TrackUI>>;
+String _$trackDetailsHash() => r'3f739c2edb54b2e130d65716f81c61288c3d1594';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -51,7 +51,7 @@ class _SystemHash {
 const trackDetailsProvider = TrackDetailsFamily();
 
 /// See also [trackDetails].
-class TrackDetailsFamily extends Family<AsyncValue<TrackUI>> {
+class TrackDetailsFamily extends Family<AsyncValue<TrackUI?>> {
   /// See also [trackDetails].
   const TrackDetailsFamily();
 
@@ -98,7 +98,7 @@ class TrackDetailsFamily extends Family<AsyncValue<TrackUI>> {
 }
 
 /// See also [trackDetails].
-class TrackDetailsProvider extends AutoDisposeStreamProvider<TrackUI> {
+class TrackDetailsProvider extends AutoDisposeStreamProvider<TrackUI?> {
   /// See also [trackDetails].
   TrackDetailsProvider(
     String id,
@@ -133,7 +133,7 @@ class TrackDetailsProvider extends AutoDisposeStreamProvider<TrackUI> {
 
   @override
   Override overrideWith(
-    Stream<TrackUI> Function(TrackDetailsRef provider) create,
+    Stream<TrackUI?> Function(TrackDetailsRef provider) create,
   ) {
     return ProviderOverride(
       origin: this,
@@ -150,7 +150,7 @@ class TrackDetailsProvider extends AutoDisposeStreamProvider<TrackUI> {
   }
 
   @override
-  AutoDisposeStreamProviderElement<TrackUI> createElement() {
+  AutoDisposeStreamProviderElement<TrackUI?> createElement() {
     return _TrackDetailsProviderElement(this);
   }
 
@@ -168,13 +168,13 @@ class TrackDetailsProvider extends AutoDisposeStreamProvider<TrackUI> {
   }
 }
 
-mixin TrackDetailsRef on AutoDisposeStreamProviderRef<TrackUI> {
+mixin TrackDetailsRef on AutoDisposeStreamProviderRef<TrackUI?> {
   /// The parameter `id` of this provider.
   String get id;
 }
 
 class _TrackDetailsProviderElement
-    extends AutoDisposeStreamProviderElement<TrackUI> with TrackDetailsRef {
+    extends AutoDisposeStreamProviderElement<TrackUI?> with TrackDetailsRef {
   _TrackDetailsProviderElement(super.provider);
 
   @override
@@ -182,7 +182,7 @@ class _TrackDetailsProviderElement
 }
 
 String _$userFavouriteTracksHash() =>
-    r'051f009d1ae50bbf26c842a9c15b0024ca2b8ba3';
+    r'86a8228157bc3fd701915fc3a334f2ca759e2f89';
 
 /// See also [userFavouriteTracks].
 @ProviderFor(userFavouriteTracks)
@@ -206,11 +206,11 @@ final userFavouriteTracksProvider =
 );
 
 typedef UserFavouriteTracksRef = AutoDisposeStreamProviderRef<List<TrackUI>>;
-String _$userTracksHash() => r'7ff44f6c4c30a6c2b54476b252fbcf365c0bc46b';
+String _$userTracksHash() => r'3d40294a527b5d3dd488bf8ead61e0234928fc51';
 
 /// See also [userTracks].
 @ProviderFor(userTracks)
-final userTracksProvider = AutoDisposeStreamProvider<List<Track>>.internal(
+final userTracksProvider = AutoDisposeStreamProvider<List<TrackUI>>.internal(
   userTracks,
   name: r'userTracksProvider',
   debugGetCreateSourceHash:
@@ -222,7 +222,7 @@ final userTracksProvider = AutoDisposeStreamProvider<List<Track>>.internal(
   },
 );
 
-typedef UserTracksRef = AutoDisposeStreamProviderRef<List<Track>>;
+typedef UserTracksRef = AutoDisposeStreamProviderRef<List<TrackUI>>;
 String _$watchTrackDetailsUseCaseHash() =>
     r'6fd015537de29eb7278515581de680ab1a3abb86';
 

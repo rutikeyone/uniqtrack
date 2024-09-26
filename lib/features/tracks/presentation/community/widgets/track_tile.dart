@@ -8,7 +8,7 @@ import 'track_tile_data_widget.dart';
 import 'track_upper_part_widget.dart';
 
 class TrackTile extends ConsumerWidget {
-  final Track track;
+  final TrackUI trackUI;
   final String asset;
 
   final VoidCallback? onPressed;
@@ -18,7 +18,7 @@ class TrackTile extends ConsumerWidget {
   final Widget? actionsWidget;
 
   const TrackTile({
-    required this.track,
+    required this.trackUI,
     required this.asset,
     this.onPressed,
     this.onMorePressed,
@@ -29,10 +29,10 @@ class TrackTile extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final name = track.name;
-    final distance = track.distance;
-    final duration = track.duration;
-    final date = track.dateCreated;
+    final name = trackUI.track.name;
+    final distance = trackUI.track.distance;
+    final duration = trackUI.track.duration;
+    final date = trackUI.track.dateCreated;
 
     return InkWell(
       onTap: onPressed,
@@ -56,6 +56,7 @@ class TrackTile extends ConsumerWidget {
                     TrackUpperPartWidget(
                       name: name,
                       asset: asset,
+                      canMore: trackUI.canMore,
                       date: date,
                       onSharePressed: onSharePressed,
                       onMorePressed: onMorePressed,

@@ -37,7 +37,7 @@ abstract interface class RecordTrackStoreBuilder {
 class RecordTrackStore = _RecordTrackStore with _$RecordTrackStore;
 
 abstract class _RecordTrackStore with Store {
-  final StreamUsecase<String, TrackUI>? _watchTrackUseCase;
+  final StreamUsecase<String, TrackUI?>? _watchTrackUseCase;
 
   final Track? _previousTrack;
 
@@ -63,7 +63,7 @@ abstract class _RecordTrackStore with Store {
       _memoryDetailsBehaviourSubject.stream;
 
   @observable
-  late ObservableStream<TrackUI>? previousTrackStream =
+  late ObservableStream<TrackUI?>? previousTrackStream =
       _previousTrack != null &&
               _previousTrack.id != null &&
               _watchTrackUseCase != null
@@ -101,7 +101,7 @@ abstract class _RecordTrackStore with Store {
     required CommonUIDelegate commonUIDelegate,
     required AppLocationHandler appLocationHandler,
     required Track? previousTrack,
-    required StreamUsecase<String, TrackUI>? watchTrackUseCase,
+    required StreamUsecase<String, TrackUI?>? watchTrackUseCase,
   })  : _recordTrackRepository = recordTrackRepository,
         _commonUIDelegate = commonUIDelegate,
         _appLocationHandler = appLocationHandler,

@@ -107,6 +107,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "hasNotBeenAddedToFavoritesYet": MessageLookupByLibrary.simpleMessage(
             "Has not been added to favorites yet"),
         "image": MessageLookupByLibrary.simpleMessage("Image"),
+        "inOrderToViewUserInformationYouNeedToLog":
+            MessageLookupByLibrary.simpleMessage(
+                "In order to view user information, you need to log in"),
         "invalidComment":
             MessageLookupByLibrary.simpleMessage("Invalid comment"),
         "invalidCredential":

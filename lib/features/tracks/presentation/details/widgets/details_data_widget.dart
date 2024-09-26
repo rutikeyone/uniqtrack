@@ -16,6 +16,7 @@ class DetailsDataWidget extends StatelessWidget {
   final TrackUI track;
   final bool canDelete;
   final bool favouriteEnabled;
+  final bool canMore;
 
   final VoidCallback? onAddToFavouritesPressed;
   final VoidCallback? onRemoveFromFavouritesPressed;
@@ -37,6 +38,7 @@ class DetailsDataWidget extends StatelessWidget {
     required this.onRepeatPressed,
     required this.onDeleteMemoryPressed,
     required this.onEditPressed,
+    required this.canMore,
     super.key,
   });
 
@@ -53,9 +55,9 @@ class DetailsDataWidget extends StatelessWidget {
         shrinkWrap: true,
         children: [
           ModalBottomSheetDividerWidget(),
-          NameWidget(name: trackData?.name),
-          DateWidget(date: trackData?.dateCreated),
-          CommentWidget(comment: trackData?.comment),
+          NameWidget(name: trackData.name),
+          DateWidget(date: trackData.dateCreated),
+          CommentWidget(comment: trackData.comment),
           Padding(
             padding: const EdgeInsets.only(top: AppDiments.dm12),
             child: Container(
@@ -65,9 +67,9 @@ class DetailsDataWidget extends StatelessWidget {
             ),
           ),
           TrackDataSectionWidget(
-            distance: trackData?.distance,
-            duration: trackData?.duration,
-            averageSpeed: trackData?.averageSpeed,
+            distance: trackData.distance,
+            duration: trackData.duration,
+            averageSpeed: trackData.averageSpeed,
             paddings: EdgeInsets.only(top: AppDiments.dm12),
           ),
           Padding(
@@ -79,15 +81,16 @@ class DetailsDataWidget extends StatelessWidget {
             ),
           ),
           MemoryWidget(
-            memories: trackData?.memories,
+            memories: trackData.memories,
             onMemoryPressed: onMemoryPressed,
             onDeletePressed:
                 track.currentUserCreator ? onDeleteMemoryPressed : null,
           ),
           DetailsModalBottomActionsWidget(
-            id: track.track?.id,
+            id: track.track.id,
             userCreator: _isUserCreator,
             favouriteTrack: _isFavouriteTrack,
+            canMore: canMore,
             canDelete: canDelete,
             favouriteEnabled: favouriteEnabled,
             onAddToFavouritesPressed: onAddToFavouritesPressed,

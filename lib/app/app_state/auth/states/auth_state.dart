@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:uniqtrack/core/common/activity.dart';
 import 'package:uniqtrack/features/accounts/domain/entities/entities.dart';
 
 part 'auth_state.freezed.dart';
@@ -19,6 +20,7 @@ class AuthState with _$AuthState {
 
   const factory AuthState({
     required bool firstTime,
+    required Activity<bool> stateChanged,
     required AuthStatus authStatus,
   }) = _AuthState;
 }

@@ -1321,6 +1321,7 @@ mixin _$ProfileNavCallbackStore {
   VoidCallback get navigateToMyTracks => throw _privateConstructorUsedError;
   VoidCallback get navigateToMyFavouriteTracks =>
       throw _privateConstructorUsedError;
+  VoidCallback get navigateToLogin => throw _privateConstructorUsedError;
 
   /// Create a copy of ProfileNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.
@@ -1337,7 +1338,8 @@ abstract class $ProfileNavCallbackStoreCopyWith<$Res> {
   @useResult
   $Res call(
       {VoidCallback navigateToMyTracks,
-      VoidCallback navigateToMyFavouriteTracks});
+      VoidCallback navigateToMyFavouriteTracks,
+      VoidCallback navigateToLogin});
 }
 
 /// @nodoc
@@ -1358,6 +1360,7 @@ class _$ProfileNavCallbackStoreCopyWithImpl<$Res,
   $Res call({
     Object? navigateToMyTracks = null,
     Object? navigateToMyFavouriteTracks = null,
+    Object? navigateToLogin = null,
   }) {
     return _then(_value.copyWith(
       navigateToMyTracks: null == navigateToMyTracks
@@ -1367,6 +1370,10 @@ class _$ProfileNavCallbackStoreCopyWithImpl<$Res,
       navigateToMyFavouriteTracks: null == navigateToMyFavouriteTracks
           ? _value.navigateToMyFavouriteTracks
           : navigateToMyFavouriteTracks // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+      navigateToLogin: null == navigateToLogin
+          ? _value.navigateToLogin
+          : navigateToLogin // ignore: cast_nullable_to_non_nullable
               as VoidCallback,
     ) as $Val);
   }
@@ -1383,7 +1390,8 @@ abstract class _$$ProfileNavCallbackStoreImplCopyWith<$Res>
   @useResult
   $Res call(
       {VoidCallback navigateToMyTracks,
-      VoidCallback navigateToMyFavouriteTracks});
+      VoidCallback navigateToMyFavouriteTracks,
+      VoidCallback navigateToLogin});
 }
 
 /// @nodoc
@@ -1403,6 +1411,7 @@ class __$$ProfileNavCallbackStoreImplCopyWithImpl<$Res>
   $Res call({
     Object? navigateToMyTracks = null,
     Object? navigateToMyFavouriteTracks = null,
+    Object? navigateToLogin = null,
   }) {
     return _then(_$ProfileNavCallbackStoreImpl(
       navigateToMyTracks: null == navigateToMyTracks
@@ -1412,6 +1421,10 @@ class __$$ProfileNavCallbackStoreImplCopyWithImpl<$Res>
       navigateToMyFavouriteTracks: null == navigateToMyFavouriteTracks
           ? _value.navigateToMyFavouriteTracks
           : navigateToMyFavouriteTracks // ignore: cast_nullable_to_non_nullable
+              as VoidCallback,
+      navigateToLogin: null == navigateToLogin
+          ? _value.navigateToLogin
+          : navigateToLogin // ignore: cast_nullable_to_non_nullable
               as VoidCallback,
     ));
   }
@@ -1424,16 +1437,19 @@ class _$ProfileNavCallbackStoreImpl
     implements _ProfileNavCallbackStore {
   const _$ProfileNavCallbackStoreImpl(
       {required this.navigateToMyTracks,
-      required this.navigateToMyFavouriteTracks});
+      required this.navigateToMyFavouriteTracks,
+      required this.navigateToLogin});
 
   @override
   final VoidCallback navigateToMyTracks;
   @override
   final VoidCallback navigateToMyFavouriteTracks;
+  @override
+  final VoidCallback navigateToLogin;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ProfileNavCallbackStore(navigateToMyTracks: $navigateToMyTracks, navigateToMyFavouriteTracks: $navigateToMyFavouriteTracks)';
+    return 'ProfileNavCallbackStore(navigateToMyTracks: $navigateToMyTracks, navigateToMyFavouriteTracks: $navigateToMyFavouriteTracks, navigateToLogin: $navigateToLogin)';
   }
 
   @override
@@ -1443,7 +1459,8 @@ class _$ProfileNavCallbackStoreImpl
       ..add(DiagnosticsProperty('type', 'ProfileNavCallbackStore'))
       ..add(DiagnosticsProperty('navigateToMyTracks', navigateToMyTracks))
       ..add(DiagnosticsProperty(
-          'navigateToMyFavouriteTracks', navigateToMyFavouriteTracks));
+          'navigateToMyFavouriteTracks', navigateToMyFavouriteTracks))
+      ..add(DiagnosticsProperty('navigateToLogin', navigateToLogin));
   }
 
   @override
@@ -1456,12 +1473,14 @@ class _$ProfileNavCallbackStoreImpl
             (identical(other.navigateToMyFavouriteTracks,
                     navigateToMyFavouriteTracks) ||
                 other.navigateToMyFavouriteTracks ==
-                    navigateToMyFavouriteTracks));
+                    navigateToMyFavouriteTracks) &&
+            (identical(other.navigateToLogin, navigateToLogin) ||
+                other.navigateToLogin == navigateToLogin));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, navigateToMyTracks, navigateToMyFavouriteTracks);
+  int get hashCode => Object.hash(runtimeType, navigateToMyTracks,
+      navigateToMyFavouriteTracks, navigateToLogin);
 
   /// Create a copy of ProfileNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.
@@ -1476,13 +1495,16 @@ class _$ProfileNavCallbackStoreImpl
 abstract class _ProfileNavCallbackStore implements ProfileNavCallbackStore {
   const factory _ProfileNavCallbackStore(
           {required final VoidCallback navigateToMyTracks,
-          required final VoidCallback navigateToMyFavouriteTracks}) =
+          required final VoidCallback navigateToMyFavouriteTracks,
+          required final VoidCallback navigateToLogin}) =
       _$ProfileNavCallbackStoreImpl;
 
   @override
   VoidCallback get navigateToMyTracks;
   @override
   VoidCallback get navigateToMyFavouriteTracks;
+  @override
+  VoidCallback get navigateToLogin;
 
   /// Create a copy of ProfileNavCallbackStore
   /// with the given fields replaced by the non-null parameter values.

@@ -4,7 +4,7 @@ import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/presentation/details/widgets/details_data_widget.dart';
 
 class DetailsModalBottomSheet extends StatefulWidget {
-  final Stream<TrackUI> trackStream;
+  final Stream<TrackUI?> trackStream;
   final TrackUI? initialTrack;
 
   final VoidCallback onAddToFavouritesPressed;
@@ -73,6 +73,7 @@ class _DetailsModalBottomSheetState extends State<DetailsModalBottomSheet> {
                 widget.onAddToFavouritesPressed ,
             onRemoveFromFavouritesPressed: widget.onRemoveFromFavouritesPressed,
             favouriteEnabled: data.favouriteEnabled,
+            canMore: data.canMore,
             onDeletePressed: data.deleteEnabled ? widget.onDeletePressed : null,
             onDeleteMemoryPressed: widget.onDeleteMemoryPressed,
             canDelete: data.canDelete,

@@ -129,5 +129,6 @@
   "theDataHasBeenSuccessfullyUpdated": "Данные успешно обновлены",
   "theMemoryHasBeenSuccessfullyDeleted": "Воспоминание успешно удалено",
   "theUserIsTheCreatorOfTheTrack": "Пользователь является создателем трека",
-  "alreadyContainsElement": "Уже содержит элемент"
+  "alreadyContainsElement": "Уже содержит элемент",
+  "inOrderToViewUserInformationYouNeedToLog": "Для того чтобы просмотреть информацию о пользователе, необходимо авторизоваться"
 }

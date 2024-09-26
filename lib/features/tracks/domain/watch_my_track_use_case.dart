@@ -5,7 +5,7 @@ import 'package:uniqtrack/features/accounts/domain/user_changes_use_case.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/domain/track_repository.dart';
 
-class WatchMyTrackUseCase extends StreamUsecase<String, TrackUI> {
+class WatchMyTrackUseCase extends StreamUsecase<String, TrackUI?> {
   final TrackRepository _trackRepository;
   final UserChangesUseCase _userChangesUseCase;
   final FavouriteTrackIdsChangesUseCase _favouriteTrackIdsChangesUseCase;
@@ -19,7 +19,7 @@ class WatchMyTrackUseCase extends StreamUsecase<String, TrackUI> {
         _favouriteTrackIdsChangesUseCase = favouriteTrackIdsChangesUseCase;
 
   @override
-  Stream<TrackUI> execute(String id) {
+  Stream<TrackUI?> execute(String id) {
     return Rx.combineLatest3(
       _trackRepository.watchMyTrack(id),
       _userChangesUseCase.call(),
@@ -33,10 +33,15 @@ class WatchMyTrackUseCase extends StreamUsecase<String, TrackUI> {
         final favouriteTrack =
             track != null ? favouriteIds.contains(trackId) : false;
 
+        if(track == null) {
+          return null;
+        }
+
         return TrackUI(
           track: track,
           currentUserCreator: currentUserCreator,
           favouriteTrack: favouriteTrack,
+          canMore: user != null,
         );
       },
     );

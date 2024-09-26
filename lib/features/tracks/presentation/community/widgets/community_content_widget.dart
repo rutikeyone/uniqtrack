@@ -159,14 +159,14 @@ class _CommunityContentWidgetState
               };
 
               return TrackTile(
-                track: track,
+                trackUI: track,
                 asset: asset,
-                onPressed: () => _navigateToTrackDetails(track),
+                onPressed: () => _navigateToTrackDetails(track.track),
                 onMorePressed: () => _showMoreModalBottomSheetActions(
                   context: context,
-                  track: track,
+                  track: track.track,
                 ),
-                onSharePressed: () => _shareTrack(track),
+                onSharePressed: () => _shareTrack(track.track),
               );
             },
           ),

@@ -81,7 +81,7 @@ class _MyTracksContentWidgetState extends ConsumerState<MyTracksContentWidget> {
 
   Future<void> _removeFromFavouritesTrack(Track track) async {
     final removeFromFavouriteTracksResult =
-        await ref.read(removeFromFavouriteTracksUseCaseProvider).execute(track);
+        await ref.watch(removeFromFavouriteTracksUseCaseProvider).execute(track);
 
     removeFromFavouriteTracksResult.fold(
       (error) {
@@ -107,7 +107,7 @@ class _MyTracksContentWidgetState extends ConsumerState<MyTracksContentWidget> {
 
   Future<void> _removeTrack(Track track) async {
     final removeTrackResult =
-        await ref.read(removeTrackUseCaseProvider).execute(track);
+        await ref.watch(removeTrackUseCaseProvider).execute(track);
 
     removeTrackResult.fold(
       (error) {
@@ -157,13 +157,13 @@ class _MyTracksContentWidgetState extends ConsumerState<MyTracksContentWidget> {
               };
 
               return TrackTile(
-                track: track,
+                trackUI: track,
                 asset: asset,
-                onPressed: () => _navigateToTrackDetails(track),
-                onSharePressed: () => _shareTrack(track),
+                onPressed: () => _navigateToTrackDetails(track.track),
+                onSharePressed: () => _shareTrack(track.track),
                 onMorePressed: () => _showMoreModalBottomSheetActions(
                   context: context,
-                  track: track,
+                  track: track.track,
                 ),
               );
             },

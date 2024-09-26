@@ -17,14 +17,21 @@ import 'package:uniqtrack/features/tracks/domain/watch_track_use_case.dart';
 part 'providers.g.dart';
 
 @Riverpod(dependencies: [trackRepository])
-Stream<List<Track>> tracks(TracksRef ref) {
-  final repository = ref.watch(trackRepositoryProvider);
+Stream<List<TrackUI>> tracks(TracksRef ref) {
+  final tracksRepository = ref.watch(trackRepositoryProvider);
+  final authStateChangesUseCase = ref.watch(authStateChangesUseCaseProvider);
 
-  return repository.watchTracks();
+  return Rx.combineLatest2(
+    tracksRepository.watchTracks(),
+    authStateChangesUseCase.call(),
+    (tracks, state) => tracks.map((item) {
+      return TrackUI(track: item, canMore: state.isAuthenticated);
+    }).toList(),
+  );
 }
 
 @Riverpod(dependencies: [trackRepository, favouriteTrackIdsChangesUseCase])
-Stream<TrackUI> trackDetails(TrackDetailsRef ref, String id) {
+Stream<TrackUI?> trackDetails(TrackDetailsRef ref, String id) {
   final trackRepository = ref.watch(trackRepositoryProvider);
   final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
   final favouriteTrackIdsChangesUseCase =
@@ -42,10 +49,14 @@ Stream<TrackUI> trackDetails(TrackDetailsRef ref, String id) {
       final isCurrentUserCreator = creatorId == userId;
       final isFavouriteTrack = favouriteIds.contains(trackId);
 
+      if (track == null) {
+        return null;
+      }
+
       return TrackUI(
         track: track,
-        currentUserCreator: track != null ? isCurrentUserCreator : false,
-        favouriteTrack: track != null ? isFavouriteTrack : false,
+        currentUserCreator: isCurrentUserCreator,
+        favouriteTrack: isFavouriteTrack,
         favouriteEnabled: false,
         deleteEnabled: false,
       );
@@ -80,6 +91,7 @@ Stream<List<TrackUI>> userFavouriteTracks(UserFavouriteTracksRef ref) {
             favouriteTrack: isFavouriteTrack,
             favouriteEnabled: false,
             deleteEnabled: false,
+            canMore: user != null,
           );
         },
       ).toList();
@@ -88,10 +100,17 @@ Stream<List<TrackUI>> userFavouriteTracks(UserFavouriteTracksRef ref) {
 }
 
 @Riverpod(dependencies: [trackRepository])
-Stream<List<Track>> userTracks(UserTracksRef ref) {
-  final trackRepository = ref.watch(trackRepositoryProvider);
+Stream<List<TrackUI>> userTracks(UserTracksRef ref) {
+  final tracksRepository = ref.watch(trackRepositoryProvider);
+  final authStateChangesUseCase = ref.watch(authStateChangesUseCaseProvider);
 
-  return trackRepository.watchUserTracks();
+  return Rx.combineLatest2(
+    tracksRepository.watchUserTracks(),
+    authStateChangesUseCase.call(),
+        (tracks, state) => tracks.map((item) {
+      return TrackUI(track: item, canMore: state.isAuthenticated);
+    }).toList(),
+  );
 }
 
 @Riverpod(dependencies: [trackRepository, favouriteTrackIdsChangesUseCase])

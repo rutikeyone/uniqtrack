@@ -1181,12 +1181,13 @@ abstract class _MapDataUI implements MapDataUI {
 
 /// @nodoc
 mixin _$TrackUI {
-  Track? get track => throw _privateConstructorUsedError;
+  Track get track => throw _privateConstructorUsedError;
   bool get currentUserCreator => throw _privateConstructorUsedError;
   bool get favouriteTrack => throw _privateConstructorUsedError;
   bool get deleteEnabled => throw _privateConstructorUsedError;
   bool get favouriteEnabled => throw _privateConstructorUsedError;
   bool get canDelete => throw _privateConstructorUsedError;
+  bool get canMore => throw _privateConstructorUsedError;
 
   /// Create a copy of TrackUI
   /// with the given fields replaced by the non-null parameter values.
@@ -1200,14 +1201,15 @@ abstract class $TrackUICopyWith<$Res> {
       _$TrackUICopyWithImpl<$Res, TrackUI>;
   @useResult
   $Res call(
-      {Track? track,
+      {Track track,
       bool currentUserCreator,
       bool favouriteTrack,
       bool deleteEnabled,
       bool favouriteEnabled,
-      bool canDelete});
+      bool canDelete,
+      bool canMore});
 
-  $TrackCopyWith<$Res>? get track;
+  $TrackCopyWith<$Res> get track;
 }
 
 /// @nodoc
@@ -1225,18 +1227,19 @@ class _$TrackUICopyWithImpl<$Res, $Val extends TrackUI>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? track = freezed,
+    Object? track = null,
     Object? currentUserCreator = null,
     Object? favouriteTrack = null,
     Object? deleteEnabled = null,
     Object? favouriteEnabled = null,
     Object? canDelete = null,
+    Object? canMore = null,
   }) {
     return _then(_value.copyWith(
-      track: freezed == track
+      track: null == track
           ? _value.track
           : track // ignore: cast_nullable_to_non_nullable
-              as Track?,
+              as Track,
       currentUserCreator: null == currentUserCreator
           ? _value.currentUserCreator
           : currentUserCreator // ignore: cast_nullable_to_non_nullable
@@ -1257,6 +1260,10 @@ class _$TrackUICopyWithImpl<$Res, $Val extends TrackUI>
           ? _value.canDelete
           : canDelete // ignore: cast_nullable_to_non_nullable
               as bool,
+      canMore: null == canMore
+          ? _value.canMore
+          : canMore // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 
@@ -1264,12 +1271,8 @@ class _$TrackUICopyWithImpl<$Res, $Val extends TrackUI>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $TrackCopyWith<$Res>? get track {
-    if (_value.track == null) {
-      return null;
-    }
-
-    return $TrackCopyWith<$Res>(_value.track!, (value) {
+  $TrackCopyWith<$Res> get track {
+    return $TrackCopyWith<$Res>(_value.track, (value) {
       return _then(_value.copyWith(track: value) as $Val);
     });
   }
@@ -1283,15 +1286,16 @@ abstract class _$$TrackUIImplCopyWith<$Res> implements $TrackUICopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Track? track,
+      {Track track,
       bool currentUserCreator,
       bool favouriteTrack,
       bool deleteEnabled,
       bool favouriteEnabled,
-      bool canDelete});
+      bool canDelete,
+      bool canMore});
 
   @override
-  $TrackCopyWith<$Res>? get track;
+  $TrackCopyWith<$Res> get track;
 }
 
 /// @nodoc
@@ -1307,18 +1311,19 @@ class __$$TrackUIImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? track = freezed,
+    Object? track = null,
     Object? currentUserCreator = null,
     Object? favouriteTrack = null,
     Object? deleteEnabled = null,
     Object? favouriteEnabled = null,
     Object? canDelete = null,
+    Object? canMore = null,
   }) {
     return _then(_$TrackUIImpl(
-      track: freezed == track
+      track: null == track
           ? _value.track
           : track // ignore: cast_nullable_to_non_nullable
-              as Track?,
+              as Track,
       currentUserCreator: null == currentUserCreator
           ? _value.currentUserCreator
           : currentUserCreator // ignore: cast_nullable_to_non_nullable
@@ -1339,6 +1344,10 @@ class __$$TrackUIImplCopyWithImpl<$Res>
           ? _value.canDelete
           : canDelete // ignore: cast_nullable_to_non_nullable
               as bool,
+      canMore: null == canMore
+          ? _value.canMore
+          : canMore // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -1352,11 +1361,12 @@ class _$TrackUIImpl extends _TrackUI with DiagnosticableTreeMixin {
       this.favouriteTrack = false,
       this.deleteEnabled = true,
       this.favouriteEnabled = true,
-      this.canDelete = true})
+      this.canDelete = true,
+      this.canMore = true})
       : super._();
 
   @override
-  final Track? track;
+  final Track track;
   @override
   @JsonKey()
   final bool currentUserCreator;
@@ -1372,10 +1382,13 @@ class _$TrackUIImpl extends _TrackUI with DiagnosticableTreeMixin {
   @override
   @JsonKey()
   final bool canDelete;
+  @override
+  @JsonKey()
+  final bool canMore;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'TrackUI(track: $track, currentUserCreator: $currentUserCreator, favouriteTrack: $favouriteTrack, deleteEnabled: $deleteEnabled, favouriteEnabled: $favouriteEnabled, canDelete: $canDelete)';
+    return 'TrackUI(track: $track, currentUserCreator: $currentUserCreator, favouriteTrack: $favouriteTrack, deleteEnabled: $deleteEnabled, favouriteEnabled: $favouriteEnabled, canDelete: $canDelete, canMore: $canMore)';
   }
 
   @override
@@ -1388,7 +1401,8 @@ class _$TrackUIImpl extends _TrackUI with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('favouriteTrack', favouriteTrack))
       ..add(DiagnosticsProperty('deleteEnabled', deleteEnabled))
       ..add(DiagnosticsProperty('favouriteEnabled', favouriteEnabled))
-      ..add(DiagnosticsProperty('canDelete', canDelete));
+      ..add(DiagnosticsProperty('canDelete', canDelete))
+      ..add(DiagnosticsProperty('canMore', canMore));
   }
 
   @override
@@ -1406,12 +1420,13 @@ class _$TrackUIImpl extends _TrackUI with DiagnosticableTreeMixin {
             (identical(other.favouriteEnabled, favouriteEnabled) ||
                 other.favouriteEnabled == favouriteEnabled) &&
             (identical(other.canDelete, canDelete) ||
-                other.canDelete == canDelete));
+                other.canDelete == canDelete) &&
+            (identical(other.canMore, canMore) || other.canMore == canMore));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, track, currentUserCreator,
-      favouriteTrack, deleteEnabled, favouriteEnabled, canDelete);
+      favouriteTrack, deleteEnabled, favouriteEnabled, canDelete, canMore);
 
   /// Create a copy of TrackUI
   /// with the given fields replaced by the non-null parameter values.
@@ -1424,16 +1439,17 @@ class _$TrackUIImpl extends _TrackUI with DiagnosticableTreeMixin {
 
 abstract class _TrackUI extends TrackUI {
   const factory _TrackUI(
-      {required final Track? track,
+      {required final Track track,
       final bool currentUserCreator,
       final bool favouriteTrack,
       final bool deleteEnabled,
       final bool favouriteEnabled,
-      final bool canDelete}) = _$TrackUIImpl;
+      final bool canDelete,
+      final bool canMore}) = _$TrackUIImpl;
   const _TrackUI._() : super._();
 
   @override
-  Track? get track;
+  Track get track;
   @override
   bool get currentUserCreator;
   @override
@@ -1444,6 +1460,8 @@ abstract class _TrackUI extends TrackUI {
   bool get favouriteEnabled;
   @override
   bool get canDelete;
+  @override
+  bool get canMore;
 
   /// Create a copy of TrackUI
   /// with the given fields replaced by the non-null parameter values.

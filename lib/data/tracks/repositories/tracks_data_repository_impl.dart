@@ -187,7 +187,8 @@ class TracksDataRepositoryImpl implements TracksDataRepository {
 
         if (userId == null) {
           final category = AuthenticationErrorCategory.notAuth();
-          return Stream.error(AppError.authentication(category: category));
+          final error = AppError.authentication(category: category);
+          return Stream.error(error);
         }
 
         return _watchFavouriteTrack(id: id, userId: userId);
@@ -208,7 +209,8 @@ class TracksDataRepositoryImpl implements TracksDataRepository {
 
         if (userId == null) {
           final category = AuthenticationErrorCategory.notAuth();
-          return Stream.error(AppError.authentication(category: category));
+          final error = AppError.authentication(category: category);
+          return Stream.error(error);
         }
 
         return _watchMyTrack(id: id, userId: userId);
@@ -718,9 +720,8 @@ class TracksDataRepositoryImpl implements TracksDataRepository {
     final userId = _firebaseAuth.currentUser?.uid;
 
     if (userId == null) {
-      final category = AuthenticationErrorCategory.notAuth();
-      final error = AppError.authentication(category: category);
-      return Stream.error(error);
+      final emptyList = List<TrackModel>.empty();
+      return Stream.value(emptyList);
     }
 
     return _queryTracks(userFavouriteTracksPath(userId))
@@ -815,9 +816,8 @@ class TracksDataRepositoryImpl implements TracksDataRepository {
     final userId = _firebaseAuth.currentUser?.uid;
 
     if (userId == null) {
-      final category = AuthenticationErrorCategory.notAuth();
-      final error = AppError.authentication(category: category);
-      return Stream.error(error);
+      final emptyList = List<TrackModel>.empty();
+      return Stream.value(emptyList);
     }
 
     return _queryTracks(myTracksPath(userId))

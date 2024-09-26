@@ -72,10 +72,6 @@ class _FavouriteTracksWidgetState extends ConsumerState<FavouriteTracksWidget> {
 
               final isFavouriteTrack = data.favouriteTrack;
 
-              if (track == null) {
-                return SizedBox.shrink();
-              }
-
               final asset = switch (index % 3) {
                 0 => AppAssets.backgrounds.firstTypeTrail,
                 1 => AppAssets.backgrounds.secondTypeTrail,
@@ -84,7 +80,7 @@ class _FavouriteTracksWidgetState extends ConsumerState<FavouriteTracksWidget> {
               };
 
               return TrackTile(
-                track: track,
+                trackUI: data,
                 asset: asset,
                 onPressed: () => _navigateToTrackDetails(track),
                 onSharePressed: () => _shareTrack(track),

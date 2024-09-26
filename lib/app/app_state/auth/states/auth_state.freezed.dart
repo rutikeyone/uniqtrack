@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$AuthState {
   bool get firstTime => throw _privateConstructorUsedError;
+  Activity<bool> get stateChanged => throw _privateConstructorUsedError;
   AuthStatus get authStatus => throw _privateConstructorUsedError;
 
   /// Create a copy of AuthState
@@ -31,7 +32,8 @@ abstract class $AuthStateCopyWith<$Res> {
   factory $AuthStateCopyWith(AuthState value, $Res Function(AuthState) then) =
       _$AuthStateCopyWithImpl<$Res, AuthState>;
   @useResult
-  $Res call({bool firstTime, AuthStatus authStatus});
+  $Res call(
+      {bool firstTime, Activity<bool> stateChanged, AuthStatus authStatus});
 
   $AuthStatusCopyWith<$Res> get authStatus;
 }
@@ -52,6 +54,7 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
   @override
   $Res call({
     Object? firstTime = null,
+    Object? stateChanged = null,
     Object? authStatus = null,
   }) {
     return _then(_value.copyWith(
@@ -59,6 +62,10 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
           ? _value.firstTime
           : firstTime // ignore: cast_nullable_to_non_nullable
               as bool,
+      stateChanged: null == stateChanged
+          ? _value.stateChanged
+          : stateChanged // ignore: cast_nullable_to_non_nullable
+              as Activity<bool>,
       authStatus: null == authStatus
           ? _value.authStatus
           : authStatus // ignore: cast_nullable_to_non_nullable
@@ -85,7 +92,8 @@ abstract class _$$AuthStateImplCopyWith<$Res>
       __$$AuthStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool firstTime, AuthStatus authStatus});
+  $Res call(
+      {bool firstTime, Activity<bool> stateChanged, AuthStatus authStatus});
 
   @override
   $AuthStatusCopyWith<$Res> get authStatus;
@@ -105,6 +113,7 @@ class __$$AuthStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? firstTime = null,
+    Object? stateChanged = null,
     Object? authStatus = null,
   }) {
     return _then(_$AuthStateImpl(
@@ -112,6 +121,10 @@ class __$$AuthStateImplCopyWithImpl<$Res>
           ? _value.firstTime
           : firstTime // ignore: cast_nullable_to_non_nullable
               as bool,
+      stateChanged: null == stateChanged
+          ? _value.stateChanged
+          : stateChanged // ignore: cast_nullable_to_non_nullable
+              as Activity<bool>,
       authStatus: null == authStatus
           ? _value.authStatus
           : authStatus // ignore: cast_nullable_to_non_nullable
@@ -123,17 +136,22 @@ class __$$AuthStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AuthStateImpl extends _AuthState {
-  const _$AuthStateImpl({required this.firstTime, required this.authStatus})
+  const _$AuthStateImpl(
+      {required this.firstTime,
+      required this.stateChanged,
+      required this.authStatus})
       : super._();
 
   @override
   final bool firstTime;
   @override
+  final Activity<bool> stateChanged;
+  @override
   final AuthStatus authStatus;
 
   @override
   String toString() {
-    return 'AuthState(firstTime: $firstTime, authStatus: $authStatus)';
+    return 'AuthState(firstTime: $firstTime, stateChanged: $stateChanged, authStatus: $authStatus)';
   }
 
   @override
@@ -143,12 +161,15 @@ class _$AuthStateImpl extends _AuthState {
             other is _$AuthStateImpl &&
             (identical(other.firstTime, firstTime) ||
                 other.firstTime == firstTime) &&
+            (identical(other.stateChanged, stateChanged) ||
+                other.stateChanged == stateChanged) &&
             (identical(other.authStatus, authStatus) ||
                 other.authStatus == authStatus));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, firstTime, authStatus);
+  int get hashCode =>
+      Object.hash(runtimeType, firstTime, stateChanged, authStatus);
 
   /// Create a copy of AuthState
   /// with the given fields replaced by the non-null parameter values.
@@ -162,11 +183,14 @@ class _$AuthStateImpl extends _AuthState {
 abstract class _AuthState extends AuthState {
   const factory _AuthState(
       {required final bool firstTime,
+      required final Activity<bool> stateChanged,
       required final AuthStatus authStatus}) = _$AuthStateImpl;
   const _AuthState._() : super._();
 
   @override
   bool get firstTime;
+  @override
+  Activity<bool> get stateChanged;
   @override
   AuthStatus get authStatus;
 

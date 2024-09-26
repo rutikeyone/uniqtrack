@@ -11,6 +11,7 @@ class DetailsModalBottomActionsWidget extends ConsumerWidget {
   final String? id;
   final bool canDelete;
   final bool favouriteEnabled;
+  final bool canMore;
 
   final VoidCallback? onAddToFavouritesPressed;
   final VoidCallback? onRemoveFromFavouritesPressed;
@@ -27,6 +28,7 @@ class DetailsModalBottomActionsWidget extends ConsumerWidget {
     required this.onRemoveFromFavouritesPressed,
     required this.onDeletePressed,
     required this.onEditPressed,
+    required this.canMore,
     super.key,
   });
 
@@ -41,7 +43,7 @@ class DetailsModalBottomActionsWidget extends ConsumerWidget {
       padding: const EdgeInsets.only(top: AppDiments.dm12),
       child: Row(
         children: [
-          favouriteTrack != null && userCreator != null && userCreator == false
+          canMore && favouriteTrack != null && userCreator != null && userCreator == false
               ? TrackActionButton(
                   iconSize: AppDiments.dm48,
                   asset: favouriteTrack ?? false

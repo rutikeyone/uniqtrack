@@ -36,7 +36,7 @@ abstract class _DetailsStore with Store {
   final bool _canDelete;
   final bool _closeWhenRemoveFromFavourites;
 
-  final StreamUsecase<String, TrackUI> _watchTrackDetailsUseCase;
+  final StreamUsecase<String, TrackUI?> _watchTrackDetailsUseCase;
   final Usecase<(Track, Memory), Either<AppError, void>>? _removeMemoryUseCase;
 
   final AddFavouriteTrackUseCase _addToFavouriteTracksUseCase;
@@ -50,15 +50,19 @@ abstract class _DetailsStore with Store {
   bool mounted = true;
 
   @observable
-  late ObservableStream<TrackUI> trackDetailsStream = ObservableStream(
-    Rx.combineLatest3(_deleteStatus.stream, _favouriteStatus.stream,
-        _watchTrackDetailsUseCase(_id), (deleteStatus, favouriteStatus, item) {
-      return item.copyWith(
-        deleteEnabled: !deleteStatus.isInProgress,
-        favouriteEnabled: !favouriteStatus.isInProgress,
-        canDelete: _canDelete,
-      );
-    }),
+  late ObservableStream<TrackUI?> trackDetailsStream = ObservableStream(
+    Rx.combineLatest3(
+      _deleteStatus.stream,
+      _favouriteStatus.stream,
+      _watchTrackDetailsUseCase(_id),
+      (deleteStatus, favouriteStatus, item) {
+        return item?.copyWith(
+          deleteEnabled: !deleteStatus.isInProgress,
+          favouriteEnabled: !favouriteStatus.isInProgress,
+          canDelete: _canDelete,
+        );
+      },
+    ),
   ).asBroadcastStream();
 
   @observable
@@ -69,10 +73,10 @@ abstract class _DetailsStore with Store {
       (track, memory) {
         final memoryId = memory?.id;
 
-        final actualMemory = track.track?.memories?.firstWhereOrNull(
+        final actualMemory = track?.track.memories?.firstWhereOrNull(
             (item) => item.id == memoryId && item.id != null);
 
-        if (actualMemory == null) {
+        if (track == null || actualMemory == null) {
           return null;
         }
 
@@ -88,11 +92,11 @@ abstract class _DetailsStore with Store {
   late ObservableStream<DetailsMapState> detailsMapState = ObservableStream(
     trackDetailsStream.map(
       (item) {
-        final track = item.track;
-        if (track == null) {
+        if (item == null) {
           return DetailsMapState.empty();
         }
 
+        final track = item.track;
         final prev = detailsMapState.value;
 
         return DetailsMapState.data(
@@ -121,7 +125,7 @@ abstract class _DetailsStore with Store {
       memoryDetailsStream,
       trackDetailsStream,
       (initial, deleteStatus, favouriteStatus, memoryUI, track) {
-        if (initial) {
+        if (initial || track == null) {
           return DetailsSheetState.pure();
         }
 
@@ -146,10 +150,6 @@ abstract class _DetailsStore with Store {
           );
         }
 
-        if (track.track == null) {
-          return DetailsSheetState.pure();
-        }
-
         return DetailsSheetState.details(track: track);
       },
     ),
@@ -159,7 +159,7 @@ abstract class _DetailsStore with Store {
   late ObservableStream<bool> animateShowEnabled = ObservableStream(
     trackDetailsStream.map(
       (item) {
-        final positions = item.track?.positions;
+        final positions = item?.track.positions;
         return positions != null && positions.isNotEmpty;
       },
     ),
@@ -193,7 +193,7 @@ abstract class _DetailsStore with Store {
 
   _DetailsStore({
     required String? id,
-    required StreamUsecase<String, TrackUI> watchTrackDetailsUseCase,
+    required StreamUsecase<String, TrackUI?> watchTrackDetailsUseCase,
     required AddFavouriteTrackUseCase addToFavouriteTracksUseCase,
     required RemoveFavouriteTracksUseCase removeFavouriteTrackUseCase,
     required Usecase<Track, Either<AppError, void>>? removeTrackUseCase,
@@ -364,7 +364,7 @@ abstract class _DetailsStore with Store {
 
   @action
   void animateCameraByTrack() {
-    final positions = trackDetailsStream.value?.track?.positions;
+    final positions = trackDetailsStream.value?.track.positions;
     _animateCameraByPositions(positions);
   }
 

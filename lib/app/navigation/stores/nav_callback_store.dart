@@ -72,6 +72,7 @@ class ProfileNavCallbackStore with _$ProfileNavCallbackStore {
   const factory ProfileNavCallbackStore({
     required VoidCallback navigateToMyTracks,
     required VoidCallback navigateToMyFavouriteTracks,
+    required VoidCallback navigateToLogin,
   }) = _ProfileNavCallbackStore;
 }
 
