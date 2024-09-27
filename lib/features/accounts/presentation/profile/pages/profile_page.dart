@@ -9,6 +9,7 @@ import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_elevated_button.dart';
 import 'package:uniqtrack/core/presentation/widgets/app_transparent_button.dart';
+import 'package:uniqtrack/core/theme/app_circle_progress_indicator.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/features/accounts/domain/entities/entities.dart';
 import 'package:uniqtrack/generated/l10n.dart';
@@ -47,10 +48,10 @@ class ProfilePage extends ConsumerWidget {
 
             final authStatus = state.authStatus;
 
-            return authStatus.maybeWhen(
+            return authStatus.when(
               authenticated: (user) => _AuthenticatedProfileWidget(user: user),
               notAuth: () => _NotAuthenticatedProfileWidget(),
-              orElse: () => const SizedBox.shrink(),
+              pending: () => Center(child: AppCircleProgressIndicator()),
             );
           },
         ),
@@ -58,4 +59,3 @@ class ProfilePage extends ConsumerWidget {
     );
   }
 }
-

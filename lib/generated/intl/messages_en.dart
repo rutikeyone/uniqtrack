@@ -163,6 +163,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendPassword": MessageLookupByLibrary.simpleMessage("Send password"),
         "sendTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
             "Send timeout failure occurred"),
+        "shareLimitMessage": MessageLookupByLibrary.simpleMessage(
+            "Currently, link navigation is only available for the Android version of the mobile app."),
         "signOut": MessageLookupByLibrary.simpleMessage("Sign out"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign up"),
         "startRecording":

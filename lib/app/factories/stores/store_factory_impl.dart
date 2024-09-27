@@ -41,19 +41,7 @@ import 'package:uuid/uuid.dart';
 
 part 'store_factory_impl.g.dart';
 
-@Riverpod(dependencies: [
-  watchTrackDetailsUseCase,
-  watchFavouriteTrackDetailsUseCase,
-  watchMyTrackUseCase,
-  addToFavouriteTracksUseCase,
-  removeFromFavouriteTracksUseCase,
-  removeTrackUseCase,
-  removeMemoryUseCase,
-  updateTrackUseCase,
-  updateMemoryUseCase,
-  appLocationHandler,
-  trackRepository,
-])
+@Riverpod(dependencies: [watchTrackDetailsUseCase, watchFavouriteTrackDetailsUseCase, watchMyTrackUseCase, addToFavouriteTracksUseCase, removeFromFavouriteTracksUseCase, removeTrackUseCase, removeMemoryUseCase, updateTrackUseCase, updateMemoryUseCase, trackRepository])
 StoreFactory storeFactory(StoreFactoryRef ref) {
   final commonUIDelegate = ref.watch(commonUIDelegateNotifierProvider.notifier);
 

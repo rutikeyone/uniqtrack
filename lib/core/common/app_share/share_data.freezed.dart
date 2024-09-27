@@ -20,8 +20,8 @@ ShareData _$ShareDataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ShareData {
-  String? get en => throw _privateConstructorUsedError;
-  String? get ru => throw _privateConstructorUsedError;
+  List<String> get en => throw _privateConstructorUsedError;
+  List<String> get ru => throw _privateConstructorUsedError;
 
   /// Serializes this ShareData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,7 +38,7 @@ abstract class $ShareDataCopyWith<$Res> {
   factory $ShareDataCopyWith(ShareData value, $Res Function(ShareData) then) =
       _$ShareDataCopyWithImpl<$Res, ShareData>;
   @useResult
-  $Res call({String? en, String? ru});
+  $Res call({List<String> en, List<String> ru});
 }
 
 /// @nodoc
@@ -56,18 +56,18 @@ class _$ShareDataCopyWithImpl<$Res, $Val extends ShareData>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? en = freezed,
-    Object? ru = freezed,
+    Object? en = null,
+    Object? ru = null,
   }) {
     return _then(_value.copyWith(
-      en: freezed == en
+      en: null == en
           ? _value.en
           : en // ignore: cast_nullable_to_non_nullable
-              as String?,
-      ru: freezed == ru
+              as List<String>,
+      ru: null == ru
           ? _value.ru
           : ru // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<String>,
     ) as $Val);
   }
 }
@@ -80,7 +80,7 @@ abstract class _$$ShareDataImplCopyWith<$Res>
       __$$ShareDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? en, String? ru});
+  $Res call({List<String> en, List<String> ru});
 }
 
 /// @nodoc
@@ -96,18 +96,18 @@ class __$$ShareDataImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? en = freezed,
-    Object? ru = freezed,
+    Object? en = null,
+    Object? ru = null,
   }) {
     return _then(_$ShareDataImpl(
-      en: freezed == en
-          ? _value.en
+      en: null == en
+          ? _value._en
           : en // ignore: cast_nullable_to_non_nullable
-              as String?,
-      ru: freezed == ru
-          ? _value.ru
+              as List<String>,
+      ru: null == ru
+          ? _value._ru
           : ru // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as List<String>,
     ));
   }
 }
@@ -115,15 +115,29 @@ class __$$ShareDataImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ShareDataImpl implements _ShareData {
-  const _$ShareDataImpl({required this.en, required this.ru});
+  const _$ShareDataImpl(
+      {required final List<String> en, required final List<String> ru})
+      : _en = en,
+        _ru = ru;
 
   factory _$ShareDataImpl.fromJson(Map<String, dynamic> json) =>
       _$$ShareDataImplFromJson(json);
 
+  final List<String> _en;
   @override
-  final String? en;
+  List<String> get en {
+    if (_en is EqualUnmodifiableListView) return _en;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_en);
+  }
+
+  final List<String> _ru;
   @override
-  final String? ru;
+  List<String> get ru {
+    if (_ru is EqualUnmodifiableListView) return _ru;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_ru);
+  }
 
   @override
   String toString() {
@@ -135,13 +149,16 @@ class _$ShareDataImpl implements _ShareData {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ShareDataImpl &&
-            (identical(other.en, en) || other.en == en) &&
-            (identical(other.ru, ru) || other.ru == ru));
+            const DeepCollectionEquality().equals(other._en, _en) &&
+            const DeepCollectionEquality().equals(other._ru, _ru));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, en, ru);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_en),
+      const DeepCollectionEquality().hash(_ru));
 
   /// Create a copy of ShareData
   /// with the given fields replaced by the non-null parameter values.
@@ -161,15 +178,16 @@ class _$ShareDataImpl implements _ShareData {
 
 abstract class _ShareData implements ShareData {
   const factory _ShareData(
-      {required final String? en, required final String? ru}) = _$ShareDataImpl;
+      {required final List<String> en,
+      required final List<String> ru}) = _$ShareDataImpl;
 
   factory _ShareData.fromJson(Map<String, dynamic> json) =
       _$ShareDataImpl.fromJson;
 
   @override
-  String? get en;
+  List<String> get en;
   @override
-  String? get ru;
+  List<String> get ru;
 
   /// Create a copy of ShareData
   /// with the given fields replaced by the non-null parameter values.

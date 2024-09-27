@@ -8,8 +8,8 @@ part of 'share_data.dart';
 
 _$ShareDataImpl _$$ShareDataImplFromJson(Map<String, dynamic> json) =>
     _$ShareDataImpl(
-      en: json['en'] as String?,
-      ru: json['ru'] as String?,
+      en: (json['en'] as List<dynamic>).map((e) => e as String).toList(),
+      ru: (json['ru'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
 Map<String, dynamic> _$$ShareDataImplToJson(_$ShareDataImpl instance) =>

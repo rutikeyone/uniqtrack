@@ -1137,10 +1137,9 @@ class __$$UserLocationEmptyStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UserLocationEmptyStateImpl
-    with DiagnosticableTreeMixin
-    implements _UserLocationEmptyState {
-  const _$UserLocationEmptyStateImpl();
+class _$UserLocationEmptyStateImpl extends _UserLocationEmptyState
+    with DiagnosticableTreeMixin {
+  const _$UserLocationEmptyStateImpl() : super._();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -1226,8 +1225,9 @@ class _$UserLocationEmptyStateImpl
   }
 }
 
-abstract class _UserLocationEmptyState implements UserLocationState {
+abstract class _UserLocationEmptyState extends UserLocationState {
   const factory _UserLocationEmptyState() = _$UserLocationEmptyStateImpl;
+  const _UserLocationEmptyState._() : super._();
 }
 
 /// @nodoc
@@ -1278,10 +1278,10 @@ class __$$UserLocationMarkStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UserLocationMarkStateImpl
-    with DiagnosticableTreeMixin
-    implements _UserLocationMarkState {
-  const _$UserLocationMarkStateImpl({required this.currentPosition});
+class _$UserLocationMarkStateImpl extends _UserLocationMarkState
+    with DiagnosticableTreeMixin {
+  const _$UserLocationMarkStateImpl({required this.currentPosition})
+      : super._();
 
   @override
   final Position currentPosition;
@@ -1383,9 +1383,10 @@ class _$UserLocationMarkStateImpl
   }
 }
 
-abstract class _UserLocationMarkState implements UserLocationState {
+abstract class _UserLocationMarkState extends UserLocationState {
   const factory _UserLocationMarkState(
       {required final Position currentPosition}) = _$UserLocationMarkStateImpl;
+  const _UserLocationMarkState._() : super._();
 
   Position get currentPosition;
 

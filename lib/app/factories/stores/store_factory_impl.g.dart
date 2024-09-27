@@ -6,7 +6,7 @@ part of 'store_factory_impl.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$storeFactoryHash() => r'dffb6064a5c4cc3888fb6ed727af3528bf978b21';
+String _$storeFactoryHash() => r'fc035e8dab9e9773f0015bdf641fb26fdf6a5fc9';
 
 /// See also [storeFactory].
 @ProviderFor(storeFactory)
@@ -25,7 +25,6 @@ final storeFactoryProvider = AutoDisposeProvider<StoreFactory>.internal(
     removeMemoryUseCaseProvider,
     updateTrackUseCaseProvider,
     updateMemoryUseCaseProvider,
-    appLocationHandlerProvider,
     trackRepositoryProvider
   },
   allTransitiveDependencies: <ProviderOrFamily>{
@@ -47,8 +46,6 @@ final storeFactoryProvider = AutoDisposeProvider<StoreFactory>.internal(
     ...?updateTrackUseCaseProvider.allTransitiveDependencies,
     updateMemoryUseCaseProvider,
     ...?updateMemoryUseCaseProvider.allTransitiveDependencies,
-    appLocationHandlerProvider,
-    ...?appLocationHandlerProvider.allTransitiveDependencies,
     trackRepositoryProvider,
     ...?trackRepositoryProvider.allTransitiveDependencies
   },

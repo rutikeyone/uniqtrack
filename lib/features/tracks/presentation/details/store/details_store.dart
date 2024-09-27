@@ -223,7 +223,13 @@ abstract class _DetailsStore with Store {
       return;
     }
 
-    await sheetState?.maybeWhen(
+    if(sheetState == null) {
+      final navigateBackAction = DetailsActions.navigateBack();
+      actions = Activity(navigateBackAction);
+      return;
+    }
+
+    await sheetState.maybeWhen(
       pure: () {
         final navigateBackAction = DetailsActions.navigateBack();
         actions = Activity(navigateBackAction);
@@ -231,11 +237,14 @@ abstract class _DetailsStore with Store {
       orElse: () async {
         _initialDetailsSheet.add(true);
 
-        await Future.delayed(const Duration(milliseconds: 300), () {
-          if (!mounted) return;
-          final navigateBack = DetailsActions.navigateBack();
-          actions = Activity(navigateBack);
-        });
+        await Future.delayed(
+          const Duration(milliseconds: 300),
+          () {
+            if (!mounted) return;
+            final navigateBack = DetailsActions.navigateBack();
+            actions = Activity(navigateBack);
+          },
+        );
       },
     );
   }

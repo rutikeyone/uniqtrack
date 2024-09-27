@@ -3,8 +3,9 @@ import 'package:uniqtrack/app/glue/tracks/mappers/memory_mapper.dart';
 import 'package:uniqtrack/app/glue/tracks/mappers/position_mapper.dart';
 import 'package:uniqtrack/app/glue/tracks/mappers/track_mapper.dart';
 import 'package:uniqtrack/core/common/app_location_handler/app_location_handler.dart';
+import 'package:uniqtrack/core/common/app_location_handler/entities/app_location_data_settings.dart';
 import 'package:uniqtrack/core/common/app_location_handler/entities/app_location_permission_result.dart';
-import 'package:uniqtrack/core/common/app_location_handler/entities/location_settings.dart';
+import 'package:uniqtrack/core/common/app_location_handler/entities/app_location_settings.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/data/accounts/accounts_data_repository.dart';
 import 'package:uniqtrack/data/tracks/tracks_data_repository.dart';
@@ -94,10 +95,13 @@ class TrackAdapterRepository implements TrackRepository {
   }
 
   @override
-  Stream<Position> watchPositions(AppLocationSettings settings) {
-    return _appLocationHandler.listenPositions(settings).map((event) {
+  Future<(Stream<Position>, AppLocationDataSettings?)> watchPositions(AppLocationSettings settings) async {
+    final data = await _appLocationHandler.watchPositions(settings);
+    final stream = data.$1.map((event) {
       return _positionMapper.toPosition(event);
     });
+
+    return (stream, data.$2);
   }
 
   @override

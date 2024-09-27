@@ -1219,6 +1219,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Currently, link navigation is only available for the Android version of the mobile app.`
+  String get shareLimitMessage {
+    return Intl.message(
+      'Currently, link navigation is only available for the Android version of the mobile app.',
+      name: 'shareLimitMessage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -52,6 +52,8 @@ GoRouter router(RouterRef ref) {
   final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
   final hasAuthenticationUseCase = ref.watch(hasAuthenticationUseCaseProvider);
 
+  final detailsArgsConverter = ref.watch(detailsArgsConverterProvider);
+
   return GoRouter(
     navigatorKey: rootNavigatorKey,
     initialLocation: AppPaths.community.path,
@@ -80,7 +82,6 @@ GoRouter router(RouterRef ref) {
         path: "/tracks/:id",
         redirect: (context, state) {
           final id = state.pathParameters["id"]!;
-          final detailsArgsConverter = ref.watch(detailsArgsConverterProvider);
 
           final args = DetailsArgs(
             id: id,
@@ -106,8 +107,6 @@ GoRouter router(RouterRef ref) {
               GoRoute(
                 path: AppPaths.community.goRoute,
                 pageBuilder: (context, state) {
-                  final detailsArgsConverter =
-                      ref.watch(detailsArgsConverterProvider);
 
                   final addOrEditRecordTrackConverter =
                       ref.watch(addOrEditRecordTrackConverterProvider);
@@ -188,9 +187,6 @@ GoRouter router(RouterRef ref) {
                       final editMemoryPath = detailsPath.editMemoryPath;
 
                       final _storeBuilder = ref.watch(detailsStoreProvider);
-
-                      final detailsArgsConverter =
-                          ref.watch(detailsArgsConverterProvider);
 
                       final addOrEditMemoryArgsConverter =
                           ref.watch(addOrEditMemoryArgsConverterProvider);
@@ -846,14 +842,14 @@ GoRouter router(RouterRef ref) {
                 routes: [
                   GoRoute(
                     parentNavigatorKey: rootNavigatorKey,
-                    path: AppPaths.community.login.goRoute,
+                    path: AppPaths.profile.login.goRoute,
                     builder: (context, state) {
                       final storeBuilder = ref.watch(loginStoreBuilderProvider);
 
                       final converter =
                           ref.watch(forgotPasswordArgsConverterProvider);
 
-                      final loginPath = AppPaths.community.login;
+                      final loginPath = AppPaths.profile.login;
                       final registerPath = loginPath.register;
                       final forgotPasswordPath = loginPath.forgotPassword;
 
@@ -878,7 +874,7 @@ GoRouter router(RouterRef ref) {
                     routes: [
                       GoRoute(
                         parentNavigatorKey: rootNavigatorKey,
-                        path: AppPaths.community.login.register.goRoute,
+                        path: AppPaths.profile.login.register.goRoute,
                         builder: (context, state) {
                           final navCallbackStore = NavCallbackStoreBuilder
                               .createRegisterNavCallbackStore(context);
@@ -898,9 +894,9 @@ GoRouter router(RouterRef ref) {
                       ),
                       GoRoute(
                         parentNavigatorKey: rootNavigatorKey,
-                        path: AppPaths.community.login.forgotPassword.goRoute,
+                        path: AppPaths.profile.login.forgotPassword.goRoute,
                         builder: (context, state) {
-                          final path = AppPaths.community.login.forgotPassword;
+                          final path = AppPaths.profile.login.forgotPassword;
 
                           final navCallbackStore = NavCallbackStoreBuilder
                               .createForgotPasswordNavCallbackStore(
@@ -940,9 +936,6 @@ GoRouter router(RouterRef ref) {
                   GoRoute(
                     path: AppPaths.profile.myTracksPath.goRoute,
                     builder: (context, state) {
-                      final detailsArgsConverter =
-                          ref.watch(detailsArgsConverterProvider);
-
                       final editRecordTrackArgsConverter =
                           ref.watch(addOrEditRecordTrackConverterProvider);
 
@@ -1014,9 +1007,6 @@ GoRouter router(RouterRef ref) {
 
                           final addOrEditMemoryArgsConverter =
                               ref.watch(addOrEditMemoryArgsConverterProvider);
-
-                          final detailsArgsConverter =
-                              ref.watch(detailsArgsConverterProvider);
 
                           final detailsPath =
                               AppPaths.profile.myTracksPath.details;
@@ -1469,9 +1459,6 @@ GoRouter router(RouterRef ref) {
                   GoRoute(
                     path: AppPaths.profile.myFavouriteTracks.goRoute,
                     builder: (context, state) {
-                      final detailsArgsConverter =
-                          ref.watch(detailsArgsConverterProvider);
-
                       final trackDetailsPath =
                           AppPaths.profile.myFavouriteTracks.details;
 
@@ -1504,9 +1491,6 @@ GoRouter router(RouterRef ref) {
 
                           final addOrEditMemoryArgsConverter =
                               ref.watch(addOrEditMemoryArgsConverterProvider);
-
-                          final detailsArgsConverter =
-                              ref.watch(detailsArgsConverterProvider);
 
                           final detailsPath =
                               AppPaths.profile.myFavouriteTracks.details;

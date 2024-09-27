@@ -130,5 +130,6 @@
   "theMemoryHasBeenSuccessfullyDeleted": "The memory has been successfully deleted",
   "theUserIsTheCreatorOfTheTrack": "The user is the creator of the track",
   "alreadyContainsElement": "Already contains element",
-  "inOrderToViewUserInformationYouNeedToLog": "In order to view user information, you need to log in"
+  "inOrderToViewUserInformationYouNeedToLog": "In order to view user information, you need to log in",
+  "shareLimitMessage": "Currently, link navigation is only available for the Android version of the mobile app."
 }

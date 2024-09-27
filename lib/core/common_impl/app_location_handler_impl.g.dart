@@ -7,7 +7,7 @@ part of 'app_location_handler_impl.dart';
 // **************************************************************************
 
 String _$appLocationHandlerHash() =>
-    r'dd1610e4b661154a1bed0051fbb87007c4f3f1af';
+    r'38a16ff262b927a301a8deeeb3b6f917ee4fdc36';
 
 /// See also [appLocationHandler].
 @ProviderFor(appLocationHandler)
@@ -18,8 +18,8 @@ final appLocationHandlerProvider =
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : _$appLocationHandlerHash,
-  dependencies: const <ProviderOrFamily>[],
-  allTransitiveDependencies: const <ProviderOrFamily>{},
+  dependencies: null,
+  allTransitiveDependencies: null,
 );
 
 typedef AppLocationHandlerRef = AutoDisposeProviderRef<AppLocationHandler>;

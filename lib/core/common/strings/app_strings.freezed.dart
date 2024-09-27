@@ -78,6 +78,7 @@ mixin _$AppStrings {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -141,6 +142,7 @@ mixin _$AppStrings {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -204,6 +206,7 @@ mixin _$AppStrings {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -306,6 +309,7 @@ mixin _$AppStrings {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -392,6 +396,7 @@ mixin _$AppStrings {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -477,6 +482,7 @@ mixin _$AppStrings {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -604,6 +610,7 @@ class _$AppErrorStringImpl implements _AppErrorString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return error();
   }
@@ -670,6 +677,7 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return error?.call();
   }
@@ -736,6 +744,7 @@ class _$AppErrorStringImpl implements _AppErrorString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -844,6 +853,7 @@ class _$AppErrorStringImpl implements _AppErrorString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return error(this);
   }
@@ -933,6 +943,7 @@ class _$AppErrorStringImpl implements _AppErrorString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return error?.call(this);
   }
@@ -1021,6 +1032,7 @@ class _$AppErrorStringImpl implements _AppErrorString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1135,6 +1147,7 @@ class _$AppOkayStringImpl implements _AppOkayString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return okay();
   }
@@ -1201,6 +1214,7 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return okay?.call();
   }
@@ -1267,6 +1281,7 @@ class _$AppOkayStringImpl implements _AppOkayString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -1375,6 +1390,7 @@ class _$AppOkayStringImpl implements _AppOkayString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return okay(this);
   }
@@ -1464,6 +1480,7 @@ class _$AppOkayStringImpl implements _AppOkayString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return okay?.call(this);
   }
@@ -1552,6 +1569,7 @@ class _$AppOkayStringImpl implements _AppOkayString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (okay != null) {
@@ -1669,6 +1687,7 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return errorHasOccurred();
   }
@@ -1735,6 +1754,7 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return errorHasOccurred?.call();
   }
@@ -1801,6 +1821,7 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -1909,6 +1930,7 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return errorHasOccurred(this);
   }
@@ -1998,6 +2020,7 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return errorHasOccurred?.call(this);
   }
@@ -2086,6 +2109,7 @@ class _$AppErrorHasOccuredStringImpl implements _AppErrorHasOccuredString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (errorHasOccurred != null) {
@@ -2203,6 +2227,7 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return invalidEmail();
   }
@@ -2269,6 +2294,7 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return invalidEmail?.call();
   }
@@ -2335,6 +2361,7 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -2443,6 +2470,7 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return invalidEmail(this);
   }
@@ -2532,6 +2560,7 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return invalidEmail?.call(this);
   }
@@ -2620,6 +2649,7 @@ class _$$AppInvalidEmailStringImpl implements _$AppInvalidEmailString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -2738,6 +2768,7 @@ class _$$AppEmailAlreadyInUseStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return emailAlreadyInUse();
   }
@@ -2804,6 +2835,7 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -2870,6 +2902,7 @@ class _$$AppEmailAlreadyInUseStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -2978,6 +3011,7 @@ class _$$AppEmailAlreadyInUseStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return emailAlreadyInUse(this);
   }
@@ -3067,6 +3101,7 @@ class _$$AppEmailAlreadyInUseStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -3155,6 +3190,7 @@ class _$$AppEmailAlreadyInUseStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -3274,6 +3310,7 @@ class _$$AppOperationNotAllowedStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return operationNotAllowed();
   }
@@ -3340,6 +3377,7 @@ class _$$AppOperationNotAllowedStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return operationNotAllowed?.call();
   }
@@ -3406,6 +3444,7 @@ class _$$AppOperationNotAllowedStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -3514,6 +3553,7 @@ class _$$AppOperationNotAllowedStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return operationNotAllowed(this);
   }
@@ -3603,6 +3643,7 @@ class _$$AppOperationNotAllowedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return operationNotAllowed?.call(this);
   }
@@ -3691,6 +3732,7 @@ class _$$AppOperationNotAllowedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -3809,6 +3851,7 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return weakPassword();
   }
@@ -3875,6 +3918,7 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return weakPassword?.call();
   }
@@ -3941,6 +3985,7 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -4049,6 +4094,7 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return weakPassword(this);
   }
@@ -4138,6 +4184,7 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return weakPassword?.call(this);
   }
@@ -4226,6 +4273,7 @@ class _$$AppWeakPasswordStringImpl implements _$AppWeakPasswordString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -4343,6 +4391,7 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return tooManyRequests();
   }
@@ -4409,6 +4458,7 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return tooManyRequests?.call();
   }
@@ -4475,6 +4525,7 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -4583,6 +4634,7 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return tooManyRequests(this);
   }
@@ -4672,6 +4724,7 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return tooManyRequests?.call(this);
   }
@@ -4760,6 +4813,7 @@ class _$$AppTooManyRequestsStringImpl implements _$AppTooManyRequestsString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -4877,6 +4931,7 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return userTokenExpired();
   }
@@ -4943,6 +4998,7 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return userTokenExpired?.call();
   }
@@ -5009,6 +5065,7 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -5117,6 +5174,7 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return userTokenExpired(this);
   }
@@ -5206,6 +5264,7 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return userTokenExpired?.call(this);
   }
@@ -5294,6 +5353,7 @@ class _$$AppUserTokenExpiredStringImpl implements _$AppUserTokenExpiredString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (userTokenExpired != null) {
@@ -5414,6 +5474,7 @@ class _$$AppNetworkRequestsFailedStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return networkRequestFailed();
   }
@@ -5480,6 +5541,7 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return networkRequestFailed?.call();
   }
@@ -5546,6 +5608,7 @@ class _$$AppNetworkRequestsFailedStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -5654,6 +5717,7 @@ class _$$AppNetworkRequestsFailedStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return networkRequestFailed(this);
   }
@@ -5743,6 +5807,7 @@ class _$$AppNetworkRequestsFailedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return networkRequestFailed?.call(this);
   }
@@ -5831,6 +5896,7 @@ class _$$AppNetworkRequestsFailedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (networkRequestFailed != null) {
@@ -5951,6 +6017,7 @@ class _$$AppNotInternetConnectionStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return notInternetConnection();
   }
@@ -6017,6 +6084,7 @@ class _$$AppNotInternetConnectionStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return notInternetConnection?.call();
   }
@@ -6083,6 +6151,7 @@ class _$$AppNotInternetConnectionStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (notInternetConnection != null) {
@@ -6191,6 +6260,7 @@ class _$$AppNotInternetConnectionStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return notInternetConnection(this);
   }
@@ -6280,6 +6350,7 @@ class _$$AppNotInternetConnectionStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return notInternetConnection?.call(this);
   }
@@ -6368,6 +6439,7 @@ class _$$AppNotInternetConnectionStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (notInternetConnection != null) {
@@ -6486,6 +6558,7 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return connectTimeout();
   }
@@ -6552,6 +6625,7 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return connectTimeout?.call();
   }
@@ -6618,6 +6692,7 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -6726,6 +6801,7 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return connectTimeout(this);
   }
@@ -6815,6 +6891,7 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return connectTimeout?.call(this);
   }
@@ -6903,6 +6980,7 @@ class _$$AppConnectTimeoutStringImpl implements _$AppConnectTimeoutString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -7019,6 +7097,7 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return sendTimeout();
   }
@@ -7085,6 +7164,7 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return sendTimeout?.call();
   }
@@ -7151,6 +7231,7 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -7259,6 +7340,7 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return sendTimeout(this);
   }
@@ -7348,6 +7430,7 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return sendTimeout?.call(this);
   }
@@ -7436,6 +7519,7 @@ class _$$AppSendTimeoutStringImpl implements _$AppSendTimeoutString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -7553,6 +7637,7 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return receiveTimeout();
   }
@@ -7619,6 +7704,7 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return receiveTimeout?.call();
   }
@@ -7685,6 +7771,7 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -7793,6 +7880,7 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return receiveTimeout(this);
   }
@@ -7882,6 +7970,7 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return receiveTimeout?.call(this);
   }
@@ -7970,6 +8059,7 @@ class _$$AppReceiveTimeoutStringImpl implements _$AppReceiveTimeoutString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -8087,6 +8177,7 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return requestCancelled();
   }
@@ -8153,6 +8244,7 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return requestCancelled?.call();
   }
@@ -8219,6 +8311,7 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (requestCancelled != null) {
@@ -8327,6 +8420,7 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return requestCancelled(this);
   }
@@ -8416,6 +8510,7 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return requestCancelled?.call(this);
   }
@@ -8504,6 +8599,7 @@ class _$$AppRequestCancelledStringImpl implements _$AppRequestCancelledString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (requestCancelled != null) {
@@ -8622,6 +8718,7 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return badCertificate();
   }
@@ -8688,6 +8785,7 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return badCertificate?.call();
   }
@@ -8754,6 +8852,7 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (badCertificate != null) {
@@ -8862,6 +8961,7 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return badCertificate(this);
   }
@@ -8951,6 +9051,7 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return badCertificate?.call(this);
   }
@@ -9039,6 +9140,7 @@ class _$$AppBadCertificateStringImpl implements _$AppBadCertificateString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (badCertificate != null) {
@@ -9155,6 +9257,7 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return badResponse();
   }
@@ -9221,6 +9324,7 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return badResponse?.call();
   }
@@ -9287,6 +9391,7 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (badResponse != null) {
@@ -9395,6 +9500,7 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return badResponse(this);
   }
@@ -9484,6 +9590,7 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return badResponse?.call(this);
   }
@@ -9572,6 +9679,7 @@ class _$$AppBadResponseStringImpl implements _$AppBadResponseString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (badResponse != null) {
@@ -9689,6 +9797,7 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return notification();
   }
@@ -9755,6 +9864,7 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return notification?.call();
   }
@@ -9821,6 +9931,7 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (notification != null) {
@@ -9929,6 +10040,7 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return notification(this);
   }
@@ -10018,6 +10130,7 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return notification?.call(this);
   }
@@ -10106,6 +10219,7 @@ class _$$AppNotificationStringImpl implements _$AppNotificationString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (notification != null) {
@@ -10228,6 +10342,7 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return theUserHasBeenSuccessfullyRegistered();
   }
@@ -10294,6 +10409,7 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return theUserHasBeenSuccessfullyRegistered?.call();
   }
@@ -10360,6 +10476,7 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (theUserHasBeenSuccessfullyRegistered != null) {
@@ -10468,6 +10585,7 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return theUserHasBeenSuccessfullyRegistered(this);
   }
@@ -10557,6 +10675,7 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return theUserHasBeenSuccessfullyRegistered?.call(this);
   }
@@ -10645,6 +10764,7 @@ class _$$AppTheUserHasBeenSuccessfullyRegisteredStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (theUserHasBeenSuccessfullyRegistered != null) {
@@ -10764,6 +10884,7 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return userDisabled();
   }
@@ -10830,6 +10951,7 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return userDisabled?.call();
   }
@@ -10896,6 +11018,7 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -11004,6 +11127,7 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return userDisabled(this);
   }
@@ -11093,6 +11217,7 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return userDisabled?.call(this);
   }
@@ -11181,6 +11306,7 @@ class _$$AppUserDisabledStringImpl implements _$AppUserDisabledString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (userDisabled != null) {
@@ -11298,6 +11424,7 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return userNotFound();
   }
@@ -11364,6 +11491,7 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return userNotFound?.call();
   }
@@ -11430,6 +11558,7 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -11538,6 +11667,7 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return userNotFound(this);
   }
@@ -11627,6 +11757,7 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return userNotFound?.call(this);
   }
@@ -11715,6 +11846,7 @@ class _$$AppUserNotFoundStringImpl implements _$AppUserNotFoundString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -11832,6 +11964,7 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return wrongPassword();
   }
@@ -11898,6 +12031,7 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return wrongPassword?.call();
   }
@@ -11964,6 +12098,7 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -12072,6 +12207,7 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return wrongPassword(this);
   }
@@ -12161,6 +12297,7 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return wrongPassword?.call(this);
   }
@@ -12249,6 +12386,7 @@ class _$$AppWrongPasswordStringImpl implements _$AppWrongPasswordString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (wrongPassword != null) {
@@ -12367,6 +12505,7 @@ class _$$AppInvalidCredentialStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return invalidCredential();
   }
@@ -12433,6 +12572,7 @@ class _$$AppInvalidCredentialStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return invalidCredential?.call();
   }
@@ -12499,6 +12639,7 @@ class _$$AppInvalidCredentialStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -12607,6 +12748,7 @@ class _$$AppInvalidCredentialStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return invalidCredential(this);
   }
@@ -12696,6 +12838,7 @@ class _$$AppInvalidCredentialStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return invalidCredential?.call(this);
   }
@@ -12784,6 +12927,7 @@ class _$$AppInvalidCredentialStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (invalidCredential != null) {
@@ -12904,6 +13048,7 @@ class _$$AppUnathorizedContinueUriStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return unauthorizedContinueUri();
   }
@@ -12970,6 +13115,7 @@ class _$$AppUnathorizedContinueUriStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return unauthorizedContinueUri?.call();
   }
@@ -13036,6 +13182,7 @@ class _$$AppUnathorizedContinueUriStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (unauthorizedContinueUri != null) {
@@ -13144,6 +13291,7 @@ class _$$AppUnathorizedContinueUriStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return unauthorizedContinueUri(this);
   }
@@ -13233,6 +13381,7 @@ class _$$AppUnathorizedContinueUriStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return unauthorizedContinueUri?.call(this);
   }
@@ -13321,6 +13470,7 @@ class _$$AppUnathorizedContinueUriStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (unauthorizedContinueUri != null) {
@@ -13440,6 +13590,7 @@ class _$$AppInvalidContinueUriStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return invalidContinueUri();
   }
@@ -13506,6 +13657,7 @@ class _$$AppInvalidContinueUriStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return invalidContinueUri?.call();
   }
@@ -13572,6 +13724,7 @@ class _$$AppInvalidContinueUriStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (invalidContinueUri != null) {
@@ -13680,6 +13833,7 @@ class _$$AppInvalidContinueUriStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return invalidContinueUri(this);
   }
@@ -13769,6 +13923,7 @@ class _$$AppInvalidContinueUriStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return invalidContinueUri?.call(this);
   }
@@ -13857,6 +14012,7 @@ class _$$AppInvalidContinueUriStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (invalidContinueUri != null) {
@@ -13976,6 +14132,7 @@ class _$$AppMissingIOSBundleIdStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return missingIOSBundleId();
   }
@@ -14042,6 +14199,7 @@ class _$$AppMissingIOSBundleIdStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return missingIOSBundleId?.call();
   }
@@ -14108,6 +14266,7 @@ class _$$AppMissingIOSBundleIdStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (missingIOSBundleId != null) {
@@ -14216,6 +14375,7 @@ class _$$AppMissingIOSBundleIdStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return missingIOSBundleId(this);
   }
@@ -14305,6 +14465,7 @@ class _$$AppMissingIOSBundleIdStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return missingIOSBundleId?.call(this);
   }
@@ -14393,6 +14554,7 @@ class _$$AppMissingIOSBundleIdStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (missingIOSBundleId != null) {
@@ -14512,6 +14674,7 @@ class _$$AppMissingContinueUriStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return missingContinueUri();
   }
@@ -14578,6 +14741,7 @@ class _$$AppMissingContinueUriStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return missingContinueUri?.call();
   }
@@ -14644,6 +14808,7 @@ class _$$AppMissingContinueUriStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (missingContinueUri != null) {
@@ -14752,6 +14917,7 @@ class _$$AppMissingContinueUriStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return missingContinueUri(this);
   }
@@ -14841,6 +15007,7 @@ class _$$AppMissingContinueUriStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return missingContinueUri?.call(this);
   }
@@ -14929,6 +15096,7 @@ class _$$AppMissingContinueUriStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (missingContinueUri != null) {
@@ -15049,6 +15217,7 @@ class _$$AppMissingAndroidPkgNameStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return missingAndroidPkgName();
   }
@@ -15115,6 +15284,7 @@ class _$$AppMissingAndroidPkgNameStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return missingAndroidPkgName?.call();
   }
@@ -15181,6 +15351,7 @@ class _$$AppMissingAndroidPkgNameStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (missingAndroidPkgName != null) {
@@ -15289,6 +15460,7 @@ class _$$AppMissingAndroidPkgNameStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return missingAndroidPkgName(this);
   }
@@ -15378,6 +15550,7 @@ class _$$AppMissingAndroidPkgNameStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return missingAndroidPkgName?.call(this);
   }
@@ -15466,6 +15639,7 @@ class _$$AppMissingAndroidPkgNameStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (missingAndroidPkgName != null) {
@@ -15596,6 +15770,7 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress();
   }
@@ -15662,6 +15837,7 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress?.call();
   }
@@ -15728,6 +15904,7 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (thePasswordHasBeenSentToTheSpecifiedEmailAddress != null) {
@@ -15836,6 +16013,7 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress(this);
   }
@@ -15925,6 +16103,7 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return thePasswordHasBeenSentToTheSpecifiedEmailAddress?.call(this);
   }
@@ -16013,6 +16192,7 @@ class _$$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (thePasswordHasBeenSentToTheSpecifiedEmailAddress != null) {
@@ -16134,6 +16314,7 @@ class _$$AppNoPermissionToPerformStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return noPermissionToPerform();
   }
@@ -16200,6 +16381,7 @@ class _$$AppNoPermissionToPerformStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return noPermissionToPerform?.call();
   }
@@ -16266,6 +16448,7 @@ class _$$AppNoPermissionToPerformStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (noPermissionToPerform != null) {
@@ -16374,6 +16557,7 @@ class _$$AppNoPermissionToPerformStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return noPermissionToPerform(this);
   }
@@ -16463,6 +16647,7 @@ class _$$AppNoPermissionToPerformStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return noPermissionToPerform?.call(this);
   }
@@ -16551,6 +16736,7 @@ class _$$AppNoPermissionToPerformStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (noPermissionToPerform != null) {
@@ -16666,6 +16852,7 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return prohibit();
   }
@@ -16732,6 +16919,7 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return prohibit?.call();
   }
@@ -16798,6 +16986,7 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (prohibit != null) {
@@ -16906,6 +17095,7 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return prohibit(this);
   }
@@ -16995,6 +17185,7 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return prohibit?.call(this);
   }
@@ -17083,6 +17274,7 @@ class _$$AppProhibitStringImpl implements _$AppProhibitString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (prohibit != null) {
@@ -17197,6 +17389,7 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return allow();
   }
@@ -17263,6 +17456,7 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return allow?.call();
   }
@@ -17329,6 +17523,7 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (allow != null) {
@@ -17437,6 +17632,7 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return allow(this);
   }
@@ -17526,6 +17722,7 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return allow?.call(this);
   }
@@ -17614,6 +17811,7 @@ class _$$AppAllowStringImpl implements _$AppAllowString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (allow != null) {
@@ -17731,6 +17929,7 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return serviceDenied();
   }
@@ -17797,6 +17996,7 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return serviceDenied?.call();
   }
@@ -17863,6 +18063,7 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (serviceDenied != null) {
@@ -17971,6 +18172,7 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return serviceDenied(this);
   }
@@ -18060,6 +18262,7 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return serviceDenied?.call(this);
   }
@@ -18148,6 +18351,7 @@ class _$$AppServiceDeniedStringImpl implements _$AppServiceDeniedString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (serviceDenied != null) {
@@ -18270,6 +18474,7 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return noPermissionDetermineUserLocation();
   }
@@ -18336,6 +18541,7 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return noPermissionDetermineUserLocation?.call();
   }
@@ -18402,6 +18608,7 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (noPermissionDetermineUserLocation != null) {
@@ -18510,6 +18717,7 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return noPermissionDetermineUserLocation(this);
   }
@@ -18599,6 +18807,7 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return noPermissionDetermineUserLocation?.call(this);
   }
@@ -18687,6 +18896,7 @@ class _$$AppNoPermissionDeterminateUserLocationStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (noPermissionDetermineUserLocation != null) {
@@ -18807,6 +19017,7 @@ class _$$AppCantStartRecordingStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return cantStartRecording();
   }
@@ -18873,6 +19084,7 @@ class _$$AppCantStartRecordingStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return cantStartRecording?.call();
   }
@@ -18939,6 +19151,7 @@ class _$$AppCantStartRecordingStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (cantStartRecording != null) {
@@ -19047,6 +19260,7 @@ class _$$AppCantStartRecordingStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return cantStartRecording(this);
   }
@@ -19136,6 +19350,7 @@ class _$$AppCantStartRecordingStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return cantStartRecording?.call(this);
   }
@@ -19224,6 +19439,7 @@ class _$$AppCantStartRecordingStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (cantStartRecording != null) {
@@ -19347,6 +19563,7 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return cantGetYourCurrentLocation();
   }
@@ -19413,6 +19630,7 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return cantGetYourCurrentLocation?.call();
   }
@@ -19479,6 +19697,7 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (cantGetYourCurrentLocation != null) {
@@ -19587,6 +19806,7 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return cantGetYourCurrentLocation(this);
   }
@@ -19676,6 +19896,7 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return cantGetYourCurrentLocation?.call(this);
   }
@@ -19764,6 +19985,7 @@ class _$$AppStringsCantGetYourCurrentLocationStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (cantGetYourCurrentLocation != null) {
@@ -19885,6 +20107,7 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return trackingRecordNotificationTitle();
   }
@@ -19951,6 +20174,7 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return trackingRecordNotificationTitle?.call();
   }
@@ -20017,6 +20241,7 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationTitle != null) {
@@ -20125,6 +20350,7 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return trackingRecordNotificationTitle(this);
   }
@@ -20214,6 +20440,7 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return trackingRecordNotificationTitle?.call(this);
   }
@@ -20302,6 +20529,7 @@ class _$$AppTrackingRecordNotificationTitleStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationTitle != null) {
@@ -20423,6 +20651,7 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return trackingRecordNotificationBody();
   }
@@ -20489,6 +20718,7 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return trackingRecordNotificationBody?.call();
   }
@@ -20555,6 +20785,7 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationBody != null) {
@@ -20663,6 +20894,7 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return trackingRecordNotificationBody(this);
   }
@@ -20752,6 +20984,7 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return trackingRecordNotificationBody?.call(this);
   }
@@ -20840,6 +21073,7 @@ class _$$AppTrackingRecordNotificationBodyStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (trackingRecordNotificationBody != null) {
@@ -20969,6 +21203,7 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion();
   }
@@ -21035,6 +21270,7 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion?.call();
   }
@@ -21101,6 +21337,7 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (doYouWantToFinishRecordingTheTrackQuestion != null) {
@@ -21209,6 +21446,7 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion(this);
   }
@@ -21298,6 +21536,7 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return doYouWantToFinishRecordingTheTrackQuestion?.call(this);
   }
@@ -21386,6 +21625,7 @@ class _$$AppDoYouWantToFinishRecordingTheTrackQuestionStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (doYouWantToFinishRecordingTheTrackQuestion != null) {
@@ -21502,6 +21742,7 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return attention();
   }
@@ -21568,6 +21809,7 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return attention?.call();
   }
@@ -21634,6 +21876,7 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (attention != null) {
@@ -21742,6 +21985,7 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return attention(this);
   }
@@ -21831,6 +22075,7 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return attention?.call(this);
   }
@@ -21919,6 +22164,7 @@ class _$AppAttentionStringImpl implements _AppAttentionString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (attention != null) {
@@ -22033,6 +22279,7 @@ class _$AppSaveStringImpl implements _AppSaveString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return save();
   }
@@ -22099,6 +22346,7 @@ class _$AppSaveStringImpl implements _AppSaveString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return save?.call();
   }
@@ -22165,6 +22413,7 @@ class _$AppSaveStringImpl implements _AppSaveString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (save != null) {
@@ -22273,6 +22522,7 @@ class _$AppSaveStringImpl implements _AppSaveString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return save(this);
   }
@@ -22362,6 +22612,7 @@ class _$AppSaveStringImpl implements _AppSaveString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return save?.call(this);
   }
@@ -22450,6 +22701,7 @@ class _$AppSaveStringImpl implements _AppSaveString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (save != null) {
@@ -22564,6 +22816,7 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return delete();
   }
@@ -22630,6 +22883,7 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return delete?.call();
   }
@@ -22696,6 +22950,7 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -22804,6 +23059,7 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return delete(this);
   }
@@ -22893,6 +23149,7 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return delete?.call(this);
   }
@@ -22981,6 +23238,7 @@ class _$AppDeleteStringImpl implements _AppDeleteString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -23098,6 +23356,7 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return deleteAndExit();
   }
@@ -23164,6 +23423,7 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return deleteAndExit?.call();
   }
@@ -23230,6 +23490,7 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (deleteAndExit != null) {
@@ -23338,6 +23599,7 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return deleteAndExit(this);
   }
@@ -23427,6 +23689,7 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return deleteAndExit?.call(this);
   }
@@ -23515,6 +23778,7 @@ class _$AppDeleteAndExitStringImpl implements _AppDeleteAndExitString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (deleteAndExit != null) {
@@ -23630,6 +23894,7 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return toContinue();
   }
@@ -23696,6 +23961,7 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return toContinue?.call();
   }
@@ -23762,6 +24028,7 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (toContinue != null) {
@@ -23870,6 +24137,7 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return toContinue(this);
   }
@@ -23959,6 +24227,7 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return toContinue?.call(this);
   }
@@ -24047,6 +24316,7 @@ class _$$AppToContinueStringImpl implements _$AppToContinueString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (toContinue != null) {
@@ -24165,6 +24435,7 @@ class _$$AppUserNotAuthorizedStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return userIsUnauthorized();
   }
@@ -24231,6 +24502,7 @@ class _$$AppUserNotAuthorizedStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return userIsUnauthorized?.call();
   }
@@ -24297,6 +24569,7 @@ class _$$AppUserNotAuthorizedStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (userIsUnauthorized != null) {
@@ -24405,6 +24678,7 @@ class _$$AppUserNotAuthorizedStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return userIsUnauthorized(this);
   }
@@ -24494,6 +24768,7 @@ class _$$AppUserNotAuthorizedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return userIsUnauthorized?.call(this);
   }
@@ -24582,6 +24857,7 @@ class _$$AppUserNotAuthorizedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (userIsUnauthorized != null) {
@@ -24702,6 +24978,7 @@ class _$$AppEntryWasSuccessfullyAddedStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return entryWasSuccessfullyAdded();
   }
@@ -24768,6 +25045,7 @@ class _$$AppEntryWasSuccessfullyAddedStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return entryWasSuccessfullyAdded?.call();
   }
@@ -24834,6 +25112,7 @@ class _$$AppEntryWasSuccessfullyAddedStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (entryWasSuccessfullyAdded != null) {
@@ -24942,6 +25221,7 @@ class _$$AppEntryWasSuccessfullyAddedStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return entryWasSuccessfullyAdded(this);
   }
@@ -25031,6 +25311,7 @@ class _$$AppEntryWasSuccessfullyAddedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return entryWasSuccessfullyAdded?.call(this);
   }
@@ -25119,6 +25400,7 @@ class _$$AppEntryWasSuccessfullyAddedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (entryWasSuccessfullyAdded != null) {
@@ -25239,6 +25521,7 @@ class _$$AlreadyAddedToFavouritesStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return alreadyAddedToFavourites();
   }
@@ -25305,6 +25588,7 @@ class _$$AlreadyAddedToFavouritesStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return alreadyAddedToFavourites?.call();
   }
@@ -25371,6 +25655,7 @@ class _$$AlreadyAddedToFavouritesStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (alreadyAddedToFavourites != null) {
@@ -25479,6 +25764,7 @@ class _$$AlreadyAddedToFavouritesStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return alreadyAddedToFavourites(this);
   }
@@ -25568,6 +25854,7 @@ class _$$AlreadyAddedToFavouritesStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return alreadyAddedToFavourites?.call(this);
   }
@@ -25656,6 +25943,7 @@ class _$$AlreadyAddedToFavouritesStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (alreadyAddedToFavourites != null) {
@@ -25771,6 +26059,7 @@ class _$NoIDStringImpl implements _NoIDString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return noID();
   }
@@ -25837,6 +26126,7 @@ class _$NoIDStringImpl implements _NoIDString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return noID?.call();
   }
@@ -25903,6 +26193,7 @@ class _$NoIDStringImpl implements _NoIDString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (noID != null) {
@@ -26011,6 +26302,7 @@ class _$NoIDStringImpl implements _NoIDString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return noID(this);
   }
@@ -26100,6 +26392,7 @@ class _$NoIDStringImpl implements _NoIDString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return noID?.call(this);
   }
@@ -26188,6 +26481,7 @@ class _$NoIDStringImpl implements _NoIDString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (noID != null) {
@@ -26306,6 +26600,7 @@ class _$TrackAddedSuccessfullyStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return trackAddedSuccessfully();
   }
@@ -26372,6 +26667,7 @@ class _$TrackAddedSuccessfullyStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return trackAddedSuccessfully?.call();
   }
@@ -26438,6 +26734,7 @@ class _$TrackAddedSuccessfullyStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (trackAddedSuccessfully != null) {
@@ -26546,6 +26843,7 @@ class _$TrackAddedSuccessfullyStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return trackAddedSuccessfully(this);
   }
@@ -26635,6 +26933,7 @@ class _$TrackAddedSuccessfullyStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return trackAddedSuccessfully?.call(this);
   }
@@ -26723,6 +27022,7 @@ class _$TrackAddedSuccessfullyStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (trackAddedSuccessfully != null) {
@@ -26841,6 +27141,7 @@ class _$NotAddedToFavouritesStringImpl implements _NotAddedToFavouritesString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return notAddedToFavorites();
   }
@@ -26907,6 +27208,7 @@ class _$NotAddedToFavouritesStringImpl implements _NotAddedToFavouritesString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return notAddedToFavorites?.call();
   }
@@ -26973,6 +27275,7 @@ class _$NotAddedToFavouritesStringImpl implements _NotAddedToFavouritesString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (notAddedToFavorites != null) {
@@ -27081,6 +27384,7 @@ class _$NotAddedToFavouritesStringImpl implements _NotAddedToFavouritesString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return notAddedToFavorites(this);
   }
@@ -27170,6 +27474,7 @@ class _$NotAddedToFavouritesStringImpl implements _NotAddedToFavouritesString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return notAddedToFavorites?.call(this);
   }
@@ -27258,6 +27563,7 @@ class _$NotAddedToFavouritesStringImpl implements _NotAddedToFavouritesString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (notAddedToFavorites != null) {
@@ -27378,6 +27684,7 @@ class _$TrackWasSuccessfullyDeletedStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return trackWasSuccessfullyDeleted();
   }
@@ -27444,6 +27751,7 @@ class _$TrackWasSuccessfullyDeletedStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return trackWasSuccessfullyDeleted?.call();
   }
@@ -27510,6 +27818,7 @@ class _$TrackWasSuccessfullyDeletedStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (trackWasSuccessfullyDeleted != null) {
@@ -27618,6 +27927,7 @@ class _$TrackWasSuccessfullyDeletedStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return trackWasSuccessfullyDeleted(this);
   }
@@ -27707,6 +28017,7 @@ class _$TrackWasSuccessfullyDeletedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return trackWasSuccessfullyDeleted?.call(this);
   }
@@ -27795,6 +28106,7 @@ class _$TrackWasSuccessfullyDeletedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (trackWasSuccessfullyDeleted != null) {
@@ -27913,6 +28225,7 @@ class _$NotAddedToUserTracksStringImpl implements _NotAddedToUserTracksString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return notAddedToUserTracks();
   }
@@ -27979,6 +28292,7 @@ class _$NotAddedToUserTracksStringImpl implements _NotAddedToUserTracksString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return notAddedToUserTracks?.call();
   }
@@ -28045,6 +28359,7 @@ class _$NotAddedToUserTracksStringImpl implements _NotAddedToUserTracksString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (notAddedToUserTracks != null) {
@@ -28153,6 +28468,7 @@ class _$NotAddedToUserTracksStringImpl implements _NotAddedToUserTracksString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return notAddedToUserTracks(this);
   }
@@ -28242,6 +28558,7 @@ class _$NotAddedToUserTracksStringImpl implements _NotAddedToUserTracksString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return notAddedToUserTracks?.call(this);
   }
@@ -28330,6 +28647,7 @@ class _$NotAddedToUserTracksStringImpl implements _NotAddedToUserTracksString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (notAddedToUserTracks != null) {
@@ -28446,6 +28764,7 @@ class _$NoRemoveRightsStringImpl implements _NoRemoveRightsString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return noRemoveRights();
   }
@@ -28512,6 +28831,7 @@ class _$NoRemoveRightsStringImpl implements _NoRemoveRightsString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return noRemoveRights?.call();
   }
@@ -28578,6 +28898,7 @@ class _$NoRemoveRightsStringImpl implements _NoRemoveRightsString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (noRemoveRights != null) {
@@ -28686,6 +29007,7 @@ class _$NoRemoveRightsStringImpl implements _NoRemoveRightsString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return noRemoveRights(this);
   }
@@ -28775,6 +29097,7 @@ class _$NoRemoveRightsStringImpl implements _NoRemoveRightsString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return noRemoveRights?.call(this);
   }
@@ -28863,6 +29186,7 @@ class _$NoRemoveRightsStringImpl implements _NoRemoveRightsString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (noRemoveRights != null) {
@@ -28980,6 +29304,7 @@ class _$NoContainsElementStringImpl implements _NoContainsElementString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return notContainsElement();
   }
@@ -29046,6 +29371,7 @@ class _$NoContainsElementStringImpl implements _NoContainsElementString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return notContainsElement?.call();
   }
@@ -29112,6 +29438,7 @@ class _$NoContainsElementStringImpl implements _NoContainsElementString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (notContainsElement != null) {
@@ -29220,6 +29547,7 @@ class _$NoContainsElementStringImpl implements _NoContainsElementString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return notContainsElement(this);
   }
@@ -29309,6 +29637,7 @@ class _$NoContainsElementStringImpl implements _NoContainsElementString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return notContainsElement?.call(this);
   }
@@ -29397,6 +29726,7 @@ class _$NoContainsElementStringImpl implements _NoContainsElementString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (notContainsElement != null) {
@@ -29512,6 +29842,7 @@ class _$NoUpdateRightsStringImpl implements _NoUpdateRightsString {
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return noUpdateRights();
   }
@@ -29578,6 +29909,7 @@ class _$NoUpdateRightsStringImpl implements _NoUpdateRightsString {
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return noUpdateRights?.call();
   }
@@ -29644,6 +29976,7 @@ class _$NoUpdateRightsStringImpl implements _NoUpdateRightsString {
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (noUpdateRights != null) {
@@ -29752,6 +30085,7 @@ class _$NoUpdateRightsStringImpl implements _NoUpdateRightsString {
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return noUpdateRights(this);
   }
@@ -29841,6 +30175,7 @@ class _$NoUpdateRightsStringImpl implements _NoUpdateRightsString {
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return noUpdateRights?.call(this);
   }
@@ -29929,6 +30264,7 @@ class _$NoUpdateRightsStringImpl implements _NoUpdateRightsString {
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (noUpdateRights != null) {
@@ -30048,6 +30384,7 @@ class _$DataHasBeenSuccessfullyUpdatedStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return dataHasBeenSuccessfullyUpdated();
   }
@@ -30114,6 +30451,7 @@ class _$DataHasBeenSuccessfullyUpdatedStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return dataHasBeenSuccessfullyUpdated?.call();
   }
@@ -30180,6 +30518,7 @@ class _$DataHasBeenSuccessfullyUpdatedStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (dataHasBeenSuccessfullyUpdated != null) {
@@ -30288,6 +30627,7 @@ class _$DataHasBeenSuccessfullyUpdatedStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return dataHasBeenSuccessfullyUpdated(this);
   }
@@ -30377,6 +30717,7 @@ class _$DataHasBeenSuccessfullyUpdatedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return dataHasBeenSuccessfullyUpdated?.call(this);
   }
@@ -30465,6 +30806,7 @@ class _$DataHasBeenSuccessfullyUpdatedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (dataHasBeenSuccessfullyUpdated != null) {
@@ -30585,6 +30927,7 @@ class _$MemoryHasBeenSuccessfullyDeletedStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return memoryHasBeenSuccessfullyDeleted();
   }
@@ -30651,6 +30994,7 @@ class _$MemoryHasBeenSuccessfullyDeletedStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return memoryHasBeenSuccessfullyDeleted?.call();
   }
@@ -30717,6 +31061,7 @@ class _$MemoryHasBeenSuccessfullyDeletedStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (memoryHasBeenSuccessfullyDeleted != null) {
@@ -30825,6 +31170,7 @@ class _$MemoryHasBeenSuccessfullyDeletedStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return memoryHasBeenSuccessfullyDeleted(this);
   }
@@ -30914,6 +31260,7 @@ class _$MemoryHasBeenSuccessfullyDeletedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return memoryHasBeenSuccessfullyDeleted?.call(this);
   }
@@ -31002,6 +31349,7 @@ class _$MemoryHasBeenSuccessfullyDeletedStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (memoryHasBeenSuccessfullyDeleted != null) {
@@ -31121,6 +31469,7 @@ class _$UserIsCreatorOfTheTrackStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return userIsTheCreatorOfTheTrack();
   }
@@ -31187,6 +31536,7 @@ class _$UserIsCreatorOfTheTrackStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return userIsTheCreatorOfTheTrack?.call();
   }
@@ -31253,6 +31603,7 @@ class _$UserIsCreatorOfTheTrackStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (userIsTheCreatorOfTheTrack != null) {
@@ -31361,6 +31712,7 @@ class _$UserIsCreatorOfTheTrackStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return userIsTheCreatorOfTheTrack(this);
   }
@@ -31450,6 +31802,7 @@ class _$UserIsCreatorOfTheTrackStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return userIsTheCreatorOfTheTrack?.call(this);
   }
@@ -31538,6 +31891,7 @@ class _$UserIsCreatorOfTheTrackStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (userIsTheCreatorOfTheTrack != null) {
@@ -31657,6 +32011,7 @@ class _$AlreadyContainsElementStringImpl
     required TResult Function() memoryHasBeenSuccessfullyDeleted,
     required TResult Function() userIsTheCreatorOfTheTrack,
     required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
   }) {
     return alreadyContainsElement();
   }
@@ -31723,6 +32078,7 @@ class _$AlreadyContainsElementStringImpl
     TResult? Function()? memoryHasBeenSuccessfullyDeleted,
     TResult? Function()? userIsTheCreatorOfTheTrack,
     TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
   }) {
     return alreadyContainsElement?.call();
   }
@@ -31789,6 +32145,7 @@ class _$AlreadyContainsElementStringImpl
     TResult Function()? memoryHasBeenSuccessfullyDeleted,
     TResult Function()? userIsTheCreatorOfTheTrack,
     TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (alreadyContainsElement != null) {
@@ -31897,6 +32254,7 @@ class _$AlreadyContainsElementStringImpl
         userIsTheCreatorOfTheTrack,
     required TResult Function(_AlreadyContainsElementString value)
         alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
   }) {
     return alreadyContainsElement(this);
   }
@@ -31986,6 +32344,7 @@ class _$AlreadyContainsElementStringImpl
         userIsTheCreatorOfTheTrack,
     TResult? Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
   }) {
     return alreadyContainsElement?.call(this);
   }
@@ -32074,6 +32433,7 @@ class _$AlreadyContainsElementStringImpl
         userIsTheCreatorOfTheTrack,
     TResult Function(_AlreadyContainsElementString value)?
         alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
     required TResult orElse(),
   }) {
     if (alreadyContainsElement != null) {
@@ -32086,4 +32446,541 @@ class _$AlreadyContainsElementStringImpl
 abstract class _AlreadyContainsElementString implements AppStrings {
   const factory _AlreadyContainsElementString() =
       _$AlreadyContainsElementStringImpl;
+}
+
+/// @nodoc
+abstract class _$$ShareLimitMessageImplCopyWith<$Res> {
+  factory _$$ShareLimitMessageImplCopyWith(_$ShareLimitMessageImpl value,
+          $Res Function(_$ShareLimitMessageImpl) then) =
+      __$$ShareLimitMessageImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ShareLimitMessageImplCopyWithImpl<$Res>
+    extends _$AppStringsCopyWithImpl<$Res, _$ShareLimitMessageImpl>
+    implements _$$ShareLimitMessageImplCopyWith<$Res> {
+  __$$ShareLimitMessageImplCopyWithImpl(_$ShareLimitMessageImpl _value,
+      $Res Function(_$ShareLimitMessageImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppStrings
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ShareLimitMessageImpl implements _ShareLimitMessage {
+  const _$ShareLimitMessageImpl();
+
+  @override
+  String toString() {
+    return 'AppStrings.shareLimitMessage()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ShareLimitMessageImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() error,
+    required TResult Function() okay,
+    required TResult Function() errorHasOccurred,
+    required TResult Function() invalidEmail,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() weakPassword,
+    required TResult Function() tooManyRequests,
+    required TResult Function() userTokenExpired,
+    required TResult Function() networkRequestFailed,
+    required TResult Function() notInternetConnection,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() requestCancelled,
+    required TResult Function() badCertificate,
+    required TResult Function() badResponse,
+    required TResult Function() notification,
+    required TResult Function() theUserHasBeenSuccessfullyRegistered,
+    required TResult Function() userDisabled,
+    required TResult Function() userNotFound,
+    required TResult Function() wrongPassword,
+    required TResult Function() invalidCredential,
+    required TResult Function() unauthorizedContinueUri,
+    required TResult Function() invalidContinueUri,
+    required TResult Function() missingIOSBundleId,
+    required TResult Function() missingContinueUri,
+    required TResult Function() missingAndroidPkgName,
+    required TResult Function()
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function() noPermissionToPerform,
+    required TResult Function() prohibit,
+    required TResult Function() allow,
+    required TResult Function() serviceDenied,
+    required TResult Function() noPermissionDetermineUserLocation,
+    required TResult Function() cantStartRecording,
+    required TResult Function() cantGetYourCurrentLocation,
+    required TResult Function() trackingRecordNotificationTitle,
+    required TResult Function() trackingRecordNotificationBody,
+    required TResult Function() doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function() attention,
+    required TResult Function() save,
+    required TResult Function() delete,
+    required TResult Function() deleteAndExit,
+    required TResult Function() toContinue,
+    required TResult Function() userIsUnauthorized,
+    required TResult Function() entryWasSuccessfullyAdded,
+    required TResult Function() alreadyAddedToFavourites,
+    required TResult Function() noID,
+    required TResult Function() trackAddedSuccessfully,
+    required TResult Function() notAddedToFavorites,
+    required TResult Function() trackWasSuccessfullyDeleted,
+    required TResult Function() notAddedToUserTracks,
+    required TResult Function() noRemoveRights,
+    required TResult Function() notContainsElement,
+    required TResult Function() noUpdateRights,
+    required TResult Function() dataHasBeenSuccessfullyUpdated,
+    required TResult Function() memoryHasBeenSuccessfullyDeleted,
+    required TResult Function() userIsTheCreatorOfTheTrack,
+    required TResult Function() alreadyContainsElement,
+    required TResult Function() shareLimitMessage,
+  }) {
+    return shareLimitMessage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? error,
+    TResult? Function()? okay,
+    TResult? Function()? errorHasOccurred,
+    TResult? Function()? invalidEmail,
+    TResult? Function()? emailAlreadyInUse,
+    TResult? Function()? operationNotAllowed,
+    TResult? Function()? weakPassword,
+    TResult? Function()? tooManyRequests,
+    TResult? Function()? userTokenExpired,
+    TResult? Function()? networkRequestFailed,
+    TResult? Function()? notInternetConnection,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? requestCancelled,
+    TResult? Function()? badCertificate,
+    TResult? Function()? badResponse,
+    TResult? Function()? notification,
+    TResult? Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult? Function()? userDisabled,
+    TResult? Function()? userNotFound,
+    TResult? Function()? wrongPassword,
+    TResult? Function()? invalidCredential,
+    TResult? Function()? unauthorizedContinueUri,
+    TResult? Function()? invalidContinueUri,
+    TResult? Function()? missingIOSBundleId,
+    TResult? Function()? missingContinueUri,
+    TResult? Function()? missingAndroidPkgName,
+    TResult? Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function()? noPermissionToPerform,
+    TResult? Function()? prohibit,
+    TResult? Function()? allow,
+    TResult? Function()? serviceDenied,
+    TResult? Function()? noPermissionDetermineUserLocation,
+    TResult? Function()? cantStartRecording,
+    TResult? Function()? cantGetYourCurrentLocation,
+    TResult? Function()? trackingRecordNotificationTitle,
+    TResult? Function()? trackingRecordNotificationBody,
+    TResult? Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function()? attention,
+    TResult? Function()? save,
+    TResult? Function()? delete,
+    TResult? Function()? deleteAndExit,
+    TResult? Function()? toContinue,
+    TResult? Function()? userIsUnauthorized,
+    TResult? Function()? entryWasSuccessfullyAdded,
+    TResult? Function()? alreadyAddedToFavourites,
+    TResult? Function()? noID,
+    TResult? Function()? trackAddedSuccessfully,
+    TResult? Function()? notAddedToFavorites,
+    TResult? Function()? trackWasSuccessfullyDeleted,
+    TResult? Function()? notAddedToUserTracks,
+    TResult? Function()? noRemoveRights,
+    TResult? Function()? notContainsElement,
+    TResult? Function()? noUpdateRights,
+    TResult? Function()? dataHasBeenSuccessfullyUpdated,
+    TResult? Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult? Function()? userIsTheCreatorOfTheTrack,
+    TResult? Function()? alreadyContainsElement,
+    TResult? Function()? shareLimitMessage,
+  }) {
+    return shareLimitMessage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? error,
+    TResult Function()? okay,
+    TResult Function()? errorHasOccurred,
+    TResult Function()? invalidEmail,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? weakPassword,
+    TResult Function()? tooManyRequests,
+    TResult Function()? userTokenExpired,
+    TResult Function()? networkRequestFailed,
+    TResult Function()? notInternetConnection,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? requestCancelled,
+    TResult Function()? badCertificate,
+    TResult Function()? badResponse,
+    TResult Function()? notification,
+    TResult Function()? theUserHasBeenSuccessfullyRegistered,
+    TResult Function()? userDisabled,
+    TResult Function()? userNotFound,
+    TResult Function()? wrongPassword,
+    TResult Function()? invalidCredential,
+    TResult Function()? unauthorizedContinueUri,
+    TResult Function()? invalidContinueUri,
+    TResult Function()? missingIOSBundleId,
+    TResult Function()? missingContinueUri,
+    TResult Function()? missingAndroidPkgName,
+    TResult Function()? thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function()? noPermissionToPerform,
+    TResult Function()? prohibit,
+    TResult Function()? allow,
+    TResult Function()? serviceDenied,
+    TResult Function()? noPermissionDetermineUserLocation,
+    TResult Function()? cantStartRecording,
+    TResult Function()? cantGetYourCurrentLocation,
+    TResult Function()? trackingRecordNotificationTitle,
+    TResult Function()? trackingRecordNotificationBody,
+    TResult Function()? doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function()? attention,
+    TResult Function()? save,
+    TResult Function()? delete,
+    TResult Function()? deleteAndExit,
+    TResult Function()? toContinue,
+    TResult Function()? userIsUnauthorized,
+    TResult Function()? entryWasSuccessfullyAdded,
+    TResult Function()? alreadyAddedToFavourites,
+    TResult Function()? noID,
+    TResult Function()? trackAddedSuccessfully,
+    TResult Function()? notAddedToFavorites,
+    TResult Function()? trackWasSuccessfullyDeleted,
+    TResult Function()? notAddedToUserTracks,
+    TResult Function()? noRemoveRights,
+    TResult Function()? notContainsElement,
+    TResult Function()? noUpdateRights,
+    TResult Function()? dataHasBeenSuccessfullyUpdated,
+    TResult Function()? memoryHasBeenSuccessfullyDeleted,
+    TResult Function()? userIsTheCreatorOfTheTrack,
+    TResult Function()? alreadyContainsElement,
+    TResult Function()? shareLimitMessage,
+    required TResult orElse(),
+  }) {
+    if (shareLimitMessage != null) {
+      return shareLimitMessage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AppErrorString value) error,
+    required TResult Function(_AppOkayString value) okay,
+    required TResult Function(_AppErrorHasOccuredString value) errorHasOccurred,
+    required TResult Function(_$AppInvalidEmailString value) invalidEmail,
+    required TResult Function(_$AppEmailAlreadyInUseString value)
+        emailAlreadyInUse,
+    required TResult Function(_$AppOperationNotAllowedString value)
+        operationNotAllowed,
+    required TResult Function(_$AppWeakPasswordString value) weakPassword,
+    required TResult Function(_$AppTooManyRequestsString value) tooManyRequests,
+    required TResult Function(_$AppUserTokenExpiredString value)
+        userTokenExpired,
+    required TResult Function(_$AppNetworkRequestsFailedString value)
+        networkRequestFailed,
+    required TResult Function(_$AppNotInternetConnectionString value)
+        notInternetConnection,
+    required TResult Function(_$AppConnectTimeoutString value) connectTimeout,
+    required TResult Function(_$AppSendTimeoutString value) sendTimeout,
+    required TResult Function(_$AppReceiveTimeoutString value) receiveTimeout,
+    required TResult Function(_$AppRequestCancelledString value)
+        requestCancelled,
+    required TResult Function(_$AppBadCertificateString value) badCertificate,
+    required TResult Function(_$AppBadResponseString value) badResponse,
+    required TResult Function(_$AppNotificationString value) notification,
+    required TResult Function(
+            _$AppTheUserHasBeenSuccessfullyRegisteredString value)
+        theUserHasBeenSuccessfullyRegistered,
+    required TResult Function(_$AppUserDisabledString value) userDisabled,
+    required TResult Function(_$AppUserNotFoundString value) userNotFound,
+    required TResult Function(_$AppWrongPasswordString value) wrongPassword,
+    required TResult Function(_$AppInvalidCredentialString value)
+        invalidCredential,
+    required TResult Function(_$AppUnathorizedContinueUriString value)
+        unauthorizedContinueUri,
+    required TResult Function(_$AppInvalidContinueUriString value)
+        invalidContinueUri,
+    required TResult Function(_$AppMissingIOSBundleIdString value)
+        missingIOSBundleId,
+    required TResult Function(_$AppMissingContinueUriString value)
+        missingContinueUri,
+    required TResult Function(_$AppMissingAndroidPkgNameString value)
+        missingAndroidPkgName,
+    required TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    required TResult Function(_$AppNoPermissionToPerformString value)
+        noPermissionToPerform,
+    required TResult Function(_$AppProhibitString value) prohibit,
+    required TResult Function(_$AppAllowString value) allow,
+    required TResult Function(_$AppServiceDeniedString value) serviceDenied,
+    required TResult Function(
+            _$AppNoPermissionDeterminateUserLocationString value)
+        noPermissionDetermineUserLocation,
+    required TResult Function(_$AppCantStartRecordingString value)
+        cantStartRecording,
+    required TResult Function(
+            _$AppStringsCantGetYourCurrentLocationString value)
+        cantGetYourCurrentLocation,
+    required TResult Function(_$AppTrackingRecordNotificationTitleString value)
+        trackingRecordNotificationTitle,
+    required TResult Function(_$AppTrackingRecordNotificationBodyString value)
+        trackingRecordNotificationBody,
+    required TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)
+        doYouWantToFinishRecordingTheTrackQuestion,
+    required TResult Function(_AppAttentionString value) attention,
+    required TResult Function(_AppSaveString value) save,
+    required TResult Function(_AppDeleteString value) delete,
+    required TResult Function(_AppDeleteAndExitString value) deleteAndExit,
+    required TResult Function(_$AppToContinueString value) toContinue,
+    required TResult Function(_$AppUserNotAuthorizedString value)
+        userIsUnauthorized,
+    required TResult Function(_$AppEntryWasSuccessfullyAddedString value)
+        entryWasSuccessfullyAdded,
+    required TResult Function(_$AlreadyAddedToFavouritesString value)
+        alreadyAddedToFavourites,
+    required TResult Function(_NoIDString value) noID,
+    required TResult Function(_TrackAddedSuccessfullyString value)
+        trackAddedSuccessfully,
+    required TResult Function(_NotAddedToFavouritesString value)
+        notAddedToFavorites,
+    required TResult Function(_TrackWasSuccessfullyDeletedString value)
+        trackWasSuccessfullyDeleted,
+    required TResult Function(_NotAddedToUserTracksString value)
+        notAddedToUserTracks,
+    required TResult Function(_NoRemoveRightsString value) noRemoveRights,
+    required TResult Function(_NoContainsElementString value)
+        notContainsElement,
+    required TResult Function(_NoUpdateRightsString value) noUpdateRights,
+    required TResult Function(_DataHasBeenSuccessfullyUpdatedString value)
+        dataHasBeenSuccessfullyUpdated,
+    required TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)
+        memoryHasBeenSuccessfullyDeleted,
+    required TResult Function(_UserIsCreatorOfTheTrackString value)
+        userIsTheCreatorOfTheTrack,
+    required TResult Function(_AlreadyContainsElementString value)
+        alreadyContainsElement,
+    required TResult Function(_ShareLimitMessage value) shareLimitMessage,
+  }) {
+    return shareLimitMessage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AppErrorString value)? error,
+    TResult? Function(_AppOkayString value)? okay,
+    TResult? Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult? Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult? Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult? Function(_$AppOperationNotAllowedString value)?
+        operationNotAllowed,
+    TResult? Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult? Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult? Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult? Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult? Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult? Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult? Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult? Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult? Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult? Function(_$AppBadCertificateString value)? badCertificate,
+    TResult? Function(_$AppBadResponseString value)? badResponse,
+    TResult? Function(_$AppNotificationString value)? notification,
+    TResult? Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult? Function(_$AppUserDisabledString value)? userDisabled,
+    TResult? Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult? Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult? Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult? Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult? Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult? Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult? Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult? Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult? Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult? Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult? Function(_$AppProhibitString value)? prohibit,
+    TResult? Function(_$AppAllowString value)? allow,
+    TResult? Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult? Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult? Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult? Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult? Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult? Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult? Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult? Function(_AppAttentionString value)? attention,
+    TResult? Function(_AppSaveString value)? save,
+    TResult? Function(_AppDeleteString value)? delete,
+    TResult? Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult? Function(_$AppToContinueString value)? toContinue,
+    TResult? Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult? Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult? Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult? Function(_NoIDString value)? noID,
+    TResult? Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult? Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult? Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult? Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult? Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult? Function(_NoContainsElementString value)? notContainsElement,
+    TResult? Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult? Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult? Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult? Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult? Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+    TResult? Function(_ShareLimitMessage value)? shareLimitMessage,
+  }) {
+    return shareLimitMessage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AppErrorString value)? error,
+    TResult Function(_AppOkayString value)? okay,
+    TResult Function(_AppErrorHasOccuredString value)? errorHasOccurred,
+    TResult Function(_$AppInvalidEmailString value)? invalidEmail,
+    TResult Function(_$AppEmailAlreadyInUseString value)? emailAlreadyInUse,
+    TResult Function(_$AppOperationNotAllowedString value)? operationNotAllowed,
+    TResult Function(_$AppWeakPasswordString value)? weakPassword,
+    TResult Function(_$AppTooManyRequestsString value)? tooManyRequests,
+    TResult Function(_$AppUserTokenExpiredString value)? userTokenExpired,
+    TResult Function(_$AppNetworkRequestsFailedString value)?
+        networkRequestFailed,
+    TResult Function(_$AppNotInternetConnectionString value)?
+        notInternetConnection,
+    TResult Function(_$AppConnectTimeoutString value)? connectTimeout,
+    TResult Function(_$AppSendTimeoutString value)? sendTimeout,
+    TResult Function(_$AppReceiveTimeoutString value)? receiveTimeout,
+    TResult Function(_$AppRequestCancelledString value)? requestCancelled,
+    TResult Function(_$AppBadCertificateString value)? badCertificate,
+    TResult Function(_$AppBadResponseString value)? badResponse,
+    TResult Function(_$AppNotificationString value)? notification,
+    TResult Function(_$AppTheUserHasBeenSuccessfullyRegisteredString value)?
+        theUserHasBeenSuccessfullyRegistered,
+    TResult Function(_$AppUserDisabledString value)? userDisabled,
+    TResult Function(_$AppUserNotFoundString value)? userNotFound,
+    TResult Function(_$AppWrongPasswordString value)? wrongPassword,
+    TResult Function(_$AppInvalidCredentialString value)? invalidCredential,
+    TResult Function(_$AppUnathorizedContinueUriString value)?
+        unauthorizedContinueUri,
+    TResult Function(_$AppInvalidContinueUriString value)? invalidContinueUri,
+    TResult Function(_$AppMissingIOSBundleIdString value)? missingIOSBundleId,
+    TResult Function(_$AppMissingContinueUriString value)? missingContinueUri,
+    TResult Function(_$AppMissingAndroidPkgNameString value)?
+        missingAndroidPkgName,
+    TResult Function(
+            _$AppThePasswordHasBeenSentToTheSpecifiedEmailAddressString value)?
+        thePasswordHasBeenSentToTheSpecifiedEmailAddress,
+    TResult Function(_$AppNoPermissionToPerformString value)?
+        noPermissionToPerform,
+    TResult Function(_$AppProhibitString value)? prohibit,
+    TResult Function(_$AppAllowString value)? allow,
+    TResult Function(_$AppServiceDeniedString value)? serviceDenied,
+    TResult Function(_$AppNoPermissionDeterminateUserLocationString value)?
+        noPermissionDetermineUserLocation,
+    TResult Function(_$AppCantStartRecordingString value)? cantStartRecording,
+    TResult Function(_$AppStringsCantGetYourCurrentLocationString value)?
+        cantGetYourCurrentLocation,
+    TResult Function(_$AppTrackingRecordNotificationTitleString value)?
+        trackingRecordNotificationTitle,
+    TResult Function(_$AppTrackingRecordNotificationBodyString value)?
+        trackingRecordNotificationBody,
+    TResult Function(
+            _$AppDoYouWantToFinishRecordingTheTrackQuestionString value)?
+        doYouWantToFinishRecordingTheTrackQuestion,
+    TResult Function(_AppAttentionString value)? attention,
+    TResult Function(_AppSaveString value)? save,
+    TResult Function(_AppDeleteString value)? delete,
+    TResult Function(_AppDeleteAndExitString value)? deleteAndExit,
+    TResult Function(_$AppToContinueString value)? toContinue,
+    TResult Function(_$AppUserNotAuthorizedString value)? userIsUnauthorized,
+    TResult Function(_$AppEntryWasSuccessfullyAddedString value)?
+        entryWasSuccessfullyAdded,
+    TResult Function(_$AlreadyAddedToFavouritesString value)?
+        alreadyAddedToFavourites,
+    TResult Function(_NoIDString value)? noID,
+    TResult Function(_TrackAddedSuccessfullyString value)?
+        trackAddedSuccessfully,
+    TResult Function(_NotAddedToFavouritesString value)? notAddedToFavorites,
+    TResult Function(_TrackWasSuccessfullyDeletedString value)?
+        trackWasSuccessfullyDeleted,
+    TResult Function(_NotAddedToUserTracksString value)? notAddedToUserTracks,
+    TResult Function(_NoRemoveRightsString value)? noRemoveRights,
+    TResult Function(_NoContainsElementString value)? notContainsElement,
+    TResult Function(_NoUpdateRightsString value)? noUpdateRights,
+    TResult Function(_DataHasBeenSuccessfullyUpdatedString value)?
+        dataHasBeenSuccessfullyUpdated,
+    TResult Function(_MemoryHasBeenSuccessfullyDeletedString value)?
+        memoryHasBeenSuccessfullyDeleted,
+    TResult Function(_UserIsCreatorOfTheTrackString value)?
+        userIsTheCreatorOfTheTrack,
+    TResult Function(_AlreadyContainsElementString value)?
+        alreadyContainsElement,
+    TResult Function(_ShareLimitMessage value)? shareLimitMessage,
+    required TResult orElse(),
+  }) {
+    if (shareLimitMessage != null) {
+      return shareLimitMessage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ShareLimitMessage implements AppStrings {
+  const factory _ShareLimitMessage() = _$ShareLimitMessageImpl;
 }

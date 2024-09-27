@@ -167,6 +167,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Отправить пароль"),
         "sendTimeoutFailureOccurred": MessageLookupByLibrary.simpleMessage(
             "Произошел сбой тайм-аута отправки"),
+        "shareLimitMessage": MessageLookupByLibrary.simpleMessage(
+            "В настоящее время навигация по ссылке доступна только для Android версии мобильного приложения."),
         "signOut": MessageLookupByLibrary.simpleMessage("Выйти из аккаунта"),
         "signUp": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
         "startRecording": MessageLookupByLibrary.simpleMessage("Начать запись"),

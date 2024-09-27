@@ -134,4 +134,6 @@ class AppStrings with _$AppStrings {
   const factory AppStrings.userIsTheCreatorOfTheTrack() = _UserIsCreatorOfTheTrackString;
 
   const factory AppStrings.alreadyContainsElement() = _AlreadyContainsElementString;
+
+  const factory AppStrings.shareLimitMessage() = _ShareLimitMessage;
 }

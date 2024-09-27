@@ -9,8 +9,9 @@ import 'package:rxdart/rxdart.dart';
 import 'package:uniqtrack/app/navigation/arguments/args.dart';
 import 'package:uniqtrack/core/common/activity.dart';
 import 'package:uniqtrack/core/common/app_location_handler/app_location_handler.dart';
+import 'package:uniqtrack/core/common/app_location_handler/entities/app_location_data_settings.dart';
 import 'package:uniqtrack/core/common/app_location_handler/entities/app_position.dart';
-import 'package:uniqtrack/core/common/app_location_handler/entities/location_settings.dart';
+import 'package:uniqtrack/core/common/app_location_handler/entities/app_location_settings.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/common_ui/cupertino_dialog_activity.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
@@ -468,7 +469,7 @@ abstract class _RecordTrackStore with Store {
   @action
   void showMemoryDetails(Memory memory) {
     final _memoryDetails = _memoryDetailsBehaviourSubject.value;
-    if(_memoryDetails?.id == memory.id) return;
+    if (_memoryDetails?.id == memory.id) return;
 
     trackRecordStatusState.mapOrNull(
       recording: (state) {
@@ -492,7 +493,6 @@ abstract class _RecordTrackStore with Store {
             });
           },
         );
-
 
         Future.delayed(moreDuration, () {
           _memoryDetailsBehaviourSubject.add(memory);
@@ -748,14 +748,37 @@ abstract class _RecordTrackStore with Store {
     actions = Activity(action);
   }
 
-  void _initialTrackPositionSubscription(AppLocationSettings locationSettings) {
+  Future<void> _initialTrackPositionSubscription(
+      AppLocationSettings locationSettings) async {
+    final data = await _recordTrackRepository.watchPositions(locationSettings);
+
     _userPositionChangedSubscription = _userPositionChangedSubscription ??
-        _recordTrackRepository
-            .watchPositions(locationSettings)
-            .listen(_userPositionChanges);
+        data.$1.listen((position) => _userPositionChanges(position, data.$2));
   }
 
-  void _userPositionChanges(Position newPosition) {
+  void _userPositionChanges(
+      Position newPosition, AppLocationDataSettings? settings) {
+    final currentPosition = userLocationState.currentPosition;
+
+    if (currentPosition != null && settings != null) {
+      final firstAppPosition = AppPosition(
+        latitude: currentPosition.latitude ?? 0.0,
+        longitude: currentPosition.longitude ?? 0.0,
+        altitude: currentPosition.altitude ?? 0.0,
+      );
+
+      final secondAppPosition = AppPosition(
+        latitude: newPosition.latitude ?? 0.0,
+        longitude: newPosition.longitude ?? 0.0,
+        altitude: newPosition.altitude ?? 0.0,
+      );
+
+      final distanceBetween = _appLocationHandler.betweenDistance(
+          firstAppPosition, secondAppPosition);
+
+      if (distanceBetween < settings.distanceBetween) return;
+    }
+
     final newLocationState = userLocationState.map(
       empty: (_) => UserLocationState.empty(),
       mark: (state) => UserLocationState.mark(currentPosition: newPosition),

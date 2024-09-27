@@ -7,8 +7,8 @@ part 'share_data.g.dart';
 @freezed
 class ShareData with _$ShareData {
   const factory ShareData({
-    required String? en,
-    required String? ru,
+    required List<String> en,
+    required List<String> ru,
   }) = _ShareData;
 
   factory ShareData.fromJson(Map<String, dynamic> json) =>

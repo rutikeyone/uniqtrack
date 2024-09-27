@@ -1,19 +1,43 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:uniqtrack/core/common/app_location_handler/app_location_handler.dart';
+import 'package:uniqtrack/core/common/app_location_handler/entities/app_location_data_settings.dart';
 import 'package:uniqtrack/core/common/app_location_handler/entities/app_location_permission_result.dart';
 import 'package:uniqtrack/core/common/app_location_handler/entities/app_position.dart';
-import 'package:uniqtrack/core/common/app_location_handler/entities/location_settings.dart';
+import 'package:uniqtrack/core/common/app_location_handler/entities/app_location_settings.dart';
+import 'package:uniqtrack/core/common/error_handler/app_error_handler.dart';
+import 'package:uniqtrack/core/common/error_handler/impl/app_error_handler_impl.dart';
+import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
+import 'package:uniqtrack/data/accounts/providers/providers.dart';
 
 part 'app_location_handler_impl.g.dart';
 
-@Riverpod(dependencies: [])
+@riverpod
 AppLocationHandler appLocationHandler(AppLocationHandlerRef ref) {
-  return AppLocationHandlerImpl();
+  final firebaseFireStore = ref.watch(firebaseFireStoreProvider);
+  final appErrorHandler = ref.watch(appErrorHandlerProvider);
+
+  return AppLocationHandlerImpl(
+    firebaseFireStore: firebaseFireStore,
+    appErrorHandler: appErrorHandler,
+  );
 }
 
 class AppLocationHandlerImpl implements AppLocationHandler {
+  final FirebaseFirestore _firebaseFireStore;
+  final AppErrorHandler _appErrorHandler;
+
+  static get settingsPath => "settings/locationSettings";
+
+  const AppLocationHandlerImpl({
+    required FirebaseFirestore firebaseFireStore,
+    required AppErrorHandler appErrorHandler,
+  })  : _firebaseFireStore = firebaseFireStore,
+        _appErrorHandler = appErrorHandler;
+
   @override
   Future<AppLocationPermissionResult> requestLocationPermission() async {
     final isLocationServiceEnabled =
@@ -59,9 +83,15 @@ class AppLocationHandlerImpl implements AppLocationHandler {
     Position? result;
 
     try {
+      final settingsResult = await _getAppLocationDataSettings();
+      final settingsData = settingsResult.fold(
+        (_) => null,
+        (data) => data,
+      );
+
       result = await Geolocator.getCurrentPosition(
         timeLimit: duration,
-        desiredAccuracy: LocationAccuracy.high,
+        desiredAccuracy: settingsData?.accuracy ?? LocationAccuracy.best,
       );
     } catch (e) {
       try {
@@ -83,7 +113,8 @@ class AppLocationHandlerImpl implements AppLocationHandler {
   }
 
   @override
-  Stream<AppPosition> listenPositions(AppLocationSettings settings) {
+  Future<(Stream<AppPosition>, AppLocationDataSettings?)> watchPositions(
+      AppLocationSettings settings) async {
     final isAndroid = defaultTargetPlatform == TargetPlatform.android;
     final isIOS = defaultTargetPlatform == TargetPlatform.iOS;
     final isMacOS = defaultTargetPlatform == TargetPlatform.macOS;
@@ -96,30 +127,36 @@ class AppLocationHandlerImpl implements AppLocationHandler {
 
     late final LocationSettings locationSettings;
 
+    final settingsResult = await _getAppLocationDataSettings();
+    final settingsData = settingsResult.fold(
+      (_) => null,
+      (data) => data,
+    );
+
     if (isAndroid) {
       locationSettings = AndroidSettings(
-        accuracy: LocationAccuracy.high,
-        distanceFilter: settings.distanceFilter,
-        intervalDuration: settings.intervalDuration,
+        accuracy: settingsData?.accuracy ?? LocationAccuracy.best,
+        distanceFilter: settingsData?.distanceFilter ?? 0,
+        intervalDuration: settingsData?.intervalDuration,
         foregroundNotificationConfig: foregroundNotificationConfig,
       );
     } else if (isIOS || isMacOS) {
       locationSettings = AppleSettings(
-        accuracy: LocationAccuracy.high,
-        distanceFilter: settings.distanceFilter,
+        accuracy: settingsData?.accuracy ?? LocationAccuracy.best,
+        distanceFilter: settingsData?.distanceFilter ?? 0,
         pauseLocationUpdatesAutomatically: true,
         showBackgroundLocationIndicator: true,
         allowBackgroundLocationUpdates: true,
       );
     } else {
       locationSettings = LocationSettings(
-        accuracy: LocationAccuracy.high,
-        distanceFilter: settings.distanceFilter,
+        accuracy: settingsData?.accuracy ?? LocationAccuracy.best,
+        distanceFilter: settingsData?.distanceFilter ?? 0,
       );
     }
 
-    return Geolocator.getPositionStream(locationSettings: locationSettings).map(
-      (event) {
+    final stream = Geolocator.getPositionStream(locationSettings: locationSettings).map(
+          (event) {
         return AppPosition(
           latitude: event.latitude,
           longitude: event.longitude,
@@ -127,6 +164,8 @@ class AppLocationHandlerImpl implements AppLocationHandler {
         );
       },
     );
+
+    return (stream, settingsData);
   }
 
   @override
@@ -138,5 +177,16 @@ class AppLocationHandlerImpl implements AppLocationHandler {
       secondPosition.latitude,
       secondPosition.longitude,
     );
+  }
+
+  Future<Either<AppError, AppLocationDataSettings>>
+      _getAppLocationDataSettings() async {
+    final result = _appErrorHandler.handle(call: () async {
+      final doc = await _firebaseFireStore.doc(settingsPath).get();
+      final data = doc.data()!;
+      return AppLocationDataSettings.fromJson(data);
+    });
+
+    return result;
   }
 }
