@@ -40,10 +40,4 @@ abstract interface class TrackRepository {
   Future<AppLocationPermissionResult> requestLocationPermission();
 
   Future<Position?> getCurrentPosition();
-
-  Future<Either<AppError, int>> addLastTrack(Track track);
-
-  Future<Either<AppError, Track?>> getLastTrack();
-
-  Future<Either<AppError, void>> removeLastTracks();
 }

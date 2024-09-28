@@ -1229,6 +1229,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Max altitude: {value} m`
+  String maxAltitude(Object value) {
+    return Intl.message(
+      'Max altitude: $value m',
+      name: 'maxAltitude',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `Altitude: {value} m`
+  String altitude(Object value) {
+    return Intl.message(
+      'Altitude: $value m',
+      name: 'altitude',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `Before uploading a photo, make sure that your internet connection is stable`
+  String get beforeUploadingAPhotoMakeSureThatYourInternetConnection {
+    return Intl.message(
+      'Before uploading a photo, make sure that your internet connection is stable',
+      name: 'beforeUploadingAPhotoMakeSureThatYourInternetConnection',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

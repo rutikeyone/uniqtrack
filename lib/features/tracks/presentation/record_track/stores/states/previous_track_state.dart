@@ -4,6 +4,7 @@ part of 'states.dart';
 class PreviousTrackState with _$PreviousTrackState {
   const factory PreviousTrackState.empty() = _EmptyTrackState;
 
-  const factory PreviousTrackState.hasData() =
-      _HasDataTrackState;
+  const factory PreviousTrackState.hasData({
+    required Track track,
+  }) = _HasDataTrackState;
 }

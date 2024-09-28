@@ -3,13 +3,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:formz/formz.dart';
 import 'package:mobx/mobx.dart';
-import 'package:uniqtrack/features/accounts/domain/user_changes_use_case.dart';
 import 'package:uniqtrack/core/common/common_ui/common_ui_delegate.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/validation/entities/email.dart';
 import 'package:uniqtrack/core/common/validation/entities/password.dart';
 import 'package:uniqtrack/features/accounts/domain/accounts_repository.dart';
-import 'package:uniqtrack/features/accounts/domain/entities/entities.dart';
 
 import 'states/states.dart';
 
@@ -25,16 +23,11 @@ abstract class _LoginStore with Store {
   final AccountsRepository _accountsRepository;
   final CommonUIDelegate _commonUIDelegate;
 
-  final UserChangesUseCase _authStateChangesUseCase;
-  StreamSubscription<User?>? _authStateChangesStreamSubscription;
-
   _LoginStore({
     required AccountsRepository accountsRepository,
     required CommonUIDelegate commonUIDelegate,
-    required UserChangesUseCase authStateChangesUseCase,
   })  : _accountsRepository = accountsRepository,
-        _commonUIDelegate = commonUIDelegate,
-        _authStateChangesUseCase = authStateChangesUseCase;
+        _commonUIDelegate = commonUIDelegate;
 
   @observable
   Email emailState = const Email.pure();
@@ -92,7 +85,6 @@ abstract class _LoginStore with Store {
     final email = state.email.value;
     final password = state.password.value;
 
-    _commonUIDelegate.showLoader();
     actions = const LoginActions.hideFocus();
     loginStatusState = const LoginStatusState.pending();
 
@@ -108,7 +100,6 @@ abstract class _LoginStore with Store {
   }
 
   void _handleLoginFailureResult(AppError l) {
-    _commonUIDelegate.hideLoader();
     loginStatusState = const LoginStatusState.failure();
 
     if (l.isCancelError) return;
@@ -123,29 +114,14 @@ abstract class _LoginStore with Store {
   }
 
   void _handleLoginSuccessResult(_) {
-    const duration = Duration(milliseconds: 200);
+    const duration = Duration(milliseconds: 400);
     Future.delayed(duration, () {
       loginStatusState = const LoginStatusState.success();
     });
 
-    _authStateChangesStreamSubscription?.cancel();
-    _authStateChangesStreamSubscription = null;
-    _authStateChangesStreamSubscription =
-        _authStateChangesUseCase.call().listen(_onAuthStateChanges);
-  }
-
-  void _onAuthStateChanges(User? event) {
-    _commonUIDelegate.hideLoader();
-    _authStateChangesStreamSubscription?.cancel();
-    _authStateChangesStreamSubscription = null;
   }
 
   void navigateToForgotPassword() {
     actions = LoginActions.navigateToForgotPassword(email: emailState.value);
-  }
-
-  void dispose() {
-    _authStateChangesStreamSubscription?.cancel();
-    _authStateChangesStreamSubscription = null;
   }
 }

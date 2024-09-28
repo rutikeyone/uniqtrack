@@ -120,6 +120,22 @@ mixin _$RecordTrackStore on _RecordTrackStore, Store {
     });
   }
 
+  late final _$previousTrackStateAtom =
+      Atom(name: '_RecordTrackStore.previousTrackState', context: context);
+
+  @override
+  PreviousTrackState get previousTrackState {
+    _$previousTrackStateAtom.reportRead();
+    return super.previousTrackState;
+  }
+
+  @override
+  set previousTrackState(PreviousTrackState value) {
+    _$previousTrackStateAtom.reportWrite(value, super.previousTrackState, () {
+      super.previousTrackState = value;
+    });
+  }
+
   late final _$startTrackingAsyncAction =
       AsyncAction('_RecordTrackStore.startTracking', context: context);
 
@@ -366,6 +382,7 @@ userLocationState: ${userLocationState},
 actions: ${actions},
 trackRecordStatusState: ${trackRecordStatusState},
 bottomSheetState: ${bottomSheetState},
+previousTrackState: ${previousTrackState},
 state: ${state}
     ''';
   }

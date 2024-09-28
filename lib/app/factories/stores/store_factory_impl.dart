@@ -15,7 +15,6 @@ import 'package:uniqtrack/core/common_impl/app_permission_handler_impl.dart';
 import 'package:uniqtrack/core/common_impl/common_ui/common_ui_delegate_notifier.dart';
 import 'package:uniqtrack/data/accounts/providers/providers.dart';
 import 'package:uniqtrack/features/accounts/domain/accounts_repository.dart';
-import 'package:uniqtrack/features/accounts/domain/user_changes_use_case.dart';
 import 'package:uniqtrack/features/accounts/presentation/forgot_password/stores/forgot_password_store.dart';
 import 'package:uniqtrack/features/accounts/presentation/login/stores/login_store.dart';
 import 'package:uniqtrack/features/accounts/presentation/register/stores/register_store.dart';
@@ -41,11 +40,21 @@ import 'package:uuid/uuid.dart';
 
 part 'store_factory_impl.g.dart';
 
-@Riverpod(dependencies: [watchTrackDetailsUseCase, watchFavouriteTrackDetailsUseCase, watchMyTrackUseCase, addToFavouriteTracksUseCase, removeFromFavouriteTracksUseCase, removeTrackUseCase, removeMemoryUseCase, updateTrackUseCase, updateMemoryUseCase, trackRepository])
+@Riverpod(dependencies: [
+  watchTrackDetailsUseCase,
+  watchFavouriteTrackDetailsUseCase,
+  watchMyTrackUseCase,
+  addToFavouriteTracksUseCase,
+  removeFromFavouriteTracksUseCase,
+  removeTrackUseCase,
+  removeMemoryUseCase,
+  updateTrackUseCase,
+  updateMemoryUseCase,
+  trackRepository
+])
 StoreFactory storeFactory(StoreFactoryRef ref) {
   final commonUIDelegate = ref.watch(commonUIDelegateNotifierProvider.notifier);
 
-  final userChangesUseCase = ref.watch(userChangesUseCaseProvider);
   final watchTrackDetailsUseCase = ref.watch(watchTrackDetailsUseCaseProvider);
   final watchFavouriteTrackDetailsUseCase =
       ref.watch(watchFavouriteTrackDetailsUseCaseProvider);
@@ -70,7 +79,6 @@ StoreFactory storeFactory(StoreFactoryRef ref) {
 
   return StoreFactoryImpl(
     commonUIDelegate: commonUIDelegate,
-    userChangesUseCase: userChangesUseCase,
     appPermissionHandler: appPermissionHandler,
     recordTrackRepository: trackRepository,
     appLocationHandler: appLocationHandler,
@@ -99,7 +107,6 @@ class StoreFactoryImpl implements StoreFactory {
   final CommonUIDelegate _commonUIDelegate;
   final AppLocationHandler _appLocationHandler;
 
-  final UserChangesUseCase _authStateChangesUseCase;
   final AddFavouriteTrackUseCase _addToFavouriteTracksUseCase;
   final RemoveFavouriteTracksUseCase _removeFavouriteTrackUseCase;
   final RemoveTrackUseCase _removeTrackUseCase;
@@ -114,7 +121,6 @@ class StoreFactoryImpl implements StoreFactory {
     required Uuid uuid,
     required CommonUIDelegate commonUIDelegate,
     required AccountsRepository accountsRepository,
-    required UserChangesUseCase userChangesUseCase,
     required AppPermissionHandler appPermissionHandler,
     required AppLocationHandler appLocationHandler,
     required ImageRepository chooseImagesRepository,
@@ -134,7 +140,6 @@ class StoreFactoryImpl implements StoreFactory {
         _imagesRepository = chooseImagesRepository,
         _commonUIDelegate = commonUIDelegate,
         _appLocationHandler = appLocationHandler,
-        _authStateChangesUseCase = userChangesUseCase,
         _watchMyTrackUseCase = watchMyTrackUseCase,
         _watchTrackDetailsUseCase = watchTrackDetailsUseCase,
         _watchFavouriteDetailsUseCase = watchFavouriteTrackDetailsUseCase,
@@ -158,7 +163,6 @@ class StoreFactoryImpl implements StoreFactory {
     return LoginStore(
       accountsRepository: _accountsRepository,
       commonUIDelegate: _commonUIDelegate,
-      authStateChangesUseCase: _authStateChangesUseCase,
     );
   }
 

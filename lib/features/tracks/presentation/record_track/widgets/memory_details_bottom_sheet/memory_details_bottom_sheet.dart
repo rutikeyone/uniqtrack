@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/theme/app_diments.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
+import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/memory_details_bottom_sheet/altitude_widget.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/memory_details_bottom_sheet/memory_details_action_buttons.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/memory_details_bottom_sheet/memory_details_comment_widget.dart';
 import 'package:uniqtrack/features/tracks/presentation/record_track/widgets/memory_details_bottom_sheet/memory_details_divider_widget.dart';
@@ -74,7 +75,8 @@ class MemoryDetailsBottomSheet extends StatefulWidget {
   }
 
   @override
-  State<MemoryDetailsBottomSheet> createState() => _MemoryDetailsBottomSheetState();
+  State<MemoryDetailsBottomSheet> createState() =>
+      _MemoryDetailsBottomSheetState();
 }
 
 class _MemoryDetailsBottomSheetState extends State<MemoryDetailsBottomSheet> {
@@ -117,12 +119,14 @@ class _MemoryDetailsBottomSheetState extends State<MemoryDetailsBottomSheet> {
                     final name = memory.name;
                     final comment = memory.comment;
                     final photos = memory.photos;
+                    final altitude = memory.position?.altitude;
 
                     return Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         NameWidget(name: name),
+                        AltitudeWidget(altitude: altitude),
                         MemoryDetailsCommentWidget(comment: comment),
                         MemoryDetailsDividerWidget(),
                         MemoryDetailsListPhotosWidget(
@@ -132,7 +136,8 @@ class _MemoryDetailsBottomSheetState extends State<MemoryDetailsBottomSheet> {
                         MemoryDetailsActionButtons(
                           navigateBack: widget.navigateBack,
                           onDeletePressed: () => widget.onDeletePressed(memory),
-                          onEditMemoryPressed: () => widget.onEditMemoryPressed(memory),
+                          onEditMemoryPressed: () =>
+                              widget.onEditMemoryPressed(memory),
                           userCreatorStream: widget.userCreatorStream,
                           initialUserCreator: widget.initialUserCreator,
                         ),

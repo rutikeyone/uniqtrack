@@ -16,6 +16,13 @@ mixin _$AddOrEditMemoryStore on _AddOrEditMemoryStore, Store {
       (_$canAddPhotoComputed ??= Computed<bool>(() => super.canAddPhoto,
               name: '_AddOrEditMemoryStore.canAddPhoto'))
           .value;
+  Computed<bool>? _$canDeleteComputed;
+
+  @override
+  bool get canDelete =>
+      (_$canDeleteComputed ??= Computed<bool>(() => super.canDelete,
+              name: '_AddOrEditMemoryStore.canDelete'))
+          .value;
   Computed<bool>? _$canSaveChangesComputed;
 
   @override
@@ -263,6 +270,7 @@ downloadImageStatus: ${downloadImageStatus},
 photos: ${photos},
 actions: ${actions},
 canAddPhoto: ${canAddPhoto},
+canDelete: ${canDelete},
 canSaveChanges: ${canSaveChanges}
     ''';
   }

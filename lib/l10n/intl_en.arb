@@ -131,5 +131,8 @@
   "theUserIsTheCreatorOfTheTrack": "The user is the creator of the track",
   "alreadyContainsElement": "Already contains element",
   "inOrderToViewUserInformationYouNeedToLog": "In order to view user information, you need to log in",
-  "shareLimitMessage": "Currently, link navigation is only available for the Android version of the mobile app."
+  "shareLimitMessage": "Currently, link navigation is only available for the Android version of the mobile app.",
+  "maxAltitude": "Max altitude: {value} m",
+  "altitude" : "Altitude: {value} m",
+  "beforeUploadingAPhotoMakeSureThatYourInternetConnection": "Before uploading a photo, make sure that your internet connection is stable"
 }

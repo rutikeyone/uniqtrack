@@ -5132,19 +5132,19 @@ mixin _$PreviousTrackState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() empty,
-    required TResult Function() hasData,
+    required TResult Function(Track track) hasData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? empty,
-    TResult? Function()? hasData,
+    TResult? Function(Track track)? hasData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? empty,
-    TResult Function()? hasData,
+    TResult Function(Track track)? hasData,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -5240,7 +5240,7 @@ class _$EmptyTrackStateImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() empty,
-    required TResult Function() hasData,
+    required TResult Function(Track track) hasData,
   }) {
     return empty();
   }
@@ -5249,7 +5249,7 @@ class _$EmptyTrackStateImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? empty,
-    TResult? Function()? hasData,
+    TResult? Function(Track track)? hasData,
   }) {
     return empty?.call();
   }
@@ -5258,7 +5258,7 @@ class _$EmptyTrackStateImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? empty,
-    TResult Function()? hasData,
+    TResult Function(Track track)? hasData,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -5308,6 +5308,10 @@ abstract class _$$HasDataTrackStateImplCopyWith<$Res> {
   factory _$$HasDataTrackStateImplCopyWith(_$HasDataTrackStateImpl value,
           $Res Function(_$HasDataTrackStateImpl) then) =
       __$$HasDataTrackStateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Track track});
+
+  $TrackCopyWith<$Res> get track;
 }
 
 /// @nodoc
@@ -5320,6 +5324,28 @@ class __$$HasDataTrackStateImplCopyWithImpl<$Res>
 
   /// Create a copy of PreviousTrackState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? track = null,
+  }) {
+    return _then(_$HasDataTrackStateImpl(
+      track: null == track
+          ? _value.track
+          : track // ignore: cast_nullable_to_non_nullable
+              as Track,
+    ));
+  }
+
+  /// Create a copy of PreviousTrackState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TrackCopyWith<$Res> get track {
+    return $TrackCopyWith<$Res>(_value.track, (value) {
+      return _then(_value.copyWith(track: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -5327,55 +5353,71 @@ class __$$HasDataTrackStateImplCopyWithImpl<$Res>
 class _$HasDataTrackStateImpl
     with DiagnosticableTreeMixin
     implements _HasDataTrackState {
-  const _$HasDataTrackStateImpl();
+  const _$HasDataTrackStateImpl({required this.track});
+
+  @override
+  final Track track;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'PreviousTrackState.hasData()';
+    return 'PreviousTrackState.hasData(track: $track)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'PreviousTrackState.hasData'));
+    properties
+      ..add(DiagnosticsProperty('type', 'PreviousTrackState.hasData'))
+      ..add(DiagnosticsProperty('track', track));
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$HasDataTrackStateImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$HasDataTrackStateImpl &&
+            (identical(other.track, track) || other.track == track));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, track);
+
+  /// Create a copy of PreviousTrackState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HasDataTrackStateImplCopyWith<_$HasDataTrackStateImpl> get copyWith =>
+      __$$HasDataTrackStateImplCopyWithImpl<_$HasDataTrackStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() empty,
-    required TResult Function() hasData,
+    required TResult Function(Track track) hasData,
   }) {
-    return hasData();
+    return hasData(track);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? empty,
-    TResult? Function()? hasData,
+    TResult? Function(Track track)? hasData,
   }) {
-    return hasData?.call();
+    return hasData?.call(track);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? empty,
-    TResult Function()? hasData,
+    TResult Function(Track track)? hasData,
     required TResult orElse(),
   }) {
     if (hasData != null) {
-      return hasData();
+      return hasData(track);
     }
     return orElse();
   }
@@ -5413,7 +5455,16 @@ class _$HasDataTrackStateImpl
 }
 
 abstract class _HasDataTrackState implements PreviousTrackState {
-  const factory _HasDataTrackState() = _$HasDataTrackStateImpl;
+  const factory _HasDataTrackState({required final Track track}) =
+      _$HasDataTrackStateImpl;
+
+  Track get track;
+
+  /// Create a copy of PreviousTrackState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$HasDataTrackStateImplCopyWith<_$HasDataTrackStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

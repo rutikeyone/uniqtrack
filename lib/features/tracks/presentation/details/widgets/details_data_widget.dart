@@ -56,7 +56,10 @@ class DetailsDataWidget extends StatelessWidget {
         children: [
           ModalBottomSheetDividerWidget(),
           NameWidget(name: trackData.name),
-          DateWidget(date: trackData.dateCreated),
+          DateAltitudeWidget(
+            date: trackData.dateCreated,
+            altitude: trackData.maxAltitude,
+          ),
           CommentWidget(comment: trackData.comment),
           Padding(
             padding: const EdgeInsets.only(top: AppDiments.dm12),
@@ -96,7 +99,9 @@ class DetailsDataWidget extends StatelessWidget {
             onAddToFavouritesPressed: onAddToFavouritesPressed,
             onRemoveFromFavouritesPressed: onRemoveFromFavouritesPressed,
             onDeletePressed: onDeletePressed,
-            onEditPressed: onEditPressed != null ? () => onEditPressed?.call(trackData) : null,
+            onEditPressed: onEditPressed != null
+                ? () => onEditPressed?.call(trackData)
+                : null,
           ),
           Padding(
             padding: const EdgeInsets.only(top: AppDiments.dm12),

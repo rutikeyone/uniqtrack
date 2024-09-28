@@ -22,7 +22,10 @@ class GalleryDataSource implements ImageDataSource {
 
     return storagePermissionResult.when(
       success: () async {
-        final file = await _imagePicker.pickImage(source: ImageSource.gallery);
+        final file = await _imagePicker.pickImage(
+          source: ImageSource.gallery,
+          imageQuality: 30,
+        );
         if (file == null) {
           return Right(null);
         }

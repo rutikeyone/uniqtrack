@@ -131,5 +131,8 @@
   "theUserIsTheCreatorOfTheTrack": "Пользователь является создателем трека",
   "alreadyContainsElement": "Уже содержит элемент",
   "inOrderToViewUserInformationYouNeedToLog": "Для того чтобы просмотреть информацию о пользователе, необходимо авторизоваться",
-  "shareLimitMessage": "В настоящее время навигация по ссылке доступна только для Android версии мобильного приложения."
+  "shareLimitMessage": "В настоящее время навигация по ссылке доступна только для Android версии мобильного приложения.",
+  "maxAltitude": "Максимальная высота: {value} м",
+  "altitude" : "Высота: {value} м",
+  "beforeUploadingAPhotoMakeSureThatYourInternetConnection": "Прежде чем загрузить фотографию, убедитесь, что ваше интернет-соединение стабильно"
 }

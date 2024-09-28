@@ -208,7 +208,7 @@ class _TrackDetailsPageState extends ConsumerState<TrackDetailsPage> {
     final polyline = Polyline(
       polylineId: PolylineId(id),
       points: points,
-      width: 3,
+      width: AppDiments.dm4.toInt(),
       consumeTapEvents: true,
       color: context.appMapTheme.secondaryUserLineColor,
       onTap: () {},

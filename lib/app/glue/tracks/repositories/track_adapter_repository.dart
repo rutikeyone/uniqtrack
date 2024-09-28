@@ -66,25 +66,7 @@ class TrackAdapterRepository implements TrackRepository {
       return Left(addMyRecordTrackDataFailureResult);
     }
 
-    final deleteAllTracksResult =
-        await _tracksDataRepository.removeLastTracks();
-
-    final deleteAllTracksResultFailureResult = deleteAllTracksResult.fold(
-      (value) => value,
-      (_) => null,
-    );
-
-    if (deleteAllTracksResultFailureResult != null) {
-      return Left(deleteAllTracksResultFailureResult);
-    }
-
     return Right(addMyRecordTrackDataFailureResult);
-  }
-
-  @override
-  Future<Either<AppError, int>> addLastTrack(Track track) {
-    final trackModel = _trackMapper.toTrackModel(track);
-    return _tracksDataRepository.addLastTrack(trackModel);
   }
 
   @override
@@ -330,11 +312,6 @@ class TrackAdapterRepository implements TrackRepository {
   }
 
   @override
-  Future<Either<AppError, void>> removeLastTracks() {
-    return _tracksDataRepository.removeLastTracks();
-  }
-
-  @override
   Future<AppLocationPermissionResult> requestLocationPermission() {
     return _appLocationHandler.requestLocationPermission();
   }
@@ -347,17 +324,4 @@ class TrackAdapterRepository implements TrackRepository {
         : null;
   }
 
-  @override
-  Future<Either<AppError, Track?>> getLastTrack() async {
-    final getTrackResult = await _tracksDataRepository.getLastTrack();
-
-    return getTrackResult.fold(
-      (error) => Left(error),
-      (model) {
-        if (model == null) return Right(null);
-        final entity = _trackMapper.toTrack(model);
-        return Right(entity);
-      },
-    );
-  }
 }

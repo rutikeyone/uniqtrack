@@ -20,11 +20,15 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(distance) => "${distance} km";
+  static String m0(value) => "Altitude: ${value} m";
 
-  static String m1(speed) => "${speed} km/h";
+  static String m1(distance) => "${distance} km";
 
-  static String m2(value) => "${value} m";
+  static String m2(speed) => "${speed} km/h";
+
+  static String m3(value) => "Max altitude: ${value} m";
+
+  static String m4(value) => "${value} m";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -46,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Already added to favorites"),
         "alreadyContainsElement":
             MessageLookupByLibrary.simpleMessage("Already contains element"),
+        "altitude": m0,
         "anAndroidPackageNameMustBeProvidedIfTheAndroid":
             MessageLookupByLibrary.simpleMessage(
                 "An Android package name must be provided if the Android app is required to be installed"),
@@ -57,6 +62,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "attention": MessageLookupByLibrary.simpleMessage("Attention"),
         "averageSpeed": MessageLookupByLibrary.simpleMessage("Average speed"),
         "back": MessageLookupByLibrary.simpleMessage("Back"),
+        "beforeUploadingAPhotoMakeSureThatYourInternetConnection":
+            MessageLookupByLibrary.simpleMessage(
+                "Before uploading a photo, make sure that your internet connection is stable"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "checkYourInternetConnectionAndTryAgain":
             MessageLookupByLibrary.simpleMessage(
@@ -128,14 +136,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "itIsNotPossibleToGetYourCurrentLocation":
             MessageLookupByLibrary.simpleMessage(
                 "It is not possible to get your current location"),
-        "km": m0,
-        "km_per_h": m1,
+        "km": m1,
+        "km_per_h": m2,
         "locationServiceAreDisabled": MessageLookupByLibrary.simpleMessage(
             "Location service are disabled."),
         "logIn": MessageLookupByLibrary.simpleMessage("Log in"),
         "logInToYourAccount":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "maxAltitude": m3,
         "memories": MessageLookupByLibrary.simpleMessage("Memories"),
         "myFavouriteTracks":
             MessageLookupByLibrary.simpleMessage("My favourite tracks"),
@@ -231,7 +240,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "userNotFound": MessageLookupByLibrary.simpleMessage("User not found"),
         "userTokenExpired":
             MessageLookupByLibrary.simpleMessage("User token expired"),
-        "value_m": m2,
+        "value_m": m4,
         "weakPassword": MessageLookupByLibrary.simpleMessage("Weak password"),
         "wrongPassword": MessageLookupByLibrary.simpleMessage("Wrong password")
       };

@@ -21,7 +21,10 @@ class CameraDataSource implements ImageDataSource {
 
     return cameraPermissionResult.when(
       success: () async {
-        final file = await _imagePicker.pickImage(source: ImageSource.camera);
+        final file = await _imagePicker.pickImage(
+          source: ImageSource.camera,
+          imageQuality: 30,
+        );
         if (file == null) {
           return Right(null);
         }

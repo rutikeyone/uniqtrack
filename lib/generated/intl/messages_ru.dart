@@ -20,11 +20,15 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ru';
 
-  static String m0(distance) => "${distance} км";
+  static String m0(value) => "Высота: ${value} м";
 
-  static String m1(speed) => "${speed} км/ч";
+  static String m1(distance) => "${distance} км";
 
-  static String m2(value) => "${value} м";
+  static String m2(speed) => "${speed} км/ч";
+
+  static String m3(value) => "Максимальная высота: ${value} м";
+
+  static String m4(value) => "${value} м";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -48,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Уже добавлен в избранное"),
         "alreadyContainsElement":
             MessageLookupByLibrary.simpleMessage("Уже содержит элемент"),
+        "altitude": m0,
         "anAndroidPackageNameMustBeProvidedIfTheAndroid":
             MessageLookupByLibrary.simpleMessage(
                 "Если требуется установить приложение для Android, необходимо указать название пакета Android"),
@@ -60,6 +65,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "averageSpeed":
             MessageLookupByLibrary.simpleMessage("Средняя скорость"),
         "back": MessageLookupByLibrary.simpleMessage("Назад"),
+        "beforeUploadingAPhotoMakeSureThatYourInternetConnection":
+            MessageLookupByLibrary.simpleMessage(
+                "Прежде чем загрузить фотографию, убедитесь, что ваше интернет-соединение стабильно"),
         "cancel": MessageLookupByLibrary.simpleMessage("Назад"),
         "checkYourInternetConnectionAndTryAgain":
             MessageLookupByLibrary.simpleMessage(
@@ -131,14 +139,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "itIsNotPossibleToGetYourCurrentLocation":
             MessageLookupByLibrary.simpleMessage(
                 "Невозможно получить ваше текущее местоположение"),
-        "km": m0,
-        "km_per_h": m1,
+        "km": m1,
+        "km_per_h": m2,
         "locationServiceAreDisabled": MessageLookupByLibrary.simpleMessage(
             "Служба геолокации отключена."),
         "logIn": MessageLookupByLibrary.simpleMessage("Войти"),
         "logInToYourAccount": MessageLookupByLibrary.simpleMessage(
             "Войдите в вашу учетную запись"),
         "male": MessageLookupByLibrary.simpleMessage("Мужской"),
+        "maxAltitude": m3,
         "memories": MessageLookupByLibrary.simpleMessage("Воспоминания"),
         "myFavouriteTracks":
             MessageLookupByLibrary.simpleMessage("Мои избранные треки"),
@@ -237,7 +246,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Пользователь не найден"),
         "userTokenExpired": MessageLookupByLibrary.simpleMessage(
             "Срок действия пользовательского токена истек"),
-        "value_m": m2,
+        "value_m": m4,
         "weakPassword": MessageLookupByLibrary.simpleMessage("Слабый пароль"),
         "wrongPassword": MessageLookupByLibrary.simpleMessage("Неверный пароль")
       };

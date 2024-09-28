@@ -63,7 +63,9 @@ class _RecordMapButtonsState extends State<_RecordMapButtons> {
               builder: (context, snapshot) {
                 final data = snapshot.data;
 
-                if (data == null) return const SizedBox.shrink();
+                if (data == null) {
+                  return const SizedBox.shrink();
+                }
 
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.start,

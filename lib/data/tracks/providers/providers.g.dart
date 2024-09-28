@@ -41,21 +41,6 @@ final positionsDataConverterProvider = AutoDisposeProvider<
 
 typedef PositionsDataConverterRef
     = AutoDisposeProviderRef<JsonConverter<List<PositionDataModel>?, List?>>;
-String _$trackDbMapperHash() => r'91b8066930209ebe5866a33d5bfd868a18cb639a';
-
-/// See also [trackDbMapper].
-@ProviderFor(trackDbMapper)
-final trackDbMapperProvider = AutoDisposeProvider<TrackDbMapper>.internal(
-  trackDbMapper,
-  name: r'trackDbMapperProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$trackDbMapperHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef TrackDbMapperRef = AutoDisposeProviderRef<TrackDbMapper>;
 String _$dateConverterHash() => r'63c3982ae55941f215c5d0674839ae2bc41c64dd';
 
 /// See also [dateConverter].
@@ -72,7 +57,7 @@ final dateConverterProvider = AutoDisposeProvider<DateConverter>.internal(
 
 typedef DateConverterRef = AutoDisposeProviderRef<DateConverter>;
 String _$tracksDataRepositoryHash() =>
-    r'9d84fe22084cdac8a3b8b546af457f31b07d09c4';
+    r'b7f1cf77d56e1d8a4f8a94cf9b216535b69f5a5a';
 
 /// See also [tracksDataRepository].
 @ProviderFor(tracksDataRepository)

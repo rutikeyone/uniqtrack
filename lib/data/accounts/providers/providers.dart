@@ -33,7 +33,12 @@ FirebaseAuth firebaseAuth(FirebaseAuthRef ref) {
 
 @riverpod
 FirebaseStorage firebaseStorage(FirebaseStorageRef ref) {
-  return FirebaseStorage.instance;
+  final duration = const Duration(seconds: 10);
+
+  return FirebaseStorage.instance
+    ..setMaxOperationRetryTime(duration)
+    ..setMaxUploadRetryTime(duration)
+    ..setMaxDownloadRetryTime(duration);
 }
 
 @riverpod

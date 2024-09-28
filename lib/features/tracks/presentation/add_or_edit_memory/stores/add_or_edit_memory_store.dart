@@ -60,7 +60,16 @@ abstract class _AddOrEditMemoryStore with Store {
   FormzSubmissionStatus downloadImageStatus = FormzSubmissionStatus.initial;
 
   @computed
-  bool get canAddPhoto => !downloadImageStatus.isInProgress;
+  bool get canAddPhoto =>
+      !downloadImageStatus.isInProgress &&
+      !deleteStatusState.isInProgress &&
+      !saveStatusState.isInProgress;
+
+  @computed
+  bool get canDelete =>
+      !downloadImageStatus.isInProgress &&
+      !deleteStatusState.isInProgress &&
+      !saveStatusState.isInProgress;
 
   @MakeObservable(useDeepEquality: true)
   List<String> photos;
@@ -170,6 +179,8 @@ abstract class _AddOrEditMemoryStore with Store {
 
   @action
   void deleteMemory() {
+    if(!canDelete) return;
+
     modeState.whenOrNull(
       edit: _deleteMemoryWhenEditMode,
     );
@@ -226,7 +237,8 @@ abstract class _AddOrEditMemoryStore with Store {
     );
 
     return isAllInputsValid &&
-        saveStatusState != FormzSubmissionStatus.inProgress;
+        saveStatusState != FormzSubmissionStatus.inProgress &&
+        downloadImageStatus != FormzSubmissionStatus.inProgress;
   }
 
   bool _canSaveWhenEditMode(EditMemorySource source) {
@@ -252,7 +264,8 @@ abstract class _AddOrEditMemoryStore with Store {
 
     return isHasDifference &&
         isAllInputsValid &&
-        saveStatusState != FormzSubmissionStatus.inProgress;
+        saveStatusState != FormzSubmissionStatus.inProgress &&
+        downloadImageStatus != FormzSubmissionStatus.inProgress;
   }
 
   void _saveChangesWhenAddMode(Position position) {
@@ -361,7 +374,6 @@ abstract class _AddOrEditMemoryStore with Store {
     if (_removeMemoryUseCase == null) return;
 
     deleteStatusState = FormzSubmissionStatus.inProgress;
-    _commonUIDelegate.showLoader();
 
     final result = await _removeMemoryUseCase.call((track, memory));
 
@@ -372,7 +384,6 @@ abstract class _AddOrEditMemoryStore with Store {
   }
 
   void _handleDeleteMemoryFailureResult(AppError error) {
-    _commonUIDelegate.hideLoader();
     deleteStatusState = FormzSubmissionStatus.failure;
 
     final header = error.header();
@@ -384,7 +395,6 @@ abstract class _AddOrEditMemoryStore with Store {
   void _handleDeleteMemorySuccessResult(_) {
     final duration = const Duration(milliseconds: 300);
 
-    _commonUIDelegate.hideLoader();
     deleteStatusState = FormzSubmissionStatus.success;
 
     final navigateBackAction = AddOrEditMemoryActions.navigateBack();
@@ -412,8 +422,6 @@ abstract class _AddOrEditMemoryStore with Store {
   FutureOr<void> _handleChooseImageFailureResult(Uint8List? file) async {
     if (file == null) return;
 
-    _commonUIDelegate.showLoader();
-
     downloadImageStatus = FormzSubmissionStatus.inProgress;
 
     final downloadImageResult = await _imagesRepository.downloadImage(file);
@@ -426,7 +434,6 @@ abstract class _AddOrEditMemoryStore with Store {
 
   void _handleDownloadImageFailureResult(AppError error) {
     downloadImageStatus = FormzSubmissionStatus.failure;
-    _commonUIDelegate.hideLoader();
 
     if (error.isCancelError) return;
 
@@ -441,7 +448,6 @@ abstract class _AddOrEditMemoryStore with Store {
 
   void _handleDownloadImageSuccessResult(String url) {
     downloadImageStatus = FormzSubmissionStatus.success;
-    _commonUIDelegate.hideLoader();
 
     final newPhotos = [...photos, url];
     photos = newPhotos;

@@ -24,6 +24,17 @@ class _UploadImagesWidget extends StatelessWidget {
                 ),
               ),
               Padding(
+                padding: const EdgeInsets.only(top: AppDiments.dm4),
+                child: Text(
+                  S
+                      .of(context)
+                      .beforeUploadingAPhotoMakeSureThatYourInternetConnection,
+                  style: context.primaryTextTheme.bodySmall?.copyWith(
+                    color: context.appColorsTheme.primaryTextHintColor,
+                  ),
+                ),
+              ),
+              Padding(
                 padding: const EdgeInsets.only(top: AppDiments.dm8),
                 child: Container(
                   width: context.fullWidth,

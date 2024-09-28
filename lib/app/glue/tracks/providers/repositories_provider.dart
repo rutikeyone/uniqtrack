@@ -1,12 +1,7 @@
 // ignore_for_file: avoid_manual_providers_as_generated_provider_dependency
 part of 'providers.dart';
 
-@Riverpod(dependencies: [
-  appLocationHandler,
-  positionMapper,
-  trackMapper,
-  memoryMapper,
-])
+@Riverpod(dependencies: [positionMapper, trackMapper, memoryMapper])
 TrackRepository trackRepository(TrackRepositoryRef ref) {
   final appLocationHandler = ref.watch(appLocationHandlerProvider);
   final positionMapper = ref.watch(positionMapperProvider);

@@ -69,7 +69,6 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   @override
   void dispose() {
     _actionsReactionDisposer();
-    _store.dispose();
     super.dispose();
   }
 

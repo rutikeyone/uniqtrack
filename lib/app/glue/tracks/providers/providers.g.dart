@@ -181,7 +181,7 @@ final trackMapperProvider = AutoDisposeProvider<TrackMapper>.internal(
 );
 
 typedef TrackMapperRef = AutoDisposeProviderRef<TrackMapper>;
-String _$trackRepositoryHash() => r'df2d5ad6e2fcf185dcc50007f64b33a0b2834822';
+String _$trackRepositoryHash() => r'3c6b8079a2c8e7ec5042cf57da4773faff9f342a';
 
 /// See also [trackRepository].
 @ProviderFor(trackRepository)
@@ -191,15 +191,12 @@ final trackRepositoryProvider = AutoDisposeProvider<TrackRepository>.internal(
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
       : _$trackRepositoryHash,
-  dependencies: <ProviderOrFamily>{
-    appLocationHandlerProvider,
+  dependencies: <ProviderOrFamily>[
     positionMapperProvider,
     trackMapperProvider,
     memoryMapperProvider
-  },
+  ],
   allTransitiveDependencies: <ProviderOrFamily>{
-    appLocationHandlerProvider,
-    ...?appLocationHandlerProvider.allTransitiveDependencies,
     positionMapperProvider,
     ...?positionMapperProvider.allTransitiveDependencies,
     trackMapperProvider,

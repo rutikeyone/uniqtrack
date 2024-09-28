@@ -12,6 +12,7 @@ import 'package:provider/provider.dart';
 import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
 import 'package:uniqtrack/core/common/activity.dart';
 import 'package:uniqtrack/core/common/extensions/context_extension.dart';
+import 'package:uniqtrack/core/common/extensions/iterable_extensions.dart';
 import 'package:uniqtrack/core/common/strings/app_strings.dart';
 import 'package:uniqtrack/core/common_impl/app_widget_toolkit_impl.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
@@ -73,6 +74,8 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
 
   bool _bottomSheetRecordTrackShowed = false;
   bool _bottomSheetMemoryShowed = false;
+
+  BitmapDescriptor? _userMarkerAsset;
 
   @override
   void initState() {
@@ -183,8 +186,11 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     );
   }
 
-  void _handleUserLocationMarkStateChanged(Position currentPosition) {
-    _changeCurrentUserPosition(currentPosition);
+  Future<void> _handleUserLocationMarkStateChanged(
+      Position currentPosition) async {
+    await _changeCurrentUserPosition(currentPosition);
+
+    setState(() {});
   }
 
   void _handleTrackRecordChanges(TrackRecordStatusState state) {
@@ -220,6 +226,8 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
 
   Future<void> _handleRecordingState(
       TrackRecordingStatusState statusState) async {
+    final currentPosition = _store.currentPosition;
+
     _updateLines(
       positionsData: statusState.positionsData,
       positions: statusState.positions,
@@ -236,6 +244,10 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
       memories: statusState.memories,
     );
 
+    if (currentPosition != null) {
+      await _changeCurrentUserPosition(currentPosition);
+    }
+
     setState(() {});
   }
 
@@ -243,12 +255,15 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     final latitude = position.latitude;
     final longitude = position.longitude;
 
-    final asset = await ref.read(appWidgetToolkitProvider).bytesFromAsset(
-          AppAssets.icons.userMarker,
-          AppDiments.dm84.toInt(),
-        );
+    _userMarkerAsset = _userMarkerAsset ??
+        await ref.read(appWidgetToolkitProvider).bytesFromAsset(
+              AppAssets.icons.userMarker,
+              AppDiments.dm84.toInt(),
+            );
 
-    if (asset != null && latitude != null && longitude != null) {
+    final data = _userMarkerAsset;
+
+    if (data != null && latitude != null && longitude != null) {
       final id = "userId:${latitude}${longitude}";
 
       _userMarkers.clear();
@@ -257,12 +272,10 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
         markerId: MarkerId(id),
         anchor: const Offset(0.5, 0.5),
         position: LatLng(latitude, longitude),
-        icon: asset,
+        icon: data,
       );
 
       _userMarkers.add(userMarker);
-
-      setState(() {});
     }
   }
 
@@ -307,7 +320,7 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     final polyline = Polyline(
       polylineId: PolylineId(id),
       points: points,
-      width: 3,
+      width: AppDiments.dm4.toInt(),
       consumeTapEvents: true,
       color: color ?? context.appMapTheme.primaryUserLineColor,
       onTap: () {},
@@ -323,6 +336,8 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     required bool isPaintFirstPoint,
     required bool recording,
   }) async {
+    final prevCircles = _circles;
+
     _circles.clear();
 
     positionsData.forEach(
@@ -332,6 +347,7 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
         _addMapCircles(
           positions: positions,
           showLastCircle: true,
+          prevCircles: prevCircles,
         );
       },
     );
@@ -339,6 +355,7 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     _addMapCircles(
       positions: positions,
       showLastCircle: false,
+      prevCircles: prevCircles,
     );
   }
 
@@ -377,12 +394,10 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
   void _addMapCircles({
     required List<Position> positions,
     required bool showLastCircle,
+    required Set<Circle> prevCircles,
   }) {
     final firstCoordinate = positions.firstOrNull;
     final lastCoordinate = positions.lastOrNull;
-
-    final firstId = ref.read(appWidgetToolkitProvider).uid();
-    final lastId = ref.read(appWidgetToolkitProvider).uid();
 
     if (firstCoordinate != null && positions.length > 1) {
       final latitude = firstCoordinate.latitude;
@@ -391,17 +406,24 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
       if (latitude != null && longitude != null) {
         final latLng = LatLng(latitude, longitude);
 
-        final firstCircle = Circle(
-          circleId: CircleId(firstId),
-          center: latLng,
-          strokeWidth: AppDiments.dm4.toInt(),
-          fillColor: context.appMapTheme.primaryUserLineColor,
-          strokeColor: context.appMapTheme.primaryUserLineColor,
-          radius: AppDiments.dm1,
-          zIndex: 1,
-        );
+        final id = firstCoordinate.toString();
+        final containsCircle =
+            prevCircles.firstWhereOrNull((item) => item.circleId.value == id) !=
+                null;
 
-        _circles.add(firstCircle);
+        if (!containsCircle) {
+          final firstCircle = Circle(
+            circleId: CircleId(id),
+            center: latLng,
+            strokeWidth: AppDiments.dm4.toInt(),
+            fillColor: context.appMapTheme.primaryUserLineColor,
+            strokeColor: context.appMapTheme.primaryUserLineColor,
+            radius: AppDiments.dm1,
+            zIndex: 1,
+          );
+
+          _circles.add(firstCircle);
+        }
       }
     }
 
@@ -411,18 +433,25 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
 
       if (latitude != null && longitude != null) {
         final latLng = LatLng(latitude, longitude);
+        final id = latLng.toString();
 
-        final lastCircle = Circle(
-          circleId: CircleId(lastId),
-          center: latLng,
-          strokeWidth: AppDiments.dm4.toInt(),
-          fillColor: context.appMapTheme.primaryUserLineColor,
-          strokeColor: context.appMapTheme.primaryUserLineColor,
-          radius: AppDiments.dm1,
-          zIndex: 1,
-        );
+        final containsCircle =
+            prevCircles.firstWhereOrNull((item) => item.circleId.value == id) !=
+                null;
 
-        _circles.add(lastCircle);
+        if (!containsCircle) {
+          final lastCircle = Circle(
+            circleId: CircleId(id),
+            center: latLng,
+            strokeWidth: AppDiments.dm4.toInt(),
+            fillColor: context.appMapTheme.primaryUserLineColor,
+            strokeColor: context.appMapTheme.primaryUserLineColor,
+            radius: AppDiments.dm1,
+            zIndex: 1,
+          );
+
+          _circles.add(lastCircle);
+        }
       }
     }
   }

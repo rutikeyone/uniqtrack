@@ -90,12 +90,24 @@ abstract class _RecordTrackStore with Store {
   RecordTrackBottomSheetState bottomSheetState =
       RecordTrackBottomSheetState.none();
 
+  @observable
+  PreviousTrackState previousTrackState = PreviousTrackState.empty();
+
   @computed
   RecordTrackState get state => RecordTrackState(
         permissionState: recordTrackPermissionState,
         locationState: userLocationState,
         trackRecordStatusState: trackRecordStatusState,
       );
+
+  Position? get currentPosition {
+    final currentPosition = userLocationState.when(
+      empty: () => null,
+      mark: (position) => position,
+    );
+
+    return currentPosition;
+  }
 
   _RecordTrackStore({
     required TrackRepository recordTrackRepository,
@@ -109,7 +121,6 @@ abstract class _RecordTrackStore with Store {
         _watchTrackUseCase = watchTrackUseCase,
         _previousTrack = previousTrack {
     _checkInitialLocationPermission();
-    _checkPreviousTrack();
   }
 
   @action
@@ -889,9 +900,7 @@ abstract class _RecordTrackStore with Store {
             maxAltitude: state.maxAltitude,
             memories: state.memories,
           );
-
-          _recordTrackRepository.addLastTrack(track);
-        },
+          },
       ),
     );
   }
@@ -982,23 +991,6 @@ abstract class _RecordTrackStore with Store {
   Future<void> _finishRecordTrack({bool closeDialog = false}) async {
     if (trackRecordStatusState.isWithoutRecording) return;
 
-    final deleteAllTracksResult =
-        await _recordTrackRepository.removeLastTracks();
-    final error = deleteAllTracksResult.fold(
-      (error) => error,
-      (_) => null,
-    );
-
-    if (error != null) {
-      final header = error.header();
-      final body = error.body();
-
-      _commonUIDelegate.cupertinoDialog(
-        header: header,
-        body: body,
-      );
-    }
-
     final duration = const Duration(milliseconds: 300);
 
     final hideDetailsAction = RecordTrackActions.hideDetailsRecordingData();
@@ -1025,38 +1017,5 @@ abstract class _RecordTrackStore with Store {
   void _disposeTimer() {
     _timer?.cancel();
     _timer = null;
-  }
-
-  Future<void> _checkPreviousTrack() async {
-    final duration = const Duration(milliseconds: 200);
-    final getTrackResult = await _recordTrackRepository.getLastTrack();
-
-    if (getTrackResult.isRight()) {
-      final track = getTrackResult.getOrElse(
-        () => null,
-      );
-
-      if (track != null) {
-        final newTrackRecordStatusState = TrackRecordStatusState.recording(
-          positionsData: track.positions ?? List<PositionData>.empty(),
-          positions: List<Position>.empty(),
-          distance: track.distance ?? 0.0,
-          duration: track.duration ?? 0,
-          averageSpeed: track.averageSpeed ?? 0.0,
-          maxAltitude: track.maxAltitude ?? 0.0,
-          mode: RecordTrackModeState.stop(),
-          isRecording: false,
-          memories: track.memories ?? List<Memory>.empty(),
-        );
-
-        trackRecordStatusState = newTrackRecordStatusState;
-        _trackRecordStatusStateBehaviourSubject.add(newTrackRecordStatusState);
-
-        Future.delayed(
-          duration,
-          () => showDetailsRecordingData(),
-        );
-      }
-    }
   }
 }

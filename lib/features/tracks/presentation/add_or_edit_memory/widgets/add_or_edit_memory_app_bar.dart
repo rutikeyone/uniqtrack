@@ -37,16 +37,20 @@ class _AddOrEditMemoryAppBar extends ConsumerWidget
           actions: [
             modeState.maybeWhen(
               edit: (_) {
-                return IconButton(
-                  onPressed: store.deleteMemory,
-                  icon: SvgPicture.asset(
-                    AppAssets.icons.delete,
-                    width: AppDiments.dm24,
-                    height: AppDiments.dm24,
-                    colorFilter: ColorFilter.mode(
-                        context.appColorsTheme.secondaryIconColor,
-                        BlendMode.srcIn),
-                  ),
+                return Observer(
+                  builder: (context) {
+                    return IconButton(
+                      onPressed: store.canDelete ? store.deleteMemory : null,
+                      icon: SvgPicture.asset(
+                        AppAssets.icons.delete,
+                        width: AppDiments.dm24,
+                        height: AppDiments.dm24,
+                        colorFilter: ColorFilter.mode(
+                            context.appColorsTheme.secondaryIconColor,
+                            BlendMode.srcIn),
+                      ),
+                    );
+                  }
                 );
               },
               orElse: () => const SizedBox.shrink(),

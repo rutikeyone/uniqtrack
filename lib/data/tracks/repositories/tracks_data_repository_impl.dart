@@ -8,18 +8,14 @@ import 'package:uniqtrack/core/common/error_handler/app_error_handler.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/core/common/extensions/iterable_extensions.dart';
 import 'package:uniqtrack/data/accounts/sorters/sorter.dart';
-import 'package:uniqtrack/data/app_database.dart';
-import 'package:uniqtrack/data/tracks/mappers/track_db_mapper.dart';
 import 'package:uniqtrack/data/tracks/models/models.dart';
 import 'package:uniqtrack/data/tracks/tracks_data_repository.dart';
 
 class TracksDataRepositoryImpl implements TracksDataRepository {
-  final AppDatabase _appDatabase;
   final FirebaseFirestore _firebaseFireStore;
   final FirebaseAuth _firebaseAuth;
   final AppErrorHandler _appErrorHandler;
   final Sorter _sorter;
-  final TrackDbMapper _trackMapper;
 
   static String tracksPath = "tracks";
 
@@ -42,18 +38,14 @@ class TracksDataRepositoryImpl implements TracksDataRepository {
       "tracks/$trackId/favouriteTracks";
 
   const TracksDataRepositoryImpl({
-    required AppDatabase appDatabase,
     required FirebaseFirestore firebaseFireStore,
     required FirebaseAuth firebaseAuth,
     required AppErrorHandler appErrorHandler,
     required Sorter sorter,
-    required TrackDbMapper trackMapper,
-  })  : _appDatabase = appDatabase,
-        _firebaseFireStore = firebaseFireStore,
+  })  : _firebaseFireStore = firebaseFireStore,
         _firebaseAuth = firebaseAuth,
         _appErrorHandler = appErrorHandler,
-        _sorter = sorter,
-        _trackMapper = trackMapper;
+        _sorter = sorter;
 
   @override
   Future<Either<AppError, String>> addTrack(TrackModel track) {
@@ -127,18 +119,6 @@ class TracksDataRepositoryImpl implements TracksDataRepository {
         );
       },
     );
-  }
-
-  @override
-  Future<Either<AppError, int>> addLastTrack(TrackModel track) {
-    final insertTrackResult = _appErrorHandler.handle(
-      call: () {
-        final trackCompanion = _trackMapper.toCompanion(track);
-        return _appDatabase.tracksDao.insertTrack(trackCompanion);
-      },
-    );
-
-    return insertTrackResult;
   }
 
   @override
@@ -651,29 +631,6 @@ class TracksDataRepositoryImpl implements TracksDataRepository {
         return updateMyTrack(newTrack);
       },
     );
-  }
-
-  @override
-  Future<Either<AppError, void>> removeLastTracks() {
-    final deleteAllTracksResult = _appErrorHandler.handle(
-      call: () {
-        return _appDatabase.tracksDao.deleteAllTracks();
-      },
-    );
-
-    return deleteAllTracksResult;
-  }
-
-  @override
-  Future<Either<AppError, TrackModel?>> getLastTrack() async {
-    final getTrackResult = await _appErrorHandler.handle(
-      call: () async {
-        final track = await _appDatabase.tracksDao.getTrack();
-        return track != null ? _trackMapper.toModel(track) : null;
-      },
-    );
-
-    return getTrackResult;
   }
 
   TrackModel? _fromFirebaseTrackConverter(

@@ -50,10 +50,4 @@ abstract interface class TracksDataRepository {
   Stream<TrackModel?> watchMyTrack(String id);
 
   Stream<List<TrackModel>> watchFavouriteTracks();
-
-  Future<Either<AppError, int>> addLastTrack(TrackModel track);
-
-  Future<Either<AppError, TrackModel?>> getLastTrack();
-
-  Future<Either<AppError, void>> removeLastTracks();
 }

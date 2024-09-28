@@ -223,7 +223,7 @@ abstract class _DetailsStore with Store {
       return;
     }
 
-    if(sheetState == null) {
+    if (sheetState == null) {
       final navigateBackAction = DetailsActions.navigateBack();
       actions = Activity(navigateBackAction);
       return;
@@ -350,11 +350,14 @@ abstract class _DetailsStore with Store {
           body: body,
         );
 
-        _deleteStatus.add(FormzSubmissionStatus.failure);
+        if (!_deleteStatus.isClosed) {
+          _deleteStatus.add(FormzSubmissionStatus.failure);
+        }
       },
       (_) async {
-        _deleteStatus.add(FormzSubmissionStatus.success);
-
+        if (!_deleteStatus.isClosed) {
+          _deleteStatus.add(FormzSubmissionStatus.success);
+        }
         await onPopInvokedWithResult();
 
         await Future.delayed(duration, () {
