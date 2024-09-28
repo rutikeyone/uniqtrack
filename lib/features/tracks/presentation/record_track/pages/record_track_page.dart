@@ -205,6 +205,8 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     final emptyPositionsData = List<PositionData>.empty();
     final emptyMemories = List<Memory>.empty();
 
+    final currentPosition = _store.currentPosition;
+
     _updateLines(
       positions: emptyPositions,
       positionsData: emptyPositionsData,
@@ -220,6 +222,10 @@ class _RecordTrackPageState extends ConsumerState<RecordTrackPage> {
     await _updateMemories(
       memories: emptyMemories,
     );
+
+    if (currentPosition != null) {
+      await _changeCurrentUserPosition(currentPosition);
+    }
 
     setState(() {});
   }
