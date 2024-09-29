@@ -148,6 +148,7 @@ extension ContextExtension on BuildContext {
           S.of(this).theUserIsTheCreatorOfTheTrack,
       alreadyContainsElement: () => S.of(this).alreadyContainsElement,
       shareLimitMessage: () => S.of(this).shareLimitMessage,
+      theContentHasBeenDeleted: () => S.of(this).theContentHasBeenDeleted,
     );
   }
 }

@@ -134,5 +134,6 @@
   "shareLimitMessage": "В настоящее время навигация по ссылке доступна только для Android версии мобильного приложения.",
   "maxAltitude": "Максимальная высота: {value} м",
   "altitude" : "Высота: {value} м",
-  "beforeUploadingAPhotoMakeSureThatYourInternetConnection": "Прежде чем загрузить фотографию, убедитесь, что ваше интернет-соединение стабильно"
+  "beforeUploadingAPhotoMakeSureThatYourInternetConnection": "Прежде чем загрузить фотографию, убедитесь, что ваше интернет-соединение стабильно",
+  "theContentHasBeenDeleted": "Контент был удален."
 }

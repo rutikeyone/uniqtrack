@@ -29,7 +29,7 @@ mixin _$DetailsStore on _DetailsStore, Store {
       Atom(name: '_DetailsStore.trackDetailsStream', context: context);
 
   @override
-  ObservableStream<TrackUI?> get trackDetailsStream {
+  ObservableStream<(bool, TrackUI?)> get trackDetailsStream {
     _$trackDetailsStreamAtom.reportRead();
     return super.trackDetailsStream;
   }
@@ -37,7 +37,7 @@ mixin _$DetailsStore on _DetailsStore, Store {
   bool _trackDetailsStreamIsInitialized = false;
 
   @override
-  set trackDetailsStream(ObservableStream<TrackUI?> value) {
+  set trackDetailsStream(ObservableStream<(bool, TrackUI?)> value) {
     _$trackDetailsStreamAtom.reportWrite(value,
         _trackDetailsStreamIsInitialized ? super.trackDetailsStream : null, () {
       super.trackDetailsStream = value;

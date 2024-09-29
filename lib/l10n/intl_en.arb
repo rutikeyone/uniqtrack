@@ -134,5 +134,6 @@
   "shareLimitMessage": "Currently, link navigation is only available for the Android version of the mobile app.",
   "maxAltitude": "Max altitude: {value} m",
   "altitude" : "Altitude: {value} m",
-  "beforeUploadingAPhotoMakeSureThatYourInternetConnection": "Before uploading a photo, make sure that your internet connection is stable"
+  "beforeUploadingAPhotoMakeSureThatYourInternetConnection": "Before uploading a photo, make sure that your internet connection is stable",
+  "theContentHasBeenDeleted": "The content has been deleted."
 }

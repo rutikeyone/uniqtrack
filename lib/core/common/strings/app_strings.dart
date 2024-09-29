@@ -107,17 +107,21 @@ class AppStrings with _$AppStrings {
 
   const factory AppStrings.userIsUnauthorized() = _$AppUserNotAuthorizedString;
 
-  const factory AppStrings.entryWasSuccessfullyAdded() = _$AppEntryWasSuccessfullyAddedString;
+  const factory AppStrings.entryWasSuccessfullyAdded() =
+      _$AppEntryWasSuccessfullyAddedString;
 
-  const factory AppStrings.alreadyAddedToFavourites() = _$AlreadyAddedToFavouritesString;
+  const factory AppStrings.alreadyAddedToFavourites() =
+      _$AlreadyAddedToFavouritesString;
 
   const factory AppStrings.noID() = _NoIDString;
 
-  const factory AppStrings.trackAddedSuccessfully() = _TrackAddedSuccessfullyString;
+  const factory AppStrings.trackAddedSuccessfully() =
+      _TrackAddedSuccessfullyString;
 
   const factory AppStrings.notAddedToFavorites() = _NotAddedToFavouritesString;
 
-  const factory AppStrings.trackWasSuccessfullyDeleted() = _TrackWasSuccessfullyDeletedString;
+  const factory AppStrings.trackWasSuccessfullyDeleted() =
+      _TrackWasSuccessfullyDeletedString;
 
   const factory AppStrings.notAddedToUserTracks() = _NotAddedToUserTracksString;
 
@@ -127,13 +131,20 @@ class AppStrings with _$AppStrings {
 
   const factory AppStrings.noUpdateRights() = _NoUpdateRightsString;
 
-  const factory AppStrings.dataHasBeenSuccessfullyUpdated() = _DataHasBeenSuccessfullyUpdatedString;
+  const factory AppStrings.dataHasBeenSuccessfullyUpdated() =
+      _DataHasBeenSuccessfullyUpdatedString;
 
-  const factory AppStrings.memoryHasBeenSuccessfullyDeleted() = _MemoryHasBeenSuccessfullyDeletedString;
+  const factory AppStrings.memoryHasBeenSuccessfullyDeleted() =
+      _MemoryHasBeenSuccessfullyDeletedString;
 
-  const factory AppStrings.userIsTheCreatorOfTheTrack() = _UserIsCreatorOfTheTrackString;
+  const factory AppStrings.userIsTheCreatorOfTheTrack() =
+      _UserIsCreatorOfTheTrackString;
 
-  const factory AppStrings.alreadyContainsElement() = _AlreadyContainsElementString;
+  const factory AppStrings.alreadyContainsElement() =
+      _AlreadyContainsElementString;
 
   const factory AppStrings.shareLimitMessage() = _ShareLimitMessage;
+
+  const factory AppStrings.theContentHasBeenDeleted() =
+      _TheContentHasBeenDeletedString;
 }

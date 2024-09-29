@@ -1259,6 +1259,16 @@ class S {
       args: [],
     );
   }
+
+  /// `The content has been deleted.`
+  String get theContentHasBeenDeleted {
+    return Intl.message(
+      'The content has been deleted.',
+      name: 'theContentHasBeenDeleted',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

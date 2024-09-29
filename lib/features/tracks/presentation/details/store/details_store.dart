@@ -50,17 +50,20 @@ abstract class _DetailsStore with Store {
   bool mounted = true;
 
   @observable
-  late ObservableStream<TrackUI?> trackDetailsStream = ObservableStream(
+  late ObservableStream<(bool, TrackUI?)> trackDetailsStream = ObservableStream(
     Rx.combineLatest3(
       _deleteStatus.stream,
       _favouriteStatus.stream,
       _watchTrackDetailsUseCase(_id),
       (deleteStatus, favouriteStatus, item) {
-        return item?.copyWith(
+        final firstTime = trackDetailsStream.value == null;
+        final data = item?.copyWith(
           deleteEnabled: !deleteStatus.isInProgress,
           favouriteEnabled: !favouriteStatus.isInProgress,
           canDelete: _canDelete,
         );
+
+        return (firstTime, data);
       },
     ),
   ).asBroadcastStream();
@@ -91,7 +94,9 @@ abstract class _DetailsStore with Store {
   @observable
   late ObservableStream<DetailsMapState> detailsMapState = ObservableStream(
     trackDetailsStream.map(
-      (item) {
+      (data) {
+        final item = data.$2;
+
         if (item == null) {
           return DetailsMapState.empty();
         }
@@ -124,7 +129,9 @@ abstract class _DetailsStore with Store {
       _favouriteStatus.stream,
       memoryDetailsStream,
       trackDetailsStream,
-      (initial, deleteStatus, favouriteStatus, memoryUI, track) {
+      (initial, deleteStatus, favouriteStatus, memoryUI, data) {
+        final track = data.$2;
+
         if (initial || track == null) {
           return DetailsSheetState.pure();
         }
@@ -158,7 +165,8 @@ abstract class _DetailsStore with Store {
   @observable
   late ObservableStream<bool> animateShowEnabled = ObservableStream(
     trackDetailsStream.map(
-      (item) {
+      (data) {
+        final item = data.$2;
         final positions = item?.track.positions;
         return positions != null && positions.isNotEmpty;
       },
@@ -251,7 +259,7 @@ abstract class _DetailsStore with Store {
 
   @action
   Future<void> addTrackToFavourites() async {
-    final value = trackDetailsStream.value?.track;
+    final value = trackDetailsStream.value?.$2?.track;
     if (value == null) return;
 
     _favouriteStatus.add(FormzSubmissionStatus.inProgress);
@@ -284,7 +292,7 @@ abstract class _DetailsStore with Store {
   Future<void> removeTrackFromFavourites() async {
     final duration = const Duration(milliseconds: 300);
 
-    final value = trackDetailsStream.value?.track;
+    final value = trackDetailsStream.value?.$2?.track;
     if (value == null) return;
 
     _favouriteStatus.add(FormzSubmissionStatus.inProgress);
@@ -333,7 +341,7 @@ abstract class _DetailsStore with Store {
   Future<void> deleteTrack() async {
     final duration = const Duration(milliseconds: 300);
 
-    final value = trackDetailsStream.value?.track;
+    final value = trackDetailsStream.value?.$2?.track;
     if (value == null || _removeTrackUseCase == null) return;
 
     _deleteStatus.add(FormzSubmissionStatus.inProgress);
@@ -376,7 +384,7 @@ abstract class _DetailsStore with Store {
 
   @action
   void animateCameraByTrack() {
-    final positions = trackDetailsStream.value?.track.positions;
+    final positions = trackDetailsStream.value?.$2?.track.positions;
     _animateCameraByPositions(positions);
   }
 
@@ -458,7 +466,7 @@ abstract class _DetailsStore with Store {
   Future<void> _deleteMemory(Memory value) async {
     detailsSheetState.value?.whenOrNull(
       details: (_) async {
-        final track = trackDetailsStream.value?.track;
+        final track = trackDetailsStream.value?.$2?.track;
         final memory = memoryDetailsStream.value?.memory ?? value;
 
         if (track == null || _removeMemoryUseCase == null) return;

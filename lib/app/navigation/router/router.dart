@@ -58,6 +58,9 @@ GoRouter router(RouterRef ref) {
     navigatorKey: rootNavigatorKey,
     initialLocation: AppPaths.community.path,
     refreshListenable: GoRouterRefreshStream(userChangesUseCase.call()),
+    onException: (context, state, router) {
+      router.go(AppPaths.community.path);
+    },
     redirect: (context, state) {
       if (authState.firstTime) {
         FlutterNativeSplash.remove();

@@ -183,6 +183,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "theCollectionDoesNotContainTheRequiredElement":
             MessageLookupByLibrary.simpleMessage(
                 "The collection does not contain the required element"),
+        "theContentHasBeenDeleted": MessageLookupByLibrary.simpleMessage(
+            "The content has been deleted."),
         "theContinuationUrlIsNotWhitelisted":
             MessageLookupByLibrary.simpleMessage(
                 "The continuation URL is not whitelisted"),

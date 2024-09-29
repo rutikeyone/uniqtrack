@@ -11,7 +11,9 @@ import 'package:uniqtrack/app/navigation/stores/nav_callback_store.dart';
 import 'package:uniqtrack/core/common/activity.dart';
 import 'package:uniqtrack/core/common/extensions/context_extension.dart';
 import 'package:uniqtrack/core/common/extensions/iterable_position_data_extensions.dart';
+import 'package:uniqtrack/core/common/strings/app_strings.dart';
 import 'package:uniqtrack/core/common_impl/app_widget_toolkit_impl.dart';
+import 'package:uniqtrack/core/common_impl/common_ui/common_ui_delegate_notifier.dart';
 import 'package:uniqtrack/core/presentation/constants/assets/app_assets.dart';
 import 'package:uniqtrack/core/presentation/widgets/common_app_bar.dart';
 import 'package:uniqtrack/core/presentation/widgets/map_buttons.dart';
@@ -64,8 +66,12 @@ class _TrackDetailsPageState extends ConsumerState<TrackDetailsPage> {
   void initState() {
     _store = context.read<DetailsStore>();
     _navCallbackStore = context.read<DetailsNavCallbackStore>();
+
+    _store.trackDetailsStream.listen(_handleTrackDetailsStateChanges);
+
     _detailsMapStreamSubscription =
         _store.detailsMapState.listen(_handleDetailsMapStateChanges);
+
     _detailsSheetStreamSubscription =
         _store.detailsSheetState.listen(_handleDetailsSheetState);
 
@@ -75,6 +81,22 @@ class _TrackDetailsPageState extends ConsumerState<TrackDetailsPage> {
     );
 
     super.initState();
+  }
+
+  void _handleTrackDetailsStateChanges((bool, TrackUI?) value) {
+    final firstTime = value.$1;
+    final track = value.$2;
+    if (firstTime && track == null) {
+      if (!mounted) return;
+
+      final header = AppStrings.notification();
+      final body = AppStrings.theContentHasBeenDeleted();
+
+      ref.read(commonUIDelegateNotifierProvider.notifier).cupertinoDialog(
+            header: header,
+            body: body,
+          );
+    }
   }
 
   void _handleDetailsMapStateChanges(DetailsMapState value) {
@@ -289,26 +311,30 @@ class _TrackDetailsPageState extends ConsumerState<TrackDetailsPage> {
   }
 
   Future<void> _showDetailsModalBottomSheet() async {
-    final track = _store.trackDetailsStream.value;
+    final track = _store.trackDetailsStream.value?.$2;
 
     if (!_detailsBottomSheetShowed && _detailsBottomSheetController == null) {
       _detailsBottomSheetShowed = true;
 
       await _hideMemoryDetails();
 
+      final stream = _store.trackDetailsStream.map((item) {
+        return item.$2;
+      });
+
       _detailsBottomSheetController =
           _scaffoldKey.currentState?.showBottomSheet(
         (context) {
           return DetailsModalBottomSheet(
             initialTrack: track,
-            trackStream: _store.trackDetailsStream,
+            trackStream: stream,
             onAddToFavouritesPressed: _store.addTrackToFavourites,
             onRemoveFromFavouritesPressed: _store.removeTrackFromFavourites,
             onDeletePressed: _store.deleteTrack,
             onMemoryPressed: _store.showMemoryDetails,
             onRepeatPressed: () {
               final value = _store.trackDetailsStream.value;
-              _navCallbackStore.navigateToRecordTrack(value?.track);
+              _navCallbackStore.navigateToRecordTrack(value?.$2?.track);
             },
             onDeleteMemoryPressed: _store.deleteMemory,
             onEditPressed: _navCallbackStore.navigateToEditTrack,
@@ -372,7 +398,7 @@ class _TrackDetailsPageState extends ConsumerState<TrackDetailsPage> {
   void _navigateToEditMemory(Memory memory) {
     final _store = context.read<DetailsStore>();
     final _navStore = context.read<DetailsNavCallbackStore>();
-    final track = _store.trackDetailsStream.value?.track;
+    final track = _store.trackDetailsStream.value?.$2?.track;
 
     if (track == null) return;
     _navStore.navigateToEditMemory?.call(track, memory);
