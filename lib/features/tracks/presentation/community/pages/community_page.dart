@@ -14,20 +14,20 @@ class CommunityPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      body: SafeArea(
-        child: CommunityContentWidget(),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed:
-            context.read<CommunityNavCallbackStore>().navigateToTrackTracking,
-        child: SvgPicture.asset(
-          width: AppDiments.dm24,
-          height: AppDiments.dm24,
-          AppAssets.icons.skier,
-          colorFilter: ColorFilter.mode(
-            context.floatingActionButtonTheme.focusColor ?? AppColors.white,
-            BlendMode.srcIn,
+    return SafeArea(
+      child: Scaffold(
+        body: CommunityContentWidget(),
+        floatingActionButton: FloatingActionButton(
+          onPressed:
+              context.read<CommunityNavCallbackStore>().navigateToTrackTracking,
+          child: SvgPicture.asset(
+            width: AppDiments.dm24,
+            height: AppDiments.dm24,
+            AppAssets.icons.skier,
+            colorFilter: ColorFilter.mode(
+              context.floatingActionButtonTheme.focusColor ?? AppColors.white,
+              BlendMode.srcIn,
+            ),
           ),
         ),
       ),
