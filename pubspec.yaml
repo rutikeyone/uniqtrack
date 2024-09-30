@@ -3,7 +3,7 @@ description: "A tracking mobile application."
 
 publish_to: 'none'
 
-version: 1.0.5+5
+version: 1.0.6+6
 
 environment:
   sdk: ^3.5.1
