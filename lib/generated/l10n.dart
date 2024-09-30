@@ -1269,6 +1269,16 @@ class S {
       args: [],
     );
   }
+
+  /// `A good GPS signal level is required to record the track correctly.`
+  String get aGoodGpsSignalLevelIsRequiredToRecordThe {
+    return Intl.message(
+      'A good GPS signal level is required to record the track correctly.',
+      name: 'aGoodGpsSignalLevelIsRequiredToRecordThe',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

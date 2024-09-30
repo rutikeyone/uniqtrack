@@ -8,6 +8,7 @@ import 'package:uniqtrack/core/common/app_location_handler/entities/app_location
 import 'package:uniqtrack/core/common/app_location_handler/entities/app_location_settings.dart';
 import 'package:uniqtrack/core/common/exceptions/exceptions.dart';
 import 'package:uniqtrack/data/accounts/accounts_data_repository.dart';
+import 'package:uniqtrack/data/tracks/preferences_data_repository.dart';
 import 'package:uniqtrack/data/tracks/tracks_data_repository.dart';
 import 'package:uniqtrack/features/tracks/domain/entities/entities.dart';
 import 'package:uniqtrack/features/tracks/domain/track_repository.dart';
@@ -19,6 +20,7 @@ class TrackAdapterRepository implements TrackRepository {
   final MemoryMapper _memoryMapper;
 
   final TracksDataRepository _tracksDataRepository;
+  final PreferencesDataRepository _preferencesDataRepository;
 
   const TrackAdapterRepository({
     required AppLocationHandler appLocationHandler,
@@ -27,11 +29,13 @@ class TrackAdapterRepository implements TrackRepository {
     required MemoryMapper memoryMapper,
     required AccountsDataRepository accountsDataRepository,
     required TracksDataRepository tracksDataRepository,
+    required PreferencesDataRepository preferencesDataRepository,
   })  : _appLocationHandler = appLocationHandler,
         _positionMapper = positionMapper,
         _trackMapper = trackMapper,
         _memoryMapper = memoryMapper,
-        _tracksDataRepository = tracksDataRepository;
+        _tracksDataRepository = tracksDataRepository,
+        _preferencesDataRepository = preferencesDataRepository;
 
   @override
   Future<Either<AppError, void>> addTrack(Track track) async {
@@ -77,7 +81,8 @@ class TrackAdapterRepository implements TrackRepository {
   }
 
   @override
-  Future<(Stream<Position>, AppLocationDataSettings?)> watchPositions(AppLocationSettings settings) async {
+  Future<(Stream<Position>, AppLocationDataSettings?)> watchPositions(
+      AppLocationSettings settings) async {
     final data = await _appLocationHandler.watchPositions(settings);
     final stream = data.$1.map((event) {
       return _positionMapper.toPosition(event);
@@ -324,4 +329,13 @@ class TrackAdapterRepository implements TrackRepository {
         : null;
   }
 
+  @override
+  Future<bool> getAlertTrackingShow() {
+    return _preferencesDataRepository.getAlertTrackingShow();
+  }
+
+  @override
+  Future<void> setAlertTrackingShow(bool value) {
+    return _preferencesDataRepository.setAlertTrackingShow(value);
+  }
 }

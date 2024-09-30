@@ -135,5 +135,6 @@
   "maxAltitude": "Max altitude: {value} m",
   "altitude" : "Altitude: {value} m",
   "beforeUploadingAPhotoMakeSureThatYourInternetConnection": "Before uploading a photo, make sure that your internet connection is stable",
-  "theContentHasBeenDeleted": "The content has been deleted."
+  "theContentHasBeenDeleted": "The content has been deleted.",
+  "aGoodGpsSignalLevelIsRequiredToRecordThe": "A good GPS signal level is required to record the track correctly."
 }

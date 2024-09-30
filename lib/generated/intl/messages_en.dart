@@ -39,6 +39,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "aContinueUrlMustBeProvidedInTheRequest":
             MessageLookupByLibrary.simpleMessage(
                 "A continue URL must be provided in the request"),
+        "aGoodGpsSignalLevelIsRequiredToRecordThe":
+            MessageLookupByLibrary.simpleMessage(
+                "A good GPS signal level is required to record the track correctly."),
         "actions": MessageLookupByLibrary.simpleMessage("Actions"),
         "addMemory": MessageLookupByLibrary.simpleMessage("Add memory"),
         "addPicture": MessageLookupByLibrary.simpleMessage("Add picture"),

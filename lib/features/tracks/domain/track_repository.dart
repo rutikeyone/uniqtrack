@@ -40,4 +40,8 @@ abstract interface class TrackRepository {
   Future<AppLocationPermissionResult> requestLocationPermission();
 
   Future<Position?> getCurrentPosition();
+
+  Future<bool> getAlertTrackingShow();
+
+  Future<void> setAlertTrackingShow(bool value);
 }

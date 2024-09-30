@@ -129,6 +129,25 @@ abstract class _RecordTrackStore with Store {
 
     _showAndHideLoader(
       callback: () async {
+        final alertTrackingShow =
+            await await _recordTrackRepository.getAlertTrackingShow();
+
+        if (!alertTrackingShow) {
+          await _recordTrackRepository.setAlertTrackingShow(true);
+
+          final header = AppStrings.notification();
+          final body = AppStrings
+              .goodGPSSignalLevelIsRequiredToRecordTheTrackCorrectly();
+
+          _commonUIDelegate.cupertinoDialog(
+            header: header,
+            body: body,
+            closeCallback: startTracking,
+          );
+
+          return;
+        }
+
         final requestLocationPermissionResult =
             await _recordTrackRepository.requestLocationPermission();
 
@@ -145,10 +164,8 @@ abstract class _RecordTrackStore with Store {
             trackRecordStatusState.isWithoutRecording;
 
         if (canStartTracking) {
-          final currentPosition = await userLocationState.when(
-            empty: () => null,
-            mark: (position) => position,
-          );
+          final currentPosition =
+              await _recordTrackRepository.getCurrentPosition();
 
           if (currentPosition != null) {
             final positions = [currentPosition];
@@ -184,6 +201,9 @@ abstract class _RecordTrackStore with Store {
             actions = Activity(showDetailsRecordingDataAction);
 
             trackRecordStatusState = recordingStatusState;
+            userLocationState =
+                UserLocationState.mark(currentPosition: currentPosition);
+
             _trackRecordStatusStateBehaviourSubject.add(recordingStatusState);
 
             _initTimer();
@@ -900,7 +920,7 @@ abstract class _RecordTrackStore with Store {
             maxAltitude: state.maxAltitude,
             memories: state.memories,
           );
-          },
+        },
       ),
     );
   }

@@ -149,6 +149,8 @@ extension ContextExtension on BuildContext {
       alreadyContainsElement: () => S.of(this).alreadyContainsElement,
       shareLimitMessage: () => S.of(this).shareLimitMessage,
       theContentHasBeenDeleted: () => S.of(this).theContentHasBeenDeleted,
+      goodGPSSignalLevelIsRequiredToRecordTheTrackCorrectly: () =>
+          S.of(this).aGoodGpsSignalLevelIsRequiredToRecordThe,
     );
   }
 }

@@ -147,4 +147,7 @@ class AppStrings with _$AppStrings {
 
   const factory AppStrings.theContentHasBeenDeleted() =
       _TheContentHasBeenDeletedString;
+
+  const factory AppStrings.goodGPSSignalLevelIsRequiredToRecordTheTrackCorrectly() =
+      _GoodGPSSignalLevelIsRequiredToRecordTheTrackCorrectlyString;
 }

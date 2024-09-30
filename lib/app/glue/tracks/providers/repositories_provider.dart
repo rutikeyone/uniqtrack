@@ -11,7 +11,10 @@ TrackRepository trackRepository(TrackRepositoryRef ref) {
   final tracksDataRepository = ref.watch(tracksDataRepositoryProvider);
   final accountsDataRepository = ref.watch(accountsDataRepositoryProvider);
 
+  final preferencesDataRepository = ref.watch(preferencesDataRepositoryProvider);
+
   return TrackAdapterRepository(
+    preferencesDataRepository: preferencesDataRepository,
     appLocationHandler: appLocationHandler,
     positionMapper: positionMapper,
     trackMapper: trackMapper,

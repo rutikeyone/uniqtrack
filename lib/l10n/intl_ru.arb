@@ -135,5 +135,6 @@
   "maxAltitude": "Максимальная высота: {value} м",
   "altitude" : "Высота: {value} м",
   "beforeUploadingAPhotoMakeSureThatYourInternetConnection": "Прежде чем загрузить фотографию, убедитесь, что ваше интернет-соединение стабильно",
-  "theContentHasBeenDeleted": "Контент был удален."
+  "theContentHasBeenDeleted": "Контент был удален.",
+  "aGoodGpsSignalLevelIsRequiredToRecordThe": "A good GPS signal level is required to record the track correctly."
 }
