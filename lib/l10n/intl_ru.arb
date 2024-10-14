@@ -136,5 +136,5 @@
   "altitude" : "Высота: {value} м",
   "beforeUploadingAPhotoMakeSureThatYourInternetConnection": "Прежде чем загрузить фотографию, убедитесь, что ваше интернет-соединение стабильно",
   "theContentHasBeenDeleted": "Контент был удален.",
-  "aGoodGpsSignalLevelIsRequiredToRecordThe": "A good GPS signal level is required to record the track correctly."
+  "aGoodGpsSignalLevelIsRequiredToRecordThe": "Для записи трека требуется хороший уровень сигнала GPS."
 }

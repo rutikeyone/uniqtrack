@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "В запросе должен быть указан URL-адрес продолжения"),
         "aGoodGpsSignalLevelIsRequiredToRecordThe":
             MessageLookupByLibrary.simpleMessage(
-                "A good GPS signal level is required to record the track correctly."),
+                "Для записи трека требуется хороший уровень сигнала GPS."),
         "actions": MessageLookupByLibrary.simpleMessage("Действия"),
         "addMemory":
             MessageLookupByLibrary.simpleMessage("Добавить воспоминание"),
