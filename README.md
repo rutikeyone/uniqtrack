@@ -24,6 +24,10 @@
 
 ## Video with an example of the work
 
+<a href="https://youtu.be/5WauDa3MnF4">
+  <img src="https://github.com/rutikeyone/uniqtrack/blob/master/metadata/screenshots/10.jpeg" width="225"/>
+</a>
+
 ## Building the Code
 
 * `Clone the repository using HTTP: git clone https://github.com/rutikeyone/uniqtrack`;
