@@ -4,6 +4,17 @@
 ## Description 
 
 ## Technologies used
+* `Dart`;
+* `Flutter`;
+* `Riverpod`;
+* `GoRouter`;
+* `Firebase`;
+* `Mobx`;
+* `Permission-Handler`;
+* `GoogleMaps`;
+* `Geolocator`;
+* `RxDart`;
+* `Shared-Preferences`.
 
 ## Features
 
