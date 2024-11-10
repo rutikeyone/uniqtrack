@@ -17,7 +17,7 @@
 * `Shared-Preferences`.
 
 ## Features
-* `User tracks list`;
+* `User track list`;
 * `Tracking user hiking`;
 * `Add user track`;
 * `Edit user track`;
