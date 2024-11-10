@@ -1,16 +1,21 @@
-# uniqtrack
+![GitHub](https://img.shields.io/github/license/IgorVolochay/Face-recognition?style=flat-square&color=blue) &nbsp;
+## Uniqtrack
 
-A tracking mobile application.
+## Description 
 
-## Getting Started
+## Technologies used
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Video with an example of the work
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Building the Code
+
+* `Clone the repository using HTTP: git clone https://github.com/rutikeyone/uniqtrack`;
+* `Open Android Studio/Visual Studio Code`;
+* `Click on 'Open the project folder`;
+* `Browse to the directory where you cloned the mobile-wallet repo and click OK`;
+* `Let Android Studio/Visual Studio Code import the project`;
+* `Build the application in your device by clicking run button`.
