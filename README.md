@@ -17,6 +17,19 @@
 * `Shared-Preferences`.
 
 ## Features
+* `User tracks list`;
+* `Tracking user hiking`;
+* `Add user track`;
+* `Edit user track`;
+* `Add memory to a track`;
+* `Edit memory to a track`;
+* `Remove user track`;
+* `Remove memory to a track`;
+* `Sign In with email and password`;
+* `Registration`;
+* `Request forgot password`;
+* `Add user track to favourites`;
+* `Remove user track from favourites`.
 
 ## Screenshots
 
