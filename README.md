@@ -11,11 +11,11 @@ Uniqtrack is a mobile app, built with Flutter, the app lets users create, edit, 
 * `GoRouter`;
 * `Firebase`;
 * `Mobx`;
-* `Permission-Handler`;
+* `Permission handler`;
 * `GoogleMaps`;
 * `Geolocator`;
 * `RxDart`;
-* `Shared-Preferences`.
+* `Shared preferences`.
 
 ## Features
 * `User track list`;
