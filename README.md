@@ -1,7 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/IgorVolochay/Face-recognition?style=flat-square&color=blue) &nbsp;
 ## Uniqtrack
 
-## Description 
+## Description
 Uniqtrack is a mobile app, built with Flutter, the app lets users create, edit, and remove hiking tracks, add and edit memories to each track, and save their favorite routes. 
 
 ## Technologies used
